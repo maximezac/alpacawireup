@@ -68,7 +68,7 @@ def fetch_latest_bars(symbols):
 # ========= Fetch historical bars (per symbol) for indicators =========
 def fetch_hist_bars(symbol, timeframe="1Day", limit=200):
     url = f"{DATA_BASE}/v2/stocks/{symbol}/bars"
-    params = {"timeframe": timeframe, "limit": limit, "adjustment": "raw"}
+    params = {"timeframe": timeframe, "limit": limit, "adjustment": "raw", "feed": ALPACA_FEED}
     r = requests.get(url, headers=H, params=params, timeout=25)
     if r.status_code != 200:
         print(f"⚠️ Hist fetch {symbol} -> {r.status_code}")
