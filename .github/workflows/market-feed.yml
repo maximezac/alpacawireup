@@ -2,7 +2,7 @@ name: Publish market feed
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # every 5 minutes (minimum cadence)
+    - cron: '*/10 * * * *'   # every 5 minutes (minimum cadence)
   workflow_dispatch:        # allow manual runs
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           ALPACA_FEED: iex
-          SYMBOLS: RKLB,ASTS,VTI,VOO,TTWO   # change anytime
+          SYMBOLS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT   # change anytime
           GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: python scripts/publish_feed.py
