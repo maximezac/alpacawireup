@@ -64,4 +64,49 @@ def latest_news(symbols, limit=12):
 def publish_to_gist(gist_id, token, filename, content_str):
     url = f"https://api.github.com/gists/{gist_id}"
     payload = {"files": {filename: {"content": content_str}}}
-    headers = {"Authorization": f"Bearer {token}", "Accept": "applicatio
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    r = requests.patch(url, headers=headers, json=payload, timeout=15)
+    print(f"💾 Gist update status: {r.status_code}")
+    r.raise_for_status()
+    return r.json()
+
+# ---------- MAIN ----------
+def main():
+    bars = latest_bars(SYMBOLS)
+    news = latest_news(SYMBOLS, limit=12)
+    doc = {
+        "as_of_utc": datetime.now(timezone.utc).isoformat(),
+        "feed": FEED,
+        "symbols": {
+            s: {
+                "price": (bars.get(s) or {}).get("c"),
+                "volume": (bars.get(s) or {}).get("v"),
+                "ts": (bars.get(s) or {}).get("t")
+            } for s in SYMBOLS
+        },
+        "news": [
+            {
+                "symbols": n.get("symbols"),
+                "headline": n.get("headline"),
+                "summary": n.get("summary"),
+                "source": n.get("source"),
+                "url": n.get("url"),
+                "created_at": n.get("created_at")
+            } for n in news
+        ]
+    }
+
+    content = json.dumps(doc, separators=(",", ":"), ensure_ascii=False)
+    if DRY_RUN:
+        print("🧪 Dry run mode — showing first 400 chars of output:")
+        print(content[:400])
+        return
+
+    publish_to_gist(GIST_ID, GITHUB_TOKEN, "prices.json", content)
+    print("✅ Completed successfully.")
+
+if __name__ == "__main__":
+    for var in ["ALPACA_KEY", "ALPACA_SECRET"]:
+        if not os.getenv(var):
+            raise RuntimeError(f"Missing required env var: {var}")
+    main()
