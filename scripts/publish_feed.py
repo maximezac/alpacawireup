@@ -1,6 +1,6 @@
 # scripts/publish_feed.py
 import os, json, math, requests
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import pandas as pd
 
 # ========= Config / Env =========
@@ -64,23 +64,52 @@ def fetch_latest_bars(symbols):
     missing = [s for s in symbols if s not in got]
     print(f"✅ Retrieved {len(got)} latest bars" + (f" | ⚠️ Missing {len(missing)}: {', '.join(missing[:15])}{'...' if len(missing)>15 else ''}" if missing else ""))
     return data
-
+    
+def iso(dt):  # RFC3339/ISO8601 Zulu
+    return dt.replace(microsecond=0, tzinfo=timezone.utc).isoformat().replace("+00:00","Z")
+    
 # ========= Fetch historical bars (per symbol) for indicators =========
 def fetch_hist_bars(symbol, timeframe="1Day", limit=200):
     url = f"{DATA_BASE}/v2/stocks/{symbol}/bars"
-    params = {"timeframe": timeframe, "limit": limit, "adjustment": "raw", "feed": ALPACA_FEED}
+
+    # daily bars often need an explicit start; give plenty of history
+    lookback_days = max(60, limit + 50)  # safety margin
+    start_dt = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+
+    params = {
+        "timeframe": timeframe,
+        "limit": limit,             # still keep a cap
+        "start": iso(start_dt),     # <<< important for 1Day
+        "adjustment": "raw",
+        "feed": ALPACA_FEED,        # "iex" or "sip"
+    }
+
     r = requests.get(url, headers=H, params=params, timeout=25)
     if r.status_code != 200:
-        print(f"⚠️ Hist fetch {symbol} -> {r.status_code}")
+        print(f"⚠️ Hist fetch {symbol} -> HTTP {r.status_code}")
         return None
+
     bars = r.json().get("bars", [])
+    if not bars and ALPACA_FEED.lower() != "iex":
+        # Auto-fallback: try IEX if SIP returns nothing
+        params["feed"] = "iex"
+        r2 = requests.get(url, headers=H, params=params, timeout=25)
+        if r2.status_code == 200:
+            bars = r2.json().get("bars", [])
+            if bars:
+                print(f"🔁 Fallback to IEX worked for {symbol}")
+        else:
+            print(f"⚠️ Fallback IEX fetch {symbol} -> HTTP {r2.status_code}")
+
     if not bars:
-        print(f"⚠️ No hist bars for {symbol}")
+        print(f"⚠️ No hist bars for {symbol} (feed={params['feed']}, tf={timeframe}, start={params['start']}, limit={limit})")
         return None
+
     df = pd.DataFrame(bars)
     if not {'t','o','h','l','c','v'}.issubset(df.columns):
         print(f"⚠️ Unexpected schema for {symbol}: {df.columns.tolist()}")
         return None
+
     return df.sort_values('t').reset_index(drop=True)
 
 # ========= Indicators =========
