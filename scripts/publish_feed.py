@@ -6,15 +6,25 @@ ALPACA_KEY    = os.getenv("ALPACA_KEY")
 ALPACA_SECRET = os.getenv("ALPACA_SECRET")
 FEED          = os.getenv("ALPACA_FEED", "iex")  # "iex" (free) or "sip" (paid)
 
-# replace the SYMBOLS line with this:
+def load_list(path):
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return [ln.strip().upper() for ln in f if ln.strip()]
+    return []
+
 def load_symbols():
-    p = "tickers.txt"
-    if os.path.exists(p):
-        with open(p, "r", encoding="utf-8") as f:
-            return [line.strip().upper() for line in f if line.strip()]
-    return [s.strip().upper() for s in os.getenv("SYMBOLS","RKLB,ASTS,VTI,VOO,TTWO").split(",")]
+    base = load_list("tickers.txt")
+    wl   = load_list("watchlist.txt")
+    env  = [s.strip().upper() for s in os.getenv("SYMBOLS","").split(",") if s.strip()]
+    # de-dupe, preserve order
+    seen=set(); out=[]
+    for s in base + wl + env:
+        if s not in seen:
+            seen.add(s); out.append(s)
+    return out or ["VTI","VOO"]  # fallback
 
 SYMBOLS = load_symbols()
+
 
 
 GIST_ID       = os.getenv("GIST_ID")             # hex ID from your gist URL
