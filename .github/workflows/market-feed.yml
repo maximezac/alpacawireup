@@ -29,5 +29,6 @@ jobs:
           INDICATOR_TIMEFRAME: 1Day        # 1Day for daily bars; 5Min for intraday
           HIST_LIMIT: 200                  # number of bars for rolling averages
           # Symbol list – you can edit anytime or leave blank if using tickers.txt/watchlist.txt
+          PORTFOLIO_B_TICKERS: "QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT"
           SYMBOLS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT
           # Gist cr
