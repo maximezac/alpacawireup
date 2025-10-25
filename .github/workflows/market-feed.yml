@@ -1,34 +1,30 @@
-name: Publish market feed with indicators
+# .github/workflows/market-feed.yml
+name: Publish market feed with indicators & news
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # every 10 minutes (you can change cadence here)
-  workflow_dispatch:          # allow manual runs
+    - cron: '*/10 * * * *'   # change cadence as you like
+  workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          pip install requests pandas
-
-      - name: Run publisher with indicators
+        with: { python-version: '3.11' }
+      - name: Install deps
+        run: pip install requests pandas
+      - name: Run publisher
         env:
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           ALPACA_FEED: iex
-          # Optional indicator settings
-          INDICATOR_TIMEFRAME: 1Day        # 1Day for daily bars; 5Min for intraday
-          HIST_LIMIT: 200                  # number of bars for rolling averages
-          # Symbol list – you can edit anytime or leave blank if using tickers.txt/watchlist.txt
-          PORTFOLIO_B_TICKERS: "QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT"
-          SYMBOLS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT
-          # Gist cr
+          INDICATOR_TIMEFRAME: 1Day
+          HIST_LIMIT: 200
+          # If NOT publishing to Gist, omit these and the script writes to data/prices.json
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          # Optional: if you don't use portfolio_b.txt
+          PORTFOLIO_B_TICKERS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT
+        run: python scripts/publish_feed.py
