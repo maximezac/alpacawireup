@@ -1,71 +1,88 @@
-# scripts/publish_feed.py
 import os, json, requests
 from datetime import datetime, timezone
 
+# --- Config ---
 ALPACA_KEY    = os.getenv("ALPACA_KEY")
 ALPACA_SECRET = os.getenv("ALPACA_SECRET")
-FEED          = os.getenv("ALPACA_FEED", "iex")  # "iex" (free) or "sip" (paid)
+FEED          = os.getenv("ALPACA_FEED", "iex")
+GIST_ID       = os.getenv("GIST_ID")
+GITHUB_TOKEN  = os.getenv("GIST_TOKEN")
+DRY_RUN       = os.getenv("DRY_RUN", "false").lower() == "true"
 
+DATA_BASE = "https://data.alpaca.markets"
+H = {"APCA-API-KEY-ID": ALPACA_KEY, "APCA-API-SECRET-KEY": ALPACA_SECRET}
+
+# ---------- LOADING TICKERS ----------
 def load_list(path):
     if os.path.exists(path):
         with open(path, "r", encoding="utf-8") as f:
-            return [ln.strip().upper() for ln in f if ln.strip()]
+            lines = [ln.strip().upper() for ln in f if ln.strip() and not ln.strip().startswith("#")]
+            return lines
     return []
 
 def load_symbols():
     base = load_list("tickers.txt")
     wl   = load_list("watchlist.txt")
     env  = [s.strip().upper() for s in os.getenv("SYMBOLS","").split(",") if s.strip()]
-    # de-dupe, preserve order
-    seen=set(); out=[]
+    seen = set()
+    out  = []
     for s in base + wl + env:
         if s not in seen:
-            seen.add(s); out.append(s)
-    return out or ["VTI","VOO"]  # fallback
+            seen.add(s)
+            out.append(s)
+    return out
 
 SYMBOLS = load_symbols()
+print(f"🧾 Loaded {len(SYMBOLS)} tickers: {', '.join(SYMBOLS[:20])}{'...' if len(SYMBOLS)>20 else ''}")
 
-
-
-GIST_ID       = os.getenv("GIST_ID")             # hex ID from your gist URL
-GITHUB_TOKEN  = os.getenv("GIST_TOKEN")          # PAT with 'gist' scope
-
-DATA_BASE = "https://data.alpaca.markets"
-H = {"APCA-API-KEY-ID": ALPACA_KEY, "APCA-API-SECRET-KEY": ALPACA_SECRET}
-
+# ---------- FETCHING DATA ----------
 def latest_bars(symbols):
     url = f"{DATA_BASE}/v2/stocks/bars/latest"
-    r = requests.get(url, headers=H, params={"symbols":",".join(symbols),"feed":FEED}, timeout=15)
+    params = {"symbols": ",".join(symbols), "feed": FEED}
+    print(f"🔄 Fetching latest bars for {len(symbols)} tickers...")
+    r = requests.get(url, headers=H, params=params, timeout=15)
+    print(f"📡 Response status: {r.status_code}")
     r.raise_for_status()
-    return r.json().get("bars", {})
+    data = r.json().get("bars", {})
+    retrieved = list(data.keys())
+    print(f"✅ Retrieved {len(retrieved)} bars: {', '.join(retrieved[:20])}{'...' if len(retrieved)>20 else ''}")
+
+    missing = [s for s in symbols if s not in retrieved]
+    if missing:
+        print(f"⚠️ Missing {len(missing)} tickers (no data): {', '.join(missing[:20])}{'...' if len(missing)>20 else ''}")
+    return data
 
 def latest_news(symbols, limit=12):
     url = f"{DATA_BASE}/v1beta1/news"
-    r = requests.get(url, headers=H, params={"symbols":",".join(symbols), "limit": limit}, timeout=15)
+    params = {"symbols": ",".join(symbols), "limit": limit}
+    print(f"📰 Fetching latest news for {len(symbols)} tickers...")
+    r = requests.get(url, headers=H, params=params, timeout=15)
+    print(f"📡 News response: {r.status_code}")
     r.raise_for_status()
     return r.json().get("news", [])
 
+# ---------- GIST PUBLISH ----------
 def publish_to_gist(gist_id, token, filename, content_str):
     url = f"https://api.github.com/gists/{gist_id}"
     payload = {"files": {filename: {"content": content_str}}}
     headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
     r = requests.patch(url, headers=headers, json=payload, timeout=15)
+    print(f"💾 Pushed to gist, status {r.status_code}")
     r.raise_for_status()
     return r.json()
 
+# ---------- MAIN ----------
 def main():
     bars = latest_bars(SYMBOLS)
     news = latest_news(SYMBOLS, limit=12)
     doc = {
         "as_of_utc": datetime.now(timezone.utc).isoformat(),
         "feed": FEED,
-        "symbols": {
-            s: {
-                "price": (bars.get(s) or {}).get("c"),
-                "volume": (bars.get(s) or {}).get("v"),
-                "ts": (bars.get(s) or {}).get("t")
-            } for s in SYMBOLS
-        },
+        "symbols": { s: {
+            "price": (bars.get(s) or {}).get("c"),
+            "volume": (bars.get(s) or {}).get("v"),
+            "ts": (bars.get(s) or {}).get("t")
+        } for s in SYMBOLS },
         "news": [
             {
                 "symbols": n.get("symbols"),
@@ -77,13 +94,18 @@ def main():
             } for n in news
         ]
     }
-    if not (GIST_ID and GITHUB_TOKEN):
-        raise RuntimeError("Missing GIST_ID or GIST_TOKEN env vars.")
+
     content = json.dumps(doc, separators=(",", ":"), ensure_ascii=False)
+    if DRY_RUN:
+        print("🧪 Dry run mode — showing first 500 chars of output:")
+        print(content[:500])
+        return
+
     publish_to_gist(GIST_ID, GITHUB_TOKEN, "prices.json", content)
+    print("✅ Completed successfully.")
 
 if __name__ == "__main__":
-    for var in ["ALPACA_KEY","ALPACA_SECRET","GIST_ID","GIST_TOKEN"]:
+    for var in ["ALPACA_KEY","ALPACA_SECRET"]:
         if not os.getenv(var):
-            raise RuntimeError(f"Missing env var: {var}")
+            raise RuntimeError(f"Missing required env var: {var}")
     main()
