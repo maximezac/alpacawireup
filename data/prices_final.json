@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-10-28T22:37:29.081979+00:00",
+  "as_of_utc": "2025-10-28T22:44:26.624754+00:00",
   "timeframe": "1Day",
   "indicators_window": null,
   "symbols": {
@@ -10,10 +10,10 @@
       "sector": "",
       "signals": {
         "TS": -0.325813,
-        "NS": 0.0,
+        "NS": 0.060094,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": -0.195488,
+        "CDS": -0.17145,
         "components": {
           "rsi_pos": 0.013879790260820925,
           "macd_hist_slope": -0.8163271727829918,
@@ -25,15 +25,107 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "Watching Quantum Stocks; Shares Reverse Moving Sharply To The Downside During Nvidia Presentation On Quantum Computing",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:42:16Z",
+              "vader": 0.0516,
+              "relevance": 1.0,
+              "decay_w": 0.8400156662361892,
+              "weight": 0.8400156662361892
+            },
+            {
+              "headline": "Watching Quantum Stocks; Shares See Volume To Upside As NVIDIA Hosts GTC Keynote",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:37:40Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.8381577442963786,
+              "weight": 0.8381577442963786
+            },
+            {
+              "headline": "Quantum Stocks Are Trading Higher Monday: What's Going On?",
+              "source": "benzinga",
+              "ts": "2025-10-27T19:56:36Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.46119278329945873,
+              "weight": 0.46119278329945873
+            },
+            {
+              "headline": "Rigetti, MP Materials, And STMicroelectronics Are Among Top 10 Large Cap Losers Last Week (Oct. 20-Oct. 24): Are the Others in Your Portfolio?",
+              "source": "benzinga",
+              "ts": "2025-10-26T17:11:57Z",
+              "vader": -0.7845,
+              "relevance": 1.0,
+              "decay_w": 0.2130260202160105,
+              "weight": 0.2130260202160105
+            },
+            {
+              "headline": "Quantum Stock Tracker: Rigetti, D-Wave, IonQ's Bumpy Week",
+              "source": "benzinga",
+              "ts": "2025-10-24T21:41:17Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.06062844380344527,
+              "weight": 0.06062844380344527
+            },
+            {
+              "headline": "10 Information Technology Stocks Whale Activity In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-24T17:35:14Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.0538567337221826,
+              "weight": 0.0538567337221826
+            },
+            {
+              "headline": "Deal Dispatch: From Four Roses Bourbon To Quantum Stakes, Here Are This Week's Sector Shake Ups",
+              "source": "benzinga",
+              "ts": "2025-10-24T16:20:19Z",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.05194919068650912,
+              "weight": 0.05194919068650912
+            },
+            {
+              "headline": "Ford, Inhibrx Biosciences, Comfort Systems, Western Union And Other Big Stocks Moving Higher On Friday",
+              "source": "benzinga",
+              "ts": "2025-10-24T14:33:59Z",
+              "vader": 0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.04935713593283895,
+              "weight": 0.04935713593283895
+            },
+            {
+              "headline": "Martin Shkreli Blasts Trump's Move To Buy Shares Of Quantum Computing Companies For the US Government, Suggests The President Should Do This Instead",
+              "source": "benzinga",
+              "ts": "2025-10-24T06:32:22Z",
+              "vader": 0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.03914431133767517,
+              "weight": 0.03914431133767517
+            },
+            {
+              "headline": "'US Weighs Quantum Computing Boost In Effort To Counter China' - Bloomberg News",
+              "source": "benzinga",
+              "ts": "2025-10-23T19:10:55Z",
+              "vader": 0.4019,
+              "relevance": 1.0,
+              "decay_w": 0.028197621910449226,
+              "weight": 0.028197621910449226
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -47,10 +139,10 @@
       "sector": "ETF",
       "signals": {
         "TS": 0.385783,
-        "NS": 0.0,
+        "NS": 0.119268,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.23147,
+        "CDS": 0.279177,
         "components": {
           "rsi_pos": 0.34105069058756554,
           "macd_hist_slope": 0.6119248280613122,
@@ -62,15 +154,62 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 5,
+          "samples": [
+            {
+              "headline": "Benzinga Market Summary: Nuclear Stocks Rise On Cameco Deal With Brookfield And US Government, NVIDIA To Make Investment In Nokia, S&P Rises",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:13:42Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9035336120779087,
+              "weight": 0.9035336120779087
+            },
+            {
+              "headline": "Benzinga Market Summary: Stocks Rise On US-China Trade Hopes, Argentina Stocks Climb On Milei Midterm Election Victory, Gold Pulls Back",
+              "source": "benzinga",
+              "ts": "2025-10-27T18:37:36Z",
+              "vader": 0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.4439843509149224,
+              "weight": 0.4439843509149224
+            },
+            {
+              "headline": "Benzinga Market Summary: S&P Rises On Softer-Than-Expected Sept. CPI Figures, Trump Ends Trade Negotiations With Canada, Michigan Consumer Sentiment Falls In October",
+              "source": "benzinga",
+              "ts": "2025-10-24T14:07:39Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.04873545264841572,
+              "weight": 0.04873545264841572
+            },
+            {
+              "headline": "Benzinga Market Summary: S&P Moves Higher, Oil Surges On US-Russia Sanctions, Molina Healthcare Falls On Weak Guidance",
+              "source": "benzinga",
+              "ts": "2025-10-23T18:37:02Z",
+              "vader": -0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.027741453967673965,
+              "weight": 0.027741453967673965
+            },
+            {
+              "headline": "Benzinga Market Summary: S&P Falls As Texas Instruments And Netflix Drop, US Government Shutdown Enters 22nd Day, Intuitive Surgical Rises On Earnings Beat",
+              "source": "benzinga",
+              "ts": "2025-10-22T16:15:23Z",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.012956493702943491,
+              "weight": 0.012956493702943491
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -84,10 +223,10 @@
       "sector": "",
       "signals": {
         "TS": -0.358272,
-        "NS": 0.0,
+        "NS": 0.131528,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": -0.214963,
+        "CDS": -0.162352,
         "components": {
           "rsi_pos": -0.22892224642704534,
           "macd_hist_slope": -0.5857689848558008,
@@ -99,15 +238,107 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "Watching Quantum Stocks; Shares Reverse Moving Sharply To The Downside During Nvidia Presentation On Quantum Computing",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:42:16Z",
+              "vader": 0.0516,
+              "relevance": 1.0,
+              "decay_w": 0.8400156662361892,
+              "weight": 0.8400156662361892
+            },
+            {
+              "headline": "Watching Quantum Stocks; Shares See Volume To Upside As NVIDIA Hosts GTC Keynote",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:37:40Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.8381577442963786,
+              "weight": 0.8381577442963786
+            },
+            {
+              "headline": "Quantum Stocks Are Trading Higher Monday: What's Going On?",
+              "source": "benzinga",
+              "ts": "2025-10-27T19:56:36Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.46119278329945873,
+              "weight": 0.46119278329945873
+            },
+            {
+              "headline": "Quantum Stock Tracker: Rigetti, D-Wave, IonQ's Bumpy Week",
+              "source": "benzinga",
+              "ts": "2025-10-24T21:41:17Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.06062844380344527,
+              "weight": 0.06062844380344527
+            },
+            {
+              "headline": "Deal Dispatch: From Four Roses Bourbon To Quantum Stakes, Here Are This Week's Sector Shake Ups",
+              "source": "benzinga",
+              "ts": "2025-10-24T16:20:19Z",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.05194919068650912,
+              "weight": 0.05194919068650912
+            },
+            {
+              "headline": "Martin Shkreli Blasts Trump's Move To Buy Shares Of Quantum Computing Companies For the US Government, Suggests The President Should Do This Instead",
+              "source": "benzinga",
+              "ts": "2025-10-24T06:32:22Z",
+              "vader": 0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.03914431133767517,
+              "weight": 0.03914431133767517
+            },
+            {
+              "headline": "'US Weighs Quantum Computing Boost In Effort To Counter China' - Bloomberg News",
+              "source": "benzinga",
+              "ts": "2025-10-23T19:10:55Z",
+              "vader": 0.4019,
+              "relevance": 1.0,
+              "decay_w": 0.028197621910449226,
+              "weight": 0.028197621910449226
+            },
+            {
+              "headline": "New Russia Sanctions Trigger A Buy Signal On Oil And Give Gold Second Wind; Government May Back Quantum Computing",
+              "source": "benzinga",
+              "ts": "2025-10-23T16:46:58Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.026309944735210793,
+              "weight": 0.026309944735210793
+            },
+            {
+              "headline": "CNBC Reports Commerce Department Says Not Currently Negotiating Equity Stakes WIth Quantum Computing Companies",
+              "source": "benzinga",
+              "ts": "2025-10-23T16:27:22Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.026062890723482342,
+              "weight": 0.026062890723482342
+            },
+            {
+              "headline": "Shares of quantum stocks are trading higher on reports the Trump administration is in talks to take equity stakes in quantum-computing firms.",
+              "source": "benzinga",
+              "ts": "2025-10-23T16:19:33Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.025965011532975486,
+              "weight": 0.025965011532975486
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -121,10 +352,10 @@
       "sector": "",
       "signals": {
         "TS": -0.414133,
-        "NS": 0.0,
+        "NS": 0.141247,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": -0.24848,
+        "CDS": -0.191981,
         "components": {
           "rsi_pos": -0.034101787480353495,
           "macd_hist_slope": -0.9645307966547206,
@@ -136,15 +367,107 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "Rigetti Computing Partnering With NVIDIA To Support NVIDIA NVQLink For Integrating AI Supercomputing With Quantum Computers",
+              "source": "benzinga",
+              "ts": "2025-10-28T20:15:50Z",
+              "vader": 0.4019,
+              "relevance": 1.0,
+              "decay_w": 0.9309646705023348,
+              "weight": 0.9309646705023348
+            },
+            {
+              "headline": "10 Information Technology Stocks Whale Activity In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:35:16Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8617215658299667,
+              "weight": 0.8617215658299667
+            },
+            {
+              "headline": "Watching Quantum Stocks; Shares Reverse Moving Sharply To The Downside During Nvidia Presentation On Quantum Computing",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:42:16Z",
+              "vader": 0.0516,
+              "relevance": 1.0,
+              "decay_w": 0.8400156662361892,
+              "weight": 0.8400156662361892
+            },
+            {
+              "headline": "Watching Quantum Stocks; Shares See Volume To Upside As NVIDIA Hosts GTC Keynote",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:37:40Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.8381577442963786,
+              "weight": 0.8381577442963786
+            },
+            {
+              "headline": "What's Going On With Rigetti Computing (RGTI) Stock Tuesday?",
+              "source": "benzinga",
+              "ts": "2025-10-28T15:48:46Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.8186594609409708,
+              "weight": 0.8186594609409708
+            },
+            {
+              "headline": "Quantum Stocks Are Trading Higher Monday: What's Going On?",
+              "source": "benzinga",
+              "ts": "2025-10-27T19:56:36Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.46119278329945873,
+              "weight": 0.46119278329945873
+            },
+            {
+              "headline": "Rigetti, MP Materials, And STMicroelectronics Are Among Top 10 Large Cap Losers Last Week (Oct. 20-Oct. 24): Are the Others in Your Portfolio?",
+              "source": "benzinga",
+              "ts": "2025-10-26T17:11:57Z",
+              "vader": -0.7845,
+              "relevance": 1.0,
+              "decay_w": 0.2130260202160105,
+              "weight": 0.2130260202160105
+            },
+            {
+              "headline": "TSLA, BYND, IBM And More: 5 Stocks That Dominated Investor Buzz This Week",
+              "source": "benzinga",
+              "ts": "2025-10-25T16:01:32Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.10296322856819325,
+              "weight": 0.10296322856819325
+            },
+            {
+              "headline": "Quantum Stock Tracker: Rigetti, D-Wave, IonQ's Bumpy Week",
+              "source": "benzinga",
+              "ts": "2025-10-24T21:41:17Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.06062844380344527,
+              "weight": 0.06062844380344527
+            },
+            {
+              "headline": "Deal Dispatch: From Four Roses Bourbon To Quantum Stakes, Here Are This Week's Sector Shake Ups",
+              "source": "benzinga",
+              "ts": "2025-10-24T16:20:19Z",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.05194919068650912,
+              "weight": 0.05194919068650912
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -173,15 +496,26 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 1,
+          "samples": [
+            {
+              "headline": "Behind the Scenes of Take-Two Interactive's Latest Options Trends",
+              "source": "benzinga",
+              "ts": "2025-10-23T18:01:00Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.027264434929649535,
+              "weight": 0.027264434929649535
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -195,10 +529,10 @@
       "sector": "",
       "signals": {
         "TS": -0.327969,
-        "NS": 0.0,
+        "NS": -0.186781,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": -0.196781,
+        "CDS": -0.271494,
         "components": {
           "rsi_pos": 0.12643695833673305,
           "macd_hist_slope": -0.9653330709770217,
@@ -210,20 +544,85 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 7,
+          "samples": [
+            {
+              "headline": "Rigetti, MP Materials, And STMicroelectronics Are Among Top 10 Large Cap Losers Last Week (Oct. 20-Oct. 24): Are the Others in Your Portfolio?",
+              "source": "benzinga",
+              "ts": "2025-10-26T17:11:57Z",
+              "vader": -0.7845,
+              "relevance": 1.0,
+              "decay_w": 0.2130260202160105,
+              "weight": 0.2130260202160105
+            },
+            {
+              "headline": "Benzinga Bulls And Bears: Beyond Meat, Intel, Newmont \u2014 And Inflation Numbers Boost Rate Cut Hopes",
+              "source": "benzinga",
+              "ts": "2025-10-25T12:01:57Z",
+              "vader": 0.8555,
+              "relevance": 1.0,
+              "decay_w": 0.09174820783617031,
+              "weight": 0.09174820783617031
+            },
+            {
+              "headline": "New Russia Sanctions Trigger A Buy Signal On Oil And Give Gold Second Wind; Government May Back Quantum Computing",
+              "source": "benzinga",
+              "ts": "2025-10-23T16:46:58Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.026309944735210793,
+              "weight": 0.026309944735210793
+            },
+            {
+              "headline": "Gold Drops After Blow-Off Top Signal; Netflix Disappoints; Tesla Earnings Ahead",
+              "source": "benzinga",
+              "ts": "2025-10-22T16:50:07Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.013174933848438288,
+              "weight": 0.013174933848438288
+            },
+            {
+              "headline": "What's Going On With AST SpaceMobile Stock Wednesday?",
+              "source": "benzinga",
+              "ts": "2025-10-22T13:47:09Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.012064227445161675,
+              "weight": 0.012064227445161675
+            },
+            {
+              "headline": "Market-Moving news for October 22nd",
+              "source": "benzinga",
+              "ts": "2025-10-22T11:11:36Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.011193915012843813,
+              "weight": 0.011193915012843813
+            },
+            {
+              "headline": "Reported Earlier, AST SpaceMobile Prices $1B Convertible Senior Notes To Accelerate Space-Based Cellular Network Expansion While Completing $50M Debt Repurchase And Issuing 2M Registered Direct Shares",
+              "source": "benzinga",
+              "ts": "2025-10-22T07:31:56Z",
+              "vader": -0.0772,
+              "relevance": 1.0,
+              "decay_w": 0.01007073097078177,
+              "weight": 0.01007073097078177
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
       },
-      "decision": "Hold"
+      "decision": "Sell/Trim"
     },
     "RKLB": {
       "symbol": "RKLB",
@@ -232,10 +631,10 @@
       "sector": "",
       "signals": {
         "TS": -0.171785,
-        "NS": 0.0,
-        "wT": 0.6,
-        "wN": 0.4,
-        "CDS": -0.103071,
+        "NS": 0.701032,
+        "wT": 0.4,
+        "wN": 0.6,
+        "CDS": 0.351905,
         "components": {
           "rsi_pos": 0.1347351125277534,
           "macd_hist_slope": -0.5784155570413699,
@@ -247,20 +646,58 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 4,
+          "samples": [
+            {
+              "headline": "Rocket Lab Stock Is Gaining Momentum: What's Going On? (CORRECTED)",
+              "source": "benzinga",
+              "ts": "2025-10-28T18:14:10Z",
+              "vader": 0.7783,
+              "relevance": 1.0,
+              "decay_w": 0.8780089699493833,
+              "weight": 0.8780089699493833
+            },
+            {
+              "headline": "10 Industrials Stocks With Whale Alerts In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-24T17:35:20Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.0538593261903498,
+              "weight": 0.0538593261903498
+            },
+            {
+              "headline": "What's Going On With Rocket Lab (RKLB) Stock Friday?",
+              "source": "benzinga",
+              "ts": "2025-10-24T14:14:29Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.04889601917938443,
+              "weight": 0.04889601917938443
+            },
+            {
+              "headline": "Rocket Lab Completes Systems Integration Review And Finalizes Its Photon Spacecraft For Eta Space And NASA's LOXSAT Mission",
+              "source": "benzinga",
+              "ts": "2025-10-22T20:32:40Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.014664667182263459,
+              "weight": 0.014664667182263459
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
       },
-      "decision": "Hold"
+      "decision": "Buy/Add"
     },
     "ARCC": {
       "symbol": "ARCC",
@@ -269,10 +706,10 @@
       "sector": "",
       "signals": {
         "TS": 0.11911,
-        "NS": 0.0,
+        "NS": -0.053273,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.071466,
+        "CDS": 0.050157,
         "components": {
           "rsi_pos": 0.11229700900227513,
           "macd_hist_slope": 0.17416327241103968,
@@ -284,15 +721,44 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 3,
+          "samples": [
+            {
+              "headline": "Nasdaq 100 Hits 26,000, Gold Falls Below $4,000: What's Moving Markets Tuesday?",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:23:51Z",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.8569990167583567,
+              "weight": 0.8569990167583567
+            },
+            {
+              "headline": "Earnings Scheduled For October 28, 2025",
+              "source": "benzinga",
+              "ts": "2025-10-28T11:11:34Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7163990660540281,
+              "weight": 0.7163990660540281
+            },
+            {
+              "headline": "Ares Capital Q3 Adj. EPS $0.50, Inline, Sales $782.000M Beat $768.602M Estimate",
+              "source": "benzinga",
+              "ts": "2025-10-28T10:04:43Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6937134447132413,
+              "weight": 0.6937134447132413
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -306,10 +772,10 @@
       "sector": "Tech",
       "signals": {
         "TS": 0.48853,
-        "NS": 0.0,
+        "NS": 0.285484,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.293118,
+        "CDS": 0.407312,
         "components": {
           "rsi_pos": 0.3899417015258513,
           "macd_hist_slope": 0.7888113026252858,
@@ -321,20 +787,112 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "Nvidia Shares Rise Nearly 4% To Intraday High After Key Trading Signal",
+              "source": "benzinga",
+              "ts": "2025-10-28T21:35:49Z",
+              "vader": 0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.9675058610467254,
+              "weight": 0.9675058610467254
+            },
+            {
+              "headline": "Joby Aviation Stock Soars On Nvidia Collaboration",
+              "source": "benzinga",
+              "ts": "2025-10-28T21:01:12Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.9515180664163995,
+              "weight": 0.9515180664163995
+            },
+            {
+              "headline": "Rigetti Computing Partnering With NVIDIA To Support NVIDIA NVQLink For Integrating AI Supercomputing With Quantum Computers",
+              "source": "benzinga",
+              "ts": "2025-10-28T20:15:50Z",
+              "vader": 0.4019,
+              "relevance": 1.0,
+              "decay_w": 0.9309646705023348,
+              "weight": 0.9309646705023348
+            },
+            {
+              "headline": "Joby Aviation Selected By NVIDIA As Aviation Launch Partners For New NVIDIA IGX Thor Platform",
+              "source": "benzinga",
+              "ts": "2025-10-28T20:07:37Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9272898741243224,
+              "weight": 0.9272898741243224
+            },
+            {
+              "headline": "NVIDIA CEO Says TSMC Is Planning To Bring Most Advanced Packaging Technology To United States 'In The Next Several Months'",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:47:17Z",
+              "vader": 0.624,
+              "relevance": 1.0,
+              "decay_w": 0.9182582995439565,
+              "weight": 0.9182582995439565
+            },
+            {
+              "headline": "Energy Department Announces New Partnership with NVIDIA and Oracle to Build Largest DOE AI Supercomputer",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:46:12Z",
+              "vader": 0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.917779584905525,
+              "weight": 0.917779584905525
+            },
+            {
+              "headline": "NVIDIA CEO Says NVIDIA Will Start Doing More Chip Packaging In The United States \"In The Next Several Months\"",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:41:01Z",
+              "vader": 0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.9154925708750328,
+              "weight": 0.9154925708750328
+            },
+            {
+              "headline": "NVIDIA CEO Says NVIDIA Has Not Yet Sought Licenses To Ship Blackwell Chip To China",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:37:09Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9137902147019883,
+              "weight": 0.9137902147019883
+            },
+            {
+              "headline": "CrowdStrike Stock Climbing After NVIDIA Partnership Announcement",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:28:28Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9099787786136994,
+              "weight": 0.9099787786136994
+            },
+            {
+              "headline": "NVIDIA CEO Says Company Currently Completely Shut Out Of China; Says Company's Share Of AI Chip Market In China Is Down To Zero",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:19:46Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.9061759702374299,
+              "weight": 0.9061759702374299
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
       },
-      "decision": "Hold"
+      "decision": "Buy/Add"
     },
     "VOO": {
       "symbol": "VOO",
@@ -343,10 +901,10 @@
       "sector": "ETF",
       "signals": {
         "TS": 0.514211,
-        "NS": 0.0,
+        "NS": 0.058779,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.308527,
+        "CDS": 0.332038,
         "components": {
           "rsi_pos": 0.3725453594300046,
           "macd_hist_slope": 0.9002944479537821,
@@ -358,15 +916,107 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "A Fed Rate Cut Is Done Deal\u2013But Powell's Words Could Spark The Meltup",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:46:53Z",
+              "vader": -0.0516,
+              "relevance": 1.0,
+              "decay_w": 0.9180815142994311,
+              "weight": 0.9180815142994311
+            },
+            {
+              "headline": "Nasdaq 100 Hits 26,000, Gold Falls Below $4,000: What's Moving Markets Tuesday?",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:23:51Z",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.8569990167583567,
+              "weight": 0.8569990167583567
+            },
+            {
+              "headline": "S&P 500 Could Smash 7,000 Soon\u2014If Traders' Moonshot Bets Are Right",
+              "source": "benzinga",
+              "ts": "2025-10-28T14:46:29Z",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.794480131976091,
+              "weight": 0.794480131976091
+            },
+            {
+              "headline": "Tech Stocks Rally, Gold Tumbles On US-China Trade Progress: What's Moving Markets Monday?",
+              "source": "benzinga",
+              "ts": "2025-10-27T17:03:17Z",
+              "vader": 0.8176,
+              "relevance": 1.0,
+              "decay_w": 0.4242783731724773,
+              "weight": 0.4242783731724773
+            },
+            {
+              "headline": "Rate Cuts, Meltups, And Market Euphoria \u2014 Ed Yardeni Says It's 1999 All Over Again",
+              "source": "benzinga",
+              "ts": "2025-10-27T13:51:33Z",
+              "vader": 0.8201,
+              "relevance": 1.0,
+              "decay_w": 0.3868737903908279,
+              "weight": 0.3868737903908279
+            },
+            {
+              "headline": "America First? Trump Mantra Makes Exception For Argentina: Here's Why",
+              "source": "benzinga",
+              "ts": "2025-10-24T18:39:11Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.05554035732121752,
+              "weight": 0.05554035732121752
+            },
+            {
+              "headline": "Stocks Soar To Records After Weak Inflation, Ford Jumps 10%: What's Moving Markets Friday?",
+              "source": "benzinga",
+              "ts": "2025-10-24T17:22:10Z",
+              "vader": 0.4767,
+              "relevance": 1.0,
+              "decay_w": 0.0535190557556592,
+              "weight": 0.0535190557556592
+            },
+            {
+              "headline": "Inflation Landed Where Trump Wanted: These 10 Stocks Are Rallying",
+              "source": "benzinga",
+              "ts": "2025-10-24T14:11:33Z",
+              "vader": 0.5574,
+              "relevance": 1.0,
+              "decay_w": 0.0488270283571767,
+              "weight": 0.0488270283571767
+            },
+            {
+              "headline": "Delayed Inflation Report Looms: Will It Shake Fed's Next Move?",
+              "source": "benzinga",
+              "ts": "2025-10-23T19:45:51Z",
+              "vader": -0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.028675780518717633,
+              "weight": 0.028675780518717633
+            },
+            {
+              "headline": "Oil Stocks Rally On Trump's Russia Sanctions: What's Moving Markets Thursday?",
+              "source": "benzinga",
+              "ts": "2025-10-23T16:55:59Z",
+              "vader": 0.4588,
+              "relevance": 1.0,
+              "decay_w": 0.02642438312046149,
+              "weight": 0.02642438312046149
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -380,10 +1030,10 @@
       "sector": "Consumer Discretionary",
       "signals": {
         "TS": 0.438424,
-        "NS": 0.0,
+        "NS": 0.238579,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.263054,
+        "CDS": 0.358486,
         "components": {
           "rsi_pos": 0.17921043817094642,
           "macd_hist_slope": 0.9003415120855477,
@@ -395,20 +1045,112 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "Amazon Q3 Preview: Will AWS Outage, Job Cuts Overshadow Earnings, Growth Plans?",
+              "source": "benzinga",
+              "ts": "2025-10-28T20:51:50Z",
+              "vader": 0.872,
+              "relevance": 1.0,
+              "decay_w": 0.9472376463011944,
+              "weight": 0.9472376463011944
+            },
+            {
+              "headline": "Amazon, UPS Slash Desk Jobs: AI Is Coming For Your Manager",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:47:21Z",
+              "vader": -0.5574,
+              "relevance": 1.0,
+              "decay_w": 0.9182877670608066,
+              "weight": 0.9182877670608066
+            },
+            {
+              "headline": "The 'Big 3' Tech Playbook: Why Apple, Amazon And Microsoft Keep Winning",
+              "source": "benzinga",
+              "ts": "2025-10-28T18:19:36Z",
+              "vader": 0.802,
+              "relevance": 1.0,
+              "decay_w": 0.8803082735032651,
+              "weight": 0.8803082735032651
+            },
+            {
+              "headline": "Agility Robotics, Amazon Robotics, Figure And Skild AI Build America's Collaborative Robot Workforce Using NVIDIA's Three-Computer Architecture",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:48:26Z",
+              "vader": 0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.8672003316199669,
+              "weight": 0.8672003316199669
+            },
+            {
+              "headline": "UBS Maintains Buy on Amazon.com, Raises Price Target to $279",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:56:51Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8459330857798194,
+              "weight": 0.8459330857798194
+            },
+            {
+              "headline": "'Amazon Makes 'Significant' Cuts In Video-Game Division' - Bloomberg",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:17:00Z",
+              "vader": 0.0772,
+              "relevance": 1.0,
+              "decay_w": 0.8298611321562842,
+              "weight": 0.8298611321562842
+            },
+            {
+              "headline": "Decoding Amazon.com's Options Activity: What's the Big Picture?",
+              "source": "benzinga",
+              "ts": "2025-10-28T15:03:09Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8008795133952417,
+              "weight": 0.8008795133952417
+            },
+            {
+              "headline": "Competitor Analysis: Evaluating Amazon.com And Competitors In Broadline Retail Industry",
+              "source": "benzinga",
+              "ts": "2025-10-28T15:00:58Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8000382693418202,
+              "weight": 0.8000382693418202
+            },
+            {
+              "headline": "Big US Nuclear Power Deal; Tech Capital Wins Over Human Capital; Positive ADP Data",
+              "source": "benzinga",
+              "ts": "2025-10-28T14:35:43Z",
+              "vader": 0.8074,
+              "relevance": 1.0,
+              "decay_w": 0.7903733430216906,
+              "weight": 0.7903733430216906
+            },
+            {
+              "headline": "Alphabet, Amazon And A Tech Stock On CNBC's 'Final Trades'",
+              "source": "benzinga",
+              "ts": "2025-10-28T11:51:40Z",
+              "vader": 0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.7303614803107951,
+              "weight": 0.7303614803107951
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
       },
-      "decision": "Hold"
+      "decision": "Buy/Add"
     },
     "SNOW": {
       "symbol": "SNOW",
@@ -417,10 +1159,10 @@
       "sector": "",
       "signals": {
         "TS": 0.553295,
-        "NS": 0.0,
+        "NS": 0.105256,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.331977,
+        "CDS": 0.374079,
         "components": {
           "rsi_pos": 0.3947088944972444,
           "macd_hist_slope": 0.9463235257404641,
@@ -432,20 +1174,67 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 5,
+          "samples": [
+            {
+              "headline": "How Is The Market Feeling About Snowflake Inc?",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:00:37Z",
+              "vader": 0.128,
+              "relevance": 1.0,
+              "decay_w": 0.8474682326681502,
+              "weight": 0.8474682326681502
+            },
+            {
+              "headline": "JMP Securities Maintains Market Outperform on Snowflake, Raises Price Target to $325",
+              "source": "benzinga",
+              "ts": "2025-10-28T13:21:23Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.7625933336283046,
+              "weight": 0.7625933336283046
+            },
+            {
+              "headline": "Palantir Locks In Poland \u2014 And Maybe Its Next All-Time High",
+              "source": "benzinga",
+              "ts": "2025-10-27T12:27:48Z",
+              "vader": 0.128,
+              "relevance": 1.0,
+              "decay_w": 0.3715878349065313,
+              "weight": 0.3715878349065313
+            },
+            {
+              "headline": "Snowflake Reaffirms Revenue Outlook After Executive's Unapproved Instagram Interview, Warns Investors Not to Rely on Unauthorized Executive's Social Media Comments",
+              "source": "benzinga",
+              "ts": "2025-10-27T10:14:20Z",
+              "vader": -0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.3484660453292027,
+              "weight": 0.3484660453292027
+            },
+            {
+              "headline": "Watching Snowflake; Shares See Volume To The Upside, Hearing Investor Business Daily SwingTrader Buys Stock",
+              "source": "benzinga",
+              "ts": "2025-10-24T17:54:37Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.05436157987257705,
+              "weight": 0.05436157987257705
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
       },
-      "decision": "Hold"
+      "decision": "Buy/Add"
     },
     "PLTR": {
       "symbol": "PLTR",
@@ -454,10 +1243,10 @@
       "sector": "",
       "signals": {
         "TS": 0.285613,
-        "NS": 0.0,
+        "NS": 0.141653,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.171368,
+        "CDS": 0.228029,
         "components": {
           "rsi_pos": 0.242653170310942,
           "macd_hist_slope": 0.4476839143884305,
@@ -469,15 +1258,107 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "What AI Bubble? For Cathie Wood, Palantir Is The Secret Weapon",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:54:55Z",
+              "vader": 0.0516,
+              "relevance": 1.0,
+              "decay_w": 0.8699108889498819,
+              "weight": 0.8699108889498819
+            },
+            {
+              "headline": "NVIDIA Collaborates With Palantir Technologies To Build Integrated Technology Stack For Operational AI To Accelerate And Optimize Complex Enterprise And Government Systems",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:38:23Z",
+              "vader": 0.4939,
+              "relevance": 1.0,
+              "decay_w": 0.8630153031168976,
+              "weight": 0.8630153031168976
+            },
+            {
+              "headline": "10 Information Technology Stocks Whale Activity In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:35:16Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8617215658299667,
+              "weight": 0.8617215658299667
+            },
+            {
+              "headline": "Citigroup Maintains Neutral on Palantir Technologies, Raises Price Target to $190",
+              "source": "benzinga",
+              "ts": "2025-10-28T16:40:21Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8392410321170696,
+              "weight": 0.8392410321170696
+            },
+            {
+              "headline": "What's Going On With Palantir Technologies Stock Tuesday?",
+              "source": "benzinga",
+              "ts": "2025-10-28T14:35:00Z",
+              "vader": 0.6124,
+              "relevance": 1.0,
+              "decay_w": 0.7901007356776422,
+              "weight": 0.7901007356776422
+            },
+            {
+              "headline": "Cathie Wood Bets Big On Jack Dorsey's Bitcoin-Heavy Block, Adds Amazon And Alibaba \u2014 Sells Shopify, Surging Palantir",
+              "source": "benzinga",
+              "ts": "2025-10-28T01:37:08Z",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.5433385535007024,
+              "weight": 0.5433385535007024
+            },
+            {
+              "headline": "Here's How Much You Would Have Made Owning Palantir Technologies Stock In The Last 5 Years",
+              "source": "benzinga",
+              "ts": "2025-10-27T23:15:26Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5075143593394615,
+              "weight": 0.5075143593394615
+            },
+            {
+              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-27T17:35:18Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.43086769616342857,
+              "weight": 0.43086769616342857
+            },
+            {
+              "headline": "Palantir's AI In The Sky: The Data-Driven Future Of Drones",
+              "source": "benzinga",
+              "ts": "2025-10-27T16:31:11Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.41777306333128267,
+              "weight": 0.41777306333128267
+            },
+            {
+              "headline": "Palantir Technologies Stock Hits A New All-Time High: What's Going On?",
+              "source": "benzinga",
+              "ts": "2025-10-27T14:31:05Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.39430628253192807,
+              "weight": 0.39430628253192807
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -491,10 +1372,10 @@
       "sector": "",
       "signals": {
         "TS": 0.606113,
-        "NS": 0.0,
+        "NS": 0.342565,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.363668,
+        "CDS": 0.500694,
         "components": {
           "rsi_pos": 0.47225425862380205,
           "macd_hist_slope": 0.9689649090061664,
@@ -506,15 +1387,107 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 10,
+          "samples": [
+            {
+              "headline": "Check Out What Whales Are Doing With AMD",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:01:23Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8981927210715316,
+              "weight": 0.8981927210715316
+            },
+            {
+              "headline": "Supermicro Smashes AI Trading Records With Intel And Micron \u2014 What's Powering The Surge?",
+              "source": "benzinga",
+              "ts": "2025-10-28T15:08:01Z",
+              "vader": 0.5994,
+              "relevance": 1.0,
+              "decay_w": 0.8027578375296898,
+              "weight": 0.8027578375296898
+            },
+            {
+              "headline": "Live On CNBC, AMD CEO Lisa Su Discusses AI Jobs Impact",
+              "source": "benzinga",
+              "ts": "2025-10-28T13:49:34Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7730092504774594,
+              "weight": 0.7730092504774594
+            },
+            {
+              "headline": "Live On CNBC, AMD CEO Discusses AMD's New AI Supercomputer Partnership; Energy Dept. Deal For Nuclear Fusion And Medical Research",
+              "source": "benzinga",
+              "ts": "2025-10-28T13:45:50Z",
+              "vader": 0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.7716213629837221,
+              "weight": 0.7716213629837221
+            },
+            {
+              "headline": "Nvidia, AMD, Broadcom's Combined Value Surges 1000% In Just Three Years \u2014 And Bulls Want More",
+              "source": "benzinga",
+              "ts": "2025-10-28T13:16:59Z",
+              "vader": 0.3274,
+              "relevance": 1.0,
+              "decay_w": 0.7609799084719009,
+              "weight": 0.7609799084719009
+            },
+            {
+              "headline": "Qualcomm's Real AI Test Isn't In Saudi \u2014 It's In Facing Nvidia At Home",
+              "source": "benzinga",
+              "ts": "2025-10-28T13:12:29Z",
+              "vader": -0.0644,
+              "relevance": 1.0,
+              "decay_w": 0.7593333452947337,
+              "weight": 0.7593333452947337
+            },
+            {
+              "headline": "Jim Cramer Hails 'Nice Win' As AMD Inks $1 Billion AI Deal With US Department Of Energy",
+              "source": "benzinga",
+              "ts": "2025-10-28T12:02:15Z",
+              "vader": 0.8689,
+              "relevance": 1.0,
+              "decay_w": 0.7340916620286025,
+              "weight": 0.7340916620286025
+            },
+            {
+              "headline": "Intel Boss Vows To Fix Years Of Bureaucracy And Mismanagement",
+              "source": "benzinga",
+              "ts": "2025-10-28T10:33:33Z",
+              "vader": 0.6249,
+              "relevance": 1.0,
+              "decay_w": 0.7034086096771736,
+              "weight": 0.7034086096771736
+            },
+            {
+              "headline": "US Taps AMD For Supercomputers That Could Change Energy And Medicine Forever",
+              "source": "benzinga",
+              "ts": "2025-10-27T18:19:48Z",
+              "vader": 0.5423,
+              "relevance": 1.0,
+              "decay_w": 0.44019651262455256,
+              "weight": 0.44019651262455256
+            },
+            {
+              "headline": "Watching Hewlett Packard Enterprise; Shares Move Higher, Traders Circulate Co Is Involved In AMD, Department Of Energy $1B Partnership To Build Two Supercomputers",
+              "source": "benzinga",
+              "ts": "2025-10-27T15:09:55Z",
+              "vader": 0.5106,
+              "relevance": 1.0,
+              "decay_w": 0.40174617547533903,
+              "weight": 0.40174617547533903
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -528,10 +1501,10 @@
       "sector": "",
       "signals": {
         "TS": 0.422809,
-        "NS": 0.0,
+        "NS": 0.156295,
         "wT": 0.6,
         "wN": 0.4,
-        "CDS": 0.253685,
+        "CDS": 0.316204,
         "components": {
           "rsi_pos": 0.055693274995117864,
           "macd_hist_slope": 0.9964103119120371,
@@ -543,15 +1516,44 @@
           "ema": "ema20/26_or_sma20_proxy"
         },
         "ns_debug": {
-          "source": "default_neutral",
-          "articles_used": 0
+          "source": "vader_weighted",
+          "articles_used": 3,
+          "samples": [
+            {
+              "headline": "Deere Unusual Options Activity For October 24",
+              "source": "benzinga",
+              "ts": "2025-10-24T16:01:22Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.0514774843183055,
+              "weight": 0.0514774843183055
+            },
+            {
+              "headline": "Analyst Highlights Deere's Tech-Enabled Agriculture Edge, Predicts Growth Through 2026",
+              "source": "benzinga",
+              "ts": "2025-10-22T18:54:53Z",
+              "vader": 0.8658,
+              "relevance": 1.0,
+              "decay_w": 0.013990419640833477,
+              "weight": 0.013990419640833477
+            },
+            {
+              "headline": "RBC Capital Initiates Coverage On Deere with Outperform Rating, Announces Price Target of $542",
+              "source": "benzinga",
+              "ts": "2025-10-22T13:41:37Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.012032137344521432,
+              "weight": 0.012032137344521432
+            }
+          ]
         },
         "sector_debug": {
           "sector_avg": {
-            "Unknown": 0.0,
-            "ETF": 0.0,
-            "Tech": 0.0,
-            "Consumer Discretionary": 0.0
+            "Unknown": 0.1308740658764412,
+            "ETF": 0.08902339375259948,
+            "Tech": 0.28548422219666486,
+            "Consumer Discretionary": 0.238578966178461
           },
           "notes": "nudge applied when sign disagrees"
         }
