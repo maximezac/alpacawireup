@@ -46,6 +46,19 @@ jobs:
         run: |
           python fetch_prices.py
 
+      - name: Fetch news from Alpaca
+        env:
+          ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          INPUT_PATH: data/prices.json
+          OUTPUT_PATH: data/prices.json   # in-place
+          NEWS_LOOKBACK_DAYS: "7"
+          NEWS_LIMIT_PER_SYMBOL: "25"
+          # Optional: limit sources:
+          # NEWS_SOURCES: "benzinga,mtnewswires"
+        run: |
+          python scripts/fetch_news.py
+
       # Enrich file -> data/prices_final.json (computes indicators+TS, NS neutral if no news)
       - name: Generate enriched feed
         env:
