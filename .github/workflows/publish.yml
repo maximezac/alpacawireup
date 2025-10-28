@@ -39,6 +39,7 @@ jobs:
         env:
           ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_DATA_FEED: "iex" 
           SYMBOLS_PATH: data/symbols.txt
           OUTPUT_PATH: data/prices.json
           DAYS_BACK: "270"
