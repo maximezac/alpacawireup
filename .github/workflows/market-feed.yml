@@ -3,7 +3,7 @@ name: Publish market feed with indicators & news
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # change cadence as you like
+    - cron: '*/10 * * * *'   # every 10 min; adjust as desired
   workflow_dispatch:
 
 jobs:
@@ -11,20 +11,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with:
+          python-version: '3.11'
+
       - name: Install deps
         run: pip install requests pandas
-      - name: Run publisher
+
+      - name: Run publisher (full feed)
         env:
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
           ALPACA_FEED: iex
           INDICATOR_TIMEFRAME: 1Day
           HIST_LIMIT: 200
-          # If NOT publishing to Gist, omit these and the script writes to data/prices.json
           GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-          # Optional: if you don't use portfolio_b.txt
           PORTFOLIO_B_TICKERS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT
-        run: python scripts/publish_feed.py
+        run: |
+          mkdir -p data
+          python scripts/publish_feed.py
+          # Save a full diagnostic copy (optional)
+          cp data/prices.json data/prices_full.json || true
+
+      - name: Minify feed output
+        run: |
+          python scripts/minify_feed.py < data/prices_full.json > data/prices.json
+          echo "✅ Minified feed written to data/prices.json"
