@@ -21,7 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pandas
 
-      - name: Run publisher (full feed)
+      - name: Run publisher (may write prices_full.json or prices.json)
         env:
           ALPACA_KEY: ${{ secrets.ALPACA_KEY }}
           ALPACA_SECRET: ${{ secrets.ALPACA_SECRET }}
@@ -33,7 +33,7 @@ jobs:
           PORTFOLIO_B_TICKERS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT
         run: |
           mkdir -p data
-          # Your publish script should write either data/prices_full.json or data/prices.json
+          # ok if this exits non-zero; we’ll fall back to Gist
           python scripts/publish_feed.py || true
 
       - name: Ensure full feed exists (prefer local; else fetch from Gist)
@@ -52,7 +52,7 @@ jobs:
             python scripts/fetch_from_gist.py
           fi
 
-      - name: Minify feed
+      - name: Minify feed (using your existing minify_feed.py)
         run: |
           python scripts/minify_feed.py < data/prices_full.json > data/prices.json
           echo "✅ Minified feed written to data/prices.json"
