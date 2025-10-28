@@ -1,6 +1,562 @@
 {
-  "as_of_utc": "2025-10-28T22:33:01.512913+00:00",
+  "as_of_utc": "2025-10-28T22:36:03.873767+00:00",
   "timeframe": "1Day",
   "indicators_window": null,
-  "symbols": {}
+  "symbols": {
+    "QBTS": {
+      "symbol": "QBTS",
+      "price": 31.99,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": -0.325813,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.195488,
+        "components": {
+          "rsi_pos": 0.013879790260820925,
+          "macd_hist_slope": -0.8163271727829918,
+          "ema20_slope": -0.02417024221598117
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "VTI": {
+      "symbol": "VTI",
+      "price": 337.9,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "ETF",
+      "signals": {
+        "TS": 0.385783,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.23147,
+        "components": {
+          "rsi_pos": 0.34105069058756554,
+          "macd_hist_slope": 0.6119248280613122,
+          "ema20_slope": 0.02296522284173468
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "QUBT": {
+      "symbol": "QUBT",
+      "price": 14.92,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": -0.358272,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.214963,
+        "components": {
+          "rsi_pos": -0.22892224642704534,
+          "macd_hist_slope": -0.5857689848558008,
+          "ema20_slope": -0.161975312988387
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "RGTI": {
+      "symbol": "RGTI",
+      "price": 37.13,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": -0.414133,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.24848,
+        "components": {
+          "rsi_pos": -0.034101787480353495,
+          "macd_hist_slope": -0.9645307966547206,
+          "ema20_slope": -0.07339739160169685
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "TTWO": {
+      "symbol": "TTWO",
+      "price": 251.45,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": -0.397579,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.238547,
+        "components": {
+          "rsi_pos": -0.0952538234908711,
+          "macd_hist_slope": -0.8907158187667659,
+          "ema20_slope": -0.015956185044651124
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "ASTS": {
+      "symbol": "ASTS",
+      "price": 77.82,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": -0.327969,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.196781,
+        "components": {
+          "rsi_pos": 0.12643695833673305,
+          "macd_hist_slope": -0.9653330709770217,
+          "ema20_slope": 0.03794729349045428
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "RKLB": {
+      "symbol": "RKLB",
+      "price": 63.76,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": -0.171785,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.103071,
+        "components": {
+          "rsi_pos": 0.1347351125277534,
+          "macd_hist_slope": -0.5784155570413699,
+          "ema20_slope": 0.028438185690512933
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "ARCC": {
+      "symbol": "ARCC",
+      "price": 20.57,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": 0.11911,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.071466,
+        "components": {
+          "rsi_pos": 0.11229700900227513,
+          "macd_hist_slope": 0.17416327241103968,
+          "ema20_slope": 0.022629496185485286
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "price": 201.05,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "Tech",
+      "signals": {
+        "TS": 0.48853,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.293118,
+        "components": {
+          "rsi_pos": 0.3899417015258513,
+          "macd_hist_slope": 0.7888113026252858,
+          "ema20_slope": 0.08514533526802431
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "VOO": {
+      "symbol": "VOO",
+      "price": 631.9,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "ETF",
+      "signals": {
+        "TS": 0.514211,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.308527,
+        "components": {
+          "rsi_pos": 0.3725453594300046,
+          "macd_hist_slope": 0.9002944479537821,
+          "ema20_slope": 0.025376360936885542
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "price": 229.23,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "Consumer Discretionary",
+      "signals": {
+        "TS": 0.438424,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.263054,
+        "components": {
+          "rsi_pos": 0.17921043817094642,
+          "macd_hist_slope": 0.9003415120855477,
+          "ema20_slope": 0.033015338012288536
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "SNOW": {
+      "symbol": "SNOW",
+      "price": 267.0,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": 0.553295,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.331977,
+        "components": {
+          "rsi_pos": 0.3947088944972444,
+          "macd_hist_slope": 0.9463235257404641,
+          "ema20_slope": 0.08440969019433915
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "price": 189.585,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": 0.285613,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.171368,
+        "components": {
+          "rsi_pos": 0.242653170310942,
+          "macd_hist_slope": 0.4476839143884305,
+          "ema20_slope": 0.0473903077784619
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "price": 257.98,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": 0.606113,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.363668,
+        "components": {
+          "rsi_pos": 0.47225425862380205,
+          "macd_hist_slope": 0.9689649090061664,
+          "ema20_slope": 0.14812522615702803
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "DE": {
+      "symbol": "DE",
+      "price": 468.16,
+      "ts": "2025-10-28T04:00:00Z",
+      "sector": "",
+      "signals": {
+        "TS": 0.422809,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.253685,
+        "components": {
+          "rsi_pos": 0.055693274995117864,
+          "macd_hist_slope": 0.9964103119120371,
+          "ema20_slope": 0.009838507879537186
+        },
+        "ts_debug": {
+          "rsi": "rsi14",
+          "macd": "macd_hist",
+          "ema": "ema20/26_or_sma20_proxy"
+        },
+        "ns_debug": {
+          "source": "default_neutral",
+          "articles_used": 0
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Unknown": 0.0,
+            "ETF": 0.0,
+            "Tech": 0.0,
+            "Consumer Discretionary": 0.0
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    }
+  }
 }
