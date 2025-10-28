@@ -2,7 +2,7 @@
 # (see docstring for details)
 """
 publish_feed.py
-Builds an enriched market feed with technical + news sentiment signals and writes a final JSON.
+Builds an enriched market feed with technical + news sentiment signals and writes a final JSON. 
 
 Highlights:
 - Robust News Sentiment (NS) using VADER with 1-day half-life decay, ticker relevance weighting,
