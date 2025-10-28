@@ -1,0 +1,577 @@
+{
+  "as_of_utc": "2025-10-28T20:40:13Z",
+  "data": {
+    "QBTS": {
+      "symbol": "QBTS",
+      "price": 16.515,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 15.879692504772068,
+        "ema26": 16.10866476555479,
+        "macd": -0.22897226078272048,
+        "macd_signal": -0.35601309483891463,
+        "macd_hist": 0.12704083405619415,
+        "rsi14": 53.305800502034074,
+        "sma20": 15.780749999999998
+      },
+      "signals": {
+        "TS": 0.062678,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.037607,
+        "components": {
+          "rsi_pos": 0.066116,
+          "macd_hist_slope": 0.099463,
+          "ema20_slope": -0.01777
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "VTI": {
+      "symbol": "VTI",
+      "price": 324.93,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 319.93684569517166,
+        "ema26": 317.1389895598013,
+        "macd": 2.7978561353703526,
+        "macd_signal": 2.500267763166476,
+        "macd_hist": 0.2975883722038768,
+        "rsi14": 69.71696975303897,
+        "sma20": 318.11774999999955
+      },
+      "signals": {
+        "TS": 0.175963,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.105578,
+        "components": {
+          "rsi_pos": 0.394339,
+          "macd_hist_slope": 0.040468,
+          "ema20_slope": 0.010202
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "QUBT": {
+      "symbol": "QUBT",
+      "price": 15.895,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 15.452873029326426,
+        "ema26": 15.606501935233567,
+        "macd": -0.15362890590714073,
+        "macd_signal": -0.283041198218608,
+        "macd_hist": 0.12941229231146728,
+        "rsi14": 51.87730618397789,
+        "sma20": 15.300249999999988
+      },
+      "signals": {
+        "TS": 0.032926,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.019756,
+        "components": {
+          "rsi_pos": 0.037546,
+          "macd_hist_slope": 0.050159,
+          "ema20_slope": -0.010778
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "RGTI": {
+      "symbol": "RGTI",
+      "price": 16.7,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 15.804992067238878,
+        "ema26": 15.566786920842707,
+        "macd": 0.23820514639617052,
+        "macd_signal": 0.17288126544072674,
+        "macd_hist": 0.06532388095544378,
+        "rsi14": 58.27984300175219,
+        "sma20": 15.671749999999998
+      },
+      "signals": {
+        "TS": 0.096242,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.057745,
+        "components": {
+          "rsi_pos": 0.165597,
+          "macd_hist_slope": 0.06863,
+          "ema20_slope": 0.012756
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "TTWO": {
+      "symbol": "TTWO",
+      "price": 246.805,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 240.92531852027656,
+        "ema26": 236.62978410926323,
+        "macd": 4.295534411013335,
+        "macd_signal": 2.8668129106094176,
+        "macd_hist": 1.4287215004039178,
+        "rsi14": 63.66641003150315,
+        "sma20": 236.11299999999997
+      },
+      "signals": {
+        "TS": 0.15157,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.090942,
+        "components": {
+          "rsi_pos": 0.273328,
+          "macd_hist_slope": 0.088814,
+          "ema20_slope": 0.033567
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "VOO": {
+      "symbol": "VOO",
+      "price": 604.5,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 596.1420165120232,
+        "ema26": 591.4313413509481,
+        "macd": 4.710675161075187,
+        "macd_signal": 4.269608381990397,
+        "macd_hist": 0.44106677908478975,
+        "rsi14": 67.7595656619336,
+        "sma20": 593.3375
+      },
+      "signals": {
+        "TS": 0.163633,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.09818,
+        "components": {
+          "rsi_pos": 0.355191,
+          "macd_hist_slope": 0.049492,
+          "ema20_slope": 0.008798
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "price": 177.08,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 174.18861357760306,
+        "ema26": 174.50336757972218,
+        "macd": -0.3147540021191162,
+        "macd_signal": 0.21347190001410266,
+        "macd_hist": -0.5282259021332188,
+        "rsi14": 54.42947377632386,
+        "sma20": 175.96999999999997
+      },
+      "signals": {
+        "TS": 0.033976,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.020386,
+        "components": {
+          "rsi_pos": 0.088589,
+          "macd_hist_slope": 0.006163,
+          "ema20_slope": -0.019625
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "price": 229.82,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 231.03547825459924,
+        "ema26": 228.84999544940257,
+        "macd": 2.1854828051966706,
+        "macd_signal": 2.057916340440309,
+        "macd_hist": 0.12756646475636169,
+        "rsi14": 51.34692045098304,
+        "sma20": 229.8025000000001
+      },
+      "signals": {
+        "TS": 0.028977,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.017386,
+        "components": {
+          "rsi_pos": 0.026938,
+          "macd_hist_slope": 0.038807,
+          "ema20_slope": 0.013395
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "SNOW": {
+      "symbol": "SNOW",
+      "price": 224.54,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 221.69031832454885,
+        "ema26": 215.87981172319556,
+        "macd": 5.810506601353296,
+        "macd_signal": 4.373897032305286,
+        "macd_hist": 1.4366095690480103,
+        "rsi14": 57.97635663771818,
+        "sma20": 212.67125000000004
+      },
+      "signals": {
+        "TS": 0.040883,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.02453,
+        "components": {
+          "rsi_pos": 0.159527,
+          "macd_hist_slope": -0.0911,
+          "ema20_slope": 0.067559
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "price": 155.61,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 159.68352460037315,
+        "ema26": 162.14968221862887,
+        "macd": -2.466157618255721,
+        "macd_signal": -0.8429769059931457,
+        "macd_hist": -1.6231807122625757,
+        "rsi14": 42.7166561919335,
+        "sma20": 164.2919999999998
+      },
+      "signals": {
+        "TS": -0.063187,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.037912,
+        "components": {
+          "rsi_pos": -0.145667,
+          "macd_hist_slope": 0.006758,
+          "ema20_slope": -0.038116
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "ASTS": {
+      "symbol": "ASTS",
+      "price": 38.41,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 42.442267955631245,
+        "ema26": 45.16972781312525,
+        "macd": -2.7274598574940043,
+        "macd_signal": -1.6469890488658188,
+        "macd_hist": -1.0804708086281856,
+        "rsi14": 32.856570074903175,
+        "sma20": 45.27225000000005
+      },
+      "signals": {
+        "TS": -0.206728,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": -0.124037,
+        "components": {
+          "rsi_pos": -0.342869,
+          "macd_hist_slope": -0.128485,
+          "ema20_slope": -0.090931
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "RKLB": {
+      "symbol": "RKLB",
+      "price": 48.39,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 46.413104904143836,
+        "ema26": 45.415601871523265,
+        "macd": 0.9975030326205712,
+        "macd_signal": 0.9462191603805568,
+        "macd_hist": 0.051283872240014405,
+        "rsi14": 57.40993178504753,
+        "sma20": 45.43249999999997
+      },
+      "signals": {
+        "TS": 0.036974,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.022184,
+        "components": {
+          "rsi_pos": 0.148199,
+          "macd_hist_slope": -0.068996,
+          "ema20_slope": 0.026463
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    },
+    "ARCC": {
+      "symbol": "ARCC",
+      "price": 22.41,
+      "ts": "2025-09-11T04:00:00Z",
+      "sector": null,
+      "indicators": {
+        "ema12": 22.36547709604666,
+        "ema26": 22.390141683408377,
+        "macd": -0.024664587361716173,
+        "macd_signal": -0.037512070626235135,
+        "macd_hist": 0.012847483264518962,
+        "rsi14": 50.73209183237631,
+        "sma20": 22.34874999999999
+      },
+      "signals": {
+        "TS": 0.040964,
+        "NS": 0.0,
+        "wT": 0.6,
+        "wN": 0.4,
+        "CDS": 0.024579,
+        "components": {
+          "rsi_pos": 0.014642,
+          "macd_hist_slope": 0.087924,
+          "ema20_slope": -0.000311
+        },
+        "decision": "Hold",
+        "debug": {
+          "ema20_series_len": 270,
+          "macd_hist_series_len": 270,
+          "rsi14_series_len": 270,
+          "price_series_len": 270,
+          "lookback_L": 10,
+          "ema_slope_used": "ema20",
+          "ema_slope_meta": {
+            "used": "series",
+            "L": 10
+          },
+          "ns_debug": {
+            "source": "default_neutral"
+          }
+        }
+      },
+      "decision": "Hold"
+    }
+  }
+}
