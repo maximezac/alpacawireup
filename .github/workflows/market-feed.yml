@@ -1,9 +1,8 @@
-# .github/workflows/market-feed.yml
 name: Publish market feed with indicators & news
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # every 10 minutes
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -11,16 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests pandas
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas
 
       - name: Run publisher (full feed)
         env:
@@ -29,86 +28,36 @@ jobs:
           ALPACA_FEED: iex
           INDICATOR_TIMEFRAME: 1Day
           HIST_LIMIT: 200
-          # If you publish to a Gist inside publish_feed.py, keep these:
           GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-          # Optional: seed list used by your script
           PORTFOLIO_B_TICKERS: QBTS,VTI,ASTS,RKLB,VOO,NVDA,ARCC,TTWO,AMZN,RGTI,QUBT
         run: |
-          set -euo pipefail
           mkdir -p data
-          python scripts/publish_feed.py
-          # This should write either data/prices.json locally, OR publish to your Gist.
+          # Your publish script should write either data/prices_full.json or data/prices.json
+          python scripts/publish_feed.py || true
 
       - name: Ensure full feed exists (prefer local; else fetch from Gist)
         env:
           GIST_ID: ${{ secrets.GIST_ID }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-        shell: bash
         run: |
-          set -euo pipefail
           mkdir -p data
-
           if [ -s data/prices_full.json ]; then
-            echo "✅ Found local data/prices_full.json"
+            echo "Found data/prices_full.json"
           elif [ -s data/prices.json ]; then
-            echo "✅ Found local data/prices.json; copying to prices_full.json"
+            echo "Found data/prices.json; copying to prices_full.json"
             cp data/prices.json data/prices_full.json
           else
-            if [ -z "${GIST_ID:-}" ] || [ -z "${GIST_TOKEN:-}" ]; then
-              echo "❌ No local feed and no Gist credentials set" >&2
-              exit 1
-            fi
-            echo "🔄 Downloading from Gist…"
-            python - <<'PY'
-import json, os, sys, urllib.request
+            echo "No local feed, trying Gist..."
+            python scripts/fetch_from_gist.py
+          fi
 
-gist_id = os.environ.get("GIST_ID")
-token   = os.environ.get("GIST_TOKEN")
-
-if not gist_id or not token:
-    print("Missing GIST_ID or GIST_TOKEN", file=sys.stderr)
-    sys.exit(1)
-
-def fetch(url, headers=None):
-    req = urllib.request.Request(url, headers=headers or {})
-    with urllib.request.urlopen(req) as r:
-        return r.read()
-
-headers_api = {
-    "Authorization": f"Bearer {token}",
-    "Accept": "application/vnd.github+json",
-    "User-Agent": "actions/market-feed"
-}
-
-meta = json.loads(fetch(f"https://api.github.com/gists/{gist_id}", headers_api))
-files = meta.get("files", {})
-
-def try_download(name):
-    f = files.get(name)
-    if not f or not f.get("raw_url"):
-        return False
-    raw = fetch(f["raw_url"], {"Authorization": f"Bearer {token}"})
-    with open("data/prices_full.json", "wb") as out:
-        out.write(raw)
-    print(f"✅ Downloaded {name} -> data/prices_full.json")
-    return True
-
-if not (try_download("prices_full.json") or try_download("prices.json")):
-    print("❌ Neither prices_full.json nor prices.json found in the Gist.", file=sys.stderr)
-    sys.exit(2)
-PY
-
-      - name: Minify feed output
-        shell: bash
+      - name: Minify feed
         run: |
-          set -euo pipefail
-          test -s data/prices_full.json
           python scripts/minify_feed.py < data/prices_full.json > data/prices.json
           echo "✅ Minified feed written to data/prices.json"
 
-      # Optional: upload as an artifact so you can download from the run page
-      - name: Upload feed artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: prices.json
