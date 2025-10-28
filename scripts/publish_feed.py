@@ -496,7 +496,8 @@ def main():
             dfs[s] = df
     print(f"📚 Hist dataframes ready: {len(dfs)} symbols")
 
-    bench_df = dfs.get(BENCH) or dfs.get(BENCH_ALT)
+    bench_df = next((dfs[s] for s in (BENCH, BENCH_ALT) if s in dfs), None)
+
     indicators = {}
     for s, df in dfs.items():
         try:
