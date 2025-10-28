@@ -1,6 +1,6 @@
 # .github/workflows/market-feed.yml
 name: Publish market feed with indicators & news 
-
+ 
 on:
   schedule:
     - cron: '*/10 * * * *'   # every 10 minutes (adjust if you want)
