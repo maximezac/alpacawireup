@@ -3,12 +3,13 @@ name: Publish market feed with indicators & news
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # every 10 min; adjust as desired
+    - cron: '*/10 * * * *'   # every 10 minutes (adjust if you want)
   workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -16,7 +17,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install deps
+      - name: Install dependencies
         run: pip install requests pandas
 
       - name: Run publisher (full feed)
@@ -32,8 +33,51 @@ jobs:
         run: |
           mkdir -p data
           python scripts/publish_feed.py
-          # Save a full diagnostic copy (optional)
-          cp data/prices.json data/prices_full.json || true
+
+      - name: Prepare full feed file (local or Gist)
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          if [ -f data/prices.json ] && [ -s data/prices.json ]; then
+            cp data/prices.json data/prices_full.json
+            echo "✅ Found local data/prices.json from publisher."
+          elif [ -n "${GIST_ID:-}" ] && [ -n "${GIST_TOKEN:-}" ]; then
+            echo "🔄 Downloading latest feed from Gist..."
+            python - <<'PY'
+import json, os, sys, urllib.request
+gist_id = os.environ.get("GIST_ID")
+token = os.environ.get("GIST_TOKEN")
+if not gist_id or not token:
+    print("Missing GIST_ID or GIST_TOKEN", file=sys.stderr); sys.exit(1)
+
+req = urllib.request.Request(f"https://api.github.com/gists/{gist_id}")
+req.add_header("Authorization", f"Bearer {token}")
+req.add_header("Accept", "application/vnd.github+json")
+
+with urllib.request.urlopen(req) as r:
+    meta = json.load(r)
+
+files = meta.get("files", {})
+if "prices.json" not in files:
+    print("❌ prices.json not found in gist", file=sys.stderr)
+    sys.exit(2)
+
+raw_url = files["prices.json"]["raw_url"]
+req2 = urllib.request.Request(raw_url)
+req2.add_header("Authorization", f"Bearer {token}")
+
+with urllib.request.urlopen(req2) as r2, open("data/prices_full.json","wb") as out:
+    out.write(r2.read())
+
+print("✅ Downloaded prices_full.json from Gist")
+PY
+          else
+            echo "❌ No local prices.json and no Gist credentials; cannot find source." >&2
+            exit 1
+          fi
 
       - name: Minify feed output
         run: |
