@@ -78,6 +78,151 @@ def sma(values: List[float], n: int) -> List[float]:
         out.append(s / len(q))
     return out
 
+# ---- Indicator helpers (pure Python, no pandas required) ----
+def _ema(values, span):
+    if not values or span <= 1:
+        return None
+    k = 2 / (span + 1.0)
+    ema = values[0]
+    for v in values[1:]:
+        ema = v * k + ema * (1 - k)
+    return ema
+
+def _sma(values, window):
+    if not values or len(values) < window:
+        return None
+    return sum(values[-window:]) / float(window)
+
+def _rsi(values, period=14):
+    # Wilder's RSI on closes
+    if not values or len(values) <= period:
+        return None
+    gains, losses = 0.0, 0.0
+    # seed average gains/losses
+    for i in range(1, period + 1):
+        diff = values[i] - values[i - 1]
+        if diff >= 0:
+            gains += diff
+        else:
+            losses -= diff
+    avg_gain = gains / period
+    avg_loss = losses / period
+    if avg_loss == 0 and avg_gain == 0:
+        return 50.0
+    # smooth
+    for i in range(period + 1, len(values)):
+        diff = values[i] - values[i - 1]
+        gain = max(diff, 0.0)
+        loss = max(-diff, 0.0)
+        avg_gain = (avg_gain * (period - 1) + gain) / period
+        avg_loss = (avg_loss * (period - 1) + loss) / period
+    if avg_loss == 0:
+        return 100.0
+    rs = avg_gain / avg_loss
+    return 100.0 - (100.0 / (1.0 + rs))
+
+def _macd_full(values, fast=12, slow=26, signal=9):
+    # returns (macd, signal, hist)
+    if not values:
+        return (None, None, None)
+    ema_fast = _ema(values, fast)
+    ema_slow = _ema(values, slow)
+    if ema_fast is None or ema_slow is None:
+        return (None, None, None)
+    macd_line = ema_fast - ema_slow
+    # Build a crude signal by simulating EMA on MACD over last `signal` steps.
+    # If we don't have enough values to simulate, fall back to None.
+    if len(values) < slow + signal:
+        return (macd_line, None, None)
+    # Approximate MACD series for last `signal` points by recomputing over trailing window
+    macd_series = []
+    # choose a trailing window long enough
+    tail_needed = slow + signal
+    tail = values[-tail_needed:]
+    for i in range(1, len(tail) + 1):
+        sub = tail[:i]
+        ef = _ema(sub, fast)
+        es = _ema(sub, slow)
+        if ef is None or es is None:
+            macd_series.append(None)
+        else:
+            macd_series.append(ef - es)
+    macd_series = [m for m in macd_series if m is not None]
+    if len(macd_series) < signal:
+        return (macd_line, None, None)
+    signal_line = _ema(macd_series, signal)
+    if signal_line is None:
+        return (macd_line, None, None)
+    hist = macd_line - signal_line
+    return (macd_line, signal_line, hist)
+
+def ensure_indicators(sym_data):
+    """
+    Return an indicators dict. Prefer existing indicators; otherwise compute from history.
+    History items expected shape: {"t": "...", "o":..., "h":..., "l":..., "c": <close>, "v": ...}
+    """
+    # If indicators already present, pass-through
+    indicators = (sym_data.get("indicators") or {}).copy()
+
+    need = {"sma20", "ema12", "ema26", "macd", "macd_signal", "macd_hist", "rsi14"}
+    have = set(k for k, v in indicators.items()) if indicators else set()
+    missing = need - have
+
+    if not missing:
+        # normalize keys/order and return
+        return {
+            "sma20": indicators.get("sma20"),
+            "ema12": indicators.get("ema12"),
+            "ema26": indicators.get("ema26"),
+            "macd": indicators.get("macd"),
+            "macd_signal": indicators.get("macd_signal"),
+            "macd_hist": indicators.get("macd_hist"),
+            "rsi14": indicators.get("rsi14"),
+        }
+
+    # Try to compute from history if available
+    hist = sym_data.get("history") or []
+    closes = [h.get("c") for h in hist if isinstance(h, dict) and "c" in h]
+    closes = [float(c) for c in closes if c is not None]
+
+    sma20 = indicators.get("sma20")
+    if sma20 is None:
+        sma20 = _sma(closes, 20)
+
+    ema12 = indicators.get("ema12")
+    if ema12 is None:
+        ema12 = _ema(closes, 12)
+
+    ema26 = indicators.get("ema26")
+    if ema26 is None:
+        ema26 = _ema(closes, 26)
+
+    macd, macd_signal, macd_hist = (
+        indicators.get("macd"),
+        indicators.get("macd_signal"),
+        indicators.get("macd_hist"),
+    )
+    if macd is None or macd_signal is None or macd_hist is None:
+        m, s, h = _macd_full(closes, 12, 26, 9)
+        macd = m if macd is None else macd
+        macd_signal = s if macd_signal is None else macd_signal
+        macd_hist = h if macd_hist is None else macd_hist
+
+    rsi14 = indicators.get("rsi14")
+    if rsi14 is None:
+        rsi14 = _rsi(closes, 14)
+
+    return {
+        "sma20": sma20,
+        "ema12": ema12,
+        "ema26": ema26,
+        "macd": macd,
+        "macd_signal": macd_signal,
+        "macd_hist": macd_hist,
+        "rsi14": rsi14,
+    }
+
+
 def ema(values: List[float], n: int) -> List[float]:
     out = []
     alpha = 2.0 / (n + 1.0)
@@ -312,6 +457,8 @@ def main():
     ts_val_map = {}
 
     for sym, t in enriched.items():
+        t["indicators"] = ensure_indicators(t)
+        
         ts_val, ts_dbg = compute_ts(t)
         ts_val_map[sym] = ts_val
         ts_debug_map[sym] = ts_dbg
@@ -342,6 +489,7 @@ def main():
             "price": t.get("price"),
             "ts": t.get("ts"),
             "sector": t.get("sector"),
+            "indicators": t.get("indicators") or None,
             "signals": {
                 "TS": round(ts_val, 6),
                 "NS": round(ns_val, 6),
