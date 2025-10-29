@@ -369,6 +369,9 @@ def _freshness_weight(article_ts: str, now_dt: datetime) -> float:
         age_hours = 9999
     return 0.5 ** (age_hours / HALF_LIFE_HOURS)
 
+def _clip(x: float, lo: float, hi: float) -> float:
+    return max(lo, min(hi, x))
+
 def compute_ns_for_ticker(sym_data: Dict[str, Any], now_dt: datetime) -> Tuple[float, Dict[str, Any]]:
     articles = sym_data.get("news") or []
     if not articles:
@@ -422,11 +425,52 @@ def finalize_ns_with_sector(ns_map: Dict[str, float], sector_map: Dict[str, str]
             debug[sym] = {"sector_avg": avg, "nudge": 0.0}
     return adjusted, {"sector_avg": sector_avg, "notes":"nudge applied when sign disagrees"}
 
-def decide(ts: float, ns: float) -> Tuple[float, float, float, str]:
+def decide(ts: float, ns: float, ns_meta: dict | None, regime_bias: float | None = None) -> tuple[float, float, float, str, dict]:
+    """
+    Adaptive weighting per v2.2:
+      - Base: wT=0.6, wN=0.4 (your default)
+      - If |ns| >= 0.7: start from risk-on news rule (wN=0.6, wT=0.4)
+      - Confidence scaling using news evidence & freshness:
+          conf = sqrt(min(articles_used,10)/10) * avg_decay_w
+          wN = clip(0.35 * (0.7 + 0.6 * conf), 0.2, 0.6)
+      - Regime nudge based on portfolio-average NS (if provided):
+          if regime_bias <= -0.4: wN -= 0.05
+          if regime_bias >= +0.4: wN += 0.05
+          (still clipped 0.2..0.6)
+    Returns: (wT, wN, cds, decision, dbg)
+    """
+    # Base weights
     if abs(ns) >= 0.7:
         wN, wT = 0.6, 0.4
     else:
         wT, wN = 0.6, 0.4
+
+    # Pull evidence meta
+    articles_used = 0
+    avg_decay = 0.0
+    if ns_meta and ns_meta.get("source") != "default_neutral":
+        samples = ns_meta.get("samples") or []
+        articles_used = len(samples)
+        if samples:
+            avg_decay = sum(s.get("decay_w", 0.0) or 0.0 for s in samples) / len(samples)
+
+    # Confidence scaling (0..~1); if no/old news, conf ~ 0 → wN ~ 0.245; with fresh plentiful news, wN → 0.6
+    import math
+    conf = math.sqrt(min(articles_used, 10) / 10.0) * avg_decay
+    wN = 0.35 * (0.7 + 0.6 * conf)
+    wN = _clip(wN, 0.2, 0.6)
+    wT = 1.0 - wN
+
+    # Regime nudge from portfolio-average NS
+    if regime_bias is not None:
+        if regime_bias <= -0.4:
+            wN -= 0.05
+        elif regime_bias >= +0.4:
+            wN += 0.05
+        wN = _clip(wN, 0.2, 0.6)
+        wT = 1.0 - wN
+
+    # Compose CDS & decision
     cds = wT * ts + wN * ns
     if cds > 0.35:
         decision = "Buy/Add"
@@ -434,7 +478,14 @@ def decide(ts: float, ns: float) -> Tuple[float, float, float, str]:
         decision = "Sell/Trim"
     else:
         decision = "Hold"
-    return wT, wN, cds, decision
+
+    dbg = {
+        "articles_used": articles_used,
+        "avg_decay_w": round(avg_decay, 6),
+        "conf": round(conf, 6),
+        "regime_bias": None if regime_bias is None else round(regime_bias, 6)
+    }
+    return wT, wN, cds, decision, dbg
 
 def main():
     raw = load_feed()
@@ -472,6 +523,10 @@ def main():
     # 3) Sector adjustment on NS
     ns_adj, sector_dbg = finalize_ns_with_sector(base_ns_map, sector_map)
 
+    regime_bias = 0.0
+    if ns_adj:
+        regime_bias = sum(ns_adj.values()) / len(ns_adj)
+
     # 4) Build output
     out = {
         "as_of_utc": now_dt.isoformat(),
@@ -483,7 +538,13 @@ def main():
     for sym, t in enriched.items():
         ts_val = ts_val_map[sym]
         ns_val = ns_adj.get(sym, 0.0)
-        wT, wN, cds, decision = decide(ts_val, ns_val)
+
+        wT, wN, cds, decision, decide_dbg = decide(
+            ts_val, ns_val,
+            ns_meta=ns_debug_map.get(sym),     # may be "default_neutral"
+            regime_bias=regime_bias
+        )
+        
         out["symbols"][sym] = {
             "symbol": sym,
             "price": t.get("price"),
@@ -497,6 +558,8 @@ def main():
                 "wN": wN,
                 "CDS": round(cds, 6),
                 "components": ts_debug_map[sym]["components"],
+                "ns_debug": ns_debug_map[sym],
+                "decide_debug": decide_dbg,
                 "sector_debug": sector_dbg
             },
             "decision": decision
