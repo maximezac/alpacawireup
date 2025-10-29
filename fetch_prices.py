@@ -161,27 +161,27 @@ def macd(values: List[float], fast: int = 12, slow: int = 26, signal: int = 9):
 # =========================
 
 def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
-    """Fetch 1Day bars; returns response JSON or raises."""
-    url = f"{API_URL_BASE}/{symbol}/bars"
+    """Fetch full 1Day history for one symbol with explicit start date and generous limit."""
+    from datetime import datetime, timedelta, timezone
+
     LOOKBACK_DAYS = int(os.environ.get("DAYS_BACK", "300"))
-    # pad by extra calendar days to survive weekends/holidays
-    PAD_DAYS = max(LOOKBACK_DAYS + 60, 120)
+    PAD_DAYS = max(LOOKBACK_DAYS + 60, 120)  # pad for weekends/holidays
 
     now_utc = datetime.now(timezone.utc)
     start_utc = now_utc - timedelta(days=PAD_DAYS)
     start_iso = start_utc.replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
+    url = f"{API_URL_BASE}/{symbol}/bars"
     params = {
         "timeframe": "1Day",
-        "symbols": ",".join(batch),          # your existing batching
-        "start": start_iso,                  # <<< critical
-        "limit": 5000,                       # <<< plenty for ~20 years; server will cap
-        "adjustment": "raw",                 # prevent surprises
-        "feed": os.environ.get("ALPACA_DATA_FEED", "iex")
+        "start": start_iso,
+        "limit": 5000,          # plenty of bars for long history
+        "adjustment": "raw",
+        "feed": feed
     }
+
     r = requests.get(url, headers=HEADERS, params=params, timeout=REQUEST_TIMEOUT)
     if r.status_code == 403 and feed == "sip":
-        # Fallback to IEX automatically
         print(f"[WARN] {symbol}: 403 on SIP — retrying with IEX")
         return fetch_bars(symbol, "iex")
     r.raise_for_status()
