@@ -28,7 +28,7 @@ import os
 import json
 import time
 import math
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any
 
 import requests
@@ -163,10 +163,21 @@ def macd(values: List[float], fast: int = 12, slow: int = 26, signal: int = 9):
 def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
     """Fetch 1Day bars; returns response JSON or raises."""
     url = f"{API_URL_BASE}/{symbol}/bars"
+    LOOKBACK_DAYS = int(os.environ.get("DAYS_BACK", "300"))
+    # pad by extra calendar days to survive weekends/holidays
+    PAD_DAYS = max(LOOKBACK_DAYS + 60, 120)
+
+    now_utc = datetime.now(timezone.utc)
+    start_utc = now_utc - timedelta(days=PAD_DAYS)
+    start_iso = start_utc.replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
     params = {
         "timeframe": "1Day",
-        "limit": str(DAYS_BACK),
-        "feed": feed
+        "symbols": ",".join(batch),          # your existing batching
+        "start": start_iso,                  # <<< critical
+        "limit": 5000,                       # <<< plenty for ~20 years; server will cap
+        "adjustment": "raw",                 # prevent surprises
+        "feed": os.environ.get("ALPACA_DATA_FEED", "iex")
     }
     r = requests.get(url, headers=HEADERS, params=params, timeout=REQUEST_TIMEOUT)
     if r.status_code == 403 and feed == "sip":
