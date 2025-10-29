@@ -349,8 +349,6 @@ def main():
                 "wN": wN,
                 "CDS": round(cds, 6),
                 "components": ts_debug_map[sym]["components"],
-                "ts_debug": ts_debug_map[sym]["sources"],
-                "ns_debug": ns_debug_map[sym],
                 "sector_debug": sector_dbg
             },
             "decision": decision
