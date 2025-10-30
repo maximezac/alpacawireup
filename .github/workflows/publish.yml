@@ -7,6 +7,7 @@ on:
       - "data/symbols.txt"
       - "fetch_prices.py"
       - "publish_feed.py"
+      - "fetch_news.py"
       - ".github/workflows/publish.yml"
       - "requirements.txt"
   schedule:
@@ -57,7 +58,7 @@ jobs:
           # Optional: limit sources:
           # NEWS_SOURCES: "benzinga,mtnewswires"
         run: |
-          python scripts/fetch_news.py
+          python fetch_news.py
 
       # Enrich file -> data/prices_final.json (computes indicators+TS, NS neutral if no news)
       - name: Generate enriched feed
