@@ -216,6 +216,29 @@ def compute_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]
         "rsi14": last_valid(rsi14_series),
     }
 
+def fetch_latest_quote(symbol: str) -> dict:
+    """Fetch latest quote/trade for a symbol from Alpaca (1 quote)."""
+    url = f"{API_URL_BASE}/{symbol}/quotes/latest"
+    r = requests.get(url, headers=HEADERS, timeout=10)
+    if r.status_code != 200:
+        raise Exception(f"{symbol}: latest quote fetch failed ({r.status_code})")
+    j = r.json().get("quote", {})
+    return {
+        "symbol": symbol,
+        "price": j.get("ap") or j.get("bp") or j.get("p"),
+        "ts": j.get("t"),
+    }
+
+def get_now_data(symbols: list[str]) -> dict:
+    """Return latest quotes for a list of symbols."""
+    out = {}
+    for sym in symbols:
+        try:
+            out[sym] = fetch_latest_quote(sym)
+        except Exception as e:
+            print(f"[WARN] now-data fetch failed for {sym}: {e}")
+    return out
+
 def main():
     if not ALPACA_KEY_ID or not ALPACA_SECRET_KEY:
         raise SystemExit("ALPACA_KEY_ID / ALPACA_SECRET_KEY not set. Please add them to repo secrets and/or env.")
