@@ -1,11 +1,11 @@
 {
-  "as_of_utc": "2025-10-30T13:37:32.864417+00:00",
+  "as_of_utc": "2025-10-30T14:40:18.113177+00:00",
   "timeframe": "1Day",
   "indicators_window": 270,
   "symbols": {
     "AAPL": {
       "symbol": "AAPL",
-      "price": 271.145,
+      "price": 269.1,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -1604,22 +1604,29 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 271.99,
           "h": 274.12,
-          "l": 270.68,
-          "c": 271.145,
-          "v": 131296
+          "l": 269,
+          "c": 269.1,
+          "v": 471595
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 257.8839999999999,
-        "ema12": 263.07886379528213,
-        "ema26": 256.92210202172913,
-        "macd": 6.156761773553001,
-        "macd_signal": 5.050926254877636,
-        "macd_hist": 1.1058355186753648,
-        "rsi14": 70.82140877243381
+        "sma20": 257.78174999999993,
+        "ema12": 262.76424841066677,
+        "ema26": 256.77062054024765,
+        "macd": 5.993627870419118,
+        "macd_signal": 5.01829947425086,
+        "macd_hist": 0.9753283961682584,
+        "rsi14": 68.41066556286482
       },
       "news": [
+        {
+          "headline": "Nvidia Effect: Key Suppliers Have Already Sold Out AI Memory Chips For 2025",
+          "summary": "Nvidia&#39;s demand for AI memory has boosted SK Hynix and Samsung&#39;s profits, with Hynix&#39;s production fully booked until 2026 and Samsung selling out its HBM supply for 2025.",
+          "ts": "2025-10-30T13:52:46Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Stock Market Today: Dow Futures Decline, S&P 500, Nasdaq Swing Following Fed Rate Cuts, Trump-Xi Meet\u2014Amazon, Apple Earnings In Focus (UPDATED)",
           "summary": "(Editor\u2019s note: The future prices of benchmark tracking ETFs, the headline, and the lede were updated in the story.)\n\n\n\nU.S. stock futures swung between gains and losses on Thursday following Wednesday&#39;s mixed moves. Futures of major benchmark indices were mixed.",
@@ -1787,19 +1794,12 @@
           "ts": "2025-10-28T21:18:32Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Apple Q4 Preview: iPhone 17 Fuels Earnings Optimism As Stock Hits All-Time Highs",
-          "summary": "Apple reports Q4 results on Thursday with a key first look at iPhone 17 demand. Here&#39;s what experts are saying ahead of the report.",
-          "ts": "2025-10-28T20:26:05Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "ADBE": {
       "symbol": "ADBE",
-      "price": 338.31,
+      "price": 341.85,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -3397,21 +3397,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 338.495,
-          "h": 338.59,
+          "h": 343.76,
           "l": 337.55,
-          "c": 338.31,
-          "v": 7249
+          "c": 341.85,
+          "v": 27690
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 345.17724999999973,
-        "ema12": 347.0836505074001,
-        "ema26": 348.00970326365666,
-        "macd": -0.9260527562565812,
-        "macd_signal": -1.200670665015877,
-        "macd_hist": 0.2746179087592957,
-        "rsi14": 42.82144215490665
+        "sma20": 345.35424999999975,
+        "ema12": 347.62826589201546,
+        "ema26": 348.27192548587885,
+        "macd": -0.64365959386339,
+        "macd_signal": -1.1441920325372386,
+        "macd_hist": 0.5005324386738486,
+        "rsi14": 45.44727130198701
       },
       "news": [
         {
@@ -3467,7 +3467,7 @@
     },
     "AI": {
       "symbol": "AI",
-      "price": 17.2,
+      "price": 17.405,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -5065,27 +5065,27 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 17.33,
-          "h": 17.355,
-          "l": 17.2,
-          "c": 17.2,
-          "v": 1526
+          "h": 17.45,
+          "l": 17.12,
+          "c": 17.405,
+          "v": 11404
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 18.431750000000005,
-        "ema12": 17.96071814803922,
-        "ema26": 18.09774562804623,
-        "macd": -0.13702748000700993,
-        "macd_signal": -0.011850442287195687,
-        "macd_hist": -0.12517703771981425,
-        "rsi14": 42.57456538040931
+        "sma20": 18.442000000000007,
+        "ema12": 17.99225660957768,
+        "ema26": 18.112930813231415,
+        "macd": -0.12067420365373493,
+        "macd_signal": -0.008579787016540691,
+        "macd_hist": -0.11209441663719424,
+        "rsi14": 43.94368966190137
       },
       "news": []
     },
     "AMD": {
       "symbol": "AMD",
-      "price": 258.51,
+      "price": 257.645,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -6683,21 +6683,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 259.92,
-          "h": 261.86,
-          "l": 258.39,
-          "c": 258.51,
-          "v": 39424
+          "h": 263.86,
+          "l": 257.2,
+          "c": 257.645,
+          "v": 228914
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 232.04474999999996,
-        "ema12": 244.30805686642955,
-        "ema26": 223.27381092131597,
-        "macd": 21.034245945113582,
-        "macd_signal": 19.512987816094512,
-        "macd_hist": 1.5212581290190705,
-        "rsi14": 70.73919238941316
+        "sma20": 232.0015,
+        "ema12": 244.17497994335264,
+        "ema26": 223.20973684724189,
+        "macd": 20.965243096110754,
+        "macd_signal": 19.499187246293946,
+        "macd_hist": 1.466055849816808,
+        "rsi14": 70.09827369003244
       },
       "news": [
         {
@@ -6879,7 +6879,7 @@
     },
     "AMZN": {
       "symbol": "AMZN",
-      "price": 225.41,
+      "price": 226.66,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -8477,21 +8477,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 226.92,
-          "h": 226.94,
+          "h": 227.99,
           "l": 223.99,
-          "c": 225.41,
-          "v": 179997
+          "c": 226.66,
+          "v": 926540
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 221.2279999999999,
-        "ema12": 223.75318991686302,
-        "ema26": 222.9659227025447,
-        "macd": 0.7872672143183195,
-        "macd_signal": -0.6559315102747882,
-        "macd_hist": 1.4431987245931077,
-        "rsi14": 53.08621596219332
+        "sma20": 221.2904999999999,
+        "ema12": 223.9454976091707,
+        "ema26": 223.05851529513728,
+        "macd": 0.8869823140334177,
+        "macd_signal": -0.6359884903317686,
+        "macd_hist": 1.5229708043651864,
+        "rsi14": 54.70066310107563
       },
       "news": [
         {
@@ -8673,7 +8673,7 @@
     },
     "ARCC": {
       "symbol": "ARCC",
-      "price": 20.52,
+      "price": 20.61,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -10271,21 +10271,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 20.625,
-          "h": 20.625,
-          "l": 20.52,
-          "c": 20.52,
-          "v": 2923
+          "h": 20.63,
+          "l": 20.45,
+          "c": 20.61,
+          "v": 49703
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 19.894249999999996,
-        "ema12": 20.191240824573285,
-        "ema26": 20.284679718250203,
-        "macd": -0.09343889367691816,
-        "macd_signal": -0.2768738373443228,
-        "macd_hist": 0.18343494366740465,
-        "rsi14": 54.364185826829484
+        "sma20": 19.89875,
+        "ema12": 20.205086978419438,
+        "ema26": 20.29134638491687,
+        "macd": -0.08625940649743313,
+        "macd_signal": -0.2754379399084258,
+        "macd_hist": 0.18917853341099267,
+        "rsi14": 56.25045304710619
       },
       "news": [
         {
@@ -10334,7 +10334,7 @@
     },
     "ARKK": {
       "symbol": "ARKK",
-      "price": 87.135,
+      "price": 87.55,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -11932,21 +11932,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 87.46,
-          "h": 87.65,
-          "l": 87.135,
-          "c": 87.135,
-          "v": 22378
+          "h": 88.03,
+          "l": 86.94,
+          "c": 87.55,
+          "v": 80826
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 88.71075000000009,
-        "ema12": 88.33691701545821,
-        "ema26": 87.0392779144308,
-        "macd": 1.2976391010274142,
-        "macd_signal": 1.695577832128535,
-        "macd_hist": -0.3979387311011209,
-        "rsi14": 50.52526069573361
+        "sma20": 88.73150000000008,
+        "ema12": 88.40076316930435,
+        "ema26": 87.07001865517154,
+        "macd": 1.3307445141328174,
+        "macd_signal": 1.7021989147496157,
+        "macd_hist": -0.37145440061679835,
+        "rsi14": 51.481045550479365
       },
       "news": [
         {
@@ -11981,7 +11981,7 @@
     },
     "ASML": {
       "symbol": "ASML",
-      "price": 1075.71,
+      "price": 1077,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -13579,21 +13579,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 1072.65,
-          "h": 1076.965,
-          "l": 1072.19,
-          "c": 1075.71,
-          "v": 6148
+          "h": 1085.82,
+          "l": 1070.61,
+          "c": 1077,
+          "v": 17026
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 1020.7880000000002,
-        "ema12": 1039.4269565276088,
-        "ema26": 1001.0426997976106,
-        "macd": 38.38425672999824,
-        "macd_signal": 38.76470956180272,
-        "macd_hist": -0.380452831804476,
-        "rsi14": 68.37204199850558
+        "sma20": 1020.8525000000003,
+        "ema12": 1039.6254180660703,
+        "ema26": 1001.1382553531661,
+        "macd": 38.48716271290425,
+        "macd_signal": 38.78529075838392,
+        "macd_hist": -0.29812804547967175,
+        "rsi14": 68.55074142518242
       },
       "news": [
         {
@@ -13614,7 +13614,7 @@
     },
     "ASTS": {
       "symbol": "ASTS",
-      "price": 77.35,
+      "price": 79.585,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -15212,21 +15212,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 78.815,
-          "h": 79.34,
-          "l": 77.35,
-          "c": 77.35,
-          "v": 3022
+          "h": 80.315,
+          "l": 76.965,
+          "c": 79.585,
+          "v": 44919
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 80.59500000000006,
-        "ema12": 78.03030703144593,
-        "ema26": 73.27344724939148,
-        "macd": 4.756859782054448,
-        "macd_signal": 6.553741262560912,
-        "macd_hist": -1.796881480506464,
-        "rsi14": 55.04040206726766
+        "sma20": 80.70675000000006,
+        "ema12": 78.37415318529209,
+        "ema26": 73.43900280494704,
+        "macd": 4.93515038034505,
+        "macd_signal": 6.589399382219033,
+        "macd_hist": -1.6542490018739828,
+        "rsi14": 57.744878566191446
       },
       "news": [
         {
@@ -15268,7 +15268,7 @@
     },
     "AVGO": {
       "symbol": "AVGO",
-      "price": 375.07,
+      "price": 375.14,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -16867,20 +16867,20 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 384.5,
           "h": 384.5,
-          "l": 374.65,
-          "c": 375.07,
-          "v": 33416
+          "l": 371.755,
+          "c": 375.14,
+          "v": 334667
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 350.4117500000001,
-        "ema12": 360.06379367455247,
-        "ema26": 350.26640583992815,
-        "macd": 9.797387834624317,
-        "macd_signal": 6.7307601012968705,
-        "macd_hist": 3.0666277333274463,
-        "rsi14": 62.88817398160498
+        "sma20": 350.4152500000001,
+        "ema12": 360.0745629053217,
+        "ema26": 350.2715910251133,
+        "macd": 9.802971880208418,
+        "macd_signal": 6.731876910413691,
+        "macd_hist": 3.0710949697947267,
+        "rsi14": 62.929734176074824
       },
       "news": [
         {
@@ -16964,7 +16964,7 @@
     },
     "BBAI": {
       "symbol": "BBAI",
-      "price": 6.56,
+      "price": 6.77,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -18562,21 +18562,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 6.665,
-          "h": 6.75,
-          "l": 6.56,
-          "c": 6.56,
-          "v": 92706
+          "h": 6.84,
+          "l": 6.55,
+          "c": 6.77,
+          "v": 330293
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 7.400500000000013,
-        "ema12": 7.0507839261907,
-        "ema26": 7.046712400241142,
-        "macd": 0.004071525949558286,
-        "macd_signal": 0.17123616090640692,
-        "macd_hist": -0.16716463495684863,
-        "rsi14": 44.10926489222095
+        "sma20": 7.411000000000014,
+        "ema12": 7.0830916184983925,
+        "ema26": 7.062267955796697,
+        "macd": 0.020823662701695334,
+        "macd_signal": 0.17458658825683432,
+        "macd_hist": -0.15376292555513899,
+        "rsi14": 46.34301598941398
       },
       "news": [
         {
@@ -18597,7 +18597,7 @@
     },
     "BMBL": {
       "symbol": "BMBL",
-      "price": 5.4,
+      "price": 5.425,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -20195,27 +20195,27 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 5.415,
-          "h": 5.415,
-          "l": 5.4,
-          "c": 5.4,
-          "v": 321
+          "h": 5.46,
+          "l": 5.39,
+          "c": 5.425,
+          "v": 11576
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 5.5694999999999855,
-        "ema12": 5.609820849136838,
-        "ema26": 5.778706343722462,
-        "macd": -0.16888549458562352,
-        "macd_signal": -0.20474675723529268,
-        "macd_hist": 0.03586126264966916,
-        "rsi14": 39.134667585779944
+        "sma20": 5.570749999999985,
+        "ema12": 5.613667002982992,
+        "ema26": 5.780558195574313,
+        "macd": -0.16689119259132124,
+        "macd_signal": -0.20434789683643223,
+        "macd_hist": 0.037456704245110994,
+        "rsi14": 39.64534164780472
       },
       "news": []
     },
     "CELH": {
       "symbol": "CELH",
-      "price": 60.795,
+      "price": 60.855,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -21813,21 +21813,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 60.45,
-          "h": 60.83,
+          "h": 61.1,
           "l": 60.375,
-          "c": 60.795,
-          "v": 1698
+          "c": 60.855,
+          "v": 20231
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 62.15175000000001,
-        "ema12": 61.92038483058073,
-        "ema26": 60.843638306758606,
-        "macd": 1.0767465238221234,
-        "macd_signal": 1.5108071946123256,
-        "macd_hist": -0.43406067079020216,
-        "rsi14": 50.162424622678536
+        "sma20": 62.15475,
+        "ema12": 61.9296155998115,
+        "ema26": 60.84808275120305,
+        "macd": 1.0815328486084468,
+        "macd_signal": 1.5117644595695903,
+        "macd_hist": -0.4302316109611435,
+        "rsi14": 50.37554485680321
       },
       "news": [
         {
@@ -21848,7 +21848,7 @@
     },
     "COIN": {
       "symbol": "COIN",
-      "price": 337.88,
+      "price": 339.795,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -23447,22 +23447,36 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 343.47,
           "h": 343.47,
-          "l": 337.88,
-          "c": 337.88,
-          "v": 7097
+          "l": 334.23,
+          "c": 339.795,
+          "v": 50435
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 352.8404999999999,
-        "ema12": 345.30654770991055,
-        "ema26": 343.9123664957732,
-        "macd": 1.3941812141373475,
-        "macd_signal": 2.4218007407667876,
-        "macd_hist": -1.0276195266294401,
-        "rsi14": 47.70059162359768
+        "sma20": 352.93624999999986,
+        "ema12": 345.60116309452593,
+        "ema26": 344.05421834762507,
+        "macd": 1.5469447469008628,
+        "macd_signal": 2.452353447319491,
+        "macd_hist": -0.905408700418628,
+        "rsi14": 48.37801800733832
       },
       "news": [
+        {
+          "headline": "Coinbase Earnings Are Imminent; These Most Accurate Analysts Revise Forecasts Ahead Of Earnings Call",
+          "summary": " ",
+          "ts": "2025-10-30T14:33:49Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
+        {
+          "headline": "This Coinbase Analyst Turns Bullish; Here Are Top 4 Upgrades For Thursday",
+          "summary": " ",
+          "ts": "2025-10-30T13:42:34Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Webull Expands Crypto Futures Offering Through Current Collaboration With Coinbase Derivatives For Users In U.S. To Trade Dogecoin, Nano XRP, Nano Solana, Litecoin, Solana",
           "summary": "",
@@ -23623,26 +23637,12 @@
           "ts": "2025-10-24T12:19:03Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "This Coinbase Analyst Turns Bullish; Here Are Top 4 Upgrades For Friday",
-          "summary": " ",
-          "ts": "2025-10-24T11:27:04Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "Market-Moving News for October 24th",
-          "summary": "",
-          "ts": "2025-10-24T11:14:54Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "CRM": {
       "symbol": "CRM",
-      "price": 251.34,
+      "price": 256.9,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -25240,21 +25240,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 250.38,
-          "h": 252.26,
+          "h": 257.6,
           "l": 250.38,
-          "c": 251.34,
-          "v": 19643
+          "c": 256.9,
+          "v": 74837
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 248.21200000000036,
-        "ema12": 251.60669424738768,
-        "ema26": 249.04871419292854,
-        "macd": 2.5579800544591365,
-        "macd_signal": 2.075651241226613,
-        "macd_hist": 0.4823288132325234,
-        "rsi14": 52.42365849898916
+        "sma20": 248.49000000000032,
+        "ema12": 252.4620788627723,
+        "ema26": 249.4605660447804,
+        "macd": 3.001512817991909,
+        "macd_signal": 2.1643577939331675,
+        "macd_hist": 0.8371550240587413,
+        "rsi14": 56.967399929079384
       },
       "news": [
         {
@@ -25289,7 +25289,7 @@
     },
     "CRWD": {
       "symbol": "CRWD",
-      "price": 539.47,
+      "price": 545.935,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -26887,21 +26887,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 543.17,
-          "h": 543.17,
+          "h": 549.01,
           "l": 539.315,
-          "c": 539.47,
-          "v": 2366
+          "c": 545.935,
+          "v": 12422
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 507.7450000000002,
-        "ema12": 521.7342814266545,
-        "ema26": 504.3812415783706,
-        "macd": 17.35303984828397,
-        "macd_signal": 14.096564304991656,
-        "macd_hist": 3.2564755432923143,
-        "rsi14": 66.36609201379366
+        "sma20": 508.06825000000015,
+        "ema12": 522.7288968112699,
+        "ema26": 504.86013046725947,
+        "macd": 17.868766344010453,
+        "macd_signal": 14.199709604136952,
+        "macd_hist": 3.6690567398735006,
+        "rsi14": 70.01606558120895
       },
       "news": [
         {
@@ -26952,19 +26952,12 @@
           "ts": "2025-10-28T17:38:00Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Live On CNBC, CrowdStrike CEO George Kurtz Discusses AI Boom And Cybersecurity Risks",
-          "summary": "",
-          "ts": "2025-10-23T13:45:03Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "DE": {
       "symbol": "DE",
-      "price": 473.03,
+      "price": 479.32,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -28562,21 +28555,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 471.5,
-          "h": 473.09,
+          "h": 479.32,
           "l": 471.5,
-          "c": 473.03,
-          "v": 1135
+          "c": 479.32,
+          "v": 10950
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 460.78099999999984,
-        "ema12": 467.08493027386174,
-        "ema26": 465.56283226232495,
-        "macd": 1.522098011536798,
-        "macd_signal": -1.2953948603321652,
-        "macd_hist": 2.8174928718689634,
-        "rsi14": 56.036268316804524
+        "sma20": 461.0954999999998,
+        "ema12": 468.0526225815541,
+        "ema26": 466.0287581882509,
+        "macd": 2.0238643933031994,
+        "macd_signal": -1.195041583978885,
+        "macd_hist": 3.2189059772820845,
+        "rsi14": 59.90057807981712
       },
       "news": [
         {
@@ -28597,7 +28590,7 @@
     },
     "DIA": {
       "symbol": "DIA",
-      "price": 475.43,
+      "price": 479.035,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -30195,21 +30188,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 474.14,
-          "h": 476.08,
+          "h": 479.46,
           "l": 474.03,
-          "c": 475.43,
-          "v": 9843
+          "c": 479.035,
+          "v": 122199
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 466.89299999999974,
-        "ema12": 470.75831116145156,
-        "ema26": 466.7705746277724,
-        "macd": 3.98773653367914,
-        "macd_signal": 2.9130367969686395,
-        "macd_hist": 1.0746997367105005,
-        "rsi14": 64.79830147747538
+        "sma20": 467.07324999999975,
+        "ema12": 471.31292654606693,
+        "ema26": 467.03761166480945,
+        "macd": 4.275314881257486,
+        "macd_signal": 2.9705524664843086,
+        "macd_hist": 1.3047624147731778,
+        "rsi14": 69.1597497101172
       },
       "news": [
         {
@@ -30279,7 +30272,7 @@
     },
     "ENPH": {
       "symbol": "ENPH",
-      "price": 30.95,
+      "price": 30.58,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -31877,21 +31870,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 30.435,
-          "h": 30.95,
-          "l": 30.39,
-          "c": 30.95,
-          "v": 9093
+          "h": 30.98,
+          "l": 29.96,
+          "c": 30.58,
+          "v": 66611
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 35.91699999999997,
-        "ema12": 34.99504395540893,
-        "ema26": 35.88762323569701,
-        "macd": -0.8925792802880821,
-        "macd_signal": -0.3698748395980343,
-        "macd_hist": -0.5227044406900478,
-        "rsi14": 31.628680279024934
+        "sma20": 35.89849999999997,
+        "ema12": 34.938120878485854,
+        "ema26": 35.860215828289604,
+        "macd": -0.9220949498037498,
+        "macd_signal": -0.3757779735011678,
+        "macd_hist": -0.546316976302582,
+        "rsi14": 30.845624090332066
       },
       "news": [
         {
@@ -31998,19 +31991,12 @@
           "ts": "2025-10-23T15:59:03Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Deep Dive Into Enphase Energy Stock: Analyst Perspectives (11 Ratings)",
-          "summary": " ",
-          "ts": "2025-10-23T14:00:51Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "FSLR": {
       "symbol": "FSLR",
-      "price": 239.145,
+      "price": 242.48,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -33608,21 +33594,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 237.25,
-          "h": 239.145,
+          "h": 242.48,
           "l": 235.995,
-          "c": 239.145,
-          "v": 3662
+          "c": 242.48,
+          "v": 32095
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 233.0392500000002,
-        "ema12": 235.94657372381928,
-        "ema26": 229.74795604640397,
-        "macd": 6.198617677415314,
-        "macd_signal": 6.1375131921718005,
-        "macd_hist": 0.061104485243513196,
-        "rsi14": 57.73772752155765
+        "sma20": 233.2060000000002,
+        "ema12": 236.45965064689622,
+        "ema26": 229.994993083441,
+        "macd": 6.4646575634552335,
+        "macd_signal": 6.190721169379784,
+        "macd_hist": 0.27393639407544956,
+        "rsi14": 60.36983992735899
       },
       "news": [
         {
@@ -33650,7 +33636,7 @@
     },
     "GOOGL": {
       "symbol": "GOOGL",
-      "price": 282.4,
+      "price": 288.985,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -35249,22 +35235,43 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 291.33,
           "h": 291.33,
-          "l": 282.12,
-          "c": 282.4,
-          "v": 247387
+          "l": 280.08,
+          "c": 288.985,
+          "v": 891912
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 253.7635000000001,
-        "ema12": 262.68763782060324,
-        "ema26": 253.8184301966588,
-        "macd": 8.869207623944448,
-        "macd_signal": 6.370909710624931,
-        "macd_hist": 2.498297913319517,
-        "rsi14": 78.05221458481782
+        "sma20": 254.0927500000001,
+        "ema12": 263.7007147436802,
+        "ema26": 254.30620797443657,
+        "macd": 9.394506769243606,
+        "macd_signal": 6.475969539684762,
+        "macd_hist": 2.9185372295588436,
+        "rsi14": 80.36549956768579
       },
       "news": [
+        {
+          "headline": "Nasdaq Falls Over 1%; Alphabet Posts Upbeat Earnings",
+          "summary": " ",
+          "ts": "2025-10-30T14:01:00Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
+        {
+          "headline": "Google Collaborates With Reliance Intelligence To Roll Out Google AI In India",
+          "summary": "",
+          "ts": "2025-10-30T13:53:47Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
+        {
+          "headline": "Nvidia Effect: Key Suppliers Have Already Sold Out AI Memory Chips For 2025",
+          "summary": "Nvidia&#39;s demand for AI memory has boosted SK Hynix and Samsung&#39;s profits, with Hynix&#39;s production fully booked until 2026 and Samsung selling out its HBM supply for 2025.",
+          "ts": "2025-10-30T13:52:46Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Cantor Fitzgerald Maintains Neutral on Alphabet, Raises Price Target to $310",
           "summary": "",
@@ -35418,33 +35425,12 @@
           "ts": "2025-10-29T18:00:44Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Fed Cuts, Big Tech Reports",
-          "summary": "FOMC day meets record highs as small caps and crypto lag behind mega-cap momentum.",
-          "ts": "2025-10-29T16:26:40Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "Nvidia's 2 Surprises; NVDA Soars On Trump-Fueled Hopes of China Blackwell Sales; Fed In Focus",
-          "summary": "\n\n\n\nTwo Nvidia Shockers\n\n\n",
-          "ts": "2025-10-29T16:01:08Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "Nvidia Stock Is On Fire\u2014Here's Why It Could Surge 30% More",
-          "summary": "Bank of America&#39;s new price target implies a $6.5 trillion valuation for Nvidia, highlighting its dominant position in an AI chip market.",
-          "ts": "2025-10-29T14:55:17Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "IONQ": {
       "symbol": "IONQ",
-      "price": 58.465,
+      "price": 61.05,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -37042,21 +37028,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 59.485,
-          "h": 60.335,
-          "l": 58.43,
-          "c": 58.465,
-          "v": 21822
+          "h": 61.19,
+          "l": 58.21,
+          "c": 61.05,
+          "v": 95515
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 67.43350000000004,
-        "ema12": 61.98086742243316,
-        "ema26": 63.23512437541475,
-        "macd": -1.2542569529815921,
-        "macd_signal": 0.36489953954663834,
-        "macd_hist": -1.6191564925282305,
-        "rsi14": 44.95917412111532
+        "sma20": 67.56275000000004,
+        "ema12": 62.37855973012547,
+        "ema26": 63.42660585689623,
+        "macd": -1.048046126770764,
+        "macd_signal": 0.40614170478880407,
+        "macd_hist": -1.454187831559568,
+        "rsi14": 47.40080189535786
       },
       "news": [
         {
@@ -37163,19 +37149,12 @@
           "ts": "2025-10-23T15:46:22Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "IonQ Shares Are Trading Higher Thursday: What's Going On?",
-          "summary": " ",
-          "ts": "2025-10-23T14:32:46Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "IWM": {
       "symbol": "IWM",
-      "price": 245.21,
+      "price": 247.25,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -38773,21 +38752,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 245.27,
-          "h": 245.67,
+          "h": 248.13,
           "l": 244.87,
-          "c": 245.21,
-          "v": 31915
+          "c": 247.25,
+          "v": 362333
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 246.15649999999997,
-        "ema12": 246.70250239097544,
-        "ema26": 244.8747618702026,
-        "macd": 1.827740520772835,
-        "macd_signal": 2.165267358982469,
-        "macd_hist": -0.33752683820963414,
-        "rsi14": 50.782257082897026
+        "sma20": 246.25849999999997,
+        "ema12": 247.0163485448216,
+        "ema26": 245.02587298131374,
+        "macd": 1.9904755635078573,
+        "macd_signal": 2.1978143675294737,
+        "macd_hist": -0.20733880402161642,
+        "rsi14": 53.902870304106976
       },
       "news": [
         {
@@ -38829,7 +38808,7 @@
     },
     "META": {
       "symbol": "META",
-      "price": 659.99,
+      "price": 660.2,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -40427,23 +40406,37 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 668.65,
-          "h": 669.08,
+          "h": 671.86,
           "l": 650.775,
-          "c": 659.99,
-          "v": 257985
+          "c": 660.2,
+          "v": 861058
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 722.5557500000001,
-        "ema12": 725.3787478352419,
-        "ema26": 729.8787632699232,
-        "macd": -4.500015434681245,
-        "macd_signal": -3.393012086450645,
-        "macd_hist": -1.1070033482306,
-        "rsi14": 28.904773153292624
+        "sma20": 722.5662500000002,
+        "ema12": 725.4110555275497,
+        "ema26": 729.8943188254786,
+        "macd": -4.483263297928943,
+        "macd_signal": -3.3896616591001845,
+        "macd_hist": -1.0936016388287584,
+        "rsi14": 28.938700636585523
       },
       "news": [
+        {
+          "headline": "Meta Introduces Passkey-Encrypted Chat Backups On WhatsApp",
+          "summary": "",
+          "ts": "2025-10-30T14:02:54Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
+        {
+          "headline": "Nvidia Effect: Key Suppliers Have Already Sold Out AI Memory Chips For 2025",
+          "summary": "Nvidia&#39;s demand for AI memory has boosted SK Hynix and Samsung&#39;s profits, with Hynix&#39;s production fully booked until 2026 and Samsung selling out its HBM supply for 2025.",
+          "ts": "2025-10-30T13:52:46Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Cantor Fitzgerald Maintains Overweight on Meta Platforms, Lowers Price Target to $830",
           "summary": "",
@@ -40604,26 +40597,12 @@
           "ts": "2025-10-30T02:09:45Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Meta Stock Drops After Q3 Earnings: CapEx Will Be 'Notably Larger' in 2026",
-          "summary": "Here&#39;s a look at the details from Meta Platforms&#39; Q3 earnings report.",
-          "ts": "2025-10-29T20:43:56Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "Meta CFO Says Company Will Monitor Active Legal And Regulatory Matters; Cites \"Headwinds\" In U.S. And EU That Could Impact Businesses And Financial Results; Cannot Rule Out European Commission Imposing Changes That Could Impact European Revenue; Cites Youth-Related Trials In US Scheduled For 2026 That Could Result In Material Loss",
-          "summary": "",
-          "ts": "2025-10-29T20:22:31Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "MSFT": {
       "symbol": "MSFT",
-      "price": 532.01,
+      "price": 529.26,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -42221,23 +42200,30 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 530.2,
-          "h": 534.87,
-          "l": 528.68,
-          "c": 532.01,
-          "v": 75798
+          "h": 534.91,
+          "l": 524.31,
+          "c": 529.26,
+          "v": 416586
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 522.0927499999997,
-        "ema12": 527.3285150743257,
-        "ema26": 521.6836102365173,
-        "macd": 5.644904837808326,
-        "macd_signal": 3.5767406827873325,
-        "macd_hist": 2.0681641550209937,
-        "rsi14": 60.00712828380106
+        "sma20": 521.9552499999998,
+        "ema12": 526.9054381512486,
+        "ema26": 521.4799065328136,
+        "macd": 5.425531618435002,
+        "macd_signal": 3.5328660389126676,
+        "macd_hist": 1.8926655795223346,
+        "rsi14": 57.24651575574243
       },
       "news": [
+        {
+          "headline": "Microsoft On Path To $5 Trillion Market Cap: Analyst Says 'AI Revolution Hits Next Gear'",
+          "summary": "Microsoft analysts highlight the long-term potential for the company&#39;s cloud and AI growth after a double beat in the first quarter.",
+          "ts": "2025-10-30T14:20:57Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Stock Market Today: Dow Futures Decline, S&P 500, Nasdaq Swing Following Fed Rate Cuts, Trump-Xi Meet\u2014Amazon, Apple Earnings In Focus (UPDATED)",
           "summary": "(Editor\u2019s note: The future prices of benchmark tracking ETFs, the headline, and the lede were updated in the story.)\n\n\n\nU.S. stock futures swung between gains and losses on Thursday following Wednesday&#39;s mixed moves. Futures of major benchmark indices were mixed.",
@@ -42405,19 +42391,12 @@
           "ts": "2025-10-29T15:00:38Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Nvidia Stock Is On Fire\u2014Here's Why It Could Surge 30% More",
-          "summary": "Bank of America&#39;s new price target implies a $6.5 trillion valuation for Nvidia, highlighting its dominant position in an AI chip market.",
-          "ts": "2025-10-29T14:55:17Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "NET": {
       "symbol": "NET",
-      "price": 225.36,
+      "price": 228.02,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -44015,21 +43994,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 226.49,
-          "h": 226.49,
+          "h": 229.89,
           "l": 224.46,
-          "c": 225.36,
-          "v": 2658
+          "c": 228.02,
+          "v": 65849
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 218.12400000000002,
-        "ema12": 220.3790487238789,
-        "ema26": 218.3746222791849,
-        "macd": 2.0044264446939906,
-        "macd_signal": 0.9063804414622294,
-        "macd_hist": 1.0980460032317612,
-        "rsi14": 57.759091094154414
+        "sma20": 218.25700000000006,
+        "ema12": 220.78827949310966,
+        "ema26": 218.57165931622194,
+        "macd": 2.216620176887716,
+        "macd_signal": 0.9488191879009744,
+        "macd_hist": 1.2678009889867414,
+        "rsi14": 60.7080561158626
       },
       "news": [
         {
@@ -44050,7 +44029,7 @@
     },
     "NOW": {
       "symbol": "NOW",
-      "price": 899.875,
+      "price": 947.325,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -45648,21 +45627,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 924.99,
-          "h": 938.3,
+          "h": 963.92,
           "l": 899.6,
-          "c": 899.875,
-          "v": 7603
+          "c": 947.325,
+          "v": 52871
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 917.6782500000011,
-        "ema12": 922.1741664596889,
-        "ema26": 921.5580907800179,
-        "macd": 0.6160756796709848,
-        "macd_signal": 1.153388136399338,
-        "macd_hist": -0.5373124567283531,
-        "rsi14": 43.59709866933086
+        "sma20": 920.050750000001,
+        "ema12": 929.4741664596888,
+        "ema26": 925.0729055948327,
+        "macd": 4.401260864856113,
+        "macd_signal": 1.9104251734363635,
+        "macd_hist": 2.490835691419749,
+        "rsi14": 55.87273934599504
       },
       "news": [
         {
@@ -45746,7 +45725,7 @@
     },
     "NVCR": {
       "symbol": "NVCR",
-      "price": 13.26,
+      "price": 13.21,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -47344,21 +47323,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 13.7,
-          "h": 13.77,
-          "l": 13.26,
-          "c": 13.26,
-          "v": 2394
+          "h": 14.125,
+          "l": 12.78,
+          "c": 13.21,
+          "v": 18883
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 13.88500000000001,
-        "ema12": 13.647230016912994,
-        "ema26": 13.58163587207443,
-        "macd": 0.0655941448385633,
-        "macd_signal": 0.18832646232991973,
-        "macd_hist": -0.12273231749135644,
-        "rsi14": 45.622266039327464
+        "sma20": 13.882500000000011,
+        "ema12": 13.639537709220686,
+        "ema26": 13.577932168370728,
+        "macd": 0.06160554084995873,
+        "macd_signal": 0.1875287415321988,
+        "macd_hist": -0.12592320068224008,
+        "rsi14": 45.03671473249436
       },
       "news": [
         {
@@ -47386,7 +47365,7 @@
     },
     "NVDA": {
       "symbol": "NVDA",
-      "price": 201.695,
+      "price": 202.93,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -48985,22 +48964,29 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 205.205,
           "h": 206.1,
-          "l": 201.69,
-          "c": 201.695,
-          "v": 255762
+          "l": 201.425,
+          "c": 202.93,
+          "v": 1040270
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 187.49025000000012,
-        "ema12": 191.8569462808202,
-        "ema26": 187.1410708473976,
-        "macd": 4.71587543342261,
-        "macd_signal": 2.636501164229819,
-        "macd_hist": 2.0793742691927912,
-        "rsi14": 65.55772281066771
+        "sma20": 187.5520000000001,
+        "ema12": 192.0469462808202,
+        "ema26": 187.23255232887908,
+        "macd": 4.814393951941128,
+        "macd_signal": 2.656204867933522,
+        "macd_hist": 2.1581890840076055,
+        "rsi14": 67.17894007361767
       },
       "news": [
+        {
+          "headline": "Nvidia Effect: Key Suppliers Have Already Sold Out AI Memory Chips For 2025",
+          "summary": "Nvidia&#39;s demand for AI memory has boosted SK Hynix and Samsung&#39;s profits, with Hynix&#39;s production fully booked until 2026 and Samsung selling out its HBM supply for 2025.",
+          "ts": "2025-10-30T13:52:46Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "GM, Ford, Stellantis Supplier Vaults Into Top 10% Momentum Stocks \u2014 Breakout Ahead?",
           "summary": "Strattec Security (STRT) surges into top 10% momentum, long-term uptrend confirmed. GM, Ford, Stellantis supplier primed for breakout.",
@@ -49168,19 +49154,12 @@
           "ts": "2025-10-29T15:00:27Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Nvidia Stock Is On Fire\u2014Here's Why It Could Surge 30% More",
-          "summary": "Bank of America&#39;s new price target implies a $6.5 trillion valuation for Nvidia, highlighting its dominant position in an AI chip market.",
-          "ts": "2025-10-29T14:55:17Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "OKTA": {
       "symbol": "OKTA",
-      "price": 87.65,
+      "price": 88.455,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -50778,27 +50757,27 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 87.69,
-          "h": 87.79,
-          "l": 87.65,
-          "c": 87.65,
-          "v": 1071
+          "h": 89.05,
+          "l": 87.58,
+          "c": 88.455,
+          "v": 9641
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 89.65374999999997,
-        "ema12": 88.80350991844497,
-        "ema26": 89.73200984307597,
-        "macd": -0.928499924630998,
-        "macd_signal": -0.8745486548045657,
-        "macd_hist": -0.05395126982643228,
-        "rsi14": 43.20103689543399
+        "sma20": 89.69399999999996,
+        "ema12": 88.92735607229113,
+        "ema26": 89.7916394727056,
+        "macd": -0.8642834004144646,
+        "macd_signal": -0.861705349961259,
+        "macd_hist": -0.0025780504532055826,
+        "rsi14": 45.77804955418423
       },
       "news": []
     },
     "PANW": {
       "symbol": "PANW",
-      "price": 218.15,
+      "price": 219.87,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -52396,21 +52375,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 217.54,
-          "h": 218.74,
+          "h": 220.57,
           "l": 216.66,
-          "c": 218.15,
-          "v": 4011
+          "c": 219.87,
+          "v": 32535
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 213.05025,
-        "ema12": 215.36104597303122,
-        "ema26": 211.15506742024002,
-        "macd": 4.205978552791208,
-        "macd_signal": 3.9598390832235086,
-        "macd_hist": 0.24613946956769972,
-        "rsi14": 60.50446626452238
+        "sma20": 213.13625000000002,
+        "ema12": 215.6256613576466,
+        "ema26": 211.2824748276474,
+        "macd": 4.343186529999201,
+        "macd_signal": 3.9872806786651074,
+        "macd_hist": 0.3559058513340938,
+        "rsi14": 62.24545999897476
       },
       "news": [
         {
@@ -52452,7 +52431,7 @@
     },
     "PATH": {
       "symbol": "PATH",
-      "price": 15.495,
+      "price": 16.005,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -54050,21 +54029,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 15.875,
-          "h": 16,
-          "l": 15.445,
-          "c": 15.495,
-          "v": 34965
+          "h": 16.105,
+          "l": 15.415,
+          "c": 16.005,
+          "v": 150864
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 15.976749999999987,
-        "ema12": 15.959551956910659,
-        "ema26": 15.212099313990603,
-        "macd": 0.7474526429200559,
-        "macd_signal": 0.9180574648740876,
-        "macd_hist": -0.1706048219540317,
-        "rsi14": 51.948551961926995
+        "sma20": 16.002249999999986,
+        "ema12": 16.038013495372198,
+        "ema26": 15.24987709176838,
+        "macd": 0.7881364036038185,
+        "macd_signal": 0.92619421701084,
+        "macd_hist": -0.1380578134070215,
+        "rsi14": 54.94959568973079
       },
       "news": [
         {
@@ -54113,7 +54092,7 @@
     },
     "PLTR": {
       "symbol": "PLTR",
-      "price": 195.14,
+      "price": 197.41,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -55711,21 +55690,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 198.09,
-          "h": 198.6,
-          "l": 195.06,
-          "c": 195.14,
-          "v": 73201
+          "h": 199.65,
+          "l": 194.14,
+          "c": 197.41,
+          "v": 386260
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 182.41624999999996,
-        "ema12": 186.77041938834628,
-        "ema26": 182.1657887195899,
-        "macd": 4.604630668756386,
-        "macd_signal": 3.23782068081845,
-        "macd_hist": 1.3668099879379354,
-        "rsi14": 64.03966083418632
+        "sma20": 182.52974999999998,
+        "ema12": 187.11965015757704,
+        "ema26": 182.33393686773803,
+        "macd": 4.785713289839009,
+        "macd_signal": 3.2740372050349746,
+        "macd_hist": 1.5116760848040345,
+        "rsi14": 67.03480714983215
       },
       "news": [
         {
@@ -55907,7 +55886,7 @@
     },
     "QBTS": {
       "symbol": "QBTS",
-      "price": 32.52,
+      "price": 34.47,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -57505,21 +57484,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 33.135,
-          "h": 33.555,
-          "l": 32.52,
-          "c": 32.52,
-          "v": 19814
+          "h": 34.755,
+          "l": 32.48,
+          "c": 34.47,
+          "v": 141189
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 35.22174999999998,
-        "ema12": 33.530332917383,
-        "ema26": 31.95918561340583,
-        "macd": 1.5711473039771704,
-        "macd_signal": 2.5457724932349715,
-        "macd_hist": -0.9746251892578011,
-        "rsi14": 51.16792080324001
+        "sma20": 35.31924999999998,
+        "ema12": 33.830332917383,
+        "ema26": 32.103630057850275,
+        "macd": 1.7267028595327218,
+        "macd_signal": 2.5768836043460817,
+        "macd_hist": -0.8501807448133598,
+        "rsi14": 54.26696476761095
       },
       "news": [
         {
@@ -57633,26 +57612,12 @@
           "ts": "2025-10-23T15:30:23Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Las Vegas Sands Posts Upbeat Q3 Results, Joins Garrett Motion, LendingClub, Dow, Hexcel And Other Big Stocks Moving Higher On Thursday",
-          "summary": " ",
-          "ts": "2025-10-23T14:34:47Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "IonQ Shares Are Trading Higher Thursday: What's Going On?",
-          "summary": " ",
-          "ts": "2025-10-23T14:32:46Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "QQQ": {
       "symbol": "QQQ",
-      "price": 628.695,
+      "price": 630.17,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -59250,21 +59215,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 631.97,
-          "h": 632.01,
-          "l": 628.695,
-          "c": 628.695,
-          "v": 32877
+          "h": 633.39,
+          "l": 627.81,
+          "c": 630.17,
+          "v": 157763
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 610.7282499999999,
-        "ema12": 618.9901136654124,
-        "ema26": 609.5595220677554,
-        "macd": 9.430591597656985,
-        "macd_signal": 7.206836647322286,
-        "macd_hist": 2.2237549503346994,
-        "rsi14": 64.62081929570012
+        "sma20": 610.8019999999999,
+        "ema12": 619.2170367423355,
+        "ema26": 609.6687813270147,
+        "macd": 9.548255415320796,
+        "macd_signal": 7.230369410855047,
+        "macd_hist": 2.3178860044657483,
+        "rsi14": 65.96289978116252
       },
       "news": [
         {
@@ -59446,7 +59411,7 @@
     },
     "QUBT": {
       "symbol": "QUBT",
-      "price": 14.785,
+      "price": 15.24,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -61045,20 +61010,20 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 15.305,
           "h": 15.37,
-          "l": 14.785,
-          "c": 14.785,
-          "v": 18635
+          "l": 14.705,
+          "c": 15.24,
+          "v": 149798
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 18.603749999999994,
-        "ema12": 16.492042130396385,
-        "ema26": 17.60584230560059,
-        "macd": -1.1138001752042044,
-        "macd_signal": -0.586243668117914,
-        "macd_hist": -0.5275565070862904,
-        "rsi14": 38.99016513477277
+        "sma20": 18.626499999999993,
+        "ema12": 16.56204213039638,
+        "ema26": 17.639546009304294,
+        "macd": -1.0775038789079119,
+        "macd_signal": -0.5789844088586554,
+        "macd_hist": -0.49851947004925645,
+        "rsi14": 40.30558152710305
       },
       "news": [
         {
@@ -61156,7 +61121,7 @@
     },
     "RBLX": {
       "symbol": "RBLX",
-      "price": 120.35,
+      "price": 120.31,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -62755,22 +62720,29 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 124.63,
           "h": 125.46,
-          "l": 119.03,
-          "c": 120.35,
-          "v": 67182
+          "l": 116.36,
+          "c": 120.31,
+          "v": 282823
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 129.39575000000002,
-        "ema12": 129.45313835617088,
-        "ema26": 130.18971241145718,
-        "macd": -0.7365740552862974,
-        "macd_signal": -0.023686085649971572,
-        "macd_hist": -0.7128879696363258,
-        "rsi14": 38.65292851198814
+        "sma20": 129.39375,
+        "ema12": 129.44698451001705,
+        "ema26": 130.18674944849423,
+        "macd": -0.7397649384771796,
+        "macd_signal": -0.02432426228814802,
+        "macd_hist": -0.7154406761890316,
+        "rsi14": 38.61981431775394
       },
       "news": [
+        {
+          "headline": "UPDATE: Roblox Raises FY2025 Bookings Guidance from $5.870B-$5.970B to $6.566B-$6.616B vs $6.011B Est",
+          "summary": "",
+          "ts": "2025-10-30T14:34:09Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Amaze Holdings Enters Strategic Partnership With Metaverse And Gaming Studio Dubit.io To Develop Amaze-Connected 3D Storefronts In Popular Gaming Environments Like Roblox And Fortnite",
           "summary": "",
@@ -62845,7 +62817,7 @@
     },
     "RGTI": {
       "symbol": "RGTI",
-      "price": 37.77,
+      "price": 40.31,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -64443,21 +64415,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 38.13,
-          "h": 38.97,
-          "l": 37.77,
-          "c": 37.77,
-          "v": 43384
+          "h": 40.55,
+          "l": 37.685,
+          "c": 40.31,
+          "v": 374584
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 43.69449999999999,
-        "ema12": 40.359061291206146,
-        "ema26": 38.55720188959822,
-        "macd": 1.8018594016079277,
-        "macd_signal": 3.618311479403799,
-        "macd_hist": -1.8164520777958715,
-        "rsi14": 49.1522801110357
+        "sma20": 43.8215,
+        "ema12": 40.749830521975376,
+        "ema26": 38.74535003774637,
+        "macd": 2.0044804842290063,
+        "macd_signal": 3.6588356959280146,
+        "macd_hist": -1.6543552116990083,
+        "rsi14": 52.80908243585862
       },
       "news": [
         {
@@ -64606,26 +64578,12 @@
           "ts": "2025-10-23T15:46:22Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "IonQ Shares Are Trading Higher Thursday: What's Going On?",
-          "summary": " ",
-          "ts": "2025-10-23T14:32:46Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "Rigetti Computing (RGTI) Stock Is Surging Thursday: What's Going On?",
-          "summary": "Shares of Rigetti Computing are surging Thursday morning, reversing a recent downturn.",
-          "ts": "2025-10-23T14:20:10Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "RKLB": {
       "symbol": "RKLB",
-      "price": 63.36,
+      "price": 63.47,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -66224,20 +66182,20 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 64.945,
           "h": 65.06,
-          "l": 63.36,
-          "c": 63.36,
-          "v": 9655
+          "l": 62.91,
+          "c": 63.47,
+          "v": 62862
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 64.42049999999995,
-        "ema12": 64.12319696006955,
-        "ema26": 61.0730257438708,
-        "macd": 3.0501712161987484,
-        "macd_signal": 3.7789560494761245,
-        "macd_hist": -0.7287848332773761,
-        "rsi14": 54.61307960693449
+        "sma20": 64.42599999999996,
+        "ema12": 64.14012003699263,
+        "ema26": 61.08117389201895,
+        "macd": 3.0589461449736746,
+        "macd_signal": 3.7807110352311097,
+        "macd_hist": -0.7217648902574352,
+        "rsi14": 54.81814360485221
       },
       "news": [
         {
@@ -66265,7 +66223,7 @@
     },
     "SHOP": {
       "symbol": "SHOP",
-      "price": 176.065,
+      "price": 175.83,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -67864,20 +67822,20 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 176.925,
           "h": 178.02,
-          "l": 175.83,
-          "c": 176.065,
-          "v": 24523
+          "l": 174.61,
+          "c": 175.83,
+          "v": 60152
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 164.17474999999985,
-        "ema12": 169.4410031882036,
-        "ema26": 162.44862539393765,
-        "macd": 6.992377794265963,
-        "macd_signal": 5.499781650021758,
-        "macd_hist": 1.4925961442442048,
-        "rsi14": 66.73495955385582
+        "sma20": 164.16299999999984,
+        "ema12": 169.40484934204977,
+        "ema26": 162.43121798653024,
+        "macd": 6.9736313555195295,
+        "macd_signal": 5.496032362272471,
+        "macd_hist": 1.4775989932470583,
+        "rsi14": 66.38890313487325
       },
       "news": [
         {
@@ -67954,7 +67912,7 @@
     },
     "SMCI": {
       "symbol": "SMCI",
-      "price": 51.035,
+      "price": 51.25,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -69552,21 +69510,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 51.89,
-          "h": 52.09,
-          "l": 51.035,
-          "c": 51.035,
-          "v": 15440
+          "h": 52.31,
+          "l": 51.03,
+          "c": 51.25,
+          "v": 114220
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 53.24575,
-        "ema12": 51.88092603491041,
-        "ema26": 51.295265165557566,
-        "macd": 0.5856608693528429,
-        "macd_signal": 1.1049060951252618,
-        "macd_hist": -0.5192452257724189,
-        "rsi14": 49.51848664726976
+        "sma20": 53.256499999999996,
+        "ema12": 51.914002957987336,
+        "ema26": 51.311191091483494,
+        "macd": 0.602811866503842,
+        "macd_signal": 1.1083362945554618,
+        "macd_hist": -0.5055244280516198,
+        "rsi14": 50.013736061241595
       },
       "news": [
         {
@@ -69706,7 +69664,7 @@
     },
     "SMH": {
       "symbol": "SMH",
-      "price": 365.53,
+      "price": 366.235,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -71304,21 +71262,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 367.565,
-          "h": 368.22,
-          "l": 365.53,
-          "c": 365.53,
-          "v": 8021
+          "h": 369.77,
+          "l": 364.225,
+          "c": 366.235,
+          "v": 98548
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 345.9997500000001,
-        "ema12": 353.1913846580475,
-        "ema26": 341.97110391588524,
-        "macd": 11.220280742162288,
-        "macd_signal": 9.755668170369654,
-        "macd_hist": 1.4646125717926335,
-        "rsi14": 67.96004700390024
+        "sma20": 346.03500000000014,
+        "ema12": 353.29984619650907,
+        "ema26": 342.02332613810745,
+        "macd": 11.276520058401616,
+        "macd_signal": 9.76691603361752,
+        "macd_hist": 1.509604024784096,
+        "rsi14": 68.62527260656081
       },
       "news": [
         {
@@ -71339,7 +71297,7 @@
     },
     "SNAP": {
       "symbol": "SNAP",
-      "price": 7.625,
+      "price": 7.76,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -72937,21 +72895,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 7.56,
-          "h": 7.645,
+          "h": 7.87,
           "l": 7.48,
-          "c": 7.625,
-          "v": 105851
+          "c": 7.76,
+          "v": 387002
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 7.961500000000003,
-        "ema12": 7.820011240489013,
-        "ema26": 7.882214604771955,
-        "macd": -0.06220336428294182,
-        "macd_signal": -0.026678494226068834,
-        "macd_hist": -0.035524870056872986,
-        "rsi14": 43.38993717647487
+        "sma20": 7.968250000000002,
+        "ema12": 7.840780471258244,
+        "ema26": 7.892214604771955,
+        "macd": -0.05143413351371162,
+        "macd_signal": -0.024524648072222793,
+        "macd_hist": -0.02690948544148883,
+        "rsi14": 46.42648130770348
       },
       "news": [
         {
@@ -72986,7 +72944,7 @@
     },
     "SNOW": {
       "symbol": "SNOW",
-      "price": 266,
+      "price": 270.46,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -74584,21 +74542,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 265.945,
-          "h": 269.005,
+          "h": 273.29,
           "l": 265,
-          "c": 266,
-          "v": 7400
+          "c": 270.46,
+          "v": 52017
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 248.98325,
-        "ema12": 256.1885521232928,
-        "ema26": 246.50045818959802,
-        "macd": 9.688093933694802,
-        "macd_signal": 7.85266714754192,
-        "macd_hist": 1.8354267861528815,
-        "rsi14": 66.92808241423793
+        "sma20": 249.20625,
+        "ema12": 256.87470596944667,
+        "ema26": 246.83082855996838,
+        "macd": 10.043877409478284,
+        "macd_signal": 7.923823842698617,
+        "macd_hist": 2.120053566779667,
+        "rsi14": 71.35963631020815
       },
       "news": [
         {
@@ -74640,7 +74598,7 @@
     },
     "SOFI": {
       "symbol": "SOFI",
-      "price": 29.77,
+      "price": 29.96,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -76239,20 +76197,20 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 30.435,
           "h": 30.9,
-          "l": 29.75,
-          "c": 29.77,
-          "v": 64530
+          "l": 29.57,
+          "c": 29.96,
+          "v": 363824
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 28.131249999999987,
-        "ema12": 29.157479275522626,
-        "ema26": 28.20888034737622,
-        "macd": 0.9485989281464065,
-        "macd_signal": 0.6874628670419224,
-        "macd_hist": 0.26113606110448406,
-        "rsi14": 56.7896341415672
+        "sma20": 28.14074999999999,
+        "ema12": 29.186710044753394,
+        "ema26": 28.222954421450293,
+        "macd": 0.9637556233031006,
+        "macd_signal": 0.6904942060732612,
+        "macd_hist": 0.27326141722983943,
+        "rsi14": 57.64322819673993
       },
       "news": [
         {
@@ -76434,7 +76392,7 @@
     },
     "SOUN": {
       "symbol": "SOUN",
-      "price": 17.27,
+      "price": 17.41,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -78033,20 +77991,20 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 17.695,
           "h": 17.87,
-          "l": 17.265,
-          "c": 17.27,
-          "v": 20660
+          "l": 17.21,
+          "c": 17.41,
+          "v": 213359
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 18.651749999999996,
-        "ema12": 18.190333786534644,
-        "ema26": 17.824763083401805,
-        "macd": 0.365570703132839,
-        "macd_signal": 0.7130507203914345,
-        "macd_hist": -0.34748001725859545,
-        "rsi14": 47.0115587594755
+        "sma20": 18.658749999999998,
+        "ema12": 18.211872248073107,
+        "ema26": 17.835133453772176,
+        "macd": 0.3767387943009304,
+        "macd_signal": 0.7152843386250527,
+        "macd_hist": -0.3385455443241223,
+        "rsi14": 47.741550724032265
       },
       "news": [
         {
@@ -78060,7 +78018,7 @@
     },
     "SPY": {
       "symbol": "SPY",
-      "price": 681.815,
+      "price": 684.39,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -79658,23 +79616,37 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 683.68,
-          "h": 683.74,
-          "l": 681.815,
-          "c": 681.815,
-          "v": 57948
+          "h": 685.935,
+          "l": 681.5,
+          "c": 684.39,
+          "v": 287149
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 671.1620000000005,
-        "ema12": 676.703331356824,
-        "ema26": 670.3269494634907,
-        "macd": 6.37638189333336,
-        "macd_signal": 4.94119300300127,
-        "macd_hist": 1.43518889033209,
-        "rsi14": 62.014601047795395
+        "sma20": 671.2907500000003,
+        "ema12": 677.0994852029779,
+        "ema26": 670.5176902042314,
+        "macd": 6.581794998746545,
+        "macd_signal": 4.982275624083907,
+        "macd_hist": 1.5995193746626386,
+        "rsi14": 65.16676086662824
       },
       "news": [
+        {
+          "headline": "USA Natural Gas Storage 74B Vs 71B Est.",
+          "summary": "",
+          "ts": "2025-10-30T14:30:09Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
+        {
+          "headline": "'Shutdown cost government contractors $12B so far, Chamber of Commerce report says'- CNBC",
+          "summary": "",
+          "ts": "2025-10-30T14:05:31Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "Live On CNBC, U.S. Secretary Of The Treasury Scott Bessent Says \"We Will Take Control Of U.S. Supply Chains In Rare Earths, Semiconductors, Shipbuilding\"",
           "summary": "",
@@ -79835,26 +79807,12 @@
           "ts": "2025-10-29T19:02:08Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Fed Chair Powell Says Data Center Investments And AI Is A Big Deal; Spending On Data Centers Isn't Especially Interest-Rate Sensitive; Don't Think We'll Have A Very Granular Understanding Of Economy While Shutdown Is On; On Data, This Is Temporary; There Is A Possibility There May Be A Case For More Caution In Absence Of Data",
-          "summary": "",
-          "ts": "2025-10-29T19:00:55Z",
-          "source": "benzinga",
-          "relevance": 1.0
-        },
-        {
-          "headline": "Fed Chair Powell Says We're Not Just Assuming It Will Be One-Time Inflation From Tariffs; Monitoring Closely; Policy Modestly Restrictive; That's One Reason See Labor Market Gradually Cooling; Absolutely Committed To Returning Inflation To 2%",
-          "summary": "",
-          "ts": "2025-10-29T18:58:53Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "TSLA": {
       "symbol": "TSLA",
-      "price": 451.445,
+      "price": 443.41,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -81452,23 +81410,30 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 451.08,
-          "h": 454.38,
-          "l": 449.02,
-          "c": 451.445,
-          "v": 47575
+          "h": 455.04,
+          "l": 442.56,
+          "c": 443.41,
+          "v": 255061
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 440.4602499999998,
-        "ema12": 446.8162423331251,
-        "ema26": 435.1920105780302,
-        "macd": 11.624231755094911,
-        "macd_signal": 12.059066921909494,
-        "macd_hist": -0.4348351668145831,
-        "rsi14": 56.55940139695126
+        "sma20": 440.0584999999998,
+        "ema12": 445.58008848697125,
+        "ema26": 434.596825392845,
+        "macd": 10.983263094126244,
+        "macd_signal": 11.930873189715761,
+        "macd_hist": -0.9476100955895177,
+        "rsi14": 53.51405539900124
       },
       "news": [
+        {
+          "headline": "Nvidia Effect: Key Suppliers Have Already Sold Out AI Memory Chips For 2025",
+          "summary": "Nvidia&#39;s demand for AI memory has boosted SK Hynix and Samsung&#39;s profits, with Hynix&#39;s production fully booked until 2026 and Samsung selling out its HBM supply for 2025.",
+          "ts": "2025-10-30T13:52:46Z",
+          "source": "benzinga",
+          "relevance": 1.0
+        },
         {
           "headline": "'Tesla's Scaled Back Robotaxi Timeline Still Faces Obstacles' - The Information",
           "summary": "",
@@ -81636,19 +81601,12 @@
           "ts": "2025-10-28T15:51:45Z",
           "source": "benzinga",
           "relevance": 1.0
-        },
-        {
-          "headline": "Here's How Much $100 Invested In Tesla 10 Years Ago Would Be Worth Today",
-          "summary": " ",
-          "ts": "2025-10-28T15:00:47Z",
-          "source": "benzinga",
-          "relevance": 1.0
         }
       ]
     },
     "TTWO": {
       "symbol": "TTWO",
-      "price": 251.215,
+      "price": 251.79,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -83246,21 +83204,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 251.205,
-          "h": 251.215,
+          "h": 252.72,
           "l": 250.965,
-          "c": 251.215,
-          "v": 1532
+          "c": 251.79,
+          "v": 7675
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 256.76699999999994,
-        "ema12": 254.6815755501814,
-        "ema26": 254.1031284553785,
-        "macd": 0.5784470948028968,
-        "macd_signal": 2.0968017088822655,
-        "macd_hist": -1.5183546140793687,
-        "rsi14": 44.91555720385754
+        "sma20": 256.79574999999994,
+        "ema12": 254.77003708864294,
+        "ema26": 254.14572104797108,
+        "macd": 0.6243160406718573,
+        "macd_signal": 2.1059754980560577,
+        "macd_hist": -1.4816594573842004,
+        "rsi14": 45.855141130886736
       },
       "news": [
         {
@@ -83274,7 +83232,7 @@
     },
     "U": {
       "symbol": "U",
-      "price": 36.22,
+      "price": 36.74,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -84872,27 +84830,27 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 36.45,
-          "h": 36.635,
-          "l": 36.11,
-          "c": 36.22,
-          "v": 3235
+          "h": 36.86,
+          "l": 36.08,
+          "c": 36.74,
+          "v": 48799
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 36.71975000000004,
-        "ema12": 36.92230644202176,
-        "ema26": 37.766315018758085,
-        "macd": -0.8440085767363286,
-        "macd_signal": -1.045528116538713,
-        "macd_hist": 0.20151953980238435,
-        "rsi14": 44.66719122989425
+        "sma20": 36.74575000000004,
+        "ema12": 37.00230644202176,
+        "ema26": 37.80483353727661,
+        "macd": -0.8025270952548453,
+        "macd_signal": -1.0372318202424162,
+        "macd_hist": 0.2347047249875709,
+        "rsi14": 46.16211270287214
       },
       "news": []
     },
     "UPST": {
       "symbol": "UPST",
-      "price": 46.45,
+      "price": 46.55,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -86491,26 +86449,26 @@
           "t": "2025-10-30T04:00:00Z",
           "o": 47.595,
           "h": 47.595,
-          "l": 46.41,
-          "c": 46.45,
-          "v": 2676
+          "l": 46.31,
+          "c": 46.55,
+          "v": 77863
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 50.52974999999995,
-        "ema12": 50.29033108738401,
-        "ema26": 52.75709036962104,
-        "macd": -2.466759282237028,
-        "macd_signal": -2.7905199297278465,
-        "macd_hist": 0.32376064749081834,
-        "rsi14": 35.27567556290454
+        "sma20": 50.53474999999996,
+        "ema12": 50.30571570276862,
+        "ema26": 52.764497777028446,
+        "macd": -2.4587820742598225,
+        "macd_signal": -2.7889244881324053,
+        "macd_hist": 0.3301424138725828,
+        "rsi14": 35.42466079342225
       },
       "news": []
     },
     "VOO": {
       "symbol": "VOO",
-      "price": 626.97,
+      "price": 628.99,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -88108,21 +88066,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 628.635,
-          "h": 628.645,
-          "l": 626.97,
-          "c": 626.97,
-          "v": 2658
+          "h": 630.25,
+          "l": 626.63,
+          "c": 628.99,
+          "v": 22194
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 617.044,
-        "ema12": 622.2456904053213,
-        "ema26": 616.4134441948682,
-        "macd": 5.832246210453036,
-        "macd_signal": 4.485706557945896,
-        "macd_hist": 1.3465396525071398,
-        "rsi14": 61.78598412689909
+        "sma20": 617.145,
+        "ema12": 622.5564596360905,
+        "ema26": 616.5630738244979,
+        "macd": 5.993385811592589,
+        "macd_signal": 4.517934478173807,
+        "macd_hist": 1.475451333418782,
+        "rsi14": 64.39490520536438
       },
       "news": [
         {
@@ -88220,7 +88178,7 @@
     },
     "VTI": {
       "symbol": "VTI",
-      "price": 334.975,
+      "price": 336.455,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -89818,21 +89776,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 335.98,
-          "h": 335.98,
-          "l": 334.975,
-          "c": 334.975,
-          "v": 2274
+          "h": 337.12,
+          "l": 334.95,
+          "c": 336.455,
+          "v": 23490
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 330.6662499999999,
-        "ema12": 333.1277504744268,
-        "ema26": 330.25589310416933,
-        "macd": 2.871857370257487,
-        "macd_signal": 2.293843514182599,
-        "macd_hist": 0.5780138560748882,
-        "rsi14": 59.82677370945751
+        "sma20": 330.74024999999983,
+        "ema12": 333.3554427821191,
+        "ema26": 330.36552273379897,
+        "macd": 2.98992004832013,
+        "macd_signal": 2.3174560497951275,
+        "macd_hist": 0.6724639985250023,
+        "rsi14": 63.31575930172645
       },
       "news": [
         {
@@ -89874,7 +89832,7 @@
     },
     "XBI": {
       "symbol": "XBI",
-      "price": 111.115,
+      "price": 112.23,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -91472,21 +91430,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 110.68,
-          "h": 111.4,
+          "h": 112.97,
           "l": 110.26,
-          "c": 111.115,
-          "v": 17637
+          "c": 112.23,
+          "v": 107677
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 107.54675,
-        "ema12": 109.13020633001497,
-        "ema26": 105.8364887805668,
-        "macd": 3.293717549448175,
-        "macd_signal": 3.335517385399701,
-        "macd_hist": -0.04179983595152592,
-        "rsi14": 69.30765591281329
+        "sma20": 107.6025,
+        "ema12": 109.30174479155345,
+        "ema26": 105.91908137315939,
+        "macd": 3.38266341839406,
+        "macd_signal": 3.3533065591888778,
+        "macd_hist": 0.02935685920518205,
+        "rsi14": 71.38707041795223
       },
       "news": [
         {
@@ -91507,7 +91465,7 @@
     },
     "XLB": {
       "symbol": "XLB",
-      "price": 86.505,
+      "price": 86.78,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -93105,21 +93063,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 86.49,
-          "h": 86.71,
+          "h": 86.9,
           "l": 86.33,
-          "c": 86.505,
-          "v": 17343
+          "c": 86.78,
+          "v": 132732
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 88.63199999999999,
-        "ema12": 88.30250739283815,
-        "ema26": 88.80120413111675,
-        "macd": -0.4986967382785963,
-        "macd_signal": -0.4024702961709699,
-        "macd_hist": -0.09622644210762638,
-        "rsi14": 36.85885952463547
+        "sma20": 88.64574999999999,
+        "ema12": 88.34481508514585,
+        "ema26": 88.82157450148712,
+        "macd": -0.47675941634126673,
+        "macd_signal": -0.398082831783504,
+        "macd_hist": -0.07867658455776272,
+        "rsi14": 37.954706969920345
       },
       "news": [
         {
@@ -93189,7 +93147,7 @@
     },
     "XLC": {
       "symbol": "XLC",
-      "price": 114.395,
+      "price": 115.32,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -94787,21 +94745,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 114.64,
-          "h": 114.74,
+          "h": 115.645,
           "l": 114.055,
-          "c": 114.395,
-          "v": 9780
+          "c": 115.32,
+          "v": 59014
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 115.4442500000001,
-        "ema12": 115.7168032464743,
-        "ema26": 115.64940018107859,
-        "macd": 0.06740306539570895,
-        "macd_signal": 0.11403624632648564,
-        "macd_hist": -0.04663318093077669,
-        "rsi14": 44.2141300718423
+        "sma20": 115.49050000000011,
+        "ema12": 115.859110938782,
+        "ema26": 115.7179186995971,
+        "macd": 0.141192239184889,
+        "macd_signal": 0.12879408108432164,
+        "macd_hist": 0.012398158100567352,
+        "rsi14": 48.096844098604194
       },
       "news": [
         {
@@ -94843,7 +94801,7 @@
     },
     "XLE": {
       "symbol": "XLE",
-      "price": 87.48,
+      "price": 88.245,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -96441,21 +96399,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 87.895,
-          "h": 87.97,
-          "l": 87.48,
-          "c": 87.48,
-          "v": 21873
+          "h": 88.245,
+          "l": 87.405,
+          "c": 88.245,
+          "v": 115674
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 87.48124999999996,
-        "ema12": 87.63170388606623,
-        "ema26": 87.79854193400676,
-        "macd": -0.16683804794053003,
-        "macd_signal": -0.2803889087134682,
-        "macd_hist": 0.11355086077293819,
-        "rsi14": 48.347439991734134
+        "sma20": 87.51949999999997,
+        "ema12": 87.74939619375854,
+        "ema26": 87.85520860067342,
+        "macd": -0.10581240691487892,
+        "macd_signal": -0.268183780508338,
+        "macd_hist": 0.1623713735934591,
+        "rsi14": 51.997679540315275
       },
       "news": [
         {
@@ -96525,7 +96483,7 @@
     },
     "XLF": {
       "symbol": "XLF",
-      "price": 52.305,
+      "price": 52.7,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -98123,21 +98081,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 52.045,
-          "h": 52.4,
+          "h": 52.75,
           "l": 52.02,
-          "c": 52.305,
-          "v": 161825
+          "c": 52.7,
+          "v": 1021100
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 52.87775000000005,
-        "ema12": 52.70544934316858,
-        "ema26": 52.930470917936674,
-        "macd": -0.2250215747680926,
-        "macd_signal": -0.19748728454010167,
-        "macd_hist": -0.02753429022799092,
-        "rsi14": 43.696437101677006
+        "sma20": 52.89750000000005,
+        "ema12": 52.76621857393781,
+        "ema26": 52.95973017719594,
+        "macd": -0.19351160325812344,
+        "macd_signal": -0.19118529023810785,
+        "macd_hist": -0.002326313020015597,
+        "rsi14": 47.517191200354254
       },
       "news": [
         {
@@ -98207,7 +98165,7 @@
     },
     "XLI": {
       "symbol": "XLI",
-      "price": 155.32,
+      "price": 156.65,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -99805,21 +99763,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 154.48,
-          "h": 155.515,
+          "h": 156.79,
           "l": 154.48,
-          "c": 155.32,
-          "v": 12489
+          "c": 156.65,
+          "v": 89018
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 153.7469999999999,
-        "ema12": 154.3426930256473,
-        "ema26": 153.67034323174394,
-        "macd": 0.6723497939033507,
-        "macd_signal": 0.4792541198454682,
-        "macd_hist": 0.19309567405788253,
-        "rsi14": 56.432410470903996
+        "sma20": 153.81349999999992,
+        "ema12": 154.54730841026267,
+        "ema26": 153.7688617502625,
+        "macd": 0.7784466600001849,
+        "macd_signal": 0.500473493064835,
+        "macd_hist": 0.2779731669353499,
+        "rsi14": 60.18126732332744
       },
       "news": [
         {
@@ -99868,7 +99826,7 @@
     },
     "XLK": {
       "symbol": "XLK",
-      "price": 301.615,
+      "price": 301.97,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -101466,21 +101424,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 302.45,
-          "h": 303.03,
-          "l": 301.615,
-          "c": 301.615,
-          "v": 8700
+          "h": 303.93,
+          "l": 300.79,
+          "c": 301.97,
+          "v": 122606
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 289.47375,
-        "ema12": 294.2696401786226,
-        "ema26": 288.1860931061274,
-        "macd": 6.083547072495207,
-        "macd_signal": 4.787943248410398,
-        "macd_hist": 1.2956038240848091,
-        "rsi14": 68.52249730139698
+        "sma20": 289.4915,
+        "ema12": 294.32425556323795,
+        "ema26": 288.21238940242364,
+        "macd": 6.111866160814316,
+        "macd_signal": 4.7936070660742205,
+        "macd_hist": 1.3182590947400952,
+        "rsi14": 69.13478952250611
       },
       "news": [
         {
@@ -101536,7 +101494,7 @@
     },
     "XLV": {
       "symbol": "XLV",
-      "price": 144.66,
+      "price": 144.38,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -103134,21 +103092,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 143.98,
-          "h": 144.74,
+          "h": 144.86,
           "l": 143.77,
-          "c": 144.66,
-          "v": 22783
+          "c": 144.38,
+          "v": 139584
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 144.23950000000002,
-        "ema12": 144.59610953780356,
-        "ema26": 143.04244309248116,
-        "macd": 1.553666445322392,
-        "macd_signal": 1.7278004842339814,
-        "macd_hist": -0.1741340389115893,
-        "rsi14": 58.61431648283837
+        "sma20": 144.22550000000004,
+        "ema12": 144.55303261472662,
+        "ema26": 143.02170235174043,
+        "macd": 1.531330262986188,
+        "macd_signal": 1.7233332477667405,
+        "macd_hist": -0.19200298478055244,
+        "rsi14": 57.511469035736255
       },
       "news": [
         {
@@ -103232,7 +103190,7 @@
     },
     "XLY": {
       "symbol": "XLY",
-      "price": 235.85,
+      "price": 236.39,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -104830,21 +104788,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 235.525,
-          "h": 236.16,
+          "h": 236.99,
           "l": 235.03,
-          "c": 235.85,
-          "v": 4621
+          "c": 236.39,
+          "v": 47841
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 236.48375000000019,
-        "ema12": 237.72125187839293,
-        "ema26": 237.0417223323003,
-        "macd": 0.6795295460926241,
-        "macd_signal": 0.5168687432192534,
-        "macd_hist": 0.1626608028733707,
-        "rsi14": 47.81539186711166
+        "sma20": 236.5107500000002,
+        "ema12": 237.80432880146984,
+        "ema26": 237.0817223323003,
+        "macd": 0.7226064691695342,
+        "macd_signal": 0.5254841278346354,
+        "macd_hist": 0.1971223413348988,
+        "rsi14": 48.758994416193076
       },
       "news": [
         {
@@ -104893,7 +104851,7 @@
     },
     "ZS": {
       "symbol": "ZS",
-      "price": 319.8,
+      "price": 320.8,
       "ts": "2025-10-30T04:00:00Z",
       "history": [
         {
@@ -106491,21 +106449,21 @@
         {
           "t": "2025-10-30T04:00:00Z",
           "o": 321.62,
-          "h": 321.75,
-          "l": 319.8,
-          "c": 319.8,
-          "v": 1375
+          "h": 323.675,
+          "l": 319.19,
+          "c": 320.8,
+          "v": 10622
         }
       ],
       "sector": "",
       "indicators": {
-        "sma20": 311.06200000000007,
-        "ema12": 316.29614018398206,
-        "ema26": 308.5521305765093,
-        "macd": 7.744009607472776,
-        "macd_signal": 6.9321606268273355,
-        "macd_hist": 0.8118489806454408,
-        "rsi14": 59.62835519333576
+        "sma20": 311.1120000000001,
+        "ema12": 316.4499863378282,
+        "ema26": 308.62620465058336,
+        "macd": 7.823781687244832,
+        "macd_signal": 6.948115042781747,
+        "macd_hist": 0.8756666444630854,
+        "rsi14": 60.55343934675846
       },
       "news": []
     }
