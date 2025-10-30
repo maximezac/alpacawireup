@@ -18,6 +18,7 @@ Env (optional):
 import os, sys, json
 from datetime import datetime, timedelta, timezone
 import requests
+import feedparser
 
 API_NEWS = "https://data.alpaca.markets/v1beta1/news"
 
@@ -82,6 +83,42 @@ def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
         })
     return out
 
+# ==========================================================
+# Additional news adapters
+# ==========================================================
+def get_news_from_newsapi(symbol: str, api_key: str) -> list[dict]:
+    url = "https://newsapi.org/v2/everything"
+    params = {"q": symbol, "apiKey": api_key, "sortBy": "publishedAt", "language": "en", "pageSize": 10}
+    r = requests.get(url, params=params, timeout=15)
+    if r.status_code != 200:
+        return []
+    data = r.json().get("articles", [])
+    out = []
+    for a in data:
+        out.append({
+            "headline": a.get("title"),
+            "summary": a.get("description") or "",
+            "ts": a.get("publishedAt"),
+            "source": "newsapi",
+            "relevance": 1.0
+        })
+    return out
+
+def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
+    url = f"https://finnhub.io/api/v1/company-news?symbol={symbol}&from=2025-10-01&to=2025-10-30&token={api_key}"
+    r = requests.get(url, timeout=15)
+    if r.status_code != 200:
+        return []
+    items = r.json()
+    return [{
+        "headline": it.get("headline"),
+        "summary": it.get("summary") or "",
+        "ts": it.get("datetime"),
+        "source": "finnhub",
+        "relevance": 1.0
+    } for it in items]
+
+
 def main():
     with open(INPUT_PATH, "r", encoding="utf-8") as f:
         prices = json.load(f)
@@ -100,7 +137,19 @@ def main():
 
     for sym, node in symbols.items():
         try:
-            news_items = fetch_news_for_symbol(sym, start_iso, end_iso)
+            alpaca_news = fetch_news_for_symbol(sym, start_iso, end_iso)
+
+            extra_news = []
+            NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")
+            FINNHUB_KEY = os.getenv("FINNHUB_KEY")
+
+            if NEWSAPI_KEY:
+                extra_news += get_news_from_newsapi(sym, NEWSAPI_KEY)
+            if FINNHUB_KEY:
+                extra_news += get_news_from_finnhub(sym, FINNHUB_KEY)
+
+            news_items = alpaca_news + extra_news
+
             # Attach/overwrite news array
             node["news"] = news_items
             print(f"[OK] {sym}: {len(news_items)} news items")
