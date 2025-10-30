@@ -2,8 +2,7 @@ name: Market Feed (Fetch → Analyze → Publish)
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "15 14 * * 1-5"   # 09:15 America/Chicago on weekdays (approx pre-market run)
+
 
 jobs:
   build:
