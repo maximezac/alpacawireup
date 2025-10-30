@@ -565,9 +565,38 @@ def main():
             "decision": decision
         }
 
+    # ----------------------------------------------------------
+    # ADDITIONAL SECTION: live snapshot ("now") data
+    # ----------------------------------------------------------
+    try:
+        import fetch_prices
+        symbols_list = list(out["symbols"].keys())
+        now_data = fetch_prices.get_now_data(symbols_list)
+
+        now_block = {}
+        for sym, node in now_data.items():
+            t_price = float(node.get("price") or 0)
+            dummy_t = {
+                "price": t_price,
+                "indicators": out["symbols"][sym]["indicators"],
+            }
+            ts_val, ts_dbg = compute_ts(dummy_t)
+            ns_val = out["symbols"][sym]["signals"]["NS"]
+            wT, wN, cds, decision, decide_dbg = decide(ts_val, ns_val, None, None)
+            now_block[sym] = {
+                "price": t_price,
+                "ts": datetime.now(timezone.utc).isoformat(),
+                "signals": {"TS": ts_val, "NS": ns_val, "CDS": cds},
+                "decision": decision,
+            }
+
+        out["now"] = now_block
+        print(f"[INFO] Attached {len(now_block)} live quotes as 'now' block.")
+    except Exception as e:
+        print(f"[WARN] Skipped now-data section: {e}")
+
     with open(DEFAULT_OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2)
-    print(f"Wrote enriched feed to {DEFAULT_OUTPUT_PATH} with {len(out['symbols'])} symbols.")
 
 if __name__ == "__main__":
     main()
