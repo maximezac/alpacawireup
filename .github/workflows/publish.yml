@@ -57,7 +57,7 @@ jobs:
           NEWS_LIMIT_PER_SYMBOL: "25"
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}   # optional
           FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}   # optional
-          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub"
+          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
           # Optional: limit sources:
           # NEWS_SOURCES: "benzinga,mtnewswires"
         run: |
