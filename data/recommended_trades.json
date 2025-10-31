@@ -1,20 +1,23 @@
 {
-  "as_of_utc": "2025-10-31T17:24:49.365982+00:00",
-  "rules": {
+  "as_of_utc": "2025-10-31T18:36:56.902138+00:00",
+  "thresholds": {
     "BUY_THRESHOLD": 0.35,
-    "SELL_THRESHOLD": -0.15,
-    "A_MAX_DEPLOY_FRAC": 0.15,
-    "A_PER_LINE_FRAC": 0.04,
-    "B_PER_LINE_FRAC": 0.02
+    "SELL_THRESHOLD": -0.15
   },
-  "portfolio_A": {
-    "value_est": 0.0,
+  "portfolio_paper": {
+    "portfolio_value_est": 0.0,
+    "deploy_rules": {
+      "max_deploy_frac": 0.15,
+      "per_line_frac": 0.04
+    },
     "trades": [],
     "residual_budget_hint": 0.0
   },
-  "portfolio_B": {
-    "value_est": 0.0,
+  "portfolio_personal": {
+    "portfolio_value_est": 0.0,
+    "cash_start": 500.0,
+    "per_line_frac": 0.02,
     "trades": [],
-    "residual_budget_hint": 500.0
+    "cash_left": 500.0
   }
 }

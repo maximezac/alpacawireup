@@ -1,141 +1,154 @@
 {
-  "as_of_utc": "2025-10-31T17:24:49.365982+00:00",
-  "watch": [
+  "as_of_utc": "2025-10-31T18:36:56.902138+00:00",
+  "criteria": {
+    "TS_WATCH": 0.5,
+    "NS_WATCH": 0.5,
+    "TOP": 20
+  },
+  "items": [
     {
       "symbol": "GOOGL",
-      "price": 279.81,
-      "TS": 0.615149,
-      "NS": 0.387598,
-      "CDS": 0.523028,
-      "reason": "High TS"
-    },
-    {
-      "symbol": "CRWD",
-      "price": 538.01,
-      "TS": 0.532049,
-      "NS": 0.454948,
-      "CDS": 0.506962,
-      "reason": "High TS"
-    },
-    {
-      "symbol": "NVDA",
-      "price": 202.765,
-      "TS": 0.539552,
-      "NS": 0.411189,
-      "CDS": 0.485622,
-      "reason": "High TS"
-    },
-    {
-      "symbol": "SNOW",
-      "price": 267.17,
-      "TS": 0.529213,
-      "NS": 0.393778,
-      "CDS": 0.485327,
-      "reason": "High TS"
-    },
-    {
-      "symbol": "PLTR",
-      "price": 198.79,
-      "TS": 0.513818,
-      "NS": 0.381015,
-      "CDS": 0.462583,
-      "reason": "High TS"
-    },
-    {
-      "symbol": "DE",
-      "price": 459.1,
-      "TS": 0.317139,
-      "NS": 0.667254,
-      "CDS": 0.430426,
-      "reason": "High NS"
-    },
-    {
-      "symbol": "FSLR",
-      "price": 263.67,
-      "TS": 0.505344,
-      "NS": 0.246273,
-      "CDS": 0.409094,
-      "reason": "High TS"
+      "price": 279.69,
+      "TS": 0.613623,
+      "NS": 0.415481,
+      "CDS": 0.529732,
+      "reason": "TS_high"
     },
     {
       "symbol": "AMZN",
-      "price": 245.14,
-      "TS": 0.550954,
-      "NS": 0.151972,
-      "CDS": 0.375847,
-      "reason": "High TS"
+      "price": 247.44,
+      "TS": 0.563588,
+      "NS": 0.466252,
+      "CDS": 0.520122,
+      "reason": "TS_high"
+    },
+    {
+      "symbol": "NVDA",
+      "price": 204.14,
+      "TS": 0.551088,
+      "NS": 0.478211,
+      "CDS": 0.519483,
+      "reason": "TS_high"
+    },
+    {
+      "symbol": "CRWD",
+      "price": 541.46,
+      "TS": 0.545068,
+      "NS": 0.435385,
+      "CDS": 0.510804,
+      "reason": "TS_high"
+    },
+    {
+      "symbol": "AAPL",
+      "price": 271.95,
+      "TS": 0.501595,
+      "NS": 0.510662,
+      "CDS": 0.505615,
+      "reason": "TS_high"
+    },
+    {
+      "symbol": "PLTR",
+      "price": 200.15,
+      "TS": 0.527196,
+      "NS": 0.388628,
+      "CDS": 0.469457,
+      "reason": "TS_high"
+    },
+    {
+      "symbol": "AMD",
+      "price": 256.12,
+      "TS": 0.388498,
+      "NS": 0.585075,
+      "CDS": 0.468139,
+      "reason": "NS_high"
+    },
+    {
+      "symbol": "SNOW",
+      "price": 269.71,
+      "TS": 0.560218,
+      "NS": 0.2653,
+      "CDS": 0.464334,
+      "reason": "TS_high"
+    },
+    {
+      "symbol": "DE",
+      "price": 461.93,
+      "TS": 0.346753,
+      "NS": 0.68884,
+      "CDS": 0.454942,
+      "reason": "NS_high"
+    },
+    {
+      "symbol": "FSLR",
+      "price": 265.87,
+      "TS": 0.526999,
+      "NS": 0.318085,
+      "CDS": 0.446621,
+      "reason": "TS_high"
     },
     {
       "symbol": "NET",
-      "price": 249.105,
-      "TS": 0.58581,
-      "NS": 0.057873,
-      "CDS": 0.36173,
-      "reason": "High TS"
+      "price": 250.82,
+      "TS": 0.593542,
+      "NS": 0.074791,
+      "CDS": 0.375416,
+      "reason": "TS_high"
     },
     {
       "symbol": "XBI",
-      "price": 111.77,
-      "TS": 0.159216,
+      "price": 112.55,
+      "TS": 0.194958,
       "NS": 0.741289,
-      "CDS": 0.306126,
-      "reason": "High NS"
+      "CDS": 0.332576,
+      "reason": "NS_high"
     },
     {
       "symbol": "OKTA",
-      "price": 89.99,
-      "TS": 0.042868,
-      "NS": 0.587583,
-      "CDS": 0.198661,
-      "reason": "High NS"
+      "price": 90.675,
+      "TS": 0.075997,
+      "NS": 0.602591,
+      "CDS": 0.225159,
+      "reason": "NS_high"
     },
     {
-      "symbol": "UPST",
-      "price": 46.97,
-      "TS": -0.057071,
-      "NS": 0.555212,
-      "CDS": 0.121625,
-      "reason": "High NS"
+      "symbol": "BBAI",
+      "price": 6.79,
+      "TS": -0.090826,
+      "NS": 0.645495,
+      "CDS": 0.109823,
+      "reason": "NS_high"
     },
     {
       "symbol": "SMCI",
-      "price": 51.08,
-      "TS": -0.195075,
-      "NS": 0.779369,
-      "CDS": 0.09365,
-      "reason": "High NS"
+      "price": 51.56,
+      "TS": -0.174992,
+      "NS": 0.750819,
+      "CDS": 0.078376,
+      "reason": "NS_high"
     },
     {
-      "symbol": "ASML",
-      "price": 1053.675,
-      "TS": -0.268177,
-      "NS": 0.68439,
-      "CDS": 0.01123,
-      "reason": "High NS"
-    },
-    {
-      "symbol": "TSLA",
-      "price": 444.74,
-      "TS": -0.332416,
-      "NS": 0.553904,
-      "CDS": -0.006135,
-      "reason": "High NS"
-    },
-    {
-      "symbol": "RKLB",
-      "price": 60.92,
-      "TS": -0.310247,
-      "NS": 0.663893,
-      "CDS": -0.049985,
-      "reason": "High NS"
+      "symbol": "TTWO",
+      "price": 254.82,
+      "TS": -0.320324,
+      "NS": 0.537759,
+      "CDS": -0.066747,
+      "reason": "NS_high"
     },
     {
       "symbol": "ASTS",
-      "price": 78.08,
-      "TS": -0.318733,
-      "NS": 0.501326,
-      "CDS": -0.100003,
-      "reason": "High NS"
+      "price": 79.16,
+      "TS": -0.304563,
+      "NS": 0.529808,
+      "CDS": -0.060844,
+      "reason": "NS_high"
+    },
+    {
+      "symbol": "ASML",
+      "price": 1059.58,
+      "TS": -0.22641,
+      "NS": 0.670563,
+      "CDS": 0.025022,
+      "reason": "NS_high"
     }
   ]
 }
