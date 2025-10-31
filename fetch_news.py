@@ -239,16 +239,17 @@ def main():
                 deduped.append(a)
 
             # Sort by timestamp (newest first)
+            # Sort by timestamp (newest first)
             from dateutil import parser
             def _safe_parse(ts):
                 try:
                     dt = parser.isoparse(ts)
+                    # 🔧 Ensure timezone-aware datetime (UTC fallback)
                     if dt.tzinfo is None:
                         dt = dt.replace(tzinfo=timezone.utc)
                     return dt
                 except Exception:
                     return datetime.min.replace(tzinfo=timezone.utc)
-
 
             deduped.sort(key=lambda x: _safe_parse(x.get("ts") or x.get("time") or ""), reverse=True)
 
@@ -257,15 +258,16 @@ def main():
             news_items = deduped[:MAX_ARTICLES_TOTAL]
 
             # Optional: drop stale articles older than lookback window (redundant safeguard)
-            cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
+            cutoff = datetime.now(timezone.utc).replace(tzinfo=timezone.utc) - timedelta(days=LOOKBACK_DAYS)
             filtered = []
             for a in news_items:
                 ts = _safe_parse(a.get("ts") or a.get("time") or "")
                 if ts >= cutoff:
                     filtered.append(a)
-                if ts < cutoff:
+                else:
                     print(f"[DEBUG] Dropped old {a.get('source')} article for {sym}: {a.get('ts')}")
             news_items = filtered
+
 
             # ----------------------------------------------------------
             # ✅ Summary print for debugging
