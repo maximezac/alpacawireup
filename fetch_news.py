@@ -242,9 +242,13 @@ def main():
             from dateutil import parser
             def _safe_parse(ts):
                 try:
-                    return parser.isoparse(ts)
+                    dt = parser.isoparse(ts)
+                    if dt.tzinfo is None:
+                        dt = dt.replace(tzinfo=timezone.utc)
+                    return dt
                 except Exception:
                     return datetime.min.replace(tzinfo=timezone.utc)
+
 
             deduped.sort(key=lambda x: _safe_parse(x.get("ts") or x.get("time") or ""), reverse=True)
 
