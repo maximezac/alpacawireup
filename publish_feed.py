@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 publish_feed.py — v2.2.1
-Reads raw prices (URL or local), computes indicators (SMA20/EMA20/EMA26/MACD/RSI14),
+Reads raw prices (URL or local), computes indicators (SMA20/EMA20/EMA26/MACD/RSI14), 
 then TS/NS/CDS per Strategy Engine v2.2, and writes an enriched JSON.
 
 Inputs (env):
