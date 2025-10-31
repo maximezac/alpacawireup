@@ -118,6 +118,24 @@ def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
         "relevance": 1.0
     } for it in items]
 
+import feedparser
+
+def get_news_from_google(symbol: str) -> list[dict]:
+    """Fetch latest Google News RSS items for a symbol/company."""
+    query = f"{symbol}+stock"
+    feed_url = f"https://news.google.com/rss/search?q={query}"
+    feed = feedparser.parse(feed_url)
+    out = []
+    for entry in feed.entries[:10]:
+        out.append({
+            "headline": entry.title,
+            "summary": entry.get("summary", ""),
+            "ts": entry.get("published", ""),
+            "source": "google_rss",
+            "url": entry.link
+        })
+    return out
+
 
 def main():
     with open(INPUT_PATH, "r", encoding="utf-8") as f:
@@ -147,6 +165,9 @@ def main():
                 extra_news += get_news_from_newsapi(sym, NEWSAPI_KEY)
             if FINNHUB_KEY:
                 extra_news += get_news_from_finnhub(sym, FINNHUB_KEY)
+            if "google_rss" in sources:
+                extra_news += get_news_from_google(sym)
+
 
             news_items = alpaca_news + extra_news
 
