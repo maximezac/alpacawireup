@@ -71,6 +71,9 @@ jobs:
           MAX_ARTICLES: "10"
           DECAY_HALF_LIFE_HOURS: "24"
           SECTOR_NUDGE: "0.05"
+          GENERATE_NOW: "1"
+          ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: |
           python publish_feed.py
 
