@@ -491,7 +491,7 @@ def decide(ts: float, ns: float, ns_meta: dict | None, regime_bias: float | None
     cds = wT * ts + wN * ns
     if cds > 0.35:
         decision = "Buy/Add"
-    elif cds < -0.25:
+    elif cds < -0.15:
         decision = "Sell/Trim"
     else:
         decision = "Hold"
