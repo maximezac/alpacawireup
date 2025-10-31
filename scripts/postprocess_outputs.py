@@ -1,237 +1,394 @@
 #!/usr/bin/env python3
-import os, json, math, sys
-from pathlib import Path
-from datetime import datetime, timezone
+"""
+scripts/postprocess_outputs.py
 
-import pandas as pd
+Reads an enriched feed (prices_final.json) and produces:
+1) OUT_SLIM:    Slimmed feed with {symbol, price, TS, NS, CDS, decision}
+2) OUT_PAPER_ONLY / OUT_PERSONAL_ONLY: feed filtered to the symbols in each portfolio
+3) OUT_WATCHLIST: summary of new tickers to watch (high TS or high NS)
+4) OUT_TRADES:  recommended trades for portfolio_paper and portfolio_personal
+5) Uses/maintains portfolio CSVs under /data (symbol,quantity)
 
-# ---------- Config via env ----------
-INPUT_FINAL = os.environ.get("INPUT_FINAL", "data/prices_final.json")
+Environment variables (with defaults):
+- INPUT_FINAL: data/prices_final.json
+- OUT_SLIM: data/prices_final_slim.json
+- OUT_PAPER_ONLY: data/prices_final_paper.json
+- OUT_PERSONAL_ONLY: data/prices_final_personal.json
+- OUT_WATCHLIST: data/watchlist_summary.json
+- OUT_TRADES: data/recommended_trades.json
 
-# thresholds (align with v2.2)
-BUY_TH  = float(os.environ.get("BUY_THRESHOLD", "0.35"))
-SELL_TH = float(os.environ.get("SELL_THRESHOLD", "-0.25"))
+Portfolio files:
+- PORT_PAPER_CSV: data/portfolio_paper.csv
+- PORT_PERSONAL_CSV: data/portfolio_personal.csv
+- PORTFOLIO_PERSONAL_CASH: "0"  (available cash for the personal portfolio)
 
-# watchlist thresholds
-TS_WATCH  = float(os.environ.get("TS_WATCH", "0.50"))
-NS_WATCH  = float(os.environ.get("NS_WATCH", "0.50"))
-WATCH_TOP = int(os.environ.get("WATCH_TOP", "20"))
+Thresholds (string numbers, parsed to float):
+- BUY_THRESHOLD: "0.35"         # v2.2 Buy/Add
+- SELL_THRESHOLD: "-0.25"       # v2.2 Sell/Trim
+- TS_WATCH: "0.50"              # watch if TS >= TS_WATCH
+- NS_WATCH: "0.50"              # watch if NS >= NS_WATCH
+- WATCH_TOP: "20"               # max tickers in watchlist
 
-# sizing (notional caps)
-A_MAX_DEPLOY_FRAC  = float(os.environ.get("A_MAX_DEPLOY_FRAC", "0.15"))   # total deploy ≤ 15% of A
-A_PER_LINE_FRAC    = float(os.environ.get("A_PER_LINE_FRAC", "0.04"))     # per-line cap 4% of A
-B_PER_LINE_FRAC    = float(os.environ.get("B_PER_LINE_FRAC", "0.02"))     # per-line cap 2% of B
+Sizing knobs (fractions of portfolio equity):
+- A_MAX_DEPLOY_FRAC: "0.15"     # max total BUY cash to deploy today (paper)
+- A_PER_LINE_FRAC:  "0.04"      # max per-line size (paper)
+- B_PER_LINE_FRAC:  "0.02"      # target per-line size (personal)
+- SELL_TRIM_FRACTION: "0.25"    # % of current shares to trim on Sell/Trim
 
-# files
-PORT_A_CSV = os.environ.get("PORT_A_CSV", "data/portfolio_a.csv")
-PORT_B_CSV = os.environ.get("PORT_B_CSV", "data/portfolio_b.csv")
+Notes:
+- We DO NOT recompute indicators; we only read values as-is from INPUT_FINAL.
+- Share counts are floored to whole shares; any zero-sized result is omitted.
+- New tickers are allowed in proposes for both portfolios (subject to sizing rules).
+"""
 
-OUT_SLIM        = os.environ.get("OUT_SLIM", "data/prices_final_slim.json")
-OUT_PORTA_ONLY  = os.environ.get("OUT_PORTA_ONLY", "data/prices_final_porta.json")
-OUT_PORTB_ONLY  = os.environ.get("OUT_PORTB_ONLY", "data/prices_final_portb.json")
-OUT_WATCHLIST   = os.environ.get("OUT_WATCHLIST", "data/watchlist_summary.json")
-OUT_TRADES      = os.environ.get("OUT_TRADES", "data/recommended_trades.json")
+import os, csv, json, math
+from typing import Dict, Any, List, Tuple
 
-# ---------- Helpers ----------
-def load_json(path):
+# =============== Env & paths ===============
+INPUT_FINAL          = os.environ.get("INPUT_FINAL", "data/prices_final.json")
+
+OUT_SLIM             = os.environ.get("OUT_SLIM", "data/prices_final_slim.json")
+OUT_PAPER_ONLY       = os.environ.get("OUT_PAPER_ONLY", "data/prices_final_paper.json")
+OUT_PERSONAL_ONLY    = os.environ.get("OUT_PERSONAL_ONLY", "data/prices_final_personal.json")
+OUT_WATCHLIST        = os.environ.get("OUT_WATCHLIST", "data/watchlist_summary.json")
+OUT_TRADES           = os.environ.get("OUT_TRADES", "data/recommended_trades.json")
+
+PORT_PAPER_CSV       = os.environ.get("PORT_PAPER_CSV", "data/portfolio_paper.csv")
+PORT_PERSONAL_CSV    = os.environ.get("PORT_PERSONAL_CSV", "data/portfolio_personal.csv")
+PERSONAL_CASH        = float(os.environ.get("PORTFOLIO_PERSONAL_CASH", "0") or "0")
+
+BUY_THRESHOLD        = float(os.environ.get("BUY_THRESHOLD", "0.35"))
+SELL_THRESHOLD       = float(os.environ.get("SELL_THRESHOLD", "-0.25"))
+
+TS_WATCH             = float(os.environ.get("TS_WATCH", "0.50"))
+NS_WATCH             = float(os.environ.get("NS_WATCH", "0.50"))
+WATCH_TOP            = int(os.environ.get("WATCH_TOP", "20"))
+
+A_MAX_DEPLOY_FRAC    = float(os.environ.get("A_MAX_DEPLOY_FRAC", "0.15"))
+A_PER_LINE_FRAC      = float(os.environ.get("A_PER_LINE_FRAC", "0.04"))
+B_PER_LINE_FRAC      = float(os.environ.get("B_PER_LINE_FRAC", "0.02"))
+SELL_TRIM_FRACTION   = float(os.environ.get("SELL_TRIM_FRACTION", "0.25"))  # 25% trim by default
+
+
+# =============== Helpers ===============
+def read_json(path: str) -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def ensure_portfolio_csv(path):
-    p = Path(path)
-    if not p.exists():
-        p.parent.mkdir(parents=True, exist_ok=True)
-        pd.DataFrame(columns=["symbol","quantity"]).to_csv(p, index=False)
-    df = pd.read_csv(p)
-    df["symbol"] = df["symbol"].astype(str).str.upper()
-    df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce").fillna(0.0)
-    return df
+def write_json(path: str, obj: Any):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(obj, f, indent=2)
 
-def total_value(port, feed):
-    total = 0.0
-    for _, row in port.iterrows():
-        sym = row["symbol"]
-        qty = float(row["quantity"])
-        node = feed["symbols"].get(sym, {})
-        px = node.get("price")
-        if px is not None:
-            total += qty * float(px)
-    return total
+def ensure_portfolio_csv(path: str) -> Dict[str, float]:
+    """
+    Read CSV: symbol,quantity
+    Returns dict {symbol: float(quantity)}
+    Creates file if missing (empty).
+    """
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if not os.path.exists(path):
+        # create an empty CSV
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["symbol", "quantity"])
+        return {}
+    out = {}
+    with open(path, "r", newline="", encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        for row in r:
+            sym = (row.get("symbol") or "").strip().upper()
+            qty = row.get("quantity")
+            if not sym:
+                continue
+            try:
+                out[sym] = float(qty)
+            except Exception:
+                continue
+    return out
 
-def cds_for(sym, feed):
-    node = feed["symbols"].get(sym, {})
-    sig = node.get("signals", {}) if node else {}
-    return (node.get("price"), sig.get("TS"), sig.get("NS"), sig.get("CDS"), node.get("decision"))
+def save_portfolio_csv(path: str, pos: Dict[str, float]):
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["symbol", "quantity"])
+        for sym, qty in sorted(pos.items()):
+            w.writerow([sym, qty])
 
-def propose_trades(port, feed, is_A):
-    """Return a list of trade rows for the given portfolio using only file decisions."""
+def feed_symbols(feed: Dict[str, Any]) -> Dict[str, Any]:
+    return feed.get("symbols", {}) or {}
+
+def get_price(node: Dict[str, Any]) -> float:
+    # prefer "now" price if present; else daily price
+    if "now" in node and isinstance(node["now"], dict) and "price" in node["now"]:
+        return float(node["now"]["price"])
+    if "price" in node:
+        return float(node["price"])
+    return 0.0
+
+def get_signals(node: Dict[str, Any]) -> Dict[str, Any]:
+    return node.get("signals") or {}
+
+def get_cds(node: Dict[str, Any]) -> float:
+    return float(get_signals(node).get("CDS", 0.0) or 0.0)
+
+def get_ts(node: Dict[str, Any]) -> float:
+    return float(get_signals(node).get("TS", 0.0) or 0.0)
+
+def get_ns(node: Dict[str, Any]) -> float:
+    return float(get_signals(node).get("NS", 0.0) or 0.0)
+
+def total_value(port: Dict[str, float], feed: Dict[str, Any]) -> float:
+    syms = feed_symbols(feed)
+    val = 0.0
+    for sym, qty in port.items():
+        node = syms.get(sym)
+        if not node:
+            continue
+        px = get_price(node)
+        val += px * float(qty)
+    return val
+
+def filter_feed_by_symbols(feed: Dict[str, Any], symbols: List[str]) -> Dict[str, Any]:
+    slim = {"as_of_utc": feed.get("as_of_utc"),
+            "timeframe": feed.get("timeframe"),
+            "indicators_window": feed.get("indicators_window"),
+            "symbols": {}}
+    src = feed_symbols(feed)
+    for s in symbols:
+        if s in src:
+            slim["symbols"][s] = src[s]
+    return slim
+
+def build_slim(feed: Dict[str, Any]) -> Dict[str, Any]:
+    out = {"as_of_utc": feed.get("as_of_utc"),
+           "symbols": {}}
+    for sym, node in feed_symbols(feed).items():
+        out["symbols"][sym] = {
+            "price": node.get("price"),
+            "ts": node.get("ts"),
+            "TS": get_ts(node),
+            "NS": get_ns(node),
+            "CDS": get_cds(node),
+            "decision": node.get("decision")
+        }
+    # include live "now" if present at root
+    if "now" in feed:
+        out["now"] = feed["now"]
+    return out
+
+def watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: int) -> List[Dict[str, Any]]:
     rows = []
-    # Existing positions → follow file decision
-    for _, r in port.iterrows():
-        sym = r["symbol"]; qty = float(r["quantity"])
-        price, TS, NS, CDS, decision = cds_for(sym, feed)
-        if price is None or CDS is None:
+    for sym, node in feed_symbols(feed).items():
+        ts = get_ts(node)
+        ns = get_ns(node)
+        hit = (ts is not None and ts >= ts_thr) or (ns is not None and ns >= ns_thr)
+        if hit:
+            rows.append({
+                "symbol": sym,
+                "price": get_price(node) or node.get("price"),
+                "TS": ts, "NS": ns, "CDS": get_cds(node),
+                "reason": "TS_high" if (ts is not None and ts >= ts_thr) else "NS_high"
+            })
+    # sort by |CDS| desc, then TS desc
+    rows.sort(key=lambda r: (abs(r["CDS"] or 0.0), r["TS"] or 0.0), reverse=True)
+    return rows[:top_n]
+
+def propose_trades(port: Dict[str, float], feed: Dict[str, Any], allow_new: bool = True) -> List[Dict[str, Any]]:
+    """
+    Returns a flat list of proposed actions:
+      {"symbol":..., "action": "BUY"/"SELL", "reason": "...", "px": price, "qty_hint": float, "cds": float}
+    qty_hint is un-sized; sizing is handled later per portfolio rules.
+    """
+    src = feed_symbols(feed)
+    actions = []
+
+    # 1) Sells / Trims for owned symbols
+    for sym, qty in port.items():
+        node = src.get(sym)
+        if not node:
             continue
-        if CDS > BUY_TH:
-            rows.append({"side":"BUY_ADD","symbol":sym,"qty_hint":None,"price":price,"CDS":CDS,"why":"CDS>BUY_TH"})
-        elif CDS < SELL_TH:
-            rows.append({"side":"SELL_TRIM","symbol":sym,"qty_hint":None,"price":price,"CDS":CDS,"why":"CDS<SELL_TH"})
+        cds = get_cds(node)
+        px  = get_price(node)
+        if cds < SELL_THRESHOLD:
+            # propose a trim; actual shares decided later
+            actions.append({
+                "symbol": sym, "action": "SELL", "reason": "CDS<SellThreshold",
+                "px": px, "qty_hint": float(qty) * SELL_TRIM_FRACTION, "cds": cds
+            })
+
+    # 2) Buys/Adds for owned and (optionally) new symbols
+    for sym, node in src.items():
+        cds = get_cds(node)
+        if cds > BUY_THRESHOLD:
+            already_own = sym in port and port[sym] > 0
+            if already_own or allow_new:
+                actions.append({
+                    "symbol": sym, "action": "BUY", "reason": "CDS>BuyThreshold",
+                    "px": get_price(node), "qty_hint": 0.0, "cds": cds
+                })
+
+    # de-dup: if both BUY and SELL exist for a symbol (shouldn’t), keep stronger |cds|
+    by_sym = {}
+    for a in actions:
+        s = a["symbol"]
+        if s not in by_sym:
+            by_sym[s] = a
         else:
-            rows.append({"side":"HOLD","symbol":sym,"qty_hint":None,"price":price,"CDS":CDS,"why":"hold_band"})
+            # prefer higher |cds|
+            if abs(a["cds"]) > abs(by_sym[s]["cds"]):
+                by_sym[s] = a
+    return list(by_sym.values())
 
-    # New buys → top CDS not already held
-    held = set(port["symbol"].tolist())
-    extra = []
-    for sym, node in feed["symbols"].items():
-        if sym in held: 
-            continue
-        sig = node.get("signals", {}) or {}
-        CDS = sig.get("CDS")
-        if CDS is not None and CDS > BUY_TH:
-            extra.append((sym, float(node.get("price") or 0), float(CDS)))
-    # Top extras
-    extra = sorted(extra, key=lambda x: x[2], reverse=True)
-    if is_A:
-        extra = extra[:10]   # allow more breadth in A
-    else:
-        extra = extra[:5]    # keep B conservative
-    for sym, px, cds in extra:
-        if px:
-            rows.append({"side":"BUY_NEW","symbol":sym,"qty_hint":None,"price":px,"CDS":cds,"why":"High CDS"})
-    return rows
+def size_trades_A(actions: List[Dict[str, Any]], port_value: float) -> Tuple[List[Dict[str, Any]], float]:
+    """
+    Portfolio PAPER sizing:
+      - Total BUY budget <= A_MAX_DEPLOY_FRAC * port_value
+      - Per-line BUY target <= A_PER_LINE_FRAC * port_value
+      - SELL trims use SELL_TRIM_FRACTION of current qty (already set), floored to whole shares
+    """
+    buy_budget_total = port_value * A_MAX_DEPLOY_FRAC
+    per_line_cap_val = port_value * A_PER_LINE_FRAC
 
-def size_trades_A(trades, port_val):
-    """Use 15% total cap; 4% per line cap; sells 10–20% by CDS severity."""
-    budget = port_val * A_MAX_DEPLOY_FRAC
-    out = []
-    # First append sells (increase budget)
-    for tr in trades:
-        if tr["side"] != "SELL_TRIM": 
+    sized = []
+    spent = 0.0
+
+    # SELLs first (don’t affect budget directly here)
+    for a in actions:
+        if a["action"] != "SELL":
             continue
-        cds = tr["CDS"]; px = tr["price"]
-        # Sell fraction: 10% → 20% as CDS worsens
-        frac = 0.10 if cds > -0.50 else (0.15 if cds > -0.75 else 0.20)
-        out.append({**tr, "qty": "0.10–0.20 of position", "notional": f"~{int(frac*100)}% * position * {px:.2f}"})
-    # Then buys within caps
-    per_line_cap = port_val * A_PER_LINE_FRAC
-    for tr in sorted([t for t in trades if t["side"] in ("BUY_ADD","BUY_NEW")], key=lambda x: x["CDS"], reverse=True):
-        if budget <= 0: 
+        px = a.get("px") or 0.0
+        qty = math.floor(max(0.0, a.get("qty_hint", 0.0)))  # whole shares
+        if qty <= 0:
+            continue
+        sized.append({**a, "qty": qty, "notional": round(qty * px, 2)})
+
+    # BUYs with caps
+    for a in sorted([x for x in actions if x["action"] == "BUY"], key=lambda x: x["cds"], reverse=True):
+        px = a.get("px") or 0.0
+        if px <= 0:
+            continue
+        # target value per line
+        target_val = min(per_line_cap_val, buy_budget_total - spent)
+        if target_val <= 0:
             break
-        alloc = min(per_line_cap, budget)
-        qty = int(alloc // tr["price"])
-        if qty <= 0: 
+        qty = math.floor(target_val / px)
+        if qty <= 0:
             continue
-        notional = qty * tr["price"]
-        out.append({**tr, "qty": qty, "notional": round(notional,2)})
-        budget -= notional
-    return out, budget
+        notional = qty * px
+        spent += notional
+        sized.append({**a, "qty": qty, "notional": round(notional, 2)})
 
-def size_trades_B(trades, port_val, cash=0.0):
-    """Trims fund buys; 2% per-line cap; conservative."""
-    budget = float(cash)
-    out = []
-    # Sells first to raise budget
-    for tr in trades:
-        if tr["side"] != "SELL_TRIM": 
-            continue
-        cds = tr["CDS"]; px = tr["price"]
-        frac = 0.10 if cds > -0.50 else (0.15 if cds > -0.75 else 0.20)
-        out.append({**tr, "qty": "0.10–0.20 of position", "notional": f"~{int(frac*100)}% * position * {px:.2f}"})
-        # We can’t know exact position size here; sizing remains a hint.
-        # Budget update will happen when execution applies; keep as annotation.
-    per_line_cap = port_val * B_PER_LINE_FRAC
-    for tr in sorted([t for t in trades if t["side"] in ("BUY_ADD","BUY_NEW")], key=lambda x: x["CDS"], reverse=True):
-        if budget <= 0: 
-            break
-        alloc = min(per_line_cap, budget)
-        qty = int(alloc // tr["price"])
-        if qty <= 0: 
-            continue
-        notional = qty * tr["price"]
-        out.append({**tr, "qty": qty, "notional": round(notional,2)})
-        budget -= notional
-    return out, budget
+    leftover = round(buy_budget_total - spent, 2)
+    return sized, max(0.0, leftover)
 
+def size_trades_B(actions: List[Dict[str, Any]], port_value: float, cash: float) -> Tuple[List[Dict[str, Any]], float]:
+    """
+    Portfolio PERSONAL sizing:
+      - BUYs limited by available 'cash'
+      - Per-line BUY target ~ B_PER_LINE_FRAC * (port_value + cash)
+      - SELL trims like A (fractional -> whole shares)
+    """
+    equity_plus_cash = port_value + cash
+    per_line_target = equity_plus_cash * B_PER_LINE_FRAC
+
+    sized = []
+    cash_left = cash
+
+    # SELLs first (no cash change accounted here; you can optionally add proceeds)
+    for a in actions:
+        if a["action"] != "SELL":
+            continue
+        px = a.get("px") or 0.0
+        qty = math.floor(max(0.0, a.get("qty_hint", 0.0)))
+        if qty <= 0:
+            continue
+        sized.append({**a, "qty": qty, "notional": round(qty * px, 2)})
+
+    # BUYs with cash limit
+    for a in sorted([x for x in actions if x["action"] == "BUY"], key=lambda x: x["cds"], reverse=True):
+        px = a.get("px") or 0.0
+        if px <= 0 or cash_left <= 0:
+            continue
+        target_val = min(per_line_target, cash_left)
+        qty = math.floor(target_val / px)
+        if qty <= 0:
+            continue
+        notional = qty * px
+        cash_left -= notional
+        sized.append({**a, "qty": qty, "notional": round(notional, 2)})
+
+    return sized, round(cash_left, 2)
+
+
+# =============== Main ===============
 def main():
-    feed = load_json(INPUT_FINAL)
+    feed = read_json(INPUT_FINAL)
 
-    # ---- (1) Slim file with just TS/NS per symbol ----
-    slim = {
+    # 1) Slim file
+    slim = build_slim(feed)
+    write_json(OUT_SLIM, slim)
+
+    # 2) Load portfolios
+    portPaper    = ensure_portfolio_csv(PORT_PAPER_CSV)
+    portPersonal = ensure_portfolio_csv(PORT_PERSONAL_CSV)
+
+    # 3) Portfolio-only feeds
+    paper_syms = sorted(portPaper.keys())
+    pers_syms  = sorted(portPersonal.keys())
+    write_json(OUT_PAPER_ONLY,    filter_feed_by_symbols(feed, paper_syms))
+    write_json(OUT_PERSONAL_ONLY, filter_feed_by_symbols(feed, pers_syms))
+
+    # 4) Watchlist
+    wl = watchlist(feed, TS_WATCH, NS_WATCH, WATCH_TOP)
+    write_json(OUT_WATCHLIST, {
         "as_of_utc": feed.get("as_of_utc"),
-        "symbols": {
-            s: {"TS": (node.get("signals") or {}).get("TS"),
-                "NS": (node.get("signals") or {}).get("NS")}
-            for s, node in (feed.get("symbols") or {}).items()
+        "criteria": {"TS_WATCH": TS_WATCH, "NS_WATCH": NS_WATCH, "TOP": WATCH_TOP},
+        "items": wl
+    })
+
+    # 5) Trades for each portfolio
+    paper_val = total_value(portPaper, feed)
+    pers_val  = total_value(portPersonal, feed)
+
+    recPaper = propose_trades(portPaper, feed, allow_new=True)
+    recPers  = propose_trades(portPersonal, feed, allow_new=True)
+
+    sizedPaper, paper_leftover = size_trades_A(recPaper, paper_val)
+    sizedPers,  pers_cash_left = size_trades_B(recPers, pers_val, cash=PERSONAL_CASH)
+
+    # Final trades output
+    out_trades = {
+        "as_of_utc": feed.get("as_of_utc"),
+        "thresholds": {
+            "BUY_THRESHOLD": BUY_THRESHOLD,
+            "SELL_THRESHOLD": SELL_THRESHOLD
+        },
+        "portfolio_paper": {
+            "portfolio_value_est": round(paper_val, 2),
+            "deploy_rules": {"max_deploy_frac": A_MAX_DEPLOY_FRAC, "per_line_frac": A_PER_LINE_FRAC},
+            "trades": sizedPaper,
+            "residual_budget_hint": paper_leftover
+        },
+        "portfolio_personal": {
+            "portfolio_value_est": round(pers_val, 2),
+            "cash_start": PERSONAL_CASH,
+            "per_line_frac": B_PER_LINE_FRAC,
+            "trades": sizedPers,
+            "cash_left": pers_cash_left
         }
     }
-    Path(OUT_SLIM).parent.mkdir(parents=True, exist_ok=True)
-    with open(OUT_SLIM, "w", encoding="utf-8") as f:
-        json.dump(slim, f, indent=2)
+    write_json(OUT_TRADES, out_trades)
 
-    # Load portfolios
-    portA = ensure_portfolio_csv(PORT_A_CSV)
-    portB = ensure_portfolio_csv(PORT_B_CSV)
+    # 6) (Optional) persist unchanged CSVs back (no edits here, but function kept for future autoupdates)
+    # save_portfolio_csv(PORT_PAPER_CSV, portPaper)
+    # save_portfolio_csv(PORT_PERSONAL_CSV, portPersonal)
 
-    # ---- (2) prices_final but filtered to each portfolio ----
-    def filter_feed(port_df):
-        keep = set(port_df["symbol"].tolist())
-        return {
-            "as_of_utc": feed.get("as_of_utc"),
-            "timeframe": feed.get("timeframe"),
-            "symbols": {s: feed["symbols"][s] for s in keep if s in feed.get("symbols", {})}
-        }
-    with open(OUT_PORTA_ONLY, "w", encoding="utf-8") as f:
-        json.dump(filter_feed(portA), f, indent=2)
-    with open(OUT_PORTB_ONLY, "w", encoding="utf-8") as f:
-        json.dump(filter_feed(portB), f, indent=2)
-
-    # ---- (3) Summary of NEW tickers to watch (high TS or high NS), excluding holdings ----
-    held_all = set(portA["symbol"].tolist()) | set(portB["symbol"].tolist())
-    watch = []
-    for s, node in (feed.get("symbols") or {}).items():
-        if s in held_all: 
-            continue
-        sig = node.get("signals") or {}
-        TS = sig.get("TS"); NS = sig.get("NS"); CDS = sig.get("CDS")
-        if (TS is not None and TS >= TS_WATCH) or (NS is not None and NS >= NS_WATCH):
-            watch.append({
-                "symbol": s,
-                "price": node.get("price"),
-                "TS": TS, "NS": NS, "CDS": CDS,
-                "reason": "High TS" if (TS or -1) >= TS_WATCH else ("High NS" if (NS or -1) >= NS_WATCH else "")
-            })
-    watch = sorted(watch, key=lambda r: (r["CDS"] if r["CDS"] is not None else -999), reverse=True)[:WATCH_TOP]
-    with open(OUT_WATCHLIST, "w", encoding="utf-8") as f:
-        json.dump({"as_of_utc": feed.get("as_of_utc"), "watch": watch}, f, indent=2)
-
-    # ---- (4) Summary of recommended trades for A & B ----
-    # Compute portfolio notional values (no cash known here; trade sizing uses caps; B is conservative)
-    valA = total_value(portA, feed)
-    valB = total_value(portB, feed)
-
-    recA = propose_trades(portA, feed, is_A=True)
-    sizedA, leftoverA = size_trades_A(recA, valA)
-
-    recB = propose_trades(portB, feed, is_A=False)
-    # If you want to include a cash file for B, set PORTFOLIO_B_CASH env and pass here
-    cashB = float(os.environ.get("PORTFOLIO_B_CASH", "0"))
-    sizedB, leftoverB = size_trades_B(recB, valB, cash=cashB)
-
-    with open(OUT_TRADES, "w", encoding="utf-8") as f:
-        json.dump({
-            "as_of_utc": feed.get("as_of_utc"),
-            "rules": {
-                "BUY_THRESHOLD": BUY_TH,
-                "SELL_THRESHOLD": SELL_TH,
-                "A_MAX_DEPLOY_FRAC": A_MAX_DEPLOY_FRAC,
-                "A_PER_LINE_FRAC": A_PER_LINE_FRAC,
-                "B_PER_LINE_FRAC": B_PER_LINE_FRAC
-            },
-            "portfolio_A": {"value_est": round(valA,2), "trades": sizedA, "residual_budget_hint": round(leftoverA,2)},
-            "portfolio_B": {"value_est": round(valB,2), "trades": sizedB, "residual_budget_hint": round(leftoverB,2)}
-        }, f, indent=2)
-
-    print(f"[OK] Wrote:\n - {OUT_SLIM}\n - {OUT_PORTA_ONLY}\n - {OUT_PORTB_ONLY}\n - {OUT_WATCHLIST}\n - {OUT_TRADES}")
+    print(f"[OK] Wrote:\n"
+          f"  - {OUT_SLIM}\n"
+          f"  - {OUT_PAPER_ONLY}\n"
+          f"  - {OUT_PERSONAL_ONLY}\n"
+          f"  - {OUT_WATCHLIST}\n"
+          f"  - {OUT_TRADES}")
 
 if __name__ == "__main__":
     main()
