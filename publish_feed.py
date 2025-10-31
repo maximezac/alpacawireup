@@ -634,6 +634,7 @@ def main():
         if now_block:
             out["now"] = now_block
             print(f"[INFO] Added {len(now_block)} symbols to 'now' snapshot.")
+            print(f"[ASSERT] now key present? {'now' in out}, symbols={len(out['now'])}")
         else:
             print("[WARN] No live quotes available for 'now' snapshot.")
     except Exception as e:
@@ -642,6 +643,20 @@ def main():
 
     with open(DEFAULT_OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2)
+
+    # ✅ Reopen and verify what was written
+    try:
+        with open(DEFAULT_OUTPUT_PATH, "r", encoding="utf-8") as f:
+            verify = json.load(f)
+        print(
+            "[VERIFY]",
+            f"path={DEFAULT_OUTPUT_PATH}",
+            f"has_now={'now' in verify}",
+            f"now_count={len(verify.get('now', {})) if 'now' in verify else 0}",
+            f"symbols={len(verify.get('symbols', {}))}",
+        )
+    except Exception as e:
+        print(f"[VERIFY] Failed to re-open output: {e}")
 
 if __name__ == "__main__":
     main()
