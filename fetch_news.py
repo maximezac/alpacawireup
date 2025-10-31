@@ -63,27 +63,33 @@ def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
         "end": end_iso,
         "limit": NEWS_LIMIT,
         "sort": "desc",
-        # "include_content": "false",  # (default false, responses include headline+summary/description)
     }
-    if NEWS_SOURCES:
-        params["source"] = NEWS_SOURCES  # comma-separated string
 
     r = requests.get(API_NEWS, headers=headers, params=params, timeout=20)
     if r.status_code != 200:
         raise requests.HTTPError(f"{r.status_code} {r.text}")
 
     data = r.json() or {}
-    items = data.get("news") or data.get("data") or []  # API schemas sometimes differ
+    items = data.get("news") or data.get("data") or []  # Alpaca sometimes varies schema
+
+    # If user provided NEWS_SOURCES, filter manually
+    source_filter = []
+    if NEWS_SOURCES:
+        source_filter = [s.strip().lower() for s in NEWS_SOURCES.split(",") if s.strip()]
+
     out = []
     for it in items:
-        # Alpaca fields: "headline", "summary" (sometimes "summary" or "description"), "created_at", "source"
         headline = it.get("headline") or it.get("title") or ""
-        summary  = it.get("summary") or it.get("description") or ""
-        ts       = it.get("created_at") or it.get("updated_at") or it.get("published_at")
-        source   = it.get("source") or it.get("author") or "unknown"
+        summary = it.get("summary") or it.get("description") or ""
+        ts = it.get("created_at") or it.get("updated_at") or it.get("published_at")
+        source = (it.get("source") or it.get("author") or "unknown").lower()
 
         # Skip empty headlines
         if not (headline.strip() or summary.strip()):
+            continue
+
+        # If filtering by NEWS_SOURCES, drop anything not in the list
+        if source_filter and source not in source_filter:
             continue
 
         out.append({
@@ -91,8 +97,9 @@ def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
             "summary": summary,
             "ts": ts,
             "source": source,
-            "relevance": 1.0,   # publish_feed.py will weight & decay; Alpaca doesn't give per-ticker relevance.
+            "relevance": 1.0,
         })
+
     return out
 
 # ==========================================================
@@ -173,6 +180,8 @@ def main():
             NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")
             FINNHUB_KEY = os.getenv("FINNHUB_KEY")
 
+            sources = [s.strip().lower() for s in NEWS_SOURCES.split(",") if s.strip()]
+
             if NEWSAPI_KEY:
                 extra_news += get_news_from_newsapi(sym, NEWSAPI_KEY)
             if FINNHUB_KEY:
@@ -186,6 +195,8 @@ def main():
             # Attach/overwrite news array
             node["news"] = news_items
             print(f"[OK] {sym}: {len(news_items)} news items")
+            if extra_news:
+                print(f"   [+] Added {len(extra_news)} extra articles from non-Alpaca sources.")
         except Exception as e:
             print(f"[WARN] {sym}: news fetch failed: {e}", file=sys.stderr)
             # Leave existing news as-is (or ensure it's at least an empty list)
