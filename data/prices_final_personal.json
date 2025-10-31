@@ -1,6 +1,2574 @@
 {
-  "as_of_utc": "2025-10-31T18:36:56.902138+00:00",
+  "as_of_utc": "2025-10-31T18:45:26.473916+00:00",
   "timeframe": "1Day",
   "indicators_window": 270,
-  "symbols": {}
+  "symbols": {
+    "AMD": {
+      "symbol": "AMD",
+      "price": 256.37,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 236.45074999999997,
+        "ema12": 245.69510137218597,
+        "ema26": 225.47846682254377,
+        "macd": 20.216634549642208,
+        "macd_signal": 19.607768546387145,
+        "macd_hist": 0.6088660032550628,
+        "rsi14": 68.64802381857464
+      },
+      "signals": {
+        "TS": 0.393916,
+        "NS": 0.538636,
+        "wT": 0.5912840597609565,
+        "wN": 0.4087159402390434,
+        "CDS": 0.453066,
+        "components": {
+          "rsi_pos": 0.3729604763714929,
+          "macd_hist_slope": 0.5433283568887064,
+          "ema20_slope": 0.1370043606060552
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "3 Nvidia Rivals Poised To Dominate The AI Race",
+              "source": "benzinga",
+              "ts": "2025-10-31T18:37:37Z",
+              "vader": 0.128,
+              "relevance": 1.0,
+              "decay_w": 0.9924955564623821,
+              "source_w": 0.9,
+              "weight": 0.8932460008161439
+            },
+            {
+              "headline": "Stock Market Today: Indexes Head For Weekly Gains As Nvidia Rival Earnings Loom (Live Coverage)",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:19:22",
+              "vader": 0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.9752103387837999,
+              "source_w": 1.0,
+              "weight": 0.9752103387837999
+            },
+            {
+              "headline": "AMD deal with OpenAI is a sign of things to come",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:48:22",
+              "vader": 0.4939,
+              "relevance": 1.0,
+              "decay_w": 0.9465363200095229,
+              "source_w": 1.0,
+              "weight": 0.9465363200095229
+            },
+            {
+              "headline": "These Were the S&P 500\u2019s Best and Worst Stocks in October",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:08:00",
+              "vader": 0.7003,
+              "relevance": 1.0,
+              "decay_w": 0.9104583686953305,
+              "source_w": 1.0,
+              "weight": 0.9104583686953305
+            },
+            {
+              "headline": "Palantir Stock Extends Gains Ahead Of Q3 Results; Robinhood, Qualcomm, AMD Also Set To Report",
+              "source": "finnhub",
+              "ts": "2025-10-31T14:28:02",
+              "vader": 0.8625,
+              "relevance": 1.0,
+              "decay_w": 0.7805100044813974,
+              "source_w": 1.0,
+              "weight": 0.7805100044813974
+            },
+            {
+              "headline": "Comfort Systems Is the AI Data Center Stock Beating NVDA, AVGO, & AMD - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T14:21:15",
+              "vader": -0.5423,
+              "relevance": 1.0,
+              "decay_w": 0.7754296113180652,
+              "source_w": 0.5,
+              "weight": 0.3877148056590326
+            },
+            {
+              "headline": "Is Qualcomm the New AI Chip Growth Stock to Buy?",
+              "source": "finnhub",
+              "ts": "2025-10-31T14:05:23",
+              "vader": 0.9556,
+              "relevance": 1.0,
+              "decay_w": 0.7636749976085488,
+              "source_w": 1.0,
+              "weight": 0.7636749976085488
+            },
+            {
+              "headline": "Wall Street Roundup: Is This Time Really Different?",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:25:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7345551585072614,
+              "source_w": 1.0,
+              "weight": 0.7345551585072614
+            },
+            {
+              "headline": "Intel: The Market Is Taking The Recovery Hopium Way Too Far",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:13:15",
+              "vader": 0.765,
+              "relevance": 1.0,
+              "decay_w": 0.7262928532079426,
+              "source_w": 1.0,
+              "weight": 0.7262928532079426
+            },
+            {
+              "headline": "Investors Heavily Search Advanced Micro Devices, Inc. (AMD): Here is What You Need to Know",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:00:03",
+              "vader": 0.7269,
+              "relevance": 1.0,
+              "decay_w": 0.7171217380433984,
+              "source_w": 1.0,
+              "weight": 0.7171217380433984
+            },
+            {
+              "headline": "AMD Earnings On Watch -- Major Q3 Reveal Coming Next Week",
+              "source": "finnhub",
+              "ts": "2025-10-31T12:19:50",
+              "vader": -0.3182,
+              "relevance": 1.0,
+              "decay_w": 0.689887714402212,
+              "source_w": 1.0,
+              "weight": 0.689887714402212
+            },
+            {
+              "headline": "10 Stocks Turn $10,000 To $295,567 In 10 Months",
+              "source": "finnhub",
+              "ts": "2025-10-31T12:00:33",
+              "vader": 0.8402,
+              "relevance": 1.0,
+              "decay_w": 0.6771986802444302,
+              "source_w": 1.0,
+              "weight": 0.6771986802444302
+            },
+            {
+              "headline": "NVIDIA Is Ahead Of Advanced Micro Devices (AMD) In Certain Areas, Says Jim Cramer",
+              "source": "finnhub",
+              "ts": "2025-10-31T11:50:53",
+              "vader": 0.7269,
+              "relevance": 1.0,
+              "decay_w": 0.6709258060909271,
+              "source_w": 1.0,
+              "weight": 0.6709258060909271
+            },
+            {
+              "headline": "NVIDIA Is Ahead Of Advanced Micro Devices (AMD) In Certain Areas, Says Jim Cramer - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-10-31T11:50:53",
+              "vader": 0.7351,
+              "relevance": 1.0,
+              "decay_w": 0.6709258060909271,
+              "source_w": 0.5,
+              "weight": 0.33546290304546356
+            },
+            {
+              "headline": "This Week In AI Chips - Global AI Cloud Expansion Powered By NVIDIA GPUs",
+              "source": "finnhub",
+              "ts": "2025-10-31T11:38:11",
+              "vader": 0.9493,
+              "relevance": 1.0,
+              "decay_w": 0.6627727774141037,
+              "source_w": 1.0,
+              "weight": 0.6627727774141037
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.7796,
+          "conf": 0.7796,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "price": 247.51,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "Consumer Discretionary",
+      "indicators": {
+        "sma20": 222.49674999999993,
+        "ema12": 227.06441513675392,
+        "ema26": 224.60293272316468,
+        "macd": 2.4614824135892377,
+        "macd_signal": -0.06614468026677134,
+        "macd_hist": 2.527627093856009,
+        "rsi14": 68.5782434014023
+      },
+      "signals": {
+        "TS": 0.563955,
+        "NS": 0.508287,
+        "wT": 0.5538972691459263,
+        "wN": 0.4461027308540737,
+        "CDS": 0.539121,
+        "components": {
+          "rsi_pos": 0.37156486802804606,
+          "macd_hist_slope": 0.9873292933659784,
+          "ema20_slope": 0.10198917262166612
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Nasdaq, S&P 500 rise as Amazon pushes indexes higher: Live updates - CNBC",
+              "source": "google_rss",
+              "ts": "2025-10-31T18:42:00",
+              "vader": 0.34,
+              "relevance": 1.0,
+              "decay_w": 0.9966925923787606,
+              "source_w": 0.5,
+              "weight": 0.4983462961893803
+            },
+            {
+              "headline": "Stock Market Today: Indexes Head For Weekly Gains As Nvidia Rival Earnings Loom (Live Coverage)",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:19:22",
+              "vader": 0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.9752103387837999,
+              "source_w": 1.0,
+              "weight": 0.9752103387837999
+            },
+            {
+              "headline": "JP Morgan Maintains Overweight on Amazon.com, Raises Price Target to $305",
+              "source": "benzinga",
+              "ts": "2025-10-31T18:18:06Z",
+              "vader": 0.0085,
+              "relevance": 1.0,
+              "decay_w": 0.9740218671094204,
+              "source_w": 0.9,
+              "weight": 0.8766196803984784
+            },
+            {
+              "headline": "Five9, The Trade Desk, 8x8, SentinelOne, and DigitalOcean Stocks Trade Up, What You Need To Know",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:15:40",
+              "vader": 0.946,
+              "relevance": 1.0,
+              "decay_w": 0.9717428127110206,
+              "source_w": 1.0,
+              "weight": 0.9717428127110206
+            },
+            {
+              "headline": "AppLovin, Toast, Fastly, Asure Software, and Samsara Shares Are Soaring, What You Need To Know",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:15:40",
+              "vader": 0.9552,
+              "relevance": 1.0,
+              "decay_w": 0.9717428127110206,
+              "source_w": 1.0,
+              "weight": 0.9717428127110206
+            },
+            {
+              "headline": "Atlassian, GoDaddy, Upstart, Unity, and Amplitude Shares Are Soaring, What You Need To Know",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:15:39",
+              "vader": 0.9552,
+              "relevance": 1.0,
+              "decay_w": 0.9717272211511312,
+              "source_w": 1.0,
+              "weight": 0.9717272211511312
+            },
+            {
+              "headline": "Zeta Global (ZETA) Stock Trades Up, Here Is Why",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:11:17",
+              "vader": 0.8225,
+              "relevance": 1.0,
+              "decay_w": 0.9676508394008778,
+              "source_w": 1.0,
+              "weight": 0.9676508394008778
+            },
+            {
+              "headline": "Equities Mixed Intraday as Amazon Jumps",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:09:44",
+              "vader": 0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.966207995475239,
+              "source_w": 1.0,
+              "weight": 0.966207995475239
+            },
+            {
+              "headline": "Amazon CEO Expects Future AI Shopping Partnerships Following Walmart-OpenAI Alliance - Investor's Business Daily",
+              "source": "google_rss",
+              "ts": "2025-10-31T17:50:08",
+              "vader": 0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.948147537746711,
+              "source_w": 0.5,
+              "weight": 0.4740737688733555
+            },
+            {
+              "headline": "Amazon CEO Expects Future AI Shopping Partnerships Following Walmart-OpenAI Alliance",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:45:07",
+              "vader": 0.34,
+              "relevance": 1.0,
+              "decay_w": 0.9435794353924698,
+              "source_w": 1.0,
+              "weight": 0.9435794353924698
+            },
+            {
+              "headline": "High Growth Tech Stocks In US With Promising Potential",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:38:10",
+              "vader": 0.9808,
+              "relevance": 1.0,
+              "decay_w": 0.9372872116277421,
+              "source_w": 1.0,
+              "weight": 0.9372872116277421
+            },
+            {
+              "headline": "A Winning Week for Stocks Masks Trouble Below the Surface",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:38:00",
+              "vader": -0.5965,
+              "relevance": 1.0,
+              "decay_w": 0.9371368352688888,
+              "source_w": 1.0,
+              "weight": 0.9371368352688888
+            },
+            {
+              "headline": "3 Growth Companies With Insider Ownership Up To 33%",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:35:39",
+              "vader": 0.9837,
+              "relevance": 1.0,
+              "decay_w": 0.935019095150527,
+              "source_w": 1.0,
+              "weight": 0.935019095150527
+            },
+            {
+              "headline": "10 Consumer Discretionary Stocks Whale Activity In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-31T17:35:26Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9348240836366848,
+              "source_w": 0.9,
+              "weight": 0.8413416752730163
+            },
+            {
+              "headline": "Dow Falls Over 100 Points; Amazon Posts Upbeat Q3 Results",
+              "source": "benzinga",
+              "ts": "2025-10-31T17:33:57Z",
+              "vader": 0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.9334900967466924,
+              "source_w": 0.9,
+              "weight": 0.8401410870720232
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.957632,
+          "conf": 0.957632,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "ARCC": {
+      "symbol": "ARCC",
+      "price": 20.385,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 19.886999999999997,
+        "ema12": 20.171582472863786,
+        "ema26": 20.26604775149151,
+        "macd": -0.09446527862772314,
+        "macd_signal": -0.24524226982617375,
+        "macd_hist": 0.15077699119845062,
+        "rsi14": 51.774573213126956
+      },
+      "signals": {
+        "TS": 0.075228,
+        "NS": 0.256464,
+        "wT": 0.7032906464710769,
+        "wN": 0.2967093535289232,
+        "CDS": 0.129003,
+        "components": {
+          "rsi_pos": 0.03549146426253912,
+          "macd_hist_slope": 0.14964471341517674,
+          "ema20_slope": 0.0058695336144038105
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Ares Capital (NASDAQ:ARCC) Given Buy (B-) Rating at Weiss Ratings - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T16:34:33",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8816064122497017,
+              "source_w": 0.5,
+              "weight": 0.44080320612485085
+            },
+            {
+              "headline": "Spinnaker Trust Grows Stock Holdings in Ares Capital Corporation $ARCC - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T11:27:56",
+              "vader": 0.765,
+              "relevance": 1.0,
+              "decay_w": 0.6562648828866625,
+              "source_w": 0.5,
+              "weight": 0.32813244144333126
+            },
+            {
+              "headline": "Savvy Advisors Inc. Raises Position in Ares Capital Corporation $ARCC - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T11:27:27",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6559595891873177,
+              "source_w": 0.5,
+              "weight": 0.32797979459365884
+            },
+            {
+              "headline": "14% Dividend Yield Is Not Enough",
+              "source": "finnhub",
+              "ts": "2025-10-31T07:53:51",
+              "vader": 0.34,
+              "relevance": 1.0,
+              "decay_w": 0.5340372118431853,
+              "source_w": 1.0,
+              "weight": 0.5340372118431853
+            },
+            {
+              "headline": "Ares Capital: The BDC Sell-Off Was Unhinged, 9.3% Dividend Yield Still Covered",
+              "source": "finnhub",
+              "ts": "2025-10-30T15:16:56",
+              "vader": -0.2235,
+              "relevance": 1.0,
+              "decay_w": 0.2045330227339631,
+              "source_w": 1.0,
+              "weight": 0.2045330227339631
+            },
+            {
+              "headline": "My Top 10 High-Yield Picks For November 2025: One Yields 9%+",
+              "source": "finnhub",
+              "ts": "2025-10-30T13:33:37",
+              "vader": 0.8555,
+              "relevance": 1.0,
+              "decay_w": 0.18516846482904237,
+              "source_w": 1.0,
+              "weight": 0.18516846482904237
+            },
+            {
+              "headline": "The Other Side Of Ares Capital's Strong Quarter - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-10-30T13:15:00",
+              "vader": 0.765,
+              "relevance": 1.0,
+              "decay_w": 0.1818793734640303,
+              "source_w": 0.5,
+              "weight": 0.09093968673201515
+            },
+            {
+              "headline": "The Other Side Of Ares Capital's Strong Quarter",
+              "source": "finnhub",
+              "ts": "2025-10-30T09:15:00",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.14435775438405934,
+              "source_w": 1.0,
+              "weight": 0.14435775438405934
+            },
+            {
+              "headline": "Keefe, Bruyette & Woods Maintains Outperform on Ares Capital, Lowers Price Target to $22",
+              "source": "benzinga",
+              "ts": "2025-10-29T17:48:27Z",
+              "vader": -0.128,
+              "relevance": 1.0,
+              "decay_w": 0.05916326620502016,
+              "source_w": 0.9,
+              "weight": 0.05324693958451814
+            },
+            {
+              "headline": "RBC Capital Maintains Outperform on Ares Capital, Lowers Price Target to $23",
+              "source": "benzinga",
+              "ts": "2025-10-29T16:06:45Z",
+              "vader": -0.128,
+              "relevance": 1.0,
+              "decay_w": 0.053645297122331737,
+              "source_w": 0.9,
+              "weight": 0.04828076741009856
+            },
+            {
+              "headline": "Wells Fargo Maintains Overweight on Ares Capital, Lowers Price Target to $21",
+              "source": "benzinga",
+              "ts": "2025-10-29T14:14:00Z",
+              "vader": -0.25,
+              "relevance": 1.0,
+              "decay_w": 0.0481272663113766,
+              "source_w": 0.9,
+              "weight": 0.04331453968023894
+            },
+            {
+              "headline": "Ares Capital's Q3: Important Implications For BDCs",
+              "source": "finnhub",
+              "ts": "2025-10-29T13:20:19",
+              "vader": 0.2023,
+              "relevance": 1.0,
+              "decay_w": 0.04570317185642948,
+              "source_w": 1.0,
+              "weight": 0.04570317185642948
+            },
+            {
+              "headline": "Ares Capital (ARCC) Q3 2025 Earnings Transcript - The Motley Fool",
+              "source": "google_rss",
+              "ts": "2025-10-28T17:37:00",
+              "vader": -0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.014628673181681491,
+              "source_w": 0.5,
+              "weight": 0.0073143365908407455
+            },
+            {
+              "headline": "Nasdaq 100 Hits 26,000, Gold Falls Below $4,000: What's Moving Markets Tuesday?",
+              "source": "benzinga",
+              "ts": "2025-10-28T17:23:51Z",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.014444647868376868,
+              "source_w": 0.9,
+              "weight": 0.013000183081539182
+            },
+            {
+              "headline": "Ares Capital (ARCC) Q3 2025 Earnings Call Transcript",
+              "source": "finnhub",
+              "ts": "2025-10-28T16:51:50",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.014006217942763818,
+              "source_w": 1.0,
+              "weight": 0.014006217942763818
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.246235,
+          "conf": 0.246235,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "ASTS": {
+      "symbol": "ASTS",
+      "price": 79.94,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 81.16950000000007,
+        "ema12": 78.23167991418207,
+        "ema26": 73.71856920433969,
+        "macd": 4.51311070984238,
+        "macd_signal": 6.13655294506335,
+        "macd_hist": -1.6234422352209705,
+        "rsi14": 57.36225628282926
+      },
+      "signals": {
+        "TS": -0.294272,
+        "NS": 0.529808,
+        "wT": 0.7082836569389066,
+        "wN": 0.29171634306109334,
+        "CDS": -0.053874,
+        "components": {
+          "rsi_pos": 0.14724512565658515,
+          "macd_hist_slope": -0.9251219979470128,
+          "ema20_slope": 0.08439435087806975
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "AST SpaceMobile (ASTS) Stock Is Surging Friday: What's Going On?",
+              "source": "benzinga",
+              "ts": "2025-10-31T17:57:36Z",
+              "vader": 0.8519,
+              "relevance": 1.0,
+              "decay_w": 0.9549875594709923,
+              "source_w": 0.9,
+              "weight": 0.8594888035238931
+            },
+            {
+              "headline": "AST SpaceMobile (ASTS) Stock Is Surging Friday: What's Going On? - Benzinga",
+              "source": "google_rss",
+              "ts": "2025-10-31T17:57:36",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9549875594709923,
+              "source_w": 0.5,
+              "weight": 0.47749377973549617
+            },
+            {
+              "headline": "AST SpaceMobile, Inc. (ASTS) Registers a Bigger Fall Than the Market: Important Facts to Note",
+              "source": "finnhub",
+              "ts": "2025-10-30T22:00:02",
+              "vader": 0.2023,
+              "relevance": 1.0,
+              "decay_w": 0.30150771165836077,
+              "source_w": 1.0,
+              "weight": 0.30150771165836077
+            },
+            {
+              "headline": "AST SpaceMobile, Inc. (ASTS) Registers a Bigger Fall Than the Market: Important Facts to Note - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-10-30T22:00:02",
+              "vader": 0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.30150771165836077,
+              "source_w": 0.5,
+              "weight": 0.15075385582918038
+            },
+            {
+              "headline": "ASTS Inks Commercial Agreement with stc group: Will it Fuel Revenue?",
+              "source": "finnhub",
+              "ts": "2025-10-30T18:03:00",
+              "vader": 0.8225,
+              "relevance": 1.0,
+              "decay_w": 0.23999127209220558,
+              "source_w": 1.0,
+              "weight": 0.23999127209220558
+            },
+            {
+              "headline": "ASTS Inks Commercial Agreement with stc group: Will it Fuel Revenue? - Zacks Investment Research",
+              "source": "google_rss",
+              "ts": "2025-10-30T17:31:05",
+              "vader": 0.787,
+              "relevance": 1.0,
+              "decay_w": 0.2327293616344879,
+              "source_w": 0.5,
+              "weight": 0.11636468081724395
+            },
+            {
+              "headline": "AST SpaceMobile Stock Is Trading Higher Today: Here's Why",
+              "source": "benzinga",
+              "ts": "2025-10-29T15:18:19Z",
+              "vader": 0.7351,
+              "relevance": 1.0,
+              "decay_w": 0.05120139730564227,
+              "source_w": 0.9,
+              "weight": 0.04608125757507805
+            },
+            {
+              "headline": "AST SpaceMobile Stock Is Trading Higher Today: Here's Why - Benzinga",
+              "source": "google_rss",
+              "ts": "2025-10-29T15:18:19",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.05120139730564227,
+              "source_w": 0.5,
+              "weight": 0.025600698652821136
+            },
+            {
+              "headline": "AST SpaceMobile Shares Surge on Major Saudi Deal - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-10-29T14:24:06",
+              "vader": 0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.04859750529934634,
+              "source_w": 0.5,
+              "weight": 0.02429875264967317
+            },
+            {
+              "headline": "AST SpaceMobile stock rises after securing $175 million stc deal - Investing.com",
+              "source": "google_rss",
+              "ts": "2025-10-29T13:14:41",
+              "vader": 0.5574,
+              "relevance": 1.0,
+              "decay_w": 0.045455983706012774,
+              "source_w": 0.5,
+              "weight": 0.022727991853006387
+            },
+            {
+              "headline": "AST SpaceMobile Signs 10-Year commercial Agreement With stc group, With stc Committing To Prepayment Of $175M for Future Services And A Long-Term Commercial Revenue Commitment",
+              "source": "benzinga",
+              "ts": "2025-10-29T13:05:01Z",
+              "vader": 0.7269,
+              "relevance": 1.0,
+              "decay_w": 0.04503492608491909,
+              "source_w": 0.9,
+              "weight": 0.04053143347642718
+            },
+            {
+              "headline": "stc group and AST SpaceMobile Announce 10-Year Commercial Agreement and Long-Term Revenue Commitment for Space-based Cellular Broadband Connectivity",
+              "source": "finnhub",
+              "ts": "2025-10-29T13:00:00",
+              "vader": 0.8402,
+              "relevance": 1.0,
+              "decay_w": 0.044817951253807366,
+              "source_w": 1.0,
+              "weight": 0.044817951253807366
+            },
+            {
+              "headline": "AST SpaceMobile (NASDAQ: ASTS), stc in 10-year deal with $175M prepayment - Stock Titan",
+              "source": "google_rss",
+              "ts": "2025-10-29T13:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.044817951253807366,
+              "source_w": 0.5,
+              "weight": 0.022408975626903683
+            },
+            {
+              "headline": "BeWhere Holdings Inc. Successfully Connects IoT Device on AST SpaceMobile's Direct-to-Device Satellite Network",
+              "source": "finnhub",
+              "ts": "2025-10-28T12:00:00",
+              "vader": 0.8834,
+              "relevance": 1.0,
+              "decay_w": 0.010575628233872262,
+              "source_w": 1.0,
+              "weight": 0.010575628233872262
+            },
+            {
+              "headline": "Dow Futures Dip as Fed Rate Cut Uncertainty Looms",
+              "source": "finnhub",
+              "ts": "2025-10-28T10:05:03",
+              "vader": -0.8625,
+              "relevance": 1.0,
+              "decay_w": 0.009467730792506575,
+              "source_w": 1.0,
+              "weight": 0.009467730792506575
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.222459,
+          "conf": 0.222459,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "price": 204.24,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "Tech",
+      "indicators": {
+        "sma20": 188.38100000000009,
+        "ema12": 193.91889537371176,
+        "ema26": 188.4903055805495,
+        "macd": 5.428589793162274,
+        "macd_signal": 3.2102990407180294,
+        "macd_hist": 2.218290752444245,
+        "rsi14": 68.06096972500758
+      },
+      "signals": {
+        "TS": 0.551841,
+        "NS": 0.426162,
+        "wT": 0.5654602036981122,
+        "wN": 0.43453979630188777,
+        "CDS": 0.497228,
+        "components": {
+          "rsi_pos": 0.3612193945001516,
+          "macd_hist_slope": 0.9766042560285769,
+          "ema20_slope": 0.08355705281999261
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "3 Nvidia Rivals Poised To Dominate The AI Race",
+              "source": "benzinga",
+              "ts": "2025-10-31T18:37:37Z",
+              "vader": 0.128,
+              "relevance": 1.0,
+              "decay_w": 0.9924955564623821,
+              "source_w": 0.9,
+              "weight": 0.8932460008161439
+            },
+            {
+              "headline": "IBM's Quantum Roadmap Sets Stage For Real Profits Before 2030",
+              "source": "benzinga",
+              "ts": "2025-10-31T18:36:18Z",
+              "vader": 0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.9912383049743545,
+              "source_w": 0.9,
+              "weight": 0.892114474476919
+            },
+            {
+              "headline": "Stock Market Today: Indexes Head For Weekly Gains As Nvidia Rival Earnings Loom (Live Coverage)",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:19:22",
+              "vader": 0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.9752103387837999,
+              "source_w": 1.0,
+              "weight": 0.9752103387837999
+            },
+            {
+              "headline": "10 Information Technology Stocks Whale Activity In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-10-31T17:35:20Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9347340920410346,
+              "source_w": 0.9,
+              "weight": 0.8412606828369312
+            },
+            {
+              "headline": "Nasdaq 100 Rebounds, Amazon Jumps 10% On Strong Earnings: What's Moving Markets Friday?",
+              "source": "benzinga",
+              "ts": "2025-10-31T17:26:36Z",
+              "vader": 0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.9269081491935928,
+              "source_w": 0.9,
+              "weight": 0.8342173342742335
+            },
+            {
+              "headline": "China Talks Put Markets At Ease, for Now",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:18:00",
+              "vader": 0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.9192657179780805,
+              "source_w": 1.0,
+              "weight": 0.9192657179780805
+            },
+            {
+              "headline": "Unlock AI\u2019s Hidden Gems: 3 Must-Buy Stocks Fueling the Data Center Surge",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:15:11",
+              "vader": 0.8979,
+              "relevance": 1.0,
+              "decay_w": 0.9167763975905432,
+              "source_w": 1.0,
+              "weight": 0.9167763975905432
+            },
+            {
+              "headline": "Nvidia CEO hopes to sell Blackwell in China, Netflix stock split",
+              "source": "finnhub",
+              "ts": "2025-10-31T17:12:23",
+              "vader": 0.7269,
+              "relevance": 1.0,
+              "decay_w": 0.9143084881733481,
+              "source_w": 1.0,
+              "weight": 0.9143084881733481
+            },
+            {
+              "headline": "Amazon Stock Breaks Out On Insatiable AI Demand; Rush to Update iPhones Lifts Apple; Sentiment Back To Extremely Positive",
+              "source": "benzinga",
+              "ts": "2025-10-31T16:38:23Z",
+              "vader": 0.7089,
+              "relevance": 1.0,
+              "decay_w": 0.8848658740076437,
+              "source_w": 0.9,
+              "weight": 0.7963792866068794
+            },
+            {
+              "headline": "Texas company shareholders reject $9B acquisition by Nvidia-backed AI firm",
+              "source": "finnhub",
+              "ts": "2025-10-31T16:26:56",
+              "vader": -0.7184,
+              "relevance": 1.0,
+              "decay_w": 0.875165589108899,
+              "source_w": 1.0,
+              "weight": 0.875165589108899
+            },
+            {
+              "headline": "Does NVIDIA\u2019s AI Surge Justify the Recent 8.9% Jump in 2025?",
+              "source": "finnhub",
+              "ts": "2025-10-31T16:18:57",
+              "vader": 0.9403,
+              "relevance": 1.0,
+              "decay_w": 0.8684652061568153,
+              "source_w": 1.0,
+              "weight": 0.8684652061568153
+            },
+            {
+              "headline": "Nvidia\u2019s Stock (NVDA) Receives Price Target Boost from Goldman Sachs - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-10-31T16:18:14",
+              "vader": 0.6597,
+              "relevance": 1.0,
+              "decay_w": 0.8678662255189495,
+              "source_w": 0.5,
+              "weight": 0.43393311275947477
+            },
+            {
+              "headline": "Hyundai Motor Group and Nvidia team up on AI-powered mobility",
+              "source": "finnhub",
+              "ts": "2025-10-31T15:24:54",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8244309156653032,
+              "source_w": 1.0,
+              "weight": 0.8244309156653032
+            },
+            {
+              "headline": "Nvidia Just Revealed a New Partnership with Palantir. Which Is the Better AI Stock to Buy?",
+              "source": "finnhub",
+              "ts": "2025-10-31T15:23:53",
+              "vader": 0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.8236243990794073,
+              "source_w": 1.0,
+              "weight": 0.8236243990794073
+            },
+            {
+              "headline": "Nvidia Rises As Amazon's Andy Jassy Touts 'Deep Relationship'; Is Nvidia A Buy Or Sell Now?",
+              "source": "finnhub",
+              "ts": "2025-10-31T15:23:21",
+              "vader": 0.5362,
+              "relevance": 1.0,
+              "decay_w": 0.8232016239721207,
+              "source_w": 1.0,
+              "weight": 0.8232016239721207
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.90257,
+          "conf": 0.90257,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "QBTS": {
+      "symbol": "QBTS",
+      "price": 36.925,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 35.60949999999998,
+        "ema12": 34.516021344294494,
+        "ema26": 32.57119384818145,
+        "macd": 1.9448274961130423,
+        "macd_signal": 2.47102162465295,
+        "macd_hist": -0.5261941285399079,
+        "rsi14": 57.6040493965515
+      },
+      "signals": {
+        "TS": -0.10542,
+        "NS": 0.167003,
+        "wT": 0.7116131029784841,
+        "wN": 0.2883868970215159,
+        "CDS": -0.026857,
+        "components": {
+          "rsi_pos": 0.15208098793103006,
+          "macd_hist_slope": -0.48246649262377483,
+          "ema20_slope": 0.1336704504020393
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Undercovered Dozen: Zoomd Technologies, Waste Management, DroneShield And More",
+              "source": "finnhub",
+              "ts": "2025-10-31T12:43:07",
+              "vader": 0.6908,
+              "relevance": 1.0,
+              "decay_w": 0.7055261379599567,
+              "source_w": 1.0,
+              "weight": 0.7055261379599567
+            },
+            {
+              "headline": "Is D-Wave Quantum a Millionaire-Maker Stock?",
+              "source": "finnhub",
+              "ts": "2025-10-31T09:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5691525037388261,
+              "source_w": 1.0,
+              "weight": 0.5691525037388261
+            },
+            {
+              "headline": "An Epic Reversal Is Coming for Quantum Computing Stocks IonQ, Rigetti Computing, and D-Wave Quantum, Based on a Time-Tested Indicator",
+              "source": "finnhub",
+              "ts": "2025-10-31T07:51:00",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.5325739781524782,
+              "source_w": 1.0,
+              "weight": 0.5325739781524782
+            },
+            {
+              "headline": "QBTS vs. QUBT Ahead of Q3 Earnings: Which Quantum Stock Leads?",
+              "source": "finnhub",
+              "ts": "2025-10-30T19:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.2535286180036424,
+              "source_w": 1.0,
+              "weight": 0.2535286180036424
+            },
+            {
+              "headline": "A deep dive into quantum computing",
+              "source": "finnhub",
+              "ts": "2025-10-30T18:06:17",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.2407510557449815,
+              "source_w": 1.0,
+              "weight": 0.2407510557449815
+            },
+            {
+              "headline": "D-Wave Quantum: Sell Trump Bump (NYSE:QBTS) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-10-30T12:30:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.1741682847205565,
+              "source_w": 0.5,
+              "weight": 0.08708414236027825
+            },
+            {
+              "headline": "D-Wave Quantum (QBTS) Expected to Announce Quarterly Earnings on Thursday - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-30T12:27:44",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.17378864124553292,
+              "source_w": 0.5,
+              "weight": 0.08689432062276646
+            },
+            {
+              "headline": "D-Wave Quantum: Sell The Trump Bump",
+              "source": "finnhub",
+              "ts": "2025-10-30T08:30:00",
+              "vader": 0.2746,
+              "relevance": 1.0,
+              "decay_w": 0.13823745919245414,
+              "source_w": 1.0,
+              "weight": 0.13823745919245414
+            },
+            {
+              "headline": "Nvidia's 2 Surprises; NVDA Soars On Trump-Fueled Hopes of China Blackwell Sales; Fed In Focus",
+              "source": "benzinga",
+              "ts": "2025-10-29T16:01:08Z",
+              "vader": 0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.05335600963931381,
+              "source_w": 0.9,
+              "weight": 0.04802040867538243
+            },
+            {
+              "headline": "D-Wave (QBTS) Sheds 8.68% on Profit-Taking, Debunked Talks with Govt",
+              "source": "finnhub",
+              "ts": "2025-10-29T14:29:32",
+              "vader": 0.6275,
+              "relevance": 1.0,
+              "decay_w": 0.048852369957224986,
+              "source_w": 1.0,
+              "weight": 0.048852369957224986
+            },
+            {
+              "headline": "IonQ (IONQ) Slashes 9% as Govt Denies Talks with Quantum Firms",
+              "source": "finnhub",
+              "ts": "2025-10-29T14:29:14",
+              "vader": -0.4729,
+              "relevance": 1.0,
+              "decay_w": 0.04883826287675723,
+              "source_w": 1.0,
+              "weight": 0.04883826287675723
+            },
+            {
+              "headline": "Why Did Nvidia GTC News Spook Quantum Computing Stocks?",
+              "source": "finnhub",
+              "ts": "2025-10-29T14:06:01",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.04775879762529458,
+              "source_w": 1.0,
+              "weight": 0.04775879762529458
+            },
+            {
+              "headline": "Is D-Wave Quantum (QBTS) A Better Buy Than QuantumScape (QS)? - Forbes",
+              "source": "google_rss",
+              "ts": "2025-10-29T13:03:57",
+              "vader": 0.7461,
+              "relevance": 1.0,
+              "decay_w": 0.044988704144182975,
+              "source_w": 0.5,
+              "weight": 0.022494352072091488
+            },
+            {
+              "headline": "D-Wave Quantum Gains Nvidia's NVQLink Tailwind Ahead Of Q3 ER (Rating Upgrade)",
+              "source": "finnhub",
+              "ts": "2025-10-29T08:20:53",
+              "vader": 0.7184,
+              "relevance": 1.0,
+              "decay_w": 0.03425737632969399,
+              "source_w": 1.0,
+              "weight": 0.03425737632969399
+            },
+            {
+              "headline": "The Donald Trump Administration May Want Stakes in Quantum Computing Stocks IonQ, Rigetti Computing, and D-Wave Quantum -- and That May Be Terrible News",
+              "source": "finnhub",
+              "ts": "2025-10-29T07:51:00",
+              "vader": -0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.033285873634529894,
+              "source_w": 1.0,
+              "weight": 0.033285873634529894
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.206604,
+          "conf": 0.206604,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "QUBT": {
+      "symbol": "QUBT",
+      "price": 16.55,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 18.21,
+        "ema12": 16.52634334110463,
+        "ema26": 17.541006269180812,
+        "macd": -1.0146629280761807,
+        "macd_signal": -0.6694386555386138,
+        "macd_hist": -0.34522427253756693,
+        "rsi14": 46.16473413522399
+      },
+      "signals": {
+        "TS": -0.174835,
+        "NS": 0.071244,
+        "wT": 0.7032345269820766,
+        "wN": 0.2967654730179235,
+        "CDS": -0.101807,
+        "components": {
+          "rsi_pos": -0.07670531729552024,
+          "macd_hist_slope": -0.3321334008160054,
+          "ema20_slope": -0.05649654609165662
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Can QUBT's Photonic Bet Drive Its Next Phase of Growth? - TradingView",
+              "source": "google_rss",
+              "ts": "2025-10-31T14:18:00",
+              "vader": 0.4836,
+              "relevance": 1.0,
+              "decay_w": 0.7730072469134001,
+              "source_w": 0.5,
+              "weight": 0.38650362345670003
+            },
+            {
+              "headline": "QCi (NASDAQ: QUBT) sets Third Quarter shareholder call for Nov. 14 at 4:30 p.m. ET - Stock Titan",
+              "source": "google_rss",
+              "ts": "2025-10-31T12:30:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6966731388822262,
+              "source_w": 0.5,
+              "weight": 0.3483365694411131
+            },
+            {
+              "headline": "An Epic Reversal Is Coming for Quantum Computing Stocks IonQ, Rigetti Computing, and D-Wave Quantum, Based on a Time-Tested Indicator",
+              "source": "finnhub",
+              "ts": "2025-10-31T07:51:00",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.5325739781524782,
+              "source_w": 1.0,
+              "weight": 0.5325739781524782
+            },
+            {
+              "headline": "An Epic Reversal Is Coming for Quantum Computing Stocks IonQ, Rigetti Computing, and D-Wave Quantum, Based on a Time-Tested Indicator - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-10-31T07:51:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5325739781524782,
+              "source_w": 0.5,
+              "weight": 0.2662869890762391
+            },
+            {
+              "headline": "QBTS vs. QUBT Ahead of Q3 Earnings: Which Quantum Stock Leads?",
+              "source": "finnhub",
+              "ts": "2025-10-30T19:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.2535286180036424,
+              "source_w": 1.0,
+              "weight": 0.2535286180036424
+            },
+            {
+              "headline": "QBTS vs. QUBT Ahead of Q3 Earnings: Which Quantum Stock Leads? - Nasdaq",
+              "source": "google_rss",
+              "ts": "2025-10-30T19:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.2535286180036424,
+              "source_w": 0.5,
+              "weight": 0.1267643090018212
+            },
+            {
+              "headline": "Better Quantum Computing Stock: Quantum Computing Inc. vs. Rigetti Computing",
+              "source": "finnhub",
+              "ts": "2025-10-30T12:30:00",
+              "vader": 0.6249,
+              "relevance": 1.0,
+              "decay_w": 0.1741682847205565,
+              "source_w": 1.0,
+              "weight": 0.1741682847205565
+            },
+            {
+              "headline": "Is Quantum Computing Inc. Stock a Buy Now?",
+              "source": "finnhub",
+              "ts": "2025-10-30T09:25:00",
+              "vader": -0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.1457542039178868,
+              "source_w": 1.0,
+              "weight": 0.1457542039178868
+            },
+            {
+              "headline": "Nvidia's 2 Surprises; NVDA Soars On Trump-Fueled Hopes of China Blackwell Sales; Fed In Focus",
+              "source": "benzinga",
+              "ts": "2025-10-29T16:01:08Z",
+              "vader": 0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.05335600963931381,
+              "source_w": 0.9,
+              "weight": 0.04802040867538243
+            },
+            {
+              "headline": "Ascendiant Lifts PT on Quantum Computing (QUBT) to $40 on Strong Revenue Growth Expectation, $750M Private Placement",
+              "source": "finnhub",
+              "ts": "2025-10-29T15:57:21",
+              "vader": 0.9545,
+              "relevance": 1.0,
+              "decay_w": 0.05316202816612499,
+              "source_w": 1.0,
+              "weight": 0.05316202816612499
+            },
+            {
+              "headline": "Ascendiant Lifts PT on Quantum Computing (QUBT) to $40 on Strong Revenue Growth Expectation, $750M Private Placement - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-10-29T15:57:21",
+              "vader": 0.8957,
+              "relevance": 1.0,
+              "decay_w": 0.05316202816612499,
+              "source_w": 0.5,
+              "weight": 0.026581014083062494
+            },
+            {
+              "headline": "Why Did Nvidia GTC News Spook Quantum Computing Stocks?",
+              "source": "finnhub",
+              "ts": "2025-10-29T14:06:01",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.04775879762529458,
+              "source_w": 1.0,
+              "weight": 0.04775879762529458
+            },
+            {
+              "headline": "Quantum Computing Inc. (QUBT) May Report Negative Earnings: Know the Trend Ahead of Q3 Release",
+              "source": "finnhub",
+              "ts": "2025-10-29T14:00:23",
+              "vader": -0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.04750049150841918,
+              "source_w": 1.0,
+              "weight": 0.04750049150841918
+            },
+            {
+              "headline": "Quantum Computing Inc. (QUBT) May Report Negative Earnings: Know the Trend Ahead of Q3 Release - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-10-29T14:00:23",
+              "vader": -0.8126,
+              "relevance": 1.0,
+              "decay_w": 0.04750049150841918,
+              "source_w": 0.5,
+              "weight": 0.02375024575420959
+            },
+            {
+              "headline": "The Donald Trump Administration May Want Stakes in Quantum Computing Stocks IonQ, Rigetti Computing, and D-Wave Quantum -- and That May Be Terrible News",
+              "source": "finnhub",
+              "ts": "2025-10-29T07:51:00",
+              "vader": -0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.033285873634529894,
+              "source_w": 1.0,
+              "weight": 0.033285873634529894
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.246502,
+          "conf": 0.246502,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "RGTI": {
+      "symbol": "RGTI",
+      "price": 44.035,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 44.12925,
+        "ema12": 41.5364246428549,
+        "ema26": 39.285324141854275,
+        "macd": 2.2511005010006215,
+        "macd_signal": 3.4048578459985266,
+        "macd_hist": -1.153757344997905,
+        "rsi14": 57.53434422837488
+      },
+      "signals": {
+        "TS": -0.243143,
+        "NS": 0.200776,
+        "wT": 0.7229845838223079,
+        "wN": 0.27701541617769215,
+        "CDS": -0.12017,
+        "components": {
+          "rsi_pos": 0.15068688456749754,
+          "macd_hist_slope": -0.8189949860791313,
+          "ema20_slope": 0.12090204069578885
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "An Epic Reversal Is Coming for Quantum Computing Stocks IonQ, Rigetti Computing, and D-Wave Quantum, Based on a Time-Tested Indicator",
+              "source": "finnhub",
+              "ts": "2025-10-31T07:51:00",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.5325739781524782,
+              "source_w": 1.0,
+              "weight": 0.5325739781524782
+            },
+            {
+              "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 7.9% Higher - Here's What Happened - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-30T23:37:09",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.3310568912470671,
+              "source_w": 0.5,
+              "weight": 0.16552844562353355
+            },
+            {
+              "headline": "Small Cap Stock Rockets: Top 10 IWM Holdings' Eye-Popping Rally",
+              "source": "benzinga",
+              "ts": "2025-10-30T18:12:13Z",
+              "vader": 0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.2421301719385031,
+              "source_w": 0.9,
+              "weight": 0.2179171547446528
+            },
+            {
+              "headline": "A deep dive into quantum computing",
+              "source": "finnhub",
+              "ts": "2025-10-30T18:06:17",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.2407510557449815,
+              "source_w": 1.0,
+              "weight": 0.2407510557449815
+            },
+            {
+              "headline": "Why Nvidia CEO Jensen Huang\u2019s Vision for Quantum Makes Sense",
+              "source": "finnhub",
+              "ts": "2025-10-30T15:53:00",
+              "vader": 0.8591,
+              "relevance": 1.0,
+              "decay_w": 0.21175945455175763,
+              "source_w": 1.0,
+              "weight": 0.21175945455175763
+            },
+            {
+              "headline": "Better Quantum Computing Stock: Quantum Computing Inc. vs. Rigetti Computing",
+              "source": "finnhub",
+              "ts": "2025-10-30T12:30:00",
+              "vader": 0.6249,
+              "relevance": 1.0,
+              "decay_w": 0.1741682847205565,
+              "source_w": 1.0,
+              "weight": 0.1741682847205565
+            },
+            {
+              "headline": "Could Investing $10,000 in Rigetti Computing Stock Make You a Millionaire?",
+              "source": "finnhub",
+              "ts": "2025-10-30T00:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.08460502587097812,
+              "source_w": 1.0,
+              "weight": 0.08460502587097812
+            },
+            {
+              "headline": "Could Investing $10,000 in Rigetti Computing Stock Make You a Millionaire? - The Motley Fool",
+              "source": "google_rss",
+              "ts": "2025-10-30T00:00:00",
+              "vader": -0.533,
+              "relevance": 1.0,
+              "decay_w": 0.08460502587097812,
+              "source_w": 0.5,
+              "weight": 0.04230251293548906
+            },
+            {
+              "headline": "IONQ or Rigetti: Which Quantum Stock is Best Ahead of Q3 Earnings?",
+              "source": "finnhub",
+              "ts": "2025-10-29T19:00:00",
+              "vader": 0.765,
+              "relevance": 1.0,
+              "decay_w": 0.06338215450091061,
+              "source_w": 1.0,
+              "weight": 0.06338215450091061
+            },
+            {
+              "headline": "IONQ or Rigetti: Which Quantum Stock is Best Ahead of Q3 Earnings? - Zacks Investment Research",
+              "source": "google_rss",
+              "ts": "2025-10-29T18:08:30",
+              "vader": 0.8732,
+              "relevance": 1.0,
+              "decay_w": 0.06031634145410986,
+              "source_w": 0.5,
+              "weight": 0.03015817072705493
+            },
+            {
+              "headline": "Rigetti vs IonQ: Which Quantum Computing Stock Holds More Promise?",
+              "source": "finnhub",
+              "ts": "2025-10-29T17:42:00",
+              "vader": 0.6115,
+              "relevance": 1.0,
+              "decay_w": 0.05879703347415236,
+              "source_w": 1.0,
+              "weight": 0.05879703347415236
+            },
+            {
+              "headline": "Nvidia's 2 Surprises; NVDA Soars On Trump-Fueled Hopes of China Blackwell Sales; Fed In Focus",
+              "source": "benzinga",
+              "ts": "2025-10-29T16:01:08Z",
+              "vader": 0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.05335600963931381,
+              "source_w": 0.9,
+              "weight": 0.04802040867538243
+            },
+            {
+              "headline": "Rigetti Computing (RGTI) Stock Is Rising Wednesday: What's Going On?",
+              "source": "benzinga",
+              "ts": "2025-10-29T15:09:41Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.05077760823632326,
+              "source_w": 0.9,
+              "weight": 0.04569984741269094
+            },
+            {
+              "headline": "Rigetti Computing (RGTI) Stock Is Rising Wednesday: What's Going On? - Benzinga",
+              "source": "google_rss",
+              "ts": "2025-10-29T15:09:41",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.05077760823632326,
+              "source_w": 0.5,
+              "weight": 0.02538880411816163
+            },
+            {
+              "headline": "Why Did Nvidia GTC News Spook Quantum Computing Stocks?",
+              "source": "finnhub",
+              "ts": "2025-10-29T14:06:01",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.04775879762529458,
+              "source_w": 1.0,
+              "weight": 0.04775879762529458
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.152454,
+          "conf": 0.152454,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "RKLB": {
+      "symbol": "RKLB",
+      "price": 62.4,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 64.61199999999997,
+        "ema12": 63.543060149644646,
+        "ema26": 61.00533935855851,
+        "macd": 2.5377207910861372,
+        "macd_signal": 3.499821221884902,
+        "macd_hist": -0.9621004307987646,
+        "rsi14": 52.792553727665
+      },
+      "signals": {
+        "TS": -0.271172,
+        "NS": 0.663893,
+        "wT": 0.7344844719184556,
+        "wN": 0.2655155280815445,
+        "CDS": -0.022898,
+        "components": {
+          "rsi_pos": 0.05585107455330004,
+          "macd_hist_slope": -0.7452123048573392,
+          "ema20_slope": 0.022861288144704527
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Applying Wyckoff theory to RKLB stock - Portfolio Gains Report & Safe Entry Zone Identification - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-31T09:30:31",
+              "vader": 0.8625,
+              "relevance": 1.0,
+              "decay_w": 0.5861214077925908,
+              "source_w": 0.5,
+              "weight": 0.2930607038962954
+            },
+            {
+              "headline": "Rocket Lab Stock Dips 14%\u2014Buying Opportunity Ahead? - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-30T15:11:40",
+              "vader": 0.7303,
+              "relevance": 1.0,
+              "decay_w": 0.20349861511804823,
+              "source_w": 0.5,
+              "weight": 0.10174930755902412
+            },
+            {
+              "headline": "Analysts Expect Breakeven For Rocket Lab Corporation (NASDAQ:RKLB) Before Long",
+              "source": "finnhub",
+              "ts": "2025-10-30T14:00:19",
+              "vader": 0.4144,
+              "relevance": 1.0,
+              "decay_w": 0.18998977204285294,
+              "source_w": 1.0,
+              "weight": 0.18998977204285294
+            },
+            {
+              "headline": "Rocket Lab: Why This Stock Is A Long-Term Winner (NASDAQ:RKLB) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-10-30T13:37:49",
+              "vader": 0.8225,
+              "relevance": 1.0,
+              "decay_w": 0.18591868300354666,
+              "source_w": 0.5,
+              "weight": 0.09295934150177333
+            },
+            {
+              "headline": "Rocket Lab: Why This Stock Is A Long-Term Winner",
+              "source": "finnhub",
+              "ts": "2025-10-30T09:37:49",
+              "vader": 0.8625,
+              "relevance": 1.0,
+              "decay_w": 0.14756375649018608,
+              "source_w": 1.0,
+              "weight": 0.14756375649018608
+            },
+            {
+              "headline": "Rocket Lab Completes 15th Mission of 2025, Secures Role as Primary Launcher for Synspective Constellation",
+              "source": "finnhub",
+              "ts": "2025-10-29T15:25:19",
+              "vader": 0.3182,
+              "relevance": 1.0,
+              "decay_w": 0.0515476052105791,
+              "source_w": 1.0,
+              "weight": 0.0515476052105791
+            },
+            {
+              "headline": "Rocket Lab Corporation (RKLB) Stock Slides as Market Rises: Facts to Know Before You Trade",
+              "source": "finnhub",
+              "ts": "2025-10-28T22:15:05",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.019119247931490186,
+              "source_w": 1.0,
+              "weight": 0.019119247931490186
+            },
+            {
+              "headline": "Rocket Lab Corporation (RKLB) Stock Slides as Market Rises: Facts to Know Before You Trade - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-10-28T22:15:05",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.019119247931490186,
+              "source_w": 0.5,
+              "weight": 0.009559623965745093
+            },
+            {
+              "headline": "Rocket Lab Stock Is Gaining Momentum: What's Going On? (CORRECTED)",
+              "source": "benzinga",
+              "ts": "2025-10-28T18:14:10Z",
+              "vader": 0.7783,
+              "relevance": 1.0,
+              "decay_w": 0.015161571465051428,
+              "source_w": 0.9,
+              "weight": 0.013645414318546286
+            },
+            {
+              "headline": "RKLB vs. SPCE: Which Space Stock is the Smarter Player? - Zacks Investment Research",
+              "source": "google_rss",
+              "ts": "2025-10-28T16:53:58",
+              "vader": 0.7608,
+              "relevance": 1.0,
+              "decay_w": 0.014035013044046774,
+              "source_w": 0.5,
+              "weight": 0.007017506522023387
+            },
+            {
+              "headline": "Rocket Lab's Neutron: The Catalyst For A Correction? (Earnings Preview) (NASDAQ:RKLB) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-10-28T12:59:55",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.011203588965348099,
+              "source_w": 0.5,
+              "weight": 0.005601794482674049
+            },
+            {
+              "headline": "ULTY: Don't Fall For This 100%+ Dividend Yield Trap",
+              "source": "finnhub",
+              "ts": "2025-10-28T11:51:27",
+              "vader": -0.5789,
+              "relevance": 1.0,
+              "decay_w": 0.010488936215300483,
+              "source_w": 1.0,
+              "weight": 0.010488936215300483
+            },
+            {
+              "headline": "Rocket Lab's Neutron: The Catalyst For A Correction? (Earnings Preview)",
+              "source": "finnhub",
+              "ts": "2025-10-28T08:59:55",
+              "vader": -0.3919,
+              "relevance": 1.0,
+              "decay_w": 0.008892294454706438,
+              "source_w": 1.0,
+              "weight": 0.008892294454706438
+            },
+            {
+              "headline": "I Believe Rocket Lab Could Lose Half Its Value, Buy It Then (NASDAQ:RKLB) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-10-27T02:28:19",
+              "vader": -0.1531,
+              "relevance": 1.0,
+              "decay_w": 0.0015248494732574857,
+              "source_w": 0.5,
+              "weight": 0.0007624247366287429
+            },
+            {
+              "headline": "I Believe RocketLab Could Lose Half It's Value, Buy It Then",
+              "source": "finnhub",
+              "ts": "2025-10-26T22:28:19",
+              "vader": 0.4767,
+              "relevance": 1.0,
+              "decay_w": 0.0012102738289710448,
+              "source_w": 1.0,
+              "weight": 0.0012102738289710448
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.097693,
+          "conf": 0.097693,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "SNOW": {
+      "symbol": "SNOW",
+      "price": 269.72,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 250.97175000000001,
+        "ema12": 258.9446328617211,
+        "ema26": 248.57570547408383,
+        "macd": 10.368927387637285,
+        "macd_signal": 8.422034273265698,
+        "macd_hist": 1.946893114371587,
+        "rsi14": 69.91223387141966
+      },
+      "signals": {
+        "TS": 0.560341,
+        "NS": 0.393778,
+        "wT": 0.6818643308417299,
+        "wN": 0.3181356691582701,
+        "CDS": 0.507351,
+        "components": {
+          "rsi_pos": 0.3982446774283932,
+          "macd_hist_slope": 0.9600769918029378,
+          "ema20_slope": 0.08506179027266472
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Snowflake Inc. Stock (SNOW) Opinions on Executive Revenue Comments - Quiver Quantitative",
+              "source": "google_rss",
+              "ts": "2025-10-31T14:03:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7619247955647072,
+              "source_w": 0.5,
+              "weight": 0.3809623977823536
+            },
+            {
+              "headline": "Snowflake Inc. (SNOW) Is a Trending Stock: Facts to Know Before Betting on It - Yahoo! Finance UK",
+              "source": "google_rss",
+              "ts": "2025-10-31T13:00:04",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7171332444067927,
+              "source_w": 0.5,
+              "weight": 0.35856662220339636
+            },
+            {
+              "headline": "Snowflake Inc. $SNOW Shares Sold by Bordeaux Wealth Advisors LLC - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T11:26:34",
+              "vader": 0.8689,
+              "relevance": 1.0,
+              "decay_w": 0.655402005547534,
+              "source_w": 0.5,
+              "weight": 0.327701002773767
+            },
+            {
+              "headline": "SNOW stock trend outlook and recovery path - July 2025 Analyst Calls & Daily Technical Forecast Reports - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-31T10:58:54",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6381759149369959,
+              "source_w": 0.5,
+              "weight": 0.31908795746849794
+            },
+            {
+              "headline": "Citizens JMP Raises Snowflake (SNOW) PT to $325, Reiterates Outperform Rating - MSN",
+              "source": "google_rss",
+              "ts": "2025-10-31T10:01:10",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6036737113956844,
+              "source_w": 0.5,
+              "weight": 0.3018368556978422
+            },
+            {
+              "headline": "Is Tidal Trust II YieldMax SNOW stock expanding market penetration - Market Trend Report & AI Optimized Trading Strategy Guides - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-31T09:28:12",
+              "vader": 0.9118,
+              "relevance": 1.0,
+              "decay_w": 0.5848156582192177,
+              "source_w": 0.5,
+              "weight": 0.29240782910960883
+            },
+            {
+              "headline": "Microsoft Q1 Earnings & Revenues Beat on Cloud, AI Strength",
+              "source": "finnhub",
+              "ts": "2025-10-30T18:11:00",
+              "vader": 0.8402,
+              "relevance": 1.0,
+              "decay_w": 0.24184673322564432,
+              "source_w": 1.0,
+              "weight": 0.24184673322564432
+            },
+            {
+              "headline": "Snowflake (SNOW) Sees $10B Revenue in Sight \u2014 Wall Street Boosts Price Target",
+              "source": "finnhub",
+              "ts": "2025-10-30T16:09:36",
+              "vader": 0.3182,
+              "relevance": 1.0,
+              "decay_w": 0.21517074494020486,
+              "source_w": 1.0,
+              "weight": 0.21517074494020486
+            },
+            {
+              "headline": "Citi Raises Palantir (PLTR) Price Target Ahead of Earnings; RBC Warns on Valuation",
+              "source": "finnhub",
+              "ts": "2025-10-30T14:21:34",
+              "vader": 0.7783,
+              "relevance": 1.0,
+              "decay_w": 0.19391651050845404,
+              "source_w": 1.0,
+              "weight": 0.19391651050845404
+            },
+            {
+              "headline": "Palantir, Snowflake tie-up to yield \u2018AI promises,\u2019 Snowflake CIO says",
+              "source": "finnhub",
+              "ts": "2025-10-30T12:43:39",
+              "vader": 0.4019,
+              "relevance": 1.0,
+              "decay_w": 0.1764721194937062,
+              "source_w": 1.0,
+              "weight": 0.1764721194937062
+            },
+            {
+              "headline": "Snowflake Stock Is on Fire\u2014It\u2019s Still Not Too Late to Buy - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-30T12:10:27",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.17092094061848997,
+              "source_w": 0.5,
+              "weight": 0.08546047030924499
+            },
+            {
+              "headline": "For Snowflake Insiders, Selling US$6.3m Of Shares Was A Smart Move",
+              "source": "finnhub",
+              "ts": "2025-10-30T12:00:30",
+              "vader": 0.8957,
+              "relevance": 1.0,
+              "decay_w": 0.16929152098022607,
+              "source_w": 1.0,
+              "weight": 0.16929152098022607
+            },
+            {
+              "headline": "Backblaze vs. Snowflake: Which Cloud Data Stock Is the Better Buy?",
+              "source": "finnhub",
+              "ts": "2025-10-29T16:50:00",
+              "vader": 0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.05592607742947985,
+              "source_w": 1.0,
+              "weight": 0.05592607742947985
+            },
+            {
+              "headline": "JMP Securities Maintains Snowflake (SNOW) Market Outperform Recommendation",
+              "source": "finnhub",
+              "ts": "2025-10-28T23:59:43",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.02114548790557131,
+              "source_w": 1.0,
+              "weight": 0.02114548790557131
+            },
+            {
+              "headline": "Is Datadog (DDOG) The Best AI SaaS Stock to Buy?",
+              "source": "finnhub",
+              "ts": "2025-10-28T21:21:40",
+              "vader": 0.8885,
+              "relevance": 1.0,
+              "decay_w": 0.018160903275153878,
+              "source_w": 1.0,
+              "weight": 0.018160903275153878
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.348265,
+          "conf": 0.348265,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "TTWO": {
+      "symbol": "TTWO",
+      "price": 254.36,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 256.68024999999994,
+        "ema12": 254.85145150104105,
+        "ema26": 254.23772524067928,
+        "macd": 0.6137262603617728,
+        "macd_signal": 1.8216931839549368,
+        "macd_hist": -1.207966923593164,
+        "rsi14": 50.48631290523784
+      },
+      "signals": {
+        "TS": -0.330441,
+        "NS": 0.428698,
+        "wT": 0.7147632064424578,
+        "wN": 0.2852367935575421,
+        "CDS": -0.113906,
+        "components": {
+          "rsi_pos": 0.009726258104756767,
+          "macd_hist_slope": -0.8360685940557568,
+          "ema20_slope": 0.00048094655977974057
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "BLB&B Advisors LLC Sells 28,151 Shares of Take-Two Interactive Software, Inc. $TTWO - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T12:31:47",
+              "vader": 0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.6978702305685542,
+              "source_w": 0.5,
+              "weight": 0.3489351152842771
+            },
+            {
+              "headline": "New York Life Investment Management LLC Buys 1,022 Shares of Take-Two Interactive Software, Inc. $TTWO - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-10-31T09:31:35",
+              "vader": 0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.5867235960416306,
+              "source_w": 0.5,
+              "weight": 0.2933617980208153
+            },
+            {
+              "headline": "Is TTWO stock a defensive play in 2025 - Earnings Overview Summary & Advanced Technical Signal Analysis - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-31T05:07:09",
+              "vader": 0.7906,
+              "relevance": 1.0,
+              "decay_w": 0.4548568232450438,
+              "source_w": 0.5,
+              "weight": 0.2274284116225219
+            },
+            {
+              "headline": "Comcast's Q3 Earnings Surpass Estimates, Revenues Decrease Y/Y",
+              "source": "finnhub",
+              "ts": "2025-10-30T17:38:00",
+              "vader": 0.5556,
+              "relevance": 1.0,
+              "decay_w": 0.23428420881722223,
+              "source_w": 1.0,
+              "weight": 0.23428420881722223
+            },
+            {
+              "headline": "Electronic Arts Q2 Earnings and Revenues Decline Year Over Year",
+              "source": "finnhub",
+              "ts": "2025-10-30T16:16:00",
+              "vader": -0.2732,
+              "relevance": 1.0,
+              "decay_w": 0.2165005707573541,
+              "source_w": 1.0,
+              "weight": 0.2165005707573541
+            },
+            {
+              "headline": "Fund Update: BAILARD, INC. opened a $3.0M position in TTWO stock - Quiver Quantitative",
+              "source": "google_rss",
+              "ts": "2025-10-30T14:27:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.19493348586147538,
+              "source_w": 0.5,
+              "weight": 0.09746674293073769
+            },
+            {
+              "headline": "Take-Two Interactive (TTWO) Earnings Expected to Grow: Should You Buy?",
+              "source": "finnhub",
+              "ts": "2025-10-30T14:00:41",
+              "vader": 0.2263,
+              "relevance": 1.0,
+              "decay_w": 0.19005684867826703,
+              "source_w": 1.0,
+              "weight": 0.19005684867826703
+            },
+            {
+              "headline": "Take-Two Interactive Software, Inc. (TTWO) is Attracting Investor Attention: Here is What You Should Know",
+              "source": "finnhub",
+              "ts": "2025-10-30T13:00:02",
+              "vader": 0.7351,
+              "relevance": 1.0,
+              "decay_w": 0.1792775579661558,
+              "source_w": 1.0,
+              "weight": 0.1792775579661558
+            },
+            {
+              "headline": "Is TTWO stock a buy before product launches - Weekly Stock Recap & Detailed Earnings Play Alerts - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-29T11:06:13",
+              "vader": 0.5859,
+              "relevance": 1.0,
+              "decay_w": 0.04016793494511519,
+              "source_w": 0.5,
+              "weight": 0.020083967472557595
+            },
+            {
+              "headline": "Take-Two Interactive (TTWO) Stock Dips While Market Gains: Key Facts",
+              "source": "finnhub",
+              "ts": "2025-10-28T21:50:03",
+              "vader": 0.34,
+              "relevance": 1.0,
+              "decay_w": 0.01866398763361246,
+              "source_w": 1.0,
+              "weight": 0.01866398763361246
+            },
+            {
+              "headline": "Take-Two Interactive (TTWO) Stock Dips While Market Gains: Key Facts - Nasdaq",
+              "source": "google_rss",
+              "ts": "2025-10-28T21:50:00",
+              "vader": 0.5859,
+              "relevance": 1.0,
+              "decay_w": 0.018663089260067236,
+              "source_w": 0.5,
+              "weight": 0.009331544630033618
+            },
+            {
+              "headline": "Take-Two Interactive Software Inc. stock underperforms Tuesday when compared to competitors",
+              "source": "finnhub",
+              "ts": "2025-10-28T16:52:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.014008465431045437,
+              "source_w": 1.0,
+              "weight": 0.014008465431045437
+            },
+            {
+              "headline": "Is It Worth Investing in Take-Two (TTWO) Based on Wall Street's Bullish Views?",
+              "source": "finnhub",
+              "ts": "2025-10-28T13:30:03",
+              "vader": 0.4515,
+              "relevance": 1.0,
+              "decay_w": 0.011533359514277157,
+              "source_w": 1.0,
+              "weight": 0.011533359514277157
+            },
+            {
+              "headline": "Best Buy (BBY)\u2019s \u201cBeen Sneaking Up,\u201d Says Jim Cramer",
+              "source": "finnhub",
+              "ts": "2025-10-28T11:53:17",
+              "vader": 0.9274,
+              "relevance": 1.0,
+              "decay_w": 0.010507465094757903,
+              "source_w": 1.0,
+              "weight": 0.010507465094757903
+            },
+            {
+              "headline": "ESPO: Game Cycle And AI Implementation Offer More Gains Ahead",
+              "source": "finnhub",
+              "ts": "2025-10-28T02:12:49",
+              "vader": 0.4005,
+              "relevance": 1.0,
+              "decay_w": 0.006009058867004119,
+              "source_w": 1.0,
+              "weight": 0.006009058867004119
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.191604,
+          "conf": 0.191604,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "VOO": {
+      "symbol": "VOO",
+      "price": 627.39,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "ETF",
+      "indicators": {
+        "sma20": 617.5935,
+        "ema12": 622.8418563784671,
+        "ema26": 617.123641777748,
+        "macd": 5.7182146007190795,
+        "macd_signal": 4.713062824754362,
+        "macd_hist": 1.005151775964718,
+        "rsi14": 61.5302277737916
+      },
+      "signals": {
+        "TS": 0.401069,
+        "NS": 0.170837,
+        "wT": 0.6286770835267537,
+        "wN": 0.37132291647324633,
+        "CDS": 0.315579,
+        "components": {
+          "rsi_pos": 0.23060455547583203,
+          "macd_hist_slope": 0.763749294786529,
+          "ema20_slope": 0.016635820647994688
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Nasdaq 100 Rebounds, Amazon Jumps 10% On Strong Earnings: What's Moving Markets Friday?",
+              "source": "benzinga",
+              "ts": "2025-10-31T17:26:36Z",
+              "vader": 0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.9269081491935928,
+              "source_w": 0.9,
+              "weight": 0.8342173342742335
+            },
+            {
+              "headline": "S&P 500's Winning Streak Marks Rare Milestone\u2014What Happens Next?",
+              "source": "benzinga",
+              "ts": "2025-10-31T15:01:02Z",
+              "vader": 0.7506,
+              "relevance": 1.0,
+              "decay_w": 0.8057043015691419,
+              "source_w": 0.9,
+              "weight": 0.7251338714122277
+            },
+            {
+              "headline": "Dow Jones Industrial Average Vs. Nasdaq: Rethink Blue Chips' Safety",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:49:56",
+              "vader": 0.4588,
+              "relevance": 1.0,
+              "decay_w": 0.7524003176508115,
+              "source_w": 1.0,
+              "weight": 0.7524003176508115
+            },
+            {
+              "headline": "U.S. Economy: The Pain In Housing Is Just Beginning",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:47:12",
+              "vader": -0.765,
+              "relevance": 1.0,
+              "decay_w": 0.75042306002914,
+              "source_w": 1.0,
+              "weight": 0.75042306002914
+            },
+            {
+              "headline": "Trump's Asia Tour Was Squarely About One Thing",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:00:32",
+              "vader": 0.5423,
+              "relevance": 1.0,
+              "decay_w": 0.7174554975491618,
+              "source_w": 1.0,
+              "weight": 0.7174554975491618
+            },
+            {
+              "headline": "S&P 500: The Most Hated Rally May Still Have Legs, But Risks Loom",
+              "source": "finnhub",
+              "ts": "2025-10-31T12:51:04",
+              "vader": -0.8554,
+              "relevance": 1.0,
+              "decay_w": 0.710946598629678,
+              "source_w": 1.0,
+              "weight": 0.710946598629678
+            },
+            {
+              "headline": "Highlights From The Trump Administration's East Asia Deals",
+              "source": "finnhub",
+              "ts": "2025-10-31T12:17:40",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6884502052524248,
+              "source_w": 1.0,
+              "weight": 0.6884502052524248
+            },
+            {
+              "headline": "VOO ETF Daily Update, 10/31/2025 - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-10-31T11:41:52",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6651271157435791,
+              "source_w": 0.5,
+              "weight": 0.33256355787178954
+            },
+            {
+              "headline": "Since 1800, The Market Has Taught This Lesson, But Few Learn",
+              "source": "finnhub",
+              "ts": "2025-10-31T11:15:02",
+              "vader": 0.8625,
+              "relevance": 1.0,
+              "decay_w": 0.6481652020841372,
+              "source_w": 1.0,
+              "weight": 0.6481652020841372
+            },
+            {
+              "headline": "How This AI-Driven Market Could Rally QQQ 30%, Then Ruin Retirements",
+              "source": "finnhub",
+              "ts": "2025-10-31T09:38:38",
+              "vader": 0.0772,
+              "relevance": 1.0,
+              "decay_w": 0.5907192720160307,
+              "source_w": 1.0,
+              "weight": 0.5907192720160307
+            },
+            {
+              "headline": "U.S. Economy Probably Grew At Solid Pace In Q3",
+              "source": "finnhub",
+              "ts": "2025-10-31T08:35:00",
+              "vader": 0.1531,
+              "relevance": 1.0,
+              "decay_w": 0.5556178892354088,
+              "source_w": 1.0,
+              "weight": 0.5556178892354088
+            },
+            {
+              "headline": "Trump's East Asia Trip: Temporary Truce And Uncertain Commitments",
+              "source": "finnhub",
+              "ts": "2025-10-31T07:00:00",
+              "vader": -0.1779,
+              "relevance": 1.0,
+              "decay_w": 0.5070572360072848,
+              "source_w": 1.0,
+              "weight": 0.5070572360072848
+            },
+            {
+              "headline": "AAII Sentiment Survey: Optimism Rises",
+              "source": "finnhub",
+              "ts": "2025-10-30T17:47:39",
+              "vader": 0.7906,
+              "relevance": 1.0,
+              "decay_w": 0.2364708734269465,
+              "source_w": 1.0,
+              "weight": 0.2364708734269465
+            },
+            {
+              "headline": "Meta Tumbles 10%, Google Marks Historic Rally: What's Moving Markets Thursday?",
+              "source": "benzinga",
+              "ts": "2025-10-30T17:40:46Z",
+              "vader": -0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.23490905240270438,
+              "source_w": 0.9,
+              "weight": 0.21141814716243396
+            },
+            {
+              "headline": "Forget Stock Picking: 'VOO and Chill' Is Good Enough for This Money Writer - money.com",
+              "source": "google_rss",
+              "ts": "2025-10-30T17:31:00",
+              "vader": 0.5994,
+              "relevance": 1.0,
+              "decay_w": 0.23271069158469423,
+              "source_w": 0.5,
+              "weight": 0.11635534579234712
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.601538,
+          "conf": 0.601538,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    },
+    "VTI": {
+      "symbol": "VTI",
+      "price": 335.48,
+      "ts": "2025-10-31T04:00:00Z",
+      "sector": "ETF",
+      "indicators": {
+        "sma20": 330.91024999999985,
+        "ema12": 333.3959072061718,
+        "ema26": 330.59348129751237,
+        "macd": 2.8024259086594157,
+        "macd_signal": 2.3863702136325595,
+        "macd_hist": 0.41605569502685613,
+        "rsi14": 60.17014400652918
+      },
+      "signals": {
+        "TS": 0.241758,
+        "NS": 0.277286,
+        "wT": 0.7040447297739625,
+        "wN": 0.29595527022603746,
+        "CDS": 0.252273,
+        "components": {
+          "rsi_pos": 0.20340288013058355,
+          "macd_hist_slope": 0.39360237394424585,
+          "ema20_slope": 0.014781049775419207
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 13,
+          "samples": [
+            {
+              "headline": "Dow Jones Industrial Average Vs. Nasdaq: Rethink Blue Chips' Safety",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:49:56",
+              "vader": 0.4588,
+              "relevance": 1.0,
+              "decay_w": 0.7524003176508115,
+              "source_w": 1.0,
+              "weight": 0.7524003176508115
+            },
+            {
+              "headline": "VTI ETF Daily Update, 10/31/2025 - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-10-31T12:12:02",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6847266839741875,
+              "source_w": 0.5,
+              "weight": 0.34236334198709373
+            },
+            {
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Portfolio Update Report & Community Trade Idea Sharing Platform - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-31T05:35:06",
+              "vader": 0.9186,
+              "relevance": 1.0,
+              "decay_w": 0.46726207266981457,
+              "source_w": 0.5,
+              "weight": 0.23363103633490728
+            },
+            {
+              "headline": "Will VTI stock top growth indexes - Market Risk Summary & Momentum Based Trading Ideas - newser.com",
+              "source": "google_rss",
+              "ts": "2025-10-31T04:36:03",
+              "vader": 0.5574,
+              "relevance": 1.0,
+              "decay_w": 0.44144021074016326,
+              "source_w": 0.5,
+              "weight": 0.22072010537008163
+            },
+            {
+              "headline": "Benzinga Market Summary: Meta And Microsoft Fall On Earnings, Weighing On S&P,  Gold Climbs Higher, US And China Reach Rare Earth Deal",
+              "source": "benzinga",
+              "ts": "2025-10-30T18:27:08Z",
+              "vader": 0.0258,
+              "relevance": 1.0,
+              "decay_w": 0.2456323296532807,
+              "source_w": 0.9,
+              "weight": 0.22106909668795263
+            },
+            {
+              "headline": "2 Defensive ETFs Beating the VTI This Year - 24/7 Wall St.",
+              "source": "google_rss",
+              "ts": "2025-10-30T17:51:32",
+              "vader": -0.7003,
+              "relevance": 1.0,
+              "decay_w": 0.23735657486349637,
+              "source_w": 0.5,
+              "weight": 0.11867828743174819
+            },
+            {
+              "headline": "VTI ETF Daily Update, 10/30/2025 - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-10-30T12:08:52",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.17066060736730793,
+              "source_w": 0.5,
+              "weight": 0.08533030368365396
+            },
+            {
+              "headline": "Fed Cuts Key Overnight Rate By 25 bps",
+              "source": "benzinga",
+              "ts": "2025-10-29T18:00:09Z",
+              "vader": -0.296,
+              "relevance": 1.0,
+              "decay_w": 0.05983342717770706,
+              "source_w": 0.9,
+              "weight": 0.05385008445993635
+            },
+            {
+              "headline": "2 Defensive ETFs Beating the VTI This Year - AOL.com",
+              "source": "google_rss",
+              "ts": "2025-10-29T16:05:48",
+              "vader": -0.7003,
+              "relevance": 1.0,
+              "decay_w": 0.053596257214655406,
+              "source_w": 0.5,
+              "weight": 0.026798128607327703
+            },
+            {
+              "headline": "Benzinga Market Summary: Nuclear Stocks Rise On Cameco Deal With Brookfield And US Government, NVIDIA To Make Investment In Nokia, S&P Rises",
+              "source": "benzinga",
+              "ts": "2025-10-28T19:13:42Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.01605591048769218,
+              "source_w": 0.9,
+              "weight": 0.014450319438922964
+            },
+            {
+              "headline": "VOO vs VTI: Which Vanguard ETF Will Win Over the Next 5 Years? - 24/7 Wall St.",
+              "source": "google_rss",
+              "ts": "2025-10-28T17:19:39",
+              "vader": 0.8458,
+              "relevance": 1.0,
+              "decay_w": 0.014386360894845724,
+              "source_w": 0.5,
+              "weight": 0.007193180447422862
+            },
+            {
+              "headline": "Is VTI stock suitable for passive index funds - Trade Risk Assessment & AI Driven Stock Price Forecasts - Funda\u00e7\u00e3o Cultural do Par\u00e1",
+              "source": "google_rss",
+              "ts": "2025-10-28T05:12:51",
+              "vader": -0.1531,
+              "relevance": 1.0,
+              "decay_w": 0.007146244879482455,
+              "source_w": 0.5,
+              "weight": 0.0035731224397412276
+            },
+            {
+              "headline": "Benzinga Market Summary: Stocks Rise On US-China Trade Hopes, Argentina Stocks Climb On Milei Midterm Election Victory, Gold Pulls Back",
+              "source": "benzinga",
+              "ts": "2025-10-27T18:37:36Z",
+              "vader": 0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.0038768735622104014,
+              "source_w": 0.9,
+              "weight": 0.0034891862059893614
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 13,
+          "avg_decay_w": 0.242644,
+          "conf": 0.242644,
+          "regime_bias": 0.296703
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.38271763169393713,
+            "Unknown": 0.284400900160947,
+            "Consumer Discretionary": 0.5082866038776167,
+            "ETF": 0.23678593120803954
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Hold"
+    }
+  }
 }

@@ -1,23 +1,85 @@
 {
-  "as_of_utc": "2025-10-31T18:36:56.902138+00:00",
+  "as_of_utc": "2025-10-31T18:45:26.473916+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
   },
   "portfolio_paper": {
-    "portfolio_value_est": 0.0,
+    "portfolio_value_est": 8251.09,
     "deploy_rules": {
       "max_deploy_frac": 0.15,
       "per_line_frac": 0.04
     },
-    "trades": [],
-    "residual_budget_hint": 0.0
+    "trades": [
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 247.51,
+        "qty_hint": 0.0,
+        "cds": 0.539121,
+        "qty": 1,
+        "notional": 247.51
+      },
+      {
+        "symbol": "GOOGL",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 279.41,
+        "qty_hint": 0.0,
+        "cds": 0.527974,
+        "qty": 1,
+        "notional": 279.41
+      },
+      {
+        "symbol": "SNOW",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 269.72,
+        "qty_hint": 0.0,
+        "cds": 0.507351,
+        "qty": 1,
+        "notional": 269.72
+      },
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 271.86,
+        "qty_hint": 0.0,
+        "cds": 0.504775,
+        "qty": 1,
+        "notional": 271.86
+      }
+    ],
+    "residual_budget_hint": 169.16
   },
   "portfolio_personal": {
-    "portfolio_value_est": 0.0,
+    "portfolio_value_est": 19038.11,
     "cash_start": 500.0,
     "per_line_frac": 0.02,
-    "trades": [],
-    "cash_left": 500.0
+    "trades": [
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 247.51,
+        "qty_hint": 0.0,
+        "cds": 0.539121,
+        "qty": 1,
+        "notional": 247.51
+      },
+      {
+        "symbol": "NVDA",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 204.24,
+        "qty_hint": 0.0,
+        "cds": 0.497228,
+        "qty": 1,
+        "notional": 204.24
+      }
+    ],
+    "cash_left": 48.25
   }
 }
