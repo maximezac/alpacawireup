@@ -68,8 +68,8 @@ jobs:
         env:
           INPUT_PATH: data/prices.json
           OUTPUT_PATH: data/prices_final.json
-          MAX_ARTICLES: "10"
-          DECAY_HALF_LIFE_HOURS: "24"
+          MAX_ARTICLES: "15"
+          DECAY_HALF_LIFE_HOURS: "12"
           SECTOR_NUDGE: "0.05"
           GENERATE_NOW: "1"
           ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
