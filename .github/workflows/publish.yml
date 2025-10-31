@@ -77,11 +77,42 @@ jobs:
         run: |
           python publish_feed.py
 
+      - name: Postprocess outputs (slim, portfolio-only, watchlist, trades)
+        env:
+          INPUT_FINAL: data/prices_final.json
+          # thresholds
+          BUY_THRESHOLD: "0.35"
+          SELL_THRESHOLD: "-0.25"
+          # watchlist knobs
+          TS_WATCH: "0.50"
+          NS_WATCH: "0.50"
+          WATCH_TOP: "20"
+          # sizing knobs
+          A_MAX_DEPLOY_FRAC: "0.15"
+          A_PER_LINE_FRAC: "0.04"
+          B_PER_LINE_FRAC: "0.02"
+          # portfolio paths & cash
+          PORT_A_CSV: data/portfolio_a.csv
+          PORT_B_CSV: data/portfolio_b.csv
+          PORTFOLIO_B_CASH: "500"      # optional, if you want B to have usable cash
+          # outputs
+          OUT_SLIM: data/prices_final_slim.json
+          OUT_PORTA_ONLY: data/prices_final_porta.json
+          OUT_PORTB_ONLY: data/prices_final_portb.json
+          OUT_WATCHLIST: data/watchlist_summary.json
+          OUT_TRADES: data/recommended_trades.json
+        run: |
+          python scripts/postprocess_outputs.py
+
+
       - name: Commit updated feed to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/prices.json data/prices_final.json
+          git add data/prices.json data/prices_final.json \
+                 data/prices_final_slim.json data/prices_final_porta.json data/prices_final_portb.json \
+                 data/watchlist_summary.json data/recommended_trades.json \
+                 data/portfolio_a.csv data/portfolio_b.csv
           git commit -m "chore: refresh prices & enriched feed (v2.2.1)" || echo "No changes to commit."
           git push
 
