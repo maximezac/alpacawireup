@@ -155,6 +155,31 @@ def get_news_from_google(symbol: str) -> list[dict]:
         })
     return out
 
+def get_news_from_reddit(symbol: str) -> list[dict]:
+    """Fetch recent Reddit posts mentioning the symbol."""
+    url = f"https://www.reddit.com/search.json?q={symbol}&limit=25&t=day"
+    headers = {"User-Agent": "alpacawireup/1.0"}
+    try:
+        r = requests.get(url, headers=headers, timeout=15)
+        if r.status_code != 200:
+            return []
+        posts = r.json().get("data", {}).get("children", [])
+        out = []
+        for p in posts:
+            data = p.get("data", {})
+            out.append({
+                "headline": data.get("title"),
+                "summary": data.get("selftext") or "",
+                "ts": datetime.utcfromtimestamp(data.get("created_utc", 0)).isoformat(),
+                "source": "reddit",
+                "url": f"https://reddit.com{data.get('permalink','')}",
+                "relevance": 0.8 if data.get("score", 0) > 50 else 0.4
+            })
+        return out
+    except Exception as e:
+        print(f"[WARN] Reddit fetch failed for {symbol}: {e}")
+        return []
+
 
 def main():
     with open(INPUT_PATH, "r", encoding="utf-8") as f:
@@ -188,9 +213,57 @@ def main():
                 extra_news += get_news_from_finnhub(sym, FINNHUB_KEY)
             if "google_rss" in sources:
                 extra_news += get_news_from_google(sym)
+            if "reddit" in sources:
+                extra_news += get_news_from_reddit(sym)
+
 
 
             news_items = alpaca_news + extra_news
+
+            # ----------------------------------------------------------
+            # 🧹 Deduplicate and trim news items
+            # ----------------------------------------------------------
+            # Remove duplicate headlines across all sources (case-insensitive)
+            seen = set()
+            deduped = []
+            for a in news_items:
+                key = (a.get("headline", "").strip().lower(), a.get("source", "").lower())
+                if key in seen:
+                    continue
+                seen.add(key)
+                deduped.append(a)
+
+            # Sort by timestamp (newest first)
+            from dateutil import parser
+            def _safe_parse(ts):
+                try:
+                    return parser.isoparse(ts)
+                except Exception:
+                    return datetime.min.replace(tzinfo=timezone.utc)
+
+            deduped.sort(key=lambda x: _safe_parse(x.get("ts") or x.get("time") or ""), reverse=True)
+
+            # Apply global cap per symbol
+            MAX_ARTICLES_TOTAL = 50
+            news_items = deduped[:MAX_ARTICLES_TOTAL]
+
+            # Optional: drop stale articles older than lookback window (redundant safeguard)
+            cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
+            filtered = []
+            for a in news_items:
+                ts = _safe_parse(a.get("ts") or a.get("time") or "")
+                if ts >= cutoff:
+                    filtered.append(a)
+            news_items = filtered
+
+            # ----------------------------------------------------------
+            # ✅ Summary print for debugging
+            # ----------------------------------------------------------
+            print(
+                f"   [•] {sym}: {len(news_items)} deduped & filtered articles "
+                f"(from {len(alpaca_news)+len(extra_news)} raw)"
+            )
+            
 
             # Attach/overwrite news array
             node["news"] = news_items
