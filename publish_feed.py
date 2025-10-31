@@ -26,8 +26,8 @@ DEFAULT_INPUT_PATH = os.environ.get("INPUT_PATH", "data/prices.json")
 DEFAULT_OUTPUT_PATH = os.environ.get("OUTPUT_PATH", "data/prices_final.json")
 FEED_URL = os.environ.get("FEED_URL")
 
-MAX_ARTICLES = int(os.environ.get("MAX_ARTICLES", "10"))
-HALF_LIFE_HOURS = float(os.environ.get("DECAY_HALF_LIFE_HOURS", "24"))
+MAX_ARTICLES = int(os.environ.get("MAX_ARTICLES", "15"))
+HALF_LIFE_HOURS = float(os.environ.get("DECAY_HALF_LIFE_HOURS", "12"))
 SECTOR_NUDGE = float(os.environ.get("SECTOR_NUDGE", "0.05"))
 
 analyzer = SentimentIntensityAnalyzer()
