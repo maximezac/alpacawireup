@@ -382,13 +382,20 @@ def compute_ns_for_ticker(sym_data: Dict[str, Any], now_dt: datetime) -> Tuple[f
         text_parts = [a.get("headline") or "", a.get("summary") or ""]
         if not any(tp.strip() for tp in text_parts):
             continue
+
         text = ". ".join(tp for tp in text_parts if tp)
         vs = analyzer.polarity_scores(text)["compound"]
+
         rel = float(a.get("relevance", 1.0) or 1.0)
         dec = _freshness_weight(a.get("ts") or a.get("time") or "", now_dt)
-        w = max(0.0, rel) * max(0.0, dec)
+        src = (a.get("source") or "").lower()
+        src_w = NEWS_SOURCE_WEIGHTS.get(src, 0.5)  # default if not found
+
+        # combine relevance × decay × source weight
+        w = max(0.0, rel) * max(0.0, dec) * max(0.0, src_w)
         if w == 0.0:
             continue
+
         scores.append((vs, w))
         selected.append({
             "headline": a.get("headline"),
@@ -397,6 +404,7 @@ def compute_ns_for_ticker(sym_data: Dict[str, Any], now_dt: datetime) -> Tuple[f
             "vader": vs,
             "relevance": rel,
             "decay_w": dec,
+            "source_w": src_w,
             "weight": w
         })
     if not scores:
