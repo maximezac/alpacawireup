@@ -1,11 +1,11 @@
 {
-  "as_of_utc": "2025-10-31T18:45:26.473916+00:00",
+  "as_of_utc": "2025-10-31T18:52:58.553556+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
   },
   "portfolio_paper": {
-    "portfolio_value_est": 8251.09,
+    "portfolio_value_est": 8232.08,
     "deploy_rules": {
       "max_deploy_frac": 0.15,
       "per_line_frac": 0.04
@@ -15,47 +15,47 @@
         "symbol": "AMZN",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 247.51,
+        "px": 246.88,
         "qty_hint": 0.0,
-        "cds": 0.539121,
+        "cds": 0.537347,
         "qty": 1,
-        "notional": 247.51
+        "notional": 246.88
       },
       {
         "symbol": "GOOGL",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 279.41,
+        "px": 279.3,
         "qty_hint": 0.0,
-        "cds": 0.527974,
+        "cds": 0.527421,
         "qty": 1,
-        "notional": 279.41
+        "notional": 279.3
       },
       {
         "symbol": "SNOW",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 269.72,
+        "px": 269.185,
         "qty_hint": 0.0,
-        "cds": 0.507351,
+        "cds": 0.502971,
         "qty": 1,
-        "notional": 269.72
+        "notional": 269.19
       },
       {
         "symbol": "AAPL",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 271.86,
+        "px": 271.62,
         "qty_hint": 0.0,
-        "cds": 0.504775,
+        "cds": 0.502526,
         "qty": 1,
-        "notional": 271.86
+        "notional": 271.62
       }
     ],
-    "residual_budget_hint": 169.16
+    "residual_budget_hint": 167.83
   },
   "portfolio_personal": {
-    "portfolio_value_est": 19038.11,
+    "portfolio_value_est": 19017.38,
     "cash_start": 500.0,
     "per_line_frac": 0.02,
     "trades": [
@@ -63,23 +63,23 @@
         "symbol": "AMZN",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 247.51,
+        "px": 246.88,
         "qty_hint": 0.0,
-        "cds": 0.539121,
+        "cds": 0.537347,
         "qty": 1,
-        "notional": 247.51
+        "notional": 246.88
       },
       {
         "symbol": "NVDA",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 204.24,
+        "px": 203.71,
         "qty_hint": 0.0,
-        "cds": 0.497228,
+        "cds": 0.495115,
         "qty": 1,
-        "notional": 204.24
+        "notional": 203.71
       }
     ],
-    "cash_left": 48.25
+    "cash_left": 49.41
   }
 }
