@@ -17,6 +17,7 @@ Env (optional):
 """
 import os, sys, json
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 import requests
 import feedparser
 
@@ -124,7 +125,11 @@ def get_news_from_newsapi(symbol: str, api_key: str) -> list[dict]:
     return out
 
 def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
-    url = f"https://finnhub.io/api/v1/company-news?symbol={symbol}&from=2025-10-01&to=2025-10-30&token={api_key}"
+    now = datetime.utcnow().date()
+    start = (now - timedelta(days=LOOKBACK_DAYS)).isoformat()
+    end = now.isoformat()
+    url = f"https://finnhub.io/api/v1/company-news?symbol={symbol}&from={start}&to={end}&token={api_key}"
+
     r = requests.get(url, timeout=15)
     if r.status_code != 200:
         return []
@@ -132,7 +137,7 @@ def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
     return [{
         "headline": it.get("headline"),
         "summary": it.get("summary") or "",
-        "ts": it.get("datetime"),
+        "ts": datetime.utcfromtimestamp(it.get("datetime")).isoformat() if it.get("datetime") else None,
         "source": "finnhub",
         "relevance": 1.0
     } for it in items]
@@ -149,7 +154,7 @@ def get_news_from_google(symbol: str) -> list[dict]:
         out.append({
             "headline": entry.title,
             "summary": entry.get("summary", ""),
-            "ts": entry.get("published", ""),
+            "ts": entry.get("published_parsed") and datetime(*entry.published_parsed[:6]).isoformat() or entry.get("published", ""),
             "source": "google_rss",
             "url": entry.link
         })
@@ -254,6 +259,8 @@ def main():
                 ts = _safe_parse(a.get("ts") or a.get("time") or "")
                 if ts >= cutoff:
                     filtered.append(a)
+                if ts < cutoff:
+                    print(f"[DEBUG] Dropped old {a.get('source')} article for {sym}: {a.get('ts')}")
             news_items = filtered
 
             # ----------------------------------------------------------
