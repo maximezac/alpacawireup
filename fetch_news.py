@@ -40,6 +40,18 @@ headers = {
     "APCA-API-SECRET-KEY": ALPACA_SECRET_KEY,
 }
 
+# ==========================================================
+# Source weighting map (tunable)
+# ==========================================================
+NEWS_SOURCE_WEIGHTS = {
+    "finnhub": 1.00,
+    "benzinga": 0.90,
+    "mtnewswires": 0.95,
+    "google_rss": 0.50,
+    "reddit": 0.35,
+    "newsapi": 0.30
+}
+
 def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
     """
     Fetch up to NEWS_LIMIT stories between start and end for a single symbol.
