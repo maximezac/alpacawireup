@@ -585,32 +585,60 @@ def main():
     # ----------------------------------------------------------
     # ADDITIONAL SECTION: live snapshot ("now") data
     # ----------------------------------------------------------
+    # ----------------------------------------------------------
+    # 🕒 Real-time “now” snapshot (separate from daily bars)
+    # ----------------------------------------------------------
     try:
-        import fetch_prices
+        import fetch_prices  # uses your existing get_now_data()
         symbols_list = list(out["symbols"].keys())
-        now_data = fetch_prices.get_now_data(symbols_list)
+
+        # Optional toggle (set GENERATE_NOW=0 in CI to skip)
+        if os.getenv("GENERATE_NOW", "1") != "1":
+            raise RuntimeError("GENERATE_NOW disabled")
+
+        live_quotes = fetch_prices.get_now_data(symbols_list)
 
         now_block = {}
-        for sym, node in now_data.items():
-            t_price = float(node.get("price") or 0)
-            dummy_t = {
-                "price": t_price,
-                "indicators": out["symbols"][sym]["indicators"],
+        for sym in symbols_list:
+            # Skip if no live quote returned
+            node = live_quotes.get(sym)
+            if not node:
+                continue
+
+            latest_price = node.get("price")
+            if latest_price is None:
+                continue
+    
+            # Reuse the daily indicators so TS can be computed at the latest price
+            # Construct a minimal ticker payload for compute_ts()
+            ref = out["symbols"][sym]
+            ticker_for_ts = {
+                "price": float(latest_price),
+                "indicators": ref.get("indicators", {}),
             }
-            ts_val, ts_dbg = compute_ts(dummy_t)
-            ns_val = out["symbols"][sym]["signals"]["NS"]
+
+            # Compute TS using your existing helper; keep NS from the daily signals
+            ts_val, ts_dbg = compute_ts(ticker_for_ts)
+            ns_val = ref.get("signals", {}).get("NS", 0.0)
+
+            # Combine into CDS/decision using your existing decide()
             wT, wN, cds, decision, decide_dbg = decide(ts_val, ns_val, None, None)
+
             now_block[sym] = {
-                "price": t_price,
-                "ts": datetime.now(timezone.utc).isoformat(),
+                "price": float(latest_price),
+                "ts": node.get("ts") or datetime.now(timezone.utc).isoformat()
                 "signals": {"TS": ts_val, "NS": ns_val, "CDS": cds},
                 "decision": decision,
             }
 
-        out["now"] = now_block
-        print(f"[INFO] Attached {len(now_block)} live quotes as 'now' block.")
+        if now_block:
+            out["now"] = now_block
+            print(f"[INFO] Added {len(now_block)} symbols to 'now' snapshot.")
+        else:
+            print("[WARN] No live quotes available for 'now' snapshot.")
     except Exception as e:
-        print(f"[WARN] Skipped now-data section: {e}")
+        print(f"[WARN] Skipped 'now' snapshot: {e}")
+
 
     with open(DEFAULT_OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2)
