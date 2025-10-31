@@ -83,7 +83,7 @@ jobs:
 
           # thresholds
           BUY_THRESHOLD: "0.35"
-          SELL_THRESHOLD: "-0.25"
+          SELL_THRESHOLD: "-0.15"
 
           # watchlist knobs
           TS_WATCH: "0.50"
@@ -94,6 +94,7 @@ jobs:
           A_MAX_DEPLOY_FRAC: "0.15"
           A_PER_LINE_FRAC: "0.04"
           B_PER_LINE_FRAC: "0.02"
+          SELL_TRIM_FRACTION: "0.25"
 
           # updated portfolio paths
           PORT_PAPER_CSV: data/portfolio_paper.csv
@@ -109,8 +110,6 @@ jobs:
 
         run: |
           python scripts/postprocess_outputs.py
-
-
 
       - name: Commit updated feed to repo
         run: |
