@@ -39,6 +39,15 @@ SECTOR_FALLBACKS = {
     "VOO": "ETF", "SPY": "ETF", "QQQ": "ETF",
 }
 
+NEWS_SOURCE_WEIGHTS = {
+    "finnhub": 1.00,
+    "benzinga": 0.90,
+    "mtnewswires": 0.95,
+    "google_rss": 0.50,
+    "reddit": 0.35,
+    "newsapi": 0.30
+}
+
 def safe_get(d: Dict, path: List[str], default=None):
     cur = d
     for key in path:
