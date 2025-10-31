@@ -626,7 +626,7 @@ def main():
 
             now_block[sym] = {
                 "price": float(latest_price),
-                "ts": node.get("ts") or datetime.now(timezone.utc).isoformat()
+                "ts": node.get("ts") or datetime.now(timezone.utc).isoformat(),
                 "signals": {"TS": ts_val, "NS": ns_val, "CDS": cds},
                 "decision": decision,
             }
