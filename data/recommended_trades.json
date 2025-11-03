@@ -1,85 +1,95 @@
 {
-  "as_of_utc": "2025-10-31T18:52:58.553556+00:00",
+  "as_of_utc": "2025-11-03T13:37:16.439466+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
   },
   "portfolio_paper": {
-    "portfolio_value_est": 8232.08,
+    "portfolio_value_est": 8288.32,
     "deploy_rules": {
       "max_deploy_frac": 0.15,
       "per_line_frac": 0.04
     },
     "trades": [
       {
-        "symbol": "AMZN",
+        "symbol": "SNOW",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 246.88,
+        "px": 274.9,
         "qty_hint": 0.0,
-        "cds": 0.537347,
+        "cds": 0.542683,
         "qty": 1,
-        "notional": 246.88
+        "notional": 274.9
+      },
+      {
+        "symbol": "NET",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 253.29,
+        "qty_hint": 0.0,
+        "cds": 0.528241,
+        "qty": 1,
+        "notional": 253.29
+      },
+      {
+        "symbol": "FSLR",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 266.7,
+        "qty_hint": 0.0,
+        "cds": 0.520314,
+        "qty": 1,
+        "notional": 266.7
       },
       {
         "symbol": "GOOGL",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 279.3,
+        "px": 281.27,
         "qty_hint": 0.0,
-        "cds": 0.527421,
+        "cds": 0.457143,
         "qty": 1,
-        "notional": 279.3
+        "notional": 281.27
+      }
+    ],
+    "residual_budget_hint": 167.09
+  },
+  "portfolio_personal": {
+    "portfolio_value_est": 19096.95,
+    "cash_start": 500.0,
+    "per_line_frac": 0.02,
+    "trades": [
+      {
+        "symbol": "QUBT",
+        "action": "SELL",
+        "reason": "CDS<SellThreshold",
+        "px": 16.68,
+        "qty_hint": 20.8475,
+        "cds": -0.254134,
+        "qty": 20,
+        "notional": 333.6
       },
       {
         "symbol": "SNOW",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 269.185,
+        "px": 274.9,
         "qty_hint": 0.0,
-        "cds": 0.502971,
+        "cds": 0.542683,
         "qty": 1,
-        "notional": 269.19
-      },
-      {
-        "symbol": "AAPL",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 271.62,
-        "qty_hint": 0.0,
-        "cds": 0.502526,
-        "qty": 1,
-        "notional": 271.62
-      }
-    ],
-    "residual_budget_hint": 167.83
-  },
-  "portfolio_personal": {
-    "portfolio_value_est": 19017.38,
-    "cash_start": 500.0,
-    "per_line_frac": 0.02,
-    "trades": [
-      {
-        "symbol": "AMZN",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 246.88,
-        "qty_hint": 0.0,
-        "cds": 0.537347,
-        "qty": 1,
-        "notional": 246.88
+        "notional": 274.9
       },
       {
         "symbol": "NVDA",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 203.71,
+        "px": 202.49,
         "qty_hint": 0.0,
-        "cds": 0.495115,
+        "cds": 0.423398,
         "qty": 1,
-        "notional": 203.71
+        "notional": 202.49
       }
     ],
-    "cash_left": 49.41
+    "cash_left": 22.61
   }
 }
