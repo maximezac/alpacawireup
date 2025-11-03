@@ -37,6 +37,16 @@ HIST_PAPER   = os.getenv("HISTORY_PAPER", "data/portfolio_paper_history.csv")
 HIST_PERS    = os.getenv("HISTORY_PERSONAL", "data/portfolio_personal_history.csv")
 TRADES_RECS  = os.getenv("TRADES_RECS", "data/recommended_trades.json")
 TRADES_LEDGER= os.getenv("TRADES_LEDGER", "data/trades_ledger.csv")
+ledger_path = Path(os.environ.get("TRADES_LEDGER", "data/trades_ledger.csv"))
+ledger_path.parent.mkdir(parents=True, exist_ok=True)
+if not ledger_path.exists():
+    ledger_header = (
+        "datetime_utc,portfolio,symbol,action,qty,price_exec,slippage_bps,"
+        "liquidity_impact_bps,fees,gross_amount,post_trade_cash,post_trade_position,"
+        "signal_snapshot,rationale,run_id\n"
+    )
+    ledger_path.write_text(ledger_header)
+
 
 APPLY_TRADES = os.getenv("APPLY_TRADES", "0") == "1"
 
@@ -77,6 +87,15 @@ def write_csv(path: str, header: list, rows: list):
         w = csv.writer(f)
         w.writerow(header)
         w.writerows(rows)
+
+def write_positions(csv_path: str, cash: float, pos: Dict[str, dict]):
+    header = ["symbol","qty","avg_cost"]
+    rows = []
+    rows.append(["__CASH__", str(round(cash,2)), "0"])
+    for sym in sorted(pos.keys()):
+        p = pos[sym]
+        rows.append([sym, str(p["qty"]), str(p["avg_cost"])])
+    write_csv(csv_path, header, rows)
 
 def append_or_upsert_history(path: str, key_cols: list, row: dict):
     header, rows = read_csv_optional(path)
@@ -376,12 +395,15 @@ def make_perf_summary(history_csv: str, out_json: str):
 def main():
     prices, signals = load_prices_and_signals(PRICES_FINAL)
 
-    # --- PAPER ---
+    # --- load positions & prior equity ---
     paper_cash, paper_pos = read_positions(PAPER_CSV)
-    equity_prev, equity_start = load_previous_equity(HIST_PAPER)
+    pers_cash,  pers_pos  = read_positions(PERS_CSV)
 
-    # optional trades application
-    ledger_to_append = []
+    equity_prev_p, equity_start_p = load_previous_equity(HIST_PAPER)
+    equity_prev_u, equity_start_u = load_previous_equity(HIST_PERS)
+
+    # --- load trade recommendations (once) ---
+    recs_list = []
     if Path(TRADES_RECS).exists():
         recs = read_json(TRADES_RECS)
         # expect {"paper":[...], "personal":[...]} or flat list with "portfolio" key
@@ -389,43 +411,42 @@ def main():
             recs_list = [{"portfolio":"paper", **t} for t in recs.get("paper", [])] + \
                         [{"portfolio":"personal", **t} for t in recs.get("personal", [])]
         else:
-            recs_list = recs
-        if APPLY_TRADES:
-            paper_cash, paper_pos, logs = apply_trades_to_positions("paper", paper_cash, paper_pos, prices, recs_list)
-            ledger_to_append += logs
+            recs_list = recs if isinstance(recs, list) else []
 
-    row_paper = build_history_row("paper", paper_cash, paper_pos, prices, signals, equity_prev, equity_start)
-    append_or_upsert_history(HIST_PAPER, ["date","portfolio"], row_paper)
+    # --- optionally apply trades ONCE ---
+    ledger_to_append = []
+    if APPLY_TRADES and recs_list:
+        # PAPER
+        paper_cash, paper_pos, logs1 = apply_trades_to_positions("paper", paper_cash, paper_pos, prices, recs_list)
+        ledger_to_append += logs1
+        write_positions(PAPER_CSV, paper_cash, paper_pos)
 
-    # --- PERSONAL ---
-    pers_cash, pers_pos = read_positions(PERS_CSV)
-    equity_prev2, equity_start2 = load_previous_equity(HIST_PERS)
-
-    if Path(TRADES_RECS).exists() and APPLY_TRADES:
-        # reuse recs_list from above
+        # PERSONAL
         pers_cash, pers_pos, logs2 = apply_trades_to_positions("personal", pers_cash, pers_pos, prices, recs_list)
         ledger_to_append += logs2
+        write_positions(PERS_CSV, pers_cash, pers_pos)
 
-    row_pers = build_history_row("personal", pers_cash, pers_pos, prices, signals, equity_prev2, equity_start2)
+    # --- build history rows AFTER any trade application ---
+    row_paper = build_history_row("paper", paper_cash, paper_pos, prices, signals, equity_prev_p, equity_start_p)
+    append_or_upsert_history(HIST_PAPER, ["date","portfolio"], row_paper)
+
+    row_pers  = build_history_row("personal", pers_cash, pers_pos, prices, signals, equity_prev_u, equity_start_u)
     append_or_upsert_history(HIST_PERS, ["date","portfolio"], row_pers)
 
-    # Attach signal snapshot into any ledger rows (optional)
+    # --- attach signal snapshots to ledger rows and persist ---
     for r in ledger_to_append:
         sym = r["symbol"]
-        snap = signals.get(sym, {})
-        r["signal_snapshot"] = json.dumps(snap, separators=(",",":"))
-
-    # Append trades to ledger
+        r["signal_snapshot"] = json.dumps(signals.get(sym, {}), separators=(",",":"))
     for log in ledger_to_append:
         append_csv(TRADES_LEDGER, log)
 
-    # Perf summaries
+    # --- summaries ---
     make_perf_summary(HIST_PAPER, "data/perf_summary_paper.json")
     make_perf_summary(HIST_PERS,  "data/perf_summary_personal.json")
 
     print("[OK] update_performance complete.")
-    print(f"  paper:  equity={row_paper['equity']} cash={row_paper['cash']}")
-    print(f"  personal: equity={row_pers['equity']} cash={row_pers['cash']}")
+    print(f"  paper:    equity={row_paper['equity']}  cash={row_paper['cash']}")
+    print(f"  personal: equity={row_pers['equity']}   cash={row_pers['cash']}")
     if APPLY_TRADES:
         print(f"  trades logged: {len(ledger_to_append)}")
 
