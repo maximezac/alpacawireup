@@ -20,6 +20,7 @@ portfolios:
 
   # ===== PERSONAL VARIANTS =====
   portfolio_max_personal:
+    enabled: true
     type: personal
     desc: "Primary personal portfolio (replaces old portfolio_personal)"
     positions_csv: data/portfolio_personal.csv
@@ -29,6 +30,7 @@ portfolios:
       sell_trim_fraction: 0.25
 
   portfolio_max_TS_only:
+    enabled: false
     type: personal
     desc: "Personal—TS-only signal focus"
     positions_csv: data/portfolio_personal.csv
@@ -37,6 +39,7 @@ portfolios:
       per_line_frac: 0.02
 
   portfolio_max_NS_higher_weight:
+    enabled: false
     type: personal
     desc: "Personal—NS heavier"
     positions_csv: data/portfolio_personal.csv
@@ -45,6 +48,7 @@ portfolios:
       per_line_frac: 0.02
 
   portfolio_nicky_personal:
+    enabled: false
     type: personal
     desc: "Personal—Nicky"
     positions_csv: data/portfolio_nicky.csv
@@ -53,6 +57,7 @@ portfolios:
       per_line_frac: 0.015
 
   portfolio_vince_personal:
+    enabled: false
     type: personal
     desc: "Personal—Vince"
     positions_csv: data/portfolio_vince.csv
@@ -62,6 +67,7 @@ portfolios:
 
   # ===== PAPER VARIANTS =====
   portfolio_paper_aggressive_trades:
+    enabled: false
     type: paper
     desc: "Paper—aggressive"
     positions_csv: data/portfolio_paper.csv
@@ -72,6 +78,7 @@ portfolios:
       sell_trim_fraction: 0.25
 
   portfolio_paper_reasonable:
+    enabled: false
     type: paper
     desc: "Paper—reasonable (baseline)"
     positions_csv: data/portfolio_paper.csv
@@ -81,6 +88,7 @@ portfolios:
       per_line_frac:  0.04
 
   portfolio_paper_TS_only:
+    enabled: false
     type: paper
     desc: "Paper—TS only"
     positions_csv: data/portfolio_paper.csv
@@ -90,6 +98,7 @@ portfolios:
       per_line_frac:  0.04
 
   portfolio_paper_NS_higher_weight:
+    enabled: false
     type: paper
     desc: "Paper—NS heavier"
     positions_csv: data/portfolio_paper.csv
