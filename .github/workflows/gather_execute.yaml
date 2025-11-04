@@ -130,7 +130,6 @@ jobs:
         run: |
           python -c 'import json,os; from pathlib import Path; s=Path("data/_applied_recs_state.json"); r=json.load(open("data/recommended_trades.json")); asof=r.get("as_of_utc"); skip=(s.exists() and json.loads(s.read_text()).get("last_as_of_utc")==asof); open(os.environ["GITHUB_OUTPUT"],"a").write(f"skip={str(skip).lower()}\n"); print("as_of_utc:", asof, "skip:", skip)'
 
-
       # ---------- EXECUTE TRADES (paper ON, personal optional OFF) ----------
       - name: Execute trades (paper)
         if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
@@ -152,6 +151,29 @@ jobs:
         run: |
           python scripts/update_performance.py
           tail -n 20 data/trades_ledger.csv || true
+
+      - name: Rebuild recs after execution (reflect new positions)
+        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
+        env:
+          INPUT_FINAL: data/prices_final.json
+          BUY_THRESHOLD: "0.35"
+          SELL_THRESHOLD: "-0.15"
+          TS_WATCH: "0.50"
+          NS_WATCH: "0.50"
+          WATCH_TOP: "20"
+          A_MAX_DEPLOY_FRAC: "0.15"
+          A_PER_LINE_FRAC: "0.04"
+          B_PER_LINE_FRAC: "0.02"
+          SELL_TRIM_FRACTION: "0.25"
+          PORT_PAPER_CSV: data/portfolio_paper.csv
+          PORT_PERSONAL_CSV: data/portfolio_personal.csv
+          OUT_SLIM: data/prices_final_slim.json
+          OUT_PAPER_ONLY: data/prices_final_paper.json
+          OUT_PERSONAL_ONLY: data/prices_final_personal.json
+          OUT_WATCHLIST: data/watchlist_summary.json
+          OUT_TRADES: data/recommended_trades.json
+        run: |
+          python scripts/postprocess_outputs.py
 
       - name: Mark snapshot as applied
         if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
