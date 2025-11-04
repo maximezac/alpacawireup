@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-04T02:23:47.789483+00:00",
+  "as_of_utc": "2025-11-04T02:39:41.950534+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
@@ -14,10 +14,41 @@
     "residual_budget_hint": 0.0
   },
   "portfolio_personal": {
-    "portfolio_value_est": 0.0,
+    "portfolio_value_est": 19046.9,
     "cash_start": 500.0,
     "per_line_frac": 0.02,
-    "trades": [],
-    "cash_left": 500.0
+    "trades": [
+      {
+        "symbol": "ASTS",
+        "action": "SELL",
+        "reason": "CDS<SellThreshold",
+        "px": 71.145,
+        "qty_hint": 2.6225,
+        "cds": -0.190076,
+        "qty": 2,
+        "notional": 142.29
+      },
+      {
+        "symbol": "RGTI",
+        "action": "SELL",
+        "reason": "CDS<SellThreshold",
+        "px": 39.1,
+        "qty_hint": 3.0425,
+        "cds": -0.173284,
+        "qty": 3,
+        "notional": 117.3
+      },
+      {
+        "symbol": "ZS",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 336.335,
+        "qty_hint": 0.0,
+        "cds": 0.54029,
+        "qty": 1,
+        "notional": 336.33
+      }
+    ],
+    "cash_left": 163.67
   }
 }
