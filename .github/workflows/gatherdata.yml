@@ -12,7 +12,7 @@ on:
       - ".github/workflows/publish.yml"
       - "requirements.txt"
   schedule:
-    - cron: "5 13 * * 1-5"  # 13:05 UTC (~08:05 America/Chicago) weekdays
+    - cron: "0 * * * 1-5"  # 13:05 UTC (~08:05 America/Chicago) weekdays
 
 permissions:
   contents: write
