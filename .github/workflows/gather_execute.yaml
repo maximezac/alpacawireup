@@ -1,4 +1,4 @@
-name: Gather + Execute (paper trades on)
+name: Gather + Execute (paper; multi-portfolio v3)
 
 on:
   workflow_dispatch:
@@ -7,27 +7,49 @@ on:
         description: "Dry run (no trade execution)"
         required: false
         default: "false"
-      apply_personal:
-        description: "Also apply trades to personal?"
+      tags:
+        description: "Execute only portfolios with any of these tags (comma-separated). Default: paper"
         required: false
-        default: "false"
+        default: "paper"
   schedule:
-    # ~30 min before close:
-    # EDT months: close ~20:00 UTC -> 19:30 UTC
+    # ~30 min before US close (EDT ~20:00 UTC -> 19:30; EST ~21:00 UTC -> 20:30)
     - cron: "30 19 * * 1-5"
-    # EST months: close ~21:00 UTC -> 20:30 UTC
     - cron: "30 20 * * 1-5"
 
 permissions:
   contents: write
 
 concurrency:
-  group: gather-exec-${{ github.ref }}
+  group: gather-exec-paper-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   run:
     runs-on: ubuntu-latest
+
+    env:
+      # ---- Core paths ----
+      INPUT_BASE: data/prices.json
+      INPUT_FINAL: data/prices_final.json
+      OUTPUT_DIR: artifacts
+      CONFIG_PORTFOLIOS: config/portfolios.yml
+      CONFIG_STRATEGIES: config/strategies.yml
+
+      # ---- Execution scope/tags (paper-only) ----
+      EXECUTE_SCOPE: paper
+      EXECUTE_TAGS: ${{ inputs.tags || 'paper' }}
+
+      # ---- Slippage / liquidity knobs (defaults) ----
+      SLIPPAGE_BPS_DEFAULT: "10"
+      SLIPPAGE_BPS_PERSONAL: "5"
+      LIQ_IMPACT_BPS_SMALLCAP: "5"
+      SMALLCAPS: "QBTS,QUBT,RGTI,ASTS,RKLB,SOFI"
+
+      # ---- Files produced/consumed by v3 scripts ----
+      TRADE_PLANS: artifacts/recommended_trades.json
+      IDEMPOTENCY_FILE: artifacts/_applied_recs_state.json
+      LEDGER_CSV: data/trades_ledger.csv
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,20 +64,22 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 vaderSentiment==3.3.2 python-dateutil==2.9.0.post0 feedparser==6.0.11
-          pip install -r requirements.txt || echo "requirements.txt already satisfied."
+          pip install -r requirements.txt || true
+          # ensure v3 deps are present
+          pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 \
+                      python-dateutil==2.9.0.post0 feedparser==6.0.11 \
+                      pyyaml==6.0.2
 
       # ---------- Freshness probe ----------
       - name: Probe freshness
         id: probe
         shell: bash
         run: |
-          prices_final="data/prices_final.json"
-          prices_base="data/prices.json"
+          prices_final="$INPUT_FINAL"
+          prices_base="$INPUT_BASE"
           now=$(date +%s)
           fresh_prices=false
           fresh_base=false
-          # fresh if <10m (final), <60m (base)
           [[ -f "$prices_final" ]] && [[ $((now - $(stat -c %Y "$prices_final"))) -lt 600  ]] && fresh_prices=true
           [[ -f "$prices_base"  ]] && [[ $((now - $(stat -c %Y "$prices_base")))  -lt 3600 ]] && fresh_base=true
           echo "fresh_prices=$fresh_prices" >> "$GITHUB_OUTPUT"
@@ -69,7 +93,7 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           ALPACA_DATA_FEED: "iex"
           SYMBOLS_PATH: data/symbols.txt
-          OUTPUT_PATH: data/prices.json
+          OUTPUT_PATH: ${{ env.INPUT_BASE }}
           DAYS_BACK: "270"
         run: python fetch_prices.py
 
@@ -78,8 +102,8 @@ jobs:
         env:
           ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          INPUT_PATH: data/prices.json
-          OUTPUT_PATH: data/prices.json
+          INPUT_PATH: ${{ env.INPUT_BASE }}
+          OUTPUT_PATH: ${{ env.INPUT_BASE }}
           NEWS_LOOKBACK_DAYS: "7"
           NEWS_LIMIT_PER_SYMBOL: "25"
           NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
@@ -89,8 +113,8 @@ jobs:
 
       - name: Generate enriched feed
         env:
-          INPUT_PATH: data/prices.json
-          OUTPUT_PATH: data/prices_final.json
+          INPUT_PATH:  ${{ env.INPUT_BASE }}
+          OUTPUT_PATH: ${{ env.INPUT_FINAL }}
           MAX_ARTICLES: "15"
           DECAY_HALF_LIFE_HOURS: "12"
           SECTOR_NUDGE: "0.05"
@@ -99,107 +123,92 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python publish_feed.py
 
-      # ---------- POSTPROCESS (ideas + recs) ----------
-      - name: Postprocess (slim, portfolio-only, watchlist, recs)
+      # ---------- POSTPROCESS (multi-portfolio v3) ----------
+      - name: Build recs for all portfolios (v3)
         env:
-          INPUT_FINAL: data/prices_final.json
-          BUY_THRESHOLD: "0.35"
-          SELL_THRESHOLD: "-0.15"
-          TS_WATCH: "0.50"
-          NS_WATCH: "0.50"
-          WATCH_TOP: "20"
-          A_MAX_DEPLOY_FRAC: "0.15"
-          A_PER_LINE_FRAC: "0.04"
-          B_PER_LINE_FRAC: "0.02"
-          SELL_TRIM_FRACTION: "0.25"
-          PORT_PAPER_CSV: data/portfolio_paper.csv
-          PORT_PERSONAL_CSV: data/portfolio_personal.csv
-          OUT_SLIM: data/prices_final_slim.json
-          OUT_PAPER_ONLY: data/prices_final_paper.json
-          OUT_PERSONAL_ONLY: data/prices_final_personal.json
-          OUT_WATCHLIST: data/watchlist_summary.json
-          OUT_TRADES: data/recommended_trades.json
+          INPUT_FINAL: ${{ env.INPUT_FINAL }}
+          CONFIG_PORTFOLIOS: ${{ env.CONFIG_PORTFOLIOS }}
+          CONFIG_STRATEGIES: ${{ env.CONFIG_STRATEGIES }}
+          OUTPUT_DIR: ${{ env.OUTPUT_DIR }}
         run: |
-          python scripts/postprocess_outputs.py
-          python -c 'import json; o=json.load(open("data/recommended_trades.json")); pp=len((o.get("portfolio_paper") or {}).get("trades") or []); pe=len((o.get("portfolio_personal") or {}).get("trades") or []); print("as_of_utc:", o.get("as_of_utc")); print("paper trades:", pp, "personal trades:", pe)'
+          python scripts/postprocess_v3.py
+          python -c "import os,json; p=os.environ.get('TRADE_PLANS','data/recommended_trades.json'); o=json.load(open(p)); tot=0; \
+          [print(f'- {k}: {len(v.get(\"trades\",[]))} trades') or (tot:=tot+len(v.get('trades',[]))) for k,v in (o.get('portfolios') or {}).items()]; \
+          print('TOTAL TRADES:',tot)"
 
-      # ---------- Idempotency per snapshot (YAML-safe; writes to GITHUB_OUTPUT) ----------
+
+      # ---------- Idempotency per snapshot ----------
       - name: Check snapshot idempotency
         id: idem
         shell: bash
         run: |
-          python -c 'import json,os; from pathlib import Path; s=Path("data/_applied_recs_state.json"); r=json.load(open("data/recommended_trades.json")); asof=r.get("as_of_utc"); skip=(s.exists() and json.loads(s.read_text()).get("last_as_of_utc")==asof); open(os.environ["GITHUB_OUTPUT"],"a").write(f"skip={str(skip).lower()}\n"); print("as_of_utc:", asof, "skip:", skip)'
+          set -e
+          SNAP_ASOF=$(jq -r '.as_of_utc' < "${TRADE_PLANS}")
+          LAST_ASOF=""
+          if [[ -f "${IDEMPOTENCY_FILE}" ]]; then
+            LAST_ASOF=$(jq -r '.last_as_of_utc // ""' < "${IDEMPOTENCY_FILE}")
+          fi
+          SKIP=false
+          if [[ -n "$SNAP_ASOF" && "$SNAP_ASOF" == "$LAST_ASOF" ]]; then
+            SKIP=true
+          fi
+          echo "as_of_utc=$SNAP_ASOF"
+          echo "skip=$SKIP"
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
 
-      # ---------- EXECUTE TRADES (paper ON, personal optional OFF) ----------
-      - name: Execute trades (paper)
+      # ---------- EXECUTE TRADES (paper scope, tagged filter) ----------
+      - name: Execute trades (paper portfolios)
         if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
         env:
-          APPLY_TRADES: "1"
-          APPLY_PAPER_TRADES: "1"
-          APPLY_PERSONAL_TRADES: ${{ (github.event_name == 'workflow_dispatch' && inputs.apply_personal == 'true') && '1' || '0' }}
-          PRICES_FINAL: data/prices_final.json
-          TRADES_RECS: data/recommended_trades.json
-          TRADES_LEDGER: data/trades_ledger.csv
-          PORTFOLIO_PAPER_CSV: data/portfolio_paper.csv
-          PORTFOLIO_PERSONAL_CSV: data/portfolio_personal.csv
-          HISTORY_PAPER: data/portfolio_paper_history.csv
-          HISTORY_PERSONAL: data/portfolio_personal_history.csv
-          SLIPPAGE_BPS_PAPER: "10"
-          SLIPPAGE_BPS_PERSONAL: "5"
-          LIQ_IMPACT_BPS_SMALLCAP: "5"
-          SMALLCAPS: "QBTS,QUBT,RGTI,ASTS,RKLB,SOFI"
+          INPUT_FINAL: ${{ env.INPUT_FINAL }}
+          CONFIG_PORTFOLIOS: ${{ env.CONFIG_PORTFOLIOS }}
+          TRADE_PLANS: ${{ env.TRADE_PLANS }}
+          LEDGER_PATH: ${{ env.LEDGER_CSV }}
+          EXECUTE_SCOPE: ${{ env.EXECUTE_SCOPE }}
+          EXECUTE_TAGS:  ${{ env.EXECUTE_TAGS }}
+          DRY_RUN: "0"
+          SLIPPAGE_BPS_DEFAULT: ${{ env.SLIPPAGE_BPS_DEFAULT }}
+          SLIPPAGE_BPS_PERSONAL: ${{ env.SLIPPAGE_BPS_PERSONAL }}
+          LIQ_IMPACT_BPS_SMALLCAP: ${{ env.LIQ_IMPACT_BPS_SMALLCAP }}
+          SMALLCAPS: ${{ env.SMALLCAPS }}
         run: |
-          python scripts/update_performance.py
-          tail -n 20 data/trades_ledger.csv || true
-
-      - name: Rebuild recs after execution (reflect new positions)
-        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
-        env:
-          INPUT_FINAL: data/prices_final.json
-          BUY_THRESHOLD: "0.35"
-          SELL_THRESHOLD: "-0.15"
-          TS_WATCH: "0.50"
-          NS_WATCH: "0.50"
-          WATCH_TOP: "20"
-          A_MAX_DEPLOY_FRAC: "0.15"
-          A_PER_LINE_FRAC: "0.04"
-          B_PER_LINE_FRAC: "0.02"
-          SELL_TRIM_FRACTION: "0.25"
-          PORT_PAPER_CSV: data/portfolio_paper.csv
-          PORT_PERSONAL_CSV: data/portfolio_personal.csv
-          OUT_SLIM: data/prices_final_slim.json
-          OUT_PAPER_ONLY: data/prices_final_paper.json
-          OUT_PERSONAL_ONLY: data/prices_final_personal.json
-          OUT_WATCHLIST: data/watchlist_summary.json
-          OUT_TRADES: data/recommended_trades.json
-        run: |
-          python scripts/postprocess_outputs.py
+          python scripts/update_performance_v3.py
+          tail -n 25 "${LEDGER_CSV}" || true
 
       - name: Mark snapshot as applied
         if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
         shell: bash
         run: |
-          python -c 'import json,os; from pathlib import Path; asof=json.load(open("data/recommended_trades.json")).get("as_of_utc"); Path("data").mkdir(parents=True,exist_ok=True); Path("data/_applied_recs_state.json").write_text(json.dumps({"last_as_of_utc":asof},indent=2)); print("marked",asof)'
+          mkdir -p "$(dirname "${IDEMPOTENCY_FILE}")"
+          jq -n --arg asof "$(jq -r '.as_of_utc' < "${TRADE_PLANS}")" \
+            '{last_as_of_utc: $asof}' > "${IDEMPOTENCY_FILE}"
+          cat "${IDEMPOTENCY_FILE}"
 
-
-      # ---------- Update performance snapshots (no-trade pass) ----------
-      - name: Update performance snapshots
+      # ---------- Rebuild recs after execution (so feed reflects new positions) ----------
+      - name: Rebuild recs post-exec (v3)
+        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
         env:
-          PRICES_FINAL: data/prices_final.json
-          PORTFOLIO_PAPER_CSV: data/portfolio_paper.csv
-          PORTFOLIO_PERSONAL_CSV: data/portfolio_personal.csv
-          HISTORY_PAPER: data/portfolio_paper_history.csv
-          HISTORY_PERSONAL: data/portfolio_personal_history.csv
-          TRADES_RECS: data/recommended_trades.json
-          TRADES_LEDGER: data/trades_ledger.csv
-          APPLY_TRADES: "1"
-          APPLY_PAPER_TRADES: "1"
-          APPLY_PERSONAL_TRADES: "0"
-          SLIPPAGE_BPS_PAPER: "10"
-          SLIPPAGE_BPS_PERSONAL: "5"
-          LIQ_IMPACT_BPS_SMALLCAP: "5"
-          SMALLCAPS: "QBTS,QUBT,RGTI,ASTS,RKLB,SOFI"
-        run: python scripts/update_performance.py
+          INPUT_FINAL: ${{ env.INPUT_FINAL }}
+          CONFIG_PORTFOLIOS: ${{ env.CONFIG_PORTFOLIOS }}
+          CONFIG_STRATEGIES: ${{ env.CONFIG_STRATEGIES }}
+          OUTPUT_DIR: ${{ env.OUTPUT_DIR }}
+        run: python scripts/postprocess_v3.py
+
+      # ---------- Snapshot (no-trade pass) ----------
+      - name: Append performance snapshots (no trades)
+        env:
+          INPUT_FINAL: ${{ env.INPUT_FINAL }}
+          CONFIG_PORTFOLIOS: ${{ env.CONFIG_PORTFOLIOS }}
+          TRADE_PLANS: ${{ env.TRADE_PLANS }}
+          LEDGER_PATH: ${{ env.LEDGER_CSV }}
+          EXECUTE_SCOPE: none
+          EXECUTE_TAGS: ""
+          DRY_RUN: "1"
+          SLIPPAGE_BPS_DEFAULT: ${{ env.SLIPPAGE_BPS_DEFAULT }}
+          SLIPPAGE_BPS_PERSONAL: ${{ env.SLIPPAGE_BPS_PERSONAL }}
+          LIQ_IMPACT_BPS_SMALLCAP: ${{ env.LIQ_IMPACT_BPS_SMALLCAP }}
+          SMALLCAPS: ${{ env.SMALLCAPS }}
+        run: python scripts/update_performance_v3.py
 
       - name: Commit & push artifacts
         run: |
@@ -208,9 +217,9 @@ jobs:
           git pull --rebase --autostash origin ${{ github.ref_name }}
           git add \
             data/prices.json data/prices_final.json \
-            data/prices_final_slim.json data/prices_final_paper.json data/prices_final_personal.json \
-            data/watchlist_summary.json data/recommended_trades.json \
-            data/trades_ledger.csv data/portfolio_*.csv data/portfolio_*_history.csv \
-            data/perf_summary_*.json data/_applied_recs_state.json
-          git commit -m "auto: data refresh + paper trade exec (dry_run=${{ inputs.dry_run }}, personal=${{ inputs.apply_personal }})" || echo "No changes."
+            artifacts/**/*.json artifacts/*.json \
+            data/trades_ledger.csv \
+            data/portfolio_*.csv data/portfolio_*_history.csv \
+            data/perf_summary_*.json
+          git commit -m "auto: gather + execute (paper scope=${{ env.EXECUTE_SCOPE }}, tags=${{ env.EXECUTE_TAGS }}, dry_run=${{ inputs.dry_run || 'false' }})" || echo "No changes."
           git push
