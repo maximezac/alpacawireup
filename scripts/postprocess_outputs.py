@@ -91,15 +91,19 @@ def ensure_portfolio_csv(path: str) -> Dict[str, float]:
         # create an empty CSV
         with open(path, "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f)
-            w.writerow(["symbol", "quantity"])
+            w.writerow(["symbol", "quantity"])  # legacy default
         return {}
     out = {}
     with open(path, "r", newline="", encoding="utf-8") as f:
         r = csv.DictReader(f)
         for row in r:
             sym = (row.get("symbol") or "").strip().upper()
-            qty = row.get("quantity")
+            qty = row.get("qty")
+            if qty is None:
+                qty = row.get("quantity")
             if not sym:
+                continue
+            if sym == "__CASH__":
                 continue
             try:
                 out[sym] = float(qty)
