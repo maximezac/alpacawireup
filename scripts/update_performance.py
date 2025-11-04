@@ -49,6 +49,8 @@ if not ledger_path.exists():
 
 
 APPLY_TRADES = os.getenv("APPLY_TRADES", "0") == "1"
+APPLY_PAPER_TRADES = os.getenv("APPLY_PAPER_TRADES", "1") == "1"
+APPLY_PERSONAL_TRADES = os.getenv("APPLY_PERSONAL_TRADES", "0") == "1"
 
 SLIP_PAPER_BPS = float(os.getenv("SLIPPAGE_BPS_PAPER", "10"))
 SLIP_PERS_BPS  = float(os.getenv("SLIPPAGE_BPS_PERSONAL", "5"))
@@ -447,14 +449,20 @@ def main():
     ledger_to_append = []
     if APPLY_TRADES and recs_list:
         # PAPER
-        paper_cash, paper_pos, logs1 = apply_trades_to_positions("paper", paper_cash, paper_pos, prices, recs_list)
-        ledger_to_append += logs1
-        write_positions(PAPER_CSV, paper_cash, paper_pos)
+        if APPLY_PAPER_TRADES:
+            paper_cash, paper_pos, logs1 = apply_trades_to_positions("paper", paper_cash, paper_pos, prices, recs_list)
+            ledger_to_append += logs1
+            write_positions(PAPER_CSV, paper_cash, paper_pos)
+        else:
+            print("[skip] paper executions disabled (APPLY_PAPER_TRADES=0)")
 
         # PERSONAL
-        pers_cash, pers_pos, logs2 = apply_trades_to_positions("personal", pers_cash, pers_pos, prices, recs_list)
-        ledger_to_append += logs2
-        write_positions(PERS_CSV, pers_cash, pers_pos)
+        if APPLY_PERSONAL_TRADES:
+            pers_cash, pers_pos, logs2 = apply_trades_to_positions("personal", pers_cash, pers_pos, prices, recs_list)
+            ledger_to_append += logs2
+            write_positions(PERS_CSV, pers_cash, pers_pos)
+        else:
+            print("[skip] personal executions disabled (APPLY_PERSONAL_TRADES=0)")
 
     # --- build history rows AFTER any trade application ---
     row_paper = build_history_row("paper", paper_cash, paper_pos, prices, signals, equity_prev_p, equity_start_p)
