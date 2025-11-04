@@ -1,4 +1,4 @@
-name: Gather Data, no trades
+name: Gather Data (ideas only, no trades)
 
 on:
   workflow_dispatch:
@@ -12,10 +12,15 @@ on:
       - ".github/workflows/publish.yml"
       - "requirements.txt"
   schedule:
-    - cron: "5 13 * * 1-5"  # 13:05 UTC (~08:05 America/Chicago) on weekdays
+    - cron: "5 13 * * 1-5"  # 13:05 UTC (~08:05 America/Chicago) weekdays
 
 permissions:
   contents: write
+
+# Prevent overlapping runs from double-hitting APIs
+concurrency:
+  group: gather-data-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-run-publish:
@@ -25,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0            # allow rebase/push cleanly
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,8 +43,36 @@ jobs:
           pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 vaderSentiment==3.3.2 python-dateutil==2.9.0.post0 feedparser==6.0.11
           pip install -r requirements.txt || echo "requirements.txt already satisfied."
 
-      # Fetch multiple months of daily bars into data/prices.json
-      - name: Fetch prices from Alpaca
+      # ---------- Freshness probes to avoid duplicate API calls ----------
+      - name: Probe freshness of prices_final.json and news
+        id: probe
+        shell: bash
+        run: |
+          prices_file="data/prices_final.json"
+          news_file="data/prices.json"   # fetch_news updates this in-place
+
+          now=$(date +%s)
+          fresh_prices=false
+          fresh_news=false
+
+          # "fresh" == modified within last 10 minutes (prices) / 60 minutes (news)
+          if [[ -f "$prices_file" ]]; then
+            mtime=$(stat -c %Y "$prices_file")
+            age=$((now - mtime))
+            [[ $age -lt 600 ]] && fresh_prices=true
+          fi
+          if [[ -f "$news_file" ]]; then
+            mtime=$(stat -c %Y "$news_file")
+            age=$((now - mtime))
+            [[ $age -lt 3600 ]] && fresh_news=true
+          fi
+
+          echo "fresh_prices=$fresh_prices" >> "$GITHUB_OUTPUT"
+          echo "fresh_news=$fresh_news"     >> "$GITHUB_OUTPUT"
+
+      # ---------- DATA FETCH ----------
+      - name: Fetch prices from Alpaca (only if stale)
+        if: steps.probe.outputs.fresh_prices != 'true'
         env:
           ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -50,7 +83,8 @@ jobs:
         run: |
           python fetch_prices.py
 
-      - name: Fetch news from Alpaca + extras
+      - name: Fetch news from Alpaca + extras (only if stale)
+        if: steps.probe.outputs.fresh_news != 'true'
         env:
           ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -64,7 +98,7 @@ jobs:
         run: |
           python fetch_news.py
 
-      - name: Generate enriched feed
+      - name: Generate enriched feed (skip API if already fresh; always compute)
         env:
           INPUT_PATH: data/prices.json
           OUTPUT_PATH: data/prices_final.json
@@ -77,26 +111,21 @@ jobs:
         run: |
           python publish_feed.py
 
+      # ---------- POSTPROCESS (ideas only; no execution) ----------
       - name: Postprocess outputs (slim, portfolio-only, watchlist, trades)
         env:
           INPUT_FINAL: data/prices_final.json
-          # thresholds
           BUY_THRESHOLD: "0.35"
           SELL_THRESHOLD: "-0.15"
-          # watchlist knobs
           TS_WATCH: "0.50"
           NS_WATCH: "0.50"
           WATCH_TOP: "20"
-          # sizing knobs
           A_MAX_DEPLOY_FRAC: "0.15"
           A_PER_LINE_FRAC: "0.04"
           B_PER_LINE_FRAC: "0.02"
           SELL_TRIM_FRACTION: "0.25"
-          # updated portfolio paths
           PORT_PAPER_CSV: data/portfolio_paper.csv
           PORT_PERSONAL_CSV: data/portfolio_personal.csv
-          PORTFOLIO_PERSONAL_CASH: "500"
-          # output file paths
           OUT_SLIM: data/prices_final_slim.json
           OUT_PAPER_ONLY: data/prices_final_paper.json
           OUT_PERSONAL_ONLY: data/prices_final_personal.json
@@ -104,8 +133,11 @@ jobs:
           OUT_TRADES: data/recommended_trades.json
         run: |
           python scripts/postprocess_outputs.py
+          python -c 'import json; o=json.load(open("data/recommended_trades.json")); pp=len((o.get("portfolio_paper") or {}).get("trades") or []); pe=len((o.get("portfolio_personal") or {}).get("trades") or []); print("as_of_utc:", o.get("as_of_utc")); print("paper trades:", pp, "personal trades:", pe)'
 
-      - name: Update performance & append history
+
+
+      - name: Update performance snapshots (NO trades)
         env:
           PRICES_FINAL: data/prices_final.json
           PORTFOLIO_PAPER_CSV: data/portfolio_paper.csv
@@ -114,9 +146,9 @@ jobs:
           HISTORY_PERSONAL: data/portfolio_personal_history.csv
           TRADES_RECS: data/recommended_trades.json
           TRADES_LEDGER: data/trades_ledger.csv
-          APPLY_TRADES: "0"
+          APPLY_TRADES: "0"                   # <- keep OFF for ideas-only
           APPLY_PAPER_TRADES: "0"
-          APPLY_PERSONAL_TRADES: "0"                   # set to "1" to auto-apply into CSVs
+          APPLY_PERSONAL_TRADES: "0"
           SLIPPAGE_BPS_PAPER: "10"
           SLIPPAGE_BPS_PERSONAL: "5"
           LIQ_IMPACT_BPS_SMALLCAP: "5"
@@ -128,12 +160,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash origin main
+          git pull --rebase --autostash origin ${{ github.ref_name }}
           git add \
             data/prices.json data/prices_final.json \
             data/prices_final_slim.json data/prices_final_paper.json data/prices_final_personal.json \
             data/watchlist_summary.json data/recommended_trades.json \
             data/portfolio_paper.csv data/portfolio_personal.csv \
             data/*history.csv data/trades_ledger.csv data/perf_summary_*.json
-          git commit -m "chore: refresh prices, recs, and performance artifacts (v2.2.1)" || echo "No changes to commit."
+          git commit -m "chore: refresh prices, recs, and performance artifacts (ideas-only)" || echo "No changes to commit."
           git push
