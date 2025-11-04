@@ -406,12 +406,42 @@ def main():
     recs_list = []
     if Path(TRADES_RECS).exists():
         recs = read_json(TRADES_RECS)
-        # expect {"paper":[...], "personal":[...]} or flat list with "portfolio" key
+
+        def _normalize_trade(t: dict, portfolio: str) -> dict:
+        # prefer explicit exec price from postprocess ("px")
+            px = t.get("price", t.get("px", None))
+            out = dict(t)
+            out["portfolio"] = portfolio
+            if px is not None:
+                out["price"] = px
+            return out
+
         if isinstance(recs, dict):
-            recs_list = [{"portfolio":"paper", **t} for t in recs.get("paper", [])] + \
-                        [{"portfolio":"personal", **t} for t in recs.get("personal", [])]
-        else:
-            recs_list = recs if isinstance(recs, list) else []
+            # v1 schema: {"paper":[...], "personal":[...]}
+            if "paper" in recs or "personal" in recs:
+                recs_list += [_normalize_trade(t, "paper")    for t in (recs.get("paper") or [])]
+                recs_list += [_normalize_trade(t, "personal") for t in (recs.get("personal") or [])]
+
+            # v2 schema: {"portfolio_paper":{"trades":[...]}, "portfolio_personal":{"trades":[...]}}
+            if "portfolio_paper" in recs or "portfolio_personal" in recs:
+                recs_list += [
+                    _normalize_trade(t, "paper")
+                    for t in (recs.get("portfolio_paper", {}).get("trades") or [])
+                ]
+                recs_list += [
+                    _normalize_trade(t, "personal")
+                    for t in (recs.get("portfolio_personal", {}).get("trades") or [])
+                ]
+
+        elif isinstance(recs, list):
+            # flat list with explicit "portfolio" in each item
+            for t in recs:
+                p = (t.get("portfolio") or "").lower()
+                if p in ("paper", "personal"):
+                    recs_list.append(_normalize_trade(t, p))
+
+        print(f"[debug] loaded {len(recs_list)} trade recs from {TRADES_RECS}")
+
 
     # --- optionally apply trades ONCE ---
     ledger_to_append = []
