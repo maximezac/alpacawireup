@@ -102,7 +102,7 @@ jobs:
           OUT_PAPER_ONLY:     data/prices_final_paper.json
           OUT_PERSONAL_ONLY:  data/prices_final_personal.json
           OUT_WATCHLIST:      data/watchlist_summary.json
-          OUT_TRADES:         data/recommended_trades.json            # single-portfolio legacy (paper/personal)
+          OUT_TRADES:         artifacts/recommended_trades_v3.json            # single-portfolio legacy (paper/personal)
           OUT_TRADE_PLANS:    artifacts/recommended_trades_v3.json
           OUTPUT_TRADES_V3:   artifacts/recommended_trades_v3.json    # NEW: multi-portfolio
         run: |
@@ -126,7 +126,7 @@ jobs:
         env:
           PRICES_FINAL:               data/prices_final.json
           TRADES_PLANS_V3:            artifacts/recommended_trades_v3.json
-          TRADES_RECS:                data/recommended_trades.json
+          TRADES_RECS:                artifacts/recommended_trades_v3.json
           TRADES_LEDGER:              data/trades_ledger.csv
           APPLY_TRADES:               "0"
         run: python scripts/update_performance_v3.py
