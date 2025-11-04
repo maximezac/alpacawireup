@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-04T02:48:32.294471+00:00",
+  "as_of_utc": "2025-11-04T02:58:34.907062+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
@@ -14,8 +14,8 @@
     "residual_budget_hint": 0.0
   },
   "portfolio_personal": {
-    "portfolio_value_est": 19239.49,
-    "cash_start": 806.6,
+    "portfolio_value_est": 19935.84,
+    "cash_start": 109.73,
     "per_line_frac": 0.02,
     "trades": [
       {
@@ -23,8 +23,8 @@
         "action": "SELL",
         "reason": "CDS<SellThreshold",
         "px": 71.145,
-        "qty_hint": 1.6225,
-        "cds": -0.190394,
+        "qty_hint": 1.3725,
+        "cds": -0.190752,
         "qty": 1,
         "notional": 71.14
       },
@@ -33,8 +33,8 @@
         "action": "SELL",
         "reason": "CDS<SellThreshold",
         "px": 39.1,
-        "qty_hint": 1.7925,
-        "cds": -0.15592,
+        "qty_hint": 1.5425,
+        "cds": -0.156464,
         "qty": 1,
         "notional": 39.1
       },
@@ -44,31 +44,11 @@
         "reason": "CDS>BuyThreshold",
         "px": 336.335,
         "qty_hint": 0.0,
-        "cds": 0.540283,
-        "qty": 1.192,
-        "notional": 400.91
-      },
-      {
-        "symbol": "SNOW",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 277.165,
-        "qty_hint": 0.0,
-        "cds": 0.531761,
-        "qty": 1.4465,
-        "notional": 400.92
-      },
-      {
-        "symbol": "GOOGL",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 283.89,
-        "qty_hint": 0.0,
-        "cds": 0.524822,
-        "qty": 0.0168,
-        "notional": 4.77
+        "cds": 0.540274,
+        "qty": 0.3263,
+        "notional": 109.75
       }
     ],
-    "cash_left": 0.0
+    "cash_left": -0.02
   }
 }
