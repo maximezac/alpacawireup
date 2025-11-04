@@ -289,7 +289,7 @@ def size_trades_A(actions: List[Dict[str, Any]], port_value: float) -> Tuple[Lis
         target_val = min(per_line_cap_val, buy_budget_total - spent)
         if target_val <= 0:
             break
-        qty = math.floor(target_val / px)
+        qty = round(target_val / px, 4)
         if qty <= 0:
             continue
         notional = qty * px
@@ -328,7 +328,7 @@ def size_trades_B(actions: List[Dict[str, Any]], port_value: float, cash: float)
         if px <= 0 or cash_left <= 0:
             continue
         target_val = min(per_line_target, cash_left)
-        qty = math.floor(target_val / px)
+        qty = round(target_val / px, 4)  # fractional
         if qty <= 0:
             continue
         notional = qty * px
@@ -349,6 +349,9 @@ def main():
     # 2) Load portfolios
     portPaper    = ensure_portfolio_csv(PORT_PAPER_CSV)
     portPersonal = ensure_portfolio_csv(PORT_PERSONAL_CSV)
+
+    personal_cash_csv = read_cash_from_csv(PORT_PERSONAL_CSV)
+    personal_cash = personal_cash_csv if personal_cash_csv > 0 else PERSONAL_CASH
 
     # 3) Portfolio-only feeds
     paper_syms = sorted(portPaper.keys())
@@ -372,7 +375,7 @@ def main():
     recPers  = propose_trades(portPersonal, feed, allow_new=True)
 
     sizedPaper, paper_leftover = size_trades_A(recPaper, paper_val)
-    sizedPers,  pers_cash_left = size_trades_B(recPers, pers_val, cash=PERSONAL_CASH)
+    sizedPers,  pers_cash_left = size_trades_B(recPers, pers_val, cash=personal_cash)
 
     # Final trades output
     out_trades = {
@@ -389,7 +392,7 @@ def main():
         },
         "portfolio_personal": {
             "portfolio_value_est": round(pers_val, 2),
-            "cash_start": PERSONAL_CASH,
+            "cash_start": personal_cash,
             "per_line_frac": B_PER_LINE_FRAC,
             "trades": sizedPers,
             "cash_left": pers_cash_left
