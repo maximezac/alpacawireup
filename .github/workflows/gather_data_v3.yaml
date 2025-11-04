@@ -1,0 +1,141 @@
+name: Gather Data (ideas only, no trades)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/symbols.txt"
+      - "fetch_prices.py"
+      - "publish_feed.py"
+      - "fetch_news.py"
+      - "scripts/**"
+      - ".github/workflows/**"
+      - "requirements.txt"
+      - "artifacts/**"
+  schedule:
+    - cron: "0 * * * 1-5"  # hourly on weekdays
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gather-data-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-run-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 \
+                      python-dateutil==2.9.0.post0 feedparser==6.0.11 \
+                      vaderSentiment==3.3.2 pyyaml==6.0.2
+          pip install -r requirements.txt || echo "requirements.txt already satisfied."
+
+      - name: Probe freshness
+        id: probe
+        shell: bash
+        run: |
+          prices_final="data/prices_final.json"
+          prices_base="data/prices.json"
+          now=$(date +%s)
+          fresh_prices=false
+          fresh_base=false
+          [[ -f "$prices_final" ]] && [[ $((now - $(stat -c %Y "$prices_final"))) -lt 600  ]] && fresh_prices=true
+          [[ -f "$prices_base"  ]] && [[ $((now - $(stat -c %Y "$prices_base")))  -lt 3600 ]] && fresh_base=true
+          echo "fresh_prices=$fresh_prices" >> "$GITHUB_OUTPUT"
+          echo "fresh_base=$fresh_base"     >> "$GITHUB_OUTPUT"
+
+      - name: Fetch prices (if stale)
+        if: steps.probe.outputs.fresh_prices != 'true'
+        env:
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_DATA_FEED:  iex
+          SYMBOLS_PATH:      data/symbols.txt
+          OUTPUT_PATH:       data/prices.json
+          DAYS_BACK:         "270"
+        run: python fetch_prices.py
+
+      - name: Fetch news (if stale)
+        if: steps.probe.outputs.fresh_base != 'true'
+        env:
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          INPUT_PATH:        data/prices.json
+          OUTPUT_PATH:       data/prices.json
+          NEWS_LOOKBACK_DAYS: "7"
+          NEWS_LIMIT_PER_SYMBOL: "25"
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
+          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
+        run: python fetch_news.py
+
+      - name: Generate enriched feed
+        env:
+          INPUT_PATH:  data/prices.json
+          OUTPUT_PATH: data/prices_final.json
+          MAX_ARTICLES: "15"
+          DECAY_HALF_LIFE_HOURS: "12"
+          SECTOR_NUDGE: "0.05"
+          GENERATE_NOW: "1"
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python publish_feed.py
+
+      - name: Postprocess (multi-portfolio ideas; no execution)
+        env:
+          INPUT_FINAL:        data/prices_final.json
+          STRATEGY_CONFIG:    artifacts/strategies.yaml
+          PORTFOLIO_CONFIG:   artifacts/portfolios.yaml
+          OUT_SLIM:           data/prices_final_slim.json
+          OUT_PAPER_ONLY:     data/prices_final_paper.json
+          OUT_PERSONAL_ONLY:  data/prices_final_personal.json
+          OUT_WATCHLIST:      data/watchlist_summary.json
+          OUT_TRADES:         data/recommended_trades.json            # single-portfolio legacy (paper/personal)
+          OUTPUT_TRADES_V3:   artifacts/recommended_trades_v3.json    # NEW: multi-portfolio
+        run: |
+          python scripts/postprocess_v3.py
+          python - <<'PY'
+          import json,sys
+          try:
+              obj=json.load(open("artifacts/recommended_trades_v3.json"))
+              total=0
+              ports=(obj.get("portfolios") or {})
+              for name,node in ports.items():
+                  n=len(node.get("trades") or [])
+                  print(f"- {name}: {n} trades")
+                  total+=n
+              print("TOTAL TRADES:", total)
+          except Exception as e:
+              print("summarize trades failed:", e, file=sys.stderr)
+          PY
+
+      - name: Snapshots (no trades)
+        env:
+          PRICES_FINAL:               data/prices_final.json
+          TRADES_PLANS_V3:            artifacts/recommended_trades_v3.json
+          TRADES_RECS:                data/recommended_trades.json
+          TRADES_LEDGER:              data/trades_ledger.csv
+          APPLY_TRADES:               "0"
+        run: python scripts/update_performance_v3.py
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git add data/*.json data/*history.csv data/trades_ledger.csv \
+                  artifacts/*.yaml artifacts/*.json || true
+          git commit -m "v3: ideas-only refresh (multi-portfolio)" || echo "No changes."
+          git push
