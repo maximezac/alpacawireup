@@ -192,8 +192,8 @@ jobs:
           HISTORY_PERSONAL: data/portfolio_personal_history.csv
           TRADES_RECS: data/recommended_trades.json
           TRADES_LEDGER: data/trades_ledger.csv
-          APPLY_TRADES: "0"
-          APPLY_PAPER_TRADES: "0"
+          APPLY_TRADES: "1"
+          APPLY_PAPER_TRADES: "1"
           APPLY_PERSONAL_TRADES: "0"
           SLIPPAGE_BPS_PAPER: "10"
           SLIPPAGE_BPS_PERSONAL: "5"
