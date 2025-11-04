@@ -1,32 +1,32 @@
 {
-  "as_of_utc": "2025-11-03T17:27:30.387531+00:00",
+  "as_of_utc": "2025-11-04T02:06:07.294887+00:00",
   "timeframe": "1Day",
   "indicators_window": 270,
   "symbols": {
     "AMD": {
       "symbol": "AMD",
-      "price": 256.62,
+      "price": 259.655,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "",
       "indicators": {
-        "sma20": 239.08399999999997,
-        "ema12": 247.34200885338814,
-        "ema26": 227.76741419698465,
-        "macd": 19.57459465640349,
-        "macd_signal": 19.59781552109671,
-        "macd_hist": -0.0232208646932186,
-        "rsi14": 68.74559155512058
+        "sma20": 239.23574999999997,
+        "ema12": 247.80893193031122,
+        "ema26": 227.99222901179945,
+        "macd": 19.816702918511766,
+        "macd_signal": 19.646237173518365,
+        "macd_hist": 0.1704657449934004,
+        "rsi14": 69.80737858312654
       },
       "signals": {
-        "TS": 0.166013,
-        "NS": 0.321595,
-        "wT": 0.5695258620196959,
-        "wN": 0.43047413798030404,
-        "CDS": 0.232987,
+        "TS": 0.253768,
+        "NS": 0.429611,
+        "wT": 0.6204011243646719,
+        "wN": 0.37959887563532807,
+        "CDS": 0.320518,
         "components": {
-          "rsi_pos": 0.37491183110241166,
-          "macd_hist_slope": -0.023216691963556284,
-          "ema20_slope": 0.1266756524621305
+          "rsi_pos": 0.39614757166253073,
+          "macd_hist_slope": 0.1688335504605892,
+          "ema20_slope": 0.1388765359479066
         },
         "ns_debug": {
           "source": "vader_weighted",
@@ -35,12 +35,132 @@
             {
               "headline": "AMD vs. QCOM: Which Chip Stock Is a Better Pick Ahead of Upcoming Earnings, According to Wall Street? - TipRanks",
               "source": "google_rss",
-              "ts": "2025-11-03T16:44:12",
+              "ts": "2025-11-04T01:46:53",
               "vader": 0.7461,
               "relevance": 1.0,
-              "decay_w": 0.9591658109133592,
+              "decay_w": 0.9816497086380511,
               "source_w": 0.5,
-              "weight": 0.4795829054566796
+              "weight": 0.49082485431902556
+            },
+            {
+              "headline": "AMD's November Magic Returns\u2014Earnings Could Be The Spark Again",
+              "source": "benzinga",
+              "ts": "2025-11-03T20:32:34Z",
+              "vader": 0.8885,
+              "relevance": 1.0,
+              "decay_w": 0.7253399844907705,
+              "source_w": 0.9,
+              "weight": 0.6528059860416935
+            },
+            {
+              "headline": "AMD to report Q3 earnings following massive OpenAI, Oracle chip deals - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-11-03T20:24:34",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7197751371521217,
+              "source_w": 0.5,
+              "weight": 0.35988756857606086
+            },
+            {
+              "headline": "Equities Mostly Rise Intraday Amid Amazon Boost as Markets Await Week's Key Earnings",
+              "source": "finnhub",
+              "ts": "2025-11-03T19:09:00",
+              "vader": 0.5859,
+              "relevance": 1.0,
+              "decay_w": 0.6692719567851545,
+              "source_w": 1.0,
+              "weight": 0.6692719567851545
+            },
+            {
+              "headline": "S&P 500 Companies' Profit Growth Eases, Sales Increase Accelerates, Oppenheimer Data Show",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:44:03",
+              "vader": 0.8934,
+              "relevance": 1.0,
+              "decay_w": 0.6533879223567276,
+              "source_w": 1.0,
+              "weight": 0.6533879223567276
+            },
+            {
+              "headline": "6 Reasons You Should Sell Nvidia",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:53:23",
+              "vader": 0.2023,
+              "relevance": 1.0,
+              "decay_w": 0.6222823887243751,
+              "source_w": 1.0,
+              "weight": 0.6222823887243751
+            },
+            {
+              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session",
+              "source": "benzinga",
+              "ts": "2025-11-03T17:35:14Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6115036387859594,
+              "source_w": 0.9,
+              "weight": 0.5503532749073634
+            },
+            {
+              "headline": "Amazon Web Services Signs $38 Billion Cloud Deal With OpenAI",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:32:47",
+              "vader": 0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.6100630301090889,
+              "source_w": 1.0,
+              "weight": 0.6100630301090889
+            },
+            {
+              "headline": "Crane Harbor Surges 17% After Announcing Merger With Xanadu Quantum",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:02:10",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5923439599734208,
+              "source_w": 1.0,
+              "weight": 0.5923439599734208
+            },
+            {
+              "headline": "A $1 Billion Reason to Buy AMD Stock Now - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-11-03T16:44:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5820744435197415,
+              "source_w": 0.5,
+              "weight": 0.29103722175987073
+            },
+            {
+              "headline": "AMD Stock Jumps Despite Adeia (ADEA) Patent Infringement Lawsuit - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-11-03T16:34:36",
+              "vader": -0.7964,
+              "relevance": 1.0,
+              "decay_w": 0.5768307684197054,
+              "source_w": 0.5,
+              "weight": 0.2884153842098527
+            },
+            {
+              "headline": "S&P 500, Nasdaq gain after Amazon-OpenAI deal; Kenvue soars after buyout",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:25:17",
+              "vader": 0.9501,
+              "relevance": 1.0,
+              "decay_w": 0.5716801928988561,
+              "source_w": 1.0,
+              "weight": 0.5716801928988561
+            },
+            {
+              "headline": "The Play On Marvell Technology",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:21:58",
+              "vader": 0.9081,
+              "relevance": 1.0,
+              "decay_w": 0.5698577464491739,
+              "source_w": 1.0,
+              "weight": 0.5698577464491739
             },
             {
               "headline": "This Is Why AI Is Not a Bubble and Nvidia will Reach $10 Trillion",
@@ -48,9 +168,9 @@
               "ts": "2025-11-03T16:12:08",
               "vader": -0.3182,
               "relevance": 1.0,
-              "decay_w": 0.9300080463421252,
+              "decay_w": 0.5644885887593912,
               "source_w": 1.0,
-              "weight": 0.9300080463421252
+              "weight": 0.5644885887593912
             },
             {
               "headline": "700 Billion Reasons Why These Are 3 Must-Buy Stocks for 2026",
@@ -58,144 +178,24 @@
               "ts": "2025-11-03T16:10:36",
               "vader": 0.7769,
               "relevance": 1.0,
-              "decay_w": 0.9286362307149734,
+              "decay_w": 0.5636559354609012,
               "source_w": 1.0,
-              "weight": 0.9286362307149734
-            },
-            {
-              "headline": "Jim Cramer Says Axon is One of the \u201cLong-Term Outperformers That You Simply Have to Consider Owning\u201d",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:06:46",
-              "vader": 0.8225,
-              "relevance": 1.0,
-              "decay_w": 0.9252155379637137,
-              "source_w": 1.0,
-              "weight": 0.9252155379637137
-            },
-            {
-              "headline": "Jim Cramer Says \u201cLisa Su at AMD is Challenging Nvidia at Its Own Game\u201d",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:06:35",
-              "vader": 0.8807,
-              "relevance": 1.0,
-              "decay_w": 0.9250522557077822,
-              "source_w": 1.0,
-              "weight": 0.9250522557077822
-            },
-            {
-              "headline": "Nvidia Stock Gains. Why This Analyst Sees a Further 70% Rise Ahead.",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:44:00",
-              "vader": 0.34,
-              "relevance": 1.0,
-              "decay_w": 0.9051576738863234,
-              "source_w": 1.0,
-              "weight": 0.9051576738863234
-            },
-            {
-              "headline": "OpenAI and Amazon ink $38B cloud computing deal",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:21:51",
-              "vader": 0.2115,
-              "relevance": 1.0,
-              "decay_w": 0.8860605161871209,
-              "source_w": 1.0,
-              "weight": 0.8860605161871209
-            },
-            {
-              "headline": "Adeia sues AMD for patent infringement over semiconductor technology",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:10:51",
-              "vader": -0.5267,
-              "relevance": 1.0,
-              "decay_w": 0.8767268658139076,
-              "source_w": 1.0,
-              "weight": 0.8767268658139076
-            },
-            {
-              "headline": "Amazon stock jumps on $38 billion deal with OpenAI to use hundreds of thousands of Nvidia chips",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:53:57",
-              "vader": 0.5106,
-              "relevance": 1.0,
-              "decay_w": 0.8625781881463814,
-              "source_w": 1.0,
-              "weight": 0.8625781881463814
-            },
-            {
-              "headline": "This could be a \u2018radically bullish\u2019 sign for Nvidia, AMD and other chip stocks - MarketWatch",
-              "source": "google_rss",
-              "ts": "2025-11-03T14:43:00",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.853532981682062,
-              "source_w": 0.5,
-              "weight": 0.426766490841031
-            },
-            {
-              "headline": "Stock market today: Dow slips, Nasdaq pops as Amazon's OpenAI deal boosts AI bets",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:37:20",
-              "vader": 0.5719,
-              "relevance": 1.0,
-              "decay_w": 0.8488893595916097,
-              "source_w": 1.0,
-              "weight": 0.8488893595916097
-            },
-            {
-              "headline": "Stock market today: S&P 500, Nasdaq jump to kick off November as Amazon, Nvidia lead way",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:37:20",
-              "vader": 0.4767,
-              "relevance": 1.0,
-              "decay_w": 0.8488893595916097,
-              "source_w": 1.0,
-              "weight": 0.8488893595916097
-            },
-            {
-              "headline": "Palantir, AMD, Qualcomm: A look at this week's tech earnings",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:19:28",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8344130473689596,
-              "source_w": 1.0,
-              "weight": 0.8344130473689596
-            },
-            {
-              "headline": "Earnings Take Centerstage as US Equity Futures Trade Mixed Pre-Bell",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:17:06",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8325140844229912,
-              "source_w": 1.0,
-              "weight": 0.8325140844229912
-            },
-            {
-              "headline": "Berkshire earnings, Kimberly-Clark's deal to buy Tylonel maker",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:15:36",
-              "vader": 0.296,
-              "relevance": 1.0,
-              "decay_w": 0.8313127545459489,
-              "source_w": 1.0,
-              "weight": 0.8313127545459489
+              "weight": 0.5636559354609012
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.88321,
-          "conf": 0.88321,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.640947,
+          "conf": 0.640947,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -204,197 +204,197 @@
     },
     "AMZN": {
       "symbol": "AMZN",
-      "price": 256.07,
+      "price": 253.99,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "Consumer Discretionary",
       "indicators": {
-        "sma20": 224.0972499999999,
-        "ema12": 231.10764121038943,
-        "ema26": 226.7129760878919,
-        "macd": 4.394665122497543,
-        "macd_signal": 0.7849187397556421,
-        "macd_hist": 3.6097463827419007,
-        "rsi14": 72.49274833476248
+        "sma20": 223.9932499999999,
+        "ema12": 230.7876412103894,
+        "ema26": 226.55890201381783,
+        "macd": 4.228739196571581,
+        "macd_signal": 0.7517335545704498,
+        "macd_hist": 3.4770056420011315,
+        "rsi14": 71.65721582202933
       },
       "signals": {
-        "TS": 0.605255,
-        "NS": 0.478666,
-        "wT": 0.561321008269374,
-        "wN": 0.43867899173062597,
-        "CDS": 0.549723,
+        "TS": 0.59671,
+        "NS": 0.384623,
+        "wT": 0.6033723248179594,
+        "wN": 0.3966276751820406,
+        "CDS": 0.51259,
         "components": {
-          "rsi_pos": 0.4498549666952496,
-          "macd_hist_slope": 0.9985367239552805,
-          "ema20_slope": 0.1294898263817374
+          "rsi_pos": 0.4331443164405866,
+          "macd_hist_slope": 0.9980922265414303,
+          "ema20_slope": 0.12107711390881104
         },
         "ns_debug": {
           "source": "vader_weighted",
           "articles_used": 15,
           "samples": [
             {
-              "headline": "Verizon Business Signs New Verizon AI Connect Deal With Amazon Web Services To Offer Network Infrastructure For AI Innovation",
+              "headline": "Nvidia Termed 'Undervalued' By Masayoshi Son Last Year, Now Worth $5 Trillion: Here Is What Japanese Billionaire Investor Said About Ongoing AI Hype",
               "source": "benzinga",
-              "ts": "2025-11-03T17:01:38Z",
-              "vader": 0.5106,
+              "ts": "2025-11-04T01:28:14Z",
+              "vader": 0.7845,
               "relevance": 1.0,
-              "decay_w": 0.975399476676774,
+              "decay_w": 0.9641820209032738,
               "source_w": 0.9,
-              "weight": 0.8778595290090966
+              "weight": 0.8677638188129464
             },
             {
-              "headline": "IREN, Cipher Bag Billion-Dollar AI Deals: Which Company Is Next?",
+              "headline": "Amazon Strikes $38B OpenAI Deal, Wedbush Hikes Target To Street-High",
               "source": "benzinga",
-              "ts": "2025-11-03T17:00:18Z",
-              "vader": 0.34,
+              "ts": "2025-11-04T00:28:56Z",
+              "vader": -0.0258,
               "relevance": 1.0,
-              "decay_w": 0.9741482513753622,
+              "decay_w": 0.9106801365953814,
               "source_w": 0.9,
-              "weight": 0.876733426237826
+              "weight": 0.8196121229358433
             },
             {
-              "headline": "Stock Market Today: Dow Skids While Amazon Surges On OpenAI Move; Kimberly-Clark Dives (Live Coverage)",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:19:36",
-              "vader": 0.34,
-              "relevance": 1.0,
-              "decay_w": 0.9367172081418322,
-              "source_w": 1.0,
-              "weight": 0.9367172081418322
-            },
-            {
-              "headline": "Buffett Sells Stocks \u2013 Here Is What Prudent Investors Should Do Now; OPEC+ Changes Stance",
+              "headline": "'Anthropic Lands Cognizant as Enterprise AI Customer'- WSJ",
               "source": "benzinga",
-              "ts": "2025-11-03T16:13:32Z",
+              "ts": "2025-11-03T22:58:23Z",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.9312623434106444,
+              "decay_w": 0.8346553108076736,
               "source_w": 0.9,
-              "weight": 0.83813610906958
+              "weight": 0.7511897797269063
             },
             {
-              "headline": "This Is Why AI Is Not a Bubble and Nvidia will Reach $10 Trillion",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:12:08",
-              "vader": -0.3182,
-              "relevance": 1.0,
-              "decay_w": 0.9300080463421252,
-              "source_w": 1.0,
-              "weight": 0.9300080463421252
-            },
-            {
-              "headline": "3 Big Winners From Amazon\u2019s Plan to Double Capacity by 2027",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:11:30",
-              "vader": 0.9349,
-              "relevance": 1.0,
-              "decay_w": 0.9294411813642695,
-              "source_w": 1.0,
-              "weight": 0.9294411813642695
-            },
-            {
-              "headline": "700 Billion Reasons Why These Are 3 Must-Buy Stocks for 2026",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:10:36",
-              "vader": 0.7769,
-              "relevance": 1.0,
-              "decay_w": 0.9286362307149734,
-              "source_w": 1.0,
-              "weight": 0.9286362307149734
-            },
-            {
-              "headline": "Amazon: Workforce Related Challenges Show Up, Again (NASDAQ:AMZN) - Seeking Alpha",
+              "headline": "Why Amazon (AMZN) Stock Is Up Today - The Globe and Mail",
               "source": "google_rss",
-              "ts": "2025-11-03T16:04:09",
-              "vader": 0.7929,
+              "ts": "2025-11-03T21:31:59",
+              "vader": 0.34,
               "relevance": 1.0,
-              "decay_w": 0.922887782318312,
+              "decay_w": 0.768039509533688,
               "source_w": 0.5,
-              "weight": 0.461443891159156
+              "weight": 0.384019754766844
             },
             {
-              "headline": "OpenAI and Amazon sign 38 billion-dollar deal for AI computing power",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:59:51",
-              "vader": 0.5994,
+              "headline": "Amazon's $38B OpenAI Deal Proves NVIDIA's Monopoly Is Already Breaking",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:39:08Z",
+              "vader": -0.5994,
               "relevance": 1.0,
-              "decay_w": 0.919075265941594,
-              "source_w": 1.0,
-              "weight": 0.919075265941594
+              "decay_w": 0.6889715531604322,
+              "source_w": 0.9,
+              "weight": 0.620074397844389
             },
             {
-              "headline": "MacKenzie Scott Makes Large Donations to HBCU, Bucking National Trend",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:46:09",
-              "vader": 0.8858,
+              "headline": "Move Over Nvidia: These ETFs See Amazon As The Next AI Infrastructure Star",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:37:17Z",
+              "vader": 0.765,
               "relevance": 1.0,
-              "decay_w": 0.9070331226081827,
-              "source_w": 1.0,
-              "weight": 0.9070331226081827
+              "decay_w": 0.6877455846895776,
+              "source_w": 0.9,
+              "weight": 0.6189710262206198
             },
             {
-              "headline": "Big Tech's rising AI investments show market bubble 'still has a good ways to go'",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:44:16",
-              "vader": 0.5574,
-              "relevance": 1.0,
-              "decay_w": 0.9053900768607321,
-              "source_w": 1.0,
-              "weight": 0.9053900768607321
-            },
-            {
-              "headline": "Amazon Stock Rallies To Record Highs On $38 Billion OpenAI Cloud Deal",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:35:11",
-              "vader": 0.7506,
-              "relevance": 1.0,
-              "decay_w": 0.8975073501096226,
-              "source_w": 1.0,
-              "weight": 0.8975073501096226
-            },
-            {
-              "headline": "Amazon Stock Rallies To Record Highs On $38 Billion OpenAI Cloud Deal - Investor's Business Daily",
+              "headline": "Bank of America revamps Amazon stock price after earnings - TheStreet",
               "source": "google_rss",
-              "ts": "2025-11-03T15:35:00",
-              "vader": 0.1779,
+              "ts": "2025-11-03T19:33:00",
+              "vader": 0.34,
               "relevance": 1.0,
-              "decay_w": 0.8973489578012059,
+              "decay_w": 0.6849154472195209,
               "source_w": 0.5,
-              "weight": 0.44867447890060297
+              "weight": 0.34245772360976046
             },
             {
-              "headline": "BC-Most Active Stocks",
+              "headline": "Equities Mostly Rise Intraday Amid Amazon Boost as Markets Await Week's Key Earnings",
               "source": "finnhub",
-              "ts": "2025-11-03T15:30:18",
+              "ts": "2025-11-03T19:09:00",
               "vader": 0.5859,
               "relevance": 1.0,
-              "decay_w": 0.8932978851919675,
+              "decay_w": 0.6692719567851545,
               "source_w": 1.0,
-              "weight": 0.8932978851919675
+              "weight": 0.6692719567851545
             },
             {
-              "headline": "OpenAI and Amazon ink $38B cloud computing deal",
+              "headline": "Amazon Is A Buy For Long-Term Investors",
               "source": "finnhub",
-              "ts": "2025-11-03T15:21:51",
-              "vader": 0.2115,
+              "ts": "2025-11-03T19:08:36",
+              "vader": 0.9136,
               "relevance": 1.0,
-              "decay_w": 0.8860605161871209,
+              "decay_w": 0.669014281973567,
               "source_w": 1.0,
-              "weight": 0.8860605161871209
+              "weight": 0.669014281973567
+            },
+            {
+              "headline": "Cipher CEO Spills 'Secret Sauce' Powering Its AI Pivot",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:07:47Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6684885038991927,
+              "source_w": 0.9,
+              "weight": 0.6016396535092734
+            },
+            {
+              "headline": "Benzinga Market Summary: S&P Rises As Amazon Gains On AWS-OpenAI Partnership, NVIDIA Rises On Reports US Approved Microsoft To Ship Chips For Use In UAE",
+              "source": "benzinga",
+              "ts": "2025-11-03T18:58:30Z",
+              "vader": 0.7096,
+              "relevance": 1.0,
+              "decay_w": 0.6625407686326095,
+              "source_w": 0.9,
+              "weight": 0.5962866917693486
+            },
+            {
+              "headline": "OpenAI signs\u00a0$38 billion deal to use Amazon's cloud platform",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:53:18",
+              "vader": 0.9502,
+              "relevance": 1.0,
+              "decay_w": 0.6592323358448977,
+              "source_w": 1.0,
+              "weight": 0.6592323358448977
+            },
+            {
+              "headline": "Sector Update: Tech Stocks Mixed Monday Afternoon",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:49:19",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6567091707231626,
+              "source_w": 1.0,
+              "weight": 0.6567091707231626
+            },
+            {
+              "headline": "Verizon To Build New Fiber Network For Amazon's Expanding AI Data Centers",
+              "source": "benzinga",
+              "ts": "2025-11-03T18:48:53Z",
+              "vader": 0.4767,
+              "relevance": 1.0,
+              "decay_w": 0.6564352672377154,
+              "source_w": 0.9,
+              "weight": 0.5907917405139439
+            },
+            {
+              "headline": "Stock Market Today: Dow Down, But Amazon Leaps On OpenAI Move; This Stock Soars On Microsoft Deal (Live Coverage)",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:38:07",
+              "vader": 0.4767,
+              "relevance": 1.0,
+              "decay_w": 0.6496663792827713,
+              "source_w": 1.0,
+              "weight": 0.6496663792827713
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.922281,
-          "conf": 0.922281,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.722037,
+          "conf": 0.722037,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -403,62 +403,52 @@
     },
     "DE": {
       "symbol": "DE",
-      "price": 462.38,
+      "price": 461.935,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "",
       "indicators": {
-        "sma20": 460.59524999999985,
-        "ema12": 464.76532786562797,
-        "ema26": 464.54903141262184,
-        "macd": 0.2162964530061231,
-        "macd_signal": -0.7873137235222476,
-        "macd_hist": 1.0036101765283707,
-        "rsi14": 48.174248188010154
+        "sma20": 460.57299999999987,
+        "ema12": 464.6968663271664,
+        "ema26": 464.51606844965886,
+        "macd": 0.18079787750752985,
+        "macd_signal": -0.7944134386219662,
+        "macd_hist": 0.9752113161294961,
+        "rsi14": 47.83298645846255
       },
       "signals": {
-        "TS": 0.289703,
-        "NS": 0.151425,
-        "wT": 0.6557385780556793,
-        "wN": 0.3442614219443208,
-        "CDS": 0.242099,
+        "TS": 0.281947,
+        "NS": 0.232441,
+        "wT": 0.7154496501122038,
+        "wN": 0.2845503498877962,
+        "CDS": 0.26786,
         "components": {
-          "rsi_pos": -0.036515036239796926,
-          "macd_hist_slope": 0.7631061736210244,
-          "ema20_slope": -0.004669111904132398
+          "rsi_pos": -0.043340270830749004,
+          "macd_hist_slope": 0.7509854364915362,
+          "ema20_slope": -0.005556467526028277
         },
         "ns_debug": {
           "source": "vader_weighted",
           "articles_used": 15,
           "samples": [
             {
-              "headline": "Pulsenmore stock up as at-home ultrasound secures FDA de novo authorisation - Medical Device Network",
+              "headline": "Will Corporacion Inmobiliaria Vesta S.A.B de stock enhance shareholder value - Long Setup & Entry Point Confirmation Signals - newser.com",
               "source": "google_rss",
-              "ts": "2025-11-03T16:11:34",
-              "vader": 0.5574,
+              "ts": "2025-11-03T15:07:10",
+              "vader": 0.5859,
               "relevance": 1.0,
-              "decay_w": 0.9295008350872827,
+              "decay_w": 0.5302647826103389,
               "source_w": 0.5,
-              "weight": 0.4647504175436413
-            },
-            {
-              "headline": "How Protalix BioTherapeutics Inc. (DE) stock performs in volatility spikes - Weekly Earnings Recap & Accurate Intraday Trading Signals - newser.com",
-              "source": "google_rss",
-              "ts": "2025-11-03T15:07:01",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8734973846289927,
-              "source_w": 0.5,
-              "weight": 0.43674869231449637
+              "weight": 0.26513239130516947
             },
             {
               "headline": "Dupont De Nemours stock hits 52-week low at 33.69 USD - Investing.com",
               "source": "google_rss",
-              "ts": "2025-11-03T14:33:13",
+              "ts": "2025-11-03T14:34:02",
               "vader": -0.4939,
               "relevance": 1.0,
-              "decay_w": 0.8455317557104385,
+              "decay_w": 0.5136175206756176,
               "source_w": 0.5,
-              "weight": 0.42276587785521924
+              "weight": 0.2568087603378088
             },
             {
               "headline": "Can Betterware de Mexico S.A.P.I. de stock sustain institutional flows - July 2025 Earnings & Fast Moving Stock Watchlists - newser.com",
@@ -466,49 +456,19 @@
               "ts": "2025-11-03T13:42:06",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.8049301353979814,
+              "decay_w": 0.48856983331256054,
               "source_w": 0.5,
-              "weight": 0.4024650676989907
+              "weight": 0.24428491665628027
             },
             {
-              "headline": "Is Ovintiv Inc. (DE) stock positioned for secular growth - Market Growth Report & Stepwise Trade Signal Implementation - newser.com",
+              "headline": "Will Corporacion Inmobiliaria Vesta S.A.B de stock enhance shareholder value - Quarterly Earnings Report & Expert Approved Momentum Trade Ideas - newser.com",
               "source": "google_rss",
-              "ts": "2025-11-03T12:56:46",
+              "ts": "2025-11-03T13:41:20",
               "vader": 0.8555,
               "relevance": 1.0,
-              "decay_w": 0.7705564260191847,
+              "decay_w": 0.48820936596308706,
               "source_w": 0.5,
-              "weight": 0.38527821300959236
-            },
-            {
-              "headline": "Will Betterware de Mexico S.A.P.I. de stock keep high P E multiples - July 2025 Weekly Recap & Verified Momentum Stock Ideas - newser.com",
-              "source": "google_rss",
-              "ts": "2025-11-03T11:25:42",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.7058781304173941,
-              "source_w": 0.5,
-              "weight": 0.35293906520869706
-            },
-            {
-              "headline": "Why ETFs are accumulating Ovintiv Inc. (DE) stock - Bull Run & AI Based Buy and Sell Signals - newser.com",
-              "source": "google_rss",
-              "ts": "2025-11-03T11:10:40",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.6957357692558526,
-              "source_w": 0.5,
-              "weight": 0.3478678846279263
-            },
-            {
-              "headline": "Will Betterware de Mexico S.A.P.I. de stock keep high P E multiples - Swing Trade & Daily Stock Momentum Reports - newser.com",
-              "source": "google_rss",
-              "ts": "2025-11-03T09:49:33",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.6434720379674674,
-              "source_w": 0.5,
-              "weight": 0.3217360189837337
+              "weight": 0.24410468298154353
             },
             {
               "headline": "How higher bond yields impact Betterware de Mexico S.A.P.I. de stock - 2025 Earnings Impact & Technical Entry and Exit Tips - newser.com",
@@ -516,9 +476,19 @@
               "ts": "2025-11-03T06:40:35",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.5364425794551885,
+              "decay_w": 0.3256054781656256,
               "source_w": 0.5,
-              "weight": 0.26822128972759424
+              "weight": 0.1628027390828128
+            },
+            {
+              "headline": "How Coca Cola Femsa S.A.B. de stock performs during market turbulence - Swing Trade & High Conviction Investment Ideas - newser.com",
+              "source": "google_rss",
+              "ts": "2025-11-03T05:21:21",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.30169246744333084,
+              "source_w": 0.5,
+              "weight": 0.15084623372166542
             },
             {
               "headline": "AGCO wants 'national policy' on farmers' right to repair: CEO",
@@ -526,9 +496,9 @@
               "ts": "2025-11-02T14:00:12",
               "vader": 0.5994,
               "relevance": 1.0,
-              "decay_w": 0.20476972890561332,
+              "decay_w": 0.1242894357153231,
               "source_w": 1.0,
-              "weight": 0.20476972890561332
+              "weight": 0.1242894357153231
             },
             {
               "headline": "Deere: Profit Resilience Amid Tariff Headwinds Sets The Stage For A 2026 Rebound",
@@ -536,9 +506,9 @@
               "ts": "2025-11-01T09:56:16",
               "vader": 0.6124,
               "relevance": 1.0,
-              "decay_w": 0.040477894710251656,
+              "decay_w": 0.024568937603079093,
               "source_w": 1.0,
-              "weight": 0.040477894710251656
+              "weight": 0.024568937603079093
             },
             {
               "headline": "Could Deere\u2019s (DE) Educational Investments Reveal Shifts in Its Long-Term Brand and Community Strategy?",
@@ -546,9 +516,9 @@
               "ts": "2025-10-31T21:13:38",
               "vader": 0.9186,
               "relevance": 1.0,
-              "decay_w": 0.019425090138750458,
+              "decay_w": 0.011790480482481111,
               "source_w": 1.0,
-              "weight": 0.019425090138750458
+              "weight": 0.011790480482481111
             },
             {
               "headline": "At US$465, Is It Time To Put Deere & Company (NYSE:DE) On Your Watch List?",
@@ -556,9 +526,9 @@
               "ts": "2025-10-31T12:00:20",
               "vader": 0.6124,
               "relevance": 1.0,
-              "decay_w": 0.011403281700263994,
+              "decay_w": 0.006921469571715729,
               "source_w": 1.0,
-              "weight": 0.011403281700263994
+              "weight": 0.006921469571715729
             },
             {
               "headline": "Metavista3D Registered as an Exhibitor at CES 2026 to Showcase Next-Generation 3D Display Innovations",
@@ -566,9 +536,9 @@
               "ts": "2025-10-30T21:54:00",
               "vader": 0.8126,
               "relevance": 1.0,
-              "decay_w": 0.005048707872863452,
+              "decay_w": 0.0030644229299094695,
               "source_w": 1.0,
-              "weight": 0.005048707872863452
+              "weight": 0.0030644229299094695
             },
             {
               "headline": "Deere & Company - GROWING THE NEXT GENERATION OF LEADERS:",
@@ -576,24 +546,54 @@
               "ts": "2025-10-30T15:13:00",
               "vader": 0.5948,
               "relevance": 1.0,
-              "decay_w": 0.0034318101839622434,
+              "decay_w": 0.0020830117494728692,
               "source_w": 1.0,
-              "weight": 0.0034318101839622434
+              "weight": 0.0020830117494728692
+            },
+            {
+              "headline": "Hutson, Inc. Appoints Scott Miller as President and Chief Executive Officer",
+              "source": "finnhub",
+              "ts": "2025-10-30T13:00:00",
+              "vader": 0.7184,
+              "relevance": 1.0,
+              "decay_w": 0.001832672190913946,
+              "source_w": 1.0,
+              "weight": 0.001832672190913946
+            },
+            {
+              "headline": "North America ATV & UTV Report 2025: A $16 Billion Market by 2033 Featuring Deere and Co, Honda, Yamaha, Arctic Cat, Polaris, BRP, Suzuki, Kawasaki, Daymak, Kubota",
+              "source": "finnhub",
+              "ts": "2025-10-30T12:13:00",
+              "vader": 0.9153,
+              "relevance": 1.0,
+              "decay_w": 0.0017515971130631042,
+              "source_w": 1.0,
+              "weight": 0.0017515971130631042
+            },
+            {
+              "headline": "Caterpillar Roars Again: Generators, Not Excavators, Power Its Growth",
+              "source": "finnhub",
+              "ts": "2025-10-29T21:50:29",
+              "vader": 0.4019,
+              "relevance": 1.0,
+              "decay_w": 0.0007635164589289439,
+              "source_w": 1.0,
+              "weight": 0.0007635164589289439
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.472673,
-          "conf": 0.472673,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.188335,
+          "conf": 0.188335,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -602,197 +602,197 @@
     },
     "NVDA": {
       "symbol": "NVDA",
-      "price": 209.275,
+      "price": 207,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "Tech",
       "indicators": {
-        "sma20": 189.48175000000015,
-        "ema12": 196.05356235763776,
-        "ema26": 189.90988503747906,
-        "macd": 6.143677320158702,
-        "macd_signal": 3.7746386442022906,
-        "macd_hist": 2.369038675956411,
-        "rsi14": 71.06687388681831
+        "sma20": 189.3680000000001,
+        "ema12": 195.70356235763776,
+        "ema26": 189.74136651896052,
+        "macd": 5.962195838677246,
+        "macd_signal": 3.7383423479059994,
+        "macd_hist": 2.223853490771247,
+        "rsi14": 69.69491248890195
       },
       "signals": {
-        "TS": 0.581985,
-        "NS": 0.421624,
-        "wT": 0.5564926141216306,
-        "wN": 0.4435073858783693,
-        "CDS": 0.510864,
+        "TS": 0.566495,
+        "NS": 0.128396,
+        "wT": 0.591313735678825,
+        "wN": 0.408686264321175,
+        "CDS": 0.38745,
         "components": {
-          "rsi_pos": 0.42133747773636626,
-          "macd_hist_slope": 0.9826410582070709,
-          "ema20_slope": 0.10197002098494877
+          "rsi_pos": 0.393898249778039,
+          "macd_hist_slope": 0.9768601074310368,
+          "ema20_slope": 0.09095872870355268
         },
         "ns_debug": {
           "source": "vader_weighted",
           "articles_used": 15,
           "samples": [
             {
-              "headline": "Stock Market Today: Dow Dips But Amazon Surges On OpenAI Move; Kimberly-Clark Dives On $49 Billion Deal (Live Coverage) - Investor's Business Daily",
-              "source": "google_rss",
-              "ts": "2025-11-03T17:25:00",
-              "vader": 0.4767,
-              "relevance": 1.0,
-              "decay_w": 0.9975899298866365,
-              "source_w": 0.5,
-              "weight": 0.49879496494331826
-            },
-            {
-              "headline": "Toast And Uber Team Up To Help Restaurants Attract More Diners",
+              "headline": "Jim Cramer Says Trump Has Not 'Banned' Nvidia From China: President's Comments Leave A 'Lot Of Latitude' For The Tech Giant And Beijing",
               "source": "benzinga",
-              "ts": "2025-11-03T17:18:56Z",
-              "vader": 0.8625,
+              "ts": "2025-11-04T02:00:49Z",
+              "vader": -0.5886,
               "relevance": 1.0,
-              "decay_w": 0.9917805798742443,
+              "decay_w": 0.994905953987655,
               "source_w": 0.9,
-              "weight": 0.8926025218868199
+              "weight": 0.8954153585888895
             },
             {
-              "headline": "Why Is Rigetti Computing Stock Sinking Monday?",
+              "headline": "Nvidia Termed 'Undervalued' By Masayoshi Son Last Year, Now Worth $5 Trillion: Here Is What Japanese Billionaire Investor Said About Ongoing AI Hype",
               "source": "benzinga",
-              "ts": "2025-11-03T16:57:21Z",
-              "vader": -0.6154,
-              "relevance": 1.0,
-              "decay_w": 0.9713856165100633,
-              "source_w": 0.9,
-              "weight": 0.874247054859057
-            },
-            {
-              "headline": "Live On CNBC, Lambda CEO Says, As Part Of Lambda's Agreement With Microsoft, Lambda Will Deploy AI Infrastructure Powered By Nvidia",
-              "source": "benzinga",
-              "ts": "2025-11-03T16:50:00Z",
-              "vader": 0.4939,
-              "relevance": 1.0,
-              "decay_w": 0.9645364713461383,
-              "source_w": 0.9,
-              "weight": 0.8680828242115245
-            },
-            {
-              "headline": "Goldman Sachs Maintains Buy on NVIDIA, Raises Price Target to $240",
-              "source": "benzinga",
-              "ts": "2025-11-03T16:30:42Z",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.9467806594102826,
-              "source_w": 0.9,
-              "weight": 0.8521025934692543
-            },
-            {
-              "headline": "Stock Market Today: Dow Skids While Amazon Surges On OpenAI Move; Kimberly-Clark Dives (Live Coverage)",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:19:36",
-              "vader": 0.34,
-              "relevance": 1.0,
-              "decay_w": 0.9367172081418322,
-              "source_w": 1.0,
-              "weight": 0.9367172081418322
-            },
-            {
-              "headline": "Nvidia Stock Scores Price-Target Hikes On Latest AI Chip Deals",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:18:03",
+              "ts": "2025-11-04T01:28:14Z",
               "vader": 0.7845,
               "relevance": 1.0,
-              "decay_w": 0.9353204887067045,
-              "source_w": 1.0,
-              "weight": 0.9353204887067045
+              "decay_w": 0.9641820209032738,
+              "source_w": 0.9,
+              "weight": 0.8677638188129464
+            },
+            {
+              "headline": "Rigetti, D-Wave Stocks Down, ETF Reactions Diverge In Market Shakeup",
+              "source": "benzinga",
+              "ts": "2025-11-04T00:19:18Z",
+              "vader": -0.1531,
+              "relevance": 1.0,
+              "decay_w": 0.9022734832736549,
+              "source_w": 0.9,
+              "weight": 0.8120461349462894
+            },
+            {
+              "headline": "Palantir CEO Alex Karp Just Delivered Incredible News for Nvidia Stock Investors - The Motley Fool",
+              "source": "google_rss",
+              "ts": "2025-11-03T23:32:00",
+              "vader": -0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.8621090335456529,
+              "source_w": 0.5,
+              "weight": 0.43105451677282647
+            },
+            {
+              "headline": "Goldman Sachs Sounds the Bullhorn for Nvidia Stock - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-11-03T23:28:32",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8592366479197971,
+              "source_w": 0.5,
+              "weight": 0.4296183239598986
+            },
+            {
+              "headline": "Michael Burry Is Super-Bearish On Palantir \u2014 With 5 Million Puts",
+              "source": "benzinga",
+              "ts": "2025-11-03T23:17:30Z",
+              "vader": 0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.8501582746694714,
+              "source_w": 0.9,
+              "weight": 0.7651424472025242
+            },
+            {
+              "headline": "Digital Realty And NVIDIA Collaborate On Design And Deployment Of AI Infrastructure At Digital Realty's Manassas Campus",
+              "source": "benzinga",
+              "ts": "2025-11-03T21:20:46Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7597905794708552,
+              "source_w": 0.9,
+              "weight": 0.6838115215237697
             },
             {
               "headline": "Nvidia Stock Scores Price-Target Hikes On Latest AI Chip Deals - Investor's Business Daily",
               "source": "google_rss",
-              "ts": "2025-11-03T16:18:00",
+              "ts": "2025-11-03T21:17:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.9352754679319454,
+              "decay_w": 0.7570404263209451,
               "source_w": 0.5,
-              "weight": 0.4676377339659727
+              "weight": 0.3785202131604726
             },
             {
-              "headline": "Is Rigetti Computing (RGTI) One of the Best Performing Stocks in the Last 3 Months?",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:15:55",
-              "vader": 0.9062,
-              "relevance": 1.0,
-              "decay_w": 0.9334015273120977,
-              "source_w": 1.0,
-              "weight": 0.9334015273120977
-            },
-            {
-              "headline": "Buffett Sells Stocks \u2013 Here Is What Prudent Investors Should Do Now; OPEC+ Changes Stance",
+              "headline": "AMD's November Magic Returns\u2014Earnings Could Be The Spark Again",
               "source": "benzinga",
-              "ts": "2025-11-03T16:13:32Z",
+              "ts": "2025-11-03T20:32:34Z",
+              "vader": 0.8885,
+              "relevance": 1.0,
+              "decay_w": 0.7253399844907705,
+              "source_w": 0.9,
+              "weight": 0.6528059860416935
+            },
+            {
+              "headline": "Amazon's $38B OpenAI Deal Proves NVIDIA's Monopoly Is Already Breaking",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:39:08Z",
+              "vader": -0.5994,
+              "relevance": 1.0,
+              "decay_w": 0.6889715531604322,
+              "source_w": 0.9,
+              "weight": 0.620074397844389
+            },
+            {
+              "headline": "IREN's 500% Stock Boom Hands Paul Tudor Jones An Eight-Figure Windfall",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:16:41Z",
+              "vader": 0.1655,
+              "relevance": 1.0,
+              "decay_w": 0.6742407674431364,
+              "source_w": 0.9,
+              "weight": 0.6068166906988228
+            },
+            {
+              "headline": "This Bitcoin Miner's Stock Is Soaring on a $9.7B AI Data Center Deal With Microsoft",
+              "source": "finnhub",
+              "ts": "2025-11-03T19:09:23",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.6695189882740792,
+              "source_w": 1.0,
+              "weight": 0.6695189882740792
+            },
+            {
+              "headline": "'Trump Officials Torpedoed Nvidia's Push to Export AI Chips to China'- WSJ",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:07:17Z",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.9312623434106444,
+              "decay_w": 0.668166802913287,
               "source_w": 0.9,
-              "weight": 0.83813610906958
+              "weight": 0.6013501226219583
             },
             {
-              "headline": "This Is Why AI Is Not a Bubble and Nvidia will Reach $10 Trillion",
+              "headline": "OpenAI signs\u00a0$38 billion deal to use Amazon's cloud platform",
               "source": "finnhub",
-              "ts": "2025-11-03T16:12:08",
-              "vader": -0.3182,
+              "ts": "2025-11-03T18:53:18",
+              "vader": 0.9502,
               "relevance": 1.0,
-              "decay_w": 0.9300080463421252,
+              "decay_w": 0.6592323358448977,
               "source_w": 1.0,
-              "weight": 0.9300080463421252
+              "weight": 0.6592323358448977
             },
             {
-              "headline": "3 Big Winners From Amazon\u2019s Plan to Double Capacity by 2027",
+              "headline": "Sector Update: Tech Stocks Mixed Monday Afternoon",
               "source": "finnhub",
-              "ts": "2025-11-03T16:11:30",
-              "vader": 0.9349,
+              "ts": "2025-11-03T18:49:19",
+              "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.9294411813642695,
+              "decay_w": 0.6567091707231626,
               "source_w": 1.0,
-              "weight": 0.9294411813642695
-            },
-            {
-              "headline": "700 Billion Reasons Why These Are 3 Must-Buy Stocks for 2026",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:10:36",
-              "vader": 0.7769,
-              "relevance": 1.0,
-              "decay_w": 0.9286362307149734,
-              "source_w": 1.0,
-              "weight": 0.9286362307149734
-            },
-            {
-              "headline": "Jim Cramer Says \u201cLisa Su at AMD is Challenging Nvidia at Its Own Game\u201d",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:06:35",
-              "vader": 0.8807,
-              "relevance": 1.0,
-              "decay_w": 0.9250522557077822,
-              "source_w": 1.0,
-              "weight": 0.9250522557077822
-            },
-            {
-              "headline": "Palantir Q3 Preview: 'AI Juggernaut' Can Double Market Cap To $1 Trillion, Analyst Says",
-              "source": "benzinga",
-              "ts": "2025-11-03T16:03:03Z",
-              "vader": 0.5106,
-              "relevance": 1.0,
-              "decay_w": 0.9219109846523538,
-              "source_w": 0.9,
-              "weight": 0.8297198861871184
+              "weight": 0.6567091707231626
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.945273,
-          "conf": 0.945273,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.779458,
+          "conf": 0.779458,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -801,197 +801,197 @@
     },
     "PLTR": {
       "symbol": "PLTR",
-      "price": 204.63,
+      "price": 207.39,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "",
       "indicators": {
-        "sma20": 185.01024999999998,
-        "ema12": 191.2376375502361,
-        "ema26": 185.04842883724956,
-        "macd": 6.189208712986527,
-        "macd_signal": 4.1553951424583975,
-        "macd_hist": 2.03381357052813,
-        "rsi14": 69.87312847321024
+        "sma20": 185.14824999999996,
+        "ema12": 191.6622529348515,
+        "ema26": 185.252873281694,
+        "macd": 6.409379653157487,
+        "macd_signal": 4.19942933049259,
+        "macd_hist": 2.2099503226648967,
+        "rsi14": 71.33902495454541
       },
       "signals": {
-        "TS": 0.566685,
-        "NS": 0.294638,
-        "wT": 0.5679306129729245,
-        "wN": 0.4320693870270755,
-        "CDS": 0.449142,
+        "TS": 0.585098,
+        "NS": 0.134974,
+        "wT": 0.5765159753232934,
+        "wN": 0.4234840246767066,
+        "CDS": 0.394478,
         "components": {
-          "rsi_pos": 0.3974625694642049,
-          "macd_hist_slope": 0.9663402681914897,
-          "ema20_slope": 0.10581862967327577
+          "rsi_pos": 0.42678049909090815,
+          "macd_hist_slope": 0.9762154018163737,
+          "ema20_slope": 0.1194968063175163
         },
         "ns_debug": {
           "source": "vader_weighted",
           "articles_used": 15,
           "samples": [
             {
-              "headline": "Palantir share price prediction: PLTR stock to rise or crash as AI darling set to announce earnings result - The Economic Times",
+              "headline": "Cathie Wood Dumps $7.9 Million Worth Of Palantir Stock Despite 121% Revenue Surge \u2014 Ark Doubles Down On Peter Thiel's Buzzy Crypto Upstart",
+              "source": "benzinga",
+              "ts": "2025-11-04T01:49:08Z",
+              "vader": -0.2023,
+              "relevance": 1.0,
+              "decay_w": 0.9837783498641162,
+              "source_w": 0.9,
+              "weight": 0.8854005148777045
+            },
+            {
+              "headline": "Palantir stock crashes as it crushed Wall Street expectations: Why is PLTR down today despite huge AI-fuel - The Economic Times",
               "source": "google_rss",
-              "ts": "2025-11-03T16:36:00",
+              "ts": "2025-11-04T01:31:07",
+              "vader": -0.8188,
+              "relevance": 1.0,
+              "decay_w": 0.966862113151063,
+              "source_w": 0.5,
+              "weight": 0.4834310565755315
+            },
+            {
+              "headline": "Cathie Wood\u2019s ARK sells Palantir stock, buys Beam and Bullish - Investing.com",
+              "source": "google_rss",
+              "ts": "2025-11-04T01:04:30",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.9424019766040764,
+              "source_w": 0.5,
+              "weight": 0.4712009883020382
+            },
+            {
+              "headline": "Palantir Stock Edges Down Despite Stellar AI-Driven Q3 Earnings Results and Raised 2025 Guidance - The Motley Fool",
+              "source": "google_rss",
+              "ts": "2025-11-04T00:57:00",
+              "vader": -0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.935622073374806,
+              "source_w": 0.5,
+              "weight": 0.467811036687403
+            },
+            {
+              "headline": "Michael Burry Is Super-Bearish On Palantir \u2014 With 5 Million Puts",
+              "source": "benzinga",
+              "ts": "2025-11-03T23:17:30Z",
+              "vader": 0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.8501582746694714,
+              "source_w": 0.9,
+              "weight": 0.7651424472025242
+            },
+            {
+              "headline": "Palantir CEO Alex Karp Tells Investors You Are Fighting For The Right Side Of What Should Work In This Country",
+              "source": "benzinga",
+              "ts": "2025-11-03T22:48:22Z",
+              "vader": -0.3612,
+              "relevance": 1.0,
+              "decay_w": 0.8266453376670829,
+              "source_w": 0.9,
+              "weight": 0.7439808039003747
+            },
+            {
+              "headline": "Palantir CEO Alex Karp Says We Are Every Day Making This Company Better For This Nation And Allied Countries",
+              "source": "benzinga",
+              "ts": "2025-11-03T22:47:18Z",
+              "vader": 0.4404,
+              "relevance": 1.0,
+              "decay_w": 0.8257969039040214,
+              "source_w": 0.9,
+              "weight": 0.7432172135136192
+            },
+            {
+              "headline": "Palantir Q3: Accelerating Growth, Huge Earnings Beat (PLTR) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-11-03T22:45:42",
+              "vader": 0.8316,
+              "relevance": 1.0,
+              "decay_w": 0.8245258857234968,
+              "source_w": 0.5,
+              "weight": 0.4122629428617484
+            },
+            {
+              "headline": "Palantir Executive Says U.S. Army Issued An Official Public Memo Directing All Army Organizations To Consolidate And Centralize On Co's 'Vantage' Platform",
+              "source": "benzinga",
+              "ts": "2025-11-03T22:43:49Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.823032297764652,
+              "source_w": 0.9,
+              "weight": 0.7407290679881868
+            },
+            {
+              "headline": "Palantir CEO Alex Karp Says The More We Focus On Internal Dynamics, The Better Our Numbers Are",
+              "source": "benzinga",
+              "ts": "2025-11-03T22:42:34Z",
+              "vader": 0.6124,
+              "relevance": 1.0,
+              "decay_w": 0.8220424724164265,
+              "source_w": 0.9,
+              "weight": 0.7398382251747838
+            },
+            {
+              "headline": "Palantir Earnings Are Strong. The Stock Rises. - Barron's",
+              "source": "google_rss",
+              "ts": "2025-11-03T22:36:00",
               "vader": 0.765,
               "relevance": 1.0,
-              "decay_w": 0.9516237951425918,
+              "decay_w": 0.8168621097662859,
               "source_w": 0.5,
-              "weight": 0.4758118975712959
+              "weight": 0.40843105488314296
             },
             {
-              "headline": "Palantir's Pentagon Deals Look Big \u2014 Until You See What's Actually Billable",
+              "headline": "Palantir CEO Alex Karp Says We Need To Be In The Place Where The Most Valuable Problem Will Be Solved",
               "source": "benzinga",
-              "ts": "2025-11-03T16:34:21Z",
+              "ts": "2025-11-03T22:34:04Z",
+              "vader": 0.3642,
+              "relevance": 1.0,
+              "decay_w": 0.8153431566919233,
+              "source_w": 0.9,
+              "weight": 0.7338088410227309
+            },
+            {
+              "headline": "Why Palantir's stock is not moving much after earnings - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-11-03T21:53:27",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.9501133765699626,
-              "source_w": 0.9,
-              "weight": 0.8551020389129664
+              "decay_w": 0.7840770012107345,
+              "source_w": 0.5,
+              "weight": 0.39203850060536727
             },
             {
-              "headline": "This Is Why AI Is Not a Bubble and Nvidia will Reach $10 Trillion",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:12:08",
-              "vader": -0.3182,
+              "headline": "PLTR Earnings: Palantir Stock Pops after Strong Q3 Results, Lifts Outlook - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-11-03T21:29:50",
+              "vader": 0.765,
               "relevance": 1.0,
-              "decay_w": 0.9300080463421252,
-              "source_w": 1.0,
-              "weight": 0.9300080463421252
+              "decay_w": 0.7664514542790459,
+              "source_w": 0.5,
+              "weight": 0.38322572713952296
             },
             {
-              "headline": "Jim Cramer Says \u201cClorox is at the Heart of This Market\u2019s Conundrum\u201d",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:06:40",
-              "vader": 0.8555,
-              "relevance": 1.0,
-              "decay_w": 0.9251264713424754,
-              "source_w": 1.0,
-              "weight": 0.9251264713424754
-            },
-            {
-              "headline": "Jim Cramer on Palantir: \u201cI\u2019m Not Backing Away From This One Long Term\u201d",
-              "source": "finnhub",
-              "ts": "2025-11-03T16:06:38",
-              "vader": 0.6732,
-              "relevance": 1.0,
-              "decay_w": 0.925096784374119,
-              "source_w": 1.0,
-              "weight": 0.925096784374119
-            },
-            {
-              "headline": "Palantir Q3 Preview: 'AI Juggernaut' Can Double Market Cap To $1 Trillion, Analyst Says",
+              "headline": "Palantir Q3 Earnings: Revenue, EPS Blow Past Estimates As US Commercial Business Booms",
               "source": "benzinga",
-              "ts": "2025-11-03T16:03:03Z",
-              "vader": 0.5106,
+              "ts": "2025-11-03T21:28:13Z",
+              "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.9219109846523538,
+              "decay_w": 0.765259498391841,
               "source_w": 0.9,
-              "weight": 0.8297198861871184
-            },
-            {
-              "headline": "Wall Street Loves Nvidia, Palantir and Cisco",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:42:46",
-              "vader": 0.7269,
-              "relevance": 1.0,
-              "decay_w": 0.9040835858714964,
-              "source_w": 1.0,
-              "weight": 0.9040835858714964
-            },
-            {
-              "headline": "Here's How Much Traders Expect Palantir Stock To Move After Monday's Earnings",
-              "source": "finnhub",
-              "ts": "2025-11-03T15:32:00",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8947610512666453,
-              "source_w": 1.0,
-              "weight": 0.8947610512666453
-            },
-            {
-              "headline": "Here's How Much Traders Expect Palantir Stock To Move After Monday's Earnings - Yahoo Finance",
-              "source": "google_rss",
-              "ts": "2025-11-03T15:32:00",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8947610512666453,
-              "source_w": 0.5,
-              "weight": 0.44738052563332265
-            },
-            {
-              "headline": "If You'd Invested $1,500 In Quantum Computing Stock 1 Year Ago, Here's How Much You'd Have Today",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:40:00",
-              "vader": 0.1531,
-              "relevance": 1.0,
-              "decay_w": 0.8510714380857219,
-              "source_w": 1.0,
-              "weight": 0.8510714380857219
-            },
-            {
-              "headline": "Stock market today: Dow slips, Nasdaq pops as Amazon's OpenAI deal boosts AI bets",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:37:20",
-              "vader": 0.5719,
-              "relevance": 1.0,
-              "decay_w": 0.8488893595916097,
-              "source_w": 1.0,
-              "weight": 0.8488893595916097
-            },
-            {
-              "headline": "Stock market today: S&P 500, Nasdaq jump to kick off November as Amazon, Nvidia lead way",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:37:20",
-              "vader": 0.4767,
-              "relevance": 1.0,
-              "decay_w": 0.8488893595916097,
-              "source_w": 1.0,
-              "weight": 0.8488893595916097
-            },
-            {
-              "headline": "Cathie Wood Cuts Stake in Palantir Stock (PLTR) Ahead of Q3, Loads Up on Bullish (BLSH) and Intellia (NTLA) - TipRanks",
-              "source": "google_rss",
-              "ts": "2025-11-03T14:27:28",
-              "vader": -0.5267,
-              "relevance": 1.0,
-              "decay_w": 0.8408642027177776,
-              "source_w": 0.5,
-              "weight": 0.4204321013588888
-            },
-            {
-              "headline": "Palantir Technologies Inc. (PLTR) Stock Price | Live Quotes & Charts | NASDAQ - StocksToTrade",
-              "source": "google_rss",
-              "ts": "2025-11-03T14:27:00",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8404865191784402,
-              "source_w": 0.5,
-              "weight": 0.4202432595892201
-            },
-            {
-              "headline": "Palantir, AMD, Qualcomm: A look at this week's tech earnings",
-              "source": "finnhub",
-              "ts": "2025-11-03T14:19:28",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.8344130473689596,
-              "source_w": 1.0,
-              "weight": 0.8344130473689596
+              "weight": 0.688733548552657
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.890807,
-          "conf": 0.890807,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.849924,
+          "conf": 0.849924,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -1000,42 +1000,72 @@
     },
     "SNOW": {
       "symbol": "SNOW",
-      "price": 277.26,
+      "price": 277.165,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "",
       "indicators": {
-        "sma20": 252.96625,
-        "ema12": 262.4367011788528,
-        "ema26": 251.05574916353274,
-        "macd": 11.380952015320048,
-        "macd_signal": 9.079933016888356,
-        "macd_hist": 2.301018998431692,
-        "rsi14": 74.48271377659131
+        "sma20": 252.96149999999997,
+        "ema12": 262.4220857942374,
+        "ema26": 251.0487121264957,
+        "macd": 11.373373667741674,
+        "macd_signal": 9.078417347372682,
+        "macd_hist": 2.2949563203689927,
+        "rsi14": 74.44156976678617
       },
       "signals": {
-        "TS": 0.608792,
-        "NS": 0.501491,
-        "wT": 0.6138578909334027,
-        "wN": 0.38614210906659724,
-        "CDS": 0.567358,
+        "TS": 0.608297,
+        "NS": 0.380496,
+        "wT": 0.6602294489006073,
+        "wN": 0.33977055109939264,
+        "CDS": 0.530897,
         "components": {
-          "rsi_pos": 0.4896542755318262,
-          "macd_hist_slope": 0.9801365159863149,
-          "ema20_slope": 0.10437622290576713
+          "rsi_pos": 0.48883139533572345,
+          "macd_hist_slope": 0.9798966337451426,
+          "ema20_slope": 0.1040287665779585
         },
         "ns_debug": {
           "source": "vader_weighted",
           "articles_used": 15,
           "samples": [
             {
+              "headline": "Noteworthy Monday Option Activity: SNOW, SPHR, CCSI - Nasdaq",
+              "source": "google_rss",
+              "ts": "2025-11-03T20:27:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.7214632450246243,
+              "source_w": 0.5,
+              "weight": 0.36073162251231217
+            },
+            {
+              "headline": "Palantir's Q3 Results Likely to be Major Step in 'Right Direction' in AI Revolution, Wedbush Says",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:42:03",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5809827555446502,
+              "source_w": 1.0,
+              "weight": 0.5809827555446502
+            },
+            {
+              "headline": "SNOW stock trend outlook and recovery path - Market Rally & Reliable Breakout Forecasts - newser.com",
+              "source": "google_rss",
+              "ts": "2025-11-03T14:30:16",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5117584204439212,
+              "source_w": 0.5,
+              "weight": 0.2558792102219606
+            },
+            {
               "headline": "Snowflake to Present at Upcoming Investor Conference",
               "source": "finnhub",
               "ts": "2025-11-03T14:10:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.8268430863038123,
+              "decay_w": 0.5018703749380208,
               "source_w": 1.0,
-              "weight": 0.8268430863038123
+              "weight": 0.5018703749380208
             },
             {
               "headline": "USA Bobsled/Skeleton Taps Snowflake Intelligence to Redefine Speed and Precision on Ice",
@@ -1043,9 +1073,9 @@
               "ts": "2025-11-03T14:05:00",
               "vader": 0.8807,
               "relevance": 1.0,
-              "decay_w": 0.8228726224692038,
+              "decay_w": 0.49946041565268584,
               "source_w": 1.0,
-              "weight": 0.8228726224692038
+              "weight": 0.49946041565268584
             },
             {
               "headline": "Deloitte Expands Alliance With Snowflake to Enhance Tax Data Management Solutions",
@@ -1053,9 +1083,9 @@
               "ts": "2025-11-03T14:02:00",
               "vader": 0.7906,
               "relevance": 1.0,
-              "decay_w": 0.8204995017135759,
+              "decay_w": 0.4980199984524596,
               "source_w": 1.0,
-              "weight": 0.8204995017135759
+              "weight": 0.4980199984524596
             },
             {
               "headline": "Snowflake to Announce Financial Results for the Third Quarter of Fiscal 2026 on December 3, 2025",
@@ -1063,9 +1093,9 @@
               "ts": "2025-11-03T14:00:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.8189212246258613,
+              "decay_w": 0.4970620288849709,
               "source_w": 1.0,
-              "weight": 0.8189212246258613
+              "weight": 0.4970620288849709
             },
             {
               "headline": "Snowflake (NYSE: SNOW) Schedules Q3 FY2026 Results; webcast after U.S. market close - Stock Titan",
@@ -1073,9 +1103,9 @@
               "ts": "2025-11-03T14:00:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.8189212246258613,
+              "decay_w": 0.4970620288849709,
               "source_w": 0.5,
-              "weight": 0.4094606123129306
+              "weight": 0.24853101444248546
             },
             {
               "headline": "Is Snowflake\u2019s Soaring Price Justified After Major Cloud Partnerships?",
@@ -1083,19 +1113,9 @@
               "ts": "2025-11-03T13:09:09",
               "vader": 0.9636,
               "relevance": 1.0,
-              "decay_w": 0.779797581238406,
+              "decay_w": 0.4733150835442574,
               "source_w": 1.0,
-              "weight": 0.779797581238406
-            },
-            {
-              "headline": "K.J. Harrison & Partners Inc Takes Position in Snowflake Inc. $SNOW - MarketBeat",
-              "source": "google_rss",
-              "ts": "2025-11-03T12:21:21",
-              "vader": 0.0,
-              "relevance": 1.0,
-              "decay_w": 0.7447265496996174,
-              "source_w": 0.5,
-              "weight": 0.3723632748498087
+              "weight": 0.4733150835442574
             },
             {
               "headline": "Snowflake Inc.'s (NYSE:SNOW) high institutional ownership speaks for itself as stock continues to impress, up 3.4% over last week",
@@ -1103,29 +1123,19 @@
               "ts": "2025-11-03T12:00:22",
               "vader": 0.6705,
               "relevance": 1.0,
-              "decay_w": 0.7298334489039586,
+              "decay_w": 0.4429882679204664,
               "source_w": 1.0,
-              "weight": 0.7298334489039586
+              "weight": 0.4429882679204664
             },
             {
-              "headline": "Snowflake Inc.'s (NYSE:SNOW) high institutional ownership speaks for itself as stock continues to impress, up 3.4% over last week - Yahoo! Finance UK",
+              "headline": "Snowflake Inc.'s (NYSE:SNOW) high institutional ownership speaks for itself as stock continues to impress, up 3.4% over last week - Yahoo! Finance Canada",
               "source": "google_rss",
               "ts": "2025-11-03T12:00:22",
               "vader": 0.7494,
               "relevance": 1.0,
-              "decay_w": 0.7298334489039586,
+              "decay_w": 0.4429882679204664,
               "source_w": 0.5,
-              "weight": 0.3649167244519793
-            },
-            {
-              "headline": "What is the fair value of SNOW stock now - Dip Buying & Advanced Swing Trade Entry Alerts - newser.com",
-              "source": "google_rss",
-              "ts": "2025-11-03T11:40:01",
-              "vader": 0.886,
-              "relevance": 1.0,
-              "decay_w": 0.7156744043674935,
-              "source_w": 0.5,
-              "weight": 0.35783720218374676
+              "weight": 0.2214941339602332
             },
             {
               "headline": "World Investment Advisors Invests $499,000 in Snowflake Inc. $SNOW - MarketBeat",
@@ -1133,29 +1143,19 @@
               "ts": "2025-11-03T09:07:34",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.6179830516648029,
+              "decay_w": 0.3750982392932502,
               "source_w": 0.5,
-              "weight": 0.30899152583240147
+              "weight": 0.1875491196466251
             },
             {
-              "headline": "Why SNOW stock remains a top recommendation - Weekly Gains Summary & High Return Trade Opportunity Guides - newser.com",
+              "headline": "Why Tidal Trust II YieldMax SNOW stock is a must watch ticker - Portfolio Performance Report & Stock Market Timing Techniques - newser.com",
               "source": "google_rss",
-              "ts": "2025-11-03T07:29:51",
-              "vader": 0.9001,
+              "ts": "2025-11-03T08:08:32",
+              "vader": 0.765,
               "relevance": 1.0,
-              "decay_w": 0.5624986679197382,
+              "decay_w": 0.3543752260388984,
               "source_w": 0.5,
-              "weight": 0.2812493339598691
-            },
-            {
-              "headline": "Will SNOW stock gain from lower inflation - Entry Point & Community Trade Idea Sharing Platform - newser.com",
-              "source": "google_rss",
-              "ts": "2025-11-03T04:42:36",
-              "vader": 0.8402,
-              "relevance": 1.0,
-              "decay_w": 0.47884475956508993,
-              "source_w": 0.5,
-              "weight": 0.23942237978254496
+              "weight": 0.1771876130194492
             },
             {
               "headline": "Best And Worst Stocks And ETFs Through October",
@@ -1163,9 +1163,9 @@
               "ts": "2025-11-02T22:05:00",
               "vader": 0.6486,
               "relevance": 1.0,
-              "decay_w": 0.3265572166358613,
+              "decay_w": 0.19821099730588693,
               "source_w": 1.0,
-              "weight": 0.3265572166358613
+              "weight": 0.19821099730588693
             },
             {
               "headline": "Snowflake's CRO Mike Gannon's Instagram Interview With Influencer James Dumoulin Triggers SEC Filing",
@@ -1173,24 +1173,24 @@
               "ts": "2025-11-02T19:53:40Z",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.2877724304054206,
+              "decay_w": 0.17466972867851624,
               "source_w": 0.9,
-              "weight": 0.25899518736487853
+              "weight": 0.15720275581066462
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.672105,
-          "conf": 0.672105,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.451288,
+          "conf": 0.451288,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }
@@ -1199,42 +1199,62 @@
     },
     "SOFI": {
       "symbol": "SOFI",
-      "price": 30.84,
+      "price": 30.61,
       "ts": "2025-11-03T05:00:00Z",
       "sector": "",
       "indicators": {
-        "sma20": 28.539999999999985,
-        "ema12": 29.401736413471593,
-        "ema26": 28.45704800042236,
-        "macd": 0.9446884130492315,
-        "macd_signal": 0.7610673381817572,
-        "macd_hist": 0.18362107486747425,
-        "rsi14": 59.747552678317355
+        "sma20": 28.528499999999987,
+        "ema12": 29.366351798086978,
+        "ema26": 28.440010963385326,
+        "macd": 0.9263408347016515,
+        "macd_signal": 0.7573978225122412,
+        "macd_hist": 0.16894301218941032,
+        "rsi14": 59.04897597050346
       },
       "signals": {
-        "TS": 0.167362,
-        "NS": 0.418265,
-        "wT": 0.648077919242896,
-        "wN": 0.3519220807571039,
-        "CDS": 0.25566,
+        "TS": 0.154593,
+        "NS": 0.463915,
+        "wT": 0.6742566586902374,
+        "wN": 0.3257433413097625,
+        "CDS": 0.255353,
         "components": {
-          "rsi_pos": 0.1949510535663471,
-          "macd_hist_slope": 0.18158483375109039,
-          "ema20_slope": 0.08373855220479197
+          "rsi_pos": 0.18097951941006926,
+          "macd_hist_slope": 0.16735384352974578,
+          "ema20_slope": 0.07630056962384416
         },
         "ns_debug": {
           "source": "vader_weighted",
           "articles_used": 15,
           "samples": [
             {
+              "headline": "Looking for a Reason to Buy SoFi Stock for 2026 and Beyond? Here Are 7. - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-11-03T17:23:47",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6048000697060745,
+              "source_w": 0.5,
+              "weight": 0.30240003485303724
+            },
+            {
               "headline": "'Nearly Two Dozen States Sue Trump Admin Over Rule Limiting Student Loan Forgiveness For Public Servants' - CNBC",
               "source": "benzinga",
               "ts": "2025-11-03T17:01:49Z",
               "vader": 0.2732,
               "relevance": 1.0,
-              "decay_w": 0.9755716457904684,
+              "decay_w": 0.592144405343511,
               "source_w": 0.9,
-              "weight": 0.8780144812114216
+              "weight": 0.5329299648091599
+            },
+            {
+              "headline": "SoFi: More Of The Same",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:45:09",
+              "vader": 0.6369,
+              "relevance": 1.0,
+              "decay_w": 0.5827192208573948,
+              "source_w": 1.0,
+              "weight": 0.5827192208573948
             },
             {
               "headline": "How Record Q3 Earnings and Member Growth at SoFi (SOFI) Has Changed Its Investment Story",
@@ -1242,9 +1262,19 @@
               "ts": "2025-11-03T15:16:46",
               "vader": 0.9022,
               "relevance": 1.0,
-              "decay_w": 0.8817349525314726,
+              "decay_w": 0.5351881857065336,
               "source_w": 1.0,
-              "weight": 0.8817349525314726
+              "weight": 0.5351881857065336
+            },
+            {
+              "headline": "How Record Q3 Earnings and Member Growth at SoFi (SOFI) Has Changed Its Investment Story - Yahoo Finance",
+              "source": "google_rss",
+              "ts": "2025-11-03T15:16:46",
+              "vader": 0.6369,
+              "relevance": 1.0,
+              "decay_w": 0.5351881857065336,
+              "source_w": 0.5,
+              "weight": 0.2675940928532668
             },
             {
               "headline": "This Week In Digital Payment - Singapore's Financial Ecosystem Transformation Through Innovation",
@@ -1252,9 +1282,9 @@
               "ts": "2025-11-03T12:37:41",
               "vader": 0.9169,
               "relevance": 1.0,
-              "decay_w": 0.7565293093002465,
+              "decay_w": 0.459191900372991,
               "source_w": 1.0,
-              "weight": 0.7565293093002465
+              "weight": 0.459191900372991
             },
             {
               "headline": "SoFi Stock Soars Again. Here's Why It's Not Too Late to Buy",
@@ -1262,9 +1292,9 @@
               "ts": "2025-11-03T11:10:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.6952893872501935,
+              "decay_w": 0.4220209992074193,
               "source_w": 1.0,
-              "weight": 0.6952893872501935
+              "weight": 0.4220209992074193
             },
             {
               "headline": "SoFi Stock Soars Again. Here's Why It's Not Too Late to Buy - Yahoo Finance",
@@ -1272,19 +1302,9 @@
               "ts": "2025-11-03T11:10:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.6952893872501935,
+              "decay_w": 0.4220209992074193,
               "source_w": 0.5,
-              "weight": 0.34764469362509676
-            },
-            {
-              "headline": "SoFi Stock Soars Again. Here's Why It's Not Too Late to Buy - The Motley Fool",
-              "source": "google_rss",
-              "ts": "2025-11-03T11:10:00",
-              "vader": -0.4404,
-              "relevance": 1.0,
-              "decay_w": 0.6952893872501935,
-              "source_w": 0.5,
-              "weight": 0.34764469362509676
+              "weight": 0.21101049960370966
             },
             {
               "headline": "\u2018Just the Beginning,\u2019 Says Top Investor About SoFi Stock - TipRanks",
@@ -1292,9 +1312,9 @@
               "ts": "2025-11-03T10:36:13",
               "vader": 0.3818,
               "relevance": 1.0,
-              "decay_w": 0.6730400107382911,
+              "decay_w": 0.4085162567512881,
               "source_w": 0.5,
-              "weight": 0.33652000536914556
+              "weight": 0.20425812837564405
             },
             {
               "headline": "2 Large-Cap Stocks Worth Your Attention and 1 Facing Challenges",
@@ -1302,9 +1322,9 @@
               "ts": "2025-11-03T04:36:40",
               "vader": 0.8932,
               "relevance": 1.0,
-              "decay_w": 0.4761173730654557,
+              "decay_w": 0.28898978354288024,
               "source_w": 1.0,
-              "weight": 0.4761173730654557
+              "weight": 0.28898978354288024
             },
             {
               "headline": "2 Large-Cap Stocks Worth Your Attention and 1 Facing Challenges - Yahoo Finance",
@@ -1312,9 +1332,9 @@
               "ts": "2025-11-03T04:36:00",
               "vader": 0.4767,
               "relevance": 1.0,
-              "decay_w": 0.4758118975712959,
+              "decay_w": 0.2888043685550453,
               "source_w": 0.5,
-              "weight": 0.23790594878564794
+              "weight": 0.14440218427752266
             },
             {
               "headline": "This Fintech Stock Is Rebranding. Here's Why It Could Help the Stock Take Off",
@@ -1322,9 +1342,9 @@
               "ts": "2025-11-02T19:00:00",
               "vader": 0.0062,
               "relevance": 1.0,
-              "decay_w": 0.2732821720140826,
+              "decay_w": 0.165874551537569,
               "source_w": 1.0,
-              "weight": 0.2732821720140826
+              "weight": 0.165874551537569
             },
             {
               "headline": "SoFi: Still Early Innings (NASDAQ:SOFI) - Seeking Alpha",
@@ -1332,9 +1352,9 @@
               "ts": "2025-11-02T19:00:00",
               "vader": 0.0,
               "relevance": 1.0,
-              "decay_w": 0.2732821720140826,
+              "decay_w": 0.165874551537569,
               "source_w": 0.5,
-              "weight": 0.1366410860070413
+              "weight": 0.0829372757687845
             },
             {
               "headline": "This Fintech Stock Is Rebranding. Here's Why It Could Help the Stock Take Off - The Motley Fool",
@@ -1342,9 +1362,9 @@
               "ts": "2025-11-02T18:00:00",
               "vader": 0.3612,
               "relevance": 1.0,
-              "decay_w": 0.2579440222779526,
+              "decay_w": 0.15656472832390708,
               "source_w": 0.5,
-              "weight": 0.1289720111389763
+              "weight": 0.07828236416195354
             },
             {
               "headline": "If You Want To Be A Millionaire By 65, Your Savings Contribution Should Be Above This Number",
@@ -1352,44 +1372,24 @@
               "ts": "2025-11-02T16:00:00",
               "vader": 0.1717,
               "relevance": 1.0,
-              "decay_w": 0.2298019987993911,
+              "decay_w": 0.1394833157697593,
               "source_w": 1.0,
-              "weight": 0.2298019987993911
-            },
-            {
-              "headline": "SoFi: Still Early Innings",
-              "source": "finnhub",
-              "ts": "2025-11-02T14:00:00",
-              "vader": 0.6124,
-              "relevance": 1.0,
-              "decay_w": 0.2047303061564653,
-              "source_w": 1.0,
-              "weight": 0.2047303061564653
-            },
-            {
-              "headline": "2 Brilliant Growth Stocks to Buy Now and Hold for the Long Term",
-              "source": "finnhub",
-              "ts": "2025-11-01T20:17:00",
-              "vader": 0.7506,
-              "relevance": 1.0,
-              "decay_w": 0.07357746064049378,
-              "source_w": 1.0,
-              "weight": 0.07357746064049378
+              "weight": 0.1394833157697593
             }
           ]
         },
         "decide_debug": {
           "articles_used": 15,
-          "avg_decay_w": 0.509153,
-          "conf": 0.509153,
-          "regime_bias": 0.329232
+          "avg_decay_w": 0.384492,
+          "conf": 0.384492,
+          "regime_bias": 0.291304
         },
         "sector_debug": {
           "sector_avg": {
-            "Tech": 0.31263313221649663,
-            "Unknown": 0.3237318592509207,
-            "Consumer Discretionary": 0.47866612115708407,
-            "ETF": 0.31325445058879064
+            "Tech": 0.1934727100084795,
+            "Unknown": 0.2979374755529295,
+            "Consumer Discretionary": 0.3846229596623474,
+            "ETF": 0.27405471548439886
           },
           "notes": "nudge applied when sign disagrees"
         }

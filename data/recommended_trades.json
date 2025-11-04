@@ -1,95 +1,95 @@
 {
-  "as_of_utc": "2025-11-03T17:27:30.387531+00:00",
+  "as_of_utc": "2025-11-04T02:06:07.294887+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
   },
   "portfolio_paper": {
-    "portfolio_value_est": 8387.38,
+    "portfolio_value_est": 8438.07,
     "deploy_rules": {
       "max_deploy_frac": 0.15,
       "per_line_frac": 0.04
     },
     "trades": [
       {
+        "symbol": "ZS",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 336.335,
+        "qty_hint": 0.0,
+        "cds": 0.540319,
+        "qty": 1,
+        "notional": 336.33
+      },
+      {
         "symbol": "SNOW",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 277.26,
+        "px": 277.165,
         "qty_hint": 0.0,
-        "cds": 0.567358,
+        "cds": 0.530897,
         "qty": 1,
-        "notional": 277.26
+        "notional": 277.17
+      },
+      {
+        "symbol": "GOOGL",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 283.89,
+        "qty_hint": 0.0,
+        "cds": 0.523016,
+        "qty": 1,
+        "notional": 283.89
       },
       {
         "symbol": "AMZN",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 256.07,
+        "px": 253.99,
         "qty_hint": 0.0,
-        "cds": 0.549723,
+        "cds": 0.51259,
         "qty": 1,
-        "notional": 256.07
-      },
-      {
-        "symbol": "FSLR",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 267.64,
-        "qty_hint": 0.0,
-        "cds": 0.524311,
-        "qty": 1,
-        "notional": 267.64
-      },
-      {
-        "symbol": "NVDA",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 209.275,
-        "qty_hint": 0.0,
-        "cds": 0.510864,
-        "qty": 1,
-        "notional": 209.28
-      },
-      {
-        "symbol": "PLTR",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 204.63,
-        "qty_hint": 0.0,
-        "cds": 0.449142,
-        "qty": 1,
-        "notional": 204.63
+        "notional": 253.99
       }
     ],
-    "residual_budget_hint": 43.23
+    "residual_budget_hint": 114.33
   },
   "portfolio_personal": {
-    "portfolio_value_est": 17872.96,
+    "portfolio_value_est": 17924.93,
     "cash_start": 500.0,
     "per_line_frac": 0.02,
     "trades": [
       {
-        "symbol": "SNOW",
-        "action": "BUY",
-        "reason": "CDS>BuyThreshold",
-        "px": 277.26,
-        "qty_hint": 0.0,
-        "cds": 0.567358,
-        "qty": 1,
-        "notional": 277.26
+        "symbol": "ASTS",
+        "action": "SELL",
+        "reason": "CDS<SellThreshold",
+        "px": 71.145,
+        "qty_hint": 2.6225,
+        "cds": -0.230989,
+        "qty": 2,
+        "notional": 142.29
       },
       {
-        "symbol": "NVDA",
+        "symbol": "RGTI",
+        "action": "SELL",
+        "reason": "CDS<SellThreshold",
+        "px": 39.1,
+        "qty_hint": 2.4175,
+        "cds": -0.16784,
+        "qty": 2,
+        "notional": 78.2
+      },
+      {
+        "symbol": "ZS",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 209.275,
+        "px": 336.335,
         "qty_hint": 0.0,
-        "cds": 0.510864,
+        "cds": 0.540319,
         "qty": 1,
-        "notional": 209.28
+        "notional": 336.33
       }
     ],
-    "cash_left": 13.47
+    "cash_left": 163.67
   }
 }
