@@ -401,6 +401,205 @@
       },
       "decision": "Buy/Add"
     },
+    "NET": {
+      "symbol": "NET",
+      "price": 247.98,
+      "ts": "2025-11-03T05:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 221.167,
+        "ema12": 228.5912806748573,
+        "ema26": 222.77882399836318,
+        "macd": 5.812456676494122,
+        "macd_signal": 2.401598079557909,
+        "macd_hist": 3.410858596936213,
+        "rsi14": 67.35679738402985
+      },
+      "signals": {
+        "TS": 0.560608,
+        "NS": 0.40356,
+        "wT": 0.6344672378956655,
+        "wN": 0.36553276210433444,
+        "CDS": 0.503202,
+        "components": {
+          "rsi_pos": 0.3471359476805969,
+          "macd_hist_slope": 0.9978226772814716,
+          "ema20_slope": 0.11312195454367768
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Does Stock Yards Bancorp's Net Interest Income Surge Reinforce Its Core Banking Strengths for SYBT Investors? - simplywall.st",
+              "source": "google_rss",
+              "ts": "2025-11-04T00:42:11",
+              "vader": 0.8988,
+              "relevance": 1.0,
+              "decay_w": 0.8694172905807299,
+              "source_w": 0.5,
+              "weight": 0.43470864529036496
+            },
+            {
+              "headline": "Citigroup Maintains Cloudflare (NET) Buy Recommendation",
+              "source": "finnhub",
+              "ts": "2025-11-04T00:08:44",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.8418659047476168,
+              "source_w": 1.0,
+              "weight": 0.8418659047476168
+            },
+            {
+              "headline": "Amazon\u2019s Deal With OpenAI Just Made Jeff Bezos $10 Billion Richer - Forbes",
+              "source": "google_rss",
+              "ts": "2025-11-03T20:26:41",
+              "vader": 0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.6798364317195194,
+              "source_w": 0.5,
+              "weight": 0.3399182158597597
+            },
+            {
+              "headline": "Cloudflare (NET) Receives Boost in Price Target from Citigroup | - GuruFocus",
+              "source": "google_rss",
+              "ts": "2025-11-03T20:00:20",
+              "vader": 0.6597,
+              "relevance": 1.0,
+              "decay_w": 0.6628077420094479,
+              "source_w": 0.5,
+              "weight": 0.33140387100472396
+            },
+            {
+              "headline": "Citigroup Maintains Buy on Cloudflare, Raises Price Target to $318",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:14:35Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6342487572957286,
+              "source_w": 0.9,
+              "weight": 0.5708238815661557
+            },
+            {
+              "headline": "November 2025's Top Growth Companies With Insider Ownership",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:35:59",
+              "vader": 0.9732,
+              "relevance": 1.0,
+              "decay_w": 0.5768132651785663,
+              "source_w": 1.0,
+              "weight": 0.5768132651785663
+            },
+            {
+              "headline": "MongoDB Stock Has Been Rising. Can a New CEO Keep the Momentum Up?",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:48:49",
+              "vader": 0.4588,
+              "relevance": 1.0,
+              "decay_w": 0.551207334058644,
+              "source_w": 1.0,
+              "weight": 0.551207334058644
+            },
+            {
+              "headline": "MongoDB Stock Gains After Naming Cloudflare Exec Next CEO, Publishing Early Q3 Results",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:41:18",
+              "vader": 0.5859,
+              "relevance": 1.0,
+              "decay_w": 0.5472330139657235,
+              "source_w": 1.0,
+              "weight": 0.5472330139657235
+            },
+            {
+              "headline": "Susquehanna Maintains Cloudflare (NET) Neutral Recommendation",
+              "source": "finnhub",
+              "ts": "2025-11-03T15:08:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5002231880272542,
+              "source_w": 1.0,
+              "weight": 0.5002231880272542
+            },
+            {
+              "headline": "MongoDB taps Cloudflare executive Chirantan Desai as CEO",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:45:47",
+              "vader": 0.6597,
+              "relevance": 1.0,
+              "decay_w": 0.48963797511380447,
+              "source_w": 1.0,
+              "weight": 0.48963797511380447
+            },
+            {
+              "headline": "Infoblox Surpasses 200 Customers in Breakout Year for Universal DDI\u2122 and Announces New Capabilities for Network Transformation",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:00:00",
+              "vader": -0.3182,
+              "relevance": 1.0,
+              "decay_w": 0.46852547435677677,
+              "source_w": 1.0,
+              "weight": 0.46852547435677677
+            },
+            {
+              "headline": "Kinsta Launches Bandwidth-Based Pricing to Give Website Owners and Developers More Hosting Control",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:00:00",
+              "vader": 0.8481,
+              "relevance": 1.0,
+              "decay_w": 0.46852547435677677,
+              "source_w": 1.0,
+              "weight": 0.46852547435677677
+            },
+            {
+              "headline": "Susquehanna Maintains Neutral on Cloudflare, Raises Price Target to $260",
+              "source": "benzinga",
+              "ts": "2025-11-03T13:37:15Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.45837560624991686,
+              "source_w": 0.9,
+              "weight": 0.4125380456249252
+            },
+            {
+              "headline": "Cloudflare Inc. Class A (NET) Stock Price | Live Quotes & Charts | NYSE - StocksToTrade",
+              "source": "google_rss",
+              "ts": "2025-11-03T13:25:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.4530016735666276,
+              "source_w": 0.5,
+              "weight": 0.2265008367833138
+            },
+            {
+              "headline": "Astera Labs And 2 Other Growth Companies With Significant Insider Ownership",
+              "source": "finnhub",
+              "ts": "2025-11-03T11:35:43",
+              "vader": 0.9762,
+              "relevance": 1.0,
+              "decay_w": 0.40776387622532945,
+              "source_w": 1.0,
+              "weight": 0.40776387622532945
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.573966,
+          "conf": 0.573966,
+          "regime_bias": 0.299947
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.1972303982432276,
+            "Unknown": 0.3086670501670013,
+            "Consumer Discretionary": 0.28542862669995384,
+            "ETF": 0.26206603760061886
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
     "SNOW": {
       "symbol": "SNOW",
       "price": 277.165,
