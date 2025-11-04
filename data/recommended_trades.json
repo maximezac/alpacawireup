@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-04T02:06:07.294887+00:00",
+  "as_of_utc": "2025-11-04T02:15:37.331046+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
@@ -17,7 +17,7 @@
         "reason": "CDS>BuyThreshold",
         "px": 336.335,
         "qty_hint": 0.0,
-        "cds": 0.540319,
+        "cds": 0.540311,
         "qty": 1,
         "notional": 336.33
       },
@@ -27,7 +27,7 @@
         "reason": "CDS>BuyThreshold",
         "px": 277.165,
         "qty_hint": 0.0,
-        "cds": 0.530897,
+        "cds": 0.531094,
         "qty": 1,
         "notional": 277.17
       },
@@ -37,22 +37,22 @@
         "reason": "CDS>BuyThreshold",
         "px": 283.89,
         "qty_hint": 0.0,
-        "cds": 0.523016,
+        "cds": 0.523427,
         "qty": 1,
         "notional": 283.89
       },
       {
-        "symbol": "AMZN",
+        "symbol": "NET",
         "action": "BUY",
         "reason": "CDS>BuyThreshold",
-        "px": 253.99,
+        "px": 247.98,
         "qty_hint": 0.0,
-        "cds": 0.51259,
+        "cds": 0.508565,
         "qty": 1,
-        "notional": 253.99
+        "notional": 247.98
       }
     ],
-    "residual_budget_hint": 114.33
+    "residual_budget_hint": 120.34
   },
   "portfolio_personal": {
     "portfolio_value_est": 17924.93,
@@ -65,7 +65,7 @@
         "reason": "CDS<SellThreshold",
         "px": 71.145,
         "qty_hint": 2.6225,
-        "cds": -0.230989,
+        "cds": -0.189195,
         "qty": 2,
         "notional": 142.29
       },
@@ -75,7 +75,7 @@
         "reason": "CDS<SellThreshold",
         "px": 39.1,
         "qty_hint": 2.4175,
-        "cds": -0.16784,
+        "cds": -0.168342,
         "qty": 2,
         "notional": 78.2
       },
@@ -85,7 +85,7 @@
         "reason": "CDS>BuyThreshold",
         "px": 336.335,
         "qty_hint": 0.0,
-        "cds": 0.540319,
+        "cds": 0.540311,
         "qty": 1,
         "notional": 336.33
       }
