@@ -257,38 +257,40 @@ def propose_trades(port: Dict[str, float], feed: Dict[str, Any], allow_new: bool
                 by_sym[s] = a
     return list(by_sym.values())
 
-def size_trades_A(actions: List[Dict[str, Any]], port_value: float) -> Tuple[List[Dict[str, Any]], float]:
+def size_trades_A(actions: List[Dict[str, Any]], port_value: float, cash: float) -> Tuple[List[Dict[str, Any]], float]:
     """
-    Portfolio PAPER sizing:
-      - Total BUY budget <= A_MAX_DEPLOY_FRAC * port_value
-      - Per-line BUY target <= A_PER_LINE_FRAC * port_value
-      - SELL trims use SELL_TRIM_FRACTION of current qty (already set), floored to whole shares
+    PAPER sizing:
+      - Total BUY budget <= min( cash, A_MAX_DEPLOY_FRAC * (port_value + cash) )
+      - Per-line BUY cap  <= A_PER_LINE_FRAC * (port_value + cash)
+      - SELL trims use SELL_TRIM_FRACTION (floored to whole shares)
     """
-    buy_budget_total = port_value * A_MAX_DEPLOY_FRAC
-    per_line_cap_val = port_value * A_PER_LINE_FRAC
+    equity = port_value + cash
+    buy_cap_by_frac = equity * A_MAX_DEPLOY_FRAC
+    buy_budget_total = min(cash, buy_cap_by_frac)
+    per_line_cap_val = equity * A_PER_LINE_FRAC
 
     sized = []
     spent = 0.0
 
-    # SELLs first (don’t affect budget directly here)
+    # SELLs first
     for a in actions:
         if a["action"] != "SELL":
             continue
         px = a.get("px") or 0.0
-        qty = math.floor(max(0.0, a.get("qty_hint", 0.0)))  # whole shares
+        qty = math.floor(max(0.0, a.get("qty_hint", 0.0)))
         if qty <= 0:
             continue
         sized.append({**a, "qty": qty, "notional": round(qty * px, 2)})
 
-    # BUYs with caps
+    # BUYs with caps (respect total budget and per-line cap)
     for a in sorted([x for x in actions if x["action"] == "BUY"], key=lambda x: x["cds"], reverse=True):
         px = a.get("px") or 0.0
         if px <= 0:
             continue
-        # target value per line
-        target_val = min(per_line_cap_val, buy_budget_total - spent)
-        if target_val <= 0:
+        remain = buy_budget_total - spent
+        if remain <= 0:
             break
+        target_val = min(per_line_cap_val, remain)
         qty = round(target_val / px, 4)
         if qty <= 0:
             continue
@@ -351,7 +353,9 @@ def main():
     portPersonal = ensure_portfolio_csv(PORT_PERSONAL_CSV)
 
     personal_cash_csv = read_cash_from_csv(PORT_PERSONAL_CSV)
+    paper_cash_csv = read_cash_from_csv(PORT_PAPER_CSV)
     personal_cash = personal_cash_csv if personal_cash_csv > 0 else PERSONAL_CASH
+    paper_cash = paper_cash_csv
 
     # 3) Portfolio-only feeds
     paper_syms = sorted(portPaper.keys())
@@ -374,7 +378,7 @@ def main():
     recPaper = propose_trades(portPaper, feed, allow_new=True)
     recPers  = propose_trades(portPersonal, feed, allow_new=True)
 
-    sizedPaper, paper_leftover = size_trades_A(recPaper, paper_val)
+    sizedPaper, paper_leftover = size_trades_A(recPaper, paper_val, cash=paper_cash)
     sizedPers,  pers_cash_left = size_trades_B(recPers, pers_val, cash=personal_cash)
 
     # Final trades output
@@ -387,6 +391,7 @@ def main():
         "portfolio_paper": {
             "portfolio_value_est": round(paper_val, 2),
             "deploy_rules": {"max_deploy_frac": A_MAX_DEPLOY_FRAC, "per_line_frac": A_PER_LINE_FRAC},
+            "cash_start": paper_cash,
             "trades": sizedPaper,
             "residual_budget_hint": paper_leftover
         },
