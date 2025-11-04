@@ -10,8 +10,50 @@
       "max_deploy_frac": 0.15,
       "per_line_frac": 0.04
     },
-    "trades": [],
-    "residual_budget_hint": 0.0
+    "cash_start": 10000.0,
+    "trades": [
+      {
+        "symbol": "ZS",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 336.335,
+        "qty_hint": 0.0,
+        "cds": 0.540267,
+        "qty": 1.1893,
+        "notional": 400.0
+      },
+      {
+        "symbol": "SNOW",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 277.165,
+        "qty_hint": 0.0,
+        "cds": 0.533474,
+        "qty": 1.4432,
+        "notional": 400.0
+      },
+      {
+        "symbol": "GOOGL",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 283.89,
+        "qty_hint": 0.0,
+        "cds": 0.525608,
+        "qty": 1.409,
+        "notional": 400.0
+      },
+      {
+        "symbol": "CRWD",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 551.945,
+        "qty_hint": 0.0,
+        "cds": 0.514399,
+        "qty": 0.5435,
+        "notional": 299.98
+      }
+    ],
+    "residual_budget_hint": 0.01
   },
   "portfolio_personal": {
     "portfolio_value_est": 19935.84,
