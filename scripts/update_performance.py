@@ -395,6 +395,10 @@ def make_perf_summary(history_csv: str, out_json: str):
     })
 
 def main():
+
+    print("[debug] APPLY_TRADES =", os.getenv("APPLY_TRADES"))
+    print("[debug] APPLY_PAPER_TRADES =", os.getenv("APPLY_PAPER_TRADES"))
+    print("[debug] APPLY_PERSONAL_TRADES =", os.getenv("APPLY_PERSONAL_TRADES"))
     prices, signals = load_prices_and_signals(PRICES_FINAL)
 
     # --- load positions & prior equity ---
@@ -444,7 +448,10 @@ def main():
 
         print(f"[debug] loaded {len(recs_list)} trade recs from {TRADES_RECS}")
 
-
+    if recs_list:
+        n_paper = sum(1 for t in recs_list if (t.get("portfolio") or "").lower()=="paper")
+        n_pers  = sum(1 for t in recs_list if (t.get("portfolio") or "").lower()=="personal")
+        print(f"[debug] recs by portfolio: paper={n_paper} personal={n_pers}")
     # --- optionally apply trades ONCE ---
     ledger_to_append = []
     if APPLY_TRADES and recs_list:
