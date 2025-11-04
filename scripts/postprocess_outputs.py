@@ -118,6 +118,20 @@ def save_portfolio_csv(path: str, pos: Dict[str, float]):
         for sym, qty in sorted(pos.items()):
             w.writerow([sym, qty])
 
+def read_cash_from_csv(path: str) -> float:
+    if not os.path.exists(path):
+        return 0.0
+    with open(path, "r", newline="", encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        for row in r:
+            sym = (row.get("symbol") or "").strip().upper()
+            if sym == "__CASH__":
+                try:
+                    return float(row.get("qty") or row.get("quantity") or 0)  # supports both schemas
+                except:
+                    return 0.0
+    return 999.0
+
 def feed_symbols(feed: Dict[str, Any]) -> Dict[str, Any]:
     return feed.get("symbols", {}) or {}
 
