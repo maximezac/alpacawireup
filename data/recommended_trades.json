@@ -5,12 +5,10 @@
     "SELL_THRESHOLD": -0.15
   },
   "portfolio_paper": {
-    "portfolio_value_est": 0.0,
-    "deploy_rules": {
-      "max_deploy_frac": 0.15,
-      "per_line_frac": 0.04
-    },
-    "cash_start": 10000.0,
+    "portfolio_value_est": 1499.99,
+    "cash_start": 8498.51,
+    "per_line_frac": 0.04,
+    "max_deploy_frac": 0.15,
     "trades": [
       {
         "symbol": "ZS",
@@ -19,8 +17,8 @@
         "px": 336.335,
         "qty_hint": 0.0,
         "cds": 0.540267,
-        "qty": 1.1893,
-        "notional": 400.0
+        "qty": 1.1891,
+        "notional": 399.94
       },
       {
         "symbol": "SNOW",
@@ -29,8 +27,8 @@
         "px": 277.165,
         "qty_hint": 0.0,
         "cds": 0.533474,
-        "qty": 1.4432,
-        "notional": 400.0
+        "qty": 1.443,
+        "notional": 399.95
       },
       {
         "symbol": "GOOGL",
@@ -39,8 +37,8 @@
         "px": 283.89,
         "qty_hint": 0.0,
         "cds": 0.525608,
-        "qty": 1.409,
-        "notional": 400.0
+        "qty": 1.4088,
+        "notional": 399.94
       },
       {
         "symbol": "CRWD",
@@ -49,11 +47,21 @@
         "px": 551.945,
         "qty_hint": 0.0,
         "cds": 0.514399,
-        "qty": 0.5435,
-        "notional": 299.98
+        "qty": 0.5434,
+        "notional": 299.93
+      },
+      {
+        "symbol": "NET",
+        "action": "BUY",
+        "reason": "CDS>BuyThreshold",
+        "px": 247.98,
+        "qty_hint": 0.0,
+        "cds": 0.503202,
+        "qty": 0.0001,
+        "notional": 0.02
       }
     ],
-    "residual_budget_hint": 0.01
+    "cash_left": 6998.73
   },
   "portfolio_personal": {
     "portfolio_value_est": 19935.84,

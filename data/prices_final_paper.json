@@ -2,5 +2,802 @@
   "as_of_utc": "2025-11-04T03:07:32.186076+00:00",
   "timeframe": "1Day",
   "indicators_window": 270,
-  "symbols": {}
+  "symbols": {
+    "CRWD": {
+      "symbol": "CRWD",
+      "price": 551.945,
+      "ts": "2025-11-03T05:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 513.19,
+        "ema12": 529.0994331743867,
+        "ema26": 510.52287534743465,
+        "macd": 18.57655782695207,
+        "macd_signal": 15.56843227622387,
+        "macd_hist": 3.0081255507281988,
+        "rsi14": 69.77227220695521
+      },
+      "signals": {
+        "TS": 0.572459,
+        "NS": 0.386107,
+        "wT": 0.6884353463597244,
+        "wN": 0.3115646536402756,
+        "CDS": 0.514399,
+        "components": {
+          "rsi_pos": 0.39544544413910415,
+          "macd_hist_slope": 0.9951342759552751,
+          "ema20_slope": 0.08113666723430504
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "What's Going On With CrowdStrike Stock?",
+              "source": "benzinga",
+              "ts": "2025-11-03T18:10:26Z",
+              "vader": 0.296,
+              "relevance": 1.0,
+              "decay_w": 0.5962641364007073,
+              "source_w": 0.9,
+              "weight": 0.5366377227606366
+            },
+            {
+              "headline": "What's Going On With CrowdStrike Stock? - Benzinga",
+              "source": "google_rss",
+              "ts": "2025-11-03T18:10:26",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5962641364007073,
+              "source_w": 0.5,
+              "weight": 0.29813206820035365
+            },
+            {
+              "headline": "4 stocks to watch on Monday: KMB, NVDA, PLTR, CRWD (SP500:) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-11-03T13:55:24",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.4664552246270806,
+              "source_w": 0.5,
+              "weight": 0.2332276123135403
+            },
+            {
+              "headline": "CrowdStrike, AWS, and NVIDIA Expand Global Cybersecurity Startup Accelerator to Drive Cloud and Agentic AI Innovation",
+              "source": "finnhub",
+              "ts": "2025-11-03T13:00:00",
+              "vader": 0.936,
+              "relevance": 1.0,
+              "decay_w": 0.442229160082367,
+              "source_w": 1.0,
+              "weight": 0.442229160082367
+            },
+            {
+              "headline": "EY Selects CrowdStrike Falcon Next-Gen SIEM to Power Global Cybersecurity Managed Services",
+              "source": "finnhub",
+              "ts": "2025-11-03T13:00:00",
+              "vader": 0.5859,
+              "relevance": 1.0,
+              "decay_w": 0.442229160082367,
+              "source_w": 1.0,
+              "weight": 0.442229160082367
+            },
+            {
+              "headline": "CrowdStrike (NASDAQ: CRWD) opens global cybersecurity accelerator; apply by Nov 15, 2025 - Stock Titan",
+              "source": "google_rss",
+              "ts": "2025-11-03T13:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.442229160082367,
+              "source_w": 0.5,
+              "weight": 0.2211145800411835
+            },
+            {
+              "headline": "CrowdStrike Emerging As Top Winner In AI Cybersecurity Race, Says Analyst",
+              "source": "benzinga",
+              "ts": "2025-11-03T11:09:55Z",
+              "vader": 0.9442,
+              "relevance": 1.0,
+              "decay_w": 0.39776067215065797,
+              "source_w": 0.9,
+              "weight": 0.3579846049355922
+            },
+            {
+              "headline": "CrowdStrike Stock Rises Premarket: Analyst Bumps Up Price Target By 14% On Optimism Over Cyber Platform Approach - Stocktwits",
+              "source": "google_rss",
+              "ts": "2025-11-03T10:48:03",
+              "vader": 0.7906,
+              "relevance": 1.0,
+              "decay_w": 0.3894748766016388,
+              "source_w": 0.5,
+              "weight": 0.1947374383008194
+            },
+            {
+              "headline": "CrowdStrike 2025 European Threat Landscape Report: Ransomware Hits Region at Record Pace",
+              "source": "finnhub",
+              "ts": "2025-11-03T08:02:00",
+              "vader": -0.8885,
+              "relevance": 1.0,
+              "decay_w": 0.3319360377742617,
+              "source_w": 1.0,
+              "weight": 0.3319360377742617
+            },
+            {
+              "headline": "Pricey CrowdStrike Breaks Out Ahead Of Q3 Earnings: $600 May Be In Play",
+              "source": "finnhub",
+              "ts": "2025-11-03T01:22:09",
+              "vader": 0.9545,
+              "relevance": 1.0,
+              "decay_w": 0.22588023648055436,
+              "source_w": 1.0,
+              "weight": 0.22588023648055436
+            },
+            {
+              "headline": "CrowdStrike: Time To Take Chips Off The Table (Rating Downgrade)",
+              "source": "finnhub",
+              "ts": "2025-11-02T20:11:08",
+              "vader": 0.4215,
+              "relevance": 1.0,
+              "decay_w": 0.16743376041401808,
+              "source_w": 1.0,
+              "weight": 0.16743376041401808
+            },
+            {
+              "headline": "Cybersecurity King: Is This Stock Poised for 300% Growth by 2030?",
+              "source": "finnhub",
+              "ts": "2025-11-02T13:30:00",
+              "vader": 0.6381,
+              "relevance": 1.0,
+              "decay_w": 0.11379686589543832,
+              "source_w": 1.0,
+              "weight": 0.11379686589543832
+            },
+            {
+              "headline": "CrowdStrike: The Deceleration Is Likely Coming, And The Market Is Asleep (Rating Downgrade)",
+              "source": "finnhub",
+              "ts": "2025-11-02T10:36:06",
+              "vader": 0.128,
+              "relevance": 1.0,
+              "decay_w": 0.09625497716705994,
+              "source_w": 1.0,
+              "weight": 0.09625497716705994
+            },
+            {
+              "headline": "Is BT Partnership Expanding SMB-Focused AI Security Changing the Investment Case for CrowdStrike (CRWD)?",
+              "source": "finnhub",
+              "ts": "2025-11-01T17:08:48",
+              "vader": 0.6251,
+              "relevance": 1.0,
+              "decay_w": 0.03511963396374713,
+              "source_w": 1.0,
+              "weight": 0.03511963396374713
+            },
+            {
+              "headline": "Busy earnings week recap: 'It's all looking pretty positive'",
+              "source": "finnhub",
+              "ts": "2025-10-31T21:30:00",
+              "vader": 0.8598,
+              "relevance": 1.0,
+              "decay_w": 0.011290079039568931,
+              "source_w": 1.0,
+              "weight": 0.011290079039568931
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.316975,
+          "conf": 0.316975,
+          "regime_bias": 0.299947
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.1972303982432276,
+            "Unknown": 0.3086670501670013,
+            "Consumer Discretionary": 0.28542862669995384,
+            "ETF": 0.26206603760061886
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "price": 283.89,
+      "ts": "2025-11-03T05:00:00Z",
+      "sector": "Tech",
+      "indicators": {
+        "sma20": 257.18525000000017,
+        "ema12": 268.2743669967269,
+        "ema26": 257.87447955095973,
+        "macd": 10.399887445767149,
+        "macd_signal": 7.691337060599322,
+        "macd_hist": 2.708550385167827,
+        "rsi14": 78.47723927296377
+      },
+      "signals": {
+        "TS": 0.644459,
+        "NS": 0.333062,
+        "wT": 0.618329127648438,
+        "wN": 0.3816708723515621,
+        "CDS": 0.525608,
+        "components": {
+          "rsi_pos": 0.5695447854592754,
+          "macd_hist_slope": 0.9911592517534471,
+          "ema20_slope": 0.1008844322026027
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Nvidia Termed 'Undervalued' By Masayoshi Son Last Year, Now Worth $5 Trillion: Here Is What Japanese Billionaire Investor Said About Ongoing AI Hype",
+              "source": "benzinga",
+              "ts": "2025-11-04T01:28:14Z",
+              "vader": 0.7845,
+              "relevance": 1.0,
+              "decay_w": 0.9088278976435828,
+              "source_w": 0.9,
+              "weight": 0.8179451078792246
+            },
+            {
+              "headline": "Alphabet: A King In The AI Domain, But No Discount Remains (Rating Downgrade) - Seeking Alpha",
+              "source": "google_rss",
+              "ts": "2025-11-03T23:54:30",
+              "vader": -0.6808,
+              "relevance": 1.0,
+              "decay_w": 0.8304089170934853,
+              "source_w": 0.5,
+              "weight": 0.41520445854674265
+            },
+            {
+              "headline": "'Anthropic Lands Cognizant as Enterprise AI Customer'- WSJ",
+              "source": "benzinga",
+              "ts": "2025-11-03T22:58:23Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.786737374202176,
+              "source_w": 0.9,
+              "weight": 0.7080636367819585
+            },
+            {
+              "headline": "Amazon's $38B OpenAI Deal Proves NVIDIA's Monopoly Is Already Breaking",
+              "source": "benzinga",
+              "ts": "2025-11-03T19:39:08Z",
+              "vader": -0.5994,
+              "relevance": 1.0,
+              "decay_w": 0.6494173865723278,
+              "source_w": 0.9,
+              "weight": 0.5844756479150951
+            },
+            {
+              "headline": "Alphabet: A King In The AI Domain, But No Discount Remains (Rating Downgrade)",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:54:30",
+              "vader": 0.5927,
+              "relevance": 1.0,
+              "decay_w": 0.6221037785913351,
+              "source_w": 1.0,
+              "weight": 0.6221037785913351
+            },
+            {
+              "headline": "OpenAI signs\u00a0$38 billion deal to use Amazon's cloud platform",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:53:18",
+              "vader": 0.9502,
+              "relevance": 1.0,
+              "decay_w": 0.6213855110918843,
+              "source_w": 1.0,
+              "weight": 0.6213855110918843
+            },
+            {
+              "headline": "Sector Update: Tech Stocks Mixed Monday Afternoon",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:49:19",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.619007202014055,
+              "source_w": 1.0,
+              "weight": 0.619007202014055
+            },
+            {
+              "headline": "Hippocratic AI valued at $3.5 billion in latest financing round",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:26:59",
+              "vader": 0.7845,
+              "relevance": 1.0,
+              "decay_w": 0.6058403538547589,
+              "source_w": 1.0,
+              "weight": 0.6058403538547589
+            },
+            {
+              "headline": "2 Artificial Intelligence (AI) Stocks You Can Buy and Hold for the Next Decade",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:17:00",
+              "vader": 0.8225,
+              "relevance": 1.0,
+              "decay_w": 0.6000455144630492,
+              "source_w": 1.0,
+              "weight": 0.6000455144630492
+            },
+            {
+              "headline": "Alphabet Stock (GOOGL) Rises amid Plans to Raise $22.5B in Bond Offering - TipRanks",
+              "source": "google_rss",
+              "ts": "2025-11-03T18:11:15",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5967331087280198,
+              "source_w": 0.5,
+              "weight": 0.2983665543640099
+            },
+            {
+              "headline": "VetsInTech Celebrates 11th Anniversary Gala on November 7",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:10:00",
+              "vader": 0.9153,
+              "relevance": 1.0,
+              "decay_w": 0.5960154436269677,
+              "source_w": 1.0,
+              "weight": 0.5960154436269677
+            },
+            {
+              "headline": "Hippocratic AI Raises $126 Million in Series C at $3.5 Billion Valuation Led by Avenir Growth to Expand Clinically Safe Generative AI Agents Across Healthcare",
+              "source": "finnhub",
+              "ts": "2025-11-03T18:00:00",
+              "vader": 0.7783,
+              "relevance": 1.0,
+              "decay_w": 0.5903051075540836,
+              "source_w": 1.0,
+              "weight": 0.5903051075540836
+            },
+            {
+              "headline": "Tesla Drama, Palantir Earnings Have Wall Street's Radar Buzzing",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:59:44",
+              "vader": -0.34,
+              "relevance": 1.0,
+              "decay_w": 0.5901535831820914,
+              "source_w": 1.0,
+              "weight": 0.5901535831820914
+            },
+            {
+              "headline": "Market Chatter: Disney Clash With YouTube TV Escalates, Threatening Election Coverage",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:44:16",
+              "vader": -0.5267,
+              "relevance": 1.0,
+              "decay_w": 0.5814313947354259,
+              "source_w": 1.0,
+              "weight": 0.5814313947354259
+            },
+            {
+              "headline": "Popular crypto mining stock surges after $5.5B Amazon deal",
+              "source": "finnhub",
+              "ts": "2025-11-03T17:12:16",
+              "vader": 0.8885,
+              "relevance": 1.0,
+              "decay_w": 0.5637925946154803,
+              "source_w": 1.0,
+              "weight": 0.5637925946154803
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.650814,
+          "conf": 0.650814,
+          "regime_bias": 0.299947
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.1972303982432276,
+            "Unknown": 0.3086670501670013,
+            "Consumer Discretionary": 0.28542862669995384,
+            "ETF": 0.26206603760061886
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "SNOW": {
+      "symbol": "SNOW",
+      "price": 277.165,
+      "ts": "2025-11-03T05:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 252.96149999999997,
+        "ema12": 262.4220857942374,
+        "ema26": 251.0487121264957,
+        "macd": 11.373373667741674,
+        "macd_signal": 9.078417347372682,
+        "macd_hist": 2.2949563203689927,
+        "rsi14": 74.44156976678617
+      },
+      "signals": {
+        "TS": 0.608297,
+        "NS": 0.384382,
+        "wT": 0.6658412189047718,
+        "wN": 0.3341587810952283,
+        "CDS": 0.533474,
+        "components": {
+          "rsi_pos": 0.48883139533572345,
+          "macd_hist_slope": 0.9798966337451426,
+          "ema20_slope": 0.1040287665779585
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Noteworthy Monday Option Activity: SNOW, SPHR, CCSI - Nasdaq",
+              "source": "google_rss",
+              "ts": "2025-11-03T20:27:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.6800437158002393,
+              "source_w": 0.5,
+              "weight": 0.34002185790011963
+            },
+            {
+              "headline": "Palantir's Q3 Results Likely to be Major Step in 'Right Direction' in AI Revolution, Wedbush Says",
+              "source": "finnhub",
+              "ts": "2025-11-03T16:42:03",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.5476282743730917,
+              "source_w": 1.0,
+              "weight": 0.5476282743730917
+            },
+            {
+              "headline": "SNOW stock trend outlook and recovery path - Market Rally & Reliable Breakout Forecasts - newser.com",
+              "source": "google_rss",
+              "ts": "2025-11-03T14:30:16",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.4823781394696927,
+              "source_w": 0.5,
+              "weight": 0.24118906973484636
+            },
+            {
+              "headline": "Snowflake to Present at Upcoming Investor Conference",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:10:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.4730577711013708,
+              "source_w": 1.0,
+              "weight": 0.4730577711013708
+            },
+            {
+              "headline": "USA Bobsled/Skeleton Taps Snowflake Intelligence to Redefine Speed and Precision on Ice",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:05:00",
+              "vader": 0.8807,
+              "relevance": 1.0,
+              "decay_w": 0.4707861686619832,
+              "source_w": 1.0,
+              "weight": 0.4707861686619832
+            },
+            {
+              "headline": "Deloitte Expands Alliance With Snowflake to Enhance Tax Data Management Solutions",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:02:00",
+              "vader": 0.7906,
+              "relevance": 1.0,
+              "decay_w": 0.46942844646074894,
+              "source_w": 1.0,
+              "weight": 0.46942844646074894
+            },
+            {
+              "headline": "Snowflake to Announce Financial Results for the Third Quarter of Fiscal 2026 on December 3, 2025",
+              "source": "finnhub",
+              "ts": "2025-11-03T14:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.46852547435677677,
+              "source_w": 1.0,
+              "weight": 0.46852547435677677
+            },
+            {
+              "headline": "Snowflake (NYSE: SNOW) Schedules Q3 FY2026 Results; webcast after U.S. market close - Stock Titan",
+              "source": "google_rss",
+              "ts": "2025-11-03T14:00:00",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.46852547435677677,
+              "source_w": 0.5,
+              "weight": 0.23426273717838839
+            },
+            {
+              "headline": "Is Snowflake\u2019s Soaring Price Justified After Major Cloud Partnerships?",
+              "source": "finnhub",
+              "ts": "2025-11-03T13:09:09",
+              "vader": 0.9636,
+              "relevance": 1.0,
+              "decay_w": 0.446141851823306,
+              "source_w": 1.0,
+              "weight": 0.446141851823306
+            },
+            {
+              "headline": "Snowflake Inc.'s (NYSE:SNOW) high institutional ownership speaks for itself as stock continues to impress, up 3.4% over last week",
+              "source": "finnhub",
+              "ts": "2025-11-03T12:00:22",
+              "vader": 0.6705,
+              "relevance": 1.0,
+              "decay_w": 0.4175561123176329,
+              "source_w": 1.0,
+              "weight": 0.4175561123176329
+            },
+            {
+              "headline": "Snowflake Inc.'s (NYSE:SNOW) high institutional ownership speaks for itself as stock continues to impress, up 3.4% over last week - Yahoo! Finance Canada",
+              "source": "google_rss",
+              "ts": "2025-11-03T12:00:22",
+              "vader": 0.7494,
+              "relevance": 1.0,
+              "decay_w": 0.4175561123176329,
+              "source_w": 0.5,
+              "weight": 0.20877805615881645
+            },
+            {
+              "headline": "World Investment Advisors Invests $499,000 in Snowflake Inc. $SNOW - MarketBeat",
+              "source": "google_rss",
+              "ts": "2025-11-03T09:07:34",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.3535636807532765,
+              "source_w": 0.5,
+              "weight": 0.17678184037663824
+            },
+            {
+              "headline": "Why SNOW stock remains a top recommendation - Weekly Gains Summary & High Return Trade Opportunity Guides - newser.com",
+              "source": "google_rss",
+              "ts": "2025-11-03T07:29:51",
+              "vader": 0.9001,
+              "relevance": 1.0,
+              "decay_w": 0.32181966627199776,
+              "source_w": 0.5,
+              "weight": 0.16090983313599888
+            },
+            {
+              "headline": "Best And Worst Stocks And ETFs Through October",
+              "source": "finnhub",
+              "ts": "2025-11-02T22:05:00",
+              "vader": 0.6486,
+              "relevance": 1.0,
+              "decay_w": 0.18683161484652755,
+              "source_w": 1.0,
+              "weight": 0.18683161484652755
+            },
+            {
+              "headline": "Snowflake's CRO Mike Gannon's Instagram Interview With Influencer James Dumoulin Triggers SEC Filing",
+              "source": "benzinga",
+              "ts": "2025-11-02T19:53:40Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.16464186103382666,
+              "source_w": 0.9,
+              "weight": 0.148177674930444
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.424566,
+          "conf": 0.424566,
+          "regime_bias": 0.299947
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.1972303982432276,
+            "Unknown": 0.3086670501670013,
+            "Consumer Discretionary": 0.28542862669995384,
+            "ETF": 0.26206603760061886
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    },
+    "ZS": {
+      "symbol": "ZS",
+      "price": 336.335,
+      "ts": "2025-11-03T05:00:00Z",
+      "sector": "",
+      "indicators": {
+        "sma20": 313.9980000000001,
+        "ema12": 321.51961243031576,
+        "ema26": 312.28099799544185,
+        "macd": 9.23861443487391,
+        "macd_signal": 7.661641727922128,
+        "macd_hist": 1.5769727069517812,
+        "rsi14": 68.82028140718683
+      },
+      "signals": {
+        "TS": 0.533219,
+        "NS": 0.558472,
+        "wT": 0.7209080098539418,
+        "wN": 0.2790919901460583,
+        "CDS": 0.540267,
+        "components": {
+          "rsi_pos": 0.3764056281437365,
+          "macd_hist_slope": 0.9181278018585136,
+          "ema20_slope": 0.07702678728120764
+        },
+        "ns_debug": {
+          "source": "vader_weighted",
+          "articles_used": 15,
+          "samples": [
+            {
+              "headline": "Zscaler Acquires SPLX, Terms Not Disclused",
+              "source": "benzinga",
+              "ts": "2025-11-03T13:11:56Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.447338904143767,
+              "source_w": 0.9,
+              "weight": 0.4026050137293903
+            },
+            {
+              "headline": "Zscaler Secures The Enterprise AI Lifecycle With Acquisition of Innovative AI Security Pioneer SPLX",
+              "source": "finnhub",
+              "ts": "2025-11-03T13:05:00",
+              "vader": 0.986,
+              "relevance": 1.0,
+              "decay_w": 0.44436297136587727,
+              "source_w": 1.0,
+              "weight": 0.44436297136587727
+            },
+            {
+              "headline": "Zscaler (NASDAQ: ZS) acquires SPLX, adds AI asset discovery, red teaming, governance - Stock Titan",
+              "source": "google_rss",
+              "ts": "2025-11-03T13:05:00",
+              "vader": 0.6124,
+              "relevance": 1.0,
+              "decay_w": 0.44436297136587727,
+              "source_w": 0.5,
+              "weight": 0.22218148568293863
+            },
+            {
+              "headline": "Zscaler (ZS) Gains Praise for CPS Potential and Strong Fundamentals - MSN",
+              "source": "google_rss",
+              "ts": "2025-11-03T11:14:38",
+              "vader": 0.9559,
+              "relevance": 1.0,
+              "decay_w": 0.3995709130645356,
+              "source_w": 0.5,
+              "weight": 0.1997854565322678
+            },
+            {
+              "headline": "3 Software Stocks to Research Further - The Globe and Mail",
+              "source": "google_rss",
+              "ts": "2025-11-03T08:30:08",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.3410490734454694,
+              "source_w": 0.5,
+              "weight": 0.1705245367227347
+            },
+            {
+              "headline": "3 Software Stocks to Research Further",
+              "source": "finnhub",
+              "ts": "2025-11-03T04:38:01",
+              "vader": 0.7906,
+              "relevance": 1.0,
+              "decay_w": 0.27275300360800875,
+              "source_w": 1.0,
+              "weight": 0.27275300360800875
+            },
+            {
+              "headline": "Zscaler's (NASDAQ:ZS) investors will be pleased with their solid 174% return over the last three years",
+              "source": "finnhub",
+              "ts": "2025-11-01T13:00:26",
+              "vader": 0.0691,
+              "relevance": 1.0,
+              "decay_w": 0.02765085525962868,
+              "source_w": 1.0,
+              "weight": 0.02765085525962868
+            },
+            {
+              "headline": "Zscaler (ZS): Evaluating Valuation Following Real-Time Digital Experience Upgrades and Zero Trust Enhancements - simplywall.st",
+              "source": "google_rss",
+              "ts": "2025-11-01T06:42:20",
+              "vader": 0.765,
+              "relevance": 1.0,
+              "decay_w": 0.019214363895448356,
+              "source_w": 0.5,
+              "weight": 0.009607181947724178
+            },
+            {
+              "headline": "FTNT Stock Down 14.6% in 3 Months: Buy the Dip or Wait for Recovery?",
+              "source": "finnhub",
+              "ts": "2025-10-31T18:02:00",
+              "vader": -0.47,
+              "relevance": 1.0,
+              "decay_w": 0.009241293454927288,
+              "source_w": 1.0,
+              "weight": 0.009241293454927288
+            },
+            {
+              "headline": "Here Are Friday\u2019s Top Wall Street Analyst Upgrades and Downgrades: Apple, Comcast, Roblox, Zscaler and More",
+              "source": "finnhub",
+              "ts": "2025-10-31T13:41:02",
+              "vader": 0.3818,
+              "relevance": 1.0,
+              "decay_w": 0.0071882525075838005,
+              "source_w": 1.0,
+              "weight": 0.0071882525075838005
+            },
+            {
+              "headline": "Zscaler (ZS) Receives \"Outperform\" Rating from Macquarie | ZS St - GuruFocus",
+              "source": "google_rss",
+              "ts": "2025-10-31T13:37:19",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.0071625785293029055,
+              "source_w": 0.5,
+              "weight": 0.0035812892646514527
+            },
+            {
+              "headline": "Macquarie Initiates Coverage On Zscaler with Outperform Rating, Announces Price Target of $390",
+              "source": "benzinga",
+              "ts": "2025-10-31T12:51:49Z",
+              "vader": 0.0,
+              "relevance": 1.0,
+              "decay_w": 0.006855607941547374,
+              "source_w": 0.9,
+              "weight": 0.006170047147392636
+            },
+            {
+              "headline": "High Growth Tech Stocks In The US Market With Promising Potential",
+              "source": "finnhub",
+              "ts": "2025-10-31T11:38:17",
+              "vader": 0.9523,
+              "relevance": 1.0,
+              "decay_w": 0.00638707316688737,
+              "source_w": 1.0,
+              "weight": 0.00638707316688737
+            },
+            {
+              "headline": "High Growth Tech Stocks To Watch In US This October 2025",
+              "source": "finnhub",
+              "ts": "2025-10-30T11:38:13",
+              "vader": 0.8807,
+              "relevance": 1.0,
+              "decay_w": 0.001596665813951199,
+              "source_w": 1.0,
+              "weight": 0.001596665813951199
+            },
+            {
+              "headline": "Zscaler Announces New Innovations for Advanced End-to-End Monitoring, Diagnostics, and Remediation",
+              "source": "finnhub",
+              "ts": "2025-10-29T12:00:00",
+              "vader": 0.9062,
+              "relevance": 1.0,
+              "decay_w": 0.0004076257270708466,
+              "source_w": 1.0,
+              "weight": 0.0004076257270708466
+            }
+          ]
+        },
+        "decide_debug": {
+          "articles_used": 15,
+          "avg_decay_w": 0.162343,
+          "conf": 0.162343,
+          "regime_bias": 0.299947
+        },
+        "sector_debug": {
+          "sector_avg": {
+            "Tech": 0.1972303982432276,
+            "Unknown": 0.3086670501670013,
+            "Consumer Discretionary": 0.28542862669995384,
+            "ETF": 0.26206603760061886
+          },
+          "notes": "nudge applied when sign disagrees"
+        }
+      },
+      "decision": "Buy/Add"
+    }
+  }
 }
