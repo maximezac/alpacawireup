@@ -56,6 +56,8 @@ OUT_TRADES           = os.environ.get("OUT_TRADES", "data/recommended_trades.jso
 PORT_PAPER_CSV       = os.environ.get("PORT_PAPER_CSV", "data/portfolio_paper.csv")
 PORT_PERSONAL_CSV    = os.environ.get("PORT_PERSONAL_CSV", "data/portfolio_personal.csv")
 PERSONAL_CASH        = float(os.environ.get("PORTFOLIO_PERSONAL_CASH", "0") or "0")
+PAPER_CASH_MODE       = (os.environ.get("PAPER_CASH_MODE", "1") == "1")  # default ON
+PORTFOLIO_PAPER_CASH  = float(os.environ.get("PORTFOLIO_PAPER_CASH", "0") or "0")
 
 BUY_THRESHOLD        = float(os.environ.get("BUY_THRESHOLD", "0.35"))
 SELL_THRESHOLD       = float(os.environ.get("SELL_THRESHOLD", "-0.25"))
@@ -257,20 +259,22 @@ def propose_trades(port: Dict[str, float], feed: Dict[str, Any], allow_new: bool
                 by_sym[s] = a
     return list(by_sym.values())
 
-def size_trades_A(actions: List[Dict[str, Any]], port_value: float, cash: float) -> Tuple[List[Dict[str, Any]], float]:
+def size_trades_cash(actions: List[Dict[str, Any]], port_value: float, cash: float, per_line_frac: float,
+                     max_deploy_frac: float | None = None) -> Tuple[List[Dict[str, Any]], float]:
     """
-    PAPER sizing:
-      - Total BUY budget <= min( cash, A_MAX_DEPLOY_FRAC * (port_value + cash) )
-      - Per-line BUY cap  <= A_PER_LINE_FRAC * (port_value + cash)
-      - SELL trims use SELL_TRIM_FRACTION (floored to whole shares)
+    Unified cash-constrained sizing used by BOTH portfolios.
+      - BUYs limited by available 'cash'
+      - Optional max_deploy_frac (cap total BUY spend to that fraction of equity+cash)
+      - Per-line BUY target ~= per_line_frac * (equity+cash)
+      - SELL trims floor to whole shares
     """
     equity = port_value + cash
-    buy_cap_by_frac = equity * A_MAX_DEPLOY_FRAC
-    buy_budget_total = min(cash, buy_cap_by_frac)
-    per_line_cap_val = equity * A_PER_LINE_FRAC
+    per_line_target = equity * per_line_frac
+    total_budget = cash
+    if max_deploy_frac is not None:
+        total_budget = min(total_budget, equity * max_deploy_frac)
 
-    sized = []
-    spent = 0.0
+    sized, spent = [], 0.0
 
     # SELLs first
     for a in actions:
@@ -278,28 +282,28 @@ def size_trades_A(actions: List[Dict[str, Any]], port_value: float, cash: float)
             continue
         px = a.get("px") or 0.0
         qty = math.floor(max(0.0, a.get("qty_hint", 0.0)))
-        if qty <= 0:
+        if qty <= 0: 
             continue
         sized.append({**a, "qty": qty, "notional": round(qty * px, 2)})
 
-    # BUYs with caps (respect total budget and per-line cap)
+    # BUYs with caps (respect total_budget and per-line target)
     for a in sorted([x for x in actions if x["action"] == "BUY"], key=lambda x: x["cds"], reverse=True):
         px = a.get("px") or 0.0
         if px <= 0:
             continue
-        remain = buy_budget_total - spent
+        remain = total_budget - spent
         if remain <= 0:
             break
-        target_val = min(per_line_cap_val, remain)
-        qty = round(target_val / px, 4)
+        target_val = min(per_line_target, remain)
+        qty = round(target_val / px, 4)  # fractional ok
         if qty <= 0:
             continue
         notional = qty * px
         spent += notional
         sized.append({**a, "qty": qty, "notional": round(notional, 2)})
 
-    leftover = round(buy_budget_total - spent, 2)
-    return sized, max(0.0, leftover)
+    cash_left = round(cash - spent, 2)
+    return sized, cash_left
 
 def size_trades_B(actions: List[Dict[str, Any]], port_value: float, cash: float) -> Tuple[List[Dict[str, Any]], float]:
     """
@@ -378,8 +382,19 @@ def main():
     recPaper = propose_trades(portPaper, feed, allow_new=True)
     recPers  = propose_trades(portPersonal, feed, allow_new=True)
 
-    sizedPaper, paper_leftover = size_trades_A(recPaper, paper_val, cash=paper_cash)
-    sizedPers,  pers_cash_left = size_trades_B(recPers, pers_val, cash=personal_cash)
+
+    # new (one engine, different knobs):
+    sizedPaper, paper_cash_left = size_trades_cash(
+        recPaper, paper_val, cash=paper_cash,
+        per_line_frac=A_PER_LINE_FRAC,       # paper’s per-line % (keep separate knob)
+        max_deploy_frac=A_MAX_DEPLOY_FRAC    # paper’s optional daily cap
+    )
+    sizedPers, pers_cash_left = size_trades_cash(
+        recPers, pers_val, cash=personal_cash,
+        per_line_frac=B_PER_LINE_FRAC,       # personal’s per-line %
+        max_deploy_frac=None                 # usually no daily cap for personal
+    )
+
 
     # Final trades output
     out_trades = {
@@ -390,10 +405,11 @@ def main():
         },
         "portfolio_paper": {
             "portfolio_value_est": round(paper_val, 2),
-            "deploy_rules": {"max_deploy_frac": A_MAX_DEPLOY_FRAC, "per_line_frac": A_PER_LINE_FRAC},
             "cash_start": paper_cash,
+            "per_line_frac": A_PER_LINE_FRAC,
+            "max_deploy_frac": A_MAX_DEPLOY_FRAC,   # informational
             "trades": sizedPaper,
-            "residual_budget_hint": paper_leftover
+            "cash_left": paper_cash_left
         },
         "portfolio_personal": {
             "portfolio_value_est": round(pers_val, 2),
