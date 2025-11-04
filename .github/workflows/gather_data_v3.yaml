@@ -103,6 +103,7 @@ jobs:
           OUT_PERSONAL_ONLY:  data/prices_final_personal.json
           OUT_WATCHLIST:      data/watchlist_summary.json
           OUT_TRADES:         data/recommended_trades.json            # single-portfolio legacy (paper/personal)
+          OUT_TRADE_PLANS:    artifacts/recommended_trades_v3.json
           OUTPUT_TRADES_V3:   artifacts/recommended_trades_v3.json    # NEW: multi-portfolio
         run: |
           python scripts/postprocess_v3.py
