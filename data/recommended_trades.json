@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-04T02:39:41.950534+00:00",
+  "as_of_utc": "2025-11-04T02:42:17.447676+00:00",
   "thresholds": {
     "BUY_THRESHOLD": 0.35,
     "SELL_THRESHOLD": -0.15
@@ -14,7 +14,7 @@
     "residual_budget_hint": 0.0
   },
   "portfolio_personal": {
-    "portfolio_value_est": 19046.9,
+    "portfolio_value_est": 19123.64,
     "cash_start": 500.0,
     "per_line_frac": 0.02,
     "trades": [
@@ -23,8 +23,8 @@
         "action": "SELL",
         "reason": "CDS<SellThreshold",
         "px": 71.145,
-        "qty_hint": 2.6225,
-        "cds": -0.190076,
+        "qty_hint": 2.1225,
+        "cds": -0.190169,
         "qty": 2,
         "notional": 142.29
       },
@@ -33,10 +33,10 @@
         "action": "SELL",
         "reason": "CDS<SellThreshold",
         "px": 39.1,
-        "qty_hint": 3.0425,
-        "cds": -0.173284,
-        "qty": 3,
-        "notional": 117.3
+        "qty_hint": 2.2925,
+        "cds": -0.173415,
+        "qty": 2,
+        "notional": 78.2
       },
       {
         "symbol": "ZS",
@@ -44,7 +44,7 @@
         "reason": "CDS>BuyThreshold",
         "px": 336.335,
         "qty_hint": 0.0,
-        "cds": 0.54029,
+        "cds": 0.540288,
         "qty": 1,
         "notional": 336.33
       }
