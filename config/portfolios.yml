@@ -1,0 +1,87 @@
+defaults:
+  buy_threshold: 0.35
+  sell_threshold: -0.25
+  allow_new_symbols: true
+  decision_source: CDS          # CDS | TS_ONLY | NS_ONLY
+  ns_weight_boost: 1.0
+  per_line_frac: 0.02           # of (equity + cash)
+  max_deploy_frac: 0.15         # cap total deployed in a single run (null = unlimited)
+  trim_fraction: 0.25
+  fractional_buys: true
+  tags: [ideas]
+  trade_scope: none             # none | paper | real | both
+
+portfolios:
+  portfolio_max_personal:
+    title: "Max Personal"
+    path: data/portfolios/portfolio_max_personal
+    positions_csv: positions.csv
+    decision_source: CDS
+    per_line_frac: 0.03
+    max_deploy_frac: null
+    trade_scope: real
+    tags: [ideas, personal]
+
+  portfolio_max_TS_only:
+    title: "Max TS Only"
+    path: data/portfolios/portfolio_max_TS_only
+    decision_source: TS_ONLY
+    buy_threshold: 0.55
+    sell_threshold: -0.20
+    trade_scope: none
+    tags: [ideas]
+
+  portfolio_max_NS_higher_weight:
+    title: "Max NS+"
+    path: data/portfolios/portfolio_max_NS_higher_weight
+    decision_source: CDS
+    ns_weight_boost: 1.7
+    trade_scope: none
+    tags: [ideas]
+
+  portfolio_nicky_personal:
+    title: "Nicky Personal"
+    path: data/portfolios/portfolio_nicky_personal
+    per_line_frac: 0.015
+    max_deploy_frac: 0.10
+    trade_scope: real
+    tags: [ideas, personal]
+
+  portfolio_vince_personal:
+    title: "Vince Personal"
+    path: data/portfolios/portfolio_vince_personal
+    per_line_frac: 0.02
+    trade_scope: real
+    tags: [ideas, personal]
+
+  portfolio_paper_aggressive_trades:
+    title: "Paper Aggressive"
+    path: data/portfolios/portfolio_paper_aggressive_trades
+    per_line_frac: 0.05
+    max_deploy_frac: 0.20
+    trade_scope: paper
+    tags: [ideas, paper, aggressive]
+
+  portfolio_paper_reasonable:
+    title: "Paper Reasonable"
+    path: data/portfolios/portfolio_paper_reasonable
+    per_line_frac: 0.03
+    max_deploy_frac: 0.15
+    trade_scope: paper
+    tags: [ideas, paper]
+
+  portfolio_paper_TS_only:
+    title: "Paper TS Only"
+    path: data/portfolios/portfolio_paper_TS_only
+    decision_source: TS_ONLY
+    buy_threshold: 0.50
+    max_deploy_frac: 0.12
+    trade_scope: paper
+    tags: [ideas, paper]
+
+  portfolio_paper_NS_higher_weight:
+    title: "Paper NS+"
+    path: data/portfolios/portfolio_paper_NS_higher_weight
+    ns_weight_boost: 1.7
+    trade_scope: paper
+    tags: [ideas, paper]
