@@ -25,7 +25,12 @@ def build_watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: i
         ns = float(sig.get("NS") or 0.0)
         cds = float(sig.get("CDS") or 0.0)
         if ts >= ts_thr or ns >= ns_thr:
-            price = (node.get("now") or {}).get("price", node.get("price"))
+            # live-only shape: price is on the symbol root
+            price = node.get("price")
+            try:
+                price = float(price) if price is not None else 0.0
+            except:
+                price = 0.0
             out.append({"symbol": sym, "price": price, "TS": ts, "NS": ns, "CDS": cds})
     out.sort(key=lambda r: (abs(r["CDS"]), r["TS"]), reverse=True)
     return out[:top_n]
