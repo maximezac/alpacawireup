@@ -15,9 +15,10 @@ Env (optional):
 - NEWS_LIMIT_PER_SYMBOL: default "25"
 - NEWS_SOURCES: optional comma-separated (e.g., "benzinga,mtnewswires")  # leave empty to use all
 """
-import os, sys, json
+import os, sys, json, re
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import requests
 import feedparser
 
@@ -53,6 +54,43 @@ NEWS_SOURCE_WEIGHTS = {
     "newsapi": 0.30
 }
 
+analyzer = SentimentIntensityAnalyzer()
+
+_src_norm_re = re.compile(r"[^a-z0-9]+")
+def norm_source(s: str) -> str:
+    """Normalize a source string to a lowercase token without spaces/punct, e.g. 'MT Newswires' -> 'mtnewswires'."""
+    if not s:
+        return "unknown"
+    return _src_norm_re.sub("", s.lower())
+
+def to_utc_iso(ts: str | None) -> str | None:
+    if not ts:
+        return None
+    try:
+        # Try robust parse (RFC3339/ISO) with fallback to email/date style
+        try:
+            dt = parsedate_to_datetime(ts)
+        except Exception:
+            # last resort: dateutil if available via publish step; else naive parse
+            from dateutil import parser
+            dt = parser.isoparse(ts)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    except Exception:
+        return None
+
+def score_tone(headline: str, summary: str, src_token: str) -> float:
+    """Return tone in [-1, 1], VADER compound * source weight."""
+    text = " ".join([headline or "", summary or ""]).strip()
+    if not text:
+        return 0.0
+    comp = analyzer.polarity_scores(text).get("compound", 0.0)
+    w = NEWS_SOURCE_WEIGHTS.get(src_token, 1.0)
+    val = comp * w
+    # clamp
+    return max(-1.0, min(1.0, val))
+
 def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
     """
     Fetch up to NEWS_LIMIT stories between start and end for a single symbol.
@@ -76,14 +114,16 @@ def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
     # If user provided NEWS_SOURCES, filter manually
     source_filter = []
     if NEWS_SOURCES:
-        source_filter = [s.strip().lower() for s in NEWS_SOURCES.split(",") if s.strip()]
+        source_filter = [norm_source(s) for s in NEWS_SOURCES.split(",") if s.strip()]
 
     out = []
     for it in items:
         headline = it.get("headline") or it.get("title") or ""
         summary = it.get("summary") or it.get("description") or ""
-        ts = it.get("created_at") or it.get("updated_at") or it.get("published_at")
-        source = (it.get("source") or it.get("author") or "unknown").lower()
+        ts_raw = it.get("created_at") or it.get("updated_at") or it.get("published_at")
+        ts = to_utc_iso(ts_raw)
+        source_raw = it.get("source") or it.get("author") or "unknown"
+        source = norm_source(source_raw)
 
         # Skip empty headlines
         if not (headline.strip() or summary.strip()):
@@ -99,6 +139,7 @@ def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
             "ts": ts,
             "source": source,
             "relevance": 1.0,
+            "tone": score_tone(headline, summary, source),
         })
 
     return out
@@ -151,12 +192,18 @@ def get_news_from_google(symbol: str) -> list[dict]:
     feed = feedparser.parse(feed_url)
     out = []
     for entry in feed.entries[:10]:
+        ts = None
+        if getattr(entry, "published_parsed", None):
+            ts = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc).isoformat()
+        else:
+            ts = to_utc_iso(entry.get("published", ""))
         out.append({
             "headline": entry.title,
             "summary": entry.get("summary", ""),
-            "ts": entry.get("published_parsed") and datetime(*entry.published_parsed[:6]).isoformat() or entry.get("published", ""),
+            "ts": ts,
             "source": "google_rss",
-            "url": entry.link
+            "url": entry.link,
+            "tone": score_tone(entry.title, entry.get("summary",""), "google_rss"),
         })
     return out
 
@@ -172,13 +219,17 @@ def get_news_from_reddit(symbol: str) -> list[dict]:
         out = []
         for p in posts:
             data = p.get("data", {})
+            title = data.get("title") or ""
+            body = data.get("selftext") or ""
+            tiso = datetime.utcfromtimestamp(data.get("created_utc", 0)).replace(tzinfo=timezone.utc).isoformat()
             out.append({
                 "headline": data.get("title"),
-                "summary": data.get("selftext") or "",
-                "ts": datetime.utcfromtimestamp(data.get("created_utc", 0)).isoformat(),
+                "summary": body,
+                "ts": tiso,
                 "source": "reddit",
                 "url": f"https://reddit.com{data.get('permalink','')}",
-                "relevance": 0.8 if data.get("score", 0) > 50 else 0.4
+                "relevance": 0.8 if data.get("score", 0) > 50 else 0.4,
+                "tone": score_tone(title, body, "reddit"),
             })
         return out
     except Exception as e:
@@ -239,7 +290,6 @@ def main():
                 deduped.append(a)
 
             # Sort by timestamp (newest first)
-            # Sort by timestamp (newest first)
             from dateutil import parser
             def _safe_parse(ts):
                 try:
@@ -272,10 +322,7 @@ def main():
             # ----------------------------------------------------------
             # ✅ Summary print for debugging
             # ----------------------------------------------------------
-            print(
-                f"   [•] {sym}: {len(news_items)} deduped & filtered articles "
-                f"(from {len(alpaca_news)+len(extra_news)} raw)"
-            )
+            print(f"   [•] {sym}: {len(news_items)} deduped/filtered (raw={len(alpaca_news)+len(extra_news)})")
             
 
             # Attach/overwrite news array
@@ -290,7 +337,8 @@ def main():
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(prices, f, indent=2)
-    print(f"[DONE] Wrote news into {OUTPUT_PATH}")
+    total_news = sum(len((n or {}).get("news") or []) for n in prices.get("symbols", {}).values())
+    print(f"[DONE] Wrote news into {OUTPUT_PATH} (total items: {total_news})")
 
 if __name__ == "__main__":
     main()
