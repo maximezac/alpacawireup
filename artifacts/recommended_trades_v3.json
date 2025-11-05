@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T09:16:45.963043+00:00",
+  "as_of_utc": "2025-11-05T10:16:56.356559+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 13.725,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.316505,
+          "score": -0.307164,
           "qty": 18,
           "notional": 247.05,
           "signals": {
             "TS": -0.581851,
-            "NS": 0.081513,
-            "CDS": -0.316505,
+            "NS": 0.104866,
+            "CDS": -0.307164,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -47,6 +47,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T06:46:56+00:00",
+              "source": "google_rss",
+              "tone": 0.1909,
+              "headline": "Why QUBT stock is considered a top pick - Rate Hike & Consistent Income Trade Ideas"
+            },
+            {
               "ts": "2025-11-04T23:43:01+00:00",
               "source": "google_rss",
               "tone": 0.0,
@@ -57,12 +63,52 @@
               "source": "benzinga",
               "tone": 0.24588000000000002,
               "headline": "Watching Quantum Stocks As Energy Department Announces $625M To Advance Next Phase Of National Quantum Information Science Research Centers"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 70.02,
+          "qty_hint": 10.49,
+          "reason": "score<sell",
+          "score": -0.259122,
+          "qty": 2,
+          "notional": 140.04,
+          "signals": {
+            "TS": -0.519596,
+            "NS": 0.131588,
+            "CDS": -0.259122,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 76.08547223714535,
+            "ema_slow": 73.29094990322909,
+            "macd": 2.7945223339162624,
+            "macd_signal": 5.0716796747032875,
+            "macd_hist": -2.277157340787025,
+            "rsi14": 37.84730936838234,
+            "sma20": 80.86550000000007
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T00:34:24+00:00",
+              "source": "google_rss",
+              "tone": -0.4233,
+              "headline": "This Disruptive Emerging Technology Stock Is Up Nearly 4,000% Since 2024. Is It Overheated or Is It a Screaming Buy?"
             },
             {
-              "ts": "2025-11-04T20:00:00+00:00",
+              "ts": "2025-11-04T16:25:33+00:00",
+              "source": "benzinga",
+              "tone": 0.70047,
+              "headline": "Smart Money Sells Palantir, Quantum Computing, And Space Stocks; Gold Gives Up Momo-Induced Gains"
+            },
+            {
+              "ts": "2025-11-04T15:34:27+00:00",
               "source": "google_rss",
-              "tone": 0.0,
-              "headline": "Quantum Computing Stocks' Q3 Earnings Preview: IONQ, QBTS and More"
+              "tone": 0.07655,
+              "headline": "AST SpaceMobile (ASTS): Valuation in Focus After Landmark 10-Year Satellite Deal With STC Group"
             }
           ]
         },
@@ -118,13 +164,13 @@
           "px": 262.92,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.529305,
+          "score": 0.510089,
           "qty": 2.1563,
           "notional": 566.93,
           "signals": {
             "TS": 0.582463,
-            "NS": 0.449568,
-            "CDS": 0.529305,
+            "NS": 0.401527,
+            "CDS": 0.510089,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,6 +185,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T09:35:01+00:00",
+              "source": "google_rss",
+              "tone": 0.26335,
+              "headline": "State of Michigan Retirement System Buys 3,100 Shares of First Solar, Inc. $FSLR"
+            },
+            {
               "ts": "2025-11-05T01:12:26+00:00",
               "source": "google_rss",
               "tone": 0.4455,
@@ -149,12 +201,6 @@
               "source": "google_rss",
               "tone": 0.0,
               "headline": "GLJ Research Maintains First Solar (FSLR) Buy Recommendation"
-            },
-            {
-              "ts": "2025-11-04T14:00:00+00:00",
-              "source": "finnhub",
-              "tone": 0.93,
-              "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
             }
           ]
         },
@@ -164,13 +210,13 @@
           "px": 270.21,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.50104,
+          "score": 0.497802,
           "qty": 1.6027,
           "notional": 433.07,
           "signals": {
             "TS": 0.595193,
-            "NS": 0.359809,
-            "CDS": 0.50104,
+            "NS": 0.351714,
+            "CDS": 0.497802,
             "wT": 0.6,
             "wN": 0.4
           },
