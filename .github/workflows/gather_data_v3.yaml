@@ -96,26 +96,28 @@ jobs:
       - name: Postprocess (multi-portfolio ideas; no execution)
         env:
           INPUT_FINAL:      data/prices_final.json
-          PORTFOLIOS_YML:   artifacts/portfolios.yaml          # <-- what postprocess_v3.py reads
+          PORTFOLIOS_YML:   artifacts/portfolios.yaml
           OUT_WATCHLIST:    data/watchlist_summary.json
-          OUT_TRADES:       artifacts/recommended_trades_v3.json  # <-- single source of truth
+          OUT_TRADES:       artifacts/recommended_trades_v3.json
         run: |
           mkdir -p artifacts
           python scripts/postprocess_v3.py
-          python - <<'PY'
-            import json,sys
-            try:
-                obj=json.load(open("artifacts/recommended_trades_v3.json"))
-                ports=obj.get("portfolios") or {}
-                tot=0
-                for n,k in ports.items():
-                    m=len(k.get("trades") or [])
-                    print(f"- {n}: {m} trades")
-                    tot+=m
-                print("TOTAL TRADES:", tot)
-            except Exception as e:
-                print("summarize trades failed:", e, file=sys.stderr)
-          PY
+          printf '%s\n' \
+            'import json,sys' \
+            'p="artifacts/recommended_trades_v3.json"' \
+            'try:' \
+            '    with open(p) as f: obj=json.load(f)' \
+            '    ports=obj.get("portfolios") or {}' \
+            '    tot=0' \
+            '    for name,node in ports.items():' \
+            '        m=len(node.get("trades") or [])' \
+            '        print(f"- {name}: {m} trades")' \
+            '        tot+=m' \
+            '    print("TOTAL TRADES:", tot)' \
+            'except Exception as e:' \
+            '    print("summarize trades failed:", e, file=sys.stderr)' \
+          > /tmp/summarize_trades.py
+          python /tmp/summarize_trades.py
 
       - name: Snapshots (no trades)
         env:
