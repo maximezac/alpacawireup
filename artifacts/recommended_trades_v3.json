@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T16:18:49.402167+00:00",
+  "as_of_utc": "2025-11-05T16:31:55.249771+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18160.68,
+      "portfolio_value_est": 18230.48,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 30.56,
+          "px": 30.73,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.277534,
+          "score": -0.280773,
           "qty": 57,
-          "notional": 1741.92,
+          "notional": 1751.61,
           "signals": {
-            "TS": -0.490189,
-            "NS": 0.041448,
-            "CDS": -0.277534,
+            "TS": -0.485875,
+            "NS": 0.026879,
+            "CDS": -0.280773,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 33.1376424957224,
-            "ema_slow": 32.266959215038675,
-            "macd": 0.8706832806837284,
-            "macd_signal": 1.8496897728855455,
-            "macd_hist": -0.9790064922018171,
-            "rsi14": 41.80168819529722,
-            "sma20": 35.03424999999998
+            "ema_fast": 33.16379634187625,
+            "ema_slow": 32.279551807631265,
+            "macd": 0.884244534244985,
+            "macd_signal": 1.8524020235977967,
+            "macd_hist": -0.9681574893528118,
+            "rsi14": 42.33075028726833,
+            "sma20": 35.042749999999984
           },
           "news_preview": [
             {
@@ -69,40 +69,40 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.68,
+          "px": 13.76,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.283818,
+          "score": -0.287275,
           "qty": 18,
-          "notional": 246.24,
+          "notional": 247.68,
           "signals": {
-            "TS": -0.584827,
-            "NS": 0.167697,
-            "CDS": -0.283818,
+            "TS": -0.580503,
+            "NS": 0.152568,
+            "CDS": -0.287275,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.610720522080225,
-            "ema_slow": 16.86431798698089,
-            "macd": -1.2535974649006647,
-            "macd_signal": -0.9084128172973951,
-            "macd_hist": -0.3451846476032696,
-            "rsi14": 32.50478444691274,
-            "sma20": 17.10575
+            "ema_fast": 15.623028214387919,
+            "ema_slow": 16.870243912906815,
+            "macd": -1.2472156985188967,
+            "macd_signal": -0.9071364640210415,
+            "macd_hist": -0.34007923449785515,
+            "rsi14": 33.03522650387502,
+            "sma20": 17.10975
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T16:22:51+00:00",
+              "source": "aolcom",
+              "tone": 0.45155,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
             {
               "ts": "2025-11-05T13:37:21+00:00",
               "source": "fcppagovbr",
               "tone": 0.4455,
               "headline": "Will QUBT stock split attract more investors - July 2025 Setups & Free High Return Stock Watch Alerts"
-            },
-            {
-              "ts": "2025-11-05T13:01:30+00:00",
-              "source": "aolcom",
-              "tone": 0.45155,
-              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
             },
             {
               "ts": "2025-11-05T12:41:09+00:00",
@@ -115,27 +115,27 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 55.79,
+          "px": 56.21,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.300951,
+          "score": -0.298954,
           "qty": 1,
-          "notional": 55.79,
+          "notional": 56.21,
           "signals": {
-            "TS": -0.571286,
-            "NS": 0.104552,
-            "CDS": -0.300951,
+            "TS": -0.565034,
+            "NS": 0.100166,
+            "CDS": -0.298954,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 61.2510328689227,
-            "ema_slow": 60.36836655376427,
-            "macd": 0.8826663151584313,
-            "macd_signal": 2.497002413787376,
-            "macd_hist": -1.6143360986289448,
-            "rsi14": 31.973736959753353,
-            "sma20": 64.05999999999997
+            "ema_fast": 61.315648253538086,
+            "ema_slow": 60.39947766487538,
+            "macd": 0.916170588662709,
+            "macd_signal": 2.5037032684882314,
+            "macd_hist": -1.5875326798255225,
+            "rsi14": 32.741478662226314,
+            "sma20": 64.08099999999999
           },
           "news_preview": [
             {
@@ -159,75 +159,29 @@
           ]
         },
         {
-          "symbol": "RGTI",
-          "action": "SELL",
-          "px": 35.98,
-          "qty_hint": 12.17,
-          "reason": "score<sell",
-          "score": -0.258121,
-          "qty": 3,
-          "notional": 107.94,
-          "signals": {
-            "TS": -0.508237,
-            "NS": 0.117052,
-            "CDS": -0.258121,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 39.60719847327889,
-            "ema_slow": 38.76101222024568,
-            "macd": 0.8461862530332098,
-            "macd_signal": 2.3640082372773685,
-            "macd_hist": -1.5178219842441587,
-            "rsi14": 39.6746114468122,
-            "sma20": 43.212999999999994
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T16:08:40+00:00",
-              "source": "benzinga",
-              "tone": -0.5837399999999999,
-              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
-            },
-            {
-              "ts": "2025-11-05T15:29:14+00:00",
-              "source": "barchartcom",
-              "tone": 0.1909,
-              "headline": "Dear Rigetti Stock Fans, Mark Your Calendars for November 10"
-            },
-            {
-              "ts": "2025-11-05T11:06:44+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "FWG Holdings LLC Raises Position in Rigetti Computing, Inc. $RGTI"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 276.73,
+          "px": 276.38,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.52494,
-          "qty": 2.0772,
-          "notional": 574.82,
+          "score": 0.52394,
+          "qty": 2.0874,
+          "notional": 576.92,
           "signals": {
-            "TS": 0.639255,
-            "NS": 0.353468,
-            "CDS": 0.52494,
+            "TS": 0.638124,
+            "NS": 0.352664,
+            "CDS": 0.52394,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.40698059639067,
-            "ema_slow": 239.63656140473742,
-            "macd": 11.770419191653247,
-            "macd_signal": 8.444242082427177,
-            "macd_hist": 3.3261771092260695,
-            "rsi14": 74.92888296776245,
-            "sma20": 240.41075000000015
+            "ema_fast": 251.3531344425445,
+            "ema_slow": 239.6106354788115,
+            "macd": 11.742498963732999,
+            "macd_signal": 8.438658036843128,
+            "macd_hist": 3.3038409268898707,
+            "rsi14": 74.79034498835065,
+            "sma20": 240.39325000000017
           },
           "news_preview": [
             {
@@ -253,27 +207,27 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 269.27,
+          "px": 270.345,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.497991,
-          "qty": 1.579,
-          "notional": 425.18,
+          "score": 0.521463,
+          "qty": 1.565,
+          "notional": 423.09,
           "signals": {
-            "TS": 0.558555,
-            "NS": 0.407146,
-            "CDS": 0.497991,
+            "TS": 0.597479,
+            "NS": 0.40744,
+            "CDS": 0.521463,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.31777898518794,
-            "ema_slow": 260.32289136987436,
-            "macd": 5.994887615313587,
-            "macd_signal": 5.697304167031442,
-            "macd_hist": 0.2975834482821451,
-            "rsi14": 65.49379819720613,
-            "sma20": 260.3817499999999
+            "ema_fast": 266.4831636005726,
+            "ema_slow": 260.40252099950396,
+            "macd": 6.080642601068632,
+            "macd_signal": 5.714455164182451,
+            "macd_hist": 0.3661874368861815,
+            "rsi14": 70.35121424359379,
+            "sma20": 260.43549999999993
           },
           "news_preview": [
             {
@@ -297,7 +251,7 @@
           ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_max_TS_only": {
       "meta": {
