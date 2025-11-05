@@ -36,12 +36,16 @@ def choose_slippage_bps(scope: str, sym: str) -> float:
     return base + (LIQ_SC_BPS if sym in SMALLCAPS else 0.0)
 
 def latest_px(node: dict) -> float:
-    if not node: return 0.0
+    """Single source of truth for price (live-only format; keeps legacy fallback)."""
+    if not node:
+        return 0.0
     v = node.get("price")
     if v is None:
-        v = (node.get("now") or {}).get("price")
-    try: return float(v or 0.0)
-    except: return 0.0
+        v = (node.get("now") or {}).get("price")  # legacy fallback
+    try:
+        return float(v or 0.0)
+    except:
+        return 0.0
 
 def exec_price(mark_px: float, bps: float, side: str) -> float:
     # BUY -> price up by slippage; SELL -> price down
@@ -81,7 +85,6 @@ def write_last_applied(path: str | Path, asof: str):
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps({"last_as_of_utc": asof}, indent=2))
-    
 
 def mark_to_market(cash: float, pos: Dict[str, dict], prices: Dict[str, Any]) -> Tuple[float, float]:
     mv = 0.0
@@ -113,7 +116,7 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
 
     col = {h: i for i, h in enumerate(rows[0])}
 
-    # previous day's equity (last row in file for this portfolio)
+    # previous equity for this portfolio
     prev_equity = None
     for r in rows[1:]:
         try:
@@ -124,7 +127,7 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
 
     equity, mv = mark_to_market(cash, pos, prices)
     daily_pnl = (equity - prev_equity) if prev_equity is not None else 0.0
-    daily_ret = (equity / prev_equity - 1.0) if prev_equity and prev_equity != 0 else 0.0
+    daily_ret = (equity / prev_equity - 1.0) if (prev_equity is not None and prev_equity != 0) else 0.0
 
     # baseline equity for cumulative return
     first_equity = None
@@ -134,14 +137,14 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
                 first_equity = float(r[col["equity"]]); break
         except:
             pass
-    cum_ret = (equity / first_equity - 1.0) if first_equity and first_equity != 0 else 0.0
+    cum_ret = (equity / first_equity - 1.0) if (first_equity is not None and first_equity != 0) else 0.0
 
     syms = prices.get("symbols") or {}
     holdings_snap = {
         s: {
             "qty": round(p["qty"], 6),
             "avg_cost": round(p["avg_cost"], 6),
-            "mark": (syms.get(s, {}).get("now") or {}).get("price", syms.get(s, {}).get("price"))
+            "mark": latest_px(syms.get(s, {})),
         }
         for s, p in sorted(pos.items())
     }
@@ -176,7 +179,6 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
         if not replaced:
             rows.append(row)
 
-    hist_path.parent.mkdir(parents=True, exist_ok=True)
     with open(hist_path, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerows(rows)
@@ -203,7 +205,7 @@ def apply_trades_to_portfolio(
             continue
 
         node = (prices.get("symbols") or {}).get(sym) or {}
-        mark = (node.get("now") or {}).get("price", node.get("price", 0.0)) or 0.0
+        mark = latest_px(node)
         if t.get("px") is not None:
             try:
                 mark = float(t["px"])
@@ -299,10 +301,9 @@ def main():
         if last_applied == asof:
             continue
 
-        # If positions file missing, don't crash; stamp last_applied to avoid repeat spam.
+        # If positions file missing, don't block execution for this snapshot later.
         if not positions_csv.exists():
             folder.mkdir(parents=True, exist_ok=True)
-            write_last_applied(folder / "last_applied.json", asof)
             print(f"[skip] {pid}: positions file missing at {positions_csv}")
             continue
 
@@ -314,7 +315,15 @@ def main():
             write_last_applied(folder / "last_applied.json", asof)
             continue
 
-        apply_trades_to_portfolio(pid, scope if scope in ("paper", "real") else EXECUTE_SCOPE, folder, positions_csv, prices, trades, LEDGER_PATH)
+        apply_trades_to_portfolio(
+            pid,
+            scope if scope in ("paper", "real") else EXECUTE_SCOPE,
+            folder,
+            positions_csv,
+            prices,
+            trades,
+            LEDGER_PATH
+        )
         write_last_applied(folder / "last_applied.json", asof)
         executed.append(pid)
 
