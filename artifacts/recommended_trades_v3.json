@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T19:12:55.652336+00:00",
+  "as_of_utc": "2025-11-05T19:39:27.097779+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -813,8 +813,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 4000.01,
+      "cash_start": 15995.99,
       "trades": [
         {
           "symbol": "FSLR",
@@ -823,8 +823,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.527594,
-          "qty": 3.5702,
-          "notional": 1000.01,
+          "qty": 3.5694,
+          "notional": 999.79,
           "signals": {
             "TS": 0.649548,
             "NS": 0.344664,
@@ -869,8 +869,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.510494,
-          "qty": 3.6876,
-          "notional": 1000.0,
+          "qty": 3.6868,
+          "notional": 999.79,
           "signals": {
             "TS": 0.611218,
             "NS": 0.359408,
@@ -915,8 +915,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.44475,
-          "qty": 3.7489,
-          "notional": 1000.0,
+          "qty": 3.7481,
+          "notional": 999.79,
           "signals": {
             "TS": 0.506656,
             "NS": 0.351891,
@@ -961,214 +961,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.444477,
-          "qty": 4.0099,
-          "notional": 999.99,
-          "signals": {
-            "TS": 0.607128,
-            "NS": 0.200501,
-            "CDS": 0.444477,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 236.07026382519007,
-            "ema_slow": 229.81561786076514,
-            "macd": 6.254645964424924,
-            "macd_signal": 2.596011285846781,
-            "macd_hist": 3.6586346785781427,
-            "rsi14": 71.46055338223226,
-            "sma20": 226.58250000000004
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T16:57:03+00:00",
-              "source": "benzinga",
-              "tone": -0.26639999999999997,
-              "headline": "Nasdaq Pulls Back to Support Zone; Momo Aggressively Buys Stocks; Whales Dump $45B of Bitcoin"
-            },
-            {
-              "ts": "2025-11-05T16:36:00+00:00",
-              "source": "tradingview",
-              "tone": 0.08895,
-              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
-            },
-            {
-              "ts": "2025-11-05T16:22:48+00:00",
-              "source": "benzinga",
-              "tone": -0.34776,
-              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
-            }
-          ]
-        }
-      ],
-      "cash_left": 15999.99
-    },
-    "portfolio_paper_reasonable": {
-      "meta": {
-        "title": "Paper Reasonable",
-        "trade_scope": "paper",
-        "decision_source": "CDS",
-        "ns_weight_boost": 1.0,
-        "per_line_frac": 0.03,
-        "max_deploy_frac": 0.15,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas",
-          "paper"
-        ],
-        "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
-      },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
-      "trades": [
-        {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 280.1,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.527594,
-          "qty": 2.1421,
-          "notional": 600.0,
-          "signals": {
-            "TS": 0.649548,
-            "NS": 0.344664,
-            "CDS": 0.527594,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 251.92544213485218,
-            "ema_slow": 239.88619103436704,
-            "macd": 12.039251100485131,
-            "macd_signal": 8.498008464193553,
-            "macd_hist": 3.541242636291578,
-            "rsi14": 76.18880864886009,
-            "sma20": 240.57925000000017
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T12:43:10+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Advisors Preferred LLC Trims Stock Position in First Solar, Inc. $FSLR"
-            },
-            {
-              "ts": "2025-11-05T11:09:55+00:00",
-              "source": "newsercom",
-              "tone": 0.3404,
-              "headline": "Why FSLR stock is popular among millennials - Weekly Earnings Recap & AI Powered Buy/Sell Recommendations"
-            },
-            {
-              "ts": "2025-11-05T10:59:08+00:00",
-              "source": "simplywallst",
-              "tone": 0.5,
-              "headline": "Is First Solar Still a Value Opportunity After 41% Rally and New Utility Contracts?"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 271.18,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.510494,
-          "qty": 2.2126,
-          "notional": 600.01,
-          "signals": {
-            "TS": 0.611218,
-            "NS": 0.359408,
-            "CDS": 0.510494,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.6116251390341,
-            "ema_slow": 260.46437285135585,
-            "macd": 6.1472522876782705,
-            "macd_signal": 5.727777101504378,
-            "macd_hist": 0.41947518617389257,
-            "rsi14": 72.0623186761792,
-            "sma20": 260.4772499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T16:44:03+00:00",
-              "source": "benzinga",
-              "tone": 0.30600000000000005,
-              "headline": "Taiwan Semiconductor Names CEO Of North America Unit For USA Expansion"
-            },
-            {
-              "ts": "2025-11-05T15:01:08+00:00",
-              "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
-            },
-            {
-              "ts": "2025-11-05T14:33:45+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
-            }
-          ]
-        },
-        {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 266.745,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.44475,
-          "qty": 2.2493,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.506656,
-            "NS": 0.351891,
-            "CDS": 0.44475,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 263.4787123142174,
-            "ema_slow": 253.19777327049067,
-            "macd": 10.280939043726704,
-            "macd_signal": 9.589707919755856,
-            "macd_hist": 0.691231123970848,
-            "rsi14": 58.56694267965021,
-            "sma20": 255.32349999999997
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T13:54:57+00:00",
-              "source": "simplywallst",
-              "tone": 0.10115,
-              "headline": "How Investors May Respond to Snowflake (SNOW) AI Partnerships Amid Revenue Guidance Controversy"
-            },
-            {
-              "ts": "2025-11-05T13:05:30+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "EFG Asset Management North America Corp. Acquires 5,823 Shares of Snowflake Inc. $SNOW"
-            },
-            {
-              "ts": "2025-11-05T12:45:10+00:00",
-              "source": "marketbeat",
-              "tone": 0.6885,
-              "headline": "954 Shares in Snowflake Inc. $SNOW Acquired by Axim Planning & Wealth"
-            }
-          ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 249.38,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.444477,
-          "qty": 2.406,
-          "notional": 600.01,
+          "qty": 4.0091,
+          "notional": 999.79,
           "signals": {
             "TS": 0.607128,
             "NS": 0.200501,
@@ -1213,8 +1007,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.443775,
-          "qty": 2.0973,
-          "notional": 599.97,
+          "qty": 0.0002,
+          "notional": 0.06,
           "signals": {
             "TS": 0.64057,
             "NS": 0.148581,
@@ -1251,55 +1045,261 @@
               "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
             }
           ]
-        },
+        }
+      ],
+      "cash_left": 11996.78
+    },
+    "portfolio_paper_reasonable": {
+      "meta": {
+        "title": "Paper Reasonable",
+        "trade_scope": "paper",
+        "decision_source": "CDS",
+        "ns_weight_boost": 1.0,
+        "per_line_frac": 0.03,
+        "max_deploy_frac": 0.15,
+        "trim_fraction": 0.25,
+        "fractional_buys": true,
+        "tags": [
+          "ideas",
+          "paper"
+        ],
+        "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
+      },
+      "portfolio_value_est": 3000.0,
+      "cash_start": 16997.0,
+      "trades": [
         {
-          "symbol": "ARCC",
+          "symbol": "FSLR",
           "action": "BUY",
-          "px": 20.38,
+          "px": 280.1,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.44041,
-          "qty": 0.0006,
-          "notional": 0.01,
+          "score": 0.527594,
+          "qty": 2.1418,
+          "notional": 599.92,
           "signals": {
-            "TS": 0.484031,
-            "NS": 0.374978,
-            "CDS": 0.44041,
+            "TS": 0.649548,
+            "NS": 0.344664,
+            "CDS": 0.527594,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 20.240759830816923,
-            "ema_slow": 20.282529663874605,
-            "macd": -0.04176983305768189,
-            "macd_signal": -0.1527277098456545,
-            "macd_hist": 0.11095787678797261,
-            "rsi14": 56.805800743347355,
-            "sma20": 19.95624999999999
+            "ema_fast": 251.92544213485218,
+            "ema_slow": 239.88619103436704,
+            "macd": 12.039251100485131,
+            "macd_signal": 8.498008464193553,
+            "macd_hist": 3.541242636291578,
+            "rsi14": 76.18880864886009,
+            "sma20": 240.57925000000017
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T17:42:39+00:00",
-              "source": "seekingalpha",
-              "tone": 0.76329,
-              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
+              "ts": "2025-11-05T12:43:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Advisors Preferred LLC Trims Stock Position in First Solar, Inc. $FSLR"
             },
             {
-              "ts": "2025-11-05T16:13:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.1909,
-              "headline": "Ares Capital Named Top Dividend Stock With Insider Buying and 9.47% Yield (ARCC)"
+              "ts": "2025-11-05T11:09:55+00:00",
+              "source": "newsercom",
+              "tone": 0.3404,
+              "headline": "Why FSLR stock is popular among millennials - Weekly Earnings Recap & AI Powered Buy/Sell Recommendations"
             },
             {
-              "ts": "2025-11-05T12:42:39+00:00",
-              "source": "seekingalpha",
-              "tone": 0.81009,
-              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC"
+              "ts": "2025-11-05T10:59:08+00:00",
+              "source": "simplywallst",
+              "tone": 0.5,
+              "headline": "Is First Solar Still a Value Opportunity After 41% Rally and New Utility Contracts?"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 271.18,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.510494,
+          "qty": 2.2122,
+          "notional": 599.9,
+          "signals": {
+            "TS": 0.611218,
+            "NS": 0.359408,
+            "CDS": 0.510494,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.6116251390341,
+            "ema_slow": 260.46437285135585,
+            "macd": 6.1472522876782705,
+            "macd_signal": 5.727777101504378,
+            "macd_hist": 0.41947518617389257,
+            "rsi14": 72.0623186761792,
+            "sma20": 260.4772499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:44:03+00:00",
+              "source": "benzinga",
+              "tone": 0.30600000000000005,
+              "headline": "Taiwan Semiconductor Names CEO Of North America Unit For USA Expansion"
+            },
+            {
+              "ts": "2025-11-05T15:01:08+00:00",
+              "source": "benzinga",
+              "tone": 0.24588000000000002,
+              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
+            },
+            {
+              "ts": "2025-11-05T14:33:45+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
+            }
+          ]
+        },
+        {
+          "symbol": "SNOW",
+          "action": "BUY",
+          "px": 266.745,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.44475,
+          "qty": 2.249,
+          "notional": 599.91,
+          "signals": {
+            "TS": 0.506656,
+            "NS": 0.351891,
+            "CDS": 0.44475,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 263.4787123142174,
+            "ema_slow": 253.19777327049067,
+            "macd": 10.280939043726704,
+            "macd_signal": 9.589707919755856,
+            "macd_hist": 0.691231123970848,
+            "rsi14": 58.56694267965021,
+            "sma20": 255.32349999999997
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T13:54:57+00:00",
+              "source": "simplywallst",
+              "tone": 0.10115,
+              "headline": "How Investors May Respond to Snowflake (SNOW) AI Partnerships Amid Revenue Guidance Controversy"
+            },
+            {
+              "ts": "2025-11-05T13:05:30+00:00",
+              "source": "marketbeat",
+              "tone": 0.73134,
+              "headline": "EFG Asset Management North America Corp. Acquires 5,823 Shares of Snowflake Inc. $SNOW"
+            },
+            {
+              "ts": "2025-11-05T12:45:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.6885,
+              "headline": "954 Shares in Snowflake Inc. $SNOW Acquired by Axim Planning & Wealth"
+            }
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 249.38,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.444477,
+          "qty": 2.4056,
+          "notional": 599.91,
+          "signals": {
+            "TS": 0.607128,
+            "NS": 0.200501,
+            "CDS": 0.444477,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.07026382519007,
+            "ema_slow": 229.81561786076514,
+            "macd": 6.254645964424924,
+            "macd_signal": 2.596011285846781,
+            "macd_hist": 3.6586346785781427,
+            "rsi14": 71.46055338223226,
+            "sma20": 226.58250000000004
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:57:03+00:00",
+              "source": "benzinga",
+              "tone": -0.26639999999999997,
+              "headline": "Nasdaq Pulls Back to Support Zone; Momo Aggressively Buys Stocks; Whales Dump $45B of Bitcoin"
+            },
+            {
+              "ts": "2025-11-05T16:36:00+00:00",
+              "source": "tradingview",
+              "tone": 0.08895,
+              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
+            },
+            {
+              "ts": "2025-11-05T16:22:48+00:00",
+              "source": "benzinga",
+              "tone": -0.34776,
+              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+            }
+          ]
+        },
+        {
+          "symbol": "GOOGL",
+          "action": "BUY",
+          "px": 286.07,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.443775,
+          "qty": 2.0971,
+          "notional": 599.92,
+          "signals": {
+            "TS": 0.64057,
+            "NS": 0.148581,
+            "CDS": 0.443775,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 272.20401424026005,
+            "ema_slow": 261.30429467450523,
+            "macd": 10.899719565754822,
+            "macd_signal": 8.759980005421532,
+            "macd_hist": 2.1397395603332896,
+            "rsi14": 75.278475815239,
+            "sma20": 260.8425000000002
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T17:05:07+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Google Says Gemini Deep Research Can Now Connect To Gmail, Docs, Drive & Even Chat"
+            },
+            {
+              "ts": "2025-11-05T16:51:10+00:00",
+              "source": "sharewisecom",
+              "tone": 0.5,
+              "headline": "Here's Why Alphabet (GOOGL) is a Strong Growth Stock"
+            },
+            {
+              "ts": "2025-11-05T16:22:48+00:00",
+              "source": "benzinga",
+              "tone": -0.34776,
+              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
             }
           ]
         }
       ],
-      "cash_left": 17000.0
+      "cash_left": 13997.44
     },
     "portfolio_paper_TS_only": {
       "meta": {
