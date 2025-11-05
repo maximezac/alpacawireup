@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T19:39:27.097779+00:00",
+  "as_of_utc": "2025-11-05T20:16:23.104653+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18308.27,
+      "portfolio_value_est": 18501.59,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 30.81,
+          "px": 31.515,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.290642,
+          "score": -0.280469,
           "qty": 57,
-          "notional": 1756.17,
+          "notional": 1796.36,
           "signals": {
-            "TS": -0.483871,
-            "NS": -0.000797,
-            "CDS": -0.290642,
+            "TS": -0.466911,
+            "NS": -0.000806,
+            "CDS": -0.280469,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 33.17610403418394,
-            "ema_slow": 32.285477733557194,
-            "macd": 0.8906263006267494,
-            "macd_signal": 1.8536783768741496,
-            "macd_hist": -0.9630520762474002,
-            "rsi14": 42.57640646511126,
-            "sma20": 35.04674999999998
+            "ema_fast": 33.28456557264548,
+            "ema_slow": 32.337699955779414,
+            "macd": 0.946865616866063,
+            "macd_signal": 1.8649262401220124,
+            "macd_hist": -0.9180606232559494,
+            "rsi14": 44.65403768297101,
+            "sma20": 35.08199999999998
           },
           "news_preview": [
             {
@@ -67,75 +67,29 @@
           ]
         },
         {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 13.995,
-          "qty_hint": 75.39,
-          "reason": "score<sell",
-          "score": -0.262282,
-          "qty": 18,
-          "notional": 251.91,
-          "signals": {
-            "TS": -0.563358,
-            "NS": 0.189332,
-            "CDS": -0.262282,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 15.659182060541763,
-            "ema_slow": 16.887651320314223,
-            "macd": -1.22846925977246,
-            "macd_signal": -0.9033871762717541,
-            "macd_hist": -0.3250820835007059,
-            "rsi14": 35.148656742795254,
-            "sma20": 17.1215
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T16:22:51+00:00",
-              "source": "aolcom",
-              "tone": 0.45155,
-              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
-            },
-            {
-              "ts": "2025-11-05T15:41:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.0,
-              "headline": "Quantum Computing Stocks: Q3 Earnings Preview. DOE Announces Funding."
-            },
-            {
-              "ts": "2025-11-05T13:37:21+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.4455,
-              "headline": "Will QUBT stock split attract more investors - July 2025 Setups & Free High Return Stock Watch Alerts"
-            }
-          ]
-        },
-        {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 56.73,
+          "px": 56.48,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.271112,
+          "score": -0.305613,
           "qty": 1,
-          "notional": 56.73,
+          "notional": 56.48,
           "signals": {
-            "TS": -0.554763,
-            "NS": 0.154365,
-            "CDS": -0.271112,
+            "TS": -0.560857,
+            "NS": 0.077254,
+            "CDS": -0.305613,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 61.395648253538084,
-            "ema_slow": 60.43799618339389,
-            "macd": 0.9576520701441922,
-            "macd_signal": 2.5119995647845283,
-            "macd_hist": -1.5543474946403362,
-            "rsi14": 34.00849481980397,
-            "sma20": 64.10699999999999
+            "ema_fast": 61.357186715076544,
+            "ema_slow": 60.41947766487537,
+            "macd": 0.9377090502011711,
+            "macd_signal": 2.5080109607959242,
+            "macd_hist": -1.570301910594753,
+            "rsi14": 33.25480147686832,
+            "sma20": 64.09449999999998
           },
           "news_preview": [
             {
@@ -161,29 +115,35 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 36.87,
+          "px": 37.87,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.278718,
+          "score": -0.258008,
           "qty": 3,
-          "notional": 110.61,
+          "notional": 113.61,
           "signals": {
-            "TS": -0.488443,
-            "NS": 0.035869,
-            "CDS": -0.278718,
+            "TS": -0.467992,
+            "NS": 0.056967,
+            "CDS": -0.258008,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.74412155020197,
-            "ema_slow": 38.82693814617161,
-            "macd": 0.9171834040303608,
-            "macd_signal": 2.378207667476799,
-            "macd_hist": -1.461024263446438,
-            "rsi14": 42.10399961995894,
-            "sma20": 43.25749999999999
+            "ema_fast": 39.89796770404812,
+            "ema_slow": 38.90101222024568,
+            "macd": 0.9969554838024379,
+            "macd_signal": 2.394162083431214,
+            "macd_hist": -1.3972065996287761,
+            "rsi14": 44.61031474911653,
+            "sma20": 43.30749999999999
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T20:09:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Could Buying $10,000 of Rigetti Computing Make You a Millionaire?"
+            },
             {
               "ts": "2025-11-05T18:37:30+00:00",
               "source": "benzinga",
@@ -195,39 +155,33 @@
               "source": "tradingview",
               "tone": 0.0,
               "headline": "Rigetti Computing to Post Q3 Earnings: What's in Store for the Stock?"
-            },
-            {
-              "ts": "2025-11-05T16:08:40+00:00",
-              "source": "benzinga",
-              "tone": -0.5837399999999999,
-              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 280.1,
+          "px": 279.94,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.527594,
-          "qty": 2.068,
-          "notional": 579.25,
+          "score": 0.5278,
+          "qty": 2.0899,
+          "notional": 585.05,
           "signals": {
-            "TS": 0.649548,
-            "NS": 0.344664,
-            "CDS": 0.527594,
+            "TS": 0.649082,
+            "NS": 0.345878,
+            "CDS": 0.5278,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.92544213485218,
-            "ema_slow": 239.88619103436704,
-            "macd": 12.039251100485131,
-            "macd_signal": 8.498008464193553,
-            "macd_hist": 3.541242636291578,
-            "rsi14": 76.18880864886009,
-            "sma20": 240.57925000000017
+            "ema_fast": 251.9008267502368,
+            "ema_slow": 239.8743391825152,
+            "macd": 12.026487567721603,
+            "macd_signal": 8.495455757640848,
+            "macd_hist": 3.531031810080755,
+            "rsi14": 76.13186046296916,
+            "sma20": 240.57125000000013
           },
           "news_preview": [
             {
@@ -253,29 +207,35 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.18,
+          "px": 269.67,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.510494,
-          "qty": 1.5516,
-          "notional": 420.76,
+          "score": 0.477019,
+          "qty": 1.5387,
+          "notional": 414.94,
           "signals": {
-            "TS": 0.611218,
-            "NS": 0.359408,
-            "CDS": 0.510494,
+            "TS": 0.573508,
+            "NS": 0.332286,
+            "CDS": 0.477019,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.6116251390341,
-            "ema_slow": 260.46437285135585,
-            "macd": 6.1472522876782705,
-            "macd_signal": 5.727777101504378,
-            "macd_hist": 0.41947518617389257,
-            "rsi14": 72.0623186761792,
-            "sma20": 260.4772499999999
+            "ema_fast": 266.3793174467264,
+            "ema_slow": 260.35252099950395,
+            "macd": 6.026796447222466,
+            "macd_signal": 5.703685933413217,
+            "macd_hist": 0.32311051380924916,
+            "rsi14": 67.35994714047769,
+            "sma20": 260.4017499999999
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T19:14:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
+            },
             {
               "ts": "2025-11-05T16:44:03+00:00",
               "source": "benzinga",
@@ -287,17 +247,57 @@
               "source": "benzinga",
               "tone": 0.24588000000000002,
               "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
+            }
+          ]
+        },
+        {
+          "symbol": "ARCC",
+          "action": "BUY",
+          "px": 20.365,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.433103,
+          "qty": 0.0006,
+          "notional": 0.01,
+          "signals": {
+            "TS": 0.480072,
+            "NS": 0.362649,
+            "CDS": 0.433103,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 20.23845213850923,
+            "ema_slow": 20.281418552763494,
+            "macd": -0.04296641425426273,
+            "macd_signal": -0.15296702608497068,
+            "macd_hist": 0.11000061183070795,
+            "rsi14": 56.312432658961505,
+            "sma20": 19.955499999999994
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T17:42:39+00:00",
+              "source": "seekingalpha",
+              "tone": 0.76329,
+              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
             },
             {
-              "ts": "2025-11-05T14:33:45+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
+              "ts": "2025-11-05T16:13:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "Ares Capital Named Top Dividend Stock With Insider Buying and 9.47% Yield (ARCC)"
+            },
+            {
+              "ts": "2025-11-05T15:35:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.26335,
+              "headline": "Top Buys by Top Brass: Chief Executive Officer Schnabel's $265.1K Bet on ARCC"
             }
           ]
         }
       ],
-      "cash_left": -0.01
+      "cash_left": 0.0
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -314,33 +314,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 18308.27,
+      "portfolio_value_est": 18501.59,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 30.81,
+          "px": 31.515,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.483871,
+          "score": -0.466911,
           "qty": 57,
-          "notional": 1756.17,
+          "notional": 1796.36,
           "signals": {
-            "TS": -0.483871,
-            "NS": -0.000797,
-            "CDS": -0.290642,
+            "TS": -0.466911,
+            "NS": -0.000806,
+            "CDS": -0.280469,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 33.17610403418394,
-            "ema_slow": 32.285477733557194,
-            "macd": 0.8906263006267494,
-            "macd_signal": 1.8536783768741496,
-            "macd_hist": -0.9630520762474002,
-            "rsi14": 42.57640646511126,
-            "sma20": 35.04674999999998
+            "ema_fast": 33.28456557264548,
+            "ema_slow": 32.337699955779414,
+            "macd": 0.946865616866063,
+            "macd_signal": 1.8649262401220124,
+            "macd_hist": -0.9180606232559494,
+            "rsi14": 44.65403768297101,
+            "sma20": 35.08199999999998
           },
           "news_preview": [
             {
@@ -366,27 +366,27 @@
         {
           "symbol": "VTI",
           "action": "SELL",
-          "px": 334.31,
+          "px": 334.49,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.337473,
+          "score": -0.333295,
           "qty": 2,
-          "notional": 668.62,
+          "notional": 668.98,
           "signals": {
-            "TS": -0.337473,
-            "NS": 0.18757,
-            "CDS": -0.127456,
+            "TS": -0.333295,
+            "NS": 0.187566,
+            "CDS": -0.124951,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 333.56917133112955,
-            "ema_slow": 331.2685275699468,
-            "macd": 2.300643761182755,
-            "macd_signal": 2.422717970006906,
-            "macd_hist": -0.12207420882415088,
-            "rsi14": 53.89186773310434,
-            "sma20": 331.368
+            "ema_fast": 333.59686363882184,
+            "ema_slow": 331.2818609032801,
+            "macd": 2.315002735541725,
+            "macd_signal": 2.4255897648787,
+            "macd_hist": -0.11058702933697484,
+            "rsi14": 54.412960677229556,
+            "sma20": 331.37699999999995
           },
           "news_preview": [
             {
@@ -412,31 +412,31 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.995,
+          "px": 14.275,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.563358,
+          "score": -0.544274,
           "qty": 18,
-          "notional": 251.91,
+          "notional": 256.95,
           "signals": {
-            "TS": -0.563358,
-            "NS": 0.189332,
-            "CDS": -0.262282,
+            "TS": -0.544274,
+            "NS": 0.229692,
+            "CDS": -0.234687,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.659182060541763,
-            "ema_slow": 16.887651320314223,
-            "macd": -1.22846925977246,
-            "macd_signal": -0.9033871762717541,
-            "macd_hist": -0.3250820835007059,
-            "rsi14": 35.148656742795254,
-            "sma20": 17.1215
+            "ema_fast": 15.702258983618687,
+            "ema_slow": 16.908392061054965,
+            "macd": -1.2061330774362773,
+            "macd_signal": -0.8989199398045176,
+            "macd_hist": -0.3072131376317597,
+            "rsi14": 37.49893404379079,
+            "sma20": 17.1355
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T16:22:51+00:00",
+              "ts": "2025-11-05T19:15:19+00:00",
               "source": "aolcom",
               "tone": 0.45155,
               "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
@@ -458,29 +458,35 @@
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 69.36,
+          "px": 69.48,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.529425,
+          "score": -0.528007,
           "qty": 2,
-          "notional": 138.72,
+          "notional": 138.96,
           "signals": {
-            "TS": -0.529425,
-            "NS": 0.241336,
-            "CDS": -0.221121,
+            "TS": -0.528007,
+            "NS": 0.28805,
+            "CDS": -0.201584,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 75.05078420066144,
-            "ema_slow": 72.99976831318818,
-            "macd": 2.0510158874732554,
-            "macd_signal": 4.4675470642994295,
-            "macd_hist": -2.416531176826174,
-            "rsi14": 36.86946460483342,
-            "sma20": 80.27550000000005
+            "ema_fast": 75.06924573912299,
+            "ema_slow": 73.00865720207707,
+            "macd": 2.0605885370459163,
+            "macd_signal": 4.4694615942139615,
+            "macd_hist": -2.4088730571680452,
+            "rsi14": 37.04347851925193,
+            "sma20": 80.28150000000007
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T02:55:25+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.5,
+              "headline": "Is ASTS stock a dividend growth opportunity - Trade Performance Summary & High Conviction Buy Zone Picks"
+            },
             {
               "ts": "2025-11-05T00:34:24+00:00",
               "source": "aolcom",
@@ -492,39 +498,33 @@
               "source": "marketbeat",
               "tone": 0.5441400000000001,
               "headline": "AST SpaceMobile (NASDAQ:ASTS) Shares Down 1.5% - What's Next?"
-            },
-            {
-              "ts": "2025-11-04T16:25:33+00:00",
-              "source": "benzinga",
-              "tone": 0.70047,
-              "headline": "Smart Money Sells Palantir, Quantum Computing, And Space Stocks; Gold Gives Up Momo-Induced Gains"
             }
           ]
         },
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 56.73,
+          "px": 56.48,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.554763,
+          "score": -0.560857,
           "qty": 1,
-          "notional": 56.73,
+          "notional": 56.48,
           "signals": {
-            "TS": -0.554763,
-            "NS": 0.154365,
-            "CDS": -0.271112,
+            "TS": -0.560857,
+            "NS": 0.077254,
+            "CDS": -0.305613,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 61.395648253538084,
-            "ema_slow": 60.43799618339389,
-            "macd": 0.9576520701441922,
-            "macd_signal": 2.5119995647845283,
-            "macd_hist": -1.5543474946403362,
-            "rsi14": 34.00849481980397,
-            "sma20": 64.10699999999999
+            "ema_fast": 61.357186715076544,
+            "ema_slow": 60.41947766487537,
+            "macd": 0.9377090502011711,
+            "macd_signal": 2.5080109607959242,
+            "macd_hist": -1.570301910594753,
+            "rsi14": 33.25480147686832,
+            "sma20": 64.09449999999998
           },
           "news_preview": [
             {
@@ -550,29 +550,35 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 36.87,
+          "px": 37.87,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.488443,
+          "score": -0.467992,
           "qty": 3,
-          "notional": 110.61,
+          "notional": 113.61,
           "signals": {
-            "TS": -0.488443,
-            "NS": 0.035869,
-            "CDS": -0.278718,
+            "TS": -0.467992,
+            "NS": 0.056967,
+            "CDS": -0.258008,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.74412155020197,
-            "ema_slow": 38.82693814617161,
-            "macd": 0.9171834040303608,
-            "macd_signal": 2.378207667476799,
-            "macd_hist": -1.461024263446438,
-            "rsi14": 42.10399961995894,
-            "sma20": 43.25749999999999
+            "ema_fast": 39.89796770404812,
+            "ema_slow": 38.90101222024568,
+            "macd": 0.9969554838024379,
+            "macd_signal": 2.394162083431214,
+            "macd_hist": -1.3972065996287761,
+            "rsi14": 44.61031474911653,
+            "sma20": 43.30749999999999
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T20:09:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Could Buying $10,000 of Rigetti Computing Make You a Millionaire?"
+            },
             {
               "ts": "2025-11-05T18:37:30+00:00",
               "source": "benzinga",
@@ -584,39 +590,33 @@
               "source": "tradingview",
               "tone": 0.0,
               "headline": "Rigetti Computing to Post Q3 Earnings: What's in Store for the Stock?"
-            },
-            {
-              "ts": "2025-11-05T16:08:40+00:00",
-              "source": "benzinga",
-              "tone": -0.5837399999999999,
-              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 280.1,
+          "px": 279.94,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.649548,
-          "qty": 1.3787,
-          "notional": 386.17,
+          "score": 0.649082,
+          "qty": 1.3933,
+          "notional": 390.04,
           "signals": {
-            "TS": 0.649548,
-            "NS": 0.344664,
-            "CDS": 0.527594,
+            "TS": 0.649082,
+            "NS": 0.345878,
+            "CDS": 0.5278,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.92544213485218,
-            "ema_slow": 239.88619103436704,
-            "macd": 12.039251100485131,
-            "macd_signal": 8.498008464193553,
-            "macd_hist": 3.541242636291578,
-            "rsi14": 76.18880864886009,
-            "sma20": 240.57925000000017
+            "ema_fast": 251.9008267502368,
+            "ema_slow": 239.8743391825152,
+            "macd": 12.026487567721603,
+            "macd_signal": 8.495455757640848,
+            "macd_hist": 3.531031810080755,
+            "rsi14": 76.13186046296916,
+            "sma20": 240.57125000000013
           },
           "news_preview": [
             {
@@ -642,92 +642,92 @@
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 286.07,
+          "px": 284.07,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.64057,
-          "qty": 1.3499,
-          "notional": 386.17,
+          "score": 0.628844,
+          "qty": 1.373,
+          "notional": 390.03,
           "signals": {
-            "TS": 0.64057,
-            "NS": 0.148581,
-            "CDS": 0.443775,
+            "TS": 0.628844,
+            "NS": 0.139216,
+            "CDS": 0.432993,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 272.20401424026005,
-            "ema_slow": 261.30429467450523,
-            "macd": 10.899719565754822,
-            "macd_signal": 8.759980005421532,
-            "macd_hist": 2.1397395603332896,
-            "rsi14": 75.278475815239,
-            "sma20": 260.8425000000002
+            "ema_fast": 271.89632193256773,
+            "ema_slow": 261.1561465263571,
+            "macd": 10.740175406210653,
+            "macd_signal": 8.728071173512697,
+            "macd_hist": 2.012104232697956,
+            "rsi14": 73.82740314217628,
+            "sma20": 260.7425000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T17:05:07+00:00",
+              "ts": "2025-11-05T19:22:46+00:00",
+              "source": "investingcomindia",
+              "tone": 0.0,
+              "headline": "Alphabet stock jumps after report of Apple\u2019s plans to use Google AI for Siri"
+            },
+            {
+              "ts": "2025-11-05T19:22:08+00:00",
+              "source": "investingcomaustralia",
+              "tone": 0.0,
+              "headline": "Alphabet stock jumps after report of Apple\u2019s plans to use Google AI for Siri"
+            },
+            {
+              "ts": "2025-11-05T19:14:26+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "Google Says Gemini Deep Research Can Now Connect To Gmail, Docs, Drive & Even Chat"
-            },
-            {
-              "ts": "2025-11-05T16:51:10+00:00",
-              "source": "sharewisecom",
-              "tone": 0.5,
-              "headline": "Here's Why Alphabet (GOOGL) is a Strong Growth Stock"
-            },
-            {
-              "ts": "2025-11-05T16:22:48+00:00",
-              "source": "benzinga",
-              "tone": -0.34776,
-              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
             }
           ]
         },
         {
-          "symbol": "AAPL",
+          "symbol": "AMZN",
           "action": "BUY",
-          "px": 271.18,
+          "px": 249.3,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.611218,
-          "qty": 0.8395,
-          "notional": 227.66,
+          "score": 0.605977,
+          "qty": 0.8822,
+          "notional": 219.93,
           "signals": {
-            "TS": 0.611218,
-            "NS": 0.359408,
-            "CDS": 0.510494,
+            "TS": 0.605977,
+            "NS": 0.169411,
+            "CDS": 0.431351,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.6116251390341,
-            "ema_slow": 260.46437285135585,
-            "macd": 6.1472522876782705,
-            "macd_signal": 5.727777101504378,
-            "macd_hist": 0.41947518617389257,
-            "rsi14": 72.0623186761792,
-            "sma20": 260.4772499999999
+            "ema_fast": 236.05795613288237,
+            "ema_slow": 229.80969193483924,
+            "macd": 6.248264198043131,
+            "macd_signal": 2.5947349325704225,
+            "macd_hist": 3.6535292654727085,
+            "rsi14": 71.31745362333474,
+            "sma20": 226.57850000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T16:44:03+00:00",
+              "ts": "2025-11-05T19:42:50+00:00",
               "source": "benzinga",
-              "tone": 0.30600000000000005,
-              "headline": "Taiwan Semiconductor Names CEO Of North America Unit For USA Expansion"
+              "tone": -0.44451,
+              "headline": "Palantir-Led Tech Stock Sell-Off Puts AI ETFs On The Defensive"
             },
             {
-              "ts": "2025-11-05T15:01:08+00:00",
+              "ts": "2025-11-05T16:57:03+00:00",
               "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
+              "tone": -0.26639999999999997,
+              "headline": "Nasdaq Pulls Back to Support Zone; Momo Aggressively Buys Stocks; Whales Dump $45B of Bitcoin"
             },
             {
-              "ts": "2025-11-05T14:33:45+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
+              "ts": "2025-11-05T16:36:00+00:00",
+              "source": "tradingview",
+              "tone": 0.08895,
+              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
             }
           ]
         }
@@ -813,33 +813,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 4000.01,
-      "cash_start": 15995.99,
+      "portfolio_value_est": 0.0,
+      "cash_start": 20000.0,
       "trades": [
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 280.1,
+          "px": 279.94,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.527594,
-          "qty": 3.5694,
-          "notional": 999.79,
+          "score": 0.5278,
+          "qty": 3.5722,
+          "notional": 1000.0,
           "signals": {
-            "TS": 0.649548,
-            "NS": 0.344664,
-            "CDS": 0.527594,
+            "TS": 0.649082,
+            "NS": 0.345878,
+            "CDS": 0.5278,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.92544213485218,
-            "ema_slow": 239.88619103436704,
-            "macd": 12.039251100485131,
-            "macd_signal": 8.498008464193553,
-            "macd_hist": 3.541242636291578,
-            "rsi14": 76.18880864886009,
-            "sma20": 240.57925000000017
+            "ema_fast": 251.9008267502368,
+            "ema_slow": 239.8743391825152,
+            "macd": 12.026487567721603,
+            "macd_signal": 8.495455757640848,
+            "macd_hist": 3.531031810080755,
+            "rsi14": 76.13186046296916,
+            "sma20": 240.57125000000013
           },
           "news_preview": [
             {
@@ -865,29 +865,35 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.18,
+          "px": 269.67,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.510494,
-          "qty": 3.6868,
-          "notional": 999.79,
+          "score": 0.477019,
+          "qty": 3.7082,
+          "notional": 999.99,
           "signals": {
-            "TS": 0.611218,
-            "NS": 0.359408,
-            "CDS": 0.510494,
+            "TS": 0.573508,
+            "NS": 0.332286,
+            "CDS": 0.477019,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.6116251390341,
-            "ema_slow": 260.46437285135585,
-            "macd": 6.1472522876782705,
-            "macd_signal": 5.727777101504378,
-            "macd_hist": 0.41947518617389257,
-            "rsi14": 72.0623186761792,
-            "sma20": 260.4772499999999
+            "ema_fast": 266.3793174467264,
+            "ema_slow": 260.35252099950395,
+            "macd": 6.026796447222466,
+            "macd_signal": 5.703685933413217,
+            "macd_hist": 0.32311051380924916,
+            "rsi14": 67.35994714047769,
+            "sma20": 260.4017499999999
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T19:14:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
+            },
             {
               "ts": "2025-11-05T16:44:03+00:00",
               "source": "benzinga",
@@ -899,39 +905,33 @@
               "source": "benzinga",
               "tone": 0.24588000000000002,
               "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
-            },
-            {
-              "ts": "2025-11-05T14:33:45+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
             }
           ]
         },
         {
           "symbol": "SNOW",
           "action": "BUY",
-          "px": 266.745,
+          "px": 265.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.44475,
-          "qty": 3.7481,
-          "notional": 999.79,
+          "score": 0.438142,
+          "qty": 3.7646,
+          "notional": 999.99,
           "signals": {
-            "TS": 0.506656,
-            "NS": 0.351891,
-            "CDS": 0.44475,
+            "TS": 0.495063,
+            "NS": 0.352759,
+            "CDS": 0.438142,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 263.4787123142174,
-            "ema_slow": 253.19777327049067,
-            "macd": 10.280939043726704,
-            "macd_signal": 9.589707919755856,
-            "macd_hist": 0.691231123970848,
-            "rsi14": 58.56694267965021,
-            "sma20": 255.32349999999997
+            "ema_fast": 263.30717385267894,
+            "ema_slow": 253.11518067789808,
+            "macd": 10.191993174780862,
+            "macd_signal": 9.571918745966688,
+            "macd_hist": 0.6200744288141742,
+            "rsi14": 57.12634460881479,
+            "sma20": 255.26774999999998
           },
           "news_preview": [
             {
@@ -955,99 +955,99 @@
           ]
         },
         {
-          "symbol": "AMZN",
+          "symbol": "ARCC",
           "action": "BUY",
-          "px": 249.38,
+          "px": 20.365,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.444477,
-          "qty": 4.0091,
-          "notional": 999.79,
+          "score": 0.433103,
+          "qty": 49.1039,
+          "notional": 1000.0,
           "signals": {
-            "TS": 0.607128,
-            "NS": 0.200501,
-            "CDS": 0.444477,
+            "TS": 0.480072,
+            "NS": 0.362649,
+            "CDS": 0.433103,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 236.07026382519007,
-            "ema_slow": 229.81561786076514,
-            "macd": 6.254645964424924,
-            "macd_signal": 2.596011285846781,
-            "macd_hist": 3.6586346785781427,
-            "rsi14": 71.46055338223226,
-            "sma20": 226.58250000000004
+            "ema_fast": 20.23845213850923,
+            "ema_slow": 20.281418552763494,
+            "macd": -0.04296641425426273,
+            "macd_signal": -0.15296702608497068,
+            "macd_hist": 0.11000061183070795,
+            "rsi14": 56.312432658961505,
+            "sma20": 19.955499999999994
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T16:57:03+00:00",
-              "source": "benzinga",
-              "tone": -0.26639999999999997,
-              "headline": "Nasdaq Pulls Back to Support Zone; Momo Aggressively Buys Stocks; Whales Dump $45B of Bitcoin"
+              "ts": "2025-11-05T17:42:39+00:00",
+              "source": "seekingalpha",
+              "tone": 0.76329,
+              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
             },
             {
-              "ts": "2025-11-05T16:36:00+00:00",
-              "source": "tradingview",
-              "tone": 0.08895,
-              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
+              "ts": "2025-11-05T16:13:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "Ares Capital Named Top Dividend Stock With Insider Buying and 9.47% Yield (ARCC)"
             },
             {
-              "ts": "2025-11-05T16:22:48+00:00",
-              "source": "benzinga",
-              "tone": -0.34776,
-              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+              "ts": "2025-11-05T15:35:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.26335,
+              "headline": "Top Buys by Top Brass: Chief Executive Officer Schnabel's $265.1K Bet on ARCC"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 286.07,
+          "px": 284.07,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.443775,
-          "qty": 0.0002,
-          "notional": 0.06,
+          "score": 0.432993,
+          "qty": 0.0001,
+          "notional": 0.03,
           "signals": {
-            "TS": 0.64057,
-            "NS": 0.148581,
-            "CDS": 0.443775,
+            "TS": 0.628844,
+            "NS": 0.139216,
+            "CDS": 0.432993,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 272.20401424026005,
-            "ema_slow": 261.30429467450523,
-            "macd": 10.899719565754822,
-            "macd_signal": 8.759980005421532,
-            "macd_hist": 2.1397395603332896,
-            "rsi14": 75.278475815239,
-            "sma20": 260.8425000000002
+            "ema_fast": 271.89632193256773,
+            "ema_slow": 261.1561465263571,
+            "macd": 10.740175406210653,
+            "macd_signal": 8.728071173512697,
+            "macd_hist": 2.012104232697956,
+            "rsi14": 73.82740314217628,
+            "sma20": 260.7425000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T17:05:07+00:00",
+              "ts": "2025-11-05T19:22:46+00:00",
+              "source": "investingcomindia",
+              "tone": 0.0,
+              "headline": "Alphabet stock jumps after report of Apple\u2019s plans to use Google AI for Siri"
+            },
+            {
+              "ts": "2025-11-05T19:22:08+00:00",
+              "source": "investingcomaustralia",
+              "tone": 0.0,
+              "headline": "Alphabet stock jumps after report of Apple\u2019s plans to use Google AI for Siri"
+            },
+            {
+              "ts": "2025-11-05T19:14:26+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "Google Says Gemini Deep Research Can Now Connect To Gmail, Docs, Drive & Even Chat"
-            },
-            {
-              "ts": "2025-11-05T16:51:10+00:00",
-              "source": "sharewisecom",
-              "tone": 0.5,
-              "headline": "Here's Why Alphabet (GOOGL) is a Strong Growth Stock"
-            },
-            {
-              "ts": "2025-11-05T16:22:48+00:00",
-              "source": "benzinga",
-              "tone": -0.34776,
-              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
             }
           ]
         }
       ],
-      "cash_left": 11996.78
+      "cash_left": 15999.99
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1065,33 +1065,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 3000.0,
-      "cash_start": 16997.0,
+      "portfolio_value_est": 0.0,
+      "cash_start": 20000.0,
       "trades": [
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 280.1,
+          "px": 279.94,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.527594,
-          "qty": 2.1418,
-          "notional": 599.92,
+          "score": 0.5278,
+          "qty": 2.1433,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.649548,
-            "NS": 0.344664,
-            "CDS": 0.527594,
+            "TS": 0.649082,
+            "NS": 0.345878,
+            "CDS": 0.5278,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.92544213485218,
-            "ema_slow": 239.88619103436704,
-            "macd": 12.039251100485131,
-            "macd_signal": 8.498008464193553,
-            "macd_hist": 3.541242636291578,
-            "rsi14": 76.18880864886009,
-            "sma20": 240.57925000000017
+            "ema_fast": 251.9008267502368,
+            "ema_slow": 239.8743391825152,
+            "macd": 12.026487567721603,
+            "macd_signal": 8.495455757640848,
+            "macd_hist": 3.531031810080755,
+            "rsi14": 76.13186046296916,
+            "sma20": 240.57125000000013
           },
           "news_preview": [
             {
@@ -1117,29 +1117,35 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.18,
+          "px": 269.67,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.510494,
-          "qty": 2.2122,
-          "notional": 599.9,
+          "score": 0.477019,
+          "qty": 2.2249,
+          "notional": 599.99,
           "signals": {
-            "TS": 0.611218,
-            "NS": 0.359408,
-            "CDS": 0.510494,
+            "TS": 0.573508,
+            "NS": 0.332286,
+            "CDS": 0.477019,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.6116251390341,
-            "ema_slow": 260.46437285135585,
-            "macd": 6.1472522876782705,
-            "macd_signal": 5.727777101504378,
-            "macd_hist": 0.41947518617389257,
-            "rsi14": 72.0623186761792,
-            "sma20": 260.4772499999999
+            "ema_fast": 266.3793174467264,
+            "ema_slow": 260.35252099950395,
+            "macd": 6.026796447222466,
+            "macd_signal": 5.703685933413217,
+            "macd_hist": 0.32311051380924916,
+            "rsi14": 67.35994714047769,
+            "sma20": 260.4017499999999
           },
           "news_preview": [
+            {
+              "ts": "2025-11-05T19:14:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
+            },
             {
               "ts": "2025-11-05T16:44:03+00:00",
               "source": "benzinga",
@@ -1151,39 +1157,33 @@
               "source": "benzinga",
               "tone": 0.24588000000000002,
               "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
-            },
-            {
-              "ts": "2025-11-05T14:33:45+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
             }
           ]
         },
         {
           "symbol": "SNOW",
           "action": "BUY",
-          "px": 266.745,
+          "px": 265.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.44475,
-          "qty": 2.249,
-          "notional": 599.91,
+          "score": 0.438142,
+          "qty": 2.2588,
+          "notional": 600.01,
           "signals": {
-            "TS": 0.506656,
-            "NS": 0.351891,
-            "CDS": 0.44475,
+            "TS": 0.495063,
+            "NS": 0.352759,
+            "CDS": 0.438142,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 263.4787123142174,
-            "ema_slow": 253.19777327049067,
-            "macd": 10.280939043726704,
-            "macd_signal": 9.589707919755856,
-            "macd_hist": 0.691231123970848,
-            "rsi14": 58.56694267965021,
-            "sma20": 255.32349999999997
+            "ema_fast": 263.30717385267894,
+            "ema_slow": 253.11518067789808,
+            "macd": 10.191993174780862,
+            "macd_signal": 9.571918745966688,
+            "macd_hist": 0.6200744288141742,
+            "rsi14": 57.12634460881479,
+            "sma20": 255.26774999999998
           },
           "news_preview": [
             {
@@ -1207,99 +1207,99 @@
           ]
         },
         {
-          "symbol": "AMZN",
+          "symbol": "ARCC",
           "action": "BUY",
-          "px": 249.38,
+          "px": 20.365,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.444477,
-          "qty": 2.4056,
-          "notional": 599.91,
+          "score": 0.433103,
+          "qty": 29.4623,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.607128,
-            "NS": 0.200501,
-            "CDS": 0.444477,
+            "TS": 0.480072,
+            "NS": 0.362649,
+            "CDS": 0.433103,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 236.07026382519007,
-            "ema_slow": 229.81561786076514,
-            "macd": 6.254645964424924,
-            "macd_signal": 2.596011285846781,
-            "macd_hist": 3.6586346785781427,
-            "rsi14": 71.46055338223226,
-            "sma20": 226.58250000000004
+            "ema_fast": 20.23845213850923,
+            "ema_slow": 20.281418552763494,
+            "macd": -0.04296641425426273,
+            "macd_signal": -0.15296702608497068,
+            "macd_hist": 0.11000061183070795,
+            "rsi14": 56.312432658961505,
+            "sma20": 19.955499999999994
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T16:57:03+00:00",
-              "source": "benzinga",
-              "tone": -0.26639999999999997,
-              "headline": "Nasdaq Pulls Back to Support Zone; Momo Aggressively Buys Stocks; Whales Dump $45B of Bitcoin"
+              "ts": "2025-11-05T17:42:39+00:00",
+              "source": "seekingalpha",
+              "tone": 0.76329,
+              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
             },
             {
-              "ts": "2025-11-05T16:36:00+00:00",
-              "source": "tradingview",
-              "tone": 0.08895,
-              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
+              "ts": "2025-11-05T16:13:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "Ares Capital Named Top Dividend Stock With Insider Buying and 9.47% Yield (ARCC)"
             },
             {
-              "ts": "2025-11-05T16:22:48+00:00",
-              "source": "benzinga",
-              "tone": -0.34776,
-              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+              "ts": "2025-11-05T15:35:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.26335,
+              "headline": "Top Buys by Top Brass: Chief Executive Officer Schnabel's $265.1K Bet on ARCC"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 286.07,
+          "px": 284.07,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.443775,
-          "qty": 2.0971,
-          "notional": 599.92,
+          "score": 0.432993,
+          "qty": 2.1122,
+          "notional": 600.01,
           "signals": {
-            "TS": 0.64057,
-            "NS": 0.148581,
-            "CDS": 0.443775,
+            "TS": 0.628844,
+            "NS": 0.139216,
+            "CDS": 0.432993,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 272.20401424026005,
-            "ema_slow": 261.30429467450523,
-            "macd": 10.899719565754822,
-            "macd_signal": 8.759980005421532,
-            "macd_hist": 2.1397395603332896,
-            "rsi14": 75.278475815239,
-            "sma20": 260.8425000000002
+            "ema_fast": 271.89632193256773,
+            "ema_slow": 261.1561465263571,
+            "macd": 10.740175406210653,
+            "macd_signal": 8.728071173512697,
+            "macd_hist": 2.012104232697956,
+            "rsi14": 73.82740314217628,
+            "sma20": 260.7425000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T17:05:07+00:00",
+              "ts": "2025-11-05T19:22:46+00:00",
+              "source": "investingcomindia",
+              "tone": 0.0,
+              "headline": "Alphabet stock jumps after report of Apple\u2019s plans to use Google AI for Siri"
+            },
+            {
+              "ts": "2025-11-05T19:22:08+00:00",
+              "source": "investingcomaustralia",
+              "tone": 0.0,
+              "headline": "Alphabet stock jumps after report of Apple\u2019s plans to use Google AI for Siri"
+            },
+            {
+              "ts": "2025-11-05T19:14:26+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "Google Says Gemini Deep Research Can Now Connect To Gmail, Docs, Drive & Even Chat"
-            },
-            {
-              "ts": "2025-11-05T16:51:10+00:00",
-              "source": "sharewisecom",
-              "tone": 0.5,
-              "headline": "Here's Why Alphabet (GOOGL) is a Strong Growth Stock"
-            },
-            {
-              "ts": "2025-11-05T16:22:48+00:00",
-              "source": "benzinga",
-              "tone": -0.34776,
-              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
             }
           ]
         }
       ],
-      "cash_left": 13997.44
+      "cash_left": 17000.0
     },
     "portfolio_paper_TS_only": {
       "meta": {
