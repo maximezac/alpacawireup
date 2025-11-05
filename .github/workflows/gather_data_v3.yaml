@@ -46,7 +46,10 @@ jobs:
                       python-dateutil==2.9.0.post0 feedparser==6.0.11 \
                       vaderSentiment==3.3.2 pyyaml==6.0.2
           pip install -r requirements.txt || echo "requirements.txt already satisfied."
-      
+
+      - name: Ensure jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+        
       - name: Probe freshness
         id: probe
         shell: bash
@@ -78,30 +81,34 @@ jobs:
           echo "fresh_base=$FRESH_BASE"     | tee -a "$GITHUB_OUTPUT"
 
 
-      - name: Fetch prices (if stale)
-        if: steps.probe.outputs.fresh_prices != 'true'
+      - name: Fetch news (weekday always)
+        if: startsWith(github.ref, 'refs/heads/') && contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
+        continue-on-error: true
         env:
-          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
-          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          ALPACA_DATA_FEED:  iex
-          SYMBOLS_PATH:      data/symbols.txt
-          OUTPUT_PATH:       data/prices.json
-          DAYS_BACK:         "270"
-        run: python fetch_prices.py
-
-      - name: Fetch news (if stale)
-        if: steps.probe.outputs.fresh_base != 'true'
-        env:
-          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
-          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          INPUT_PATH:        data/prices.json
-          OUTPUT_PATH:       data/prices.json
+          INPUT_PATH:  data/prices.json
+          OUTPUT_PATH: data/prices.json
           NEWS_LOOKBACK_DAYS: "7"
           NEWS_LIMIT_PER_SYMBOL: "25"
-          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-          FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
           NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
-        run: python fetch_news.py
+          NEWSAPI_KEY:  ${{ secrets.NEWSAPI_KEY }}
+          FINNHUB_KEY:  ${{ secrets.FINNHUB_KEY }}
+        run: python scripts/fetch_news.py
+
+
+      - name: Set WEEKDAY
+        run: echo "WEEKDAY=$(date -u +%a)" >> "$GITHUB_ENV"
+
+      - name: Fetch news (weekday always)
+        if: startsWith(github.ref, 'refs/heads/') && contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
+        env:
+          INPUT_PATH:  data/prices.json
+          OUTPUT_PATH: data/prices.json
+          NEWS_LOOKBACK_DAYS: "7"
+          NEWS_LIMIT_PER_SYMBOL: "25"
+          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
+          NEWSAPI_KEY:  ${{ secrets.NEWSAPI_KEY }}
+          FINNHUB_KEY:  ${{ secrets.FINNHUB_KEY }}
+        run: python scripts/fetch_news.py
 
       - name: Generate enriched feed
         env:
@@ -114,6 +121,12 @@ jobs:
           ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python publish_feed.py
+
+      - name: Quick stats
+        run: |
+          echo "as_of_utc:" $(jq -r '.as_of_utc' data/prices_final.json)
+          echo "symbols:"   $(jq '.symbols|keys|length' data/prices_final.json)
+          echo "news items in base:" $(jq '[.symbols[]|.news?|length]|add' data/prices.json)
 
       - name: Postprocess (multi-portfolio ideas; no execution)
         env:
