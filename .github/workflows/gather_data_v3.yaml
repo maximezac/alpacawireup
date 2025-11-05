@@ -117,10 +117,11 @@ jobs:
 
       - name: Postprocess (multi-portfolio ideas; no execution)
         env:
+          INPUT_PATH:       data/prices.json
           INPUT_FINAL:      data/prices_final.json
-          PORTFOLIOS_YML:   artifacts/portfolios.yaml
-          OUT_WATCHLIST:    data/watchlist_summary.json
-          OUT_TRADES:       artifacts/recommended_trades_v3.json
+          OUTPUT_DIR:       artifacts
+          CONFIG_PORTFOLIOS: config/portfolios.yml
+          CONFIG_STRATEGIES: config/strategies.yml
         run: |
           mkdir -p artifacts
           which python
