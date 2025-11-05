@@ -90,7 +90,7 @@ def mark_to_market(cash: float, pos: Dict[str, dict], prices: Dict[str, Any]) ->
         node = syms.get(sym)
         if not node:
             continue
-        px = (node.get("now") or {}).get("price", node.get("price", 0.0)) or 0.0
+        px = latest_px(node)
         mv += p["qty"] * float(px)
     equity = cash + mv
     return equity, mv
