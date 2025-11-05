@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T08:20:03.825445+00:00",
+  "as_of_utc": "2025-11-05T09:16:45.963043+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -72,13 +72,13 @@
           "px": 56.59,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.281891,
+          "score": -0.321277,
           "qty": 1,
           "notional": 56.59,
           "signals": {
             "TS": -0.557281,
-            "NS": 0.131193,
-            "CDS": -0.281891,
+            "NS": 0.032729,
+            "CDS": -0.321277,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -93,6 +93,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T08:47:50+00:00",
+              "source": "google_rss",
+              "tone": -0.24695,
+              "headline": "Assessing Rocket Lab Stock After 11% Drop and New Launch Milestones in 2025"
+            },
+            {
               "ts": "2025-11-04T17:17:00+00:00",
               "source": "google_rss",
               "tone": -0.252,
@@ -103,12 +109,6 @@
               "source": "benzinga",
               "tone": 0.09243,
               "headline": "Rocket Lab (RKLB) Stock Slides As Investors Await Q3 Earnings"
-            },
-            {
-              "ts": "2025-11-04T16:20:03+00:00",
-              "source": "google_rss",
-              "tone": 0.10115,
-              "headline": "Rocket Lab (RKLB) Stock Slides As Investors Await Q3 Earnings - Rocket Lab (NASDAQ:RKLB)"
             }
           ]
         },
@@ -118,13 +118,13 @@
           "px": 262.92,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.529644,
+          "score": 0.529305,
           "qty": 2.1563,
           "notional": 566.93,
           "signals": {
             "TS": 0.582463,
-            "NS": 0.450415,
-            "CDS": 0.529644,
+            "NS": 0.449568,
+            "CDS": 0.529305,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,6 +139,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T01:12:26+00:00",
+              "source": "google_rss",
+              "tone": 0.4455,
+              "headline": "Is FSLR stock attractive for ETFs - 2025 Volatility Report & Safe Capital Preservation Plans"
+            },
+            {
               "ts": "2025-11-04T14:52:00+00:00",
               "source": "google_rss",
               "tone": 0.0,
@@ -149,63 +155,57 @@
               "source": "finnhub",
               "tone": 0.93,
               "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
-            },
-            {
-              "ts": "2025-11-04T12:22:34+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
             }
           ]
         },
         {
-          "symbol": "AMZN",
+          "symbol": "AAPL",
           "action": "BUY",
-          "px": 249.395,
+          "px": 270.21,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.500373,
-          "qty": 1.7365,
+          "score": 0.50104,
+          "qty": 1.6027,
           "notional": 433.07,
           "signals": {
-            "TS": 0.606631,
-            "NS": 0.340987,
-            "CDS": 0.500373,
+            "TS": 0.595193,
+            "NS": 0.359809,
+            "CDS": 0.50104,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 233.65031179340644,
-            "ema_slow": 228.25046632545022,
-            "macd": 5.399845467956226,
-            "macd_signal": 1.6813540341083808,
-            "macd_hist": 3.718491433847845,
-            "rsi14": 71.4874485428788,
-            "sma20": 225.373
+            "ema_fast": 265.78101152794943,
+            "ema_slow": 259.60712240717373,
+            "macd": 6.173889120775698,
+            "macd_signal": 5.6229087053881575,
+            "macd_hist": 0.5509804153875404,
+            "rsi14": 70.05468858164798,
+            "sma20": 259.8192499999999
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T07:45:03+00:00",
+              "ts": "2025-11-05T01:48:41+00:00",
               "source": "benzinga",
-              "tone": -0.78201,
-              "headline": "Dan Ives Slams Michael Burry For Betting Against 'Messi Of AI' Palantir, Says He Is 'Dead Wrong'"
+              "tone": -0.36171,
+              "headline": "Apple Planning A Chromebook Killer? iPhone-Maker's New Budget Mac Will Target Students, Businesses And Casual Users: Report"
             },
             {
-              "ts": "2025-11-05T04:10:27+00:00",
-              "source": "google_rss",
-              "tone": 0.43385,
-              "headline": "NVDA vs. BBAI vs. AMZN: Which AI Stock Is the Best Pick, According to Analysts?"
+              "ts": "2025-11-04T20:02:11+00:00",
+              "source": "benzinga",
+              "tone": 0.24588000000000002,
+              "headline": "A Closer Look at Apple's Options Market Dynamics"
             },
             {
-              "ts": "2025-11-05T01:57:31+00:00",
-              "source": "benzinga",
-              "tone": 0.36171,
-              "headline": "Amazon Sold Holding In Advanced Micro Devices, IonQ"
+              "ts": "2025-11-04T20:00:58+00:00",
+              "source": "finnhub",
+              "tone": -0.2023,
+              "headline": "Apple: Gotta Pay The Piper"
             }
           ]
         }
       ],
-      "cash_left": -0.01
+      "cash_left": 0.0
     },
     "portfolio_max_TS_only": {
       "meta": {
