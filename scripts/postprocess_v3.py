@@ -25,14 +25,26 @@ WATCH_TOP = int(os.environ.get("WATCH_TOP", "20"))
 # -------- helpers --------
 def _latest_px(node: dict) -> float:
     """Single source of truth for price (live-only shape; legacy-safe)."""
-    if not node: return 0.0
+    if not node:
+        return 0.0
     v = node.get("price")
     if v is None:
         v = (node.get("now") or {}).get("price")
     try:
         return float(v or 0.0)
-    except:
+    except Exception:
         return 0.0
+
+def _news_preview(news_list, max_items=3):
+    prev = []
+    for n in (news_list or [])[:max_items]:
+        prev.append({
+            "ts": n.get("ts"),
+            "source": n.get("source"),
+            "tone": n.get("tone"),
+            "headline": n.get("headline"),
+        })
+    return prev
 
 def build_watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: int):
     out = []
@@ -134,6 +146,41 @@ def main():
         qtys = {k: v["qty"] for k, v in pos.items()}  # propose_actions expects {sym: qty}
         actions = propose_actions(qtys, feed, cfg.strategy)
         sized, cash_left = size_with_cash(actions, port_val, cash, cfg.sizing)
+
+        # --- Enrich each trade with price, signals, indicators, and a few news items
+        symbols_map = (feed or {}).get("symbols", {})
+        for t in sized:
+            sym = t.get("symbol")
+            n = symbols_map.get(sym, {})  # node for the symbol in feed
+
+            # price
+            if "px" not in t or t["px"] is None:
+                t["px"] = n.get("price")
+
+            # signals (TS/NS/CDS and weights)
+            sig = n.get("signals") or {}
+            t["signals"] = {
+                "TS":  sig.get("TS"),
+                "NS":  sig.get("NS"),
+                "CDS": sig.get("CDS"),
+                "wT":  sig.get("wT"),
+                "wN":  sig.get("wN"),
+            }
+
+            # indicators (accept either publisher or fetcher keys)
+            ind = n.get("indicators") or {}
+            t["indicators"] = {
+                "ema_fast":    ind.get("ema_fast", ind.get("ema12")),
+                "ema_slow":    ind.get("ema_slow", ind.get("ema26")),
+                "macd":        ind.get("macd"),
+                "macd_signal": ind.get("macd_signal"),
+                "macd_hist":   ind.get("macd_hist"),
+                "rsi14":       ind.get("rsi", ind.get("rsi14")),
+                "sma20":       ind.get("sma20"),
+            }
+
+            # short news preview
+            t["news_preview"] = _news_preview(n.get("news"), max_items=3)
 
         out["portfolios"][pid] = {
             "meta": {
