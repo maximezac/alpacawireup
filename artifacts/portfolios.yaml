@@ -22,13 +22,13 @@ portfolios:
   portfolio_max_personal:
     enabled: true
     type: personal
-    desc: "Primary personal portfolio (replaces old portfolio_personal)"
-    positions_csv: data/portfolio_personal.csv
+    desc: "Primary personal portfolio Max"
+    positions_csv: positions.csv
     strategy: default
-    trade_scope: real
+    trade_scope: personal
     sizing:
       per_line_frac: 0.02
-      sell_trim_fraction: 0.25
+      trim_fraction: 0.25
 
   portfolio_max_TS_only:
     enabled: false
