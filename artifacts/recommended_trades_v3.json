@@ -1,36 +1,112 @@
 {
-  "as_of_utc": "2025-11-05T03:59:29.260623+00:00",
+  "as_of_utc": "2025-11-05T04:01:07.507869+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
-        "title": "portfolio_max_personal",
+        "title": "Max Personal",
         "trade_scope": "real",
         "decision_source": "CDS",
         "ns_weight_boost": 1.0,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
+        "per_line_frac": 0.03,
+        "max_deploy_frac": null,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_max_personal/data/portfolio_personal.csv"
+        "tags": [
+          "ideas",
+          "personal"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
+      "portfolio_value_est": 17897.93,
+      "cash_start": 1000.0,
+      "trades": [
+        {
+          "symbol": "QBTS",
+          "action": "SELL",
+          "px": 29.72,
+          "qty_hint": 229.08,
+          "reason": "score<sell",
+          "score": -0.306162,
+          "qty": 57,
+          "notional": 1694.04
+        },
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 13.725,
+          "qty_hint": 75.39,
+          "reason": "score<sell",
+          "score": -0.34911,
+          "qty": 18,
+          "notional": 247.05
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 70.02,
+          "qty_hint": 10.49,
+          "reason": "score<sell",
+          "score": -0.311757,
+          "qty": 2,
+          "notional": 140.04
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 56.59,
+          "qty_hint": 7.27,
+          "reason": "score<sell",
+          "score": -0.334369,
+          "qty": 1,
+          "notional": 56.59
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 35.155,
+          "qty_hint": 12.17,
+          "reason": "score<sell",
+          "score": -0.315331,
+          "qty": 3,
+          "notional": 105.47
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 249.395,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.363979,
+          "qty": 2.2733,
+          "notional": 566.95
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.21,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.357116,
+          "qty": 1.6026,
+          "notional": 433.04
+        }
+      ],
+      "cash_left": 0.01
     },
     "portfolio_max_TS_only": {
       "meta": {
-        "title": "portfolio_max_TS_only",
+        "title": "Max TS Only",
         "trade_scope": "none",
-        "decision_source": "CDS",
+        "decision_source": "TS_ONLY",
         "ns_weight_boost": 1.0,
         "per_line_frac": 0.02,
         "max_deploy_frac": 0.15,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_max_TS_only/data/portfolio_personal.csv"
+        "tags": [
+          "ideas"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -39,16 +115,18 @@
     },
     "portfolio_max_NS_higher_weight": {
       "meta": {
-        "title": "portfolio_max_NS_higher_weight",
+        "title": "Max NS+",
         "trade_scope": "none",
         "decision_source": "CDS",
-        "ns_weight_boost": 1.0,
+        "ns_weight_boost": 1.7,
         "per_line_frac": 0.02,
         "max_deploy_frac": 0.15,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_max_NS_higher_weight/data/portfolio_personal.csv"
+        "tags": [
+          "ideas"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_NS_higher_weight/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -57,16 +135,19 @@
     },
     "portfolio_nicky_personal": {
       "meta": {
-        "title": "portfolio_nicky_personal",
-        "trade_scope": "none",
+        "title": "Nicky Personal",
+        "trade_scope": "real",
         "decision_source": "CDS",
         "ns_weight_boost": 1.0,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
+        "per_line_frac": 0.015,
+        "max_deploy_frac": 0.1,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_nicky_personal/data/portfolio_nicky.csv"
+        "tags": [
+          "ideas",
+          "personal"
+        ],
+        "positions_path": "data/portfolios/portfolio_nicky_personal/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -75,16 +156,19 @@
     },
     "portfolio_vince_personal": {
       "meta": {
-        "title": "portfolio_vince_personal",
-        "trade_scope": "none",
+        "title": "Vince Personal",
+        "trade_scope": "real",
         "decision_source": "CDS",
         "ns_weight_boost": 1.0,
         "per_line_frac": 0.02,
         "max_deploy_frac": 0.15,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_vince_personal/data/portfolio_vince.csv"
+        "tags": [
+          "ideas",
+          "personal"
+        ],
+        "positions_path": "data/portfolios/portfolio_vince_personal/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -93,16 +177,20 @@
     },
     "portfolio_paper_aggressive_trades": {
       "meta": {
-        "title": "portfolio_paper_aggressive_trades",
-        "trade_scope": "none",
+        "title": "Paper Aggressive",
+        "trade_scope": "paper",
         "decision_source": "CDS",
         "ns_weight_boost": 1.0,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
+        "per_line_frac": 0.05,
+        "max_deploy_frac": 0.2,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/data/portfolio_paper.csv"
+        "tags": [
+          "ideas",
+          "paper",
+          "aggressive"
+        ],
+        "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -111,16 +199,19 @@
     },
     "portfolio_paper_reasonable": {
       "meta": {
-        "title": "portfolio_paper_reasonable",
-        "trade_scope": "none",
+        "title": "Paper Reasonable",
+        "trade_scope": "paper",
         "decision_source": "CDS",
         "ns_weight_boost": 1.0,
-        "per_line_frac": 0.02,
+        "per_line_frac": 0.03,
         "max_deploy_frac": 0.15,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_paper_reasonable/data/portfolio_paper.csv"
+        "tags": [
+          "ideas",
+          "paper"
+        ],
+        "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -129,16 +220,19 @@
     },
     "portfolio_paper_TS_only": {
       "meta": {
-        "title": "portfolio_paper_TS_only",
-        "trade_scope": "none",
-        "decision_source": "CDS",
+        "title": "Paper TS Only",
+        "trade_scope": "paper",
+        "decision_source": "TS_ONLY",
         "ns_weight_boost": 1.0,
         "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
+        "max_deploy_frac": 0.12,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_paper_TS_only/data/portfolio_paper.csv"
+        "tags": [
+          "ideas",
+          "paper"
+        ],
+        "positions_path": "data/portfolios/portfolio_paper_TS_only/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
@@ -147,16 +241,19 @@
     },
     "portfolio_paper_NS_higher_weight": {
       "meta": {
-        "title": "portfolio_paper_NS_higher_weight",
-        "trade_scope": "none",
+        "title": "Paper NS+",
+        "trade_scope": "paper",
         "decision_source": "CDS",
-        "ns_weight_boost": 1.0,
+        "ns_weight_boost": 1.7,
         "per_line_frac": 0.02,
         "max_deploy_frac": 0.15,
         "trim_fraction": 0.25,
         "fractional_buys": true,
-        "tags": [],
-        "positions_path": "data/portfolios/portfolio_paper_NS_higher_weight/data/portfolio_paper.csv"
+        "tags": [
+          "ideas",
+          "paper"
+        ],
+        "positions_path": "data/portfolios/portfolio_paper_NS_higher_weight/positions.csv"
       },
       "portfolio_value_est": 0.0,
       "cash_start": 0.0,
