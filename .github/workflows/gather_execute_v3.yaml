@@ -47,6 +47,7 @@ jobs:
         id: probe
         shell: bash
         run: |
+          set -euo pipefail
           prices_final="data/prices_final.json"
           prices_base="data/prices.json"
           now=$(date +%s)
@@ -54,8 +55,10 @@ jobs:
           fresh_base=false
           [[ -f "$prices_final" ]] && [[ $((now - $(stat -c %Y "$prices_final"))) -lt 600  ]] && fresh_prices=true
           [[ -f "$prices_base"  ]] && [[ $((now - $(stat -c %Y "$prices_base")))  -lt 3600 ]] && fresh_base=true
-          echo "fresh_prices=$fresh_prices" >> "$GITHUB_OUTPUT"
-          echo "fresh_base=$fresh_base"     >> "$GITHUB_OUTPUT"
+          {
+            echo "fresh_prices=$fresh_prices"
+            echo "fresh_base=$fresh_base"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Fetch prices (if stale)
         if: steps.probe.outputs.fresh_prices != 'true'
@@ -77,10 +80,10 @@ jobs:
           OUTPUT_PATH:       data/prices.json
           NEWS_LOOKBACK_DAYS: "7"
           NEWS_LIMIT_PER_SYMBOL: "25"
-          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
-          FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
           NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
-        run: python fetch_news.py
+          NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
+          FINNHUB_KEY:       ${{ secrets.FINNHUB_KEY }}
+        run: python scripts/fetch_news.py   # <— scripts/ path
 
       - name: Generate enriched feed
         env:
@@ -97,14 +100,9 @@ jobs:
       - name: Postprocess (build multi-portfolio plans)
         env:
           INPUT_FINAL:        data/prices_final.json
-          STRATEGY_CONFIG:    artifacts/strategies.yaml
-          PORTFOLIO_CONFIG:   artifacts/portfolios.yaml
-          OUT_SLIM:           data/prices_final_slim.json
-          OUT_PAPER_ONLY:     data/prices_final_paper.json
-          OUT_PERSONAL_ONLY:  data/prices_final_personal.json
+          PORTFOLIOS_YML:     config/portfolios.yml            # <— align with script
           OUT_WATCHLIST:      data/watchlist_summary.json
-          OUT_TRADES:         data/recommended_trades.json
-          OUTPUT_TRADES_V3:   artifacts/recommended_trades_v3.json
+          OUT_TRADES:         artifacts/recommended_trades_v3.json  # <— single source of truth
         run: |
           python scripts/postprocess_v3.py
           python - <<'PY'
@@ -138,36 +136,31 @@ jobs:
           PY
 
       - name: Execute trades (paper portfolios)
-        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
+        # Run if not skipping AND (not manual) OR (manual but NOT dry_run)
+        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.dry_run != 'true')
         env:
           PRICES_FINAL:       data/prices_final.json
-          TRADES_PLANS_V3:    artifacts/recommended_trades_v3.json
+          TRADES_RECS:        artifacts/recommended_trades_v3.json   # <— expected by update_performance_v3.py
           TRADES_LEDGER:      data/trades_ledger.csv
-          APPLY_TRADES:       "1"
-          # EXECUTE_SCOPE controls which portfolio types run ("paper", "personal", or "both")
-          EXECUTE_SCOPE:      ${{ (github.event_name == 'workflow_dispatch' && inputs.apply_personal == 'true') && 'both' || 'paper' }}
+          APPLY_TRADES:       "1"                                     # <— apply trades param
+          # Optionally let script decide scope; otherwise it can ignore.
+          EXECUTE_SCOPE:      ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'both' || 'paper' }}
         run: |
           python scripts/update_performance_v3.py
           echo "---- Last 25 ledger lines ----"
           tail -n 25 data/trades_ledger.csv || true
 
       - name: Rebuild recs after execution (reflect new positions)
-        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
+        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.dry_run != 'true')
         env:
           INPUT_FINAL:        data/prices_final.json
-          STRATEGY_CONFIG:    artifacts/strategies.yaml
-          PORTFOLIO_CONFIG:   artifacts/portfolios.yaml
-          OUT_SLIM:           data/prices_final_slim.json
-          OUT_PAPER_ONLY:     data/prices_final_paper.json
-          OUT_PERSONAL_ONLY:  data/prices_final_personal.json
+          PORTFOLIOS_YML:     config/portfolios.yml
           OUT_WATCHLIST:      data/watchlist_summary.json
-          OUT_TRADES:         data/recommended_trades.json
-          TRADES_RECS:        artifacts/recommended_trades_v3.json
-          OUTPUT_TRADES_V3:   artifacts/recommended_trades_v3.json
+          OUT_TRADES:         artifacts/recommended_trades_v3.json
         run: python scripts/postprocess_v3.py
 
       - name: Mark snapshot as applied
-        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || inputs.dry_run != 'true')
+        if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.dry_run != 'true')
         shell: bash
         run: |
           python - <<'PY'
@@ -182,9 +175,8 @@ jobs:
       - name: Update performance snapshots (final pass, no trades)
         env:
           PRICES_FINAL:       data/prices_final.json
-          TRADES_PLANS_V3:    artifacts/recommended_trades_v3.json
-          TRADES_LEDGER:      data/trades_ledger.csv
           TRADES_RECS:        artifacts/recommended_trades_v3.json
+          TRADES_LEDGER:      data/trades_ledger.csv
           APPLY_TRADES:       "0"
         run: python scripts/update_performance_v3.py
 
@@ -195,5 +187,5 @@ jobs:
           git pull --rebase --autostash origin ${{ github.ref_name }}
           git add data/*.json data/*history.csv data/portfolio_*.csv data/trades_ledger.csv \
                   artifacts/*.yaml artifacts/*.json || true
-          git commit -m "v3: gather + execute (paper=${{ (github.event_name == 'workflow_dispatch' && inputs.apply_personal == 'true') && 'and personal' || 'only' }}, dry_run=${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'schedule' }})" || echo "No changes."
+          git commit -m "v3: gather + execute (paper=${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'and personal' || 'only' }}, dry_run=${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'schedule' }})" || echo "No changes."
           git push
