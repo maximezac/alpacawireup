@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T16:05:12.504935+00:00",
+  "as_of_utc": "2025-11-05T16:18:49.402167+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,79 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18242.18,
+      "portfolio_value_est": 18160.68,
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QUBT",
+          "symbol": "QBTS",
           "action": "SELL",
-          "px": 13.81,
-          "qty_hint": 75.39,
+          "px": 30.56,
+          "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.278979,
-          "qty": 18,
-          "notional": 248.58,
+          "score": -0.277534,
+          "qty": 57,
+          "notional": 1741.92,
           "signals": {
-            "TS": -0.576763,
-            "NS": 0.167697,
-            "CDS": -0.278979,
+            "TS": -0.490189,
+            "NS": 0.041448,
+            "CDS": -0.277534,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.630720522080226,
-            "ema_slow": 16.873947616610522,
-            "macd": -1.2432270945302957,
-            "macd_signal": -0.9063387432233213,
-            "macd_hist": -0.33688835130697437,
-            "rsi14": 33.49634927566889,
-            "sma20": 17.11225
+            "ema_fast": 33.1376424957224,
+            "ema_slow": 32.266959215038675,
+            "macd": 0.8706832806837284,
+            "macd_signal": 1.8496897728855455,
+            "macd_hist": -0.9790064922018171,
+            "rsi14": 41.80168819529722,
+            "sma20": 35.03424999999998
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:08:40+00:00",
+              "source": "benzinga",
+              "tone": -0.5837399999999999,
+              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
+            },
+            {
+              "ts": "2025-11-05T12:23:21+00:00",
+              "source": "benzinga",
+              "tone": -0.24588000000000002,
+              "headline": "D-Wave And BASF Use Quantum Computing To Cut Factory Scheduling Time From Hours To Seconds"
+            },
+            {
+              "ts": "2025-11-05T12:07:03+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum Inc. $QBTS is UNICOM Systems Inc.'s 6th Largest Position"
+            }
+          ]
+        },
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 13.68,
+          "qty_hint": 75.39,
+          "reason": "score<sell",
+          "score": -0.283818,
+          "qty": 18,
+          "notional": 246.24,
+          "signals": {
+            "TS": -0.584827,
+            "NS": 0.167697,
+            "CDS": -0.283818,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 15.610720522080225,
+            "ema_slow": 16.86431798698089,
+            "macd": -1.2535974649006647,
+            "macd_signal": -0.9084128172973951,
+            "macd_hist": -0.3451846476032696,
+            "rsi14": 32.50478444691274,
+            "sma20": 17.10575
           },
           "news_preview": [
             {
@@ -69,27 +115,27 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 56.07,
+          "px": 55.79,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.29847,
+          "score": -0.300951,
           "qty": 1,
-          "notional": 56.07,
+          "notional": 55.79,
           "signals": {
-            "TS": -0.567151,
+            "TS": -0.571286,
             "NS": 0.104552,
-            "CDS": -0.29847,
+            "CDS": -0.300951,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 61.294109791999624,
-            "ema_slow": 60.38910729450501,
-            "macd": 0.905002497494614,
-            "macd_signal": 2.5014696502546125,
-            "macd_hist": -1.5964671527599985,
-            "rsi14": 32.481500682339004,
-            "sma20": 64.07399999999998
+            "ema_fast": 61.2510328689227,
+            "ema_slow": 60.36836655376427,
+            "macd": 0.8826663151584313,
+            "macd_signal": 2.497002413787376,
+            "macd_hist": -1.6143360986289448,
+            "rsi14": 31.973736959753353,
+            "sma20": 64.05999999999997
           },
           "news_preview": [
             {
@@ -113,29 +159,75 @@
           ]
         },
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 278.095,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.527264,
-          "qty": 2.0758,
-          "notional": 577.27,
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 35.98,
+          "qty_hint": 12.17,
+          "reason": "score<sell",
+          "score": -0.258121,
+          "qty": 3,
+          "notional": 107.94,
           "signals": {
-            "TS": 0.64355,
-            "NS": 0.352835,
-            "CDS": 0.527264,
+            "TS": -0.508237,
+            "NS": 0.117052,
+            "CDS": -0.258121,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.61698059639065,
-            "ema_slow": 239.73767251584854,
-            "macd": 11.879308080542103,
-            "macd_signal": 8.466019860204948,
-            "macd_hist": 3.4132882203371544,
-            "rsi14": 75.45493741618589,
-            "sma20": 240.47900000000018
+            "ema_fast": 39.60719847327889,
+            "ema_slow": 38.76101222024568,
+            "macd": 0.8461862530332098,
+            "macd_signal": 2.3640082372773685,
+            "macd_hist": -1.5178219842441587,
+            "rsi14": 39.6746114468122,
+            "sma20": 43.212999999999994
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:08:40+00:00",
+              "source": "benzinga",
+              "tone": -0.5837399999999999,
+              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
+            },
+            {
+              "ts": "2025-11-05T15:29:14+00:00",
+              "source": "barchartcom",
+              "tone": 0.1909,
+              "headline": "Dear Rigetti Stock Fans, Mark Your Calendars for November 10"
+            },
+            {
+              "ts": "2025-11-05T11:06:44+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "FWG Holdings LLC Raises Position in Rigetti Computing, Inc. $RGTI"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 276.73,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.52494,
+          "qty": 2.0772,
+          "notional": 574.82,
+          "signals": {
+            "TS": 0.639255,
+            "NS": 0.353468,
+            "CDS": 0.52494,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.40698059639067,
+            "ema_slow": 239.63656140473742,
+            "macd": 11.770419191653247,
+            "macd_signal": 8.444242082427177,
+            "macd_hist": 3.3261771092260695,
+            "rsi14": 74.92888296776245,
+            "sma20": 240.41075000000015
           },
           "news_preview": [
             {
@@ -161,27 +253,27 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 269.3,
+          "px": 269.27,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.498647,
-          "qty": 1.5697,
-          "notional": 422.72,
+          "score": 0.497991,
+          "qty": 1.579,
+          "notional": 425.18,
           "signals": {
-            "TS": 0.559648,
+            "TS": 0.558555,
             "NS": 0.407146,
-            "CDS": 0.498647,
+            "CDS": 0.497991,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.32239436980336,
-            "ema_slow": 260.32511359209656,
-            "macd": 5.997280777706806,
-            "macd_signal": 5.697782799510085,
-            "macd_hist": 0.29949797819672064,
-            "rsi14": 65.63016520978448,
-            "sma20": 260.38325
+            "ema_fast": 266.31777898518794,
+            "ema_slow": 260.32289136987436,
+            "macd": 5.994887615313587,
+            "macd_signal": 5.697304167031442,
+            "macd_hist": 0.2975834482821451,
+            "rsi14": 65.49379819720613,
+            "sma20": 260.3817499999999
           },
           "news_preview": [
             {
@@ -203,55 +295,9 @@
               "headline": "Fortnite Maker Epic Games CEO Tim Sweeney Praises Google's 'Awesome Proposal' To Open Up Android And Resolve App Store Fight"
             }
           ]
-        },
-        {
-          "symbol": "NVDA",
-          "action": "BUY",
-          "px": 202.28,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.386068,
-          "qty": 0.0001,
-          "notional": 0.02,
-          "signals": {
-            "TS": 0.526681,
-            "NS": 0.175148,
-            "CDS": 0.386068,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 197.09237304895964,
-            "ema_slow": 191.27774420997488,
-            "macd": 5.81462883898476,
-            "macd_signal": 4.475719384137295,
-            "macd_hist": 1.3389094548474647,
-            "rsi14": 61.325196665304,
-            "sma20": 190.70725000000007
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T15:38:47+00:00",
-              "source": "reuters",
-              "tone": 0.646996,
-              "headline": "Don't panic yet, investors say, as high-flying AI stocks tumble"
-            },
-            {
-              "ts": "2025-11-05T15:00:29+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Industry Comparison: Evaluating NVIDIA Against Competitors In Semiconductors &amp; Semiconductor Equipment Industry"
-            },
-            {
-              "ts": "2025-11-05T14:57:39+00:00",
-              "source": "theeconomictimes",
-              "tone": 0.0,
-              "headline": "Nvidia news: Loop Capital says Jensen Huang-led company's stock could jump 75% \u2013 here are the reasons it g"
-            }
-          ]
         }
       ],
-      "cash_left": -0.01
+      "cash_left": 0.0
     },
     "portfolio_max_TS_only": {
       "meta": {
