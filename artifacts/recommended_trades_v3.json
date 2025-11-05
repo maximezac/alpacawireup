@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T16:31:55.249771+00:00",
+  "as_of_utc": "2025-11-05T16:49:57.893515+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18230.48,
+      "portfolio_value_est": 18304.36,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 30.73,
+          "px": 30.91,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.280773,
+          "score": -0.278082,
           "qty": 57,
-          "notional": 1751.61,
+          "notional": 1761.87,
           "signals": {
-            "TS": -0.485875,
+            "TS": -0.48139,
             "NS": 0.026879,
-            "CDS": -0.280773,
+            "CDS": -0.278082,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 33.16379634187625,
-            "ema_slow": 32.279551807631265,
-            "macd": 0.884244534244985,
-            "macd_signal": 1.8524020235977967,
-            "macd_hist": -0.9681574893528118,
-            "rsi14": 42.33075028726833,
-            "sma20": 35.042749999999984
+            "ema_fast": 33.191488649568555,
+            "ema_slow": 32.2928851409646,
+            "macd": 0.898603508603955,
+            "macd_signal": 1.8552738184695907,
+            "macd_hist": -0.9566703098656357,
+            "rsi14": 42.88054918496642,
+            "sma20": 35.051749999999984
           },
           "news_preview": [
             {
@@ -69,27 +69,27 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.76,
+          "px": 13.905,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.287275,
+          "score": -0.280343,
           "qty": 18,
-          "notional": 247.68,
+          "notional": 250.29,
           "signals": {
-            "TS": -0.580503,
-            "NS": 0.152568,
-            "CDS": -0.287275,
+            "TS": -0.569797,
+            "NS": 0.153839,
+            "CDS": -0.280343,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.623028214387919,
-            "ema_slow": 16.870243912906815,
-            "macd": -1.2472156985188967,
-            "macd_signal": -0.9071364640210415,
-            "macd_hist": -0.34007923449785515,
-            "rsi14": 33.03522650387502,
-            "sma20": 17.10975
+            "ema_fast": 15.64533590669561,
+            "ema_slow": 16.88098465364756,
+            "macd": -1.2356487469519486,
+            "macd_signal": -0.9048230737076519,
+            "macd_hist": -0.3308256732442967,
+            "rsi14": 34.355212511992335,
+            "sma20": 17.116999999999997
           },
           "news_preview": [
             {
@@ -115,27 +115,27 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 56.21,
+          "px": 56.32,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.298954,
+          "score": -0.310546,
           "qty": 1,
-          "notional": 56.21,
+          "notional": 56.32,
           "signals": {
-            "TS": -0.565034,
-            "NS": 0.100166,
-            "CDS": -0.298954,
+            "TS": -0.563348,
+            "NS": 0.068657,
+            "CDS": -0.310546,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 61.315648253538086,
-            "ema_slow": 60.39947766487538,
-            "macd": 0.916170588662709,
-            "macd_signal": 2.5037032684882314,
-            "macd_hist": -1.5875326798255225,
-            "rsi14": 32.741478662226314,
-            "sma20": 64.08099999999999
+            "ema_fast": 61.332571330461164,
+            "ema_slow": 60.40762581302353,
+            "macd": 0.9249455174376351,
+            "macd_signal": 2.5054582542432167,
+            "macd_hist": -1.5805127368055816,
+            "rsi14": 32.94868508631416,
+            "sma20": 64.08649999999997
           },
           "news_preview": [
             {
@@ -159,94 +159,94 @@
           ]
         },
         {
-          "symbol": "FSLR",
+          "symbol": "DE",
           "action": "BUY",
-          "px": 276.38,
+          "px": 468.43,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.52394,
-          "qty": 2.0874,
-          "notional": 576.92,
+          "score": 0.651306,
+          "qty": 1.2363,
+          "notional": 579.12,
           "signals": {
-            "TS": 0.638124,
-            "NS": 0.352664,
-            "CDS": 0.52394,
-            "wT": 0.6,
-            "wN": 0.4
+            "TS": 0.473496,
+            "NS": 0.769845,
+            "CDS": 0.651306,
+            "wT": 0.4,
+            "wN": 0.6
           },
           "indicators": {
-            "ema_fast": 251.3531344425445,
-            "ema_slow": 239.6106354788115,
-            "macd": 11.742498963732999,
-            "macd_signal": 8.438658036843128,
-            "macd_hist": 3.3038409268898707,
-            "rsi14": 74.79034498835065,
-            "sma20": 240.39325000000017
+            "ema_fast": 465.73633624607777,
+            "ema_slow": 465.0634658739941,
+            "macd": 0.6728703720836506,
+            "macd_signal": -0.30146654159376557,
+            "macd_hist": 0.9743369136774163,
+            "rsi14": 55.400866040996874,
+            "sma20": 461.2795
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T12:43:10+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Advisors Preferred LLC Trims Stock Position in First Solar, Inc. $FSLR"
+              "ts": "2025-11-04T14:00:21+00:00",
+              "source": "yahoo",
+              "tone": 0.7845,
+              "headline": "Can Deere & Company (NYSE:DE) Maintain Its Strong Returns?"
             },
             {
-              "ts": "2025-11-05T11:09:55+00:00",
-              "source": "newsercom",
-              "tone": 0.3404,
-              "headline": "Why FSLR stock is popular among millennials - Weekly Earnings Recap & AI Powered Buy/Sell Recommendations"
+              "ts": "2025-11-02T14:00:12+00:00",
+              "source": "yahoo",
+              "tone": 0.5994,
+              "headline": "AGCO wants 'national policy' on farmers' right to repair: CEO"
             },
             {
-              "ts": "2025-11-05T10:59:08+00:00",
-              "source": "simplywallst",
-              "tone": 0.5,
-              "headline": "Is First Solar Still a Value Opportunity After 41% Rally and New Utility Contracts?"
+              "ts": "2025-11-01T09:56:16+00:00",
+              "source": "seekingalpha",
+              "tone": 0.5511600000000001,
+              "headline": "Deere: Profit Resilience Amid Tariff Headwinds Sets The Stage For A 2026 Rebound"
             }
           ]
         },
         {
-          "symbol": "AAPL",
+          "symbol": "FSLR",
           "action": "BUY",
-          "px": 270.345,
+          "px": 278.07,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.521463,
-          "qty": 1.565,
-          "notional": 423.09,
+          "score": 0.645338,
+          "qty": 1.5136,
+          "notional": 420.89,
           "signals": {
-            "TS": 0.597479,
-            "NS": 0.40744,
-            "CDS": 0.521463,
+            "TS": 0.643473,
+            "NS": 0.648136,
+            "CDS": 0.645338,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.4831636005726,
-            "ema_slow": 260.40252099950396,
-            "macd": 6.080642601068632,
-            "macd_signal": 5.714455164182451,
-            "macd_hist": 0.3661874368861815,
-            "rsi14": 70.35121424359379,
-            "sma20": 260.43549999999993
+            "ema_fast": 251.6131344425445,
+            "ema_slow": 239.73582066399666,
+            "macd": 11.87731377854783,
+            "macd_signal": 8.465620999806093,
+            "macd_hist": 3.4116927787417364,
+            "rsi14": 75.44550125298609,
+            "sma20": 240.47775000000016
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T15:01:08+00:00",
-              "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
+              "ts": "2025-11-04T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.93,
+              "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
             },
             {
-              "ts": "2025-11-05T14:33:45+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-04T12:22:34+00:00",
+              "source": "benzinga",
               "tone": 0.0,
-              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
+              "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
             },
             {
-              "ts": "2025-11-05T13:39:31+00:00",
+              "ts": "2025-11-04T11:21:29+00:00",
               "source": "benzinga",
-              "tone": 0.80406,
-              "headline": "Fortnite Maker Epic Games CEO Tim Sweeney Praises Google's 'Awesome Proposal' To Open Up Android And Resolve App Store Fight"
+              "tone": 0.9,
+              "headline": "AI's 30% Power Surge To Ignite 'Historic' Energy Boom: Why These Energy Stocks And ETFs Are Set to Win"
             }
           ]
         }
@@ -268,10 +268,425 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
+      "portfolio_value_est": 18304.36,
+      "cash_start": 1000.0,
+      "trades": [
+        {
+          "symbol": "QBTS",
+          "action": "SELL",
+          "px": 30.91,
+          "qty_hint": 229.08,
+          "reason": "score<sell",
+          "score": -0.48139,
+          "qty": 57,
+          "notional": 1761.87,
+          "signals": {
+            "TS": -0.48139,
+            "NS": 0.026879,
+            "CDS": -0.278082,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 33.191488649568555,
+            "ema_slow": 32.2928851409646,
+            "macd": 0.898603508603955,
+            "macd_signal": 1.8552738184695907,
+            "macd_hist": -0.9566703098656357,
+            "rsi14": 42.88054918496642,
+            "sma20": 35.051749999999984
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:08:40+00:00",
+              "source": "benzinga",
+              "tone": -0.5837399999999999,
+              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
+            },
+            {
+              "ts": "2025-11-05T12:23:21+00:00",
+              "source": "benzinga",
+              "tone": -0.24588000000000002,
+              "headline": "D-Wave And BASF Use Quantum Computing To Cut Factory Scheduling Time From Hours To Seconds"
+            },
+            {
+              "ts": "2025-11-05T12:07:03+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum Inc. $QBTS is UNICOM Systems Inc.'s 6th Largest Position"
+            }
+          ]
+        },
+        {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 333.8,
+          "qty_hint": 11.48,
+          "reason": "score<sell",
+          "score": -0.349844,
+          "qty": 2,
+          "notional": 667.6,
+          "signals": {
+            "TS": -0.349844,
+            "NS": 0.412925,
+            "CDS": -0.044736,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 333.49070979266804,
+            "ema_slow": 331.23074979216904,
+            "macd": 2.2599600004990066,
+            "macd_signal": 2.4145812178701562,
+            "macd_hist": -0.15462121737114964,
+            "rsi14": 52.34857846174566,
+            "sma20": 331.3425
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T19:32:16+00:00",
+              "source": "benzinga",
+              "tone": 0.8636400000000001,
+              "headline": "SPY Tops ETF Charts As Investors Tune Out The Fed And Chase The Rally"
+            },
+            {
+              "ts": "2025-11-04T18:29:14+00:00",
+              "source": "benzinga",
+              "tone": -0.20115,
+              "headline": "Benzinga Market Summary: Palantir Falls Despite Earnings Beat, Tech Stocks Pull Back, Gold Drops As Dollar Rises"
+            },
+            {
+              "ts": "2025-11-04T09:38:00+00:00",
+              "source": "seekingalpha",
+              "tone": 0.37809,
+              "headline": "Total Return Forecasts: Major Asset Classes - November 4, 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 13.905,
+          "qty_hint": 75.39,
+          "reason": "score<sell",
+          "score": -0.569797,
+          "qty": 18,
+          "notional": 250.29,
+          "signals": {
+            "TS": -0.569797,
+            "NS": 0.153839,
+            "CDS": -0.280343,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 15.64533590669561,
+            "ema_slow": 16.88098465364756,
+            "macd": -1.2356487469519486,
+            "macd_signal": -0.9048230737076519,
+            "macd_hist": -0.3308256732442967,
+            "rsi14": 34.355212511992335,
+            "sma20": 17.116999999999997
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:22:51+00:00",
+              "source": "aolcom",
+              "tone": 0.45155,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
+            {
+              "ts": "2025-11-05T13:37:21+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.4455,
+              "headline": "Will QUBT stock split attract more investors - July 2025 Setups & Free High Return Stock Watch Alerts"
+            },
+            {
+              "ts": "2025-11-05T12:41:09+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "UNICOM Systems Inc. Sells 103,761 Shares of Quantum Computing Inc. $QUBT"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 70.96,
+          "qty_hint": 10.49,
+          "reason": "score<sell",
+          "score": -0.503164,
+          "qty": 2,
+          "notional": 141.92,
+          "signals": {
+            "TS": -0.503164,
+            "NS": 0.399428,
+            "CDS": -0.142127,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 75.29693804681528,
+            "ema_slow": 73.11828683170671,
+            "macd": 2.178651215108573,
+            "macd_signal": 4.493074129826493,
+            "macd_hist": -2.3144229147179196,
+            "rsi14": 40.10957900853932,
+            "sma20": 80.35550000000006
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T23:43:07+00:00",
+              "source": "marketbeat",
+              "tone": 0.5441400000000001,
+              "headline": "AST SpaceMobile (NASDAQ:ASTS) Shares Down 1.5% - What's Next?"
+            },
+            {
+              "ts": "2025-11-04T16:25:33+00:00",
+              "source": "benzinga",
+              "tone": 0.70047,
+              "headline": "Smart Money Sells Palantir, Quantum Computing, And Space Stocks; Gold Gives Up Momo-Induced Gains"
+            },
+            {
+              "ts": "2025-11-04T15:34:27+00:00",
+              "source": "simplywallst",
+              "tone": 0.07655,
+              "headline": "AST SpaceMobile (ASTS): Valuation in Focus After Landmark 10-Year Satellite Deal With STC Group"
+            }
+          ]
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 56.32,
+          "qty_hint": 7.27,
+          "reason": "score<sell",
+          "score": -0.563348,
+          "qty": 1,
+          "notional": 56.32,
+          "signals": {
+            "TS": -0.563348,
+            "NS": 0.068657,
+            "CDS": -0.310546,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 61.332571330461164,
+            "ema_slow": 60.40762581302353,
+            "macd": 0.9249455174376351,
+            "macd_signal": 2.5054582542432167,
+            "macd_hist": -1.5805127368055816,
+            "rsi14": 32.94868508631416,
+            "sma20": 64.08649999999997
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T12:43:09+00:00",
+              "source": "marketbeat",
+              "tone": -0.37935,
+              "headline": "CloudAlpha Capital Management Limited Hong Kong Takes $4.04 Million Position in Rocket Lab Corporation $RKLB"
+            },
+            {
+              "ts": "2025-11-05T12:14:12+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Cherry Creek Investment Advisors Inc. Invests $251,000 in Rocket Lab Corporation $RKLB"
+            },
+            {
+              "ts": "2025-11-05T09:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Is Rocket Lab Stock the Next Nvidia?"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 36.3,
+          "qty_hint": 12.17,
+          "reason": "score<sell",
+          "score": -0.500935,
+          "qty": 3,
+          "notional": 108.9,
+          "signals": {
+            "TS": -0.500935,
+            "NS": 0.127015,
+            "CDS": -0.249755,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 39.65642924250966,
+            "ema_slow": 38.784715923949385,
+            "macd": 0.8717133185602748,
+            "macd_signal": 2.3691136503827814,
+            "macd_hist": -1.4974003318225066,
+            "rsi14": 40.57122459531727,
+            "sma20": 43.22899999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:08:40+00:00",
+              "source": "benzinga",
+              "tone": -0.5837399999999999,
+              "headline": "Quantum Stocks Fight Back: Slight Rebound On Advances And Funding"
+            },
+            {
+              "ts": "2025-11-05T15:29:14+00:00",
+              "source": "barchartcom",
+              "tone": 0.1909,
+              "headline": "Dear Rigetti Stock Fans, Mark Your Calendars for November 10"
+            },
+            {
+              "ts": "2025-11-05T11:06:44+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "FWG Holdings LLC Raises Position in Rigetti Computing, Inc. $RGTI"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 278.07,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.643473,
+          "qty": 1.3885,
+          "notional": 386.1,
+          "signals": {
+            "TS": 0.643473,
+            "NS": 0.648136,
+            "CDS": 0.645338,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.6131344425445,
+            "ema_slow": 239.73582066399666,
+            "macd": 11.87731377854783,
+            "macd_signal": 8.465620999806093,
+            "macd_hist": 3.4116927787417364,
+            "rsi14": 75.44550125298609,
+            "sma20": 240.47775000000016
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.93,
+              "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
+            },
+            {
+              "ts": "2025-11-04T12:22:34+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
+            },
+            {
+              "ts": "2025-11-04T11:21:29+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "AI's 30% Power Surge To Ignite 'Historic' Energy Boom: Why These Energy Stocks And ETFs Are Set to Win"
+            }
+          ]
+        },
+        {
+          "symbol": "GOOGL",
+          "action": "BUY",
+          "px": 284.7,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.632682,
+          "qty": 1.3561,
+          "notional": 386.08,
+          "signals": {
+            "TS": 0.632682,
+            "NS": 0.172444,
+            "CDS": 0.448587,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 271.9932450094908,
+            "ema_slow": 261.20281319302376,
+            "macd": 10.790431816467049,
+            "macd_signal": 8.738122455563976,
+            "macd_hist": 2.052309360903072,
+            "rsi14": 74.30253565106183,
+            "sma20": 260.7740000000002
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:22:48+00:00",
+              "source": "benzinga",
+              "tone": -0.34776,
+              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+            },
+            {
+              "ts": "2025-11-05T15:31:44+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Google Introduces Hands-Free, Conversational Driving Experience In Google Maps, Built With Gemini; Landmark-Based Navigation Is Rolling Out Now On Android And iOS In The U.S.; Gemini In Navigation Starts Rolling Out In Coming Weeks On Android & iOS Everywhere Gemini Is Available, Android Auto On The Way"
+            },
+            {
+              "ts": "2025-11-05T15:08:51+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Calico Life Sciences Announces U.S. FDA Orphan Drug Designation For Investigational Treatment Of Autosomal Dominant Polycystic Kidney Disease"
+            }
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 249.19,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.604403,
+          "qty": 0.9142,
+          "notional": 227.81,
+          "signals": {
+            "TS": 0.604403,
+            "NS": 0.247918,
+            "CDS": 0.461809,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.0410330559593,
+            "ema_slow": 229.80154378669107,
+            "macd": 6.239489269268233,
+            "macd_signal": 2.592979946815443,
+            "macd_hist": 3.6465093224527902,
+            "rsi14": 71.1216246738709,
+            "sma20": 226.573
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:22:48+00:00",
+              "source": "benzinga",
+              "tone": -0.34776,
+              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+            },
+            {
+              "ts": "2025-11-05T16:01:23+00:00",
+              "source": "zacksinvestmentresearch",
+              "tone": 0.13342500000000002,
+              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
+            },
+            {
+              "ts": "2025-11-05T15:08:55+00:00",
+              "source": "benzinga",
+              "tone": 0.16011,
+              "headline": "Amazon Announces DAZN Is Now Available On Prime Video In The US And UK"
+            }
+          ]
+        }
+      ],
+      "cash_left": 0.01
     },
     "portfolio_max_NS_higher_weight": {
       "meta": {
@@ -353,9 +768,194 @@
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
       "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
+      "cash_start": 20000.0,
+      "trades": [
+        {
+          "symbol": "DE",
+          "action": "BUY",
+          "px": 468.43,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.651306,
+          "qty": 2.1348,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.473496,
+            "NS": 0.769845,
+            "CDS": 0.651306,
+            "wT": 0.4,
+            "wN": 0.6
+          },
+          "indicators": {
+            "ema_fast": 465.73633624607777,
+            "ema_slow": 465.0634658739941,
+            "macd": 0.6728703720836506,
+            "macd_signal": -0.30146654159376557,
+            "macd_hist": 0.9743369136774163,
+            "rsi14": 55.400866040996874,
+            "sma20": 461.2795
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T14:00:21+00:00",
+              "source": "yahoo",
+              "tone": 0.7845,
+              "headline": "Can Deere & Company (NYSE:DE) Maintain Its Strong Returns?"
+            },
+            {
+              "ts": "2025-11-02T14:00:12+00:00",
+              "source": "yahoo",
+              "tone": 0.5994,
+              "headline": "AGCO wants 'national policy' on farmers' right to repair: CEO"
+            },
+            {
+              "ts": "2025-11-01T09:56:16+00:00",
+              "source": "seekingalpha",
+              "tone": 0.5511600000000001,
+              "headline": "Deere: Profit Resilience Amid Tariff Headwinds Sets The Stage For A 2026 Rebound"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 278.07,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.645338,
+          "qty": 3.5962,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.643473,
+            "NS": 0.648136,
+            "CDS": 0.645338,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.6131344425445,
+            "ema_slow": 239.73582066399666,
+            "macd": 11.87731377854783,
+            "macd_signal": 8.465620999806093,
+            "macd_hist": 3.4116927787417364,
+            "rsi14": 75.44550125298609,
+            "sma20": 240.47775000000016
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.93,
+              "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
+            },
+            {
+              "ts": "2025-11-04T12:22:34+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
+            },
+            {
+              "ts": "2025-11-04T11:21:29+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "AI's 30% Power Surge To Ignite 'Historic' Energy Boom: Why These Energy Stocks And ETFs Are Set to Win"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.31,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.509461,
+          "qty": 3.6995,
+          "notional": 1000.01,
+          "signals": {
+            "TS": 0.596866,
+            "NS": 0.378354,
+            "CDS": 0.509461,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.47777898518797,
+            "ema_slow": 260.3999284069114,
+            "macd": 6.077850578276582,
+            "macd_signal": 5.71389675962404,
+            "macd_hist": 0.3639538186525417,
+            "rsi14": 70.27490256390374,
+            "sma20": 260.43375
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:44:03+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Taiwan Semiconductor Names CEO Of North America Unit For USA Expansion"
+            },
+            {
+              "ts": "2025-11-05T15:01:08+00:00",
+              "source": "benzinga",
+              "tone": 0.24588000000000002,
+              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
+            },
+            {
+              "ts": "2025-11-05T14:33:45+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
+            }
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 249.19,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.461809,
+          "qty": 4.013,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.604403,
+            "NS": 0.247918,
+            "CDS": 0.461809,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.0410330559593,
+            "ema_slow": 229.80154378669107,
+            "macd": 6.239489269268233,
+            "macd_signal": 2.592979946815443,
+            "macd_hist": 3.6465093224527902,
+            "rsi14": 71.1216246738709,
+            "sma20": 226.573
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:22:48+00:00",
+              "source": "benzinga",
+              "tone": -0.34776,
+              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+            },
+            {
+              "ts": "2025-11-05T16:01:23+00:00",
+              "source": "zacksinvestmentresearch",
+              "tone": 0.13342500000000002,
+              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
+            },
+            {
+              "ts": "2025-11-05T15:08:55+00:00",
+              "source": "benzinga",
+              "tone": 0.16011,
+              "headline": "Amazon Announces DAZN Is Now Available On Prime Video In The US And UK"
+            }
+          ]
+        }
+      ],
+      "cash_left": 15999.99
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -374,9 +974,240 @@
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
       "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
+      "cash_start": 20000.0,
+      "trades": [
+        {
+          "symbol": "DE",
+          "action": "BUY",
+          "px": 468.43,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.651306,
+          "qty": 1.2809,
+          "notional": 600.01,
+          "signals": {
+            "TS": 0.473496,
+            "NS": 0.769845,
+            "CDS": 0.651306,
+            "wT": 0.4,
+            "wN": 0.6
+          },
+          "indicators": {
+            "ema_fast": 465.73633624607777,
+            "ema_slow": 465.0634658739941,
+            "macd": 0.6728703720836506,
+            "macd_signal": -0.30146654159376557,
+            "macd_hist": 0.9743369136774163,
+            "rsi14": 55.400866040996874,
+            "sma20": 461.2795
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T14:00:21+00:00",
+              "source": "yahoo",
+              "tone": 0.7845,
+              "headline": "Can Deere & Company (NYSE:DE) Maintain Its Strong Returns?"
+            },
+            {
+              "ts": "2025-11-02T14:00:12+00:00",
+              "source": "yahoo",
+              "tone": 0.5994,
+              "headline": "AGCO wants 'national policy' on farmers' right to repair: CEO"
+            },
+            {
+              "ts": "2025-11-01T09:56:16+00:00",
+              "source": "seekingalpha",
+              "tone": 0.5511600000000001,
+              "headline": "Deere: Profit Resilience Amid Tariff Headwinds Sets The Stage For A 2026 Rebound"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 278.07,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.645338,
+          "qty": 2.1577,
+          "notional": 599.99,
+          "signals": {
+            "TS": 0.643473,
+            "NS": 0.648136,
+            "CDS": 0.645338,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.6131344425445,
+            "ema_slow": 239.73582066399666,
+            "macd": 11.87731377854783,
+            "macd_signal": 8.465620999806093,
+            "macd_hist": 3.4116927787417364,
+            "rsi14": 75.44550125298609,
+            "sma20": 240.47775000000016
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.93,
+              "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
+            },
+            {
+              "ts": "2025-11-04T12:22:34+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
+            },
+            {
+              "ts": "2025-11-04T11:21:29+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "AI's 30% Power Surge To Ignite 'Historic' Energy Boom: Why These Energy Stocks And ETFs Are Set to Win"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.31,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.509461,
+          "qty": 2.2197,
+          "notional": 600.01,
+          "signals": {
+            "TS": 0.596866,
+            "NS": 0.378354,
+            "CDS": 0.509461,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.47777898518797,
+            "ema_slow": 260.3999284069114,
+            "macd": 6.077850578276582,
+            "macd_signal": 5.71389675962404,
+            "macd_hist": 0.3639538186525417,
+            "rsi14": 70.27490256390374,
+            "sma20": 260.43375
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:44:03+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Taiwan Semiconductor Names CEO Of North America Unit For USA Expansion"
+            },
+            {
+              "ts": "2025-11-05T15:01:08+00:00",
+              "source": "benzinga",
+              "tone": 0.24588000000000002,
+              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
+            },
+            {
+              "ts": "2025-11-05T14:33:45+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
+            }
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 249.19,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.461809,
+          "qty": 2.4078,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.604403,
+            "NS": 0.247918,
+            "CDS": 0.461809,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.0410330559593,
+            "ema_slow": 229.80154378669107,
+            "macd": 6.239489269268233,
+            "macd_signal": 2.592979946815443,
+            "macd_hist": 3.6465093224527902,
+            "rsi14": 71.1216246738709,
+            "sma20": 226.573
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T16:22:48+00:00",
+              "source": "benzinga",
+              "tone": -0.34776,
+              "headline": "Earnings Are So Good It Hurts: Why This Market Rally Suddenly Feels Tired"
+            },
+            {
+              "ts": "2025-11-05T16:01:23+00:00",
+              "source": "zacksinvestmentresearch",
+              "tone": 0.13342500000000002,
+              "headline": "Amazon Lands $38B Deal With OpenAI: 3 Signs to Buy the Stock Now"
+            },
+            {
+              "ts": "2025-11-05T15:08:55+00:00",
+              "source": "benzinga",
+              "tone": 0.16011,
+              "headline": "Amazon Announces DAZN Is Now Available On Prime Video In The US And UK"
+            }
+          ]
+        },
+        {
+          "symbol": "SNOW",
+          "action": "BUY",
+          "px": 267.985,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.450452,
+          "qty": 2.2389,
+          "notional": 599.99,
+          "signals": {
+            "TS": 0.518671,
+            "NS": 0.348123,
+            "CDS": 0.450452,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 263.66948154498664,
+            "ema_slow": 253.28962512234253,
+            "macd": 10.37985642264411,
+            "macd_signal": 9.609491395539337,
+            "macd_hist": 0.7703650271047735,
+            "rsi14": 60.059439083857264,
+            "sma20": 255.38549999999995
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T13:54:57+00:00",
+              "source": "simplywallst",
+              "tone": 0.10115,
+              "headline": "How Investors May Respond to Snowflake (SNOW) AI Partnerships Amid Revenue Guidance Controversy"
+            },
+            {
+              "ts": "2025-11-05T13:05:30+00:00",
+              "source": "marketbeat",
+              "tone": 0.73134,
+              "headline": "EFG Asset Management North America Corp. Acquires 5,823 Shares of Snowflake Inc. $SNOW"
+            },
+            {
+              "ts": "2025-11-05T12:45:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.6885,
+              "headline": "954 Shares in Snowflake Inc. $SNOW Acquired by Axim Planning & Wealth"
+            }
+          ]
+        }
+      ],
+      "cash_left": 17000.0
     },
     "portfolio_paper_TS_only": {
       "meta": {
