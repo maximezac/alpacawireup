@@ -18,6 +18,10 @@ on:
 permissions:
   contents: write
 
+env:
+  INPUT_BASE: data/prices.json
+  INPUT_FINAL: data/prices_final.json
+
 concurrency:
   group: gather-data-${{ github.ref }}
   cancel-in-progress: true
@@ -42,20 +46,37 @@ jobs:
                       python-dateutil==2.9.0.post0 feedparser==6.0.11 \
                       vaderSentiment==3.3.2 pyyaml==6.0.2
           pip install -r requirements.txt || echo "requirements.txt already satisfied."
-
+      
       - name: Probe freshness
         id: probe
         shell: bash
         run: |
-          prices_final="data/prices_final.json"
-          prices_base="data/prices.json"
-          now=$(date +%s)
-          fresh_prices=false
-          fresh_base=false
-          [[ -f "$prices_final" ]] && [[ $((now - $(stat -c %Y "$prices_final"))) -lt 600  ]] && fresh_prices=true
-          [[ -f "$prices_base"  ]] && [[ $((now - $(stat -c %Y "$prices_base")))  -lt 3600 ]] && fresh_base=true
-          echo "fresh_prices=$fresh_prices" >> "$GITHUB_OUTPUT"
-          echo "fresh_base=$fresh_base"     >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+      
+          is_fresh_file() {
+            local f="$1" max_age_hours="$2"
+            [ -f "$f" ] || { echo "false"; return; }
+            # prefer as_of_utc if present; else use mtime
+            if jq -e 'has("as_of_utc")' "$f" >/dev/null 2>&1; then
+              ts=$(jq -r '.as_of_utc' "$f" | sed 's/Z$/+00:00/')
+              # seconds since file timestamp
+              now=$(date -u +%s)
+              file=$(date -u -d "$ts" +%s 2>/dev/null || echo 0)
+              age=$(( (now - file) / 3600 ))
+            else
+              mtime=$(date -u -r "$f" +%s)
+              now=$(date -u +%s)
+              age=$(( (now - mtime) / 3600 ))
+            fi
+            if [ "$age" -le "$max_age_hours" ]; then echo "true"; else echo "false"; fi
+          }
+      
+          FRESH_PRICES=$(is_fresh_file "${INPUT_BASE}" 6)
+          FRESH_BASE=$(is_fresh_file "${INPUT_BASE}" 24)   # for news lookback gate
+      
+          echo "fresh_prices=$FRESH_PRICES" | tee -a "$GITHUB_OUTPUT"
+          echo "fresh_base=$FRESH_BASE"     | tee -a "$GITHUB_OUTPUT"
+
 
       - name: Fetch prices (if stale)
         if: steps.probe.outputs.fresh_prices != 'true'
