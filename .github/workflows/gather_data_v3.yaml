@@ -36,6 +36,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          which python
           python -m pip install --upgrade pip
           pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 \
                       python-dateutil==2.9.0.post0 feedparser==6.0.11 \
@@ -101,6 +102,8 @@ jobs:
           OUT_TRADES:       artifacts/recommended_trades_v3.json
         run: |
           mkdir -p artifacts
+          which python
+          python -m pip show pyyaml
           python scripts/postprocess_v3.py
           printf '%s\n' \
             'import json,sys' \
