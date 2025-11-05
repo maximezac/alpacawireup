@@ -25,17 +25,18 @@ portfolios:
     desc: "Primary personal portfolio Max"
     positions_csv: positions.csv
     strategy: default
-    trade_scope: personal
+    trade_scope: real
     sizing:
       per_line_frac: 0.02
       trim_fraction: 0.25
 
   portfolio_max_TS_only:
-    enabled: false
+    enabled: true
     type: personal
     desc: "Personal—TS-only signal focus"
-    positions_csv: data/portfolio_personal.csv
+    positions_csv: positions.csv
     strategy: ts_only
+    trade_scope: personal
     sizing:
       per_line_frac: 0.02
 
@@ -68,22 +69,24 @@ portfolios:
 
   # ===== PAPER VARIANTS =====
   portfolio_paper_aggressive_trades:
-    enabled: false
+    enabled: true
     type: paper
     desc: "Paper—aggressive"
-    positions_csv: data/portfolio_paper.csv
+    positions_csv: positions.csv
     strategy: aggressive
+    trade_scope: paper
     sizing:
       max_deploy_frac: 0.20
       per_line_frac:  0.05
-      sell_trim_fraction: 0.25
+      trim_fraction: 0.25
 
   portfolio_paper_reasonable:
-    enabled: false
+    enabled: true
     type: paper
     desc: "Paper—reasonable (baseline)"
-    positions_csv: data/portfolio_paper.csv
+    positions_csv: positions.csv
     strategy: default
+    trade_scope: paper
     sizing:
       max_deploy_frac: 0.15
       per_line_frac:  0.04
