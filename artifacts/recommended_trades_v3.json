@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T06:21:45.986566+00:00",
+  "as_of_utc": "2025-11-05T06:26:23.604011+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -28,7 +28,43 @@
           "reason": "score<sell",
           "score": -0.317435,
           "qty": 18,
-          "notional": 247.05
+          "notional": 247.05,
+          "signals": {
+            "TS": -0.581851,
+            "NS": 0.079188,
+            "CDS": -0.317435,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 15.961760617003911,
+            "ema_slow": 17.1190635018236,
+            "macd": -1.1573028848196891,
+            "macd_signal": -0.8221167669910365,
+            "macd_hist": -0.3351861178286526,
+            "rsi14": 32.70861718186747,
+            "sma20": 17.464750000000002
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T23:43:01+00:00",
+              "source": "google_rss",
+              "tone": 0.0,
+              "headline": "Quantum Computing (NASDAQ:QUBT) Stock Price Down 10.9% - Should You Sell? - MarketBeat"
+            },
+            {
+              "ts": "2025-11-04T21:36:42+00:00",
+              "source": "benzinga",
+              "tone": 0.24588000000000002,
+              "headline": "Watching Quantum Stocks As Energy Department Announces $625M To Advance Next Phase Of National Quantum Information Science Research Centers"
+            },
+            {
+              "ts": "2025-11-04T20:00:00+00:00",
+              "source": "google_rss",
+              "tone": 0.0,
+              "headline": "Quantum Computing Stocks' Q3 Earnings Preview: IONQ, QBTS and More - Nasdaq"
+            }
+          ]
         },
         {
           "symbol": "RKLB",
@@ -36,9 +72,45 @@
           "px": 56.59,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.272935,
+          "score": -0.281541,
           "qty": 1,
-          "notional": 56.59
+          "notional": 56.59,
+          "signals": {
+            "TS": -0.557281,
+            "NS": 0.132069,
+            "CDS": -0.281541,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 62.24394793599957,
+            "ema_slow": 60.734636253022806,
+            "macd": 1.5093116829767652,
+            "macd_signal": 2.900585887036683,
+            "macd_hist": -1.391274204059918,
+            "rsi14": 33.46857723217602,
+            "sma20": 64.53599999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T17:17:00+00:00",
+              "source": "google_rss",
+              "tone": -0.2665,
+              "headline": "Should You Buy Rocket Lab Stock Before Nov. 10? - The Motley Fool"
+            },
+            {
+              "ts": "2025-11-04T16:20:03+00:00",
+              "source": "benzinga",
+              "tone": 0.09243,
+              "headline": "Rocket Lab (RKLB) Stock Slides As Investors Await Q3 Earnings"
+            },
+            {
+              "ts": "2025-11-04T16:20:03+00:00",
+              "source": "google_rss",
+              "tone": 0.10115,
+              "headline": "Rocket Lab (RKLB) Stock Slides As Investors Await Q3 Earnings - Rocket Lab (NASDAQ:RKLB) - Benzinga"
+            }
+          ]
         },
         {
           "symbol": "AMZN",
@@ -48,7 +120,43 @@
           "reason": "score>buy",
           "score": 0.529997,
           "qty": 2.2733,
-          "notional": 566.95
+          "notional": 566.95,
+          "signals": {
+            "TS": 0.606631,
+            "NS": 0.415046,
+            "CDS": 0.529997,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 233.65031179340644,
+            "ema_slow": 228.25046632545022,
+            "macd": 5.399845467956226,
+            "macd_signal": 1.6813540341083808,
+            "macd_hist": 3.718491433847845,
+            "rsi14": 71.4874485428788,
+            "sma20": 225.373
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T03:12:07+00:00",
+              "source": "google_rss",
+              "tone": 0.3872,
+              "headline": "Cathie Wood and Warren Buffett Both Own This Artificial Intelligence (AI) Stock. Time to Buy? - The Globe and Mail"
+            },
+            {
+              "ts": "2025-11-05T01:57:31+00:00",
+              "source": "benzinga",
+              "tone": 0.36171,
+              "headline": "Amazon Sold Holding In Advanced Micro Devices, IonQ"
+            },
+            {
+              "ts": "2025-11-04T22:02:58+00:00",
+              "source": "google_rss",
+              "tone": 0.22395,
+              "headline": "Is Amazon Stock Primed to Keep Soaring or is a Pullback Ahead? - Zacks Investment Research"
+            }
+          ]
         },
         {
           "symbol": "FSLR",
@@ -58,7 +166,43 @@
           "reason": "score>buy",
           "score": 0.529644,
           "qty": 1.6471,
-          "notional": 433.06
+          "notional": 433.06,
+          "signals": {
+            "TS": 0.582463,
+            "NS": 0.450415,
+            "CDS": 0.529644,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 246.80279525027993,
+            "ema_slow": 236.66908898199227,
+            "macd": 10.133706268287654,
+            "macd_signal": 7.612693886185726,
+            "macd_hist": 2.5210123821019277,
+            "rsi14": 67.98747619334415,
+            "sma20": 238.13750000000013
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-04T14:52:00+00:00",
+              "source": "google_rss",
+              "tone": 0.0,
+              "headline": "GLJ Research Maintains First Solar (FSLR) Buy Recommendation - Nasdaq"
+            },
+            {
+              "ts": "2025-11-04T14:00:00+00:00",
+              "source": "finnhub",
+              "tone": 0.93,
+              "headline": "Ice Industries Celebrates Grand Opening of New Louisiana Facility"
+            },
+            {
+              "ts": "2025-11-04T12:22:34+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
+            }
+          ]
         }
       ],
       "cash_left": -0.01
