@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T16:00:38.416511+00:00",
+  "as_of_utc": "2025-11-05T16:05:12.504935+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,241 +17,241 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18317.0,
+      "portfolio_value_est": 18242.18,
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QBTS",
-          "action": "SELL",
-          "px": 31.06,
-          "qty_hint": 229.08,
-          "reason": "score<sell",
-          "score": -0.278177,
-          "qty": 57,
-          "notional": 1770.42,
-          "signals": {
-            "TS": -0.477716,
-            "NS": 0.021132,
-            "CDS": -0.278177,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 33.21456557264548,
-            "ema_slow": 32.30399625207571,
-            "macd": 0.9105693205697705,
-            "macd_signal": 1.857666980862754,
-            "macd_hist": -0.9470976602929835,
-            "rsi14": 43.33077006104046,
-            "sma20": 35.05924999999998
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T12:23:21+00:00",
-              "source": "benzinga",
-              "tone": -0.21856,
-              "headline": "D-Wave And BASF Use Quantum Computing To Cut Factory Scheduling Time From Hours To Seconds"
-            },
-            {
-              "ts": "2025-11-05T07:04:45+00:00",
-              "source": "google",
-              "tone": -0.175,
-              "headline": "QBTS, RGTI, IONQ: Quantum Computing Stocks Tumble After Palantir\u2019s Q3 Sparks Sell-Off - TipRanks"
-            },
-            {
-              "ts": "2025-11-04T21:36:42+00:00",
-              "source": "benzinga",
-              "tone": 0.21856,
-              "headline": "Watching Quantum Stocks As Energy Department Announces $625M To Advance Next Phase Of National Quantum Information Science Research Centers"
-            }
-          ]
-        },
-        {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.875,
+          "px": 13.81,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.260022,
+          "score": -0.278979,
           "qty": 18,
-          "notional": 249.75,
+          "notional": 248.58,
           "signals": {
-            "TS": -0.571977,
-            "NS": 0.20791,
-            "CDS": -0.260022,
+            "TS": -0.576763,
+            "NS": 0.167697,
+            "CDS": -0.278979,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.640720522080226,
-            "ema_slow": 16.878762431425336,
-            "macd": -1.2380419093451103,
-            "macd_signal": -0.9053017061862842,
-            "macd_hist": -0.332740203158826,
-            "rsi14": 34.08639892552807,
-            "sma20": 17.1155
+            "ema_fast": 15.630720522080226,
+            "ema_slow": 16.873947616610522,
+            "macd": -1.2432270945302957,
+            "macd_signal": -0.9063387432233213,
+            "macd_hist": -0.33688835130697437,
+            "rsi14": 33.49634927566889,
+            "sma20": 17.11225
           },
           "news_preview": [
             {
               "ts": "2025-11-05T13:37:21+00:00",
-              "source": "google",
-              "tone": 0.6237,
-              "headline": "Will QUBT stock split attract more investors - July 2025 Setups & Free High Return Stock Watch Alerts - fcp.pa.gov.br"
+              "source": "fcppagovbr",
+              "tone": 0.4455,
+              "headline": "Will QUBT stock split attract more investors - July 2025 Setups & Free High Return Stock Watch Alerts"
             },
             {
-              "ts": "2025-11-05T11:10:55+00:00",
-              "source": "google",
+              "ts": "2025-11-05T13:01:30+00:00",
+              "source": "aolcom",
+              "tone": 0.45155,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
+            {
+              "ts": "2025-11-05T12:41:09+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "UNICOM Systems Inc. Sells 103,761 Shares of Quantum Computing Inc. $QUBT"
+            }
+          ]
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 56.07,
+          "qty_hint": 7.27,
+          "reason": "score<sell",
+          "score": -0.29847,
+          "qty": 1,
+          "notional": 56.07,
+          "signals": {
+            "TS": -0.567151,
+            "NS": 0.104552,
+            "CDS": -0.29847,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 61.294109791999624,
+            "ema_slow": 60.38910729450501,
+            "macd": 0.905002497494614,
+            "macd_signal": 2.5014696502546125,
+            "macd_hist": -1.5964671527599985,
+            "rsi14": 32.481500682339004,
+            "sma20": 64.07399999999998
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T12:43:09+00:00",
+              "source": "marketbeat",
+              "tone": -0.37935,
+              "headline": "CloudAlpha Capital Management Limited Hong Kong Takes $4.04 Million Position in Rocket Lab Corporation $RKLB"
+            },
+            {
+              "ts": "2025-11-05T12:14:12+00:00",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "Futuristic quantum computing stocks take speculators on roller-coaster ride - Reuters"
+              "headline": "Cherry Creek Investment Advisors Inc. Invests $251,000 in Rocket Lab Corporation $RKLB"
             },
             {
-              "ts": "2025-11-05T06:46:56+00:00",
-              "source": "google",
-              "tone": 0.26726,
-              "headline": "Why QUBT stock is considered a top pick - Rate Hike & Consistent Income Trade Ideas - newser.com"
+              "ts": "2025-11-05T09:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Is Rocket Lab Stock the Next Nvidia?"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 277.0,
+          "px": 278.095,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.542928,
-          "qty": 2.0921,
-          "notional": 579.51,
+          "score": 0.527264,
+          "qty": 2.0758,
+          "notional": 577.27,
           "signals": {
-            "TS": 0.640118,
-            "NS": 0.397143,
-            "CDS": 0.542928,
+            "TS": 0.64355,
+            "NS": 0.352835,
+            "CDS": 0.527264,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.4485190579291,
-            "ema_slow": 239.65656140473743,
-            "macd": 11.791957653191673,
-            "macd_signal": 8.448549774734863,
-            "macd_hist": 3.3434078784568104,
-            "rsi14": 75.03471913958377,
-            "sma20": 240.42425000000017
+            "ema_fast": 251.61698059639065,
+            "ema_slow": 239.73767251584854,
+            "macd": 11.879308080542103,
+            "macd_signal": 8.466019860204948,
+            "macd_hist": 3.4132882203371544,
+            "rsi14": 75.45493741618589,
+            "sma20": 240.47900000000018
           },
           "news_preview": [
             {
               "ts": "2025-11-05T12:43:10+00:00",
-              "source": "google",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "Advisors Preferred LLC Trims Stock Position in First Solar, Inc. $FSLR - MarketBeat"
+              "headline": "Advisors Preferred LLC Trims Stock Position in First Solar, Inc. $FSLR"
             },
             {
               "ts": "2025-11-05T11:09:55+00:00",
-              "source": "google",
-              "tone": 0.47656,
-              "headline": "Why FSLR stock is popular among millennials - Weekly Earnings Recap & AI Powered Buy/Sell Recommendations - newser.com"
+              "source": "newsercom",
+              "tone": 0.3404,
+              "headline": "Why FSLR stock is popular among millennials - Weekly Earnings Recap & AI Powered Buy/Sell Recommendations"
             },
             {
               "ts": "2025-11-05T10:59:08+00:00",
-              "source": "google",
-              "tone": 0.60739,
-              "headline": "Is First Solar Still a Value Opportunity After 41% Rally and New Utility Contracts? - simplywall.st"
+              "source": "simplywallst",
+              "tone": 0.5,
+              "headline": "Is First Solar Still a Value Opportunity After 41% Rally and New Utility Contracts?"
             }
           ]
         },
         {
-          "symbol": "GOOGL",
+          "symbol": "AAPL",
           "action": "BUY",
-          "px": 282.945,
+          "px": 269.3,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.467519,
-          "qty": 1.4861,
-          "notional": 420.48,
+          "score": 0.498647,
+          "qty": 1.5697,
+          "notional": 422.72,
           "signals": {
-            "TS": 0.621629,
-            "NS": 0.236353,
-            "CDS": 0.467519,
+            "TS": 0.559648,
+            "NS": 0.407146,
+            "CDS": 0.498647,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 271.7232450094908,
-            "ema_slow": 261.07281319302376,
-            "macd": 10.650431816467062,
-            "macd_signal": 8.71012245556398,
-            "macd_hist": 1.9403093609030826,
-            "rsi14": 72.9337594713271,
-            "sma20": 260.6862500000002
+            "ema_fast": 266.32239436980336,
+            "ema_slow": 260.32511359209656,
+            "macd": 5.997280777706806,
+            "macd_signal": 5.697782799510085,
+            "macd_hist": 0.29949797819672064,
+            "rsi14": 65.63016520978448,
+            "sma20": 260.38325
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T15:31:44+00:00",
+              "ts": "2025-11-05T15:01:08+00:00",
               "source": "benzinga",
-              "tone": 0.2,
-              "headline": "Google Introduces Hands-Free, Conversational Driving Experience In Google Maps, Built With Gemini; Landmark-Based Navigation Is Rolling Out Now On Android And iOS In The U.S.; Gemini In Navigation Starts Rolling Out In Coming Weeks On Android & iOS Everywhere Gemini Is Available, Android Auto On The Way"
+              "tone": 0.24588000000000002,
+              "headline": "Inquiry Into Apple's Competitor Dynamics In Technology Hardware, Storage &amp; Peripherals Industry"
             },
             {
-              "ts": "2025-11-05T15:08:51+00:00",
-              "source": "benzinga",
+              "ts": "2025-11-05T14:33:45+00:00",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "Calico Life Sciences Announces U.S. FDA Orphan Drug Designation For Investigational Treatment Of Autosomal Dominant Polycystic Kidney Disease"
+              "headline": "Why Apple's Next Quarter Could Be a \"Prove It\" iPhone 17 Moment"
             },
             {
-              "ts": "2025-11-05T15:01:24+00:00",
+              "ts": "2025-11-05T13:39:31+00:00",
               "source": "benzinga",
-              "tone": 0.2,
-              "headline": "Spotlight on Alphabet: Analyzing the Surge in Options Activity"
+              "tone": 0.80406,
+              "headline": "Fortnite Maker Epic Games CEO Tim Sweeney Praises Google's 'Awesome Proposal' To Open Up Android And Resolve App Store Fight"
             }
           ]
         },
         {
-          "symbol": "SOFI",
+          "symbol": "NVDA",
           "action": "BUY",
-          "px": 29.8,
+          "px": 202.28,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.369079,
+          "score": 0.386068,
           "qty": 0.0001,
-          "notional": 0.0,
+          "notional": 0.02,
           "signals": {
-            "TS": 0.467085,
-            "NS": 0.222071,
-            "CDS": 0.369079,
+            "TS": 0.526681,
+            "NS": 0.175148,
+            "CDS": 0.386068,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 29.432240044784177,
-            "ema_slow": 28.603850694665752,
-            "macd": 0.8283893501184245,
-            "macd_signal": 0.787566553901083,
-            "macd_hist": 0.04082279621734153,
-            "rsi14": 53.912873509196025,
-            "sma20": 28.677999999999987
+            "ema_fast": 197.09237304895964,
+            "ema_slow": 191.27774420997488,
+            "macd": 5.81462883898476,
+            "macd_signal": 4.475719384137295,
+            "macd_hist": 1.3389094548474647,
+            "rsi14": 61.325196665304,
+            "sma20": 190.70725000000007
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T13:54:56+00:00",
-              "source": "google",
-              "tone": 0.0,
-              "headline": "Near All-Time High, SoFi Technologies Is Not Done Running Higher - 24/7 Wall St."
+              "ts": "2025-11-05T15:38:47+00:00",
+              "source": "reuters",
+              "tone": 0.646996,
+              "headline": "Don't panic yet, investors say, as high-flying AI stocks tumble"
             },
             {
-              "ts": "2025-11-05T13:53:02+00:00",
-              "source": "google",
+              "ts": "2025-11-05T15:00:29+00:00",
+              "source": "benzinga",
               "tone": 0.0,
-              "headline": "Why Everyone's Talking About SoFi Technologies Stock - AOL.com"
+              "headline": "Industry Comparison: Evaluating NVIDIA Against Competitors In Semiconductors &amp; Semiconductor Equipment Industry"
             },
             {
-              "ts": "2025-11-05T12:19:06+00:00",
-              "source": "google",
+              "ts": "2025-11-05T14:57:39+00:00",
+              "source": "theeconomictimes",
               "tone": 0.0,
-              "headline": "Moors & Cabot Inc. Has $12.57 Million Stock Holdings in SoFi Technologies, Inc. $SOFI - MarketBeat"
+              "headline": "Nvidia news: Loop Capital says Jensen Huang-led company's stock could jump 75% \u2013 here are the reasons it g"
             }
           ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_max_TS_only": {
       "meta": {
