@@ -35,6 +35,14 @@ def choose_slippage_bps(scope: str, sym: str) -> float:
     base = SLIP_PAPER_BPS if scope == "paper" else SLIP_REAL_BPS
     return base + (LIQ_SC_BPS if sym in SMALLCAPS else 0.0)
 
+def latest_px(node: dict) -> float:
+    if not node: return 0.0
+    v = node.get("price")
+    if v is None:
+        v = (node.get("now") or {}).get("price")
+    try: return float(v or 0.0)
+    except: return 0.0
+
 def exec_price(mark_px: float, bps: float, side: str) -> float:
     # BUY -> price up by slippage; SELL -> price down
     mult = 1.0 + (bps / 10000.0) if side.upper() == "BUY" else 1.0 - (bps / 10000.0)
@@ -73,6 +81,7 @@ def write_last_applied(path: str | Path, asof: str):
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps({"last_as_of_utc": asof}, indent=2))
+    
 
 def mark_to_market(cash: float, pos: Dict[str, dict], prices: Dict[str, Any]) -> Tuple[float, float]:
     mv = 0.0
