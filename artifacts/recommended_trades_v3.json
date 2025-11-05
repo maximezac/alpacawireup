@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T07:15:27.721630+00:00",
+  "as_of_utc": "2025-11-05T08:20:03.825445+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 13.725,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.316509,
+          "score": -0.316505,
           "qty": 18,
           "notional": 247.05,
           "signals": {
             "TS": -0.581851,
-            "NS": 0.081504,
-            "CDS": -0.316509,
+            "NS": 0.081513,
+            "CDS": -0.316505,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -113,60 +113,14 @@
           ]
         },
         {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 249.395,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.529688,
-          "qty": 2.2733,
-          "notional": 566.95,
-          "signals": {
-            "TS": 0.606631,
-            "NS": 0.414274,
-            "CDS": 0.529688,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 233.65031179340644,
-            "ema_slow": 228.25046632545022,
-            "macd": 5.399845467956226,
-            "macd_signal": 1.6813540341083808,
-            "macd_hist": 3.718491433847845,
-            "rsi14": 71.4874485428788,
-            "sma20": 225.373
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T03:12:07+00:00",
-              "source": "google_rss",
-              "tone": 0.3811,
-              "headline": "Cathie Wood and Warren Buffett Both Own This Artificial Intelligence (AI) Stock. Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T01:57:31+00:00",
-              "source": "benzinga",
-              "tone": 0.36171,
-              "headline": "Amazon Sold Holding In Advanced Micro Devices, IonQ"
-            },
-            {
-              "ts": "2025-11-04T22:02:58+00:00",
-              "source": "google_rss",
-              "tone": 0.20685,
-              "headline": "Is Amazon Stock Primed to Keep Soaring or is a Pullback Ahead?"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 262.92,
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.529644,
-          "qty": 1.6471,
-          "notional": 433.06,
+          "qty": 2.1563,
+          "notional": 566.93,
           "signals": {
             "TS": 0.582463,
             "NS": 0.450415,
@@ -201,6 +155,52 @@
               "source": "benzinga",
               "tone": 0.0,
               "headline": "GLJ Research Maintains Buy on First Solar, Raises Price Target to $314.43"
+            }
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 249.395,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.500373,
+          "qty": 1.7365,
+          "notional": 433.07,
+          "signals": {
+            "TS": 0.606631,
+            "NS": 0.340987,
+            "CDS": 0.500373,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 233.65031179340644,
+            "ema_slow": 228.25046632545022,
+            "macd": 5.399845467956226,
+            "macd_signal": 1.6813540341083808,
+            "macd_hist": 3.718491433847845,
+            "rsi14": 71.4874485428788,
+            "sma20": 225.373
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T07:45:03+00:00",
+              "source": "benzinga",
+              "tone": -0.78201,
+              "headline": "Dan Ives Slams Michael Burry For Betting Against 'Messi Of AI' Palantir, Says He Is 'Dead Wrong'"
+            },
+            {
+              "ts": "2025-11-05T04:10:27+00:00",
+              "source": "google_rss",
+              "tone": 0.43385,
+              "headline": "NVDA vs. BBAI vs. AMZN: Which AI Stock Is the Best Pick, According to Analysts?"
+            },
+            {
+              "ts": "2025-11-05T01:57:31+00:00",
+              "source": "benzinga",
+              "tone": 0.36171,
+              "headline": "Amazon Sold Holding In Advanced Micro Devices, IonQ"
             }
           ]
         }
