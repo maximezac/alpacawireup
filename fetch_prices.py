@@ -280,7 +280,7 @@ def main():
                 "symbol": sym,
                 "price": last.get("c"),
                 "ts": last.get("t"),
-                "history": normalized_bars[-200:],  # compact history slice for indicators
+                "bars": normalized_bars[-200:],  # <-- publish_feed.py expects this key
                 "sector": sectors.get(sym, ""),      # optional; enrich via sectors.json
                 "indicators": indicators,
                 "news": []                           # news added by fetch_news.py later
