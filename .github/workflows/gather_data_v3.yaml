@@ -49,20 +49,17 @@ jobs:
 
       - name: Ensure jq
         run: sudo apt-get update && sudo apt-get install -y jq
-        
+
       - name: Probe freshness
         id: probe
         shell: bash
         run: |
           set -euo pipefail
-      
           is_fresh_file() {
             local f="$1" max_age_hours="$2"
             [ -f "$f" ] || { echo "false"; return; }
-            # prefer as_of_utc if present; else use mtime
             if jq -e 'has("as_of_utc")' "$f" >/dev/null 2>&1; then
               ts=$(jq -r '.as_of_utc' "$f" | sed 's/Z$/+00:00/')
-              # seconds since file timestamp
               now=$(date -u +%s)
               file=$(date -u -d "$ts" +%s 2>/dev/null || echo 0)
               age=$(( (now - file) / 3600 ))
@@ -73,16 +70,28 @@ jobs:
             fi
             if [ "$age" -le "$max_age_hours" ]; then echo "true"; else echo "false"; fi
           }
-      
-          FRESH_PRICES=$(is_fresh_file "${INPUT_BASE}" 6)
-          FRESH_BASE=$(is_fresh_file "${INPUT_BASE}" 24)   # for news lookback gate
-      
-          echo "fresh_prices=$FRESH_PRICES" | tee -a "$GITHUB_OUTPUT"
-          echo "fresh_base=$FRESH_BASE"     | tee -a "$GITHUB_OUTPUT"
+          echo "fresh_prices=$(is_fresh_file '${INPUT_BASE}' 6)"  | tee -a "$GITHUB_OUTPUT"
+          echo "fresh_base=$(is_fresh_file '${INPUT_BASE}' 24)"   | tee -a "$GITHUB_OUTPUT"
 
+      # restore this so prices refresh when stale
+      - name: Fetch prices (if stale)
+        if: steps.probe.outputs.fresh_prices != 'true'
+        env:
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_DATA_FEED:  iex
+          SYMBOLS_PATH:      data/symbols.txt
+          OUTPUT_PATH:       data/prices.json
+          DAYS_BACK:         "270"
+        run: python fetch_prices.py
 
+      # set WEEKDAY before the conditional
+      - name: Set WEEKDAY
+        run: echo "WEEKDAY=$(date -u +%a)" >> "$GITHUB_ENV"
+
+      # single news step (weekday gate), with creds
       - name: Fetch news (weekday always)
-        if: startsWith(github.ref, 'refs/heads/') && contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
+        if: contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
         continue-on-error: true
         env:
           INPUT_PATH:  data/prices.json
@@ -92,23 +101,10 @@ jobs:
           NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
           NEWSAPI_KEY:  ${{ secrets.NEWSAPI_KEY }}
           FINNHUB_KEY:  ${{ secrets.FINNHUB_KEY }}
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python scripts/fetch_news.py
 
-
-      - name: Set WEEKDAY
-        run: echo "WEEKDAY=$(date -u +%a)" >> "$GITHUB_ENV"
-
-      - name: Fetch news (weekday always)
-        if: startsWith(github.ref, 'refs/heads/') && contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
-        env:
-          INPUT_PATH:  data/prices.json
-          OUTPUT_PATH: data/prices.json
-          NEWS_LOOKBACK_DAYS: "7"
-          NEWS_LIMIT_PER_SYMBOL: "25"
-          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
-          NEWSAPI_KEY:  ${{ secrets.NEWSAPI_KEY }}
-          FINNHUB_KEY:  ${{ secrets.FINNHUB_KEY }}
-        run: python scripts/fetch_news.py
 
       - name: Generate enriched feed
         env:
