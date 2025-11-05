@@ -45,6 +45,31 @@ def write_json(path: str, obj: Any) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, indent=2)
 
+# engine.py
+
+def _latest_px(node: dict) -> float:
+    if not node:
+        return 0.0
+    v = node.get("price")
+    if v is None:
+        v = (node.get("now") or {}).get("price")  # legacy fallback
+    try:
+        return float(v or 0.0)
+    except:
+        return 0.0
+
+def total_value(positions: dict, feed: dict) -> float:
+    syms = (feed or {}).get("symbols") or {}
+    val = 0.0
+    for sym, qty in positions.items():
+        node = syms.get(sym)
+        if not node:
+            continue
+        px = _latest_px(node)
+        val += float(qty) * px
+    return val
+
+
 def read_positions_csv(path: str) -> tuple[float, Dict[str, dict]]:
     """
     CSV schema:
