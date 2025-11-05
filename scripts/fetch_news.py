@@ -28,7 +28,7 @@ from __future__ import annotations
 
 import os
 import sys
-import re
+import re, html
 import json
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -73,6 +73,28 @@ NEWS_SOURCE_WEIGHTS: Dict[str, float] = {
 analyzer = SentimentIntensityAnalyzer()
 _src_norm_re = re.compile(r"[^a-z0-9]+")
 
+_html_tag_re = re.compile(r"<[^>]+>")
+_ws_re = re.compile(r"\s+")
+
+def _clean_html(text: str) -> str:
+    if not text:
+        return ""
+    # remove tags, unescape entities, collapse whitespace
+    no_tags = _html_tag_re.sub(" ", text)
+    unescaped = html.unescape(no_tags)
+    return _ws_re.sub(" ", unescaped).strip()
+
+def _split_publisher_from_title(title: str) -> tuple[str, str | None]:
+    """Return (clean_title, publisher) by splitting '... - Publisher' (Google News style)."""
+    if not title:
+        return "", None
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+    if len(parts) >= 2:
+        # assume last segment is publisher
+        publisher = parts[-1]
+        clean_title = " - ".join(parts[:-1])
+        return clean_title, publisher
+    return title.strip(), None
 
 def norm_source(s: str) -> str:
     """Normalize to lowercase token w/o spaces/punct: 'MT Newswires' -> 'mtnewswires'."""
@@ -218,35 +240,41 @@ def get_news_from_finnhub(symbol: str, api_key: str) -> List[Dict[str, Any]]:
         })
     return out
 
-
-def get_news_from_google(symbol: str) -> List[Dict[str, Any]]:
+def get_news_from_google(symbol: str) -> list[dict]:
+    """Fetch latest Google News RSS items for a symbol/company (cleaned)."""
     query = f"{symbol}+stock"
     feed_url = f"https://news.google.com/rss/search?q={query}"
-    try:
-        feed = feedparser.parse(feed_url)
-    except Exception:
-        return []
+    feed = feedparser.parse(feed_url)
 
-    out: List[Dict[str, Any]] = []
+    out = []
     for entry in feed.entries[:10]:
-        title = getattr(entry, "title", "") or ""
-        summary = entry.get("summary", "") if isinstance(entry, dict) else getattr(entry, "summary", "") or ""
+        raw_title = entry.title if hasattr(entry, "title") else ""
+        title, publisher = _split_publisher_from_title(raw_title)
+
+        raw_summary = entry.get("summary", "")
+        summary = _clean_html(raw_summary)
+
+        # Timestamp (prefer published_parsed)
         if getattr(entry, "published_parsed", None):
             ts = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc).isoformat()
         else:
-            ts = to_utc_iso(entry.get("published") if isinstance(entry, dict) else getattr(entry, "published", None))
-        src_token = "google_rss"
+            ts = to_utc_iso(entry.get("published", ""))
+
+        url = entry.link
+
+        # Keep source token as 'google_rss' so your weighting/filtering continues to work.
+        # Add 'publisher' separately for display/debug.
         out.append({
-            "headline": title,
+            "headline": title or raw_title,
             "summary": summary,
             "ts": ts,
-            "source": src_token,
-            "url": entry.link if hasattr(entry, "link") else entry.get("link", ""),
+            "source": "google_rss",
+            "publisher": publisher,
+            "url": url,
+            "tone": score_tone(title, summary, "google_rss"),
             "relevance": 1.0,
-            "tone": score_tone(title, summary, src_token),
         })
     return out
-
 
 def get_news_from_reddit(symbol: str) -> List[Dict[str, Any]]:
     url = f"https://www.reddit.com/search.json?q={symbol}&limit=25&t=day"
