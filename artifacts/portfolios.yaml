@@ -25,6 +25,7 @@ portfolios:
     desc: "Primary personal portfolio (replaces old portfolio_personal)"
     positions_csv: data/portfolio_personal.csv
     strategy: default
+    trade_scope: real
     sizing:
       per_line_frac: 0.02
       sell_trim_fraction: 0.25
