@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-05T15:47:46.184164+00:00",
+  "as_of_utc": "2025-11-05T16:00:38.416511+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18202.06,
+      "portfolio_value_est": 18317.0,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 30.71,
+          "px": 31.06,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.283374,
+          "score": -0.278177,
           "qty": 57,
-          "notional": 1750.47,
+          "notional": 1770.42,
           "signals": {
-            "TS": -0.486378,
+            "TS": -0.477716,
             "NS": 0.021132,
-            "CDS": -0.283374,
+            "CDS": -0.278177,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 33.160719418799324,
-            "ema_slow": 32.27807032614979,
-            "macd": 0.8826490926495367,
-            "macd_signal": 1.8520829352787072,
-            "macd_hist": -0.9694338426291704,
-            "rsi14": 42.26900748221216,
-            "sma20": 35.041749999999986
+            "ema_fast": 33.21456557264548,
+            "ema_slow": 32.30399625207571,
+            "macd": 0.9105693205697705,
+            "macd_signal": 1.857666980862754,
+            "macd_hist": -0.9470976602929835,
+            "rsi14": 43.33077006104046,
+            "sma20": 35.05924999999998
           },
           "news_preview": [
             {
@@ -69,27 +69,27 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.725,
+          "px": 13.875,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.324714,
+          "score": -0.260022,
           "qty": 18,
-          "notional": 247.05,
+          "notional": 249.75,
           "signals": {
-            "TS": -0.583151,
-            "NS": 0.062942,
-            "CDS": -0.324714,
+            "TS": -0.571977,
+            "NS": 0.20791,
+            "CDS": -0.260022,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.617643599003303,
-            "ema_slow": 16.867651320314224,
-            "macd": -1.2500077213109204,
-            "macd_signal": -0.9076948685794461,
-            "macd_hist": -0.34231285273147427,
-            "rsi14": 32.70861718186812,
-            "sma20": 17.108
+            "ema_fast": 15.640720522080226,
+            "ema_slow": 16.878762431425336,
+            "macd": -1.2380419093451103,
+            "macd_signal": -0.9053017061862842,
+            "macd_hist": -0.332740203158826,
+            "rsi14": 34.08639892552807,
+            "sma20": 17.1155
           },
           "news_preview": [
             {
@@ -105,83 +105,37 @@
               "headline": "Futuristic quantum computing stocks take speculators on roller-coaster ride - Reuters"
             },
             {
-              "ts": "2025-11-05T10:16:22+00:00",
+              "ts": "2025-11-05T06:46:56+00:00",
               "source": "google",
-              "tone": -0.59367,
-              "headline": "Will QUBT stock return to pre crisis levels - Market Movers & AI Powered Trade Plan Recommendations - newser.com"
-            }
-          ]
-        },
-        {
-          "symbol": "RGTI",
-          "action": "SELL",
-          "px": 36.165,
-          "qty_hint": 12.17,
-          "reason": "score<sell",
-          "score": -0.254237,
-          "qty": 3,
-          "notional": 108.5,
-          "signals": {
-            "TS": -0.503989,
-            "NS": 0.12039,
-            "CDS": -0.254237,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 39.635660011740434,
-            "ema_slow": 38.77471592394939,
-            "macd": 0.8609440877910473,
-            "macd_signal": 2.366959804228936,
-            "macd_hist": -1.5060157164378887,
-            "rsi14": 40.19623667330593,
-            "sma20": 43.22224999999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T07:04:45+00:00",
-              "source": "google",
-              "tone": -0.175,
-              "headline": "QBTS, RGTI, IONQ: Quantum Computing Stocks Tumble After Palantir\u2019s Q3 Sparks Sell-Off - TipRanks"
-            },
-            {
-              "ts": "2025-11-05T04:40:00+00:00",
-              "source": "google",
-              "tone": 0.36869,
-              "headline": "Rigetti Computing (RGTI): Assessing Its Valuation After a 120% Share Price Surge - Yahoo Finance"
-            },
-            {
-              "ts": "2025-11-04T21:36:42+00:00",
-              "source": "benzinga",
-              "tone": 0.21856,
-              "headline": "Watching Quantum Stocks As Energy Department Announces $625M To Advance Next Phase Of National Quantum Information Science Research Centers"
+              "tone": 0.26726,
+              "headline": "Why QUBT stock is considered a top pick - Rate Hike & Consistent Income Trade Ideas - newser.com"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 278.5,
+          "px": 277.0,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.545731,
-          "qty": 2.0684,
-          "notional": 576.05,
+          "score": 0.542928,
+          "qty": 2.0921,
+          "notional": 579.51,
           "signals": {
-            "TS": 0.64479,
+            "TS": 0.640118,
             "NS": 0.397143,
-            "CDS": 0.545731,
+            "CDS": 0.542928,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.67928828869833,
-            "ema_slow": 239.76767251584852,
-            "macd": 11.911615772849814,
-            "macd_signal": 8.47248139866649,
-            "macd_hist": 3.4391343741833236,
-            "rsi14": 75.60679908844551,
-            "sma20": 240.49925000000016
+            "ema_fast": 251.4485190579291,
+            "ema_slow": 239.65656140473743,
+            "macd": 11.791957653191673,
+            "macd_signal": 8.448549774734863,
+            "macd_hist": 3.3434078784568104,
+            "rsi14": 75.03471913958377,
+            "sma20": 240.42425000000017
           },
           "news_preview": [
             {
@@ -207,27 +161,27 @@
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.16,
+          "px": 282.945,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.472182,
-          "qty": 1.4919,
-          "notional": 423.94,
+          "score": 0.467519,
+          "qty": 1.4861,
+          "notional": 420.48,
           "signals": {
-            "TS": 0.629401,
+            "TS": 0.621629,
             "NS": 0.236353,
-            "CDS": 0.472182,
+            "CDS": 0.467519,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 271.9101680864139,
-            "ema_slow": 261.16281319302374,
-            "macd": 10.747354893390138,
-            "macd_signal": 8.729507070948594,
-            "macd_hist": 2.017847822441544,
-            "rsi14": 73.89635208901512,
-            "sma20": 260.7470000000002
+            "ema_fast": 271.7232450094908,
+            "ema_slow": 261.07281319302376,
+            "macd": 10.650431816467062,
+            "macd_signal": 8.71012245556398,
+            "macd_hist": 1.9403093609030826,
+            "rsi14": 72.9337594713271,
+            "sma20": 260.6862500000002
           },
           "news_preview": [
             {
@@ -253,27 +207,27 @@
         {
           "symbol": "SOFI",
           "action": "BUY",
-          "px": 29.785,
+          "px": 29.8,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.381616,
-          "qty": 0.0004,
-          "notional": 0.01,
+          "score": 0.369079,
+          "qty": 0.0001,
+          "notional": 0.0,
           "signals": {
-            "TS": 0.466323,
-            "NS": 0.254555,
-            "CDS": 0.381616,
+            "TS": 0.467085,
+            "NS": 0.222071,
+            "CDS": 0.369079,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 29.429932352476484,
-            "ema_slow": 28.602739583554637,
-            "macd": 0.8271927689218472,
-            "macd_signal": 0.7873272376617675,
-            "macd_hist": 0.039865531260079745,
-            "rsi14": 53.81860794700513,
-            "sma20": 28.677249999999987
+            "ema_fast": 29.432240044784177,
+            "ema_slow": 28.603850694665752,
+            "macd": 0.8283893501184245,
+            "macd_signal": 0.787566553901083,
+            "macd_hist": 0.04082279621734153,
+            "rsi14": 53.912873509196025,
+            "sma20": 28.677999999999987
           },
           "news_preview": [
             {
@@ -283,16 +237,16 @@
               "headline": "Near All-Time High, SoFi Technologies Is Not Done Running Higher - 24/7 Wall St."
             },
             {
+              "ts": "2025-11-05T13:53:02+00:00",
+              "source": "google",
+              "tone": 0.0,
+              "headline": "Why Everyone's Talking About SoFi Technologies Stock - AOL.com"
+            },
+            {
               "ts": "2025-11-05T12:19:06+00:00",
               "source": "google",
               "tone": 0.0,
               "headline": "Moors & Cabot Inc. Has $12.57 Million Stock Holdings in SoFi Technologies, Inc. $SOFI - MarketBeat"
-            },
-            {
-              "ts": "2025-11-05T11:20:50+00:00",
-              "source": "google",
-              "tone": 0.39018,
-              "headline": "Ring Mountain Capital LLC Boosts Stock Position in SoFi Technologies, Inc. $SOFI - MarketBeat"
             }
           ]
         }
