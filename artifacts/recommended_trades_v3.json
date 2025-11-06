@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T19:39:27.993539+00:00",
+  "as_of_utc": "2025-11-06T20:16:18.313971+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 17520.61,
+      "portfolio_value_est": 17567.35,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 28.735,
+          "px": 28.92,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.29793,
+          "score": -0.281369,
           "qty": 57,
-          "notional": 1637.89,
+          "notional": 1648.44,
           "signals": {
-            "TS": -0.523256,
-            "NS": 0.040059,
-            "CDS": -0.29793,
+            "TS": -0.520145,
+            "NS": 0.076795,
+            "CDS": -0.281369,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.52344897567043,
-            "ema_slow": 32.038597311413724,
-            "macd": 0.4848516642567091,
-            "macd_signal": 1.5829125170651217,
-            "macd_hist": -1.0980608528084126,
-            "rsi14": 37.96459904666084,
-            "sma20": 34.74024999999998
+            "ema_fast": 32.551910514131976,
+            "ema_slow": 32.05230101511743,
+            "macd": 0.49960949901454654,
+            "macd_signal": 1.585864084016689,
+            "macd_hist": -1.0862545850021426,
+            "rsi14": 38.34210084147288,
+            "sma20": 34.749499999999976
           },
           "news_preview": [
             {
@@ -53,45 +53,51 @@
               "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
             },
             {
-              "ts": "2025-11-06T17:31:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
-            {
               "ts": "2025-11-06T16:24:31+00:00",
               "source": "247wallst",
               "tone": 0.0,
               "headline": "\u2018We\u2019re the Only Real Quantum Company\u2019: The 3 Lines That Define D-Wave\u2019s Hype Cycle"
+            },
+            {
+              "ts": "2025-11-06T15:55:09+00:00",
+              "source": "benzinga",
+              "tone": 0.03483,
+              "headline": "D-Wave Quantum's Revenue Doubles, But Shares Drop: What's Going On?"
             }
           ]
         },
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.27,
+          "px": 13.255,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.302317,
+          "score": -0.322762,
           "qty": 18,
-          "notional": 238.86,
+          "notional": 238.59,
           "signals": {
-            "TS": -0.587741,
-            "NS": 0.125819,
-            "CDS": -0.302317,
+            "TS": -0.588271,
+            "NS": 0.075501,
+            "CDS": -0.322762,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.315047542351907,
-            "ema_slow": 16.632022823318312,
-            "macd": -1.316975280966405,
-            "macd_signal": -0.9838073560617424,
-            "macd_hist": -0.3331679249046626,
-            "rsi14": 32.2617782338734,
-            "sma20": 16.727999999999994
+            "ema_fast": 15.312739850044215,
+            "ema_slow": 16.6309117122072,
+            "macd": -1.3181718621629859,
+            "macd_signal": -0.9840466723010586,
+            "macd_hist": -0.3341251898619273,
+            "rsi14": 32.1975053356779,
+            "sma20": 16.727249999999994
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T18:43:38+00:00",
+              "source": "aolcom",
+              "tone": 0.0,
+              "headline": "Is Quantum Computing Inc. Stock a Buy Now?"
+            },
             {
               "ts": "2025-11-06T13:42:00+00:00",
               "source": "investorsbusinessdaily",
@@ -100,42 +106,36 @@
             },
             {
               "ts": "2025-11-06T13:31:00+00:00",
-              "source": "tradingview",
+              "source": "nasdaq",
               "tone": 0.0,
               "headline": "Will QUBT's New Quantum Deployments Drive Its Commercial Breakout?"
-            },
-            {
-              "ts": "2025-11-06T11:32:24+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.31589999999999996,
-              "headline": "Will QUBT stock return to pre crisis levels - 2025 Dividend Review & Free Long-Term Investment Growth Plans"
             }
           ]
         },
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 66.57,
+          "px": 66.305,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.351441,
+          "score": -0.350399,
           "qty": 2,
-          "notional": 133.14,
+          "notional": 132.61,
           "signals": {
-            "TS": -0.562507,
-            "NS": -0.034841,
-            "CDS": -0.351441,
+            "TS": -0.565258,
+            "NS": -0.02811,
+            "CDS": -0.350399,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 73.87948012245317,
-            "ema_slow": 72.59379039797066,
-            "macd": 1.2856897244825092,
-            "macd_signal": 3.8442589342489804,
-            "macd_hist": -2.558569209766471,
-            "rsi14": 32.993852810579924,
-            "sma20": 79.31575000000007
+            "ema_fast": 73.83871089168395,
+            "ema_slow": 72.57416076834105,
+            "macd": 1.2645501233429002,
+            "macd_signal": 3.8400310140210587,
+            "macd_hist": -2.5754808906781586,
+            "rsi14": 32.65709646083296,
+            "sma20": 79.30250000000007
           },
           "news_preview": [
             {
@@ -161,29 +161,35 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.46,
+          "px": 51.02,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.338209,
+          "score": -0.358286,
           "qty": 1,
-          "notional": 51.46,
+          "notional": 51.02,
           "signals": {
-            "TS": -0.630578,
-            "NS": 0.100345,
-            "CDS": -0.338209,
+            "TS": -0.634996,
+            "NS": 0.05678,
+            "CDS": -0.358286,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 59.82543017902928,
-            "ema_slow": 59.751011964448395,
-            "macd": 0.07441821458088782,
-            "macd_signal": 2.0203984443605667,
-            "macd_hist": -1.9459802297796789,
-            "rsi14": 24.89661240661104,
-            "sma20": 63.341750000000005
+            "ema_fast": 59.75773787133698,
+            "ema_slow": 59.7184193718558,
+            "macd": 0.03931849948117616,
+            "macd_signal": 2.0133785013406245,
+            "macd_hist": -1.9740600018594483,
+            "rsi14": 24.358993739949426,
+            "sma20": 63.31975
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T19:18:18+00:00",
+              "source": "benzinga",
+              "tone": -0.42453,
+              "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
+            },
             {
               "ts": "2025-11-06T18:31:59+00:00",
               "source": "benzinga",
@@ -195,47 +201,35 @@
               "source": "benzinga",
               "tone": -0.57321,
               "headline": "Space Stocks BlackSky, Redwire Dump After Earnings; AST, Rocket Lab On Deck - Rocket Lab (NASDAQ:RKLB)"
-            },
-            {
-              "ts": "2025-11-06T17:15:00+00:00",
-              "source": "yahoofinancesingapore",
-              "tone": 0.0,
-              "headline": "Should You Buy, Hold or Sell Rocket Lab Stock Ahead of Q3 Earnings?"
             }
           ]
         },
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 34.72,
+          "px": 34.94,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.298706,
+          "score": -0.278742,
           "qty": 3,
-          "notional": 104.16,
+          "notional": 104.82,
           "signals": {
-            "TS": -0.522207,
-            "NS": 0.036547,
-            "CDS": -0.298706,
+            "TS": -0.519048,
+            "NS": 0.081716,
+            "CDS": -0.278742,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.02715610460876,
-            "ema_slow": 38.55221287330385,
-            "macd": 0.47494323130490557,
-            "macd_signal": 2.003043210925197,
-            "macd_hist": -1.5280999796202916,
-            "rsi14": 38.16605313855369,
-            "sma20": 42.65999999999999
+            "ema_fast": 39.06100225845491,
+            "ema_slow": 38.56850916960015,
+            "macd": 0.49249308885476495,
+            "macd_signal": 2.006553182435169,
+            "macd_hist": -1.514060093580404,
+            "rsi14": 38.54970093404007,
+            "sma20": 42.670999999999985
           },
           "news_preview": [
-            {
-              "ts": "2025-11-06T17:31:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
             {
               "ts": "2025-11-06T16:29:43+00:00",
               "source": "tradingview",
@@ -247,33 +241,39 @@
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            },
+            {
+              "ts": "2025-11-06T13:22:13+00:00",
+              "source": "barrons",
+              "tone": -0.500365,
+              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 275.67,
+          "px": 276.32,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.515315,
-          "qty": 2.0155,
-          "notional": 555.61,
+          "score": 0.519342,
+          "qty": 2.0159,
+          "notional": 557.03,
           "signals": {
-            "TS": 0.624666,
-            "NS": 0.351288,
-            "CDS": 0.515315,
+            "TS": 0.631403,
+            "NS": 0.35125,
+            "CDS": 0.519342,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.21525577091043,
-            "ema_slow": 242.34548599889172,
-            "macd": 12.869769772018714,
-            "macd_signal": 9.336749868051127,
-            "macd_hist": 3.5330199039675865,
-            "rsi14": 73.00560200818543,
-            "sma20": 242.50825000000015
+            "ema_fast": 255.31525577091043,
+            "ema_slow": 242.39363414703985,
+            "macd": 12.921621623870578,
+            "macd_signal": 9.3471202384215,
+            "macd_hist": 3.5745013854490786,
+            "rsi14": 73.84267435406093,
+            "sma20": 242.54075000000012
           },
           "news_preview": [
             {
@@ -299,27 +299,27 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.76,
+          "px": 271.58,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.503467,
-          "qty": 1.6352,
-          "notional": 444.38,
+          "score": 0.503953,
+          "qty": 1.6311,
+          "notional": 442.97,
           "signals": {
-            "TS": 0.620864,
-            "NS": 0.327371,
-            "CDS": 0.503467,
+            "TS": 0.61795,
+            "NS": 0.332957,
+            "CDS": 0.503953,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.2643928691235,
-            "ema_slow": 261.22769772086224,
-            "macd": 6.036695148261288,
-            "macd_signal": 5.775903793816816,
-            "macd_hist": 0.2607913544444713,
-            "rsi14": 73.28042679714905,
-            "sma20": 261.31024999999994
+            "ema_fast": 267.23670056143123,
+            "ema_slow": 261.2143643875289,
+            "macd": 6.022336173902318,
+            "macd_signal": 5.773031998945022,
+            "macd_hist": 0.2493041749572953,
+            "rsi14": 72.91758562990931,
+            "sma20": 261.3012499999999
           },
           "news_preview": [
             {
@@ -341,55 +341,9 @@
               "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
             }
           ]
-        },
-        {
-          "symbol": "ARCC",
-          "action": "BUY",
-          "px": 20.135,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.358294,
-          "qty": 0.0003,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.404267,
-            "NS": 0.289333,
-            "CDS": 0.358294,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 20.22318731246639,
-            "ema_slow": 20.27091567163496,
-            "macd": -0.04772835916856977,
-            "macd_signal": -0.1318554776636246,
-            "macd_hist": 0.08412711849505483,
-            "rsi14": 46.842878570624144,
-            "sma20": 20.007249999999992
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T12:27:38+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Ranking ARCC among high performing stocks via tools - July 2025 Sentiment & Community Verified Trade Alerts"
-            },
-            {
-              "ts": "2025-11-06T09:57:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
-            },
-            {
-              "ts": "2025-11-06T09:45:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.1909,
-              "headline": "2 Top Dividend Stocks to Buy in November"
-            }
-          ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -406,33 +360,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 17520.61,
+      "portfolio_value_est": 17567.35,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 28.735,
+          "px": 28.92,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.523256,
+          "score": -0.520145,
           "qty": 57,
-          "notional": 1637.89,
+          "notional": 1648.44,
           "signals": {
-            "TS": -0.523256,
-            "NS": 0.040059,
-            "CDS": -0.29793,
+            "TS": -0.520145,
+            "NS": 0.076795,
+            "CDS": -0.281369,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.52344897567043,
-            "ema_slow": 32.038597311413724,
-            "macd": 0.4848516642567091,
-            "macd_signal": 1.5829125170651217,
-            "macd_hist": -1.0980608528084126,
-            "rsi14": 37.96459904666084,
-            "sma20": 34.74024999999998
+            "ema_fast": 32.551910514131976,
+            "ema_slow": 32.05230101511743,
+            "macd": 0.49960949901454654,
+            "macd_signal": 1.585864084016689,
+            "macd_hist": -1.0862545850021426,
+            "rsi14": 38.34210084147288,
+            "sma20": 34.749499999999976
           },
           "news_preview": [
             {
@@ -442,43 +396,43 @@
               "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
             },
             {
-              "ts": "2025-11-06T17:31:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
-            {
               "ts": "2025-11-06T16:24:31+00:00",
               "source": "247wallst",
               "tone": 0.0,
               "headline": "\u2018We\u2019re the Only Real Quantum Company\u2019: The 3 Lines That Define D-Wave\u2019s Hype Cycle"
+            },
+            {
+              "ts": "2025-11-06T15:55:09+00:00",
+              "source": "benzinga",
+              "tone": 0.03483,
+              "headline": "D-Wave Quantum's Revenue Doubles, But Shares Drop: What's Going On?"
             }
           ]
         },
         {
           "symbol": "VTI",
           "action": "SELL",
-          "px": 330.57,
+          "px": 330.86,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.495435,
+          "score": -0.488904,
           "qty": 2,
-          "notional": 661.14,
+          "notional": 661.72,
           "signals": {
-            "TS": -0.495435,
-            "NS": 0.203344,
-            "CDS": -0.215923,
+            "TS": -0.488904,
+            "NS": 0.2028,
+            "CDS": -0.212222,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 332.9502455642102,
-            "ema_slow": 331.13379469193427,
-            "macd": 1.8164508722759365,
-            "macd_signal": 2.2860202911441574,
-            "macd_hist": -0.4695694188682209,
-            "rsi14": 41.68343310061618,
-            "sma20": 331.3035
+            "ema_fast": 332.9948609488256,
+            "ema_slow": 331.15527617341576,
+            "macd": 1.8395847754098327,
+            "macd_signal": 2.2906470717709366,
+            "macd_hist": -0.45106229636110395,
+            "rsi14": 42.49806956518412,
+            "sma20": 331.318
           },
           "news_preview": [
             {
@@ -504,29 +458,35 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.27,
+          "px": 13.255,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.587741,
+          "score": -0.588271,
           "qty": 18,
-          "notional": 238.86,
+          "notional": 238.59,
           "signals": {
-            "TS": -0.587741,
-            "NS": 0.125819,
-            "CDS": -0.302317,
+            "TS": -0.588271,
+            "NS": 0.075501,
+            "CDS": -0.322762,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.315047542351907,
-            "ema_slow": 16.632022823318312,
-            "macd": -1.316975280966405,
-            "macd_signal": -0.9838073560617424,
-            "macd_hist": -0.3331679249046626,
-            "rsi14": 32.2617782338734,
-            "sma20": 16.727999999999994
+            "ema_fast": 15.312739850044215,
+            "ema_slow": 16.6309117122072,
+            "macd": -1.3181718621629859,
+            "macd_signal": -0.9840466723010586,
+            "macd_hist": -0.3341251898619273,
+            "rsi14": 32.1975053356779,
+            "sma20": 16.727249999999994
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T18:43:38+00:00",
+              "source": "aolcom",
+              "tone": 0.0,
+              "headline": "Is Quantum Computing Inc. Stock a Buy Now?"
+            },
             {
               "ts": "2025-11-06T13:42:00+00:00",
               "source": "investorsbusinessdaily",
@@ -535,42 +495,36 @@
             },
             {
               "ts": "2025-11-06T13:31:00+00:00",
-              "source": "tradingview",
+              "source": "nasdaq",
               "tone": 0.0,
               "headline": "Will QUBT's New Quantum Deployments Drive Its Commercial Breakout?"
-            },
-            {
-              "ts": "2025-11-06T11:32:24+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.31589999999999996,
-              "headline": "Will QUBT stock return to pre crisis levels - 2025 Dividend Review & Free Long-Term Investment Growth Plans"
             }
           ]
         },
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 66.57,
+          "px": 66.305,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.562507,
+          "score": -0.565258,
           "qty": 2,
-          "notional": 133.14,
+          "notional": 132.61,
           "signals": {
-            "TS": -0.562507,
-            "NS": -0.034841,
-            "CDS": -0.351441,
+            "TS": -0.565258,
+            "NS": -0.02811,
+            "CDS": -0.350399,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 73.87948012245317,
-            "ema_slow": 72.59379039797066,
-            "macd": 1.2856897244825092,
-            "macd_signal": 3.8442589342489804,
-            "macd_hist": -2.558569209766471,
-            "rsi14": 32.993852810579924,
-            "sma20": 79.31575000000007
+            "ema_fast": 73.83871089168395,
+            "ema_slow": 72.57416076834105,
+            "macd": 1.2645501233429002,
+            "macd_signal": 3.8400310140210587,
+            "macd_hist": -2.5754808906781586,
+            "rsi14": 32.65709646083296,
+            "sma20": 79.30250000000007
           },
           "news_preview": [
             {
@@ -596,29 +550,35 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.46,
+          "px": 51.02,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.630578,
+          "score": -0.634996,
           "qty": 1,
-          "notional": 51.46,
+          "notional": 51.02,
           "signals": {
-            "TS": -0.630578,
-            "NS": 0.100345,
-            "CDS": -0.338209,
+            "TS": -0.634996,
+            "NS": 0.05678,
+            "CDS": -0.358286,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 59.82543017902928,
-            "ema_slow": 59.751011964448395,
-            "macd": 0.07441821458088782,
-            "macd_signal": 2.0203984443605667,
-            "macd_hist": -1.9459802297796789,
-            "rsi14": 24.89661240661104,
-            "sma20": 63.341750000000005
+            "ema_fast": 59.75773787133698,
+            "ema_slow": 59.7184193718558,
+            "macd": 0.03931849948117616,
+            "macd_signal": 2.0133785013406245,
+            "macd_hist": -1.9740600018594483,
+            "rsi14": 24.358993739949426,
+            "sma20": 63.31975
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T19:18:18+00:00",
+              "source": "benzinga",
+              "tone": -0.42453,
+              "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
+            },
             {
               "ts": "2025-11-06T18:31:59+00:00",
               "source": "benzinga",
@@ -630,47 +590,35 @@
               "source": "benzinga",
               "tone": -0.57321,
               "headline": "Space Stocks BlackSky, Redwire Dump After Earnings; AST, Rocket Lab On Deck - Rocket Lab (NASDAQ:RKLB)"
-            },
-            {
-              "ts": "2025-11-06T17:15:00+00:00",
-              "source": "yahoofinancesingapore",
-              "tone": 0.0,
-              "headline": "Should You Buy, Hold or Sell Rocket Lab Stock Ahead of Q3 Earnings?"
             }
           ]
         },
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 34.72,
+          "px": 34.94,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.522207,
+          "score": -0.519048,
           "qty": 3,
-          "notional": 104.16,
+          "notional": 104.82,
           "signals": {
-            "TS": -0.522207,
-            "NS": 0.036547,
-            "CDS": -0.298706,
+            "TS": -0.519048,
+            "NS": 0.081716,
+            "CDS": -0.278742,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.02715610460876,
-            "ema_slow": 38.55221287330385,
-            "macd": 0.47494323130490557,
-            "macd_signal": 2.003043210925197,
-            "macd_hist": -1.5280999796202916,
-            "rsi14": 38.16605313855369,
-            "sma20": 42.65999999999999
+            "ema_fast": 39.06100225845491,
+            "ema_slow": 38.56850916960015,
+            "macd": 0.49249308885476495,
+            "macd_signal": 2.006553182435169,
+            "macd_hist": -1.514060093580404,
+            "rsi14": 38.54970093404007,
+            "sma20": 42.670999999999985
           },
           "news_preview": [
-            {
-              "ts": "2025-11-06T17:31:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
             {
               "ts": "2025-11-06T16:29:43+00:00",
               "source": "tradingview",
@@ -682,35 +630,47 @@
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            },
+            {
+              "ts": "2025-11-06T13:22:13+00:00",
+              "source": "barrons",
+              "tone": -0.500365,
+              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 286.72,
+          "px": 285.48,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.646118,
-          "qty": 1.2919,
-          "notional": 370.41,
+          "score": 0.638328,
+          "qty": 1.3008,
+          "notional": 371.35,
           "signals": {
-            "TS": 0.646118,
-            "NS": 0.178255,
-            "CDS": 0.458973,
+            "TS": 0.638328,
+            "NS": 0.191439,
+            "CDS": 0.459572,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 274.21203571808985,
-            "ema_slow": 263.06828374217156,
-            "macd": 11.143751975918292,
-            "macd_signal": 9.214653587618526,
-            "macd_hist": 1.9290983882997654,
-            "rsi14": 75.95577810625768,
-            "sma20": 263.0150000000002
+            "ema_fast": 274.0212664873206,
+            "ema_slow": 262.9764318903197,
+            "macd": 11.044834597000886,
+            "macd_signal": 9.194870111835046,
+            "macd_hist": 1.84996448516584,
+            "rsi14": 74.99103162021936,
+            "sma20": 262.9530000000002
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T18:46:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
             {
               "ts": "2025-11-06T18:37:15+00:00",
               "source": "benzinga",
@@ -722,39 +682,33 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Polymarket Posts On X \"Polymarket x Google. We're excited to announce Polymarket odds will be integrated into Google. Coming soon.\""
-            },
-            {
-              "ts": "2025-11-06T18:20:36+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Social Media Giants Must Stand Trial on Youth Addiction Claims'- Bloomberg"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 275.67,
+          "px": 276.32,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.624666,
-          "qty": 1.3437,
-          "notional": 370.42,
+          "score": 0.631403,
+          "qty": 1.3439,
+          "notional": 371.35,
           "signals": {
-            "TS": 0.624666,
-            "NS": 0.351288,
-            "CDS": 0.515315,
+            "TS": 0.631403,
+            "NS": 0.35125,
+            "CDS": 0.519342,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.21525577091043,
-            "ema_slow": 242.34548599889172,
-            "macd": 12.869769772018714,
-            "macd_signal": 9.336749868051127,
-            "macd_hist": 3.5330199039675865,
-            "rsi14": 73.00560200818543,
-            "sma20": 242.50825000000015
+            "ema_fast": 255.31525577091043,
+            "ema_slow": 242.39363414703985,
+            "macd": 12.921621623870578,
+            "macd_signal": 9.3471202384215,
+            "macd_hist": 3.5745013854490786,
+            "rsi14": 73.84267435406093,
+            "sma20": 242.54075000000012
           },
           "news_preview": [
             {
@@ -780,27 +734,27 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.76,
+          "px": 271.58,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.620864,
-          "qty": 0.9537,
-          "notional": 259.18,
+          "score": 0.61795,
+          "qty": 0.9474,
+          "notional": 257.29,
           "signals": {
-            "TS": 0.620864,
-            "NS": 0.327371,
-            "CDS": 0.503467,
+            "TS": 0.61795,
+            "NS": 0.332957,
+            "CDS": 0.503953,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.2643928691235,
-            "ema_slow": 261.22769772086224,
-            "macd": 6.036695148261288,
-            "macd_signal": 5.775903793816816,
-            "macd_hist": 0.2607913544444713,
-            "rsi14": 73.28042679714905,
-            "sma20": 261.31024999999994
+            "ema_fast": 267.23670056143123,
+            "ema_slow": 261.2143643875289,
+            "macd": 6.022336173902318,
+            "macd_signal": 5.773031998945022,
+            "macd_hist": 0.2493041749572953,
+            "rsi14": 72.91758562990931,
+            "sma20": 261.3012499999999
           },
           "news_preview": [
             {
@@ -824,7 +778,7 @@
           ]
         }
       ],
-      "cash_left": -0.01
+      "cash_left": 0.01
     },
     "portfolio_max_NS_higher_weight": {
       "meta": {
@@ -905,33 +859,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 4000.0,
-      "cash_start": 15996.0,
+      "portfolio_value_est": 0.0,
+      "cash_start": 20000.0,
       "trades": [
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 275.67,
+          "px": 276.32,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.515315,
-          "qty": 3.6268,
-          "notional": 999.8,
+          "score": 0.519342,
+          "qty": 3.619,
+          "notional": 1000.0,
           "signals": {
-            "TS": 0.624666,
-            "NS": 0.351288,
-            "CDS": 0.515315,
+            "TS": 0.631403,
+            "NS": 0.35125,
+            "CDS": 0.519342,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.21525577091043,
-            "ema_slow": 242.34548599889172,
-            "macd": 12.869769772018714,
-            "macd_signal": 9.336749868051127,
-            "macd_hist": 3.5330199039675865,
-            "rsi14": 73.00560200818543,
-            "sma20": 242.50825000000015
+            "ema_fast": 255.31525577091043,
+            "ema_slow": 242.39363414703985,
+            "macd": 12.921621623870578,
+            "macd_signal": 9.3471202384215,
+            "macd_hist": 3.5745013854490786,
+            "rsi14": 73.84267435406093,
+            "sma20": 242.54075000000012
           },
           "news_preview": [
             {
@@ -957,27 +911,27 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.76,
+          "px": 271.58,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.503467,
-          "qty": 3.679,
-          "notional": 999.81,
+          "score": 0.503953,
+          "qty": 3.6822,
+          "notional": 1000.01,
           "signals": {
-            "TS": 0.620864,
-            "NS": 0.327371,
-            "CDS": 0.503467,
+            "TS": 0.61795,
+            "NS": 0.332957,
+            "CDS": 0.503953,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.2643928691235,
-            "ema_slow": 261.22769772086224,
-            "macd": 6.036695148261288,
-            "macd_signal": 5.775903793816816,
-            "macd_hist": 0.2607913544444713,
-            "rsi14": 73.28042679714905,
-            "sma20": 261.31024999999994
+            "ema_fast": 267.23670056143123,
+            "ema_slow": 261.2143643875289,
+            "macd": 6.022336173902318,
+            "macd_signal": 5.773031998945022,
+            "macd_hist": 0.2493041749572953,
+            "rsi14": 72.91758562990931,
+            "sma20": 261.3012499999999
           },
           "news_preview": [
             {
@@ -1003,29 +957,35 @@
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 286.72,
+          "px": 285.48,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.458973,
-          "qty": 3.487,
-          "notional": 999.79,
+          "score": 0.459572,
+          "qty": 3.5029,
+          "notional": 1000.01,
           "signals": {
-            "TS": 0.646118,
-            "NS": 0.178255,
-            "CDS": 0.458973,
+            "TS": 0.638328,
+            "NS": 0.191439,
+            "CDS": 0.459572,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 274.21203571808985,
-            "ema_slow": 263.06828374217156,
-            "macd": 11.143751975918292,
-            "macd_signal": 9.214653587618526,
-            "macd_hist": 1.9290983882997654,
-            "rsi14": 75.95577810625768,
-            "sma20": 263.0150000000002
+            "ema_fast": 274.0212664873206,
+            "ema_slow": 262.9764318903197,
+            "macd": 11.044834597000886,
+            "macd_signal": 9.194870111835046,
+            "macd_hist": 1.84996448516584,
+            "rsi14": 74.99103162021936,
+            "sma20": 262.9530000000002
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T18:46:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
             {
               "ts": "2025-11-06T18:37:15+00:00",
               "source": "benzinga",
@@ -1037,63 +997,103 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Polymarket Posts On X \"Polymarket x Google. We're excited to announce Polymarket odds will be integrated into Google. Coming soon.\""
-            },
-            {
-              "ts": "2025-11-06T18:20:36+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Social Media Giants Must Stand Trial on Youth Addiction Claims'- Bloomberg"
             }
           ]
         },
         {
-          "symbol": "SNOW",
+          "symbol": "AMZN",
           "action": "BUY",
-          "px": 266.46,
+          "px": 244.69,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.438971,
-          "qty": 3.7522,
-          "notional": 999.81,
+          "score": 0.442734,
+          "qty": 4.0867,
+          "notional": 999.97,
           "signals": {
-            "TS": 0.503133,
-            "NS": 0.342729,
-            "CDS": 0.438971,
+            "TS": 0.533868,
+            "NS": 0.306034,
+            "CDS": 0.442734,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 263.6737624907283,
-            "ema_slow": 254.04127102390996,
-            "macd": 9.632491466818323,
-            "macd_signal": 9.572419139637418,
-            "macd_hist": 0.060072327180904495,
-            "rsi14": 58.19447730851931,
-            "sma20": 256.01324999999997
+            "ema_fast": 237.50898063314898,
+            "ema_slow": 230.97675186798077,
+            "macd": 6.532228765168213,
+            "macd_signal": 3.394295140398652,
+            "macd_hist": 3.1379336247695613,
+            "rsi14": 62.276489169283565,
+            "sma20": 227.47424999999998
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T17:02:00+00:00",
-              "source": "yahoofinancesingapore",
-              "tone": 0.0,
-              "headline": "3 Key Reasons to Buy Snowflake Stock Beyond the 71% Surge YTD"
+              "ts": "2025-11-06T20:06:08+00:00",
+              "source": "tradingview",
+              "tone": 0.43125,
+              "headline": "Key facts: Amazon Q3 earnings beat revenue estimates; stock value up $105B"
             },
             {
-              "ts": "2025-11-06T16:17:54+00:00",
-              "source": "zacksinvestmentresearch",
-              "tone": 0.0,
-              "headline": "3 Key Reasons to Buy Snowflake Stock Beyond the 71% Surge YTD"
+              "ts": "2025-11-06T17:19:20+00:00",
+              "source": "benzinga",
+              "tone": 0.16011,
+              "headline": "Amazon Rolls Out AI-Powered Kindle Translate"
             },
             {
-              "ts": "2025-11-06T15:37:54+00:00",
+              "ts": "2025-11-06T17:04:33+00:00",
+              "source": "benzinga",
+              "tone": 0.72144,
+              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
+            }
+          ]
+        },
+        {
+          "symbol": "ARCC",
+          "action": "BUY",
+          "px": 20.125,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.364923,
+          "qty": 0.0002,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.401559,
+            "NS": 0.309969,
+            "CDS": 0.364923,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 20.221648850927927,
+            "ema_slow": 20.270174930894218,
+            "macd": -0.048526079966290325,
+            "macd_signal": -0.1320150218231687,
+            "macd_hist": 0.08348894185687838,
+            "rsi14": 46.50526705136737,
+            "sma20": 20.00674999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T12:27:38+00:00",
               "source": "newsercom",
-              "tone": 0.3062,
-              "headline": "Will SNOW stock attract more institutional investors - Quarterly Earnings Report & Fast Exit and Entry Trade Guides"
+              "tone": 0.0,
+              "headline": "Ranking ARCC among high performing stocks via tools - Product Launch & Real-Time Buy Signal Notifications"
+            },
+            {
+              "ts": "2025-11-06T09:57:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
+            },
+            {
+              "ts": "2025-11-06T09:45:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.1909,
+              "headline": "2 Top Dividend Stocks to Buy in November"
             }
           ]
         }
       ],
-      "cash_left": 11996.79
+      "cash_left": 16000.0
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1111,33 +1111,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 3000.0,
-      "cash_start": 16997.0,
+      "portfolio_value_est": 0.0,
+      "cash_start": 20000.0,
       "trades": [
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 275.67,
+          "px": 276.32,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.515315,
-          "qty": 2.1762,
-          "notional": 599.91,
+          "score": 0.519342,
+          "qty": 2.1714,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.624666,
-            "NS": 0.351288,
-            "CDS": 0.515315,
+            "TS": 0.631403,
+            "NS": 0.35125,
+            "CDS": 0.519342,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.21525577091043,
-            "ema_slow": 242.34548599889172,
-            "macd": 12.869769772018714,
-            "macd_signal": 9.336749868051127,
-            "macd_hist": 3.5330199039675865,
-            "rsi14": 73.00560200818543,
-            "sma20": 242.50825000000015
+            "ema_fast": 255.31525577091043,
+            "ema_slow": 242.39363414703985,
+            "macd": 12.921621623870578,
+            "macd_signal": 9.3471202384215,
+            "macd_hist": 3.5745013854490786,
+            "rsi14": 73.84267435406093,
+            "sma20": 242.54075000000012
           },
           "news_preview": [
             {
@@ -1163,27 +1163,27 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.76,
+          "px": 271.58,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.503467,
-          "qty": 2.2075,
-          "notional": 599.91,
+          "score": 0.503953,
+          "qty": 2.2093,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.620864,
-            "NS": 0.327371,
-            "CDS": 0.503467,
+            "TS": 0.61795,
+            "NS": 0.332957,
+            "CDS": 0.503953,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.2643928691235,
-            "ema_slow": 261.22769772086224,
-            "macd": 6.036695148261288,
-            "macd_signal": 5.775903793816816,
-            "macd_hist": 0.2607913544444713,
-            "rsi14": 73.28042679714905,
-            "sma20": 261.31024999999994
+            "ema_fast": 267.23670056143123,
+            "ema_slow": 261.2143643875289,
+            "macd": 6.022336173902318,
+            "macd_signal": 5.773031998945022,
+            "macd_hist": 0.2493041749572953,
+            "rsi14": 72.91758562990931,
+            "sma20": 261.3012499999999
           },
           "news_preview": [
             {
@@ -1209,29 +1209,35 @@
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 286.72,
+          "px": 285.48,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.458973,
-          "qty": 2.0923,
-          "notional": 599.9,
+          "score": 0.459572,
+          "qty": 2.1017,
+          "notional": 599.99,
           "signals": {
-            "TS": 0.646118,
-            "NS": 0.178255,
-            "CDS": 0.458973,
+            "TS": 0.638328,
+            "NS": 0.191439,
+            "CDS": 0.459572,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 274.21203571808985,
-            "ema_slow": 263.06828374217156,
-            "macd": 11.143751975918292,
-            "macd_signal": 9.214653587618526,
-            "macd_hist": 1.9290983882997654,
-            "rsi14": 75.95577810625768,
-            "sma20": 263.0150000000002
+            "ema_fast": 274.0212664873206,
+            "ema_slow": 262.9764318903197,
+            "macd": 11.044834597000886,
+            "macd_signal": 9.194870111835046,
+            "macd_hist": 1.84996448516584,
+            "rsi14": 74.99103162021936,
+            "sma20": 262.9530000000002
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T18:46:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
             {
               "ts": "2025-11-06T18:37:15+00:00",
               "source": "benzinga",
@@ -1243,39 +1249,79 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Polymarket Posts On X \"Polymarket x Google. We're excited to announce Polymarket odds will be integrated into Google. Coming soon.\""
+            }
+          ]
+        },
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 244.69,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.442734,
+          "qty": 2.4521,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.533868,
+            "NS": 0.306034,
+            "CDS": 0.442734,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 237.50898063314898,
+            "ema_slow": 230.97675186798077,
+            "macd": 6.532228765168213,
+            "macd_signal": 3.394295140398652,
+            "macd_hist": 3.1379336247695613,
+            "rsi14": 62.276489169283565,
+            "sma20": 227.47424999999998
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T20:06:08+00:00",
+              "source": "tradingview",
+              "tone": 0.43125,
+              "headline": "Key facts: Amazon Q3 earnings beat revenue estimates; stock value up $105B"
             },
             {
-              "ts": "2025-11-06T18:20:36+00:00",
+              "ts": "2025-11-06T17:19:20+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Social Media Giants Must Stand Trial on Youth Addiction Claims'- Bloomberg"
+              "tone": 0.16011,
+              "headline": "Amazon Rolls Out AI-Powered Kindle Translate"
+            },
+            {
+              "ts": "2025-11-06T17:04:33+00:00",
+              "source": "benzinga",
+              "tone": 0.72144,
+              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
             }
           ]
         },
         {
           "symbol": "SNOW",
           "action": "BUY",
-          "px": 266.46,
+          "px": 266.02,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.438971,
-          "qty": 2.2514,
-          "notional": 599.91,
+          "score": 0.432812,
+          "qty": 2.2555,
+          "notional": 600.01,
           "signals": {
-            "TS": 0.503133,
-            "NS": 0.342729,
-            "CDS": 0.438971,
+            "TS": 0.498118,
+            "NS": 0.334854,
+            "CDS": 0.432812,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 263.6737624907283,
-            "ema_slow": 254.04127102390996,
-            "macd": 9.632491466818323,
-            "macd_signal": 9.572419139637418,
-            "macd_hist": 0.060072327180904495,
-            "rsi14": 58.19447730851931,
-            "sma20": 256.01324999999997
+            "ema_fast": 263.60607018303597,
+            "ema_slow": 254.00867843131735,
+            "macd": 9.597391751718618,
+            "macd_signal": 9.565399196617477,
+            "macd_hist": 0.03199255510114085,
+            "rsi14": 57.57167040281948,
+            "sma20": 255.99124999999998
           },
           "news_preview": [
             {
@@ -1297,101 +1343,9 @@
               "headline": "Will SNOW stock attract more institutional investors - Quarterly Earnings Report & Fast Exit and Entry Trade Guides"
             }
           ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 244.71,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.434156,
-          "qty": 2.4515,
-          "notional": 599.91,
-          "signals": {
-            "TS": 0.534113,
-            "NS": 0.284221,
-            "CDS": 0.434156,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 237.5120575562259,
-            "ema_slow": 230.97823334946224,
-            "macd": 6.533824206763654,
-            "macd_signal": 3.39461422871774,
-            "macd_hist": 3.139209978045914,
-            "rsi14": 62.30700734512565,
-            "sma20": 227.47525000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T17:19:20+00:00",
-              "source": "benzinga",
-              "tone": 0.16011,
-              "headline": "Amazon Rolls Out AI-Powered Kindle Translate"
-            },
-            {
-              "ts": "2025-11-06T17:04:33+00:00",
-              "source": "benzinga",
-              "tone": 0.72144,
-              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
-            },
-            {
-              "ts": "2025-11-06T15:56:31+00:00",
-              "source": "benzinga",
-              "tone": -0.04644,
-              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
-            }
-          ]
-        },
-        {
-          "symbol": "ARCC",
-          "action": "BUY",
-          "px": 20.135,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.358294,
-          "qty": 0.0004,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.404267,
-            "NS": 0.289333,
-            "CDS": 0.358294,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 20.22318731246639,
-            "ema_slow": 20.27091567163496,
-            "macd": -0.04772835916856977,
-            "macd_signal": -0.1318554776636246,
-            "macd_hist": 0.08412711849505483,
-            "rsi14": 46.842878570624144,
-            "sma20": 20.007249999999992
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T12:27:38+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Ranking ARCC among high performing stocks via tools - July 2025 Sentiment & Community Verified Trade Alerts"
-            },
-            {
-              "ts": "2025-11-06T09:57:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
-            },
-            {
-              "ts": "2025-11-06T09:45:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.1909,
-              "headline": "2 Top Dividend Stocks to Buy in November"
-            }
-          ]
         }
       ],
-      "cash_left": 13997.45
+      "cash_left": 16999.99
     },
     "portfolio_paper_TS_only": {
       "meta": {
