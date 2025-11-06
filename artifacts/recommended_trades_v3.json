@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T10:17:16.314636+00:00",
+  "as_of_utc": "2025-11-06T11:14:02.185244+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -21,64 +21,18 @@
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 14.175,
-          "qty_hint": 75.39,
-          "reason": "score<sell",
-          "score": -0.260954,
-          "qty": 18,
-          "notional": 255.15,
-          "signals": {
-            "TS": -0.550931,
-            "NS": 0.174011,
-            "CDS": -0.260954,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 15.686874368234072,
-            "ema_slow": 16.90098465364756,
-            "macd": -1.2141102854134864,
-            "macd_signal": -0.9005153813999595,
-            "macd_hist": -0.31359490401352696,
-            "rsi14": 36.679361531586,
-            "sma20": 17.1305
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:56:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Shares Up 3.5% - Here's Why"
-            },
-            {
-              "ts": "2025-11-05T22:08:56+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.1909,
-              "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
-            }
-          ]
-        },
-        {
           "symbol": "RKLB",
           "action": "SELL",
           "px": 56.41,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.262729,
+          "score": -0.262905,
           "qty": 1,
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.186106,
-            "CDS": -0.262729,
+            "NS": 0.185666,
+            "CDS": -0.262905,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -118,13 +72,13 @@
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.51611,
+          "score": 0.516806,
           "qty": 2.318,
           "notional": 580.07,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.372029,
-            "CDS": 0.51611,
+            "NS": 0.373769,
+            "CDS": 0.516806,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,22 +93,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T09:32:25+00:00",
-              "source": "benzinga",
-              "tone": 0.8552700000000001,
-              "headline": "Globe And AWS Sign Multi-Year Agreement To Drive Cloud Modernization And AI-Powered Customer Experience Innovation"
+              "ts": "2025-11-06T11:04:09+00:00",
+              "source": "morningstar",
+              "tone": 0.35205,
+              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
             },
             {
-              "ts": "2025-11-06T09:31:08+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Amazon Web Services Expands AWS Marketplace In India Enabling Local Purchases From Indian Software And Services Companies In INR"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T08:10:51+00:00",
-              "source": "marketbeat",
-              "tone": 0.67554,
-              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+              "ts": "2025-11-06T10:19:35+00:00",
+              "source": "benzinga",
+              "tone": 0.09243,
+              "headline": "Google Eyes Christmas Island For Massive AI Data Centre In Strategic Indian Ocean Move"
             }
           ]
         },
@@ -164,13 +118,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.491697,
+          "score": 0.500639,
           "qty": 1.5547,
           "notional": 419.94,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.342787,
-            "CDS": 0.491697,
+            "NS": 0.365141,
+            "CDS": 0.500639,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -185,6 +139,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T10:24:24+00:00",
+              "source": "benzinga",
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+            },
+            {
               "ts": "2025-11-06T08:57:02+00:00",
               "source": "marketbeat",
               "tone": 0.6885,
@@ -195,12 +155,6 @@
               "source": "coincentral",
               "tone": -0.10115,
               "headline": "Apple (AAPL) Stock: Tech Giant to Pay Google $1 Billion Annually for Siri AI Technology"
-            },
-            {
-              "ts": "2025-11-06T08:05:33+00:00",
-              "source": "marketbeat",
-              "tone": 0.41292,
-              "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
             }
           ]
         }
@@ -236,8 +190,8 @@
           "notional": 1769.57,
           "signals": {
             "TS": -0.478081,
-            "NS": 0.119212,
-            "CDS": -0.239164,
+            "NS": 0.134972,
+            "CDS": -0.23286,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -252,22 +206,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T08:41:04+00:00",
-              "source": "tipranks",
+              "ts": "2025-11-06T11:12:19+00:00",
+              "source": "benzinga",
               "tone": 0.0,
-              "headline": "IONQ, QBTS, RGTI: Quantum Stocks Jump After Quantinuum\u2019s New Breakthrough"
+              "headline": "Earnings Scheduled For November 6, 2025"
             },
             {
-              "ts": "2025-11-06T03:14:10+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.32985,
-              "headline": "Can QBTS.W stock sustain institutional flows - IPO Watch & Smart Money Movement Tracker"
-            },
-            {
-              "ts": "2025-11-05T23:06:48+00:00",
+              "ts": "2025-11-06T10:20:53+00:00",
               "source": "tipranks",
-              "tone": 0.59688,
-              "headline": "Is D-Wave Quantum ($QBTS) a Good Stock to Buy before Earnings?"
+              "tone": 0.46872,
+              "headline": "D-Wave Quantum (QBTS) Gains Momentum with BASF Project Ahead of Earnings"
+            },
+            {
+              "ts": "2025-11-06T08:48:58+00:00",
+              "source": "newsercom",
+              "tone": -0.24695,
+              "headline": "Candlestick signals on QBTS stock today - Weekly Trend Summary & Stock Portfolio Risk Management"
             }
           ]
         },
@@ -282,8 +236,8 @@
           "notional": 666.2,
           "signals": {
             "TS": -0.368235,
-            "NS": 0.231356,
-            "CDS": -0.128399,
+            "NS": 0.19422,
+            "CDS": -0.143253,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -304,16 +258,16 @@
               "headline": "Should I buy VTI stock before earnings season - Weekly Profit Recap & Momentum Based Trading Signals"
             },
             {
+              "ts": "2025-11-05T22:16:52+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Should I buy VTI stock before earnings season - 2025 Bull vs Bear & Short-Term Trading Alerts"
+            },
+            {
               "ts": "2025-11-05T16:57:38+00:00",
               "source": "benzinga",
               "tone": 0.28637999999999997,
               "headline": "Benzinga Market Summary: Supreme Court Hears Arguments Over Tariffs, Chip Stocks Rise, Pinterest Sinks On Earnings And Guidance"
-            },
-            {
-              "ts": "2025-11-05T12:11:15+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/5/2025"
             }
           ]
         },
@@ -328,8 +282,8 @@
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.174011,
-            "CDS": -0.260954,
+            "NS": 0.216805,
+            "CDS": -0.243837,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -344,6 +298,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T03:42:38+00:00",
+              "source": "newsercom",
+              "tone": 0.3062,
+              "headline": "Will QUBT stock split attract more investors - 2025 Market Outlook & Community Verified Trade Alerts"
+            },
+            {
               "ts": "2025-11-05T22:56:19+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
@@ -354,12 +314,6 @@
               "source": "fcppagovbr",
               "tone": 0.1909,
               "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
             }
           ]
         },
@@ -374,8 +328,8 @@
           "notional": 140.77,
           "signals": {
             "TS": -0.514197,
-            "NS": 0.440149,
-            "CDS": -0.132459,
+            "NS": 0.383516,
+            "CDS": -0.155112,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -402,10 +356,10 @@
               "headline": "AST SpaceMobile, Inc. $ASTS Shares Acquired by Teacher Retirement System of Texas"
             },
             {
-              "ts": "2025-11-06T06:49:08+00:00",
-              "source": "newsercom",
+              "ts": "2025-11-06T05:34:06+00:00",
+              "source": "fcppagovbr",
               "tone": 0.5,
-              "headline": "Will ASTS stock benefit from green energy trends - July 2025 Analyst Calls & Low Risk High Reward Ideas"
+              "headline": "Will ASTS stock benefit from green energy trends - 2025 Price Targets & Weekly Return Optimization Alerts"
             }
           ]
         },
@@ -420,8 +374,8 @@
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.186106,
-            "CDS": -0.262729,
+            "NS": 0.185666,
+            "CDS": -0.262905,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -466,8 +420,8 @@
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.109577,
-            "CDS": -0.243828,
+            "NS": 0.107427,
+            "CDS": -0.244687,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -488,16 +442,16 @@
               "headline": "IONQ, QBTS, RGTI: Quantum Stocks Jump After Quantinuum\u2019s New Breakthrough"
             },
             {
+              "ts": "2025-11-06T05:12:02+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "Rigetti Computing (RGTI) Gears Up for Q3 Earnings: Here\u2019s What to Expect"
+            },
+            {
               "ts": "2025-11-06T05:04:20+00:00",
               "source": "newsercom",
               "tone": 0.26335,
               "headline": "Technical signs of recovery in RGTI - Share Buyback & Real-Time Volume Spike Alerts"
-            },
-            {
-              "ts": "2025-11-06T03:57:09+00:00",
-              "source": "newsercom",
-              "tone": 0.5,
-              "headline": "Is RGTI stock entering bullish territory - Trend Reversal & Free Safe Capital Growth Stock Tips"
             }
           ]
         },
@@ -512,8 +466,8 @@
           "notional": 386.71,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257734,
-            "CDS": 0.487754,
+            "NS": 0.218322,
+            "CDS": 0.47199,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -540,10 +494,10 @@
               "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
             },
             {
-              "ts": "2025-11-05T22:15:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
+              "ts": "2025-11-06T00:55:05+00:00",
+              "source": "fcppagovbr",
+              "tone": -0.24695,
+              "headline": "Is FSLR stock in correction or buying zone - Earnings Risk Summary & Technical Confirmation Trade Alerts"
             }
           ]
         },
@@ -558,8 +512,8 @@
           "notional": 386.7,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.169976,
-            "CDS": 0.446294,
+            "NS": 0.194739,
+            "CDS": 0.456199,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,22 +528,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T10:00:43+00:00",
-              "source": "coincentral",
+              "ts": "2025-11-06T10:58:42+00:00",
+              "source": "theglobeandmail",
               "tone": 0.0,
-              "headline": "Alphabet (GOOGL) Stock: Tech Giant Plans AI Data Centre on Remote Christmas Island"
+              "headline": "Massive News for Alphabet Stock Investors!"
             },
             {
-              "ts": "2025-11-06T09:47:19+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.45954000000000006,
-              "headline": "'Google Planning Powerful AI Data Centre On Tiny Australian Indian Ocean Outpost' - Reuters Exclusive"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T09:25:39+00:00",
+              "ts": "2025-11-06T10:24:24+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Google Is In Early Talks To Deepen Its Investment In Anthropic' - Business Insider"
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
             }
           ]
         },
@@ -604,8 +558,8 @@
           "notional": 226.6,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.372029,
-            "CDS": 0.51611,
+            "NS": 0.373769,
+            "CDS": 0.516806,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -620,22 +574,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T09:32:25+00:00",
-              "source": "benzinga",
-              "tone": 0.8552700000000001,
-              "headline": "Globe And AWS Sign Multi-Year Agreement To Drive Cloud Modernization And AI-Powered Customer Experience Innovation"
+              "ts": "2025-11-06T11:04:09+00:00",
+              "source": "morningstar",
+              "tone": 0.35205,
+              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
             },
             {
-              "ts": "2025-11-06T09:31:08+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Amazon Web Services Expands AWS Marketplace In India Enabling Local Purchases From Indian Software And Services Companies In INR"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T08:10:51+00:00",
-              "source": "marketbeat",
-              "tone": 0.67554,
-              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+              "ts": "2025-11-06T10:19:35+00:00",
+              "source": "benzinga",
+              "tone": 0.09243,
+              "headline": "Google Eyes Christmas Island For Massive AI Data Centre In Strategic Indian Ocean Move"
             }
           ]
         }
@@ -730,13 +684,13 @@
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.51611,
+          "score": 0.516806,
           "qty": 3.9961,
           "notional": 1000.0,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.372029,
-            "CDS": 0.51611,
+            "NS": 0.373769,
+            "CDS": 0.516806,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -751,22 +705,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T09:32:25+00:00",
-              "source": "benzinga",
-              "tone": 0.8552700000000001,
-              "headline": "Globe And AWS Sign Multi-Year Agreement To Drive Cloud Modernization And AI-Powered Customer Experience Innovation"
+              "ts": "2025-11-06T11:04:09+00:00",
+              "source": "morningstar",
+              "tone": 0.35205,
+              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
             },
             {
-              "ts": "2025-11-06T09:31:08+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Amazon Web Services Expands AWS Marketplace In India Enabling Local Purchases From Indian Software And Services Companies In INR"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T08:10:51+00:00",
-              "source": "marketbeat",
-              "tone": 0.67554,
-              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+              "ts": "2025-11-06T10:19:35+00:00",
+              "source": "benzinga",
+              "tone": 0.09243,
+              "headline": "Google Eyes Christmas Island For Massive AI Data Centre In Strategic Indian Ocean Move"
             }
           ]
         },
@@ -776,13 +730,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.491697,
+          "score": 0.500639,
           "qty": 3.7022,
           "notional": 1000.0,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.342787,
-            "CDS": 0.491697,
+            "NS": 0.365141,
+            "CDS": 0.500639,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -797,6 +751,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T10:24:24+00:00",
+              "source": "benzinga",
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+            },
+            {
               "ts": "2025-11-06T08:57:02+00:00",
               "source": "marketbeat",
               "tone": 0.6885,
@@ -807,12 +767,6 @@
               "source": "coincentral",
               "tone": -0.10115,
               "headline": "Apple (AAPL) Stock: Tech Giant to Pay Google $1 Billion Annually for Siri AI Technology"
-            },
-            {
-              "ts": "2025-11-06T08:05:33+00:00",
-              "source": "marketbeat",
-              "tone": 0.41292,
-              "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
             }
           ]
         },
@@ -822,13 +776,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.487754,
+          "score": 0.47199,
           "qty": 3.6061,
           "notional": 1000.01,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257734,
-            "CDS": 0.487754,
+            "NS": 0.218322,
+            "CDS": 0.47199,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -855,10 +809,10 @@
               "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
             },
             {
-              "ts": "2025-11-05T22:15:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
+              "ts": "2025-11-06T00:55:05+00:00",
+              "source": "fcppagovbr",
+              "tone": -0.24695,
+              "headline": "Is FSLR stock in correction or buying zone - Earnings Risk Summary & Technical Confirmation Trade Alerts"
             }
           ]
         },
@@ -868,13 +822,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.446294,
+          "score": 0.456199,
           "qty": 3.5169,
           "notional": 1000.0,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.169976,
-            "CDS": 0.446294,
+            "NS": 0.194739,
+            "CDS": 0.456199,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -889,22 +843,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T10:00:43+00:00",
-              "source": "coincentral",
+              "ts": "2025-11-06T10:58:42+00:00",
+              "source": "theglobeandmail",
               "tone": 0.0,
-              "headline": "Alphabet (GOOGL) Stock: Tech Giant Plans AI Data Centre on Remote Christmas Island"
+              "headline": "Massive News for Alphabet Stock Investors!"
             },
             {
-              "ts": "2025-11-06T09:47:19+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.45954000000000006,
-              "headline": "'Google Planning Powerful AI Data Centre On Tiny Australian Indian Ocean Outpost' - Reuters Exclusive"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T09:25:39+00:00",
+              "ts": "2025-11-06T10:24:24+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Google Is In Early Talks To Deepen Its Investment In Anthropic' - Business Insider"
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
             }
           ]
         }
@@ -936,13 +890,13 @@
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.51611,
+          "score": 0.516806,
           "qty": 2.3977,
           "notional": 600.01,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.372029,
-            "CDS": 0.51611,
+            "NS": 0.373769,
+            "CDS": 0.516806,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -957,22 +911,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T09:32:25+00:00",
-              "source": "benzinga",
-              "tone": 0.8552700000000001,
-              "headline": "Globe And AWS Sign Multi-Year Agreement To Drive Cloud Modernization And AI-Powered Customer Experience Innovation"
+              "ts": "2025-11-06T11:04:09+00:00",
+              "source": "morningstar",
+              "tone": 0.35205,
+              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
             },
             {
-              "ts": "2025-11-06T09:31:08+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.24588000000000002,
-              "headline": "Amazon Web Services Expands AWS Marketplace In India Enabling Local Purchases From Indian Software And Services Companies In INR"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T08:10:51+00:00",
-              "source": "marketbeat",
-              "tone": 0.67554,
-              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+              "ts": "2025-11-06T10:19:35+00:00",
+              "source": "benzinga",
+              "tone": 0.09243,
+              "headline": "Google Eyes Christmas Island For Massive AI Data Centre In Strategic Indian Ocean Move"
             }
           ]
         },
@@ -982,13 +936,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.491697,
+          "score": 0.500639,
           "qty": 2.2213,
           "notional": 600.0,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.342787,
-            "CDS": 0.491697,
+            "NS": 0.365141,
+            "CDS": 0.500639,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1003,6 +957,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T10:24:24+00:00",
+              "source": "benzinga",
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+            },
+            {
               "ts": "2025-11-06T08:57:02+00:00",
               "source": "marketbeat",
               "tone": 0.6885,
@@ -1013,12 +973,6 @@
               "source": "coincentral",
               "tone": -0.10115,
               "headline": "Apple (AAPL) Stock: Tech Giant to Pay Google $1 Billion Annually for Siri AI Technology"
-            },
-            {
-              "ts": "2025-11-06T08:05:33+00:00",
-              "source": "marketbeat",
-              "tone": 0.41292,
-              "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
             }
           ]
         },
@@ -1028,13 +982,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.487754,
+          "score": 0.47199,
           "qty": 2.1636,
           "notional": 599.99,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257734,
-            "CDS": 0.487754,
+            "NS": 0.218322,
+            "CDS": 0.47199,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1061,10 +1015,10 @@
               "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
             },
             {
-              "ts": "2025-11-05T22:15:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
+              "ts": "2025-11-06T00:55:05+00:00",
+              "source": "fcppagovbr",
+              "tone": -0.24695,
+              "headline": "Is FSLR stock in correction or buying zone - Earnings Risk Summary & Technical Confirmation Trade Alerts"
             }
           ]
         },
@@ -1074,13 +1028,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.446294,
+          "score": 0.456199,
           "qty": 2.1101,
           "notional": 599.99,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.169976,
-            "CDS": 0.446294,
+            "NS": 0.194739,
+            "CDS": 0.456199,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1095,22 +1049,68 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T10:00:43+00:00",
-              "source": "coincentral",
+              "ts": "2025-11-06T10:58:42+00:00",
+              "source": "theglobeandmail",
               "tone": 0.0,
-              "headline": "Alphabet (GOOGL) Stock: Tech Giant Plans AI Data Centre on Remote Christmas Island"
+              "headline": "Massive News for Alphabet Stock Investors!"
             },
             {
-              "ts": "2025-11-06T09:47:19+00:00",
+              "ts": "2025-11-06T10:34:05+00:00",
               "source": "benzinga",
-              "tone": 0.45954000000000006,
-              "headline": "'Google Planning Powerful AI Data Centre On Tiny Australian Indian Ocean Outpost' - Reuters Exclusive"
+              "tone": 0.7402500000000001,
+              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
             },
             {
-              "ts": "2025-11-06T09:25:39+00:00",
+              "ts": "2025-11-06T10:24:24+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Google Is In Early Talks To Deepen Its Investment In Anthropic' - Business Insider"
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+            }
+          ]
+        },
+        {
+          "symbol": "QQQ",
+          "action": "BUY",
+          "px": 623.38,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.431085,
+          "qty": 0.9625,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.460601,
+            "NS": 0.386811,
+            "CDS": 0.431085,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 621.879923872195,
+            "ema_slow": 613.6868988017783,
+            "macd": 8.193025070416752,
+            "macd_signal": 8.159145248852475,
+            "macd_hist": 0.033879821564276824,
+            "rsi14": 53.492825944535774,
+            "sma20": 614.4555000000001
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T10:27:43+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Invesco QQQ $QQQ Shares Bought by Blue Investment Partners LLC"
+            },
+            {
+              "ts": "2025-11-06T10:24:24+00:00",
+              "source": "benzinga",
+              "tone": 0.64656,
+              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+            },
+            {
+              "ts": "2025-11-06T08:25:22+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Is ProShares Trust ProShares UltraPro QQQ stock a safe haven asset - July 2025 Short Interest & Low Risk High Win Rate Picks"
             }
           ]
         },
@@ -1120,13 +1120,13 @@
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.429549,
-          "qty": 29.4551,
-          "notional": 600.0,
+          "score": 0.426655,
+          "qty": 0.0007,
+          "notional": 0.01,
           "signals": {
             "TS": 0.481402,
-            "NS": 0.351771,
-            "CDS": 0.429549,
+            "NS": 0.344535,
+            "CDS": 0.426655,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1153,61 +1153,15 @@
               "headline": "2 Top Dividend Stocks to Buy in November"
             },
             {
-              "ts": "2025-11-05T17:42:39+00:00",
-              "source": "seekingalpha",
-              "tone": 0.76329,
-              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
-            }
-          ]
-        },
-        {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 264.72,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.427584,
-          "qty": 0.0001,
-          "notional": 0.03,
-          "signals": {
-            "TS": 0.482943,
-            "NS": 0.344546,
-            "CDS": 0.427584,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 263.1671738526789,
-            "ema_slow": 253.04777327049067,
-            "macd": 10.119400582188234,
-            "macd_signal": 9.557400227448161,
-            "macd_hist": 0.5620003547400731,
-            "rsi14": 55.61815994066284,
-            "sma20": 255.22224999999997
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T05:46:20+00:00",
-              "source": "newsercom",
-              "tone": 0.3062,
-              "headline": "Will SNOW stock attract more institutional investors - Long Setup & Entry Point Confirmation Signals"
-            },
-            {
-              "ts": "2025-11-06T04:13:40+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.0,
-              "headline": "How analysts revise price targets for SNOW stock - July 2025 Big Picture & High Return Trade Guides"
-            },
-            {
-              "ts": "2025-11-06T04:08:08+00:00",
-              "source": "newsercom",
-              "tone": 0.42405,
-              "headline": "Why Tidal Trust II YieldMax SNOW stock is a must watch ticker - 2025 Investor Takeaways & Weekly Top Gainers Alerts"
+              "ts": "2025-11-06T09:45:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "2 Top Dividend Stocks to Buy in November"
             }
           ]
         }
       ],
-      "cash_left": 16999.99
+      "cash_left": 17000.0
     },
     "portfolio_paper_TS_only": {
       "meta": {
