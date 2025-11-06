@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T13:28:54.255296+00:00",
+  "as_of_utc": "2025-11-06T14:15:25.639934+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 14.175,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.25748,
+          "score": -0.254637,
           "qty": 18,
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.182698,
-            "CDS": -0.25748,
+            "NS": 0.189803,
+            "CDS": -0.254637,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -72,13 +72,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.516601,
+          "score": 0.530923,
           "qty": 2.0918,
           "notional": 580.08,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.329851,
-            "CDS": 0.516601,
+            "NS": 0.365656,
+            "CDS": 0.530923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -113,48 +113,48 @@
           ]
         },
         {
-          "symbol": "AAPL",
+          "symbol": "AMZN",
           "action": "BUY",
-          "px": 270.11,
+          "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.503637,
-          "qty": 1.5546,
+          "score": 0.507213,
+          "qty": 1.678,
           "notional": 419.91,
           "signals": {
-            "TS": 0.590971,
-            "NS": 0.372636,
-            "CDS": 0.503637,
+            "TS": 0.612164,
+            "NS": 0.349785,
+            "CDS": 0.507213,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
+            "ema_fast": 236.20334074826698,
+            "ema_slow": 229.87969193483923,
+            "macd": 6.323648813427752,
+            "macd_signal": 2.609811855647347,
+            "macd_hist": 3.7138369577804053,
+            "rsi14": 72.08284546456541,
+            "sma20": 226.62575
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T13:13:08+00:00",
-              "source": "parameterio",
-              "tone": 0.45485,
-              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
+              "ts": "2025-11-06T14:10:06+00:00",
+              "source": "benzinga",
+              "tone": 0.42903,
+              "headline": "SentinelOne Announces Integrations With Amazon Web Service Including Singularity Hyperautomation With AWS Security Incident Response"
             },
             {
-              "ts": "2025-11-06T12:51:21+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
+              "ts": "2025-11-06T12:37:16+00:00",
+              "source": "bloombergcom",
+              "tone": 0.0,
+              "headline": "Amazon\u2019s $300 Billion Jump Puts Stock Back in AI Conversation"
             },
             {
-              "ts": "2025-11-06T10:24:24+00:00",
-              "source": "benzinga",
-              "tone": 0.64656,
-              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+              "ts": "2025-11-06T12:30:00+00:00",
+              "source": "marketsfinancialcontent",
+              "tone": 0.17,
+              "headline": "A $38 Billion Reason to Buy Amazon Stock Here"
             }
           ]
         },
@@ -164,13 +164,13 @@
           "px": 42.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.417127,
-          "qty": 0.0002,
+          "score": 0.416482,
+          "qty": 0.0003,
           "notional": 0.01,
           "signals": {
             "TS": 0.578357,
-            "NS": 0.175281,
-            "CDS": 0.417127,
+            "NS": 0.173668,
+            "CDS": 0.416482,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -185,68 +185,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T12:04:28+00:00",
-              "source": "fintel",
+              "ts": "2025-11-06T13:59:45+00:00",
+              "source": "newsstocktradersdailycom",
               "tone": 0.0,
-              "headline": "Needham Maintains Unity Software (U) Buy Recommendation"
+              "headline": "(TBUE.U) Stock Evaluation Report (TBUE.U:CA)"
             },
             {
-              "ts": "2025-11-06T12:01:36+00:00",
-              "source": "fcppagovbr",
+              "ts": "2025-11-06T13:57:37+00:00",
+              "source": "benzinga",
+              "tone": 0.6127199999999999,
+              "headline": "Unity Software Analysts Increase Their Forecasts After Strong Q3 Results"
+            },
+            {
+              "ts": "2025-11-06T13:28:43+00:00",
+              "source": "benzinga",
               "tone": 0.0,
-              "headline": "Is SOUL.U stock a buy for dividend portfolios - 2025 Pullback Review & Community Consensus Trade Signals"
-            },
-            {
-              "ts": "2025-11-06T11:49:32+00:00",
-              "source": "newsercom",
-              "tone": 0.29295,
-              "headline": "How geopolitical tensions affect SOUL.U stock - Quarterly Earnings Summary & Free Weekly Watchlist of Top Performers"
-            }
-          ]
-        },
-        {
-          "symbol": "ARCC",
-          "action": "BUY",
-          "px": 20.37,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.388214,
-          "qty": 0.0001,
-          "notional": 0.0,
-          "signals": {
-            "TS": 0.481402,
-            "NS": 0.248433,
-            "CDS": 0.388214,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 20.23922136927846,
-            "ema_slow": 20.281788923133867,
-            "macd": -0.042567553855406004,
-            "macd_signal": -0.15288725400519934,
-            "macd_hist": 0.11031970014979334,
-            "rsi14": 56.478136225096634,
-            "sma20": 19.95574999999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T09:57:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
-            },
-            {
-              "ts": "2025-11-06T09:50:58+00:00",
-              "source": "fcppagovbr",
-              "tone": -0.24695,
-              "headline": "What risks investors should watch in SBFMW stock - July 2025 Final Week & AI Enhanced Execution Alerts"
-            },
-            {
-              "ts": "2025-11-06T09:45:00+00:00",
-              "source": "themotleyfool",
-              "tone": 0.1909,
-              "headline": "2 Top Dividend Stocks to Buy in November"
+              "headline": "Wedbush Maintains Outperform on Unity Software, Raises Price Target to $50"
             }
           ]
         }
@@ -282,8 +236,8 @@
           "notional": 1769.57,
           "signals": {
             "TS": -0.478081,
-            "NS": 0.184157,
-            "CDS": -0.213186,
+            "NS": 0.173861,
+            "CDS": -0.217304,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -328,8 +282,8 @@
           "notional": 666.2,
           "signals": {
             "TS": -0.368235,
-            "NS": 0.310686,
-            "CDS": -0.096666,
+            "NS": 0.260174,
+            "CDS": -0.116871,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -344,6 +298,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T13:27:12+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/6/2025"
+            },
+            {
               "ts": "2025-11-06T10:54:40+00:00",
               "source": "newsercom",
               "tone": 0.4063,
@@ -354,12 +314,6 @@
               "source": "newsercom",
               "tone": 0.5,
               "headline": "Will VTI stock top growth indexes - 2025 Risk Factors & Consistent Growth Equity Picks"
-            },
-            {
-              "ts": "2025-11-06T09:05:20+00:00",
-              "source": "newsercom",
-              "tone": 0.4201,
-              "headline": "What is the fair value estimate for VTI stock in 2025 - Trade Risk Summary & Community Shared Stock Ideas"
             }
           ]
         },
@@ -374,8 +328,8 @@
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.182698,
-            "CDS": -0.25748,
+            "NS": 0.189803,
+            "CDS": -0.254637,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -420,8 +374,8 @@
           "notional": 140.77,
           "signals": {
             "TS": -0.514197,
-            "NS": 0.464158,
-            "CDS": -0.122855,
+            "NS": 0.405236,
+            "CDS": -0.146424,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -466,8 +420,8 @@
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.377989,
-            "CDS": -0.185976,
+            "NS": 0.374351,
+            "CDS": -0.187431,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -482,12 +436,6 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T12:37:08+00:00",
-              "source": "newsercom",
-              "tone": 0.4063,
-              "headline": "Technical analysis overview for RKLB stock - Quarterly Profit Summary & Weekly Top Performers Watchlists"
-            },
-            {
               "ts": "2025-11-06T11:59:43+00:00",
               "source": "benzinga",
               "tone": 0.64656,
@@ -498,6 +446,12 @@
               "source": "benzinga",
               "tone": 0.65727,
               "headline": "Why Is Rocket Lab Stock Gaining Thursday? - Rocket Lab (NASDAQ:RKLB)"
+            },
+            {
+              "ts": "2025-11-06T09:53:33+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.4521,
+              "headline": "Is RKLB stock a top momentum play - Market Sentiment Report & Consistent Profit Trading Strategies"
             }
           ]
         },
@@ -512,8 +466,8 @@
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.194148,
-            "CDS": -0.209999,
+            "NS": 0.109895,
+            "CDS": -0.2437,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,22 +482,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T11:18:31+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.29295,
-              "headline": "Is RGTI stock affected by interest rate hikes - July 2025 Chart Watch & Intraday High Probability Setup Alerts"
-            },
-            {
-              "ts": "2025-11-06T10:56:54+00:00",
-              "source": "newsercom",
-              "tone": 0.29295,
-              "headline": "Will RGTI stock deliver shareholder value - Earnings Recap Summary & Proven Capital Preservation Methods"
-            },
-            {
               "ts": "2025-11-06T09:26:54+00:00",
               "source": "fcppagovbr",
               "tone": 0.26335,
               "headline": "Will RGTI stock gain from lower inflation - Product Launch & Weekly Watchlist for Hot Stocks"
+            },
+            {
+              "ts": "2025-11-06T09:25:07+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.42405,
+              "headline": "Will RGTI stock gain from lower inflation - Quarterly Profit Review & Verified Technical Trade Signals"
+            },
+            {
+              "ts": "2025-11-06T08:40:24+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "IONQ, QBTS, RGTI: Quantum Stocks Jump After Quantinuum\u2019s New Breakthrough"
             }
           ]
         },
@@ -558,8 +512,8 @@
           "notional": 386.71,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.329851,
-            "CDS": 0.516601,
+            "NS": 0.365656,
+            "CDS": 0.530923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -604,8 +558,8 @@
           "notional": 386.7,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.193077,
-            "CDS": 0.455535,
+            "NS": 0.212111,
+            "CDS": 0.463148,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -620,22 +574,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T13:28:48+00:00",
+              "source": "benzinga",
+              "tone": 0.28404,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-06T13:00:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
+            {
               "ts": "2025-11-06T12:51:21+00:00",
               "source": "benzinga",
               "tone": 0.9,
               "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
-            },
-            {
-              "ts": "2025-11-06T10:34:05+00:00",
-              "source": "benzinga",
-              "tone": 0.7402500000000001,
-              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
-            },
-            {
-              "ts": "2025-11-06T10:24:24+00:00",
-              "source": "benzinga",
-              "tone": 0.64656,
-              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
             }
           ]
         },
@@ -650,8 +604,8 @@
           "notional": 226.6,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.337395,
-            "CDS": 0.502257,
+            "NS": 0.349785,
+            "CDS": 0.507213,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -666,22 +620,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T14:10:06+00:00",
+              "source": "benzinga",
+              "tone": 0.42903,
+              "headline": "SentinelOne Announces Integrations With Amazon Web Service Including Singularity Hyperautomation With AWS Security Incident Response"
+            },
+            {
               "ts": "2025-11-06T12:37:16+00:00",
               "source": "bloombergcom",
               "tone": 0.0,
-              "headline": "Amazon\u2019s (AMZN) $300 Billion Jump Puts Stock Back in AI Conversation"
+              "headline": "Amazon\u2019s $300 Billion Jump Puts Stock Back in AI Conversation"
             },
             {
-              "ts": "2025-11-06T12:30:02+00:00",
-              "source": "barchartcom",
+              "ts": "2025-11-06T12:30:00+00:00",
+              "source": "marketsfinancialcontent",
               "tone": 0.17,
               "headline": "A $38 Billion Reason to Buy Amazon Stock Here"
-            },
-            {
-              "ts": "2025-11-06T11:04:09+00:00",
-              "source": "morningstar",
-              "tone": 0.35205,
-              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
             }
           ]
         }
@@ -776,13 +730,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.516601,
+          "score": 0.530923,
           "qty": 3.6061,
           "notional": 1000.01,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.329851,
-            "CDS": 0.516601,
+            "NS": 0.365656,
+            "CDS": 0.530923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -817,64 +771,18 @@
           ]
         },
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 270.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.503637,
-          "qty": 3.7022,
-          "notional": 1000.0,
-          "signals": {
-            "TS": 0.590971,
-            "NS": 0.372636,
-            "CDS": 0.503637,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T13:13:08+00:00",
-              "source": "parameterio",
-              "tone": 0.45485,
-              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
-            },
-            {
-              "ts": "2025-11-06T12:51:21+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
-            },
-            {
-              "ts": "2025-11-06T10:24:24+00:00",
-              "source": "benzinga",
-              "tone": 0.64656,
-              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
-            }
-          ]
-        },
-        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.502257,
+          "score": 0.507213,
           "qty": 3.9961,
           "notional": 1000.0,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.337395,
-            "CDS": 0.502257,
+            "NS": 0.349785,
+            "CDS": 0.507213,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -889,22 +797,68 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T14:10:06+00:00",
+              "source": "benzinga",
+              "tone": 0.42903,
+              "headline": "SentinelOne Announces Integrations With Amazon Web Service Including Singularity Hyperautomation With AWS Security Incident Response"
+            },
+            {
               "ts": "2025-11-06T12:37:16+00:00",
               "source": "bloombergcom",
               "tone": 0.0,
-              "headline": "Amazon\u2019s (AMZN) $300 Billion Jump Puts Stock Back in AI Conversation"
+              "headline": "Amazon\u2019s $300 Billion Jump Puts Stock Back in AI Conversation"
             },
             {
-              "ts": "2025-11-06T12:30:02+00:00",
-              "source": "barchartcom",
+              "ts": "2025-11-06T12:30:00+00:00",
+              "source": "marketsfinancialcontent",
               "tone": 0.17,
               "headline": "A $38 Billion Reason to Buy Amazon Stock Here"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.485534,
+          "qty": 3.7022,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.590971,
+            "NS": 0.327379,
+            "CDS": 0.485534,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.44700975441873,
+            "ema_slow": 260.38511359209656,
+            "macd": 6.061896162322171,
+            "macd_signal": 5.710705876433158,
+            "macd_hist": 0.3511902858890128,
+            "rsi14": 69.53951538031329,
+            "sma20": 260.4237499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T13:28:48+00:00",
+              "source": "benzinga",
+              "tone": 0.28404,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
             },
             {
-              "ts": "2025-11-06T11:04:09+00:00",
-              "source": "morningstar",
-              "tone": 0.35205,
-              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
+              "ts": "2025-11-06T13:13:08+00:00",
+              "source": "parameterio",
+              "tone": 0.45485,
+              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
+            },
+            {
+              "ts": "2025-11-06T12:51:21+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
             }
           ]
         },
@@ -914,13 +868,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455535,
+          "score": 0.463148,
           "qty": 3.5169,
           "notional": 1000.0,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.193077,
-            "CDS": 0.455535,
+            "NS": 0.212111,
+            "CDS": 0.463148,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -935,22 +889,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T13:28:48+00:00",
+              "source": "benzinga",
+              "tone": 0.28404,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-06T13:00:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
+            {
               "ts": "2025-11-06T12:51:21+00:00",
               "source": "benzinga",
               "tone": 0.9,
               "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
-            },
-            {
-              "ts": "2025-11-06T10:34:05+00:00",
-              "source": "benzinga",
-              "tone": 0.7402500000000001,
-              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
-            },
-            {
-              "ts": "2025-11-06T10:24:24+00:00",
-              "source": "benzinga",
-              "tone": 0.64656,
-              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
             }
           ]
         }
@@ -982,13 +936,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.516601,
+          "score": 0.530923,
           "qty": 2.1636,
           "notional": 599.99,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.329851,
-            "CDS": 0.516601,
+            "NS": 0.365656,
+            "CDS": 0.530923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1023,64 +977,18 @@
           ]
         },
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 270.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.503637,
-          "qty": 2.2213,
-          "notional": 600.0,
-          "signals": {
-            "TS": 0.590971,
-            "NS": 0.372636,
-            "CDS": 0.503637,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T13:13:08+00:00",
-              "source": "parameterio",
-              "tone": 0.45485,
-              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
-            },
-            {
-              "ts": "2025-11-06T12:51:21+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
-            },
-            {
-              "ts": "2025-11-06T10:24:24+00:00",
-              "source": "benzinga",
-              "tone": 0.64656,
-              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
-            }
-          ]
-        },
-        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.502257,
+          "score": 0.507213,
           "qty": 2.3977,
           "notional": 600.01,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.337395,
-            "CDS": 0.502257,
+            "NS": 0.349785,
+            "CDS": 0.507213,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1095,22 +1003,68 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T14:10:06+00:00",
+              "source": "benzinga",
+              "tone": 0.42903,
+              "headline": "SentinelOne Announces Integrations With Amazon Web Service Including Singularity Hyperautomation With AWS Security Incident Response"
+            },
+            {
               "ts": "2025-11-06T12:37:16+00:00",
               "source": "bloombergcom",
               "tone": 0.0,
-              "headline": "Amazon\u2019s (AMZN) $300 Billion Jump Puts Stock Back in AI Conversation"
+              "headline": "Amazon\u2019s $300 Billion Jump Puts Stock Back in AI Conversation"
             },
             {
-              "ts": "2025-11-06T12:30:02+00:00",
-              "source": "barchartcom",
+              "ts": "2025-11-06T12:30:00+00:00",
+              "source": "marketsfinancialcontent",
               "tone": 0.17,
               "headline": "A $38 Billion Reason to Buy Amazon Stock Here"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.485534,
+          "qty": 2.2213,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.590971,
+            "NS": 0.327379,
+            "CDS": 0.485534,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.44700975441873,
+            "ema_slow": 260.38511359209656,
+            "macd": 6.061896162322171,
+            "macd_signal": 5.710705876433158,
+            "macd_hist": 0.3511902858890128,
+            "rsi14": 69.53951538031329,
+            "sma20": 260.4237499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T13:28:48+00:00",
+              "source": "benzinga",
+              "tone": 0.28404,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
             },
             {
-              "ts": "2025-11-06T11:04:09+00:00",
-              "source": "morningstar",
-              "tone": 0.35205,
-              "headline": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?"
+              "ts": "2025-11-06T13:13:08+00:00",
+              "source": "parameterio",
+              "tone": 0.45485,
+              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
+            },
+            {
+              "ts": "2025-11-06T12:51:21+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
             }
           ]
         },
@@ -1120,13 +1074,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455535,
+          "score": 0.463148,
           "qty": 2.1101,
           "notional": 599.99,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.193077,
-            "CDS": 0.455535,
+            "NS": 0.212111,
+            "CDS": 0.463148,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1141,22 +1095,68 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T13:28:48+00:00",
+              "source": "benzinga",
+              "tone": 0.28404,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-06T13:00:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
+            {
               "ts": "2025-11-06T12:51:21+00:00",
               "source": "benzinga",
               "tone": 0.9,
               "headline": "Apple's Q4 Earnings Beat, $1 Billion Google AI Deal Fuel Surge In Growth Rankings"
+            }
+          ]
+        },
+        {
+          "symbol": "QQQ",
+          "action": "BUY",
+          "px": 623.38,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.432183,
+          "qty": 0.9625,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.460601,
+            "NS": 0.389555,
+            "CDS": 0.432183,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 621.879923872195,
+            "ema_slow": 613.6868988017783,
+            "macd": 8.193025070416752,
+            "macd_signal": 8.159145248852475,
+            "macd_hist": 0.033879821564276824,
+            "rsi14": 53.492825944535774,
+            "sma20": 614.4555000000001
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T13:28:48+00:00",
+              "source": "benzinga",
+              "tone": 0.28404,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
             },
             {
-              "ts": "2025-11-06T10:34:05+00:00",
-              "source": "benzinga",
-              "tone": 0.7402500000000001,
-              "headline": "Google Eyes Further Stake In Anthropic, Potentially Valuing The AI Start-Up At $350 Billion: Report"
+              "ts": "2025-11-06T12:57:13+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "QQQ ETF News, 11/6/2025"
             },
             {
-              "ts": "2025-11-06T10:24:24+00:00",
-              "source": "benzinga",
-              "tone": 0.64656,
-              "headline": "Stock Market Today: Dow Jones, Nasdaq Futures Slide As Supreme Court Questions Trump's Tariffs\u2014Coherent, Marvell Tech, Applovin, Apple In Focus"
+              "ts": "2025-11-06T12:45:32+00:00",
+              "source": "marketbeat",
+              "tone": 0.8019000000000001,
+              "headline": "Invesco QQQ $QQQ Shares Acquired by Flagship Private Wealth LLC"
             }
           ]
         },
@@ -1166,13 +1166,13 @@
           "px": 264.72,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.422684,
-          "qty": 2.2665,
-          "notional": 599.99,
+          "score": 0.419361,
+          "qty": 0.0001,
+          "notional": 0.03,
           "signals": {
             "TS": 0.482943,
-            "NS": 0.332296,
-            "CDS": 0.422684,
+            "NS": 0.323988,
+            "CDS": 0.419361,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1193,67 +1193,21 @@
               "headline": "Black Swift Group LLC Reduces Position in Snowflake Inc. $SNOW"
             },
             {
-              "ts": "2025-11-06T11:01:39+00:00",
-              "source": "newsercom",
-              "tone": 0.47425,
-              "headline": "Is SNOW stock attractive for long term wealth building - Weekly Stock Report & Smart Swing Trading Techniques"
-            },
-            {
               "ts": "2025-11-06T10:59:20+00:00",
               "source": "marketbeat",
               "tone": 0.73134,
               "headline": "Asahi Life Asset Management CO. LTD. Buys Shares of 2,040 Snowflake Inc. $SNOW"
-            }
-          ]
-        },
-        {
-          "symbol": "CRWD",
-          "action": "BUY",
-          "px": 534.03,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.419239,
-          "qty": 0.0001,
-          "notional": 0.05,
-          "signals": {
-            "TS": 0.483465,
-            "NS": 0.322899,
-            "CDS": 0.419239,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 530.4842095508923,
-            "ema_slow": 513.8682033335073,
-            "macd": 16.616006217385006,
-            "macd_signal": 16.100474899333847,
-            "macd_hist": 0.5155313180511598,
-            "rsi14": 55.8748608847311,
-            "sma20": 516.8800000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T11:23:57+00:00",
-              "source": "marketbeat",
-              "tone": 0.64656,
-              "headline": "CrowdStrike $CRWD Shares Sold by Black Swift Group LLC"
             },
             {
-              "ts": "2025-11-06T11:21:53+00:00",
-              "source": "theglobeandmail",
+              "ts": "2025-11-06T10:53:15+00:00",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "2 No-Brainer Tech Stocks to Buy Right Now"
-            },
-            {
-              "ts": "2025-11-06T10:59:20+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Resona Asset Management Co. Ltd. Purchases 5,105 Shares of CrowdStrike $CRWD"
+              "headline": "Trivest Advisors Ltd Acquires New Stake in Snowflake Inc. $SNOW"
             }
           ]
         }
       ],
-      "cash_left": 16999.98
+      "cash_left": 16999.99
     },
     "portfolio_paper_TS_only": {
       "meta": {
