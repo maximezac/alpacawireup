@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T05:15:52.256440+00:00",
+  "as_of_utc": "2025-11-06T06:22:09.535106+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -21,64 +21,18 @@
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 14.175,
-          "qty_hint": 75.39,
-          "reason": "score<sell",
-          "score": -0.253239,
-          "qty": 18,
-          "notional": 255.15,
-          "signals": {
-            "TS": -0.550931,
-            "NS": 0.193298,
-            "CDS": -0.253239,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 15.686874368234072,
-            "ema_slow": 16.90098465364756,
-            "macd": -1.2141102854134864,
-            "macd_signal": -0.9005153813999595,
-            "macd_hist": -0.31359490401352696,
-            "rsi14": 36.679361531586,
-            "sma20": 17.1305
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:56:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Shares Up 3.5% - Here's Why"
-            },
-            {
-              "ts": "2025-11-05T22:08:56+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.1909,
-              "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
-            }
-          ]
-        },
-        {
           "symbol": "RKLB",
           "action": "SELL",
           "px": 56.41,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.311207,
+          "score": -0.294071,
           "qty": 1,
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.064911,
-            "CDS": -0.311207,
+            "NS": 0.107752,
+            "CDS": -0.294071,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -93,6 +47,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T04:39:41+00:00",
+              "source": "newsercom",
+              "tone": 0.125,
+              "headline": "Why analysts upgrade RKLB stock - 2025 Biggest Moves & Precise Entry and Exit Recommendations"
+            },
+            {
               "ts": "2025-11-06T01:04:31+00:00",
               "source": "fcppagovbr",
               "tone": 0.0,
@@ -103,12 +63,6 @@
               "source": "benzinga",
               "tone": 0.52731,
               "headline": "Rocket Lab Achieves Successful Deployment Of Sixth iQPS Satellite On 74th Electron Launch From New Zealand"
-            },
-            {
-              "ts": "2025-11-05T21:45:00+00:00",
-              "source": "stocktitan",
-              "tone": 0.0,
-              "headline": "Rocket Lab (NASDAQ: RKLB) logs 16th Electron launch, deploying iQPS SAR to 575 km"
             }
           ]
         },
@@ -118,13 +72,13 @@
           "px": 37.3,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.268711,
+          "score": -0.267895,
           "qty": 3,
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.04737,
-            "CDS": -0.268711,
+            "NS": 0.049409,
+            "CDS": -0.267895,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,6 +93,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T05:12:02+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "Rigetti Computing (RGTI) Gears Up for Q3 Earnings: Here\u2019s What to Expect"
+            },
+            {
               "ts": "2025-11-05T23:22:58+00:00",
               "source": "fcppagovbr",
               "tone": 0.29295,
@@ -149,58 +109,6 @@
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 6% Higher - Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T20:09:38+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Could Buying $10,000 of Rigetti Computing Make You a Millionaire?"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 270.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.498091,
-          "qty": 2.1475,
-          "notional": 580.06,
-          "signals": {
-            "TS": 0.590971,
-            "NS": 0.35877,
-            "CDS": 0.498091,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T20:56:22+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
-            },
-            {
-              "ts": "2025-11-05T20:08:45+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.2294,
-              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
-            },
-            {
-              "ts": "2025-11-05T19:14:26+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
             }
           ]
         },
@@ -210,13 +118,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.492776,
-          "qty": 1.5143,
-          "notional": 419.93,
+          "score": 0.495009,
+          "qty": 2.0918,
+          "notional": 580.08,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.270288,
-            "CDS": 0.492776,
+            "NS": 0.275871,
+            "CDS": 0.495009,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -251,18 +159,64 @@
           ]
         },
         {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.48295,
+          "qty": 1.5546,
+          "notional": 419.91,
+          "signals": {
+            "TS": 0.590971,
+            "NS": 0.320919,
+            "CDS": 0.48295,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.44700975441873,
+            "ema_slow": 260.38511359209656,
+            "macd": 6.061896162322171,
+            "macd_signal": 5.710705876433158,
+            "macd_hist": 0.3511902858890128,
+            "rsi14": 69.53951538031329,
+            "sma20": 260.4237499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T05:58:04+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            },
+            {
+              "ts": "2025-11-05T20:56:22+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
+            },
+            {
+              "ts": "2025-11-05T20:08:45+00:00",
+              "source": "newsstocktradersdailycom",
+              "tone": 0.2294,
+              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
+            }
+          ]
+        },
+        {
           "symbol": "ARCC",
           "action": "BUY",
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.433935,
-          "qty": 0.0004,
+          "score": 0.434088,
+          "qty": 0.0005,
           "notional": 0.01,
           "signals": {
             "TS": 0.481402,
-            "NS": 0.362736,
-            "CDS": 0.433935,
+            "NS": 0.363117,
+            "CDS": 0.434088,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -328,8 +282,8 @@
           "notional": 1769.57,
           "signals": {
             "TS": -0.478081,
-            "NS": 0.113547,
-            "CDS": -0.24143,
+            "NS": 0.115501,
+            "CDS": -0.240648,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -374,8 +328,8 @@
           "notional": 666.2,
           "signals": {
             "TS": -0.368235,
-            "NS": 0.232377,
-            "CDS": -0.12799,
+            "NS": 0.231381,
+            "CDS": -0.128388,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -420,8 +374,8 @@
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.193298,
-            "CDS": -0.253239,
+            "NS": 0.204943,
+            "CDS": -0.248582,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -436,6 +390,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T03:42:38+00:00",
+              "source": "newsercom",
+              "tone": 0.3062,
+              "headline": "Will QUBT stock split attract more investors - 2025 Market Outlook & Community Verified Trade Alerts"
+            },
+            {
               "ts": "2025-11-05T22:56:19+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
@@ -446,12 +406,6 @@
               "source": "fcppagovbr",
               "tone": 0.1909,
               "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
             }
           ]
         },
@@ -466,8 +420,8 @@
           "notional": 140.77,
           "signals": {
             "TS": -0.514197,
-            "NS": 0.380098,
-            "CDS": -0.156479,
+            "NS": 0.275641,
+            "CDS": -0.198262,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -482,22 +436,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T00:04:35+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.0,
+              "headline": "Is ASTS stock overvalued by current metrics - Weekly Trend Recap & Verified Momentum Stock Watchlist"
+            },
+            {
+              "ts": "2025-11-05T02:55:25+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.5,
+              "headline": "Is ASTS stock a dividend growth opportunity - Trade Performance Summary & High Conviction Buy Zone Picks"
+            },
+            {
               "ts": "2025-11-05T01:34:13+00:00",
               "source": "newsercom",
               "tone": 0.38915,
               "headline": "Why Tradr 2X Long ASTS Daily stock remains stable - July 2025 Drop Watch & Free Expert Verified Stock Movement Alerts"
-            },
-            {
-              "ts": "2025-11-04T16:25:33+00:00",
-              "source": "benzinga",
-              "tone": 0.70047,
-              "headline": "Smart Money Sells Palantir, Quantum Computing, And Space Stocks; Gold Gives Up Momo-Induced Gains"
-            },
-            {
-              "ts": "2025-11-04T15:34:27+00:00",
-              "source": "simplywallst",
-              "tone": 0.07655,
-              "headline": "AST SpaceMobile (ASTS): Valuation in Focus After Landmark 10-Year Satellite Deal With STC Group"
             }
           ]
         },
@@ -512,8 +466,8 @@
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.064911,
-            "CDS": -0.311207,
+            "NS": 0.107752,
+            "CDS": -0.294071,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,6 +482,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T04:39:41+00:00",
+              "source": "newsercom",
+              "tone": 0.125,
+              "headline": "Why analysts upgrade RKLB stock - 2025 Biggest Moves & Precise Entry and Exit Recommendations"
+            },
+            {
               "ts": "2025-11-06T01:04:31+00:00",
               "source": "fcppagovbr",
               "tone": 0.0,
@@ -538,12 +498,6 @@
               "source": "benzinga",
               "tone": 0.52731,
               "headline": "Rocket Lab Achieves Successful Deployment Of Sixth iQPS Satellite On 74th Electron Launch From New Zealand"
-            },
-            {
-              "ts": "2025-11-05T21:45:00+00:00",
-              "source": "stocktitan",
-              "tone": 0.0,
-              "headline": "Rocket Lab (NASDAQ: RKLB) logs 16th Electron launch, deploying iQPS SAR to 575 km"
             }
           ]
         },
@@ -558,8 +512,8 @@
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.04737,
-            "CDS": -0.268711,
+            "NS": 0.049409,
+            "CDS": -0.267895,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,6 +528,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T05:12:02+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "Rigetti Computing (RGTI) Gears Up for Q3 Earnings: Here\u2019s What to Expect"
+            },
+            {
               "ts": "2025-11-05T23:22:58+00:00",
               "source": "fcppagovbr",
               "tone": 0.29295,
@@ -584,12 +544,6 @@
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 6% Higher - Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T20:09:38+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Could Buying $10,000 of Rigetti Computing Make You a Millionaire?"
             }
           ]
         },
@@ -604,8 +558,8 @@
           "notional": 386.71,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.270288,
-            "CDS": 0.492776,
+            "NS": 0.275871,
+            "CDS": 0.495009,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -650,8 +604,8 @@
           "notional": 386.7,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.177692,
-            "CDS": 0.44938,
+            "NS": 0.163424,
+            "CDS": 0.443673,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -666,6 +620,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T05:58:04+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            },
+            {
               "ts": "2025-11-06T04:36:36+00:00",
               "source": "benzinga",
               "tone": 0.65799,
@@ -676,12 +636,6 @@
               "source": "yahoofinance",
               "tone": 0.82314,
               "headline": "Jim Cramer on Alphabet: \u201cWall Street Seems More Willing to Give Them the Benefit of the Doubt\u201d"
-            },
-            {
-              "ts": "2025-11-06T02:38:51+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Uber CEO Dara Khosrowshahi Sees A 'Hybrid Future' Of Robotaxis And Human Drivers, Says AVs On Its Platform Can Make More Money"
             }
           ]
         },
@@ -696,8 +650,8 @@
           "notional": 226.6,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.296097,
-            "CDS": 0.485738,
+            "NS": 0.273565,
+            "CDS": 0.476725,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -817,64 +771,18 @@
       "cash_start": 20000.0,
       "trades": [
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 270.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.498091,
-          "qty": 3.7022,
-          "notional": 1000.0,
-          "signals": {
-            "TS": 0.590971,
-            "NS": 0.35877,
-            "CDS": 0.498091,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T20:56:22+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
-            },
-            {
-              "ts": "2025-11-05T20:08:45+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.2294,
-              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
-            },
-            {
-              "ts": "2025-11-05T19:14:26+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.492776,
+          "score": 0.495009,
           "qty": 3.6061,
           "notional": 1000.01,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.270288,
-            "CDS": 0.492776,
+            "NS": 0.275871,
+            "CDS": 0.495009,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -909,18 +817,64 @@
           ]
         },
         {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.48295,
+          "qty": 3.7022,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.590971,
+            "NS": 0.320919,
+            "CDS": 0.48295,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.44700975441873,
+            "ema_slow": 260.38511359209656,
+            "macd": 6.061896162322171,
+            "macd_signal": 5.710705876433158,
+            "macd_hist": 0.3511902858890128,
+            "rsi14": 69.53951538031329,
+            "sma20": 260.4237499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T05:58:04+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            },
+            {
+              "ts": "2025-11-05T20:56:22+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
+            },
+            {
+              "ts": "2025-11-05T20:08:45+00:00",
+              "source": "newsstocktradersdailycom",
+              "tone": 0.2294,
+              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.485738,
+          "score": 0.476725,
           "qty": 3.9961,
           "notional": 1000.0,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.296097,
-            "CDS": 0.485738,
+            "NS": 0.273565,
+            "CDS": 0.476725,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -960,13 +914,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.44938,
+          "score": 0.443673,
           "qty": 3.5169,
           "notional": 1000.0,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.177692,
-            "CDS": 0.44938,
+            "NS": 0.163424,
+            "CDS": 0.443673,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -981,6 +935,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T05:58:04+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            },
+            {
               "ts": "2025-11-06T04:36:36+00:00",
               "source": "benzinga",
               "tone": 0.65799,
@@ -991,12 +951,6 @@
               "source": "yahoofinance",
               "tone": 0.82314,
               "headline": "Jim Cramer on Alphabet: \u201cWall Street Seems More Willing to Give Them the Benefit of the Doubt\u201d"
-            },
-            {
-              "ts": "2025-11-06T02:38:51+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Uber CEO Dara Khosrowshahi Sees A 'Hybrid Future' Of Robotaxis And Human Drivers, Says AVs On Its Platform Can Make More Money"
             }
           ]
         }
@@ -1023,64 +977,18 @@
       "cash_start": 20000.0,
       "trades": [
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 270.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.498091,
-          "qty": 2.2213,
-          "notional": 600.0,
-          "signals": {
-            "TS": 0.590971,
-            "NS": 0.35877,
-            "CDS": 0.498091,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T20:56:22+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
-            },
-            {
-              "ts": "2025-11-05T20:08:45+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.2294,
-              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
-            },
-            {
-              "ts": "2025-11-05T19:14:26+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "'Apple Plans to Use 1.2 Trillion Parameter Google Gemini Model to Run New Siri'- Bloomberg"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.492776,
+          "score": 0.495009,
           "qty": 2.1636,
           "notional": 599.99,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.270288,
-            "CDS": 0.492776,
+            "NS": 0.275871,
+            "CDS": 0.495009,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1115,18 +1023,64 @@
           ]
         },
         {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.48295,
+          "qty": 2.2213,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.590971,
+            "NS": 0.320919,
+            "CDS": 0.48295,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.44700975441873,
+            "ema_slow": 260.38511359209656,
+            "macd": 6.061896162322171,
+            "macd_signal": 5.710705876433158,
+            "macd_hist": 0.3511902858890128,
+            "rsi14": 69.53951538031329,
+            "sma20": 260.4237499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T05:58:04+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            },
+            {
+              "ts": "2025-11-05T20:56:22+00:00",
+              "source": "benzinga",
+              "tone": 0.9,
+              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
+            },
+            {
+              "ts": "2025-11-05T20:08:45+00:00",
+              "source": "newsstocktradersdailycom",
+              "tone": 0.2294,
+              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.485738,
+          "score": 0.476725,
           "qty": 2.3977,
           "notional": 600.01,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.296097,
-            "CDS": 0.485738,
+            "NS": 0.273565,
+            "CDS": 0.476725,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1166,13 +1120,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.44938,
+          "score": 0.443673,
           "qty": 2.1101,
           "notional": 599.99,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.177692,
-            "CDS": 0.44938,
+            "NS": 0.163424,
+            "CDS": 0.443673,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1187,6 +1141,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T05:58:04+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            },
+            {
               "ts": "2025-11-06T04:36:36+00:00",
               "source": "benzinga",
               "tone": 0.65799,
@@ -1197,58 +1157,6 @@
               "source": "yahoofinance",
               "tone": 0.82314,
               "headline": "Jim Cramer on Alphabet: \u201cWall Street Seems More Willing to Give Them the Benefit of the Doubt\u201d"
-            },
-            {
-              "ts": "2025-11-06T02:38:51+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Uber CEO Dara Khosrowshahi Sees A 'Hybrid Future' Of Robotaxis And Human Drivers, Says AVs On Its Platform Can Make More Money"
-            }
-          ]
-        },
-        {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 264.72,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.44268,
-          "qty": 2.2665,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.482943,
-            "NS": 0.382287,
-            "CDS": 0.44268,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 263.1671738526789,
-            "ema_slow": 253.04777327049067,
-            "macd": 10.119400582188234,
-            "macd_signal": 9.557400227448161,
-            "macd_hist": 0.5620003547400731,
-            "rsi14": 55.61815994066284,
-            "sma20": 255.22224999999997
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T23:54:06+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.5,
-              "headline": "What is the fair value of SNOW stock now - Analyst Upgrade & AI Forecast Swing Trade Picks"
-            },
-            {
-              "ts": "2025-11-05T23:26:38+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.3592,
-              "headline": "How analysts revise price targets for SNOW stock - July 2025 Short Interest & Fast Moving Trade Plans"
-            },
-            {
-              "ts": "2025-11-05T20:39:32+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.47505,
-              "headline": "Why Tidal Trust II YieldMax SNOW stock could be top winner - Inflation Watch & Stepwise Entry and Exit Trade Signals"
             }
           ]
         },
@@ -1258,13 +1166,13 @@
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.433935,
-          "qty": 0.0015,
-          "notional": 0.03,
+          "score": 0.434088,
+          "qty": 29.4551,
+          "notional": 600.0,
           "signals": {
             "TS": 0.481402,
-            "NS": 0.362736,
-            "CDS": 0.433935,
+            "NS": 0.363117,
+            "CDS": 0.434088,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1297,9 +1205,55 @@
               "headline": "Top Buys by Top Brass: Chief Executive Officer Schnabel's $265.1K Bet on ARCC"
             }
           ]
+        },
+        {
+          "symbol": "ZS",
+          "action": "BUY",
+          "px": 323.82,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.431988,
+          "qty": 0.0001,
+          "notional": 0.03,
+          "signals": {
+            "TS": 0.462668,
+            "NS": 0.385967,
+            "CDS": 0.431988,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 322.76203020158704,
+            "ema_slow": 314.237522787594,
+            "macd": 8.524507413993035,
+            "macd_signal": 8.064151230345626,
+            "macd_hist": 0.46035618364740927,
+            "rsi14": 53.40538220508617,
+            "sma20": 316.27175000000017
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T23:46:54+00:00",
+              "source": "simplywallst",
+              "tone": 0.29295,
+              "headline": "How Zscaler\u2019s (ZS) SPLX Acquisition and New AI Security Enhancements Could Impact Investors"
+            },
+            {
+              "ts": "2025-11-05T08:01:00+00:00",
+              "source": "stocktitan",
+              "tone": 0.29295,
+              "headline": "Zscaler (NASDAQ: ZS) finds 239 malicious Play apps with 42M installs in tools category"
+            },
+            {
+              "ts": "2025-11-04T21:40:57+00:00",
+              "source": "simplywallst",
+              "tone": 0.37305,
+              "headline": "Is Now a Good Time to Reassess Zscaler After 85% Stock Price Surge in 2025?"
+            }
+          ]
         }
       ],
-      "cash_left": 17000.0
+      "cash_left": 16999.99
     },
     "portfolio_paper_TS_only": {
       "meta": {
