@@ -62,6 +62,14 @@ portfolios:
     trade_scope: paper
     tags: [ideas, paper, aggressive]
 
+  portfolio_max_autotrader:
+    title: "AutoTrade my portfolio"
+    path: data/portfolios/portfolio_max_autotrader
+    per_line_frac: 0.03
+    max_deploy_frac: 0.15
+    trade_scope: paper
+    tags: [ideas, paper]
+
   portfolio_paper_reasonable:
     title: "Paper Reasonable"
     path: data/portfolios/portfolio_paper_reasonable
