@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T03:10:45.218861+00:00",
+  "as_of_utc": "2025-11-06T04:21:01.973181+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -21,64 +21,18 @@
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 14.175,
-          "qty_hint": 75.39,
-          "reason": "score<sell",
-          "score": -0.258918,
-          "qty": 18,
-          "notional": 255.15,
-          "signals": {
-            "TS": -0.550931,
-            "NS": 0.179101,
-            "CDS": -0.258918,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 15.686874368234072,
-            "ema_slow": 16.90098465364756,
-            "macd": -1.2141102854134864,
-            "macd_signal": -0.9005153813999595,
-            "macd_hist": -0.31359490401352696,
-            "rsi14": 36.679361531586,
-            "sma20": 17.1305
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:56:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Shares Up 3.5% - Here's Why"
-            },
-            {
-              "ts": "2025-11-05T22:08:56+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.1909,
-              "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
-            }
-          ]
-        },
-        {
           "symbol": "RKLB",
           "action": "SELL",
           "px": 56.41,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.280971,
+          "score": -0.290676,
           "qty": 1,
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.140502,
-            "CDS": -0.280971,
+            "NS": 0.116238,
+            "CDS": -0.290676,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -93,6 +47,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T01:04:31+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.0,
+              "headline": "What catalysts could drive RKLB stock higher - 2025 Big Picture & Expert Curated Trade Setup Alerts"
+            },
+            {
               "ts": "2025-11-05T22:09:18+00:00",
               "source": "benzinga",
               "tone": 0.52731,
@@ -103,12 +63,6 @@
               "source": "stocktitan",
               "tone": 0.0,
               "headline": "Rocket Lab (NASDAQ: RKLB) logs 16th Electron launch, deploying iQPS SAR to 575 km"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: RKLB, EAT, MED"
             }
           ]
         },
@@ -118,13 +72,13 @@
           "px": 37.3,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.269259,
+          "score": -0.264139,
           "qty": 3,
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.045997,
-            "CDS": -0.269259,
+            "NS": 0.058799,
+            "CDS": -0.264139,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -159,60 +113,14 @@
           ]
         },
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 277.31,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.505001,
-          "qty": 2.0918,
-          "notional": 580.08,
-          "signals": {
-            "TS": 0.641101,
-            "NS": 0.30085,
-            "CDS": 0.505001,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 251.49621136562143,
-            "ema_slow": 239.67952436770037,
-            "macd": 11.816686997921067,
-            "macd_signal": 8.453495643680741,
-            "macd_hist": 3.3631913542403264,
-            "rsi14": 75.15513812252911,
-            "sma20": 240.43975000000017
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:15:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T21:13:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.57321,
-              "headline": "Best Solar Stocks To Research - November 4th"
-            }
-          ]
-        },
-        {
           "symbol": "AAPL",
           "action": "BUY",
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.500036,
-          "qty": 1.5546,
-          "notional": 419.91,
+          "qty": 2.1475,
+          "notional": 580.06,
           "signals": {
             "TS": 0.590971,
             "NS": 0.363634,
@@ -251,18 +159,64 @@
           ]
         },
         {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 277.31,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.492773,
+          "qty": 1.5143,
+          "notional": 419.93,
+          "signals": {
+            "TS": 0.641101,
+            "NS": 0.27028,
+            "CDS": 0.492773,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.49621136562143,
+            "ema_slow": 239.67952436770037,
+            "macd": 11.816686997921067,
+            "macd_signal": 8.453495643680741,
+            "macd_hist": 3.3631913542403264,
+            "rsi14": 75.15513812252911,
+            "sma20": 240.43975000000017
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T22:15:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
+            },
+            {
+              "ts": "2025-11-05T21:15:09+00:00",
+              "source": "thestreet",
+              "tone": 0.29500000000000004,
+              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
+            },
+            {
+              "ts": "2025-11-05T20:25:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
+            }
+          ]
+        },
+        {
           "symbol": "ARCC",
           "action": "BUY",
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.433924,
-          "qty": 0.0005,
+          "score": 0.433923,
+          "qty": 0.0004,
           "notional": 0.01,
           "signals": {
             "TS": 0.481402,
             "NS": 0.362706,
-            "CDS": 0.433924,
+            "CDS": 0.433923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -328,8 +282,8 @@
           "notional": 1769.57,
           "signals": {
             "TS": -0.478081,
-            "NS": 0.11675,
-            "CDS": -0.240148,
+            "NS": 0.114502,
+            "CDS": -0.241048,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -374,8 +328,8 @@
           "notional": 666.2,
           "signals": {
             "TS": -0.368235,
-            "NS": 0.232435,
-            "CDS": -0.127967,
+            "NS": 0.232394,
+            "CDS": -0.127983,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -420,8 +374,8 @@
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.179101,
-            "CDS": -0.258918,
+            "NS": 0.203662,
+            "CDS": -0.249094,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -466,8 +420,8 @@
           "notional": 140.77,
           "signals": {
             "TS": -0.514197,
-            "NS": 0.313106,
-            "CDS": -0.183275,
+            "NS": 0.154044,
+            "CDS": -0.2469,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -488,16 +442,16 @@
               "headline": "Is ASTS stock overvalued by current metrics - Weekly Trend Recap & Verified Momentum Stock Watchlist"
             },
             {
+              "ts": "2025-11-05T19:36:46+00:00",
+              "source": "fcppagovbr",
+              "tone": -0.2787,
+              "headline": "Will ASTS stock rally after Fed decisions - 2025 Earnings Surprises & Low Risk Entry Point Tips"
+            },
+            {
               "ts": "2025-11-05T15:52:27+00:00",
               "source": "newsercom",
               "tone": 0.35015,
-              "headline": "Is ASTS stock safe for conservative investors - July 2025 Highlights & Entry Point Confirmation Signals"
-            },
-            {
-              "ts": "2025-11-05T10:24:05+00:00",
-              "source": "newsercom",
-              "tone": 0.5,
-              "headline": "Can ASTS stock attract ESG capital inflows - Market Movers & Long-Term Growth Plans"
+              "headline": "Is ASTS stock safe for conservative investors - Quarterly Portfolio Summary & Daily Entry Point Alerts"
             }
           ]
         },
@@ -512,8 +466,8 @@
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.140502,
-            "CDS": -0.280971,
+            "NS": 0.116238,
+            "CDS": -0.290676,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,6 +482,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T01:04:31+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.0,
+              "headline": "What catalysts could drive RKLB stock higher - 2025 Big Picture & Expert Curated Trade Setup Alerts"
+            },
+            {
               "ts": "2025-11-05T22:09:18+00:00",
               "source": "benzinga",
               "tone": 0.52731,
@@ -538,12 +498,6 @@
               "source": "stocktitan",
               "tone": 0.0,
               "headline": "Rocket Lab (NASDAQ: RKLB) logs 16th Electron launch, deploying iQPS SAR to 575 km"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: RKLB, EAT, MED"
             }
           ]
         },
@@ -558,8 +512,8 @@
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.045997,
-            "CDS": -0.269259,
+            "NS": 0.058799,
+            "CDS": -0.264139,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -604,8 +558,8 @@
           "notional": 386.71,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.30085,
-            "CDS": 0.505001,
+            "NS": 0.27028,
+            "CDS": 0.492773,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -632,10 +586,10 @@
               "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
             },
             {
-              "ts": "2025-11-05T21:13:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.57321,
-              "headline": "Best Solar Stocks To Research - November 4th"
+              "ts": "2025-11-05T20:25:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
             }
           ]
         },
@@ -650,8 +604,8 @@
           "notional": 386.7,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.119273,
-            "CDS": 0.426013,
+            "NS": 0.120099,
+            "CDS": 0.426343,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -696,8 +650,8 @@
           "notional": 226.6,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.278882,
-            "CDS": 0.478852,
+            "NS": 0.261789,
+            "CDS": 0.472014,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -817,52 +771,6 @@
       "cash_start": 20000.0,
       "trades": [
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 277.31,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.505001,
-          "qty": 3.6061,
-          "notional": 1000.01,
-          "signals": {
-            "TS": 0.641101,
-            "NS": 0.30085,
-            "CDS": 0.505001,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 251.49621136562143,
-            "ema_slow": 239.67952436770037,
-            "macd": 11.816686997921067,
-            "macd_signal": 8.453495643680741,
-            "macd_hist": 3.3631913542403264,
-            "rsi14": 75.15513812252911,
-            "sma20": 240.43975000000017
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:15:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T21:13:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.57321,
-              "headline": "Best Solar Stocks To Research - November 4th"
-            }
-          ]
-        },
-        {
           "symbol": "AAPL",
           "action": "BUY",
           "px": 270.11,
@@ -909,18 +817,64 @@
           ]
         },
         {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 277.31,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.492773,
+          "qty": 3.6061,
+          "notional": 1000.01,
+          "signals": {
+            "TS": 0.641101,
+            "NS": 0.27028,
+            "CDS": 0.492773,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.49621136562143,
+            "ema_slow": 239.67952436770037,
+            "macd": 11.816686997921067,
+            "macd_signal": 8.453495643680741,
+            "macd_hist": 3.3631913542403264,
+            "rsi14": 75.15513812252911,
+            "sma20": 240.43975000000017
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T22:15:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
+            },
+            {
+              "ts": "2025-11-05T21:15:09+00:00",
+              "source": "thestreet",
+              "tone": 0.29500000000000004,
+              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
+            },
+            {
+              "ts": "2025-11-05T20:25:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.478852,
+          "score": 0.472014,
           "qty": 3.9961,
           "notional": 1000.0,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.278882,
-            "CDS": 0.478852,
+            "NS": 0.261789,
+            "CDS": 0.472014,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -955,64 +909,18 @@
           ]
         },
         {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 264.72,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.438538,
-          "qty": 3.7775,
-          "notional": 999.98,
-          "signals": {
-            "TS": 0.482943,
-            "NS": 0.371931,
-            "CDS": 0.438538,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 263.1671738526789,
-            "ema_slow": 253.04777327049067,
-            "macd": 10.119400582188234,
-            "macd_signal": 9.557400227448161,
-            "macd_hist": 0.5620003547400731,
-            "rsi14": 55.61815994066284,
-            "sma20": 255.22224999999997
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T23:54:06+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.5,
-              "headline": "What is the fair value of SNOW stock now - Analyst Upgrade & AI Forecast Swing Trade Picks"
-            },
-            {
-              "ts": "2025-11-05T23:26:38+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.3592,
-              "headline": "How analysts revise price targets for SNOW stock - July 2025 Short Interest & Fast Moving Trade Plans"
-            },
-            {
-              "ts": "2025-11-05T20:39:32+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.47505,
-              "headline": "Why Tidal Trust II YieldMax SNOW stock could be top winner - Inflation Watch & Stepwise Entry and Exit Trade Signals"
-            }
-          ]
-        },
-        {
           "symbol": "ARCC",
           "action": "BUY",
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.433924,
-          "qty": 0.0004,
-          "notional": 0.01,
+          "score": 0.433923,
+          "qty": 49.0912,
+          "notional": 999.99,
           "signals": {
             "TS": 0.481402,
             "NS": 0.362706,
-            "CDS": 0.433924,
+            "CDS": 0.433923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1069,52 +977,6 @@
       "cash_start": 20000.0,
       "trades": [
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 277.31,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.505001,
-          "qty": 2.1636,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.641101,
-            "NS": 0.30085,
-            "CDS": 0.505001,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 251.49621136562143,
-            "ema_slow": 239.67952436770037,
-            "macd": 11.816686997921067,
-            "macd_signal": 8.453495643680741,
-            "macd_hist": 3.3631913542403264,
-            "rsi14": 75.15513812252911,
-            "sma20": 240.43975000000017
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:15:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T21:13:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.57321,
-              "headline": "Best Solar Stocks To Research - November 4th"
-            }
-          ]
-        },
-        {
           "symbol": "AAPL",
           "action": "BUY",
           "px": 270.11,
@@ -1161,18 +1023,64 @@
           ]
         },
         {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 277.31,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.492773,
+          "qty": 2.1636,
+          "notional": 599.99,
+          "signals": {
+            "TS": 0.641101,
+            "NS": 0.27028,
+            "CDS": 0.492773,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 251.49621136562143,
+            "ema_slow": 239.67952436770037,
+            "macd": 11.816686997921067,
+            "macd_signal": 8.453495643680741,
+            "macd_hist": 3.3631913542403264,
+            "rsi14": 75.15513812252911,
+            "sma20": 240.43975000000017
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T22:15:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
+            },
+            {
+              "ts": "2025-11-05T21:15:09+00:00",
+              "source": "thestreet",
+              "tone": 0.29500000000000004,
+              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
+            },
+            {
+              "ts": "2025-11-05T20:25:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.478852,
+          "score": 0.472014,
           "qty": 2.3977,
           "notional": 600.01,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.278882,
-            "CDS": 0.478852,
+            "NS": 0.261789,
+            "CDS": 0.472014,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1207,64 +1115,18 @@
           ]
         },
         {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 264.72,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.438538,
-          "qty": 2.2665,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.482943,
-            "NS": 0.371931,
-            "CDS": 0.438538,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 263.1671738526789,
-            "ema_slow": 253.04777327049067,
-            "macd": 10.119400582188234,
-            "macd_signal": 9.557400227448161,
-            "macd_hist": 0.5620003547400731,
-            "rsi14": 55.61815994066284,
-            "sma20": 255.22224999999997
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T23:54:06+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.5,
-              "headline": "What is the fair value of SNOW stock now - Analyst Upgrade & AI Forecast Swing Trade Picks"
-            },
-            {
-              "ts": "2025-11-05T23:26:38+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.3592,
-              "headline": "How analysts revise price targets for SNOW stock - July 2025 Short Interest & Fast Moving Trade Plans"
-            },
-            {
-              "ts": "2025-11-05T20:39:32+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.47505,
-              "headline": "Why Tidal Trust II YieldMax SNOW stock could be top winner - Inflation Watch & Stepwise Entry and Exit Trade Signals"
-            }
-          ]
-        },
-        {
           "symbol": "ARCC",
           "action": "BUY",
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.433924,
+          "score": 0.433923,
           "qty": 29.4551,
           "notional": 600.0,
           "signals": {
             "TS": 0.481402,
             "NS": 0.362706,
-            "CDS": 0.433924,
+            "CDS": 0.433923,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1304,13 +1166,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.426013,
-          "qty": 0.0001,
-          "notional": 0.03,
+          "score": 0.426343,
+          "qty": 2.1101,
+          "notional": 599.99,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.119273,
-            "CDS": 0.426013,
+            "NS": 0.120099,
+            "CDS": 0.426343,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1341,6 +1203,52 @@
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "AI Stocks Are Surging\u2014But Volatility Could Be the Next Big Test"
+            }
+          ]
+        },
+        {
+          "symbol": "SNOW",
+          "action": "BUY",
+          "px": 264.72,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.426037,
+          "qty": 0.0001,
+          "notional": 0.03,
+          "signals": {
+            "TS": 0.482943,
+            "NS": 0.340678,
+            "CDS": 0.426037,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 263.1671738526789,
+            "ema_slow": 253.04777327049067,
+            "macd": 10.119400582188234,
+            "macd_signal": 9.557400227448161,
+            "macd_hist": 0.5620003547400731,
+            "rsi14": 55.61815994066284,
+            "sma20": 255.22224999999997
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T01:33:30+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.3825,
+              "headline": "Will SNOW stock attract more institutional investors - 2025 Top Gainers & High Accuracy Investment Signals"
+            },
+            {
+              "ts": "2025-11-05T23:54:06+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.5,
+              "headline": "What is the fair value of SNOW stock now - Analyst Upgrade & AI Forecast Swing Trade Picks"
+            },
+            {
+              "ts": "2025-11-05T23:26:38+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.3592,
+              "headline": "How analysts revise price targets for SNOW stock - July 2025 Short Interest & Fast Moving Trade Plans"
             }
           ]
         }
