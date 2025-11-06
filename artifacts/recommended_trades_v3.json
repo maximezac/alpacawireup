@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T22:14:32.564831+00:00",
+  "as_of_utc": "2025-11-06T22:45:21.611894+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -905,8 +905,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 4000.0,
+      "cash_start": 15996.0,
       "trades": [
         {
           "symbol": "AAPL",
@@ -915,8 +915,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.489534,
-          "qty": 3.7058,
-          "notional": 1000.01,
+          "qty": 3.705,
+          "notional": 999.79,
           "signals": {
             "TS": 0.578813,
             "NS": 0.355615,
@@ -961,8 +961,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.477274,
-          "qty": 3.675,
-          "notional": 1000.0,
+          "qty": 3.6743,
+          "notional": 999.81,
           "signals": {
             "TS": 0.590301,
             "NS": 0.307734,
@@ -1007,8 +1007,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.455807,
-          "qty": 3.5114,
-          "notional": 1000.01,
+          "qty": 3.5107,
+          "notional": 999.81,
           "signals": {
             "TS": 0.633719,
             "NS": 0.18894,
@@ -1053,8 +1053,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.426091,
-          "qty": 2.1049,
-          "notional": 999.95,
+          "qty": 2.1045,
+          "notional": 999.76,
           "signals": {
             "TS": 0.53571,
             "NS": 0.261663,
@@ -1139,7 +1139,7 @@
           ]
         }
       ],
-      "cash_left": 16000.0
+      "cash_left": 11996.79
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1157,8 +1157,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 3000.0,
+      "cash_start": 16997.0,
       "trades": [
         {
           "symbol": "AAPL",
@@ -1167,8 +1167,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.489534,
-          "qty": 2.2235,
-          "notional": 600.01,
+          "qty": 2.2231,
+          "notional": 599.9,
           "signals": {
             "TS": 0.578813,
             "NS": 0.355615,
@@ -1213,8 +1213,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.477274,
-          "qty": 2.205,
-          "notional": 600.0,
+          "qty": 2.2047,
+          "notional": 599.92,
           "signals": {
             "TS": 0.590301,
             "NS": 0.307734,
@@ -1259,8 +1259,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.455807,
-          "qty": 2.1068,
-          "notional": 600.0,
+          "qty": 2.1065,
+          "notional": 599.91,
           "signals": {
             "TS": 0.633719,
             "NS": 0.18894,
@@ -1305,8 +1305,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.426091,
-          "qty": 1.263,
-          "notional": 600.0,
+          "qty": 1.2628,
+          "notional": 599.91,
           "signals": {
             "TS": 0.53571,
             "NS": 0.261663,
@@ -1351,8 +1351,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.419462,
-          "qty": 2.4695,
-          "notional": 599.99,
+          "qty": 2.4692,
+          "notional": 599.92,
           "signals": {
             "TS": 0.513501,
             "NS": 0.278402,
@@ -1391,7 +1391,7 @@
           ]
         }
       ],
-      "cash_left": 17000.0
+      "cash_left": 13997.44
     },
     "portfolio_paper_TS_only": {
       "meta": {
