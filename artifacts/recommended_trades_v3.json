@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T20:16:18.313971+00:00",
+  "as_of_utc": "2025-11-06T20:41:14.303322+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -859,8 +859,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 4000.0,
+      "cash_start": 15996.0,
       "trades": [
         {
           "symbol": "FSLR",
@@ -869,8 +869,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.519342,
-          "qty": 3.619,
-          "notional": 1000.0,
+          "qty": 3.6183,
+          "notional": 999.81,
           "signals": {
             "TS": 0.631403,
             "NS": 0.35125,
@@ -915,8 +915,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.503953,
-          "qty": 3.6822,
-          "notional": 1000.01,
+          "qty": 3.6814,
+          "notional": 999.79,
           "signals": {
             "TS": 0.61795,
             "NS": 0.332957,
@@ -961,8 +961,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.459572,
-          "qty": 3.5029,
-          "notional": 1000.01,
+          "qty": 3.5022,
+          "notional": 999.81,
           "signals": {
             "TS": 0.638328,
             "NS": 0.191439,
@@ -1007,8 +1007,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.442734,
-          "qty": 4.0867,
-          "notional": 999.97,
+          "qty": 4.0859,
+          "notional": 999.78,
           "signals": {
             "TS": 0.533868,
             "NS": 0.306034,
@@ -1053,8 +1053,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.364923,
-          "qty": 0.0002,
-          "notional": 0.0,
+          "qty": 0.0005,
+          "notional": 0.01,
           "signals": {
             "TS": 0.401559,
             "NS": 0.309969,
@@ -1093,7 +1093,7 @@
           ]
         }
       ],
-      "cash_left": 16000.0
+      "cash_left": 11996.8
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1111,8 +1111,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 3000.01,
+      "cash_start": 16996.99,
       "trades": [
         {
           "symbol": "FSLR",
@@ -1121,8 +1121,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.519342,
-          "qty": 2.1714,
-          "notional": 600.0,
+          "qty": 2.1711,
+          "notional": 599.92,
           "signals": {
             "TS": 0.631403,
             "NS": 0.35125,
@@ -1167,8 +1167,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.503953,
-          "qty": 2.2093,
-          "notional": 600.0,
+          "qty": 2.209,
+          "notional": 599.92,
           "signals": {
             "TS": 0.61795,
             "NS": 0.332957,
@@ -1213,8 +1213,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.459572,
-          "qty": 2.1017,
-          "notional": 599.99,
+          "qty": 2.1014,
+          "notional": 599.91,
           "signals": {
             "TS": 0.638328,
             "NS": 0.191439,
@@ -1259,8 +1259,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.442734,
-          "qty": 2.4521,
-          "notional": 600.0,
+          "qty": 2.4517,
+          "notional": 599.91,
           "signals": {
             "TS": 0.533868,
             "NS": 0.306034,
@@ -1305,8 +1305,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.432812,
-          "qty": 2.2555,
-          "notional": 600.01,
+          "qty": 2.2551,
+          "notional": 599.9,
           "signals": {
             "TS": 0.498118,
             "NS": 0.334854,
@@ -1345,7 +1345,7 @@
           ]
         }
       ],
-      "cash_left": 16999.99
+      "cash_left": 13997.44
     },
     "portfolio_paper_TS_only": {
       "meta": {
