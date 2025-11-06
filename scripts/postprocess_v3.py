@@ -200,6 +200,24 @@ def main():
             "trades": sized,
             "cash_left": round(float(cash_left or 0.0), 2),
         }
+
+        # --- NEW: also write a per-portfolio trade plan into its folder
+        from pathlib import Path
+        plan = {
+            "as_of_utc": out["as_of_utc"],
+            "portfolio_id": pid,
+            "meta": out["portfolios"][pid]["meta"],
+            "trades": sized,
+        }
+        base = Path(out["portfolios"][pid]["meta"]["positions_path"]).parent
+        base.mkdir(parents=True, exist_ok=True)
+        # rolling pointer
+        write_json(str(base / "trades_plan.json"), plan)
+        # versioned by as_of_utc (safe for history / diffing)
+        safe_asof = (out["as_of_utc"] or "").replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
+        if safe_asof:
+            write_json(str(base / f"trades_plan_{safe_asof}.json"), plan)
+
         total_trades += len(sized)
 
     Path(OUT_TRADES).parent.mkdir(parents=True, exist_ok=True)
