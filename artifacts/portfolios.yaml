@@ -30,6 +30,17 @@ portfolios:
       per_line_frac: 0.02
       trim_fraction: 0.25
 
+  portfolio_max_autotrader:
+    enabled: true
+    type: paper
+    desc: "Paper personal portfolio Max"
+    positions_csv: positions.csv
+    strategy: default
+    trade_scope: paper
+    sizing:
+      per_line_frac: 0.02
+      trim_fraction: 0.25
+
   portfolio_max_TS_only:
     enabled: true
     type: personal
