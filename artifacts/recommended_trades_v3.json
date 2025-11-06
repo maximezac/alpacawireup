@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T17:15:35.235111+00:00",
+  "as_of_utc": "2025-11-06T18:21:48.381784+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,35 +17,41 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 17570.65,
+      "portfolio_value_est": 17533.62,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.045,
+          "px": 28.93,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.260256,
+          "score": -0.283991,
           "qty": 57,
-          "notional": 1655.57,
+          "notional": 1649.01,
           "signals": {
-            "TS": -0.518009,
-            "NS": 0.126373,
-            "CDS": -0.260256,
+            "TS": -0.519975,
+            "NS": 0.069985,
+            "CDS": -0.283991,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.57114128336274,
-            "ema_slow": 32.06156027437669,
-            "macd": 0.5095810089860535,
-            "macd_signal": 1.5878583860109905,
-            "macd_hist": -1.078277377024937,
-            "rsi14": 38.60144835457791,
-            "sma20": 34.75574999999998
+            "ema_fast": 32.553448975670435,
+            "ema_slow": 32.053041755858175,
+            "macd": 0.50040721981226,
+            "macd_signal": 1.5860236281762319,
+            "macd_hist": -1.0856164083639719,
+            "rsi14": 38.36272032916031,
+            "sma20": 34.74999999999998
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:45:11+00:00",
+              "source": "benzinga",
+              "tone": -0.34362,
+              "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
+            },
             {
               "ts": "2025-11-06T16:30:41+00:00",
               "source": "theglobeandmail",
@@ -57,39 +63,79 @@
               "source": "247wallst",
               "tone": 0.0,
               "headline": "\u2018We\u2019re the Only Real Quantum Company\u2019: The 3 Lines That Define D-Wave\u2019s Hype Cycle"
+            }
+          ]
+        },
+        {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 329.13,
+          "qty_hint": 11.48,
+          "reason": "score<sell",
+          "score": -0.269899,
+          "qty": 2,
+          "notional": 658.26,
+          "signals": {
+            "TS": -0.524486,
+            "NS": 0.11198,
+            "CDS": -0.269899,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.72870710267176,
+            "ema_slow": 331.0271280252676,
+            "macd": 1.7015790774041761,
+            "macd_signal": 2.2630459321698053,
+            "macd_hist": -0.5614668547656292,
+            "rsi14": 38.06070328055267,
+            "sma20": 331.2315
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T16:17:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.0,
+              "headline": "VTI is down 1.0% today, on CRM stock price movement"
             },
             {
-              "ts": "2025-11-06T15:56:00+00:00",
-              "source": "seekingalpha",
-              "tone": 0.34362,
-              "headline": "D-Wave Quantum slips as Q3 results top estimates (QBTS:NYSE)"
+              "ts": "2025-11-06T16:06:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.148,
+              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
+            },
+            {
+              "ts": "2025-11-06T14:25:07+00:00",
+              "source": "aolcom",
+              "tone": 0.0,
+              "headline": "VTI Offers Broader Market Exposure Than VTV"
             }
           ]
         },
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.4,
+          "px": 13.36,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.303719,
+          "score": -0.304592,
           "qty": 18,
-          "notional": 241.2,
+          "notional": 240.48,
           "signals": {
-            "TS": -0.583064,
+            "TS": -0.58452,
             "NS": 0.115299,
-            "CDS": -0.303719,
+            "CDS": -0.304592,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.335047542351907,
-            "ema_slow": 16.64165245294794,
-            "macd": -1.3066049105960342,
-            "macd_signal": -0.9817332819876683,
-            "macd_hist": -0.32487162860836594,
-            "rsi14": 32.82974811166689,
-            "sma20": 16.734499999999993
+            "ema_fast": 15.328893696198062,
+            "ema_slow": 16.63868948998498,
+            "macd": -1.3097957937869182,
+            "macd_signal": -0.9823714586258452,
+            "macd_hist": -0.32742433516107305,
+            "rsi14": 32.652869632501975,
+            "sma20": 16.732499999999995
           },
           "news_preview": [
             {
@@ -115,27 +161,27 @@
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 66.99,
+          "px": 66.42,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.264748,
+          "score": -0.268373,
           "qty": 2,
-          "notional": 133.98,
+          "notional": 132.84,
           "signals": {
-            "TS": -0.558031,
-            "NS": 0.175175,
-            "CDS": -0.264748,
+            "TS": -0.564071,
+            "NS": 0.175173,
+            "CDS": -0.268373,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 73.94409550706855,
-            "ema_slow": 72.62490150908178,
-            "macd": 1.3191939979867726,
-            "macd_signal": 3.850959788949833,
-            "macd_hist": -2.5317657909630604,
-            "rsi14": 33.542042862870005,
-            "sma20": 79.33675000000007
+            "ema_fast": 73.85640319937625,
+            "ema_slow": 72.58267928685956,
+            "macd": 1.2737239125166866,
+            "macd_signal": 3.841865771855816,
+            "macd_hist": -2.5681418593391294,
+            "rsi14": 32.802387954269335,
+            "sma20": 79.30825000000007
           },
           "news_preview": [
             {
@@ -161,27 +207,27 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.865,
+          "px": 51.58,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.265101,
+          "score": -0.263935,
           "qty": 1,
-          "notional": 51.87,
+          "notional": 51.58,
           "signals": {
-            "TS": -0.62634,
-            "NS": 0.276757,
-            "CDS": -0.265101,
+            "TS": -0.62934,
+            "NS": 0.284172,
+            "CDS": -0.263935,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 59.887737871336974,
-            "ema_slow": 59.781011964448396,
-            "macd": 0.10672590688857753,
-            "macd_signal": 2.026859982822105,
-            "macd_hist": -1.9201340759335275,
-            "rsi14": 25.412875587211346,
-            "sma20": 63.362
+            "ema_fast": 59.84389171749082,
+            "ema_slow": 59.759900853337285,
+            "macd": 0.08399086415353452,
+            "macd_signal": 2.022312974275096,
+            "macd_hist": -1.9383221101215615,
+            "rsi14": 25.047379255143582,
+            "sma20": 63.34775
           },
           "news_preview": [
             {
@@ -207,27 +253,27 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 35.17,
+          "px": 34.87,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.263624,
+          "score": -0.257588,
           "qty": 3,
-          "notional": 105.51,
+          "notional": 104.61,
           "signals": {
-            "TS": -0.515679,
-            "NS": 0.114458,
-            "CDS": -0.263624,
+            "TS": -0.52006,
+            "NS": 0.13612,
+            "CDS": -0.257588,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.09638687383953,
-            "ema_slow": 38.58554620663718,
-            "macd": 0.5108406672023449,
-            "macd_signal": 2.0102226981046853,
-            "macd_hist": -1.4993820309023405,
-            "rsi14": 38.95912160724484,
-            "sma20": 42.68249999999999
+            "ema_fast": 39.05023302768568,
+            "ema_slow": 38.56332398441496,
+            "macd": 0.48690904327072104,
+            "macd_signal": 2.00543637331836,
+            "macd_hist": -1.5185273300476392,
+            "rsi14": 38.426797220824064,
+            "sma20": 42.66749999999999
           },
           "news_preview": [
             {
@@ -253,27 +299,27 @@
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 272.61,
+          "px": 274.045,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.49264,
-          "qty": 2.0437,
-          "notional": 557.13,
+          "score": 0.50079,
+          "qty": 2.0289,
+          "notional": 556.01,
           "signals": {
-            "TS": 0.594885,
+            "TS": 0.608468,
             "NS": 0.339273,
-            "CDS": 0.49264,
+            "CDS": 0.50079,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 254.7444865401412,
-            "ema_slow": 242.11881933222503,
-            "macd": 12.625667207916166,
-            "macd_signal": 9.287929355230617,
-            "macd_hist": 3.3377378526855495,
-            "rsi14": 69.30697455981058,
-            "sma20": 242.35525000000013
+            "ema_fast": 254.96525577091043,
+            "ema_slow": 242.22511562852134,
+            "macd": 12.740140142389095,
+            "macd_signal": 9.310823942125204,
+            "macd_hist": 3.429316200263891,
+            "rsi14": 70.99366137924511,
+            "sma20": 242.42700000000013
           },
           "news_preview": [
             {
@@ -299,46 +345,46 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.07,
+          "px": 270.98,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.489109,
-          "qty": 1.6338,
-          "notional": 442.87,
+          "score": 0.482575,
+          "qty": 1.6385,
+          "notional": 444.0,
           "signals": {
-            "TS": 0.60925,
-            "NS": 0.308898,
-            "CDS": 0.489109,
+            "TS": 0.607642,
+            "NS": 0.294974,
+            "CDS": 0.482575,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.15823902296967,
-            "ema_slow": 261.17658660975115,
-            "macd": 5.981652413218512,
-            "macd_signal": 5.764895246808261,
-            "macd_hist": 0.21675716641025122,
-            "rsi14": 71.83387894826647,
-            "sma20": 261.2757499999999
+            "ema_fast": 267.1443928691235,
+            "ema_slow": 261.1699199430845,
+            "macd": 5.974472926039027,
+            "macd_signal": 5.763459349372364,
+            "macd_hist": 0.2110135766666632,
+            "rsi14": 71.63356951829105,
+            "sma20": 261.2712499999999
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T17:04:33+00:00",
+              "ts": "2025-11-06T18:01:53+00:00",
               "source": "benzinga",
-              "tone": 0.72144,
-              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
             },
             {
-              "ts": "2025-11-06T16:24:52+00:00",
-              "source": "barchartcom",
-              "tone": 0.4399,
-              "headline": "Apple\u2019s Record Quarter Hints at Something Huge Coming: Is AAPL Stock a Buy Now?"
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             },
             {
-              "ts": "2025-11-06T16:19:06+00:00",
-              "source": "tipranks",
-              "tone": 0.57472,
-              "headline": "Sales of Apple\u2019s (AAPL) iPhone 17 Skyrocket in India, Boosting the Company\u2019s Market Share"
+              "ts": "2025-11-06T17:36:06+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
             }
           ]
         }
@@ -360,35 +406,41 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 17570.65,
+      "portfolio_value_est": 17533.62,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.045,
+          "px": 28.93,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.518009,
+          "score": -0.519975,
           "qty": 57,
-          "notional": 1655.57,
+          "notional": 1649.01,
           "signals": {
-            "TS": -0.518009,
-            "NS": 0.126373,
-            "CDS": -0.260256,
+            "TS": -0.519975,
+            "NS": 0.069985,
+            "CDS": -0.283991,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.57114128336274,
-            "ema_slow": 32.06156027437669,
-            "macd": 0.5095810089860535,
-            "macd_signal": 1.5878583860109905,
-            "macd_hist": -1.078277377024937,
-            "rsi14": 38.60144835457791,
-            "sma20": 34.75574999999998
+            "ema_fast": 32.553448975670435,
+            "ema_slow": 32.053041755858175,
+            "macd": 0.50040721981226,
+            "macd_signal": 1.5860236281762319,
+            "macd_hist": -1.0856164083639719,
+            "rsi14": 38.36272032916031,
+            "sma20": 34.74999999999998
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:45:11+00:00",
+              "source": "benzinga",
+              "tone": -0.34362,
+              "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
+            },
             {
               "ts": "2025-11-06T16:30:41+00:00",
               "source": "theglobeandmail",
@@ -400,85 +452,79 @@
               "source": "247wallst",
               "tone": 0.0,
               "headline": "\u2018We\u2019re the Only Real Quantum Company\u2019: The 3 Lines That Define D-Wave\u2019s Hype Cycle"
-            },
-            {
-              "ts": "2025-11-06T15:56:00+00:00",
-              "source": "seekingalpha",
-              "tone": 0.34362,
-              "headline": "D-Wave Quantum slips as Q3 results top estimates (QBTS:NYSE)"
             }
           ]
         },
         {
           "symbol": "VTI",
           "action": "SELL",
-          "px": 329.59,
+          "px": 329.13,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.515769,
+          "score": -0.524486,
           "qty": 2,
-          "notional": 659.18,
+          "notional": 658.26,
           "signals": {
-            "TS": -0.515769,
-            "NS": 0.200213,
-            "CDS": -0.229376,
+            "TS": -0.524486,
+            "NS": 0.11198,
+            "CDS": -0.269899,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 332.79947633344096,
-            "ema_slow": 331.06120209934164,
-            "macd": 1.7382742340993218,
-            "macd_signal": 2.2703849635088345,
-            "macd_hist": -0.5321107294095127,
-            "rsi14": 39.147560536455735,
-            "sma20": 331.2545
+            "ema_fast": 332.72870710267176,
+            "ema_slow": 331.0271280252676,
+            "macd": 1.7015790774041761,
+            "macd_signal": 2.2630459321698053,
+            "macd_hist": -0.5614668547656292,
+            "rsi14": 38.06070328055267,
+            "sma20": 331.2315
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T13:27:12+00:00",
-              "source": "tipranks",
+              "ts": "2025-11-06T16:17:00+00:00",
+              "source": "quiverquantitative",
               "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/6/2025"
+              "headline": "VTI is down 1.0% today, on CRM stock price movement"
             },
             {
-              "ts": "2025-11-06T10:54:40+00:00",
-              "source": "newsercom",
-              "tone": 0.4063,
-              "headline": "What is the fair value estimate for VTI stock in 2025 - July 2025 Closing Moves & Accurate Technical Buy Alerts"
+              "ts": "2025-11-06T16:06:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.148,
+              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
             },
             {
-              "ts": "2025-11-05T23:07:17+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.35015,
-              "headline": "Should I buy VTI stock before earnings season - Weekly Profit Recap & Momentum Based Trading Signals"
+              "ts": "2025-11-06T14:25:07+00:00",
+              "source": "aolcom",
+              "tone": 0.0,
+              "headline": "VTI Offers Broader Market Exposure Than VTV"
             }
           ]
         },
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.4,
+          "px": 13.36,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.583064,
+          "score": -0.58452,
           "qty": 18,
-          "notional": 241.2,
+          "notional": 240.48,
           "signals": {
-            "TS": -0.583064,
+            "TS": -0.58452,
             "NS": 0.115299,
-            "CDS": -0.303719,
+            "CDS": -0.304592,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.335047542351907,
-            "ema_slow": 16.64165245294794,
-            "macd": -1.3066049105960342,
-            "macd_signal": -0.9817332819876683,
-            "macd_hist": -0.32487162860836594,
-            "rsi14": 32.82974811166689,
-            "sma20": 16.734499999999993
+            "ema_fast": 15.328893696198062,
+            "ema_slow": 16.63868948998498,
+            "macd": -1.3097957937869182,
+            "macd_signal": -0.9823714586258452,
+            "macd_hist": -0.32742433516107305,
+            "rsi14": 32.652869632501975,
+            "sma20": 16.732499999999995
           },
           "news_preview": [
             {
@@ -504,27 +550,27 @@
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 66.99,
+          "px": 66.42,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.558031,
+          "score": -0.564071,
           "qty": 2,
-          "notional": 133.98,
+          "notional": 132.84,
           "signals": {
-            "TS": -0.558031,
-            "NS": 0.175175,
-            "CDS": -0.264748,
+            "TS": -0.564071,
+            "NS": 0.175173,
+            "CDS": -0.268373,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 73.94409550706855,
-            "ema_slow": 72.62490150908178,
-            "macd": 1.3191939979867726,
-            "macd_signal": 3.850959788949833,
-            "macd_hist": -2.5317657909630604,
-            "rsi14": 33.542042862870005,
-            "sma20": 79.33675000000007
+            "ema_fast": 73.85640319937625,
+            "ema_slow": 72.58267928685956,
+            "macd": 1.2737239125166866,
+            "macd_signal": 3.841865771855816,
+            "macd_hist": -2.5681418593391294,
+            "rsi14": 32.802387954269335,
+            "sma20": 79.30825000000007
           },
           "news_preview": [
             {
@@ -550,27 +596,27 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.865,
+          "px": 51.58,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.62634,
+          "score": -0.62934,
           "qty": 1,
-          "notional": 51.87,
+          "notional": 51.58,
           "signals": {
-            "TS": -0.62634,
-            "NS": 0.276757,
-            "CDS": -0.265101,
+            "TS": -0.62934,
+            "NS": 0.284172,
+            "CDS": -0.263935,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 59.887737871336974,
-            "ema_slow": 59.781011964448396,
-            "macd": 0.10672590688857753,
-            "macd_signal": 2.026859982822105,
-            "macd_hist": -1.9201340759335275,
-            "rsi14": 25.412875587211346,
-            "sma20": 63.362
+            "ema_fast": 59.84389171749082,
+            "ema_slow": 59.759900853337285,
+            "macd": 0.08399086415353452,
+            "macd_signal": 2.022312974275096,
+            "macd_hist": -1.9383221101215615,
+            "rsi14": 25.047379255143582,
+            "sma20": 63.34775
           },
           "news_preview": [
             {
@@ -596,27 +642,27 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 35.17,
+          "px": 34.87,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.515679,
+          "score": -0.52006,
           "qty": 3,
-          "notional": 105.51,
+          "notional": 104.61,
           "signals": {
-            "TS": -0.515679,
-            "NS": 0.114458,
-            "CDS": -0.263624,
+            "TS": -0.52006,
+            "NS": 0.13612,
+            "CDS": -0.257588,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.09638687383953,
-            "ema_slow": 38.58554620663718,
-            "macd": 0.5108406672023449,
-            "macd_signal": 2.0102226981046853,
-            "macd_hist": -1.4993820309023405,
-            "rsi14": 38.95912160724484,
-            "sma20": 42.68249999999999
+            "ema_fast": 39.05023302768568,
+            "ema_slow": 38.56332398441496,
+            "macd": 0.48690904327072104,
+            "macd_signal": 2.00543637331836,
+            "macd_hist": -1.5185273300476392,
+            "rsi14": 38.426797220824064,
+            "sma20": 42.66749999999999
           },
           "news_preview": [
             {
@@ -642,29 +688,35 @@
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.43,
+          "px": 284.7,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.63123,
-          "qty": 1.3058,
-          "notional": 371.41,
+          "score": 0.633102,
+          "qty": 1.302,
+          "notional": 370.68,
           "signals": {
-            "TS": 0.63123,
-            "NS": 0.184683,
-            "CDS": 0.452611,
+            "TS": 0.633102,
+            "NS": 0.163501,
+            "CDS": 0.445262,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.85972802578215,
-            "ema_slow": 262.8986541125419,
-            "macd": 10.961073913240227,
-            "macd_signal": 9.178117975082914,
-            "macd_hist": 1.782955938157313,
-            "rsi14": 74.11144649269346,
-            "sma20": 262.90050000000025
+            "ema_fast": 273.9012664873206,
+            "ema_slow": 262.91865411254196,
+            "macd": 10.982612374778626,
+            "macd_signal": 9.182425667390593,
+            "macd_hist": 1.8001867073880327,
+            "rsi14": 74.34348191126836,
+            "sma20": 262.9140000000002
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:05:53+00:00",
+              "source": "ts2tech",
+              "tone": 0.07655,
+              "headline": "Google Stock Today (Nov 6, 2025): Epic Settlement, DOJ Clears $32B Wiz Deal, AI Expansion \u2014 GOOGL/GOOG Price, News & What to Watch"
+            },
             {
               "ts": "2025-11-06T17:00:24+00:00",
               "source": "benzinga",
@@ -676,85 +728,33 @@
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
               "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
-            },
-            {
-              "ts": "2025-11-06T15:56:31+00:00",
-              "source": "benzinga",
-              "tone": -0.04644,
-              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 271.07,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.60925,
-          "qty": 1.3702,
-          "notional": 371.42,
-          "signals": {
-            "TS": 0.60925,
-            "NS": 0.308898,
-            "CDS": 0.489109,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 267.15823902296967,
-            "ema_slow": 261.17658660975115,
-            "macd": 5.981652413218512,
-            "macd_signal": 5.764895246808261,
-            "macd_hist": 0.21675716641025122,
-            "rsi14": 71.83387894826647,
-            "sma20": 261.2757499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T17:04:33+00:00",
-              "source": "benzinga",
-              "tone": 0.72144,
-              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
-            },
-            {
-              "ts": "2025-11-06T16:24:52+00:00",
-              "source": "barchartcom",
-              "tone": 0.4399,
-              "headline": "Apple\u2019s Record Quarter Hints at Something Huge Coming: Is AAPL Stock a Buy Now?"
-            },
-            {
-              "ts": "2025-11-06T16:19:06+00:00",
-              "source": "tipranks",
-              "tone": 0.57472,
-              "headline": "Sales of Apple\u2019s (AAPL) iPhone 17 Skyrocket in India, Boosting the Company\u2019s Market Share"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 272.61,
+          "px": 274.045,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.594885,
-          "qty": 0.9434,
-          "notional": 257.18,
+          "score": 0.608468,
+          "qty": 1.3526,
+          "notional": 370.67,
           "signals": {
-            "TS": 0.594885,
+            "TS": 0.608468,
             "NS": 0.339273,
-            "CDS": 0.49264,
+            "CDS": 0.50079,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 254.7444865401412,
-            "ema_slow": 242.11881933222503,
-            "macd": 12.625667207916166,
-            "macd_signal": 9.287929355230617,
-            "macd_hist": 3.3377378526855495,
-            "rsi14": 69.30697455981058,
-            "sma20": 242.35525000000013
+            "ema_fast": 254.96525577091043,
+            "ema_slow": 242.22511562852134,
+            "macd": 12.740140142389095,
+            "macd_signal": 9.310823942125204,
+            "macd_hist": 3.429316200263891,
+            "rsi14": 70.99366137924511,
+            "sma20": 242.42700000000013
           },
           "news_preview": [
             {
@@ -776,9 +776,55 @@
               "headline": "Here is What to Know Beyond Why First Solar, Inc. (FSLR) is a Trending Stock"
             }
           ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 270.98,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.607642,
+          "qty": 0.9545,
+          "notional": 258.65,
+          "signals": {
+            "TS": 0.607642,
+            "NS": 0.294974,
+            "CDS": 0.482575,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 267.1443928691235,
+            "ema_slow": 261.1699199430845,
+            "macd": 5.974472926039027,
+            "macd_signal": 5.763459349372364,
+            "macd_hist": 0.2110135766666632,
+            "rsi14": 71.63356951829105,
+            "sma20": 261.2712499999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T18:01:53+00:00",
+              "source": "benzinga",
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
+            },
+            {
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
+            },
+            {
+              "ts": "2025-11-06T17:36:06+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
+            }
+          ]
         }
       ],
-      "cash_left": -0.01
+      "cash_left": 0.0
     },
     "portfolio_max_NS_higher_weight": {
       "meta": {
@@ -865,27 +911,27 @@
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 272.61,
+          "px": 274.045,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.49264,
-          "qty": 3.6682,
+          "score": 0.50079,
+          "qty": 3.649,
           "notional": 999.99,
           "signals": {
-            "TS": 0.594885,
+            "TS": 0.608468,
             "NS": 0.339273,
-            "CDS": 0.49264,
+            "CDS": 0.50079,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 254.7444865401412,
-            "ema_slow": 242.11881933222503,
-            "macd": 12.625667207916166,
-            "macd_signal": 9.287929355230617,
-            "macd_hist": 3.3377378526855495,
-            "rsi14": 69.30697455981058,
-            "sma20": 242.35525000000013
+            "ema_fast": 254.96525577091043,
+            "ema_slow": 242.22511562852134,
+            "macd": 12.740140142389095,
+            "macd_signal": 9.310823942125204,
+            "macd_hist": 3.429316200263891,
+            "rsi14": 70.99366137924511,
+            "sma20": 242.42700000000013
           },
           "news_preview": [
             {
@@ -911,75 +957,81 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.07,
+          "px": 270.98,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.489109,
-          "qty": 3.6891,
+          "score": 0.482575,
+          "qty": 3.6903,
           "notional": 1000.0,
           "signals": {
-            "TS": 0.60925,
-            "NS": 0.308898,
-            "CDS": 0.489109,
+            "TS": 0.607642,
+            "NS": 0.294974,
+            "CDS": 0.482575,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.15823902296967,
-            "ema_slow": 261.17658660975115,
-            "macd": 5.981652413218512,
-            "macd_signal": 5.764895246808261,
-            "macd_hist": 0.21675716641025122,
-            "rsi14": 71.83387894826647,
-            "sma20": 261.2757499999999
+            "ema_fast": 267.1443928691235,
+            "ema_slow": 261.1699199430845,
+            "macd": 5.974472926039027,
+            "macd_signal": 5.763459349372364,
+            "macd_hist": 0.2110135766666632,
+            "rsi14": 71.63356951829105,
+            "sma20": 261.2712499999999
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T17:04:33+00:00",
+              "ts": "2025-11-06T18:01:53+00:00",
               "source": "benzinga",
-              "tone": 0.72144,
-              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
             },
             {
-              "ts": "2025-11-06T16:24:52+00:00",
-              "source": "barchartcom",
-              "tone": 0.4399,
-              "headline": "Apple\u2019s Record Quarter Hints at Something Huge Coming: Is AAPL Stock a Buy Now?"
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             },
             {
-              "ts": "2025-11-06T16:19:06+00:00",
-              "source": "tipranks",
-              "tone": 0.57472,
-              "headline": "Sales of Apple\u2019s (AAPL) iPhone 17 Skyrocket in India, Boosting the Company\u2019s Market Share"
+              "ts": "2025-11-06T17:36:06+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.43,
+          "px": 284.7,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.452611,
-          "qty": 3.5158,
-          "notional": 1000.0,
+          "score": 0.445262,
+          "qty": 3.5125,
+          "notional": 1000.01,
           "signals": {
-            "TS": 0.63123,
-            "NS": 0.184683,
-            "CDS": 0.452611,
+            "TS": 0.633102,
+            "NS": 0.163501,
+            "CDS": 0.445262,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.85972802578215,
-            "ema_slow": 262.8986541125419,
-            "macd": 10.961073913240227,
-            "macd_signal": 9.178117975082914,
-            "macd_hist": 1.782955938157313,
-            "rsi14": 74.11144649269346,
-            "sma20": 262.90050000000025
+            "ema_fast": 273.9012664873206,
+            "ema_slow": 262.91865411254196,
+            "macd": 10.982612374778626,
+            "macd_signal": 9.182425667390593,
+            "macd_hist": 1.8001867073880327,
+            "rsi14": 74.34348191126836,
+            "sma20": 262.9140000000002
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:05:53+00:00",
+              "source": "ts2tech",
+              "tone": 0.07655,
+              "headline": "Google Stock Today (Nov 6, 2025): Epic Settlement, DOJ Clears $32B Wiz Deal, AI Expansion \u2014 GOOGL/GOOG Price, News & What to Watch"
+            },
             {
               "ts": "2025-11-06T17:00:24+00:00",
               "source": "benzinga",
@@ -991,41 +1043,41 @@
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
               "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
-            },
-            {
-              "ts": "2025-11-06T15:56:31+00:00",
-              "source": "benzinga",
-              "tone": -0.04644,
-              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
             }
           ]
         },
         {
           "symbol": "AMZN",
           "action": "BUY",
-          "px": 243.6,
+          "px": 243.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.423152,
-          "qty": 4.1051,
+          "score": 0.41921,
+          "qty": 4.1046,
           "notional": 1000.0,
           "signals": {
-            "TS": 0.520841,
-            "NS": 0.276618,
-            "CDS": 0.423152,
+            "TS": 0.521191,
+            "NS": 0.266238,
+            "CDS": 0.41921,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 237.34128832545667,
-            "ema_slow": 230.89601112724003,
-            "macd": 6.445277198216644,
-            "macd_signal": 3.376904827008338,
-            "macd_hist": 3.068372371208306,
-            "rsi14": 60.65728668794732,
-            "sma20": 227.41975000000002
+            "ema_fast": 237.34590371007206,
+            "ema_slow": 230.89823334946226,
+            "macd": 6.447670360609806,
+            "macd_signal": 3.3773834594869703,
+            "macd_hist": 3.0702869011228353,
+            "rsi14": 60.7007242726937,
+            "sma20": 227.42125000000001
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:19:20+00:00",
+              "source": "benzinga",
+              "tone": 0.16011,
+              "headline": "Amazon Rolls Out AI-Powered Kindle Translate"
+            },
             {
               "ts": "2025-11-06T17:04:33+00:00",
               "source": "benzinga",
@@ -1037,58 +1089,6 @@
               "source": "benzinga",
               "tone": -0.04644,
               "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
-            },
-            {
-              "ts": "2025-11-06T15:45:31+00:00",
-              "source": "benzinga",
-              "tone": -0.78741,
-              "headline": "America's Layoff Crisis Deepens As AI Quietly Replaces Workers"
-            }
-          ]
-        },
-        {
-          "symbol": "ARCC",
-          "action": "BUY",
-          "px": 20.155,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.368739,
-          "qty": 0.0003,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.409804,
-            "NS": 0.30714,
-            "CDS": 0.368739,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 20.22626423554331,
-            "ema_slow": 20.27239715311644,
-            "macd": -0.04613291757312865,
-            "macd_signal": -0.13153638934453638,
-            "macd_hist": 0.08540347177140772,
-            "rsi14": 47.53302389957696,
-            "sma20": 20.008249999999993
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T12:27:38+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Ranking ARCC among high performing stocks via tools - Product Launch & Real-Time Buy Signal Notifications"
-            },
-            {
-              "ts": "2025-11-06T09:57:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
-            },
-            {
-              "ts": "2025-11-06T09:45:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.1909,
-              "headline": "2 Top Dividend Stocks to Buy in November"
             }
           ]
         }
@@ -1117,27 +1117,27 @@
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 272.61,
+          "px": 274.045,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.49264,
-          "qty": 2.2009,
+          "score": 0.50079,
+          "qty": 2.1894,
           "notional": 599.99,
           "signals": {
-            "TS": 0.594885,
+            "TS": 0.608468,
             "NS": 0.339273,
-            "CDS": 0.49264,
+            "CDS": 0.50079,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 254.7444865401412,
-            "ema_slow": 242.11881933222503,
-            "macd": 12.625667207916166,
-            "macd_signal": 9.287929355230617,
-            "macd_hist": 3.3377378526855495,
-            "rsi14": 69.30697455981058,
-            "sma20": 242.35525000000013
+            "ema_fast": 254.96525577091043,
+            "ema_slow": 242.22511562852134,
+            "macd": 12.740140142389095,
+            "macd_signal": 9.310823942125204,
+            "macd_hist": 3.429316200263891,
+            "rsi14": 70.99366137924511,
+            "sma20": 242.42700000000013
           },
           "news_preview": [
             {
@@ -1163,75 +1163,81 @@
         {
           "symbol": "AAPL",
           "action": "BUY",
-          "px": 271.07,
+          "px": 270.98,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.489109,
-          "qty": 2.2135,
-          "notional": 600.01,
+          "score": 0.482575,
+          "qty": 2.2142,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.60925,
-            "NS": 0.308898,
-            "CDS": 0.489109,
+            "TS": 0.607642,
+            "NS": 0.294974,
+            "CDS": 0.482575,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.15823902296967,
-            "ema_slow": 261.17658660975115,
-            "macd": 5.981652413218512,
-            "macd_signal": 5.764895246808261,
-            "macd_hist": 0.21675716641025122,
-            "rsi14": 71.83387894826647,
-            "sma20": 261.2757499999999
+            "ema_fast": 267.1443928691235,
+            "ema_slow": 261.1699199430845,
+            "macd": 5.974472926039027,
+            "macd_signal": 5.763459349372364,
+            "macd_hist": 0.2110135766666632,
+            "rsi14": 71.63356951829105,
+            "sma20": 261.2712499999999
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T17:04:33+00:00",
+              "ts": "2025-11-06T18:01:53+00:00",
               "source": "benzinga",
-              "tone": 0.72144,
-              "headline": "Investors Cheer Trump's Rough Day; Should AI Agents Be Taxed If They Take Human Jobs"
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
             },
             {
-              "ts": "2025-11-06T16:24:52+00:00",
-              "source": "barchartcom",
-              "tone": 0.4399,
-              "headline": "Apple\u2019s Record Quarter Hints at Something Huge Coming: Is AAPL Stock a Buy Now?"
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             },
             {
-              "ts": "2025-11-06T16:19:06+00:00",
-              "source": "tipranks",
-              "tone": 0.57472,
-              "headline": "Sales of Apple\u2019s (AAPL) iPhone 17 Skyrocket in India, Boosting the Company\u2019s Market Share"
+              "ts": "2025-11-06T17:36:06+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.43,
+          "px": 284.7,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.452611,
-          "qty": 2.1095,
+          "score": 0.445262,
+          "qty": 2.1075,
           "notional": 600.01,
           "signals": {
-            "TS": 0.63123,
-            "NS": 0.184683,
-            "CDS": 0.452611,
+            "TS": 0.633102,
+            "NS": 0.163501,
+            "CDS": 0.445262,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.85972802578215,
-            "ema_slow": 262.8986541125419,
-            "macd": 10.961073913240227,
-            "macd_signal": 9.178117975082914,
-            "macd_hist": 1.782955938157313,
-            "rsi14": 74.11144649269346,
-            "sma20": 262.90050000000025
+            "ema_fast": 273.9012664873206,
+            "ema_slow": 262.91865411254196,
+            "macd": 10.982612374778626,
+            "macd_signal": 9.182425667390593,
+            "macd_hist": 1.8001867073880327,
+            "rsi14": 74.34348191126836,
+            "sma20": 262.9140000000002
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:05:53+00:00",
+              "source": "ts2tech",
+              "tone": 0.07655,
+              "headline": "Google Stock Today (Nov 6, 2025): Epic Settlement, DOJ Clears $32B Wiz Deal, AI Expansion \u2014 GOOGL/GOOG Price, News & What to Watch"
+            },
             {
               "ts": "2025-11-06T17:00:24+00:00",
               "source": "benzinga",
@@ -1243,41 +1249,41 @@
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
               "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
-            },
-            {
-              "ts": "2025-11-06T15:56:31+00:00",
-              "source": "benzinga",
-              "tone": -0.04644,
-              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
             }
           ]
         },
         {
           "symbol": "AMZN",
           "action": "BUY",
-          "px": 243.6,
+          "px": 243.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.423152,
-          "qty": 2.4631,
+          "score": 0.41921,
+          "qty": 2.4628,
           "notional": 600.01,
           "signals": {
-            "TS": 0.520841,
-            "NS": 0.276618,
-            "CDS": 0.423152,
+            "TS": 0.521191,
+            "NS": 0.266238,
+            "CDS": 0.41921,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 237.34128832545667,
-            "ema_slow": 230.89601112724003,
-            "macd": 6.445277198216644,
-            "macd_signal": 3.376904827008338,
-            "macd_hist": 3.068372371208306,
-            "rsi14": 60.65728668794732,
-            "sma20": 227.41975000000002
+            "ema_fast": 237.34590371007206,
+            "ema_slow": 230.89823334946226,
+            "macd": 6.447670360609806,
+            "macd_signal": 3.3773834594869703,
+            "macd_hist": 3.0702869011228353,
+            "rsi14": 60.7007242726937,
+            "sma20": 227.42125000000001
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T17:19:20+00:00",
+              "source": "benzinga",
+              "tone": 0.16011,
+              "headline": "Amazon Rolls Out AI-Powered Kindle Translate"
+            },
             {
               "ts": "2025-11-06T17:04:33+00:00",
               "source": "benzinga",
@@ -1289,39 +1295,33 @@
               "source": "benzinga",
               "tone": -0.04644,
               "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
-            },
-            {
-              "ts": "2025-11-06T15:45:31+00:00",
-              "source": "benzinga",
-              "tone": -0.78741,
-              "headline": "America's Layoff Crisis Deepens As AI Quietly Replaces Workers"
             }
           ]
         },
         {
           "symbol": "DE",
           "action": "BUY",
-          "px": 471.06,
+          "px": 469.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.393573,
-          "qty": 1.2737,
-          "notional": 599.99,
+          "score": 0.387845,
+          "qty": 1.2771,
+          "notional": 599.97,
           "signals": {
-            "TS": 0.486109,
-            "NS": 0.254771,
-            "CDS": 0.393573,
+            "TS": 0.470417,
+            "NS": 0.263987,
+            "CDS": 0.387845,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 467.26092356916644,
-            "ema_slow": 465.8793988282926,
-            "macd": 1.3815247408738287,
-            "macd_signal": 0.10430608708943662,
-            "macd_hist": 1.2772186537843921,
-            "rsi14": 56.93949643720228,
-            "sma20": 462.3005
+            "ema_fast": 467.0655389537818,
+            "ema_slow": 465.78532475421855,
+            "macd": 1.280214199563261,
+            "macd_signal": 0.08404397882732306,
+            "macd_hist": 1.196170220735938,
+            "rsi14": 54.98348277436963,
+            "sma20": 462.2370000000001
           },
           "news_preview": [
             {
@@ -1341,6 +1341,52 @@
               "source": "fcppagovbr",
               "tone": 0.45765,
               "headline": "Will La Fran\u00e7aise de l Energie S.A. (LFX) stock sustain uptrend momentum - Options Play & Comprehensive Market Scan Insights"
+            }
+          ]
+        },
+        {
+          "symbol": "NET",
+          "action": "BUY",
+          "px": 223.28,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.383337,
+          "qty": 0.0001,
+          "notional": 0.02,
+          "signals": {
+            "TS": 0.39856,
+            "NS": 0.360504,
+            "CDS": 0.383337,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 228.26652461458136,
+            "ema_slow": 223.8678760072245,
+            "macd": 4.398648607356847,
+            "macd_signal": 3.685690902782208,
+            "macd_hist": 0.7129577045746394,
+            "rsi14": 45.578800165484516,
+            "sma20": 222.49099999999993
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T17:02:47+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Behind the Scenes of Cloudflare's Latest Options Trends"
+            },
+            {
+              "ts": "2025-11-06T13:47:21+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.401,
+              "headline": "Why Restaurant Brands International Inc. stock attracts high net worth investors - Entry Point & Real-Time Buy Zone Alerts"
+            },
+            {
+              "ts": "2025-11-06T13:22:11+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.5,
+              "headline": "Why SBAC stock attracts high net worth investors - 2025 Pullback Review & Long-Term Investment Growth Plans"
             }
           ]
         }
