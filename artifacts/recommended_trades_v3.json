@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T07:14:51.939773+00:00",
+  "as_of_utc": "2025-11-06T08:20:07.280704+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -21,64 +21,18 @@
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 14.175,
-          "qty_hint": 75.39,
-          "reason": "score<sell",
-          "score": -0.260954,
-          "qty": 18,
-          "notional": 255.15,
-          "signals": {
-            "TS": -0.550931,
-            "NS": 0.174011,
-            "CDS": -0.260954,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 15.686874368234072,
-            "ema_slow": 16.90098465364756,
-            "macd": -1.2141102854134864,
-            "macd_signal": -0.9005153813999595,
-            "macd_hist": -0.31359490401352696,
-            "rsi14": 36.679361531586,
-            "sma20": 17.1305
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T22:56:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Shares Up 3.5% - Here's Why"
-            },
-            {
-              "ts": "2025-11-05T22:08:56+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.1909,
-              "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
-            }
-          ]
-        },
-        {
           "symbol": "RKLB",
           "action": "SELL",
           "px": 56.41,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.300732,
+          "score": -0.295574,
           "qty": 1,
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.091099,
-            "CDS": -0.300732,
+            "NS": 0.103993,
+            "CDS": -0.295574,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -118,13 +72,13 @@
           "px": 37.3,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.26738,
+          "score": -0.272266,
           "qty": 3,
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.050697,
-            "CDS": -0.26738,
+            "NS": 0.038481,
+            "CDS": -0.272266,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,16 +93,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T23:22:58+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.29295,
+              "headline": "Is RGTI stock affected by interest rate hikes - 2025 Performance Recap & Expert Curated Trade Setup Alerts"
+            },
+            {
               "ts": "2025-11-05T22:28:16+00:00",
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 6% Higher - Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T20:09:38+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Could Buying $10,000 of Rigetti Computing Make You a Millionaire?"
             },
             {
               "ts": "2025-11-05T18:37:30+00:00",
@@ -159,14 +113,60 @@
           ]
         },
         {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 250.245,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.527204,
+          "qty": 2.318,
+          "notional": 580.07,
+          "signals": {
+            "TS": 0.612164,
+            "NS": 0.399762,
+            "CDS": 0.527204,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.20334074826698,
+            "ema_slow": 229.87969193483923,
+            "macd": 6.323648813427752,
+            "macd_signal": 2.609811855647347,
+            "macd_hist": 3.7138369577804053,
+            "rsi14": 72.08284546456541,
+            "sma20": 226.62575
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.7875,
+              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
+            },
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.73134,
+              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.67554,
+              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            }
+          ]
+        },
+        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.487589,
-          "qty": 2.0918,
-          "notional": 580.08,
+          "qty": 1.5143,
+          "notional": 419.93,
           "signals": {
             "TS": 0.641101,
             "NS": 0.257321,
@@ -205,64 +205,18 @@
           ]
         },
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 270.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.48295,
-          "qty": 1.5546,
-          "notional": 419.91,
-          "signals": {
-            "TS": 0.590971,
-            "NS": 0.320919,
-            "CDS": 0.48295,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.44700975441873,
-            "ema_slow": 260.38511359209656,
-            "macd": 6.061896162322171,
-            "macd_signal": 5.710705876433158,
-            "macd_hist": 0.3511902858890128,
-            "rsi14": 69.53951538031329,
-            "sma20": 260.4237499999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T05:58:04+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
-            },
-            {
-              "ts": "2025-11-05T20:56:22+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
-            },
-            {
-              "ts": "2025-11-05T20:08:45+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.2294,
-              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
-            }
-          ]
-        },
-        {
           "symbol": "ARCC",
           "action": "BUY",
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.4341,
-          "qty": 0.0005,
-          "notional": 0.01,
+          "score": 0.442973,
+          "qty": 0.0001,
+          "notional": 0.0,
           "signals": {
             "TS": 0.481402,
-            "NS": 0.363148,
-            "CDS": 0.4341,
+            "NS": 0.385331,
+            "CDS": 0.442973,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -277,22 +231,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T23:47:08+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.46855,
+              "headline": "Is ARCC stock a defensive play in 2025 - Portfolio Gains Summary & Free Technical Confirmation Trade Alerts"
+            },
+            {
+              "ts": "2025-11-05T22:06:28+00:00",
+              "source": "newsercom",
+              "tone": 0.43445,
+              "headline": "Is ARCC a candidate for recovery play - 2025 Short Interest & Stock Market Timing Techniques"
+            },
+            {
               "ts": "2025-11-05T17:42:39+00:00",
               "source": "seekingalpha",
               "tone": 0.76329,
               "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
-            },
-            {
-              "ts": "2025-11-05T16:13:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.1909,
-              "headline": "Ares Capital Named Top Dividend Stock With Insider Buying and 9.47% Yield (ARCC)"
-            },
-            {
-              "ts": "2025-11-05T15:35:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.26335,
-              "headline": "Top Buys by Top Brass: Chief Executive Officer Schnabel's $265.1K Bet on ARCC"
             }
           ]
         }
@@ -328,8 +282,8 @@
           "notional": 1769.57,
           "signals": {
             "TS": -0.478081,
-            "NS": 0.131141,
-            "CDS": -0.234392,
+            "NS": 0.132375,
+            "CDS": -0.233898,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -344,22 +298,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T03:55:34+00:00",
+              "source": "newsercom",
+              "tone": 0.24695,
+              "headline": "Can QBTS stock surprise markets with earnings - July 2025 Decliners & Weekly Breakout Watchlists"
+            },
+            {
               "ts": "2025-11-06T03:14:10+00:00",
               "source": "fcppagovbr",
               "tone": 0.32985,
               "headline": "Can QBTS.W stock sustain institutional flows - IPO Watch & Smart Money Movement Tracker"
             },
             {
-              "ts": "2025-11-05T23:06:48+00:00",
-              "source": "tipranks",
-              "tone": 0.59688,
-              "headline": "Is D-Wave Quantum ($QBTS) a Good Stock to Buy before Earnings?"
-            },
-            {
-              "ts": "2025-11-05T22:36:18+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-06T03:09:06+00:00",
+              "source": "newsercom",
               "tone": 0.0,
-              "headline": "D-Wave Quantum (NYSE:QBTS) Trading 4.5% Higher - Still a Buy?"
+              "headline": "What Wall Street predicts for QBTS stock price - July 2025 Opening Moves & Community Consensus Stock Picks"
             }
           ]
         },
@@ -374,8 +328,8 @@
           "notional": 666.2,
           "signals": {
             "TS": -0.368235,
-            "NS": 0.231306,
-            "CDS": -0.128418,
+            "NS": 0.194186,
+            "CDS": -0.143267,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -396,16 +350,16 @@
               "headline": "Should I buy VTI stock before earnings season - Weekly Profit Recap & Momentum Based Trading Signals"
             },
             {
+              "ts": "2025-11-05T22:16:52+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Should I buy VTI stock before earnings season - 2025 Bull vs Bear & Short-Term Trading Alerts"
+            },
+            {
               "ts": "2025-11-05T16:57:38+00:00",
               "source": "benzinga",
               "tone": 0.28637999999999997,
               "headline": "Benzinga Market Summary: Supreme Court Hears Arguments Over Tariffs, Chip Stocks Rise, Pinterest Sinks On Earnings And Guidance"
-            },
-            {
-              "ts": "2025-11-05T12:11:15+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/5/2025"
             }
           ]
         },
@@ -420,8 +374,8 @@
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.174011,
-            "CDS": -0.260954,
+            "NS": 0.216805,
+            "CDS": -0.243837,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -436,6 +390,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T03:42:38+00:00",
+              "source": "newsercom",
+              "tone": 0.3062,
+              "headline": "Will QUBT stock split attract more investors - 2025 Market Outlook & Community Verified Trade Alerts"
+            },
+            {
               "ts": "2025-11-05T22:56:19+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
@@ -446,12 +406,6 @@
               "source": "fcppagovbr",
               "tone": 0.1909,
               "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
-            },
-            {
-              "ts": "2025-11-05T20:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: COHR, FUBO, QUBT"
             }
           ]
         },
@@ -466,8 +420,8 @@
           "notional": 140.77,
           "signals": {
             "TS": -0.514197,
-            "NS": 0.368578,
-            "CDS": -0.161087,
+            "NS": 0.419143,
+            "CDS": -0.140861,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -482,22 +436,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T04:01:32+00:00",
+              "ts": "2025-11-05T01:34:13+00:00",
               "source": "newsercom",
-              "tone": 0.4842,
-              "headline": "Will ASTS stock benefit from upcoming earnings reports - July 2025 Volume & Fast Moving Market Watchlists"
+              "tone": 0.38915,
+              "headline": "Why Tradr 2X Long ASTS Daily stock remains stable - July 2025 Drop Watch & Free Expert Verified Stock Movement Alerts"
             },
             {
-              "ts": "2025-11-06T00:04:35+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.0,
-              "headline": "Is ASTS stock overvalued by current metrics - Weekly Trend Recap & Verified Momentum Stock Watchlist"
+              "ts": "2025-11-04T16:25:33+00:00",
+              "source": "benzinga",
+              "tone": 0.70047,
+              "headline": "Smart Money Sells Palantir, Quantum Computing, And Space Stocks; Gold Gives Up Momo-Induced Gains"
             },
             {
-              "ts": "2025-11-05T15:52:27+00:00",
-              "source": "newsercom",
-              "tone": 0.35015,
-              "headline": "Is ASTS stock safe for conservative investors - Quarterly Portfolio Summary & Daily Entry Point Alerts"
+              "ts": "2025-11-04T15:34:27+00:00",
+              "source": "simplywallst",
+              "tone": 0.07655,
+              "headline": "AST SpaceMobile (ASTS): Valuation in Focus After Landmark 10-Year Satellite Deal With STC Group"
             }
           ]
         },
@@ -512,8 +466,8 @@
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.091099,
-            "CDS": -0.300732,
+            "NS": 0.103993,
+            "CDS": -0.295574,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -558,8 +512,8 @@
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.050697,
-            "CDS": -0.26738,
+            "NS": 0.038481,
+            "CDS": -0.272266,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,16 +528,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T23:22:58+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.29295,
+              "headline": "Is RGTI stock affected by interest rate hikes - 2025 Performance Recap & Expert Curated Trade Setup Alerts"
+            },
+            {
               "ts": "2025-11-05T22:28:16+00:00",
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 6% Higher - Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T20:09:38+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Could Buying $10,000 of Rigetti Computing Make You a Millionaire?"
             },
             {
               "ts": "2025-11-05T18:37:30+00:00",
@@ -650,8 +604,8 @@
           "notional": 386.7,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.163424,
-            "CDS": 0.443673,
+            "NS": 0.150297,
+            "CDS": 0.438423,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -666,22 +620,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T05:58:04+00:00",
-              "source": "benzinga",
+              "ts": "2025-11-06T08:16:54+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "Alphabet Inc. $GOOGL Shares Bought by Graybill Wealth Management LTD."
+            },
+            {
+              "ts": "2025-11-06T08:16:54+00:00",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+              "headline": "Stegent Equity Advisors Inc. Trims Stock Holdings in Alphabet Inc. $GOOGL"
             },
             {
-              "ts": "2025-11-06T04:36:36+00:00",
-              "source": "benzinga",
-              "tone": 0.65799,
-              "headline": "JPMorgan CEO Jamie Dimon Says Nvidia Is An 'Unbelievable' Company \u2014 But Warns Investors Some AI Stocks May Be Overpriced"
-            },
-            {
-              "ts": "2025-11-06T04:11:00+00:00",
-              "source": "yahoofinance",
-              "tone": 0.82314,
-              "headline": "Jim Cramer on Alphabet: \u201cWall Street Seems More Willing to Give Them the Benefit of the Doubt\u201d"
+              "ts": "2025-11-06T08:16:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Alphabet Inc. $GOOGL Shares Purchased by CVA Family Office LLC"
             }
           ]
         },
@@ -696,8 +650,8 @@
           "notional": 226.6,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.281221,
-            "CDS": 0.479787,
+            "NS": 0.399762,
+            "CDS": 0.527204,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -712,22 +666,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T04:36:36+00:00",
-              "source": "benzinga",
-              "tone": 0.65799,
-              "headline": "JPMorgan CEO Jamie Dimon Says Nvidia Is An 'Unbelievable' Company \u2014 But Warns Investors Some AI Stocks May Be Overpriced"
-            },
-            {
-              "ts": "2025-11-06T02:44:35+00:00",
-              "source": "benzinga",
-              "tone": 0.66825,
-              "headline": "Amazon Restores Services After Outage Affects Thousands Across US"
-            },
-            {
-              "ts": "2025-11-05T21:41:01+00:00",
+              "ts": "2025-11-06T08:10:53+00:00",
               "source": "marketbeat",
-              "tone": 0.16011,
-              "headline": "Amazon: Breakout Confirmed\u2014Here\u2019s Where It Could Go Next"
+              "tone": 0.7875,
+              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
+            },
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.73134,
+              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.67554,
+              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
             }
           ]
         }
@@ -817,6 +771,52 @@
       "cash_start": 20000.0,
       "trades": [
         {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 250.245,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.527204,
+          "qty": 3.9961,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.612164,
+            "NS": 0.399762,
+            "CDS": 0.527204,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.20334074826698,
+            "ema_slow": 229.87969193483923,
+            "macd": 6.323648813427752,
+            "macd_signal": 2.609811855647347,
+            "macd_hist": 3.7138369577804053,
+            "rsi14": 72.08284546456541,
+            "sma20": 226.62575
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.7875,
+              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
+            },
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.73134,
+              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.67554,
+              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            }
+          ]
+        },
+        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 277.31,
@@ -868,13 +868,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.48295,
+          "score": 0.482243,
           "qty": 3.7022,
           "notional": 1000.0,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.320919,
-            "CDS": 0.48295,
+            "NS": 0.31915,
+            "CDS": 0.482243,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -889,119 +889,73 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T05:58:04+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
-            },
-            {
-              "ts": "2025-11-05T20:56:22+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
-            },
-            {
-              "ts": "2025-11-05T20:08:45+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.2294,
-              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
-            }
-          ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 250.245,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.479787,
-          "qty": 3.9961,
-          "notional": 1000.0,
-          "signals": {
-            "TS": 0.612164,
-            "NS": 0.281221,
-            "CDS": 0.479787,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 236.20334074826698,
-            "ema_slow": 229.87969193483923,
-            "macd": 6.323648813427752,
-            "macd_signal": 2.609811855647347,
-            "macd_hist": 3.7138369577804053,
-            "rsi14": 72.08284546456541,
-            "sma20": 226.62575
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T04:36:36+00:00",
-              "source": "benzinga",
-              "tone": 0.65799,
-              "headline": "JPMorgan CEO Jamie Dimon Says Nvidia Is An 'Unbelievable' Company \u2014 But Warns Investors Some AI Stocks May Be Overpriced"
-            },
-            {
-              "ts": "2025-11-06T02:44:35+00:00",
-              "source": "benzinga",
-              "tone": 0.66825,
-              "headline": "Amazon Restores Services After Outage Affects Thousands Across US"
-            },
-            {
-              "ts": "2025-11-05T21:41:01+00:00",
+              "ts": "2025-11-06T08:05:33+00:00",
               "source": "marketbeat",
-              "tone": 0.16011,
-              "headline": "Amazon: Breakout Confirmed\u2014Here\u2019s Where It Could Go Next"
-            }
-          ]
-        },
-        {
-          "symbol": "GOOGL",
-          "action": "BUY",
-          "px": 284.34,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.443673,
-          "qty": 3.5169,
-          "notional": 1000.0,
-          "signals": {
-            "TS": 0.630506,
-            "NS": 0.163424,
-            "CDS": 0.443673,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 271.93786039410617,
-            "ema_slow": 261.17614652635706,
-            "macd": 10.761713867749108,
-            "macd_signal": 8.732378865820388,
-            "macd_hist": 2.02933500192872,
-            "rsi14": 74.0331658623107,
-            "sma20": 260.7560000000002
-          },
-          "news_preview": [
+              "tone": 0.41292,
+              "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
+            },
+            {
+              "ts": "2025-11-06T08:04:52+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Brucke Financial Inc. Has $3.55 Million Stock Holdings in Apple Inc. $AAPL"
+            },
             {
               "ts": "2025-11-06T05:58:04+00:00",
               "source": "benzinga",
               "tone": 0.0,
               "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
+            }
+          ]
+        },
+        {
+          "symbol": "ARCC",
+          "action": "BUY",
+          "px": 20.37,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.442973,
+          "qty": 49.0912,
+          "notional": 999.99,
+          "signals": {
+            "TS": 0.481402,
+            "NS": 0.385331,
+            "CDS": 0.442973,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 20.23922136927846,
+            "ema_slow": 20.281788923133867,
+            "macd": -0.042567553855406004,
+            "macd_signal": -0.15288725400519934,
+            "macd_hist": 0.11031970014979334,
+            "rsi14": 56.478136225096634,
+            "sma20": 19.95574999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T23:47:08+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.46855,
+              "headline": "Is ARCC stock a defensive play in 2025 - Portfolio Gains Summary & Free Technical Confirmation Trade Alerts"
             },
             {
-              "ts": "2025-11-06T04:36:36+00:00",
-              "source": "benzinga",
-              "tone": 0.65799,
-              "headline": "JPMorgan CEO Jamie Dimon Says Nvidia Is An 'Unbelievable' Company \u2014 But Warns Investors Some AI Stocks May Be Overpriced"
+              "ts": "2025-11-05T22:06:28+00:00",
+              "source": "newsercom",
+              "tone": 0.43445,
+              "headline": "Is ARCC a candidate for recovery play - 2025 Short Interest & Stock Market Timing Techniques"
             },
             {
-              "ts": "2025-11-06T04:11:00+00:00",
-              "source": "yahoofinance",
-              "tone": 0.82314,
-              "headline": "Jim Cramer on Alphabet: \u201cWall Street Seems More Willing to Give Them the Benefit of the Doubt\u201d"
+              "ts": "2025-11-05T17:42:39+00:00",
+              "source": "seekingalpha",
+              "tone": 0.76329,
+              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
             }
           ]
         }
       ],
-      "cash_left": 15999.99
+      "cash_left": 16000.0
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1022,6 +976,52 @@
       "portfolio_value_est": 0.0,
       "cash_start": 20000.0,
       "trades": [
+        {
+          "symbol": "AMZN",
+          "action": "BUY",
+          "px": 250.245,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.527204,
+          "qty": 2.3977,
+          "notional": 600.01,
+          "signals": {
+            "TS": 0.612164,
+            "NS": 0.399762,
+            "CDS": 0.527204,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 236.20334074826698,
+            "ema_slow": 229.87969193483923,
+            "macd": 6.323648813427752,
+            "macd_signal": 2.609811855647347,
+            "macd_hist": 3.7138369577804053,
+            "rsi14": 72.08284546456541,
+            "sma20": 226.62575
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.7875,
+              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
+            },
+            {
+              "ts": "2025-11-06T08:10:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.73134,
+              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.67554,
+              "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            }
+          ]
+        },
         {
           "symbol": "FSLR",
           "action": "BUY",
@@ -1074,13 +1074,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.48295,
+          "score": 0.482243,
           "qty": 2.2213,
           "notional": 600.0,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.320919,
-            "CDS": 0.48295,
+            "NS": 0.31915,
+            "CDS": 0.482243,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1095,114 +1095,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T05:58:04+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
-            },
-            {
-              "ts": "2025-11-05T20:56:22+00:00",
-              "source": "benzinga",
-              "tone": 0.9,
-              "headline": "MP Materials Q3 Preview: Rare Earth Stock Down 25% In One Month, Can Earnings Help Spark A Rebound?"
-            },
-            {
-              "ts": "2025-11-05T20:08:45+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.2294,
-              "headline": "(AAPL) Comprehensive Trading Strategy Report (AAPL:CA)"
-            }
-          ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 250.245,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.479787,
-          "qty": 2.3977,
-          "notional": 600.01,
-          "signals": {
-            "TS": 0.612164,
-            "NS": 0.281221,
-            "CDS": 0.479787,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 236.20334074826698,
-            "ema_slow": 229.87969193483923,
-            "macd": 6.323648813427752,
-            "macd_signal": 2.609811855647347,
-            "macd_hist": 3.7138369577804053,
-            "rsi14": 72.08284546456541,
-            "sma20": 226.62575
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T04:36:36+00:00",
-              "source": "benzinga",
-              "tone": 0.65799,
-              "headline": "JPMorgan CEO Jamie Dimon Says Nvidia Is An 'Unbelievable' Company \u2014 But Warns Investors Some AI Stocks May Be Overpriced"
-            },
-            {
-              "ts": "2025-11-06T02:44:35+00:00",
-              "source": "benzinga",
-              "tone": 0.66825,
-              "headline": "Amazon Restores Services After Outage Affects Thousands Across US"
-            },
-            {
-              "ts": "2025-11-05T21:41:01+00:00",
+              "ts": "2025-11-06T08:05:33+00:00",
               "source": "marketbeat",
-              "tone": 0.16011,
-              "headline": "Amazon: Breakout Confirmed\u2014Here\u2019s Where It Could Go Next"
-            }
-          ]
-        },
-        {
-          "symbol": "GOOGL",
-          "action": "BUY",
-          "px": 284.34,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.443673,
-          "qty": 2.1101,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.630506,
-            "NS": 0.163424,
-            "CDS": 0.443673,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 271.93786039410617,
-            "ema_slow": 261.17614652635706,
-            "macd": 10.761713867749108,
-            "macd_signal": 8.732378865820388,
-            "macd_hist": 2.02933500192872,
-            "rsi14": 74.0331658623107,
-            "sma20": 260.7560000000002
-          },
-          "news_preview": [
+              "tone": 0.41292,
+              "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
+            },
+            {
+              "ts": "2025-11-06T08:04:52+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Brucke Financial Inc. Has $3.55 Million Stock Holdings in Apple Inc. $AAPL"
+            },
             {
               "ts": "2025-11-06T05:58:04+00:00",
               "source": "benzinga",
               "tone": 0.0,
               "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
-            },
-            {
-              "ts": "2025-11-06T04:36:36+00:00",
-              "source": "benzinga",
-              "tone": 0.65799,
-              "headline": "JPMorgan CEO Jamie Dimon Says Nvidia Is An 'Unbelievable' Company \u2014 But Warns Investors Some AI Stocks May Be Overpriced"
-            },
-            {
-              "ts": "2025-11-06T04:11:00+00:00",
-              "source": "yahoofinance",
-              "tone": 0.82314,
-              "headline": "Jim Cramer on Alphabet: \u201cWall Street Seems More Willing to Give Them the Benefit of the Doubt\u201d"
             }
           ]
         },
@@ -1212,13 +1120,13 @@
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.4341,
+          "score": 0.442973,
           "qty": 29.4551,
           "notional": 600.0,
           "signals": {
             "TS": 0.481402,
-            "NS": 0.363148,
-            "CDS": 0.4341,
+            "NS": 0.385331,
+            "CDS": 0.442973,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1233,68 +1141,114 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-05T23:47:08+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.46855,
+              "headline": "Is ARCC stock a defensive play in 2025 - Portfolio Gains Summary & Free Technical Confirmation Trade Alerts"
+            },
+            {
+              "ts": "2025-11-05T22:06:28+00:00",
+              "source": "newsercom",
+              "tone": 0.43445,
+              "headline": "Is ARCC a candidate for recovery play - 2025 Short Interest & Stock Market Timing Techniques"
+            },
+            {
               "ts": "2025-11-05T17:42:39+00:00",
               "source": "seekingalpha",
               "tone": 0.76329,
               "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
-            },
-            {
-              "ts": "2025-11-05T16:13:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.1909,
-              "headline": "Ares Capital Named Top Dividend Stock With Insider Buying and 9.47% Yield (ARCC)"
-            },
-            {
-              "ts": "2025-11-05T15:35:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.26335,
-              "headline": "Top Buys by Top Brass: Chief Executive Officer Schnabel's $265.1K Bet on ARCC"
             }
           ]
         },
         {
-          "symbol": "SNOW",
+          "symbol": "GOOGL",
           "action": "BUY",
-          "px": 264.72,
+          "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.429717,
-          "qty": 0.0001,
-          "notional": 0.03,
+          "score": 0.438423,
+          "qty": 2.1101,
+          "notional": 599.99,
           "signals": {
-            "TS": 0.482943,
-            "NS": 0.349879,
-            "CDS": 0.429717,
+            "TS": 0.630506,
+            "NS": 0.150297,
+            "CDS": 0.438423,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 263.1671738526789,
-            "ema_slow": 253.04777327049067,
-            "macd": 10.119400582188234,
-            "macd_signal": 9.557400227448161,
-            "macd_hist": 0.5620003547400731,
-            "rsi14": 55.61815994066284,
-            "sma20": 255.22224999999997
+            "ema_fast": 271.93786039410617,
+            "ema_slow": 261.17614652635706,
+            "macd": 10.761713867749108,
+            "macd_signal": 8.732378865820388,
+            "macd_hist": 2.02933500192872,
+            "rsi14": 74.0331658623107,
+            "sma20": 260.7560000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T05:46:20+00:00",
-              "source": "newsercom",
-              "tone": 0.3062,
-              "headline": "Will SNOW stock attract more institutional investors - Long Setup & Entry Point Confirmation Signals"
+              "ts": "2025-11-06T08:16:54+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "Alphabet Inc. $GOOGL Shares Bought by Graybill Wealth Management LTD."
             },
             {
-              "ts": "2025-11-06T04:13:40+00:00",
-              "source": "fcppagovbr",
+              "ts": "2025-11-06T08:16:54+00:00",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "How analysts revise price targets for SNOW stock - July 2025 Big Picture & High Return Trade Guides"
+              "headline": "Stegent Equity Advisors Inc. Trims Stock Holdings in Alphabet Inc. $GOOGL"
             },
             {
-              "ts": "2025-11-06T04:08:08+00:00",
-              "source": "newsercom",
-              "tone": 0.42405,
-              "headline": "Why Tidal Trust II YieldMax SNOW stock is a must watch ticker - 2025 Investor Takeaways & Weekly Top Gainers Alerts"
+              "ts": "2025-11-06T08:16:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Alphabet Inc. $GOOGL Shares Purchased by CVA Family Office LLC"
+            }
+          ]
+        },
+        {
+          "symbol": "ZS",
+          "action": "BUY",
+          "px": 323.82,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.434767,
+          "qty": 0.0001,
+          "notional": 0.03,
+          "signals": {
+            "TS": 0.462668,
+            "NS": 0.392916,
+            "CDS": 0.434767,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 322.76203020158704,
+            "ema_slow": 314.237522787594,
+            "macd": 8.524507413993035,
+            "macd_signal": 8.064151230345626,
+            "macd_hist": 0.46035618364740927,
+            "rsi14": 53.40538220508617,
+            "sma20": 316.27175000000017
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-05T23:46:54+00:00",
+              "source": "simplywallst",
+              "tone": 0.29295,
+              "headline": "How Zscaler\u2019s (ZS) SPLX Acquisition and New AI Security Enhancements Could Impact Investors"
+            },
+            {
+              "ts": "2025-11-05T08:01:00+00:00",
+              "source": "stocktitan",
+              "tone": 0.29295,
+              "headline": "Zscaler (NASDAQ: ZS) finds 239 malicious Play apps with 42M installs in tools category"
+            },
+            {
+              "ts": "2025-11-04T21:40:57+00:00",
+              "source": "simplywallst",
+              "tone": 0.37305,
+              "headline": "Is Now a Good Time to Reassess Zscaler After 85% Stock Price Surge in 2025?"
             }
           ]
         }
