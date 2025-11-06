@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T22:45:21.611894+00:00",
+  "as_of_utc": "2025-11-06T22:54:20.129666+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,7 +17,7 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 17348.99,
+      "portfolio_value_est": 19016.34,
       "cash_start": 1000.0,
       "trades": [
         {
@@ -26,13 +26,13 @@
           "px": 28.39,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.269401,
+          "score": -0.269684,
           "qty": 57,
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.119851,
-            "CDS": -0.269401,
+            "NS": 0.119144,
+            "CDS": -0.269684,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -47,6 +47,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:14+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum (NYSE:QBTS) Stock Price Down 9.2% - Here's What Happened"
+            },
+            {
               "ts": "2025-11-06T20:23:10+00:00",
               "source": "fxleaders",
               "tone": -0.2997,
@@ -57,12 +63,6 @@
               "source": "benzinga",
               "tone": -0.34362,
               "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
-            },
-            {
-              "ts": "2025-11-06T16:30:41+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.31589999999999996,
-              "headline": "D-Wave (NYSE: QBTS) and BASF Complete Proof-of-Concept Project, Demonstrating Benchmark in Manufacturing Efficiency"
             }
           ]
         },
@@ -72,13 +72,13 @@
           "px": 329.34,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.293603,
+          "score": -0.329709,
           "qty": 2,
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.046843,
-            "CDS": -0.293603,
+            "NS": -0.043423,
+            "CDS": -0.329709,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -99,16 +99,16 @@
               "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
+              "ts": "2025-11-06T17:20:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.60201,
+              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
+            },
+            {
               "ts": "2025-11-06T16:06:00+00:00",
               "source": "nasdaq",
               "tone": 0.148,
               "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
-            },
-            {
-              "ts": "2025-11-06T13:27:12+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/6/2025"
             }
           ]
         },
@@ -118,13 +118,13 @@
           "px": 13.14,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.325158,
+          "score": -0.328965,
           "qty": 18,
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.075501,
-            "CDS": -0.325158,
+            "NS": 0.065984,
+            "CDS": -0.328965,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,6 +139,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:06+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Quantum Computing (NASDAQ:QUBT) Trading Down 7.3% - Time to Sell?"
+            },
+            {
               "ts": "2025-11-06T18:43:38+00:00",
               "source": "aolcom",
               "tone": 0.0,
@@ -149,12 +155,6 @@
               "source": "investorsbusinessdaily",
               "tone": -0.6990299999999999,
               "headline": "Quantum Computing Stocks: IonQ Earnings Miss, Revenue Beats"
-            },
-            {
-              "ts": "2025-11-06T13:31:00+00:00",
-              "source": "tradingview",
-              "tone": 0.0,
-              "headline": "Will QUBT's New Quantum Deployments Drive Its Commercial Breakout?"
             }
           ]
         },
@@ -164,13 +164,13 @@
           "px": 65.275,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.313186,
+          "score": -0.318368,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.08021,
-            "CDS": -0.313186,
+            "NS": 0.067254,
+            "CDS": -0.318368,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -185,6 +185,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:05+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "AST SpaceMobile (NASDAQ:ASTS) Trading Down 7.2% - Here's What Happened"
+            },
+            {
               "ts": "2025-11-06T18:31:59+00:00",
               "source": "benzinga",
               "tone": -0.34362,
@@ -195,12 +201,6 @@
               "source": "zacksinvestmentresearch",
               "tone": 0.387825,
               "headline": "ASTS Stock Before Q3 Earnings: A Smart Buy or Risky Investment?"
-            },
-            {
-              "ts": "2025-11-06T15:55:19+00:00",
-              "source": "seekingalpha",
-              "tone": -0.9,
-              "headline": "NEW! Stock Crash Warning For Thursday, November 5, 2025 (NASDAQ:ASTS)"
             }
           ]
         },
@@ -210,13 +210,13 @@
           "px": 49.605,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.341207,
+          "score": -0.345137,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.119025,
-            "CDS": -0.341207,
+            "NS": 0.109201,
+            "CDS": -0.345137,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -231,16 +231,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Rocket Lab (NASDAQ:RKLB) Trading Down 12.1% - Here's Why"
+            },
+            {
               "ts": "2025-11-06T19:18:18+00:00",
               "source": "benzinga",
               "tone": -0.42453,
               "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
-            },
-            {
-              "ts": "2025-11-06T18:36:50+00:00",
-              "source": "newsercom",
-              "tone": 0.3544,
-              "headline": "Can RKLB stock hit record highs again - Market Sentiment Review & Comprehensive Market Scan Reports"
             },
             {
               "ts": "2025-11-06T18:31:59+00:00",
@@ -256,13 +256,13 @@
           "px": 34.345,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.29601,
+          "score": -0.268114,
           "qty": 3,
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.051156,
-            "CDS": -0.29601,
+            "NS": 0.120896,
+            "CDS": -0.268114,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -277,6 +277,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:09+00:00",
+              "source": "marketbeat",
+              "tone": 0.5441400000000001,
+              "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
+            },
+            {
               "ts": "2025-11-06T16:29:43+00:00",
               "source": "tradingview",
               "tone": 0.0,
@@ -287,12 +293,52 @@
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            }
+          ]
+        },
+        {
+          "symbol": "HOOD",
+          "action": "SELL",
+          "px": 127.06,
+          "qty_hint": 4.0,
+          "reason": "score<sell",
+          "score": -0.272852,
+          "qty": 1,
+          "notional": 127.06,
+          "signals": {
+            "TS": -0.536778,
+            "NS": 0.123036,
+            "CDS": -0.272852,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 138.8146127043943,
+            "ema_slow": 136.83961728401945,
+            "macd": 1.974995420374853,
+            "macd_signal": 3.319398744387878,
+            "macd_hist": -1.344403324013025,
+            "rsi14": 36.291848860296305,
+            "sma20": 137.71750000000003
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T22:20:24+00:00",
+              "source": "benzinga",
+              "tone": 0.63792,
+              "headline": "Robinhood's Growth 'Shows No Signs Of Slowing Down'"
             },
             {
-              "ts": "2025-11-06T13:22:13+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
+              "ts": "2025-11-06T21:31:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": -0.09243,
+              "headline": "Stock Market Today: Nasdaq Bludgeoned, Robinhood Cuts Key Level As Nuclear Plays Hit (Live Coverage)"
+            },
+            {
+              "ts": "2025-11-06T20:30:01+00:00",
+              "source": "yahoofinanceuk",
+              "tone": 0.0,
+              "headline": "Robinhood Markets (HOOD) Reports Q3 Earnings: What Key Metrics Have to Say"
             }
           ]
         },
@@ -302,13 +348,13 @@
           "px": 269.85,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.489534,
-          "qty": 2.0399,
-          "notional": 550.47,
+          "score": 0.48953,
+          "qty": 2.2253,
+          "notional": 600.5,
           "signals": {
             "TS": 0.578813,
-            "NS": 0.355615,
-            "CDS": 0.489534,
+            "NS": 0.355607,
+            "CDS": 0.48953,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -348,13 +394,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.477274,
-          "qty": 1.652,
-          "notional": 449.53,
+          "score": 0.472489,
+          "qty": 1.4682,
+          "notional": 399.51,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.307734,
-            "CDS": 0.477274,
+            "NS": 0.29577,
+            "CDS": 0.472489,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -389,7 +435,7 @@
           ]
         }
       ],
-      "cash_left": 0.01
+      "cash_left": -0.01
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -420,8 +466,8 @@
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.119851,
-            "CDS": -0.269401,
+            "NS": 0.119144,
+            "CDS": -0.269684,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -436,6 +482,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:14+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum (NYSE:QBTS) Stock Price Down 9.2% - Here's What Happened"
+            },
+            {
               "ts": "2025-11-06T20:23:10+00:00",
               "source": "fxleaders",
               "tone": -0.2997,
@@ -446,12 +498,6 @@
               "source": "benzinga",
               "tone": -0.34362,
               "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
-            },
-            {
-              "ts": "2025-11-06T16:30:41+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.31589999999999996,
-              "headline": "D-Wave (NYSE: QBTS) and BASF Complete Proof-of-Concept Project, Demonstrating Benchmark in Manufacturing Efficiency"
             }
           ]
         },
@@ -466,8 +512,8 @@
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.046843,
-            "CDS": -0.293603,
+            "NS": -0.043423,
+            "CDS": -0.329709,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -488,16 +534,16 @@
               "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
+              "ts": "2025-11-06T17:20:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.60201,
+              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
+            },
+            {
               "ts": "2025-11-06T16:06:00+00:00",
               "source": "nasdaq",
               "tone": 0.148,
               "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
-            },
-            {
-              "ts": "2025-11-06T13:27:12+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/6/2025"
             }
           ]
         },
@@ -512,8 +558,8 @@
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.075501,
-            "CDS": -0.325158,
+            "NS": 0.065984,
+            "CDS": -0.328965,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,6 +574,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:06+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Quantum Computing (NASDAQ:QUBT) Trading Down 7.3% - Time to Sell?"
+            },
+            {
               "ts": "2025-11-06T18:43:38+00:00",
               "source": "aolcom",
               "tone": 0.0,
@@ -538,12 +590,6 @@
               "source": "investorsbusinessdaily",
               "tone": -0.6990299999999999,
               "headline": "Quantum Computing Stocks: IonQ Earnings Miss, Revenue Beats"
-            },
-            {
-              "ts": "2025-11-06T13:31:00+00:00",
-              "source": "tradingview",
-              "tone": 0.0,
-              "headline": "Will QUBT's New Quantum Deployments Drive Its Commercial Breakout?"
             }
           ]
         },
@@ -558,8 +604,8 @@
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.08021,
-            "CDS": -0.313186,
+            "NS": 0.067254,
+            "CDS": -0.318368,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,6 +620,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:05+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "AST SpaceMobile (NASDAQ:ASTS) Trading Down 7.2% - Here's What Happened"
+            },
+            {
               "ts": "2025-11-06T18:31:59+00:00",
               "source": "benzinga",
               "tone": -0.34362,
@@ -584,12 +636,6 @@
               "source": "zacksinvestmentresearch",
               "tone": 0.387825,
               "headline": "ASTS Stock Before Q3 Earnings: A Smart Buy or Risky Investment?"
-            },
-            {
-              "ts": "2025-11-06T15:55:19+00:00",
-              "source": "seekingalpha",
-              "tone": -0.9,
-              "headline": "NEW! Stock Crash Warning For Thursday, November 5, 2025 (NASDAQ:ASTS)"
             }
           ]
         },
@@ -604,8 +650,8 @@
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.119025,
-            "CDS": -0.341207,
+            "NS": 0.109201,
+            "CDS": -0.345137,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -620,16 +666,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Rocket Lab (NASDAQ:RKLB) Trading Down 12.1% - Here's Why"
+            },
+            {
               "ts": "2025-11-06T19:18:18+00:00",
               "source": "benzinga",
               "tone": -0.42453,
               "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
-            },
-            {
-              "ts": "2025-11-06T18:36:50+00:00",
-              "source": "newsercom",
-              "tone": 0.3544,
-              "headline": "Can RKLB stock hit record highs again - Market Sentiment Review & Comprehensive Market Scan Reports"
             },
             {
               "ts": "2025-11-06T18:31:59+00:00",
@@ -650,8 +696,8 @@
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.051156,
-            "CDS": -0.29601,
+            "NS": 0.120896,
+            "CDS": -0.268114,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -666,6 +712,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:22:09+00:00",
+              "source": "marketbeat",
+              "tone": 0.5441400000000001,
+              "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
+            },
+            {
               "ts": "2025-11-06T16:29:43+00:00",
               "source": "tradingview",
               "tone": 0.0,
@@ -676,12 +728,6 @@
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
-            },
-            {
-              "ts": "2025-11-06T13:22:13+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
             }
           ]
         },
@@ -696,8 +742,8 @@
           "notional": 366.98,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.18894,
-            "CDS": 0.455807,
+            "NS": 0.188207,
+            "CDS": 0.455514,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -712,16 +758,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T21:00:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
+            {
               "ts": "2025-11-06T20:40:58+00:00",
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T18:46:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
             },
             {
               "ts": "2025-11-06T18:37:15+00:00",
@@ -742,8 +788,8 @@
           "notional": 366.97,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.307734,
-            "CDS": 0.477274,
+            "NS": 0.29577,
+            "CDS": 0.472489,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -788,8 +834,8 @@
           "notional": 266.05,
           "signals": {
             "TS": 0.578813,
-            "NS": 0.355615,
-            "CDS": 0.489534,
+            "NS": 0.355607,
+            "CDS": 0.48953,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -914,13 +960,13 @@
           "px": 269.85,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.489534,
+          "score": 0.48953,
           "qty": 3.705,
           "notional": 999.79,
           "signals": {
             "TS": 0.578813,
-            "NS": 0.355615,
-            "CDS": 0.489534,
+            "NS": 0.355607,
+            "CDS": 0.48953,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -960,13 +1006,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.477274,
+          "score": 0.472489,
           "qty": 3.6743,
           "notional": 999.81,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.307734,
-            "CDS": 0.477274,
+            "NS": 0.29577,
+            "CDS": 0.472489,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1006,13 +1052,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455807,
+          "score": 0.455514,
           "qty": 3.5107,
           "notional": 999.81,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.18894,
-            "CDS": 0.455807,
+            "NS": 0.188207,
+            "CDS": 0.455514,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1027,16 +1073,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T21:00:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
+            {
               "ts": "2025-11-06T20:40:58+00:00",
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T18:46:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
             },
             {
               "ts": "2025-11-06T18:37:15+00:00",
@@ -1098,13 +1144,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.419462,
+          "score": 0.419607,
           "qty": 0.0001,
           "notional": 0.02,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.278402,
-            "CDS": 0.419462,
+            "NS": 0.278764,
+            "CDS": 0.419607,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1119,6 +1165,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:20:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Amazon.com (NASDAQ:AMZN) Shares Down 2.9% - Here's What Happened"
+            },
+            {
               "ts": "2025-11-06T22:00:46+00:00",
               "source": "benzinga",
               "tone": 0.30600000000000005,
@@ -1129,12 +1181,6 @@
               "source": "benzinga",
               "tone": -0.42903,
               "headline": "E.l.f. Beauty's China Problem: Tariffs And High Valuations Threaten ETF Portfolios"
-            },
-            {
-              "ts": "2025-11-06T20:06:08+00:00",
-              "source": "tradingview",
-              "tone": 0.43125,
-              "headline": "Key facts: Amazon Q3 earnings beat revenue estimates; stock value up $105B"
             }
           ]
         }
@@ -1166,13 +1212,13 @@
           "px": 269.85,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.489534,
+          "score": 0.48953,
           "qty": 2.2231,
           "notional": 599.9,
           "signals": {
             "TS": 0.578813,
-            "NS": 0.355615,
-            "CDS": 0.489534,
+            "NS": 0.355607,
+            "CDS": 0.48953,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1212,13 +1258,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.477274,
+          "score": 0.472489,
           "qty": 2.2047,
           "notional": 599.92,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.307734,
-            "CDS": 0.477274,
+            "NS": 0.29577,
+            "CDS": 0.472489,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1258,13 +1304,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455807,
+          "score": 0.455514,
           "qty": 2.1065,
           "notional": 599.91,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.18894,
-            "CDS": 0.455807,
+            "NS": 0.188207,
+            "CDS": 0.455514,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1279,16 +1325,16 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T21:00:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.74844,
+              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+            },
+            {
               "ts": "2025-11-06T20:40:58+00:00",
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T18:46:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
             },
             {
               "ts": "2025-11-06T18:37:15+00:00",
@@ -1350,13 +1396,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.419462,
+          "score": 0.419607,
           "qty": 2.4692,
           "notional": 599.92,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.278402,
-            "CDS": 0.419462,
+            "NS": 0.278764,
+            "CDS": 0.419607,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1371,6 +1417,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T22:20:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Amazon.com (NASDAQ:AMZN) Shares Down 2.9% - Here's What Happened"
+            },
+            {
               "ts": "2025-11-06T22:00:46+00:00",
               "source": "benzinga",
               "tone": 0.30600000000000005,
@@ -1381,12 +1433,6 @@
               "source": "benzinga",
               "tone": -0.42903,
               "headline": "E.l.f. Beauty's China Problem: Tariffs And High Valuations Threaten ETF Portfolios"
-            },
-            {
-              "ts": "2025-11-06T20:06:08+00:00",
-              "source": "tradingview",
-              "tone": 0.43125,
-              "headline": "Key facts: Amazon Q3 earnings beat revenue estimates; stock value up $105B"
             }
           ]
         }
