@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T18:21:48.381784+00:00",
+  "as_of_utc": "2025-11-06T18:28:15.792813+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -905,8 +905,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 4000.0,
+      "cash_start": 15996.0,
       "trades": [
         {
           "symbol": "FSLR",
@@ -915,8 +915,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.50079,
-          "qty": 3.649,
-          "notional": 999.99,
+          "qty": 3.6483,
+          "notional": 999.8,
           "signals": {
             "TS": 0.608468,
             "NS": 0.339273,
@@ -961,8 +961,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.482575,
-          "qty": 3.6903,
-          "notional": 1000.0,
+          "qty": 3.6896,
+          "notional": 999.81,
           "signals": {
             "TS": 0.607642,
             "NS": 0.294974,
@@ -1007,8 +1007,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.445262,
-          "qty": 3.5125,
-          "notional": 1000.01,
+          "qty": 3.5118,
+          "notional": 999.81,
           "signals": {
             "TS": 0.633102,
             "NS": 0.163501,
@@ -1053,8 +1053,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.41921,
-          "qty": 4.1046,
-          "notional": 1000.0,
+          "qty": 4.1037,
+          "notional": 999.78,
           "signals": {
             "TS": 0.521191,
             "NS": 0.266238,
@@ -1093,7 +1093,7 @@
           ]
         }
       ],
-      "cash_left": 16000.0
+      "cash_left": 11996.8
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1111,8 +1111,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 0.0,
-      "cash_start": 20000.0,
+      "portfolio_value_est": 3000.01,
+      "cash_start": 16996.99,
       "trades": [
         {
           "symbol": "FSLR",
@@ -1121,8 +1121,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.50079,
-          "qty": 2.1894,
-          "notional": 599.99,
+          "qty": 2.1891,
+          "notional": 599.91,
           "signals": {
             "TS": 0.608468,
             "NS": 0.339273,
@@ -1167,8 +1167,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.482575,
-          "qty": 2.2142,
-          "notional": 600.0,
+          "qty": 2.2139,
+          "notional": 599.92,
           "signals": {
             "TS": 0.607642,
             "NS": 0.294974,
@@ -1213,8 +1213,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.445262,
-          "qty": 2.1075,
-          "notional": 600.01,
+          "qty": 2.1072,
+          "notional": 599.92,
           "signals": {
             "TS": 0.633102,
             "NS": 0.163501,
@@ -1259,8 +1259,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.41921,
-          "qty": 2.4628,
-          "notional": 600.01,
+          "qty": 2.4624,
+          "notional": 599.91,
           "signals": {
             "TS": 0.521191,
             "NS": 0.266238,
@@ -1305,8 +1305,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.387845,
-          "qty": 1.2771,
-          "notional": 599.97,
+          "qty": 1.2769,
+          "notional": 599.87,
           "signals": {
             "TS": 0.470417,
             "NS": 0.263987,
@@ -1345,53 +1345,99 @@
           ]
         },
         {
-          "symbol": "NET",
+          "symbol": "U",
           "action": "BUY",
-          "px": 223.28,
+          "px": 40.67,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.383337,
+          "score": 0.376984,
           "qty": 0.0001,
-          "notional": 0.02,
+          "notional": 0.0,
           "signals": {
-            "TS": 0.39856,
-            "NS": 0.360504,
-            "CDS": 0.383337,
+            "TS": 0.513606,
+            "NS": 0.172051,
+            "CDS": 0.376984,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 228.26652461458136,
-            "ema_slow": 223.8678760072245,
-            "macd": 4.398648607356847,
-            "macd_signal": 3.685690902782208,
-            "macd_hist": 0.7129577045746394,
-            "rsi14": 45.578800165484516,
-            "sma20": 222.49099999999993
+            "ema_fast": 38.21866444318029,
+            "ema_slow": 38.16475336655133,
+            "macd": 0.05391107662895678,
+            "macd_signal": -0.5709209047174759,
+            "macd_hist": 0.6248319813464327,
+            "rsi14": 60.41551950066462,
+            "sma20": 37.06200000000003
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T17:02:47+00:00",
+              "ts": "2025-11-06T17:53:38+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Unity Software (NYSE:U) Shares Gap Up - Here's Why"
+            },
+            {
+              "ts": "2025-11-06T15:53:26+00:00",
+              "source": "gurufocus",
+              "tone": 0.0,
+              "headline": "Analyst Updates for Unity Software (U): Target Price Raised by B"
+            },
+            {
+              "ts": "2025-11-06T15:13:31+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "Behind the Scenes of Cloudflare's Latest Options Trends"
+              "headline": "Barclays Maintains Equal-Weight on Unity Software, Raises Price Target to $35"
+            }
+          ]
+        },
+        {
+          "symbol": "ARCC",
+          "action": "BUY",
+          "px": 20.115,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.362189,
+          "qty": 0.0001,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.398888,
+            "NS": 0.30714,
+            "CDS": 0.362189,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 20.220110389389465,
+            "ema_slow": 20.269434190153476,
+            "macd": -0.04932380076401088,
+            "macd_signal": -0.13217456598271282,
+            "macd_hist": 0.08285076521870194,
+            "rsi14": 46.17248725546563,
+            "sma20": 20.00624999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T12:27:38+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Ranking ARCC among high performing stocks via tools - Product Launch & Real-Time Buy Signal Notifications"
             },
             {
-              "ts": "2025-11-06T13:47:21+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.401,
-              "headline": "Why Restaurant Brands International Inc. stock attracts high net worth investors - Entry Point & Real-Time Buy Zone Alerts"
+              "ts": "2025-11-06T09:57:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
             },
             {
-              "ts": "2025-11-06T13:22:11+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.5,
-              "headline": "Why SBAC stock attracts high net worth investors - 2025 Pullback Review & Long-Term Investment Growth Plans"
+              "ts": "2025-11-06T09:45:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "2 Top Dividend Stocks to Buy in November"
             }
           ]
         }
       ],
-      "cash_left": 16999.99
+      "cash_left": 13997.44
     },
     "portfolio_paper_TS_only": {
       "meta": {
