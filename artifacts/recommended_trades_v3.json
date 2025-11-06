@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T08:20:07.280704+00:00",
+  "as_of_utc": "2025-11-06T09:16:54.474543+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -21,18 +21,64 @@
       "cash_start": 1000.0,
       "trades": [
         {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 14.175,
+          "qty_hint": 75.39,
+          "reason": "score<sell",
+          "score": -0.270291,
+          "qty": 18,
+          "notional": 255.15,
+          "signals": {
+            "TS": -0.550931,
+            "NS": 0.150669,
+            "CDS": -0.270291,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 15.686874368234072,
+            "ema_slow": 16.90098465364756,
+            "macd": -1.2141102854134864,
+            "macd_signal": -0.9005153813999595,
+            "macd_hist": -0.31359490401352696,
+            "rsi14": 36.679361531586,
+            "sma20": 17.1305
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T08:01:08+00:00",
+              "source": "newsercom",
+              "tone": -0.42405,
+              "headline": "Will QUBT stock return to pre crisis levels - July 2025 Selloffs & Verified Entry Point Detection"
+            },
+            {
+              "ts": "2025-11-06T04:41:41+00:00",
+              "source": "newsercom",
+              "tone": 0.4063,
+              "headline": "Why QUBT stock is considered a top pick - Bond Market & Safe Capital Investment Plans"
+            },
+            {
+              "ts": "2025-11-06T03:42:38+00:00",
+              "source": "newsercom",
+              "tone": 0.3062,
+              "headline": "Will QUBT stock split attract more investors - 2025 Market Outlook & Community Verified Trade Alerts"
+            }
+          ]
+        },
+        {
           "symbol": "RKLB",
           "action": "SELL",
           "px": 56.41,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.295574,
+          "score": -0.278481,
           "qty": 1,
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.103993,
-            "CDS": -0.295574,
+            "NS": 0.146725,
+            "CDS": -0.278481,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -72,13 +118,13 @@
           "px": 37.3,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.272266,
+          "score": -0.270035,
           "qty": 3,
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.038481,
-            "CDS": -0.272266,
+            "NS": 0.044058,
+            "CDS": -0.270035,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -93,22 +139,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T08:40:24+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "IONQ, QBTS, RGTI: Quantum Stocks Jump After Quantinuum\u2019s New Breakthrough"
+            },
+            {
+              "ts": "2025-11-06T05:12:02+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "Rigetti Computing (RGTI) Gears Up for Q3 Earnings: Here\u2019s What to Expect"
+            },
+            {
               "ts": "2025-11-05T23:22:58+00:00",
               "source": "fcppagovbr",
               "tone": 0.29295,
               "headline": "Is RGTI stock affected by interest rate hikes - 2025 Performance Recap & Expert Curated Trade Setup Alerts"
-            },
-            {
-              "ts": "2025-11-05T22:28:16+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 6% Higher - Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T18:37:30+00:00",
-              "source": "benzinga",
-              "tone": -0.44586000000000003,
-              "headline": "Citron Research Posts On X \"THE CITRON QUANTUM PAIR TRADE: Long CCCX / Short RGTI SPEEDS UP!!! S-4 filed October 29th - the clock just started. In 60-90 days, CCCX becomes INFQ and SPAC restrictions vanish. Quantum ETFs, defense funds, pension funds currently BLOCKED can suddenly buy, expanding the buyer..\""
             }
           ]
         },
@@ -118,13 +164,13 @@
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.527204,
+          "score": 0.515318,
           "qty": 2.318,
           "notional": 580.07,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.399762,
-            "CDS": 0.527204,
+            "NS": 0.370049,
+            "CDS": 0.515318,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,22 +185,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.7875,
-              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
-            },
-            {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
-            },
-            {
               "ts": "2025-11-06T08:10:51+00:00",
               "source": "marketbeat",
               "tone": 0.67554,
               "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.8370000000000001,
+              "headline": "Private Wealth Asset Management LLC Acquires 2,317 Shares of Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:06:59+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "32,200 Shares in Amazon.com, Inc. $AMZN Bought by Triton Wealth Management PLLC"
             }
           ]
         },
@@ -164,13 +210,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.487589,
+          "score": 0.492588,
           "qty": 1.5143,
           "notional": 419.93,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257321,
-            "CDS": 0.487589,
+            "NS": 0.269817,
+            "CDS": 0.492588,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -185,22 +231,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T06:30:48+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Why FSLR stock is popular among millennials - Weekly Market Summary & Daily Growth Stock Tips"
+            },
+            {
+              "ts": "2025-11-06T05:41:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
+            },
+            {
               "ts": "2025-11-05T22:15:48+00:00",
               "source": "benzinga",
               "tone": 0.0,
               "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T20:25:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
             }
           ]
         },
@@ -210,13 +256,13 @@
           "px": 20.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.442973,
+          "score": 0.418175,
           "qty": 0.0001,
           "notional": 0.0,
           "signals": {
             "TS": 0.481402,
-            "NS": 0.385331,
-            "CDS": 0.442973,
+            "NS": 0.323334,
+            "CDS": 0.418175,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -231,6 +277,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T06:27:38+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Ranking ARCC among high performing stocks via tools - July 2025 Sentiment & Community Verified Trade Alerts"
+            },
+            {
               "ts": "2025-11-05T23:47:08+00:00",
               "source": "fcppagovbr",
               "tone": 0.46855,
@@ -241,12 +293,6 @@
               "source": "newsercom",
               "tone": 0.43445,
               "headline": "Is ARCC a candidate for recovery play - 2025 Short Interest & Stock Market Timing Techniques"
-            },
-            {
-              "ts": "2025-11-05T17:42:39+00:00",
-              "source": "seekingalpha",
-              "tone": 0.76329,
-              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
             }
           ]
         }
@@ -282,8 +328,8 @@
           "notional": 1769.57,
           "signals": {
             "TS": -0.478081,
-            "NS": 0.132375,
-            "CDS": -0.233898,
+            "NS": 0.122788,
+            "CDS": -0.237733,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -298,22 +344,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T03:55:34+00:00",
+              "ts": "2025-11-06T08:53:42+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "World Investment Advisors Buys New Stake in D-Wave Quantum Inc. $QBTS"
+            },
+            {
+              "ts": "2025-11-06T08:40:24+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "IONQ, QBTS, RGTI: Quantum Stocks Jump After Quantinuum\u2019s New Breakthrough"
+            },
+            {
+              "ts": "2025-11-06T05:45:18+00:00",
               "source": "newsercom",
               "tone": 0.24695,
-              "headline": "Can QBTS stock surprise markets with earnings - July 2025 Decliners & Weekly Breakout Watchlists"
-            },
-            {
-              "ts": "2025-11-06T03:14:10+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.32985,
-              "headline": "Can QBTS.W stock sustain institutional flows - IPO Watch & Smart Money Movement Tracker"
-            },
-            {
-              "ts": "2025-11-06T03:09:06+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "What Wall Street predicts for QBTS stock price - July 2025 Opening Moves & Community Consensus Stock Picks"
+              "headline": "Can QBTS stock surprise markets with earnings - Portfolio Update Report & Weekly Setup with ROI Potential"
             }
           ]
         },
@@ -328,8 +374,8 @@
           "notional": 666.2,
           "signals": {
             "TS": -0.368235,
-            "NS": 0.194186,
-            "CDS": -0.143267,
+            "NS": 0.232394,
+            "CDS": -0.127983,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -350,16 +396,16 @@
               "headline": "Should I buy VTI stock before earnings season - Weekly Profit Recap & Momentum Based Trading Signals"
             },
             {
-              "ts": "2025-11-05T22:16:52+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Should I buy VTI stock before earnings season - 2025 Bull vs Bear & Short-Term Trading Alerts"
-            },
-            {
               "ts": "2025-11-05T16:57:38+00:00",
               "source": "benzinga",
               "tone": 0.28637999999999997,
               "headline": "Benzinga Market Summary: Supreme Court Hears Arguments Over Tariffs, Chip Stocks Rise, Pinterest Sinks On Earnings And Guidance"
+            },
+            {
+              "ts": "2025-11-05T12:11:15+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/5/2025"
             }
           ]
         },
@@ -374,8 +420,8 @@
           "notional": 255.15,
           "signals": {
             "TS": -0.550931,
-            "NS": 0.216805,
-            "CDS": -0.243837,
+            "NS": 0.150669,
+            "CDS": -0.270291,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -390,22 +436,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T08:01:08+00:00",
+              "source": "newsercom",
+              "tone": -0.42405,
+              "headline": "Will QUBT stock return to pre crisis levels - July 2025 Selloffs & Verified Entry Point Detection"
+            },
+            {
+              "ts": "2025-11-06T04:41:41+00:00",
+              "source": "newsercom",
+              "tone": 0.4063,
+              "headline": "Why QUBT stock is considered a top pick - Bond Market & Safe Capital Investment Plans"
+            },
+            {
               "ts": "2025-11-06T03:42:38+00:00",
               "source": "newsercom",
               "tone": 0.3062,
               "headline": "Will QUBT stock split attract more investors - 2025 Market Outlook & Community Verified Trade Alerts"
-            },
-            {
-              "ts": "2025-11-05T22:56:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Shares Up 3.5% - Here's Why"
-            },
-            {
-              "ts": "2025-11-05T22:08:56+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.1909,
-              "headline": "Why QUBT stock is considered a top pick - July 2025 Opening Moves & Long Hold Capital Preservation Tips"
             }
           ]
         },
@@ -420,8 +466,8 @@
           "notional": 140.77,
           "signals": {
             "TS": -0.514197,
-            "NS": 0.419143,
-            "CDS": -0.140861,
+            "NS": 0.464017,
+            "CDS": -0.122911,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -436,22 +482,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T01:34:13+00:00",
+              "ts": "2025-11-06T08:34:58+00:00",
+              "source": "marketbeat",
+              "tone": 0.67554,
+              "headline": "Arkadios Wealth Advisors Invests $338,000 in AST SpaceMobile, Inc. $ASTS"
+            },
+            {
+              "ts": "2025-11-06T08:26:58+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "AST SpaceMobile, Inc. $ASTS Shares Acquired by Teacher Retirement System of Texas"
+            },
+            {
+              "ts": "2025-11-06T06:49:08+00:00",
               "source": "newsercom",
-              "tone": 0.38915,
-              "headline": "Why Tradr 2X Long ASTS Daily stock remains stable - July 2025 Drop Watch & Free Expert Verified Stock Movement Alerts"
-            },
-            {
-              "ts": "2025-11-04T16:25:33+00:00",
-              "source": "benzinga",
-              "tone": 0.70047,
-              "headline": "Smart Money Sells Palantir, Quantum Computing, And Space Stocks; Gold Gives Up Momo-Induced Gains"
-            },
-            {
-              "ts": "2025-11-04T15:34:27+00:00",
-              "source": "simplywallst",
-              "tone": 0.07655,
-              "headline": "AST SpaceMobile (ASTS): Valuation in Focus After Landmark 10-Year Satellite Deal With STC Group"
+              "tone": 0.5,
+              "headline": "Will ASTS stock benefit from green energy trends - July 2025 Analyst Calls & Low Risk High Reward Ideas"
             }
           ]
         },
@@ -466,8 +512,8 @@
           "notional": 56.41,
           "signals": {
             "TS": -0.561953,
-            "NS": 0.103993,
-            "CDS": -0.295574,
+            "NS": 0.146725,
+            "CDS": -0.278481,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -512,8 +558,8 @@
           "notional": 111.9,
           "signals": {
             "TS": -0.479431,
-            "NS": 0.038481,
-            "CDS": -0.272266,
+            "NS": 0.044058,
+            "CDS": -0.270035,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,22 +574,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T08:40:24+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "IONQ, QBTS, RGTI: Quantum Stocks Jump After Quantinuum\u2019s New Breakthrough"
+            },
+            {
+              "ts": "2025-11-06T05:12:02+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "Rigetti Computing (RGTI) Gears Up for Q3 Earnings: Here\u2019s What to Expect"
+            },
+            {
               "ts": "2025-11-05T23:22:58+00:00",
               "source": "fcppagovbr",
               "tone": 0.29295,
               "headline": "Is RGTI stock affected by interest rate hikes - 2025 Performance Recap & Expert Curated Trade Setup Alerts"
-            },
-            {
-              "ts": "2025-11-05T22:28:16+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Rigetti Computing (NASDAQ:RGTI) Trading 6% Higher - Time to Buy?"
-            },
-            {
-              "ts": "2025-11-05T18:37:30+00:00",
-              "source": "benzinga",
-              "tone": -0.44586000000000003,
-              "headline": "Citron Research Posts On X \"THE CITRON QUANTUM PAIR TRADE: Long CCCX / Short RGTI SPEEDS UP!!! S-4 filed October 29th - the clock just started. In 60-90 days, CCCX becomes INFQ and SPAC restrictions vanish. Quantum ETFs, defense funds, pension funds currently BLOCKED can suddenly buy, expanding the buyer..\""
             }
           ]
         },
@@ -558,8 +604,8 @@
           "notional": 386.71,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257321,
-            "CDS": 0.487589,
+            "NS": 0.269817,
+            "CDS": 0.492588,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,22 +620,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T06:30:48+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Why FSLR stock is popular among millennials - Weekly Market Summary & Daily Growth Stock Tips"
+            },
+            {
+              "ts": "2025-11-06T05:41:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
+            },
+            {
               "ts": "2025-11-05T22:15:48+00:00",
               "source": "benzinga",
               "tone": 0.0,
               "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T20:25:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
             }
           ]
         },
@@ -604,8 +650,8 @@
           "notional": 386.7,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.150297,
-            "CDS": 0.438423,
+            "NS": 0.16076,
+            "CDS": 0.442608,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -650,8 +696,8 @@
           "notional": 226.6,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.399762,
-            "CDS": 0.527204,
+            "NS": 0.370049,
+            "CDS": 0.515318,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -666,22 +712,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.7875,
-              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
-            },
-            {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
-            },
-            {
               "ts": "2025-11-06T08:10:51+00:00",
               "source": "marketbeat",
               "tone": 0.67554,
               "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.8370000000000001,
+              "headline": "Private Wealth Asset Management LLC Acquires 2,317 Shares of Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:06:59+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "32,200 Shares in Amazon.com, Inc. $AMZN Bought by Triton Wealth Management PLLC"
             }
           ]
         }
@@ -776,13 +822,13 @@
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.527204,
+          "score": 0.515318,
           "qty": 3.9961,
           "notional": 1000.0,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.399762,
-            "CDS": 0.527204,
+            "NS": 0.370049,
+            "CDS": 0.515318,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -797,22 +843,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.7875,
-              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
-            },
-            {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
-            },
-            {
               "ts": "2025-11-06T08:10:51+00:00",
               "source": "marketbeat",
               "tone": 0.67554,
               "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.8370000000000001,
+              "headline": "Private Wealth Asset Management LLC Acquires 2,317 Shares of Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:06:59+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "32,200 Shares in Amazon.com, Inc. $AMZN Bought by Triton Wealth Management PLLC"
             }
           ]
         },
@@ -822,13 +868,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.487589,
+          "score": 0.492588,
           "qty": 3.6061,
           "notional": 1000.01,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257321,
-            "CDS": 0.487589,
+            "NS": 0.269817,
+            "CDS": 0.492588,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -843,22 +889,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T06:30:48+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Why FSLR stock is popular among millennials - Weekly Market Summary & Daily Growth Stock Tips"
+            },
+            {
+              "ts": "2025-11-06T05:41:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
+            },
+            {
               "ts": "2025-11-05T22:15:48+00:00",
               "source": "benzinga",
               "tone": 0.0,
               "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T20:25:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
             }
           ]
         },
@@ -868,13 +914,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.482243,
+          "score": 0.479077,
           "qty": 3.7022,
           "notional": 1000.0,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.31915,
-            "CDS": 0.482243,
+            "NS": 0.311235,
+            "CDS": 0.479077,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -889,73 +935,73 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T08:57:02+00:00",
+              "source": "marketbeat",
+              "tone": 0.6885,
+              "headline": "Blue Trust Inc. Raises Stock Position in Apple Inc. $AAPL"
+            },
+            {
+              "ts": "2025-11-06T08:56:21+00:00",
+              "source": "coincentral",
+              "tone": -0.10115,
+              "headline": "Apple (AAPL) Stock: Tech Giant to Pay Google $1 Billion Annually for Siri AI Technology"
+            },
+            {
               "ts": "2025-11-06T08:05:33+00:00",
               "source": "marketbeat",
               "tone": 0.41292,
               "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-06T08:04:52+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Brucke Financial Inc. Has $3.55 Million Stock Holdings in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-06T05:58:04+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
             }
           ]
         },
         {
-          "symbol": "ARCC",
+          "symbol": "GOOGL",
           "action": "BUY",
-          "px": 20.37,
+          "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.442973,
-          "qty": 49.0912,
-          "notional": 999.99,
+          "score": 0.442608,
+          "qty": 3.5169,
+          "notional": 1000.0,
           "signals": {
-            "TS": 0.481402,
-            "NS": 0.385331,
-            "CDS": 0.442973,
+            "TS": 0.630506,
+            "NS": 0.16076,
+            "CDS": 0.442608,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 20.23922136927846,
-            "ema_slow": 20.281788923133867,
-            "macd": -0.042567553855406004,
-            "macd_signal": -0.15288725400519934,
-            "macd_hist": 0.11031970014979334,
-            "rsi14": 56.478136225096634,
-            "sma20": 19.95574999999999
+            "ema_fast": 271.93786039410617,
+            "ema_slow": 261.17614652635706,
+            "macd": 10.761713867749108,
+            "macd_signal": 8.732378865820388,
+            "macd_hist": 2.02933500192872,
+            "rsi14": 74.0331658623107,
+            "sma20": 260.7560000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T23:47:08+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.46855,
-              "headline": "Is ARCC stock a defensive play in 2025 - Portfolio Gains Summary & Free Technical Confirmation Trade Alerts"
+              "ts": "2025-11-06T08:16:54+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "Alphabet Inc. $GOOGL Shares Bought by Graybill Wealth Management LTD."
             },
             {
-              "ts": "2025-11-05T22:06:28+00:00",
-              "source": "newsercom",
-              "tone": 0.43445,
-              "headline": "Is ARCC a candidate for recovery play - 2025 Short Interest & Stock Market Timing Techniques"
+              "ts": "2025-11-06T08:16:54+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Stegent Equity Advisors Inc. Trims Stock Holdings in Alphabet Inc. $GOOGL"
             },
             {
-              "ts": "2025-11-05T17:42:39+00:00",
-              "source": "seekingalpha",
-              "tone": 0.76329,
-              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
+              "ts": "2025-11-06T08:16:53+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Alphabet Inc. $GOOGL Shares Purchased by CVA Family Office LLC"
             }
           ]
         }
       ],
-      "cash_left": 16000.0
+      "cash_left": 15999.99
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -982,13 +1028,13 @@
           "px": 250.245,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.527204,
+          "score": 0.515318,
           "qty": 2.3977,
           "notional": 600.01,
           "signals": {
             "TS": 0.612164,
-            "NS": 0.399762,
-            "CDS": 0.527204,
+            "NS": 0.370049,
+            "CDS": 0.515318,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1003,22 +1049,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.7875,
-              "headline": "Amazon.com, Inc. $AMZN Shares Bought by Equitable Trust Co."
-            },
-            {
-              "ts": "2025-11-06T08:10:53+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Amazon.com, Inc. $AMZN Shares Acquired by Dock Street Asset Management Inc."
-            },
-            {
               "ts": "2025-11-06T08:10:51+00:00",
               "source": "marketbeat",
               "tone": 0.67554,
               "headline": "Cypress Wealth Services LLC Raises Stock Position in Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:10:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.8370000000000001,
+              "headline": "Private Wealth Asset Management LLC Acquires 2,317 Shares of Amazon.com, Inc. $AMZN"
+            },
+            {
+              "ts": "2025-11-06T08:06:59+00:00",
+              "source": "marketbeat",
+              "tone": 0.78201,
+              "headline": "32,200 Shares in Amazon.com, Inc. $AMZN Bought by Triton Wealth Management PLLC"
             }
           ]
         },
@@ -1028,13 +1074,13 @@
           "px": 277.31,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.487589,
+          "score": 0.492588,
           "qty": 2.1636,
           "notional": 599.99,
           "signals": {
             "TS": 0.641101,
-            "NS": 0.257321,
-            "CDS": 0.487589,
+            "NS": 0.269817,
+            "CDS": 0.492588,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1049,22 +1095,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T06:30:48+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Why FSLR stock is popular among millennials - Weekly Market Summary & Daily Growth Stock Tips"
+            },
+            {
+              "ts": "2025-11-06T05:41:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "5 Insightful Analyst Questions From First Solar\u2019s Q3 Earnings Call"
+            },
+            {
               "ts": "2025-11-05T22:15:48+00:00",
               "source": "benzinga",
               "tone": 0.0,
               "headline": "If You Invested $100 In First Solar Stock 10 Years Ago, You Would Have This Much Today"
-            },
-            {
-              "ts": "2025-11-05T21:15:09+00:00",
-              "source": "thestreet",
-              "tone": 0.29500000000000004,
-              "headline": "Weekly Market Wrap: First Solar, Amazon lead, Starbucks slips"
-            },
-            {
-              "ts": "2025-11-05T20:25:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Wednesday Option Activity: DUOL, FSLR, RIVN"
             }
           ]
         },
@@ -1074,13 +1120,13 @@
           "px": 270.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.482243,
+          "score": 0.479077,
           "qty": 2.2213,
           "notional": 600.0,
           "signals": {
             "TS": 0.590971,
-            "NS": 0.31915,
-            "CDS": 0.482243,
+            "NS": 0.311235,
+            "CDS": 0.479077,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1095,68 +1141,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T08:57:02+00:00",
+              "source": "marketbeat",
+              "tone": 0.6885,
+              "headline": "Blue Trust Inc. Raises Stock Position in Apple Inc. $AAPL"
+            },
+            {
+              "ts": "2025-11-06T08:56:21+00:00",
+              "source": "coincentral",
+              "tone": -0.10115,
+              "headline": "Apple (AAPL) Stock: Tech Giant to Pay Google $1 Billion Annually for Siri AI Technology"
+            },
+            {
               "ts": "2025-11-06T08:05:33+00:00",
               "source": "marketbeat",
               "tone": 0.41292,
               "headline": "Brandywine Oak Private Wealth LLC Cuts Stock Position in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-06T08:04:52+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Brucke Financial Inc. Has $3.55 Million Stock Holdings in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-06T05:58:04+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Gene Munster Says Apple Scored 'Deal Of The Year' With $1 Billion Google Gemini Partnership For Siri \u2014 While Still Pocketing $20 Billion From Search"
-            }
-          ]
-        },
-        {
-          "symbol": "ARCC",
-          "action": "BUY",
-          "px": 20.37,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.442973,
-          "qty": 29.4551,
-          "notional": 600.0,
-          "signals": {
-            "TS": 0.481402,
-            "NS": 0.385331,
-            "CDS": 0.442973,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 20.23922136927846,
-            "ema_slow": 20.281788923133867,
-            "macd": -0.042567553855406004,
-            "macd_signal": -0.15288725400519934,
-            "macd_hist": 0.11031970014979334,
-            "rsi14": 56.478136225096634,
-            "sma20": 19.95574999999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-05T23:47:08+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.46855,
-              "headline": "Is ARCC stock a defensive play in 2025 - Portfolio Gains Summary & Free Technical Confirmation Trade Alerts"
-            },
-            {
-              "ts": "2025-11-05T22:06:28+00:00",
-              "source": "newsercom",
-              "tone": 0.43445,
-              "headline": "Is ARCC a candidate for recovery play - 2025 Short Interest & Stock Market Timing Techniques"
-            },
-            {
-              "ts": "2025-11-05T17:42:39+00:00",
-              "source": "seekingalpha",
-              "tone": 0.76329,
-              "headline": "Ares Capital: A Great Q3 From This High-Performing BDC (NASDAQ:ARCC)"
             }
           ]
         },
@@ -1166,13 +1166,13 @@
           "px": 284.34,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.438423,
+          "score": 0.442608,
           "qty": 2.1101,
           "notional": 599.99,
           "signals": {
             "TS": 0.630506,
-            "NS": 0.150297,
-            "CDS": 0.438423,
+            "NS": 0.16076,
+            "CDS": 0.442608,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1207,48 +1207,94 @@
           ]
         },
         {
-          "symbol": "ZS",
+          "symbol": "U",
           "action": "BUY",
-          "px": 323.82,
+          "px": 42.37,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.434767,
-          "qty": 0.0001,
-          "notional": 0.03,
+          "score": 0.427173,
+          "qty": 14.161,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.462668,
-            "NS": 0.392916,
-            "CDS": 0.434767,
+            "TS": 0.578357,
+            "NS": 0.200397,
+            "CDS": 0.427173,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 322.76203020158704,
-            "ema_slow": 314.237522787594,
-            "macd": 8.524507413993035,
-            "macd_signal": 8.064151230345626,
-            "macd_hist": 0.46035618364740927,
-            "rsi14": 53.40538220508617,
-            "sma20": 316.27175000000017
+            "ema_fast": 37.77296706921307,
+            "ema_slow": 37.96433361578844,
+            "macd": -0.19136654657537377,
+            "macd_signal": -0.7271288705143739,
+            "macd_hist": 0.5357623239390001,
+            "rsi14": 68.67077135493024,
+            "sma20": 36.97800000000004
           },
           "news_preview": [
             {
-              "ts": "2025-11-05T23:46:54+00:00",
-              "source": "simplywallst",
-              "tone": 0.29295,
-              "headline": "How Zscaler\u2019s (ZS) SPLX Acquisition and New AI Security Enhancements Could Impact Investors"
+              "ts": "2025-11-06T08:59:03+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Strs Ohio Purchases Shares of 52,222 Unity Software Inc. $U"
             },
             {
-              "ts": "2025-11-05T08:01:00+00:00",
-              "source": "stocktitan",
-              "tone": 0.29295,
-              "headline": "Zscaler (NASDAQ: ZS) finds 239 malicious Play apps with 42M installs in tools category"
+              "ts": "2025-11-06T07:09:49+00:00",
+              "source": "newsercom",
+              "tone": 0.1909,
+              "headline": "Can SPGS U stock surprise with earnings upside - July 2025 Trends & Low Risk Profit Maximizing Plans"
             },
             {
-              "ts": "2025-11-04T21:40:57+00:00",
-              "source": "simplywallst",
-              "tone": 0.37305,
-              "headline": "Is Now a Good Time to Reassess Zscaler After 85% Stock Price Surge in 2025?"
+              "ts": "2025-11-06T07:05:07+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Is HYAC.U stock poised for growth - 2025 Performance Recap & Real-Time Chart Breakout Alerts"
+            }
+          ]
+        },
+        {
+          "symbol": "SNOW",
+          "action": "BUY",
+          "px": 264.72,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.42167,
+          "qty": 0.0001,
+          "notional": 0.03,
+          "signals": {
+            "TS": 0.482943,
+            "NS": 0.329761,
+            "CDS": 0.42167,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 263.1671738526789,
+            "ema_slow": 253.04777327049067,
+            "macd": 10.119400582188234,
+            "macd_signal": 9.557400227448161,
+            "macd_hist": 0.5620003547400731,
+            "rsi14": 55.61815994066284,
+            "sma20": 255.22224999999997
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T06:45:43+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.401,
+              "headline": "Can Snow Lake Resources Ltd. stock beat market expectations this quarter - Portfolio Value Report & AI Enhanced Trading Signals"
+            },
+            {
+              "ts": "2025-11-06T05:46:20+00:00",
+              "source": "newsercom",
+              "tone": 0.3062,
+              "headline": "Will SNOW stock attract more institutional investors - Long Setup & Entry Point Confirmation Signals"
+            },
+            {
+              "ts": "2025-11-06T05:22:38+00:00",
+              "source": "newsercom",
+              "tone": 0.0258,
+              "headline": "Will SNOW stock gain from lower inflation - Market Sentiment Review & Risk Controlled Daily Trade Plans"
             }
           ]
         }
