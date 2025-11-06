@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-06T15:16:20.638959+00:00",
+  "as_of_utc": "2025-11-06T16:19:12.932627+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,33 +17,125 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 17915.12,
+      "portfolio_value_est": 17702.69,
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 275.54,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.513316,
-          "qty": 2.0594,
-          "notional": 567.45,
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 13.86,
+          "qty_hint": 75.39,
+          "reason": "score<sell",
+          "score": -0.257895,
+          "qty": 18,
+          "notional": 249.48,
           "signals": {
-            "TS": 0.623336,
-            "NS": 0.348285,
-            "CDS": 0.513316,
+            "TS": -0.565143,
+            "NS": 0.202978,
+            "CDS": -0.257895,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.19525577091042,
-            "ema_slow": 242.33585636926207,
-            "macd": 12.859399401648346,
-            "macd_signal": 9.334675793977054,
-            "macd_hist": 3.5247236076712927,
-            "rsi14": 72.8404597377012,
-            "sma20": 242.50175000000013
+            "ema_fast": 15.405816773121138,
+            "ema_slow": 16.675726527022015,
+            "macd": -1.2699097539008761,
+            "macd_signal": -0.9743942506486367,
+            "macd_hist": -0.2955155032522394,
+            "rsi14": 35.01073315209359,
+            "sma20": 16.757499999999997
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T13:31:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Will QUBT's New Quantum Deployments Drive Its Commercial Breakout?"
+            },
+            {
+              "ts": "2025-11-06T11:32:24+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.31589999999999996,
+              "headline": "Will QUBT stock return to pre crisis levels - 2025 Dividend Review & Free Long-Term Investment Growth Plans"
+            },
+            {
+              "ts": "2025-11-06T10:50:21+00:00",
+              "source": "newsercom",
+              "tone": -0.42405,
+              "headline": "Will QUBT stock return to pre crisis levels - Market Trend Summary & Daily Technical Forecast Reports"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 272.045,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.479518,
+          "qty": 2.0625,
+          "notional": 561.09,
+          "signals": {
+            "TS": 0.625321,
+            "NS": 0.260813,
+            "CDS": 0.479518,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 267.3082390229697,
+            "ema_slow": 261.2488088319734,
+            "macd": 6.059430190996295,
+            "macd_signal": 5.780450802363818,
+            "macd_hist": 0.27897938863247695,
+            "rsi14": 73.8354545829659,
+            "sma20": 261.32449999999994
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
+            },
+            {
+              "ts": "2025-11-06T15:39:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.0,
+              "headline": "Fund Update: New $591.1M $AAPL stock position opened by Compagnie Lombard Odier SCmA"
+            },
+            {
+              "ts": "2025-11-06T15:01:18+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 273.0,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.474808,
+          "qty": 1.6077,
+          "notional": 438.9,
+          "signals": {
+            "TS": 0.598513,
+            "NS": 0.289251,
+            "CDS": 0.474808,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.8044865401412,
+            "ema_slow": 242.14770822111393,
+            "macd": 12.656778319027268,
+            "macd_signal": 9.294151577452837,
+            "macd_hist": 3.362626741574431,
+            "rsi14": 69.75739473458039,
+            "sma20": 242.37475000000012
           },
           "news_preview": [
             {
@@ -61,54 +153,54 @@
             {
               "ts": "2025-11-06T10:54:43+00:00",
               "source": "newsercom",
-              "tone": 0.43445,
-              "headline": "How FSLR stock performs in interest rate cycles - July 2025 PreEarnings & Community Shared Stock Ideas"
+              "tone": 0.3592,
+              "headline": "How FSLR stock performs in interest rate cycles - Trade Exit Summary & Weekly Breakout Stock Alerts"
             }
           ]
         },
         {
-          "symbol": "AMZN",
+          "symbol": "ARCC",
           "action": "BUY",
-          "px": 247.5,
+          "px": 20.255,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.477028,
-          "qty": 1.7477,
-          "notional": 432.56,
+          "score": 0.386922,
+          "qty": 0.0003,
+          "notional": 0.01,
           "signals": {
-            "TS": 0.570876,
-            "NS": 0.336256,
-            "CDS": 0.477028,
+            "TS": 0.440124,
+            "NS": 0.30712,
+            "CDS": 0.386922,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 237.9412883254567,
-            "ema_slow": 231.18490001612892,
-            "macd": 6.756388309327775,
-            "macd_signal": 3.4391270492305646,
-            "macd_hist": 3.3172612600972107,
-            "rsi14": 66.8789198180202,
-            "sma20": 227.61475000000002
+            "ema_fast": 20.241648850927927,
+            "ema_slow": 20.279804560523846,
+            "macd": -0.03815570959591952,
+            "macd_signal": -0.12994094774909454,
+            "macd_hist": 0.09178523815317502,
+            "rsi14": 51.313050120833026,
+            "sma20": 20.013249999999992
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T15:01:06+00:00",
-              "source": "benzinga",
+              "ts": "2025-11-06T12:27:38+00:00",
+              "source": "newsercom",
               "tone": 0.0,
-              "headline": "Comparing Amazon.com With Industry Competitors In Broadline Retail Industry"
+              "headline": "Ranking ARCC among high performing stocks via tools - Product Launch & Real-Time Buy Signal Notifications"
             },
             {
-              "ts": "2025-11-06T15:00:26+00:00",
-              "source": "parameterio",
-              "tone": 0.08895,
-              "headline": "Amazon (AMZN) Stock: Why Institutional Buyers Are Returning To This Tech Giant"
+              "ts": "2025-11-06T09:57:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
             },
             {
-              "ts": "2025-11-06T14:59:37+00:00",
-              "source": "msn",
-              "tone": 0.22395,
-              "headline": "Is Amazon Stock a Long-Term Buy?"
+              "ts": "2025-11-06T09:45:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "2 Top Dividend Stocks to Buy in November"
             }
           ]
         }
@@ -130,79 +222,79 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 17915.12,
+      "portfolio_value_est": 17702.69,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.845,
+          "px": 29.27,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.503644,
+          "score": -0.514093,
           "qty": 57,
-          "notional": 1701.16,
+          "notional": 1668.39,
           "signals": {
-            "TS": -0.503644,
-            "NS": 0.155215,
-            "CDS": -0.240101,
+            "TS": -0.514093,
+            "NS": 0.173613,
+            "CDS": -0.23901,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.694218206439665,
-            "ema_slow": 32.12081953363595,
-            "macd": 0.5733986728037124,
-            "macd_signal": 1.6006219187745223,
-            "macd_hist": -1.02722324597081,
-            "rsi14": 40.34811239276375,
-            "sma20": 34.795749999999984
+            "ema_fast": 32.60575666797813,
+            "ema_slow": 32.078226941043354,
+            "macd": 0.5275297269347732,
+            "macd_signal": 1.5914481296007346,
+            "macd_hist": -1.0639184026659614,
+            "rsi14": 39.07722420539831,
+            "sma20": 34.76699999999998
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T12:56:08+00:00",
-              "source": "seekingalpha",
-              "tone": 0.34362,
-              "headline": "D-Wave Quantum slips as Q3 results top estimates (QBTS:NYSE)"
-            },
-            {
-              "ts": "2025-11-06T12:47:10+00:00",
+              "ts": "2025-11-06T15:57:47+00:00",
               "source": "tipranks",
               "tone": -0.17880000000000001,
               "headline": "QBTS Earnings: D-Wave Stock Slides Despite Q3 Sales Beat"
             },
             {
-              "ts": "2025-11-06T12:34:35+00:00",
-              "source": "parameterio",
-              "tone": 0.44345,
-              "headline": "D-Wave Quantum Inc. (QBTS) Stock: Momentum Builds With 235% YTD Revenue Growth and Global Expansion"
+              "ts": "2025-11-06T15:56:00+00:00",
+              "source": "seekingalpha",
+              "tone": 0.34362,
+              "headline": "D-Wave Quantum slips as Q3 results top estimates (QBTS:NYSE)"
+            },
+            {
+              "ts": "2025-11-06T15:55:09+00:00",
+              "source": "benzinga",
+              "tone": 0.03483,
+              "headline": "D-Wave Quantum's Revenue Doubles, But Shares Drop: What's Going On?"
             }
           ]
         },
         {
           "symbol": "VTI",
           "action": "SELL",
-          "px": 331.08,
+          "px": 329.87,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.483776,
+          "score": -0.510215,
           "qty": 2,
-          "notional": 662.16,
+          "notional": 659.74,
           "signals": {
-            "TS": -0.483776,
-            "NS": 0.145039,
-            "CDS": -0.23225,
+            "TS": -0.510215,
+            "NS": 0.257096,
+            "CDS": -0.203291,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 333.0287071026718,
-            "ema_slow": 331.17157246971203,
-            "macd": 1.8571346329597418,
-            "macd_signal": 2.2941570432809186,
-            "macd_hist": -0.43702241032117684,
-            "rsi14": 43.13762961146254,
-            "sma20": 331.329
+            "ema_fast": 332.84255325651793,
+            "ema_slow": 331.08194284008243,
+            "macd": 1.7606104164354974,
+            "macd_signal": 2.2748521999760696,
+            "macd_hist": -0.5142417835405722,
+            "rsi14": 39.840054226933866,
+            "sma20": 331.2685
           },
           "news_preview": [
             {
@@ -212,43 +304,43 @@
               "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/6/2025"
             },
             {
-              "ts": "2025-11-05T23:07:17+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.35015,
-              "headline": "Should I buy VTI stock before earnings season - Weekly Profit Recap & Momentum Based Trading Signals"
+              "ts": "2025-11-06T10:54:40+00:00",
+              "source": "newsercom",
+              "tone": 0.4063,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - July 2025 Closing Moves & Accurate Technical Buy Alerts"
             },
             {
-              "ts": "2025-11-05T16:57:38+00:00",
-              "source": "benzinga",
-              "tone": 0.28637999999999997,
-              "headline": "Benzinga Market Summary: Supreme Court Hears Arguments Over Tariffs, Chip Stocks Rise, Pinterest Sinks On Earnings And Guidance"
+              "ts": "2025-11-06T10:04:08+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Will VTI stock top growth indexes - 2025 Risk Factors & Consistent Growth Equity Picks"
             }
           ]
         },
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 13.9,
+          "px": 13.86,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.563475,
+          "score": -0.565143,
           "qty": 18,
-          "notional": 250.2,
+          "notional": 249.48,
           "signals": {
-            "TS": -0.563475,
-            "NS": 0.224825,
-            "CDS": -0.248155,
+            "TS": -0.565143,
+            "NS": 0.202978,
+            "CDS": -0.257895,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 15.411970619274983,
-            "ema_slow": 16.67868948998498,
-            "macd": -1.2667188707099957,
-            "macd_signal": -0.9737560740104606,
-            "macd_hist": -0.29296279669953507,
-            "rsi14": 35.21415828471349,
-            "sma20": 16.759499999999996
+            "ema_fast": 15.405816773121138,
+            "ema_slow": 16.675726527022015,
+            "macd": -1.2699097539008761,
+            "macd_signal": -0.9743942506486367,
+            "macd_hist": -0.2955155032522394,
+            "rsi14": 35.01073315209359,
+            "sma20": 16.757499999999997
           },
           "news_preview": [
             {
@@ -258,91 +350,97 @@
               "headline": "Will QUBT's New Quantum Deployments Drive Its Commercial Breakout?"
             },
             {
-              "ts": "2025-11-06T10:28:41+00:00",
+              "ts": "2025-11-06T11:32:24+00:00",
               "source": "fcppagovbr",
-              "tone": 0.38915,
-              "headline": "Why QUBT stock appeals to dividend seekers - Trade Exit Summary & Fast Gain Stock Trading Tips"
+              "tone": 0.31589999999999996,
+              "headline": "Will QUBT stock return to pre crisis levels - 2025 Dividend Review & Free Long-Term Investment Growth Plans"
             },
             {
-              "ts": "2025-11-06T09:24:01+00:00",
+              "ts": "2025-11-06T10:50:21+00:00",
               "source": "newsercom",
-              "tone": 0.4716,
-              "headline": "Is QUBT stock attractive for retirement portfolios - Buy Signal & Free Community Supported Trade Ideas"
+              "tone": -0.42405,
+              "headline": "Will QUBT stock return to pre crisis levels - Market Trend Summary & Daily Technical Forecast Reports"
             }
           ]
         },
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 69.62,
+          "px": 67.935,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.526304,
+          "score": -0.547406,
           "qty": 2,
-          "notional": 139.24,
+          "notional": 135.87,
           "signals": {
-            "TS": -0.526304,
-            "NS": 0.401777,
-            "CDS": -0.155072,
+            "TS": -0.547406,
+            "NS": 0.262212,
+            "CDS": -0.223558,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 74.34871089168395,
-            "ema_slow": 72.8197163238966,
-            "macd": 1.5289945677873504,
-            "macd_signal": 3.8929199029099486,
-            "macd_hist": -2.363925335122598,
-            "rsi14": 37.43702935427454,
-            "sma20": 79.46825000000005
+            "ema_fast": 74.08948012245318,
+            "ema_slow": 72.69490150908177,
+            "macd": 1.394578613371408,
+            "macd_signal": 3.8660367120267605,
+            "macd_hist": -2.4714580986553525,
+            "rsi14": 34.8446602481299,
+            "sma20": 79.38400000000006
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T16:02:26+00:00",
+              "source": "zacksinvestmentresearch",
+              "tone": 0.387825,
+              "headline": "ASTS Stock Before Q3 Earnings: A Smart Buy or Risky Investment?"
+            },
+            {
+              "ts": "2025-11-06T15:55:19+00:00",
+              "source": "seekingalpha",
+              "tone": -0.9,
+              "headline": "NEW! Stock Crash Warning For Thursday, November 5, 2025 (NASDAQ:ASTS)"
+            },
             {
               "ts": "2025-11-06T09:36:20+00:00",
               "source": "fcppagovbr",
               "tone": 0.5,
               "headline": "Will ASTS stock benefit from upcoming earnings reports - Weekly Trade Report & Free Low Drawdown Momentum Trade Ideas"
-            },
-            {
-              "ts": "2025-11-06T08:34:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.67554,
-              "headline": "Arkadios Wealth Advisors Invests $338,000 in AST SpaceMobile, Inc. $ASTS"
-            },
-            {
-              "ts": "2025-11-06T08:26:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "AST SpaceMobile, Inc. $ASTS Shares Acquired by Teacher Retirement System of Texas"
             }
           ]
         },
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 53.79,
+          "px": 52.535,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.603599,
+          "score": -0.618939,
           "qty": 1,
-          "notional": 53.79,
+          "notional": 52.53,
           "signals": {
-            "TS": -0.603599,
-            "NS": 0.33262,
-            "CDS": -0.229112,
+            "TS": -0.618939,
+            "NS": 0.348104,
+            "CDS": -0.232122,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 60.18389171749082,
-            "ema_slow": 59.92360455704099,
-            "macd": 0.2602871604498347,
-            "macd_signal": 2.0575722335343563,
-            "macd_hist": -1.7972850730845216,
-            "rsi14": 28.19146410248534,
-            "sma20": 63.45825
+            "ema_fast": 59.9908147944139,
+            "ema_slow": 59.83064159407803,
+            "macd": 0.16017320033586913,
+            "macd_signal": 2.037549441511563,
+            "macd_hist": -1.877376241175694,
+            "rsi14": 26.315618861928854,
+            "sma20": 63.395500000000006
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T12:07:28+00:00",
+              "source": "fcppagovbr",
+              "tone": 0.125,
+              "headline": "Why analysts upgrade RKLB stock - 2025 Trading Recap & High Accuracy Swing Trade Signals"
+            },
             {
               "ts": "2025-11-06T11:59:43+00:00",
               "source": "benzinga",
@@ -354,41 +452,41 @@
               "source": "benzinga",
               "tone": 0.65727,
               "headline": "Why Is Rocket Lab Stock Gaining Thursday? - Rocket Lab (NASDAQ:RKLB)"
-            },
-            {
-              "ts": "2025-11-06T09:49:22+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Ellevest Inc. Acquires 5,156 Shares of Rocket Lab Corporation $RKLB"
             }
           ]
         },
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 36.0,
+          "px": 35.78,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.502919,
+          "score": -0.506397,
           "qty": 3,
-          "notional": 108.0,
+          "notional": 107.34,
           "signals": {
-            "TS": -0.502919,
-            "NS": 0.144096,
-            "CDS": -0.244113,
+            "TS": -0.506397,
+            "NS": 0.167955,
+            "CDS": -0.236656,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 39.224079181531835,
-            "ema_slow": 38.64702768811866,
-            "macd": 0.5770514934131725,
-            "macd_signal": 2.0234648633468506,
-            "macd_hist": -1.446413369933678,
-            "rsi14": 40.51179643794469,
-            "sma20": 42.72399999999999
+            "ema_fast": 39.19023302768568,
+            "ema_slow": 38.630731391822366,
+            "macd": 0.5595016358633131,
+            "macd_signal": 2.019954891836879,
+            "macd_hist": -1.4604532559735657,
+            "rsi14": 40.08831560963272,
+            "sma20": 42.71299999999999
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T15:43:41+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            },
             {
               "ts": "2025-11-06T11:18:31+00:00",
               "source": "fcppagovbr",
@@ -396,45 +494,91 @@
               "headline": "Is RGTI stock affected by interest rate hikes - July 2025 Chart Watch & Intraday High Probability Setup Alerts"
             },
             {
-              "ts": "2025-11-06T09:26:54+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.26335,
-              "headline": "Will RGTI stock gain from lower inflation - Product Launch & Weekly Watchlist for Hot Stocks"
+              "ts": "2025-11-06T10:56:54+00:00",
+              "source": "newsercom",
+              "tone": 0.29295,
+              "headline": "Will RGTI stock deliver shareholder value - Earnings Recap Summary & Proven Capital Preservation Methods"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 272.045,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.625321,
+          "qty": 1.375,
+          "notional": 374.06,
+          "signals": {
+            "TS": 0.625321,
+            "NS": 0.260813,
+            "CDS": 0.479518,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 267.3082390229697,
+            "ema_slow": 261.2488088319734,
+            "macd": 6.059430190996295,
+            "macd_signal": 5.780450802363818,
+            "macd_hist": 0.27897938863247695,
+            "rsi14": 73.8354545829659,
+            "sma20": 261.32449999999994
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
             },
             {
-              "ts": "2025-11-06T09:25:07+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.42405,
-              "headline": "Will RGTI stock gain from lower inflation - Quarterly Profit Review & Verified Technical Trade Signals"
+              "ts": "2025-11-06T15:39:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.0,
+              "headline": "Fund Update: New $591.1M $AAPL stock position opened by Compagnie Lombard Odier SCmA"
+            },
+            {
+              "ts": "2025-11-06T15:01:18+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.37,
+          "px": 283.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.630809,
-          "qty": 1.3303,
-          "notional": 378.3,
+          "score": 0.616758,
+          "qty": 1.3188,
+          "notional": 374.05,
           "signals": {
-            "TS": 0.630809,
-            "NS": 0.225658,
-            "CDS": 0.468749,
+            "TS": 0.616758,
+            "NS": 0.220854,
+            "CDS": 0.458397,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.85049725655136,
-            "ema_slow": 262.8942096680975,
-            "macd": 10.956287588453847,
-            "macd_signal": 9.177160710125637,
-            "macd_hist": 1.77912687832821,
-            "rsi14": 74.0593119531216,
-            "sma20": 262.8975000000002
+            "ema_fast": 273.7366511027052,
+            "ema_slow": 262.83939485328267,
+            "macd": 10.897256249422526,
+            "macd_signal": 9.165354442319373,
+            "macd_hist": 1.731901807103153,
+            "rsi14": 72.30831864898661,
+            "sma20": 262.86050000000023
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
+            },
             {
               "ts": "2025-11-06T14:35:52+00:00",
               "source": "marketbeat",
@@ -446,39 +590,33 @@
               "source": "benzinga",
               "tone": 0.28404,
               "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
-            },
-            {
-              "ts": "2025-11-06T13:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
             }
           ]
         },
         {
           "symbol": "FSLR",
           "action": "BUY",
-          "px": 275.54,
+          "px": 273.0,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.623336,
-          "qty": 1.3729,
-          "notional": 378.29,
+          "score": 0.598513,
+          "qty": 0.9227,
+          "notional": 251.9,
           "signals": {
-            "TS": 0.623336,
-            "NS": 0.348285,
-            "CDS": 0.513316,
+            "TS": 0.598513,
+            "NS": 0.289251,
+            "CDS": 0.474808,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.19525577091042,
-            "ema_slow": 242.33585636926207,
-            "macd": 12.859399401648346,
-            "macd_signal": 9.334675793977054,
-            "macd_hist": 3.5247236076712927,
-            "rsi14": 72.8404597377012,
-            "sma20": 242.50175000000013
+            "ema_fast": 254.8044865401412,
+            "ema_slow": 242.14770822111393,
+            "macd": 12.656778319027268,
+            "macd_signal": 9.294151577452837,
+            "macd_hist": 3.362626741574431,
+            "rsi14": 69.75739473458039,
+            "sma20": 242.37475000000012
           },
           "news_preview": [
             {
@@ -496,59 +634,13 @@
             {
               "ts": "2025-11-06T10:54:43+00:00",
               "source": "newsercom",
-              "tone": 0.43445,
-              "headline": "How FSLR stock performs in interest rate cycles - July 2025 PreEarnings & Community Shared Stock Ideas"
-            }
-          ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 247.5,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.570876,
-          "qty": 0.9835,
-          "notional": 243.42,
-          "signals": {
-            "TS": 0.570876,
-            "NS": 0.336256,
-            "CDS": 0.477028,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 237.9412883254567,
-            "ema_slow": 231.18490001612892,
-            "macd": 6.756388309327775,
-            "macd_signal": 3.4391270492305646,
-            "macd_hist": 3.3172612600972107,
-            "rsi14": 66.8789198180202,
-            "sma20": 227.61475000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T15:01:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Comparing Amazon.com With Industry Competitors In Broadline Retail Industry"
-            },
-            {
-              "ts": "2025-11-06T15:00:26+00:00",
-              "source": "parameterio",
-              "tone": 0.08895,
-              "headline": "Amazon (AMZN) Stock: Why Institutional Buyers Are Returning To This Tech Giant"
-            },
-            {
-              "ts": "2025-11-06T14:59:37+00:00",
-              "source": "msn",
-              "tone": 0.22395,
-              "headline": "Is Amazon Stock a Long-Term Buy?"
+              "tone": 0.3592,
+              "headline": "How FSLR stock performs in interest rate cycles - Trade Exit Summary & Weekly Breakout Stock Alerts"
             }
           ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_max_NS_higher_weight": {
       "meta": {
@@ -633,29 +725,75 @@
       "cash_start": 20000.0,
       "trades": [
         {
-          "symbol": "FSLR",
+          "symbol": "AAPL",
           "action": "BUY",
-          "px": 275.54,
+          "px": 272.045,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.513316,
-          "qty": 3.6292,
-          "notional": 999.99,
+          "score": 0.479518,
+          "qty": 3.6759,
+          "notional": 1000.01,
           "signals": {
-            "TS": 0.623336,
-            "NS": 0.348285,
-            "CDS": 0.513316,
+            "TS": 0.625321,
+            "NS": 0.260813,
+            "CDS": 0.479518,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.19525577091042,
-            "ema_slow": 242.33585636926207,
-            "macd": 12.859399401648346,
-            "macd_signal": 9.334675793977054,
-            "macd_hist": 3.5247236076712927,
-            "rsi14": 72.8404597377012,
-            "sma20": 242.50175000000013
+            "ema_fast": 267.3082390229697,
+            "ema_slow": 261.2488088319734,
+            "macd": 6.059430190996295,
+            "macd_signal": 5.780450802363818,
+            "macd_hist": 0.27897938863247695,
+            "rsi14": 73.8354545829659,
+            "sma20": 261.32449999999994
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
+            },
+            {
+              "ts": "2025-11-06T15:39:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.0,
+              "headline": "Fund Update: New $591.1M $AAPL stock position opened by Compagnie Lombard Odier SCmA"
+            },
+            {
+              "ts": "2025-11-06T15:01:18+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 273.0,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.474808,
+          "qty": 3.663,
+          "notional": 1000.0,
+          "signals": {
+            "TS": 0.598513,
+            "NS": 0.289251,
+            "CDS": 0.474808,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.8044865401412,
+            "ema_slow": 242.14770822111393,
+            "macd": 12.656778319027268,
+            "macd_signal": 9.294151577452837,
+            "macd_hist": 3.362626741574431,
+            "rsi14": 69.75739473458039,
+            "sma20": 242.37475000000012
           },
           "news_preview": [
             {
@@ -673,83 +811,43 @@
             {
               "ts": "2025-11-06T10:54:43+00:00",
               "source": "newsercom",
-              "tone": 0.43445,
-              "headline": "How FSLR stock performs in interest rate cycles - July 2025 PreEarnings & Community Shared Stock Ideas"
-            }
-          ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 247.5,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.477028,
-          "qty": 4.0404,
-          "notional": 1000.0,
-          "signals": {
-            "TS": 0.570876,
-            "NS": 0.336256,
-            "CDS": 0.477028,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 237.9412883254567,
-            "ema_slow": 231.18490001612892,
-            "macd": 6.756388309327775,
-            "macd_signal": 3.4391270492305646,
-            "macd_hist": 3.3172612600972107,
-            "rsi14": 66.8789198180202,
-            "sma20": 227.61475000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T15:01:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Comparing Amazon.com With Industry Competitors In Broadline Retail Industry"
-            },
-            {
-              "ts": "2025-11-06T15:00:26+00:00",
-              "source": "parameterio",
-              "tone": 0.08895,
-              "headline": "Amazon (AMZN) Stock: Why Institutional Buyers Are Returning To This Tech Giant"
-            },
-            {
-              "ts": "2025-11-06T14:59:37+00:00",
-              "source": "msn",
-              "tone": 0.22395,
-              "headline": "Is Amazon Stock a Long-Term Buy?"
+              "tone": 0.3592,
+              "headline": "How FSLR stock performs in interest rate cycles - Trade Exit Summary & Weekly Breakout Stock Alerts"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.37,
+          "px": 283.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.468749,
-          "qty": 3.5165,
+          "score": 0.458397,
+          "qty": 3.5257,
           "notional": 999.99,
           "signals": {
-            "TS": 0.630809,
-            "NS": 0.225658,
-            "CDS": 0.468749,
+            "TS": 0.616758,
+            "NS": 0.220854,
+            "CDS": 0.458397,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.85049725655136,
-            "ema_slow": 262.8942096680975,
-            "macd": 10.956287588453847,
-            "macd_signal": 9.177160710125637,
-            "macd_hist": 1.77912687832821,
-            "rsi14": 74.0593119531216,
-            "sma20": 262.8975000000002
+            "ema_fast": 273.7366511027052,
+            "ema_slow": 262.83939485328267,
+            "macd": 10.897256249422526,
+            "macd_signal": 9.165354442319373,
+            "macd_hist": 1.731901807103153,
+            "rsi14": 72.30831864898661,
+            "sma20": 262.86050000000023
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
+            },
             {
               "ts": "2025-11-06T14:35:52+00:00",
               "source": "marketbeat",
@@ -761,155 +859,57 @@
               "source": "benzinga",
               "tone": 0.28404,
               "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
-            },
-            {
-              "ts": "2025-11-06T13:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
             }
           ]
         },
         {
-          "symbol": "AAPL",
+          "symbol": "AMZN",
           "action": "BUY",
-          "px": 269.445,
+          "px": 244.13,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.457207,
-          "qty": 3.7113,
-          "notional": 999.99,
+          "score": 0.4219,
+          "qty": 4.0962,
+          "notional": 1000.01,
           "signals": {
-            "TS": 0.561081,
-            "NS": 0.301395,
-            "CDS": 0.457207,
+            "TS": 0.52709,
+            "NS": 0.264116,
+            "CDS": 0.4219,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.90823902296967,
-            "ema_slow": 261.0562162393808,
-            "macd": 5.852022783588893,
-            "macd_signal": 5.738969320882338,
-            "macd_hist": 0.11305346270655559,
-            "rsi14": 65.82520793879922,
-            "sma20": 261.19449999999995
+            "ema_fast": 237.42282678699513,
+            "ema_slow": 230.93527038649927,
+            "macd": 6.487556400495862,
+            "macd_signal": 3.3853606674641816,
+            "macd_hist": 3.1021957330316803,
+            "rsi14": 61.433953732074386,
+            "sma20": 227.44625000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T15:01:18+00:00",
+              "ts": "2025-11-06T15:56:31+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors"
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
             },
             {
-              "ts": "2025-11-06T13:28:48+00:00",
+              "ts": "2025-11-06T15:45:31+00:00",
               "source": "benzinga",
-              "tone": 0.28404,
-              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
+              "tone": -0.78741,
+              "headline": "America's Layoff Crisis Deepens As AI Quietly Replaces Workers"
             },
             {
-              "ts": "2025-11-06T13:13:08+00:00",
-              "source": "parameterio",
-              "tone": 0.45485,
-              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
-            }
-          ]
-        },
-        {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 268.8,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.441855,
-          "qty": 0.0001,
-          "notional": 0.03,
-          "signals": {
-            "TS": 0.527497,
-            "NS": 0.313392,
-            "CDS": 0.441855,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 264.0337624907283,
-            "ema_slow": 254.21460435724327,
-            "macd": 9.819158133485018,
-            "macd_signal": 9.609752472970758,
-            "macd_hist": 0.20940566051426046,
-            "rsi14": 61.22173273212222,
-            "sma20": 256.13025
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T11:26:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.34362,
-              "headline": "Black Swift Group LLC Reduces Position in Snowflake Inc. $SNOW"
-            },
-            {
-              "ts": "2025-11-06T10:59:20+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Asahi Life Asset Management CO. LTD. Buys Shares of 2,040 Snowflake Inc. $SNOW"
-            },
-            {
-              "ts": "2025-11-06T10:53:15+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-06T15:39:00+00:00",
+              "source": "quiverquantitative",
               "tone": 0.0,
-              "headline": "Trivest Advisors Ltd Acquires New Stake in Snowflake Inc. $SNOW"
-            }
-          ]
-        },
-        {
-          "symbol": "SNAP",
-          "action": "BUY",
-          "px": 8.4,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.398937,
-          "qty": 0.0007,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.561237,
-            "NS": 0.155487,
-            "CDS": 0.398937,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 7.800146103522211,
-            "ema_slow": 7.845018189027034,
-            "macd": -0.04487208550482258,
-            "macd_signal": -0.05652168321352412,
-            "macd_hist": 0.01164959770870154,
-            "rsi14": 66.55187207211634,
-            "sma20": 7.799250000000001
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T14:58:38+00:00",
-              "source": "cnbc",
-              "tone": 0.3825,
-              "headline": "Snap stock surges 13% after announcing Perplexity AI deal, reporting strong revenue"
-            },
-            {
-              "ts": "2025-11-06T14:51:26+00:00",
-              "source": "rollingout",
-              "tone": 0.0,
-              "headline": "Snap stock surges on Perplexity AI deal announcement"
-            },
-            {
-              "ts": "2025-11-06T14:43:26+00:00",
-              "source": "fastcompany",
-              "tone": 0.41025,
-              "headline": "Is Snapchat getting its mojo back? Snap stock soars on Perplexity deal and strong forecast"
+              "headline": "Fund Update: New $451.6M $AMZN stock position opened by Compagnie Lombard Odier SCmA"
             }
           ]
         }
       ],
-      "cash_left": 16000.0
+      "cash_left": 15999.99
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -931,29 +931,75 @@
       "cash_start": 20000.0,
       "trades": [
         {
-          "symbol": "FSLR",
+          "symbol": "AAPL",
           "action": "BUY",
-          "px": 275.54,
+          "px": 272.045,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.513316,
-          "qty": 2.1775,
-          "notional": 599.99,
+          "score": 0.479518,
+          "qty": 2.2055,
+          "notional": 600.0,
           "signals": {
-            "TS": 0.623336,
-            "NS": 0.348285,
-            "CDS": 0.513316,
+            "TS": 0.625321,
+            "NS": 0.260813,
+            "CDS": 0.479518,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 255.19525577091042,
-            "ema_slow": 242.33585636926207,
-            "macd": 12.859399401648346,
-            "macd_signal": 9.334675793977054,
-            "macd_hist": 3.5247236076712927,
-            "rsi14": 72.8404597377012,
-            "sma20": 242.50175000000013
+            "ema_fast": 267.3082390229697,
+            "ema_slow": 261.2488088319734,
+            "macd": 6.059430190996295,
+            "macd_signal": 5.780450802363818,
+            "macd_hist": 0.27897938863247695,
+            "rsi14": 73.8354545829659,
+            "sma20": 261.32449999999994
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
+            },
+            {
+              "ts": "2025-11-06T15:39:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.0,
+              "headline": "Fund Update: New $591.1M $AAPL stock position opened by Compagnie Lombard Odier SCmA"
+            },
+            {
+              "ts": "2025-11-06T15:01:18+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 273.0,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.474808,
+          "qty": 2.1978,
+          "notional": 600.0,
+          "signals": {
+            "TS": 0.598513,
+            "NS": 0.289251,
+            "CDS": 0.474808,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.8044865401412,
+            "ema_slow": 242.14770822111393,
+            "macd": 12.656778319027268,
+            "macd_signal": 9.294151577452837,
+            "macd_hist": 3.362626741574431,
+            "rsi14": 69.75739473458039,
+            "sma20": 242.37475000000012
           },
           "news_preview": [
             {
@@ -971,83 +1017,43 @@
             {
               "ts": "2025-11-06T10:54:43+00:00",
               "source": "newsercom",
-              "tone": 0.43445,
-              "headline": "How FSLR stock performs in interest rate cycles - July 2025 PreEarnings & Community Shared Stock Ideas"
-            }
-          ]
-        },
-        {
-          "symbol": "AMZN",
-          "action": "BUY",
-          "px": 247.5,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.477028,
-          "qty": 2.4242,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.570876,
-            "NS": 0.336256,
-            "CDS": 0.477028,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 237.9412883254567,
-            "ema_slow": 231.18490001612892,
-            "macd": 6.756388309327775,
-            "macd_signal": 3.4391270492305646,
-            "macd_hist": 3.3172612600972107,
-            "rsi14": 66.8789198180202,
-            "sma20": 227.61475000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T15:01:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Comparing Amazon.com With Industry Competitors In Broadline Retail Industry"
-            },
-            {
-              "ts": "2025-11-06T15:00:26+00:00",
-              "source": "parameterio",
-              "tone": 0.08895,
-              "headline": "Amazon (AMZN) Stock: Why Institutional Buyers Are Returning To This Tech Giant"
-            },
-            {
-              "ts": "2025-11-06T14:59:37+00:00",
-              "source": "msn",
-              "tone": 0.22395,
-              "headline": "Is Amazon Stock a Long-Term Buy?"
+              "tone": 0.3592,
+              "headline": "How FSLR stock performs in interest rate cycles - Trade Exit Summary & Weekly Breakout Stock Alerts"
             }
           ]
         },
         {
           "symbol": "GOOGL",
           "action": "BUY",
-          "px": 284.37,
+          "px": 283.63,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.468749,
-          "qty": 2.1099,
+          "score": 0.458397,
+          "qty": 2.1154,
           "notional": 599.99,
           "signals": {
-            "TS": 0.630809,
-            "NS": 0.225658,
-            "CDS": 0.468749,
+            "TS": 0.616758,
+            "NS": 0.220854,
+            "CDS": 0.458397,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.85049725655136,
-            "ema_slow": 262.8942096680975,
-            "macd": 10.956287588453847,
-            "macd_signal": 9.177160710125637,
-            "macd_hist": 1.77912687832821,
-            "rsi14": 74.0593119531216,
-            "sma20": 262.8975000000002
+            "ema_fast": 273.7366511027052,
+            "ema_slow": 262.83939485328267,
+            "macd": 10.897256249422526,
+            "macd_signal": 9.165354442319373,
+            "macd_hist": 1.731901807103153,
+            "rsi14": 72.30831864898661,
+            "sma20": 262.86050000000023
           },
           "news_preview": [
+            {
+              "ts": "2025-11-06T15:56:31+00:00",
+              "source": "benzinga",
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
+            },
             {
               "ts": "2025-11-06T14:35:52+00:00",
               "source": "marketbeat",
@@ -1059,131 +1065,79 @@
               "source": "benzinga",
               "tone": 0.28404,
               "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
-            },
-            {
-              "ts": "2025-11-06T13:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
             }
           ]
         },
         {
-          "symbol": "AAPL",
+          "symbol": "AMZN",
           "action": "BUY",
-          "px": 269.445,
+          "px": 244.13,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.457207,
-          "qty": 2.2268,
+          "score": 0.4219,
+          "qty": 2.4577,
           "notional": 600.0,
           "signals": {
-            "TS": 0.561081,
-            "NS": 0.301395,
-            "CDS": 0.457207,
+            "TS": 0.52709,
+            "NS": 0.264116,
+            "CDS": 0.4219,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.90823902296967,
-            "ema_slow": 261.0562162393808,
-            "macd": 5.852022783588893,
-            "macd_signal": 5.738969320882338,
-            "macd_hist": 0.11305346270655559,
-            "rsi14": 65.82520793879922,
-            "sma20": 261.19449999999995
+            "ema_fast": 237.42282678699513,
+            "ema_slow": 230.93527038649927,
+            "macd": 6.487556400495862,
+            "macd_signal": 3.3853606674641816,
+            "macd_hist": 3.1021957330316803,
+            "rsi14": 61.433953732074386,
+            "sma20": 227.44625000000002
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T15:01:18+00:00",
+              "ts": "2025-11-06T15:56:31+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Investigating Apple's Standing In Technology Hardware, Storage &amp; Peripherals Industry Compared To Competitors"
+              "tone": -0.04644,
+              "headline": "Say Goodbye to Nancy Pelosi's Stock Picks\u2014Here's When and Why"
             },
             {
-              "ts": "2025-11-06T13:28:48+00:00",
+              "ts": "2025-11-06T15:45:31+00:00",
               "source": "benzinga",
-              "tone": 0.28404,
-              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Pare Losses To Trade Higher\u2014Coherent, Marvell Tech, Applovin, Apple In Focus (UPDATED)"
+              "tone": -0.78741,
+              "headline": "America's Layoff Crisis Deepens As AI Quietly Replaces Workers"
             },
             {
-              "ts": "2025-11-06T13:13:08+00:00",
-              "source": "parameterio",
-              "tone": 0.45485,
-              "headline": "Apple (AAPL) Stock: iPhone Maker Signs $1 Billion AI Deal With Google To Boost Siri"
-            }
-          ]
-        },
-        {
-          "symbol": "SNOW",
-          "action": "BUY",
-          "px": 268.8,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.441855,
-          "qty": 2.2321,
-          "notional": 599.99,
-          "signals": {
-            "TS": 0.527497,
-            "NS": 0.313392,
-            "CDS": 0.441855,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 264.0337624907283,
-            "ema_slow": 254.21460435724327,
-            "macd": 9.819158133485018,
-            "macd_signal": 9.609752472970758,
-            "macd_hist": 0.20940566051426046,
-            "rsi14": 61.22173273212222,
-            "sma20": 256.13025
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T11:26:19+00:00",
-              "source": "marketbeat",
-              "tone": 0.34362,
-              "headline": "Black Swift Group LLC Reduces Position in Snowflake Inc. $SNOW"
-            },
-            {
-              "ts": "2025-11-06T10:59:20+00:00",
-              "source": "marketbeat",
-              "tone": 0.73134,
-              "headline": "Asahi Life Asset Management CO. LTD. Buys Shares of 2,040 Snowflake Inc. $SNOW"
-            },
-            {
-              "ts": "2025-11-06T10:53:15+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-06T15:39:00+00:00",
+              "source": "quiverquantitative",
               "tone": 0.0,
-              "headline": "Trivest Advisors Ltd Acquires New Stake in Snowflake Inc. $SNOW"
+              "headline": "Fund Update: New $451.6M $AMZN stock position opened by Compagnie Lombard Odier SCmA"
             }
           ]
         },
         {
           "symbol": "DE",
           "action": "BUY",
-          "px": 473.83,
+          "px": 472.08,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.407905,
-          "qty": 0.0001,
-          "notional": 0.05,
+          "score": 0.399451,
+          "qty": 1.271,
+          "notional": 600.01,
           "signals": {
-            "TS": 0.524521,
-            "NS": 0.232982,
-            "CDS": 0.407905,
+            "TS": 0.499541,
+            "NS": 0.249315,
+            "CDS": 0.399451,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 467.6870774153203,
-            "ema_slow": 466.0845840134778,
-            "macd": 1.6024934018424801,
-            "macd_signal": 0.1484998192831669,
-            "macd_hist": 1.4539935825593133,
-            "rsi14": 61.72917249639654,
-            "sma20": 462.439
+            "ema_fast": 467.4178466460895,
+            "ema_slow": 465.9549543838482,
+            "macd": 1.4628922622413256,
+            "macd_signal": 0.120579591362936,
+            "macd_hist": 1.3423126708783897,
+            "rsi14": 58.61420391758756,
+            "sma20": 462.35150000000004
           },
           "news_preview": [
             {
@@ -1205,9 +1159,55 @@
               "headline": "Deere & Company $DE Shares Sold by Trillium Asset Management LLC"
             }
           ]
+        },
+        {
+          "symbol": "ARCC",
+          "action": "BUY",
+          "px": 20.255,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.386922,
+          "qty": 0.0001,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.440124,
+            "NS": 0.30712,
+            "CDS": 0.386922,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 20.241648850927927,
+            "ema_slow": 20.279804560523846,
+            "macd": -0.03815570959591952,
+            "macd_signal": -0.12994094774909454,
+            "macd_hist": 0.09178523815317502,
+            "rsi14": 51.313050120833026,
+            "sma20": 20.013249999999992
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T12:27:38+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Ranking ARCC among high performing stocks via tools - Product Launch & Real-Time Buy Signal Notifications"
+            },
+            {
+              "ts": "2025-11-06T09:57:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Crestwood Advisors Group LLC Buys 30,111 Shares of Ares Capital Corporation $ARCC"
+            },
+            {
+              "ts": "2025-11-06T09:45:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.1909,
+              "headline": "2 Top Dividend Stocks to Buy in November"
+            }
+          ]
         }
       ],
-      "cash_left": 16999.99
+      "cash_left": 17000.0
     },
     "portfolio_paper_TS_only": {
       "meta": {
