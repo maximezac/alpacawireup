@@ -137,6 +137,8 @@ analyzer.lexicon.update({
     "guidance": 0.4, "dilution": -1.6, "impairment": -1.8,
     "spin-off": 0.6, "spinoff": 0.6, "divestiture": 0.4,
     "tailwind": 1.2, "headwind": -1.2,
+    "merger": 0.6, "acquisition": 0.5, "acquire": 0.5,
+    "raised guidance": 1.4, "lowered guidance": -1.4,
 })
 # Idioms (multiword)
 vs.SENTIMENT_LADEN_IDIOMS.update({
@@ -144,6 +146,8 @@ vs.SENTIMENT_LADEN_IDIOMS.update({
     "from hours to seconds": 3.0, "from minutes to seconds": 2.6,
     "from days to hours": 2.2, "beat expectations": 2.5,
     "miss expectations": -2.5, "raises guidance": 2.2, "cuts guidance": -2.2,
+    "tops estimates": 2.0, "beats estimates": 2.0,
+    "misses estimates": -2.0, "falls short": -1.8
 })
 _SPEEDUP_RE = re.compile(
     r"(from\s+(\d+(\.\d+)?)(\s*(hours?|hrs?|minutes?|mins?|seconds?|secs?))\s+to\s+(\d+(\.\d+)?)(\s*(hours?|hrs?|minutes?|mins?|seconds?|secs?)))",
