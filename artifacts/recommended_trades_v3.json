@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T04:17:57.154715+00:00",
+  "as_of_utc": "2025-11-07T05:15:16.630000+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 28.39,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.299421,
+          "score": -0.299339,
           "qty": 57,
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.044801,
-            "CDS": -0.299421,
+            "NS": 0.045004,
+            "CDS": -0.299339,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -72,13 +72,13 @@
           "px": 329.34,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.300358,
+          "score": -0.282952,
           "qty": 2,
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.029956,
-            "CDS": -0.300358,
+            "NS": 0.07347,
+            "CDS": -0.282952,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -99,16 +99,16 @@
               "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
+              "ts": "2025-11-06T18:31:38+00:00",
+              "source": "newsercom",
+              "tone": 0.4521,
+              "headline": "Why VTI stock trades below fair value - Portfolio Value Report & Expert Verified Stock Movement Alerts"
+            },
+            {
               "ts": "2025-11-06T17:20:54+00:00",
               "source": "seekingalpha",
               "tone": -0.60201,
               "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
-            },
-            {
-              "ts": "2025-11-06T16:06:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.148,
-              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
             }
           ]
         },
@@ -118,13 +118,13 @@
           "px": 13.14,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.306344,
+          "score": -0.307387,
           "qty": 18,
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.122536,
-            "CDS": -0.306344,
+            "NS": 0.119928,
+            "CDS": -0.307387,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -164,13 +164,13 @@
           "px": 65.275,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.34575,
+          "score": -0.363686,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": -0.001199,
-            "CDS": -0.34575,
+            "NS": -0.04604,
+            "CDS": -0.363686,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -210,13 +210,13 @@
           "px": 49.605,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.380136,
+          "score": -0.381024,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.021704,
-            "CDS": -0.380136,
+            "NS": 0.019483,
+            "CDS": -0.381024,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -256,13 +256,13 @@
           "px": 34.345,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.281388,
+          "score": -0.258466,
           "qty": 3,
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.087711,
-            "CDS": -0.281388,
+            "NS": 0.145015,
+            "CDS": -0.258466,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -283,16 +283,16 @@
               "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
             },
             {
-              "ts": "2025-11-06T21:33:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
-            {
               "ts": "2025-11-06T15:43:41+00:00",
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            },
+            {
+              "ts": "2025-11-06T13:22:13+00:00",
+              "source": "barrons",
+              "tone": -0.500365,
+              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
             }
           ]
         },
@@ -302,13 +302,13 @@
           "px": 127.06,
           "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.26762,
+          "score": -0.273582,
           "qty": 1,
           "notional": 127.06,
           "signals": {
             "TS": -0.536778,
-            "NS": 0.136117,
-            "CDS": -0.26762,
+            "NS": 0.121212,
+            "CDS": -0.273582,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -389,53 +389,53 @@
           ]
         },
         {
-          "symbol": "GOOGL",
+          "symbol": "FSLR",
           "action": "BUY",
-          "px": 284.79,
+          "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.464258,
-          "qty": 1.4028,
-          "notional": 399.5,
+          "score": 0.460391,
+          "qty": 1.4682,
+          "notional": 399.51,
           "signals": {
-            "TS": 0.633719,
-            "NS": 0.210068,
-            "CDS": 0.464258,
+            "TS": 0.590301,
+            "NS": 0.265526,
+            "CDS": 0.460391,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 273.91511264116673,
-            "ema_slow": 262.9253207792086,
-            "macd": 10.98979186195811,
-            "macd_signal": 9.18386156482649,
-            "macd_hist": 1.8059302971316207,
-            "rsi14": 74.41990549276227,
-            "sma20": 262.9185000000002
+            "ema_fast": 254.66756346321813,
+            "ema_slow": 242.081782295188,
+            "macd": 12.585781168030138,
+            "macd_signal": 9.279952147253411,
+            "macd_hist": 3.305829020776727,
+            "rsi14": 68.73795189199211,
+            "sma20": 242.33025000000012
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T03:26:17+00:00",
-              "source": "benzinga",
-              "tone": 0.47402999999999995,
-              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
-            },
-            {
-              "ts": "2025-11-06T23:46:41+00:00",
-              "source": "tipranks",
+              "ts": "2025-11-06T23:56:00+00:00",
+              "source": "tradingview",
               "tone": 0.0,
-              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
             },
             {
-              "ts": "2025-11-06T21:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+              "ts": "2025-11-06T21:19:50+00:00",
+              "source": "investingcom",
+              "tone": 0.0,
+              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
+            },
+            {
+              "ts": "2025-11-06T16:33:11+00:00",
+              "source": "benzinga",
+              "tone": 0.73584,
+              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
             }
           ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -466,8 +466,8 @@
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.044801,
-            "CDS": -0.299421,
+            "NS": 0.045004,
+            "CDS": -0.299339,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -512,8 +512,8 @@
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.029956,
-            "CDS": -0.300358,
+            "NS": 0.07347,
+            "CDS": -0.282952,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -534,16 +534,16 @@
               "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
+              "ts": "2025-11-06T18:31:38+00:00",
+              "source": "newsercom",
+              "tone": 0.4521,
+              "headline": "Why VTI stock trades below fair value - Portfolio Value Report & Expert Verified Stock Movement Alerts"
+            },
+            {
               "ts": "2025-11-06T17:20:54+00:00",
               "source": "seekingalpha",
               "tone": -0.60201,
               "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
-            },
-            {
-              "ts": "2025-11-06T16:06:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.148,
-              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
             }
           ]
         },
@@ -558,8 +558,8 @@
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.122536,
-            "CDS": -0.306344,
+            "NS": 0.119928,
+            "CDS": -0.307387,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -604,8 +604,8 @@
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": -0.001199,
-            "CDS": -0.34575,
+            "NS": -0.04604,
+            "CDS": -0.363686,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -650,8 +650,8 @@
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.021704,
-            "CDS": -0.380136,
+            "NS": 0.019483,
+            "CDS": -0.381024,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -696,8 +696,8 @@
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.087711,
-            "CDS": -0.281388,
+            "NS": 0.145015,
+            "CDS": -0.258466,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -718,16 +718,16 @@
               "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
             },
             {
-              "ts": "2025-11-06T21:33:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
-            {
               "ts": "2025-11-06T15:43:41+00:00",
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            },
+            {
+              "ts": "2025-11-06T13:22:13+00:00",
+              "source": "barrons",
+              "tone": -0.500365,
+              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
             }
           ]
         },
@@ -742,8 +742,8 @@
           "notional": 366.98,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.210068,
-            "CDS": 0.464258,
+            "NS": 0.188021,
+            "CDS": 0.45544,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -770,10 +770,10 @@
               "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
             },
             {
-              "ts": "2025-11-06T21:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+              "ts": "2025-11-06T20:40:58+00:00",
+              "source": "benzinga",
+              "tone": 0.30600000000000005,
+              "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
             }
           ]
         },
@@ -788,8 +788,8 @@
           "notional": 366.97,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.252051,
-            "CDS": 0.455001,
+            "NS": 0.265526,
+            "CDS": 0.460391,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1001,64 +1001,18 @@
           ]
         },
         {
-          "symbol": "GOOGL",
-          "action": "BUY",
-          "px": 284.79,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.464258,
-          "qty": 3.5086,
-          "notional": 999.21,
-          "signals": {
-            "TS": 0.633719,
-            "NS": 0.210068,
-            "CDS": 0.464258,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 273.91511264116673,
-            "ema_slow": 262.9253207792086,
-            "macd": 10.98979186195811,
-            "macd_signal": 9.18386156482649,
-            "macd_hist": 1.8059302971316207,
-            "rsi14": 74.41990549276227,
-            "sma20": 262.9185000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T03:26:17+00:00",
-              "source": "benzinga",
-              "tone": 0.47402999999999995,
-              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
-            },
-            {
-              "ts": "2025-11-06T23:46:41+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
-            },
-            {
-              "ts": "2025-11-06T21:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455001,
+          "score": 0.460391,
           "qty": 3.672,
           "notional": 999.19,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.252051,
-            "CDS": 0.455001,
+            "NS": 0.265526,
+            "CDS": 0.460391,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1093,18 +1047,64 @@
           ]
         },
         {
+          "symbol": "GOOGL",
+          "action": "BUY",
+          "px": 284.79,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.45544,
+          "qty": 3.5086,
+          "notional": 999.21,
+          "signals": {
+            "TS": 0.633719,
+            "NS": 0.188021,
+            "CDS": 0.45544,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 273.91511264116673,
+            "ema_slow": 262.9253207792086,
+            "macd": 10.98979186195811,
+            "macd_signal": 9.18386156482649,
+            "macd_hist": 1.8059302971316207,
+            "rsi14": 74.41990549276227,
+            "sma20": 262.9185000000002
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T03:26:17+00:00",
+              "source": "benzinga",
+              "tone": 0.47402999999999995,
+              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
+            },
+            {
+              "ts": "2025-11-06T23:46:41+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
+              "ts": "2025-11-06T20:40:58+00:00",
+              "source": "benzinga",
+              "tone": 0.30600000000000005,
+              "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.407834,
+          "score": 0.406481,
           "qty": 4.0796,
           "notional": 991.18,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.249333,
-            "CDS": 0.407834,
+            "NS": 0.245952,
+            "CDS": 0.406481,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1119,6 +1119,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T04:24:44+00:00",
+              "source": "sharewisecom",
+              "tone": 0.22395,
+              "headline": "Is Amazon Stock a Long-Term Buy?"
+            },
+            {
               "ts": "2025-11-06T22:20:10+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
@@ -1129,12 +1135,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Affirm Will Continue To Make Its Closed-End Installment Loan Products Available To Eligible Consumers On Amazon.com, And Through The Amazon Pay Widget On Certain Third-Party Retailer Online Channels"
-            },
-            {
-              "ts": "2025-11-06T20:21:48+00:00",
-              "source": "benzinga",
-              "tone": -0.42903,
-              "headline": "E.l.f. Beauty's China Problem: Tariffs And High Valuations Threaten ETF Portfolios"
             }
           ]
         }
@@ -1166,13 +1166,13 @@
           "px": 65.275,
           "qty_hint": 6.49,
           "reason": "score<sell",
-          "score": -0.34575,
+          "score": -0.363686,
           "qty": 1,
           "notional": 65.28,
           "signals": {
             "TS": -0.57545,
-            "NS": -0.001199,
-            "CDS": -0.34575,
+            "NS": -0.04604,
+            "CDS": -0.363686,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1212,13 +1212,13 @@
           "px": 28.39,
           "qty_hint": 129.08,
           "reason": "score<sell",
-          "score": -0.299421,
+          "score": -0.299339,
           "qty": 32,
           "notional": 908.48,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.044801,
-            "CDS": -0.299421,
+            "NS": 0.045004,
+            "CDS": -0.299339,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1258,13 +1258,13 @@
           "px": 13.14,
           "qty_hint": 43.39,
           "reason": "score<sell",
-          "score": -0.306344,
+          "score": -0.307387,
           "qty": 10,
           "notional": 131.4,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.122536,
-            "CDS": -0.306344,
+            "NS": 0.119928,
+            "CDS": -0.307387,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1304,13 +1304,13 @@
           "px": 34.345,
           "qty_hint": 7.17,
           "reason": "score<sell",
-          "score": -0.281388,
+          "score": -0.258466,
           "qty": 1,
           "notional": 34.34,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.087711,
-            "CDS": -0.281388,
+            "NS": 0.145015,
+            "CDS": -0.258466,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1331,16 +1331,16 @@
               "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
             },
             {
-              "ts": "2025-11-06T21:33:00+00:00",
-              "source": "barrons",
-              "tone": -0.500365,
-              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
-            },
-            {
               "ts": "2025-11-06T15:43:41+00:00",
               "source": "parameterio",
               "tone": 0.0,
               "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+            },
+            {
+              "ts": "2025-11-06T13:22:13+00:00",
+              "source": "barrons",
+              "tone": -0.500365,
+              "headline": "D-Wave Quantum Stock Is Falling. Here\u2019s What\u2019s Driving It Lower."
             }
           ]
         },
@@ -1350,13 +1350,13 @@
           "px": 49.605,
           "qty_hint": 5.27,
           "reason": "score<sell",
-          "score": -0.380136,
+          "score": -0.381024,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.021704,
-            "CDS": -0.380136,
+            "NS": 0.019483,
+            "CDS": -0.381024,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1396,13 +1396,13 @@
           "px": 329.34,
           "qty_hint": 7.48,
           "reason": "score<sell",
-          "score": -0.300358,
+          "score": -0.282952,
           "qty": 1,
           "notional": 329.34,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.029956,
-            "CDS": -0.300358,
+            "NS": 0.07347,
+            "CDS": -0.282952,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1423,16 +1423,16 @@
               "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
+              "ts": "2025-11-06T18:31:38+00:00",
+              "source": "newsercom",
+              "tone": 0.4521,
+              "headline": "Why VTI stock trades below fair value - Portfolio Value Report & Expert Verified Stock Movement Alerts"
+            },
+            {
               "ts": "2025-11-06T17:20:54+00:00",
               "source": "seekingalpha",
               "tone": -0.60201,
               "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
-            },
-            {
-              "ts": "2025-11-06T16:06:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.148,
-              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
             }
           ]
         },
@@ -1483,64 +1483,18 @@
           ]
         },
         {
-          "symbol": "GOOGL",
-          "action": "BUY",
-          "px": 284.79,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.464258,
-          "qty": 2.0129,
-          "notional": 573.25,
-          "signals": {
-            "TS": 0.633719,
-            "NS": 0.210068,
-            "CDS": 0.464258,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 273.91511264116673,
-            "ema_slow": 262.9253207792086,
-            "macd": 10.98979186195811,
-            "macd_signal": 9.18386156482649,
-            "macd_hist": 1.8059302971316207,
-            "rsi14": 74.41990549276227,
-            "sma20": 262.9185000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T03:26:17+00:00",
-              "source": "benzinga",
-              "tone": 0.47402999999999995,
-              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
-            },
-            {
-              "ts": "2025-11-06T23:46:41+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
-            },
-            {
-              "ts": "2025-11-06T21:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455001,
+          "score": 0.460391,
           "qty": 2.1067,
           "notional": 573.25,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.252051,
-            "CDS": 0.455001,
+            "NS": 0.265526,
+            "CDS": 0.460391,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1575,18 +1529,64 @@
           ]
         },
         {
+          "symbol": "GOOGL",
+          "action": "BUY",
+          "px": 284.79,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.45544,
+          "qty": 2.0129,
+          "notional": 573.25,
+          "signals": {
+            "TS": 0.633719,
+            "NS": 0.188021,
+            "CDS": 0.45544,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 273.91511264116673,
+            "ema_slow": 262.9253207792086,
+            "macd": 10.98979186195811,
+            "macd_signal": 9.18386156482649,
+            "macd_hist": 1.8059302971316207,
+            "rsi14": 74.41990549276227,
+            "sma20": 262.9185000000002
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T03:26:17+00:00",
+              "source": "benzinga",
+              "tone": 0.47402999999999995,
+              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
+            },
+            {
+              "ts": "2025-11-06T23:46:41+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
+              "ts": "2025-11-06T20:40:58+00:00",
+              "source": "benzinga",
+              "tone": 0.30600000000000005,
+              "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.407834,
+          "score": 0.406481,
           "qty": 2.3594,
           "notional": 573.24,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.249333,
-            "CDS": 0.407834,
+            "NS": 0.245952,
+            "CDS": 0.406481,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1601,6 +1601,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T04:24:44+00:00",
+              "source": "sharewisecom",
+              "tone": 0.22395,
+              "headline": "Is Amazon Stock a Long-Term Buy?"
+            },
+            {
               "ts": "2025-11-06T22:20:10+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
@@ -1611,12 +1617,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Affirm Will Continue To Make Its Closed-End Installment Loan Products Available To Eligible Consumers On Amazon.com, And Through The Amazon Pay Widget On Certain Third-Party Retailer Online Channels"
-            },
-            {
-              "ts": "2025-11-06T20:21:48+00:00",
-              "source": "benzinga",
-              "tone": -0.42903,
-              "headline": "E.l.f. Beauty's China Problem: Tariffs And High Valuations Threaten ETF Portfolios"
             }
           ]
         },
@@ -1626,13 +1626,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.392057,
+          "score": 0.402524,
           "qty": 0.1426,
           "notional": 67.74,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.176577,
-            "CDS": 0.392057,
+            "NS": 0.202746,
+            "CDS": 0.402524,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1653,16 +1653,16 @@
               "headline": "Watching Boeing, John Deere, Nvidia; Hearing Co's Sign Deals With Central Asian Nations; John Deere Signs Deal Between $3B-$5B For Agriculture Machinery"
             },
             {
-              "ts": "2025-11-06T18:47:51+00:00",
+              "ts": "2025-11-06T15:50:55+00:00",
               "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How RLI Corp. Common Stock (DE) stock performs in volatility spikes - Earnings Overview Report & Reliable Entry Point Alerts"
+              "tone": -0.24695,
+              "headline": "Can Betterware de Mexico S.A.P.I. de stock hit consensus price targets - Weekly Risk Summary & Step-by-Step Trade Execution Guides"
             },
             {
-              "ts": "2025-11-06T18:38:55+00:00",
+              "ts": "2025-11-06T12:35:52+00:00",
               "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Will Betterware de Mexico S.A.P.I. de stock keep high P E multiples - July 2025 Update & AI Forecast Swing Trade Picks"
+              "tone": 0.29295,
+              "headline": "Will Corporacion Inmobiliaria Vesta S.A.B de stock enhance shareholder value - Market Trend Report & Consistent Income Trade Ideas"
             }
           ]
         }
@@ -1735,64 +1735,18 @@
           ]
         },
         {
-          "symbol": "GOOGL",
-          "action": "BUY",
-          "px": 284.79,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.464258,
-          "qty": 2.1056,
-          "notional": 599.65,
-          "signals": {
-            "TS": 0.633719,
-            "NS": 0.210068,
-            "CDS": 0.464258,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 273.91511264116673,
-            "ema_slow": 262.9253207792086,
-            "macd": 10.98979186195811,
-            "macd_signal": 9.18386156482649,
-            "macd_hist": 1.8059302971316207,
-            "rsi14": 74.41990549276227,
-            "sma20": 262.9185000000002
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T03:26:17+00:00",
-              "source": "benzinga",
-              "tone": 0.47402999999999995,
-              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
-            },
-            {
-              "ts": "2025-11-06T23:46:41+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
-            },
-            {
-              "ts": "2025-11-06T21:00:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.74844,
-              "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.455001,
+          "score": 0.460391,
           "qty": 2.2037,
           "notional": 599.65,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.252051,
-            "CDS": 0.455001,
+            "NS": 0.265526,
+            "CDS": 0.460391,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1827,18 +1781,64 @@
           ]
         },
         {
+          "symbol": "GOOGL",
+          "action": "BUY",
+          "px": 284.79,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.45544,
+          "qty": 2.1056,
+          "notional": 599.65,
+          "signals": {
+            "TS": 0.633719,
+            "NS": 0.188021,
+            "CDS": 0.45544,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 273.91511264116673,
+            "ema_slow": 262.9253207792086,
+            "macd": 10.98979186195811,
+            "macd_signal": 9.18386156482649,
+            "macd_hist": 1.8059302971316207,
+            "rsi14": 74.41990549276227,
+            "sma20": 262.9185000000002
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T03:26:17+00:00",
+              "source": "benzinga",
+              "tone": 0.47402999999999995,
+              "headline": "Google To Leverage Polymarket, Kalshi's Prediction Markets Data To Harness 'Wisdom Of The Crowds'"
+            },
+            {
+              "ts": "2025-11-06T23:46:41+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
+              "ts": "2025-11-06T20:40:58+00:00",
+              "source": "benzinga",
+              "tone": 0.30600000000000005,
+              "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.407834,
+          "score": 0.406481,
           "qty": 2.4681,
           "notional": 599.65,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.249333,
-            "CDS": 0.407834,
+            "NS": 0.245952,
+            "CDS": 0.406481,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1853,6 +1853,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T04:24:44+00:00",
+              "source": "sharewisecom",
+              "tone": 0.22395,
+              "headline": "Is Amazon Stock a Long-Term Buy?"
+            },
+            {
               "ts": "2025-11-06T22:20:10+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
@@ -1863,12 +1869,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Affirm Will Continue To Make Its Closed-End Installment Loan Products Available To Eligible Consumers On Amazon.com, And Through The Amazon Pay Widget On Certain Third-Party Retailer Online Channels"
-            },
-            {
-              "ts": "2025-11-06T20:21:48+00:00",
-              "source": "benzinga",
-              "tone": -0.42903,
-              "headline": "E.l.f. Beauty's China Problem: Tariffs And High Valuations Threaten ETF Portfolios"
             }
           ]
         },
@@ -1878,13 +1878,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.392057,
+          "score": 0.402524,
           "qty": 1.2622,
           "notional": 599.62,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.176577,
-            "CDS": 0.392057,
+            "NS": 0.202746,
+            "CDS": 0.402524,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1905,16 +1905,16 @@
               "headline": "Watching Boeing, John Deere, Nvidia; Hearing Co's Sign Deals With Central Asian Nations; John Deere Signs Deal Between $3B-$5B For Agriculture Machinery"
             },
             {
-              "ts": "2025-11-06T18:47:51+00:00",
+              "ts": "2025-11-06T15:50:55+00:00",
               "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How RLI Corp. Common Stock (DE) stock performs in volatility spikes - Earnings Overview Report & Reliable Entry Point Alerts"
+              "tone": -0.24695,
+              "headline": "Can Betterware de Mexico S.A.P.I. de stock hit consensus price targets - Weekly Risk Summary & Step-by-Step Trade Execution Guides"
             },
             {
-              "ts": "2025-11-06T18:38:55+00:00",
+              "ts": "2025-11-06T12:35:52+00:00",
               "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Will Betterware de Mexico S.A.P.I. de stock keep high P E multiples - July 2025 Update & AI Forecast Swing Trade Picks"
+              "tone": 0.29295,
+              "headline": "Will Corporacion Inmobiliaria Vesta S.A.B de stock enhance shareholder value - Market Trend Report & Consistent Income Trade Ideas"
             }
           ]
         }
