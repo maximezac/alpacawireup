@@ -207,18 +207,16 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin ${{ github.ref_name }}
-
-          # Stage artifacts + all nested portfolio outputs
-          git add \
-            artifacts/**/*.json artifacts/**/*.yaml artifacts/*.json artifacts/*.yaml \
-            data/*.json data/*history.csv data/trades_ledger.csv data/watchlist_summary.json \
-            data/portfolios/**
-
-          # Optional: show what’s staged (for debugging)
+      
+          # Stage whole directories; avoids pathspec errors when no files match
+          git add -A artifacts || true
+          git add -A data || true
+      
           echo "=== staged files ==="
           git status --porcelain
-
+      
           git commit -m "v3: persist per-portfolio artifacts (plans, ledgers, history, values) [skip ci]" || echo "No changes."
           git push
+
 
 
