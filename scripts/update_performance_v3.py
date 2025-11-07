@@ -27,9 +27,50 @@ SLIP_REAL_BPS  = float(os.getenv("SLIPPAGE_BPS_PERSONAL", "5"))
 LIQ_SC_BPS     = float(os.getenv("LIQ_IMPACT_BPS_SMALLCAP", "5"))
 SMALLCAPS      = set(s.strip().upper() for s in os.getenv("SMALLCAPS", "").split(",") if s.strip())
 
+# -------- Artifact controls (declutter by default) --------
+ARTIFACT_VERSIONED  = os.getenv("ARTIFACT_VERSIONED", "false").lower() == "true"
+ARTIFACT_RETENTION  = int(os.getenv("ARTIFACT_RETENTION", "3"))  # keep last N snapshots when versioning is on
+
+def _utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def _utc_stamp() -> str:
+    # e.g., 20251107_203755.325986Z0000
+    return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S.%fZ0000")
+
+def write_artifact(base_dir: Path, stem: str, obj: dict) -> None:
+    """
+    Always write rolling file <stem>.json into base_dir.
+    If ARTIFACT_VERSIONED is true, also write a timestamped snapshot into base_dir/.history/
+    and prune to ARTIFACT_RETENTION most recent.
+    """
+    base_dir.mkdir(parents=True, exist_ok=True)
+
+    # Rolling (no timestamp)
+    rolling = base_dir / f"{stem}.json"
+    write_json(str(rolling), obj)
+
+    if not ARTIFACT_VERSIONED:
+        return
+
+    # Versioned snapshot into hidden subfolder
+    hist_dir = base_dir / ".history"
+    hist_dir.mkdir(parents=True, exist_ok=True)
+    snap = hist_dir / f"{stem}_{_utc_stamp()}.json"
+    write_json(str(snap), obj)
+
+    # Prune old snapshots
+    snaps = sorted(hist_dir.glob(f"{stem}_*.json"))
+    if ARTIFACT_RETENTION >= 0 and len(snaps) > ARTIFACT_RETENTION:
+        for old in snaps[:-ARTIFACT_RETENTION]:
+            try:
+                old.unlink(missing_ok=True)
+            except Exception:
+                pass
+
 # -------- Utils --------
 def utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return _utc_now_iso()
 
 def choose_slippage_bps(scope: str, sym: str) -> float:
     base = SLIP_PAPER_BPS if scope == "paper" else SLIP_REAL_BPS
@@ -107,13 +148,8 @@ def portfolio_snapshot(portfolio_id: str, cash: float, pos: Dict[str, dict], pri
     }
 
 def write_portfolio_value(folder: Path, snap: dict) -> None:
-    """Write rolling and versioned portfolio value snapshots."""
-    write_json(str(folder / "portfolio_value.json"), snap)
-    asof = (snap.get("as_of_utc") or "")
-    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
-    if safe_asof:
-        write_json(str(folder / f"portfolio_value_{safe_asof}.json"), snap)
-
+    """Rolling only; optional versioned snapshots controlled by env."""
+    write_artifact(folder, "portfolio_value", snap)
 
 def ensure_portfolio_ledger(folder: Path) -> Path:
     """Create per-portfolio ledger with header if missing."""
@@ -133,12 +169,7 @@ def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: 
         "portfolio_id": portfolio_id,
         "trades": trades,
     }
-    # rolling pointer
-    write_json(str(folder / "trades_applied.json"), obj)
-    # versioned
-    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
-    if safe_asof:
-        write_json(str(folder / f"trades_applied_{safe_asof}.json"), obj)
+    write_artifact(folder, "trades_applied", obj)
 
 def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path, cash: float, snap: dict | None = None) -> None:
     base = {
@@ -154,7 +185,7 @@ def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path
             "equity": snap.get("equity"),
             "as_of_utc": snap.get("as_of_utc"),
         })
-    write_json(str(folder / "last_execution_summary.json"), base)
+    write_artifact(folder, "last_execution_summary", base)
 
 def write_last_applied(path: str | Path, asof: str):
     p = Path(path)
@@ -274,7 +305,6 @@ def apply_trades_to_portfolio(
     portfolio_ledger_path = ensure_portfolio_ledger(folder)
     applied_trades: List[dict] = []  # capture what we actually execute (after sizing)
 
-
     for t in trades:
         sym = str(t.get("symbol", "")).upper()
         if not sym:
@@ -355,7 +385,7 @@ def apply_trades_to_portfolio(
             "signals": json.loads(row["signal_snapshot"] or "{}"),
         })
 
-    # --- NEW: snapshot AFTER trades (post state)
+    # --- Snapshot AFTER trades (post state)
     post_snap = portfolio_snapshot(portfolio_id, cash, pos, prices)
     
     # Persist applied trades w/ pre/post equity
@@ -425,7 +455,6 @@ def main():
             snap = portfolio_snapshot(pid, cash, pos, prices)
             write_portfolio_value(folder, snap)
             write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
-
             continue
 
         apply_trades_to_portfolio(
