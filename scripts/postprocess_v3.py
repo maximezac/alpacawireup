@@ -202,7 +202,6 @@ def main():
         }
 
         # --- NEW: also write a per-portfolio trade plan into its folder
-        from pathlib import Path
         plan = {
             "as_of_utc": out["as_of_utc"],
             "portfolio_id": pid,
