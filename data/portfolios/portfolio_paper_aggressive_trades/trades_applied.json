@@ -1,133 +1,149 @@
 {
-  "as_of_utc": "2025-11-07T20:37:55.325986+00:00",
+  "as_of_utc": "2025-11-07T23:01:45.680657+00:00",
   "portfolio_id": "portfolio_paper_aggressive_trades",
   "trades": {
     "pre": {
-      "as_of_utc": "2025-11-07T20:37:55.325986+00:00",
+      "as_of_utc": "2025-11-07T23:01:45.680657+00:00",
       "portfolio_id": "portfolio_paper_aggressive_trades",
       "cash": 52.0,
-      "market_value": 19652.91,
-      "equity": 19704.91,
+      "market_value": 19767.41,
+      "equity": 19819.41,
       "holdings": {
         "AAPL": {
           "qty": 14.8186,
           "avg_cost": 270.11985,
-          "mark": 267.45,
-          "market_value": 3963.23
+          "mark": 268.47,
+          "market_value": 3978.35
         },
         "AMZN": {
           "qty": 4.1137,
           "avg_cost": 243.20296,
-          "mark": 242.98,
-          "market_value": 999.55
+          "mark": 244.42,
+          "market_value": 1005.47
         },
         "DDOG": {
           "qty": 5.2407,
           "avg_cost": 187.79761,
-          "mark": 189.88,
-          "market_value": 995.1
+          "mark": 191.21,
+          "market_value": 1002.07
         },
         "DE": {
           "qty": 6.3135,
           "avg_cost": 475.53506,
-          "mark": 466.53,
-          "market_value": 2945.44
+          "mark": 467.495,
+          "market_value": 2951.53
         },
         "DOCN": {
           "qty": 20.3395,
           "avg_cost": 48.38834,
-          "mark": 48.91,
-          "market_value": 994.8
+          "mark": 49.495,
+          "market_value": 1006.7
         },
         "FSLR": {
           "qty": 14.6956,
           "avg_cost": 272.38211,
-          "mark": 264.09,
-          "market_value": 3880.96
+          "mark": 267.63,
+          "market_value": 3932.98
         },
         "GOOGL": {
           "qty": 17.5831,
           "avg_cost": 283.627102,
-          "mark": 278.1,
-          "market_value": 4889.86
+          "mark": 278.865,
+          "market_value": 4903.31
         },
         "ICLN": {
           "qty": 0.0004,
           "avg_cost": 17.49748,
-          "mark": 17.525,
+          "mark": 17.66,
           "market_value": 0.01
         },
         "JPM": {
           "qty": 3.1406,
           "avg_cost": 313.378065,
-          "mark": 313.3,
-          "market_value": 983.95
+          "mark": 314.265,
+          "market_value": 986.98
         }
       }
     },
     "post": {
-      "as_of_utc": "2025-11-07T20:37:55.325986+00:00",
+      "as_of_utc": "2025-11-07T23:01:45.680657+00:00",
       "portfolio_id": "portfolio_paper_aggressive_trades",
-      "cash": 52.0,
-      "market_value": 19652.91,
-      "equity": 19704.91,
+      "cash": 12.95,
+      "market_value": 19806.42,
+      "equity": 19819.37,
       "holdings": {
         "AAPL": {
           "qty": 14.8186,
           "avg_cost": 270.11985,
-          "mark": 267.45,
-          "market_value": 3963.23
+          "mark": 268.47,
+          "market_value": 3978.35
         },
         "AMZN": {
           "qty": 4.1137,
           "avg_cost": 243.20296,
-          "mark": 242.98,
-          "market_value": 999.55
+          "mark": 244.42,
+          "market_value": 1005.47
         },
         "DDOG": {
           "qty": 5.2407,
           "avg_cost": 187.79761,
-          "mark": 189.88,
-          "market_value": 995.1
+          "mark": 191.21,
+          "market_value": 1002.07
         },
         "DE": {
           "qty": 6.3135,
           "avg_cost": 475.53506,
-          "mark": 466.53,
-          "market_value": 2945.44
+          "mark": 467.495,
+          "market_value": 2951.53
         },
         "DOCN": {
           "qty": 20.3395,
           "avg_cost": 48.38834,
-          "mark": 48.91,
-          "market_value": 994.8
+          "mark": 49.495,
+          "market_value": 1006.7
         },
         "FSLR": {
           "qty": 14.6956,
           "avg_cost": 272.38211,
-          "mark": 264.09,
-          "market_value": 3880.96
+          "mark": 267.63,
+          "market_value": 3932.98
         },
         "GOOGL": {
           "qty": 17.5831,
           "avg_cost": 283.627102,
-          "mark": 278.1,
-          "market_value": 4889.86
+          "mark": 278.865,
+          "market_value": 4903.31
         },
         "ICLN": {
           "qty": 0.0004,
           "avg_cost": 17.49748,
-          "mark": 17.525,
+          "mark": 17.66,
           "market_value": 0.01
         },
         "JPM": {
-          "qty": 3.1406,
-          "avg_cost": 313.378065,
-          "mark": 313.3,
-          "market_value": 983.95
+          "qty": 3.264725,
+          "avg_cost": 313.423735,
+          "mark": 314.265,
+          "market_value": 1025.99
         }
       }
     },
-    "trades": []
+    "trades": [
+      {
+        "symbol": "JPM",
+        "action": "BUY",
+        "qty": 0.124125,
+        "px_exec": 314.579265,
+        "slippage_bps": 10.0,
+        "reason": "score>buy",
+        "signals": {
+          "TS": 0.605219,
+          "NS": 0.335114,
+          "CDS": 0.497177,
+          "wT": 0.6,
+          "wN": 0.4
+        }
+      }
+    ]
   }
 }
