@@ -29,11 +29,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
+        with:
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -83,7 +85,7 @@ jobs:
           NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
           NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
           FINNHUB_KEY:       ${{ secrets.FINNHUB_KEY }}
-        run: python scripts/fetch_news.py   # <— scripts/ path
+        run: python scripts/fetch_news.py
 
       - name: Generate enriched feed
         env:
@@ -100,9 +102,9 @@ jobs:
       - name: Postprocess (build multi-portfolio plans)
         env:
           INPUT_FINAL:        data/prices_final.json
-          PORTFOLIOS_YML:     config/portfolios.yml            # <— align with script
+          PORTFOLIOS_YML:     config/portfolios.yml
           OUT_WATCHLIST:      data/watchlist_summary.json
-          OUT_TRADES:         artifacts/recommended_trades_v3.json  # <— single source of truth
+          OUT_TRADES:         artifacts/recommended_trades_v3.json
         run: |
           python scripts/postprocess_v3.py
           python - <<'PY'
@@ -136,14 +138,12 @@ jobs:
           PY
 
       - name: Execute trades (paper portfolios)
-        # Run if not skipping AND (not manual) OR (manual but NOT dry_run)
         if: steps.idem.outputs.skip != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.dry_run != 'true')
         env:
           PRICES_FINAL:       data/prices_final.json
-          TRADES_RECS:        artifacts/recommended_trades_v3.json   # <— expected by update_performance_v3.py
+          TRADES_RECS:        artifacts/recommended_trades_v3.json
           TRADES_LEDGER:      data/trades_ledger.csv
-          APPLY_TRADES:       "1"                                     # <— apply trades param
-          # Optionally let script decide scope; otherwise it can ignore.
+          APPLY_TRADES:       "1"
           EXECUTE_SCOPE:      ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'both' || 'paper' }}
         run: |
           python scripts/update_performance_v3.py
@@ -180,13 +180,14 @@ jobs:
           APPLY_TRADES:       "0"
         run: python scripts/update_performance_v3.py
 
-      - name: Commit & push
+      - name: Commit & push all portfolio data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin ${{ github.ref_name }}
-          git add data/*.json data/*history.csv data/portfolio_*.csv data/trades_ledger.csv \
-            artifacts/*.yaml artifacts/*.json \
-            data/portfolios/** || true
-          git commit -m "v3: gather + execute (paper=${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'and personal' || 'only' }}, dry_run=${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'schedule' }})" || echo "No changes."
+          git add \
+            artifacts/**/*.json \
+            data/*.json data/*history.csv data/trades_ledger.csv \
+            data/portfolios/**/*.json data/portfolios/**/*.csv || true
+          git commit -m "v3: gather+execute (paper=${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'and personal' || 'only' }}, dry_run=${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'schedule' }}) [skip ci]" || echo "No changes."
           git push
