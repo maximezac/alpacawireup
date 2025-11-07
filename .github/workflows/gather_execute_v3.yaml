@@ -99,6 +99,35 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python publish_feed.py
 
+      - name: Diagnose portfolio value (max_autotrader)
+        run: |
+          python - <<'PY'
+          import json, pandas as pd
+          from pathlib import Path
+
+          pf = Path("data/portfolios/portfolio_max_autotrader")
+          prices = json.load(open("data/prices_final.json"))
+          symbols = prices.get("symbols", {})
+
+          pos = pd.read_csv(pf / "positions.csv")
+          missing = []
+          total_mv = 0.0
+          for _, r in pos.iterrows():
+              sym = str(r["symbol"]).strip()
+              if sym == "__CASH__":
+                  continue
+              node = symbols.get(sym)
+              if not node or node.get("price") in (None, 0):
+                  missing.append(sym)
+              else:
+                  mv = float(r["qty"]) * float(node["price"])
+                  total_mv += mv
+                  print(f"{sym}: qty={r['qty']} px={node['price']} → mv={mv:.2f}")
+          print("\nMissing / zero-priced symbols:", missing)
+          print("Computed market value:", round(total_mv, 2))
+          PY
+
+
       - name: Postprocess (build multi-portfolio plans)
         env:
           INPUT_FINAL:        data/prices_final.json
