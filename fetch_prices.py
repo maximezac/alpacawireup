@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 fetch_prices.py — robust daily price + indicators fetcher for Alpaca
@@ -9,19 +8,24 @@ fetch_prices.py — robust daily price + indicators fetcher for Alpaca
 - Optionally loads sectors from data/sectors.json if present.
 - Writes a feed file at data/prices.json in the format expected by publish_feed.py.
 
-Environment variables:
-- ALPACA_KEY_ID           : required (your Alpaca key id)
-- ALPACA_SECRET_KEY       : required (your Alpaca secret)
-- ALPACA_DATA_FEED        : optional; default "iex" (use "sip" only if your sub supports it)
-- SYMBOLS_PATH            : optional; default "data/symbols.txt"
-- OUTPUT_PATH             : optional; default "data/prices.json"
-- DAYS_BACK               : optional; default "200" (days of 1Day bars to request, max used for indicators)
-- MAX_SYMBOLS             : optional; default "200"  (cap to avoid rate limiting)
-- REQUEST_TIMEOUT_SEC     : optional; default "15"
-- REQUEST_SLEEP_SEC       : optional; default "0.25" (sleep between symbols to ease rate limits)
+Env (required):
+- ALPACA_KEY_ID
+- ALPACA_SECRET_KEY
 
-Notes on feed fallback:
-- If ALPACA_DATA_FEED="sip" causes a 403 (subscription), we automatically retry with "iex".
+Env (optional):
+- ALPACA_DATA_FEED     : default "iex"  (use "sip" only if your sub supports it)
+- SYMBOLS_PATH         : default "data/symbols.txt"
+- SECTORS_PATH         : default "data/sectors.json"
+- OUTPUT_PATH          : default "data/prices.json"
+- DAYS_BACK            : default "200"
+- MAX_SYMBOLS          : default "0"  (0 = unlimited; >0 = soft cap before fetch)
+- SYMBOLS_BATCH        : default "75" (placeholder for future multi-symbol endpoints)
+- REQUEST_TIMEOUT_SEC  : default "15"
+- REQUEST_SLEEP_SEC    : default "0.25"
+- COVERAGE_STRICT      : default "1"  (fail if any requested symbols are missing)
+
+Notes:
+- If ALPACA_DATA_FEED="sip" causes a 403, we automatically retry with "iex".
 """
 
 import os
@@ -43,9 +47,11 @@ SYMBOLS_PATH      = os.getenv("SYMBOLS_PATH", "data/symbols.txt")
 SECTORS_PATH      = os.getenv("SECTORS_PATH", "data/sectors.json")
 OUTPUT_PATH       = os.getenv("OUTPUT_PATH", "data/prices.json")
 DAYS_BACK         = int(os.getenv("DAYS_BACK", "200"))
-MAX_SYMBOLS       = int(os.getenv("MAX_SYMBOLS", "100"))
+MAX_SYMBOLS       = int(os.getenv("MAX_SYMBOLS", "0"))            # 0 = unlimited
+SYMBOLS_BATCH     = int(os.getenv("SYMBOLS_BATCH", "75"))         # future use (multi-symbol endpoints)
 REQUEST_TIMEOUT   = int(os.getenv("REQUEST_TIMEOUT_SEC", "15"))
 REQUEST_SLEEP     = float(os.getenv("REQUEST_SLEEP_SEC", "0.25"))
+COVERAGE_STRICT   = (os.getenv("COVERAGE_STRICT", "1") == "1")
 
 API_URL_BASE = "https://data.alpaca.markets/v2/stocks"
 
@@ -72,11 +78,11 @@ def read_symbols(path: str) -> List[str]:
     except FileNotFoundError:
         print(f"[WARN] {path} not found — falling back to a minimal core list.")
         syms = ["SPY", "QQQ", "AAPL", "MSFT", "NVDA", "VTI", "VOO"]
-    # Dedup & limit
     uniq = sorted(set(syms))
-    if len(uniq) > MAX_SYMBOLS:
-        print(f"[INFO] Limiting symbols to first {MAX_SYMBOLS} of {len(uniq)}")
-    return uniq[:MAX_SYMBOLS]
+    if MAX_SYMBOLS and len(uniq) > MAX_SYMBOLS:
+        print(f"[INFO] Truncating symbols to MAX_SYMBOLS={MAX_SYMBOLS} of {len(uniq)}")
+        uniq = uniq[:MAX_SYMBOLS]
+    return uniq
 
 def read_sectors(path: str) -> Dict[str, str]:
     if not os.path.exists(path):
@@ -84,7 +90,6 @@ def read_sectors(path: str) -> Dict[str, str]:
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-            # Expecting {"AAPL": "Tech", ...} or {"symbols": {"AAPL":"Tech", ...}}
             if isinstance(data, dict) and "symbols" in data and isinstance(data["symbols"], dict):
                 return {k.upper(): v for k, v in data["symbols"].items()}
             elif isinstance(data, dict):
@@ -132,7 +137,6 @@ def rsi(values: List[float], period: int = 14) -> List[float]:
         delta = values[i] - values[i-1]
         gains.append(max(0.0, delta))
         losses.append(max(0.0, -delta))
-    # Wilder's smoothing
     avg_gain = sum(gains[1:period+1]) / period if len(gains) > period else 0.0
     avg_loss = sum(losses[1:period+1]) / period if len(losses) > period else 0.0
     out = [math.nan] * len(values)
@@ -162,10 +166,8 @@ def macd(values: List[float], fast: int = 12, slow: int = 26, signal: int = 9):
 
 def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
     """Fetch full 1Day history for one symbol with explicit start date and generous limit."""
-    from datetime import datetime, timedelta, timezone
-
-    LOOKBACK_DAYS = int(os.environ.get("DAYS_BACK", "300"))
-    PAD_DAYS = max(LOOKBACK_DAYS + 60, 120)  # pad for weekends/holidays
+    LOOKBACK_DAYS_LOCAL = int(os.environ.get("DAYS_BACK", str(DAYS_BACK)))
+    PAD_DAYS = max(LOOKBACK_DAYS_LOCAL + 60, 120)
 
     now_utc = datetime.now(timezone.utc)
     start_utc = now_utc - timedelta(days=PAD_DAYS)
@@ -175,7 +177,7 @@ def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
     params = {
         "timeframe": "1Day",
         "start": start_iso,
-        "limit": 5000,          # plenty of bars for long history
+        "limit": 5000,
         "adjustment": "raw",
         "feed": feed
     }
@@ -188,18 +190,15 @@ def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
     return r.json()
 
 def compute_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]:
-    """Compute key indicators from a list of Alpaca bar dicts (expects 'c' field for close)."""
     closes = [b.get("c") for b in bars if b.get("c") is not None]
     if not closes:
         return {}
-    # SMA20, EMA12/26, MACD, RSI14
     sma20_series = sma(closes, 20)
     ema12_series = ema(closes, 12)
     ema26_series = ema(closes, 26)
     macd_line, macd_signal, macd_hist = macd(closes, 12, 26, 9)
     rsi14_series = rsi(closes, 14)
 
-    # Use last available values (may be NaN early; guard with fallback None)
     def last_valid(arr):
         for v in reversed(arr):
             if v is not None and not (isinstance(v, float) and (math.isnan(v) or math.isinf(v))):
@@ -217,7 +216,6 @@ def compute_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]
     }
 
 def fetch_latest_quote(symbol: str) -> dict:
-    """Fetch latest quote/trade for a symbol from Alpaca (1 quote)."""
     url = f"{API_URL_BASE}/{symbol}/quotes/latest"
     r = requests.get(url, headers=HEADERS, timeout=10)
     if r.status_code != 200:
@@ -230,14 +228,19 @@ def fetch_latest_quote(symbol: str) -> dict:
     }
 
 def get_now_data(symbols: list[str]) -> dict:
-    """Return latest quotes for a list of symbols."""
+    """Return latest quotes for a list of symbols (sequential; keep rate gentle)."""
     out = {}
     for sym in symbols:
         try:
             out[sym] = fetch_latest_quote(sym)
         except Exception as e:
             print(f"[WARN] now-data fetch failed for {sym}: {e}")
+        time.sleep(REQUEST_SLEEP)
     return out
+
+# =========================
+# Main
+# =========================
 
 def main():
     if not ALPACA_KEY_ID or not ALPACA_SECRET_KEY:
@@ -253,15 +256,21 @@ def main():
         "symbols": {}
     }
 
+    requested_set = list(symbols)  # preserve order for logging
+    missing_no_bars = []
+    zero_priced = []
+
+    # (Per-symbol fetch; SYMBOLS_BATCH kept for future multi-symbol endpoints)
     for i, sym in enumerate(symbols, 1):
         try:
             resp = fetch_bars(sym, DATA_FEED)
             bars = resp.get("bars", [])
             if not bars:
                 print(f"[WARN] {sym}: no bars returned")
+                missing_no_bars.append(sym)
+                time.sleep(REQUEST_SLEEP)
                 continue
 
-            # Normalize bars to expected schema (use only fields we need)
             normalized_bars = []
             for b in bars[-DAYS_BACK:]:
                 normalized_bars.append({
@@ -276,21 +285,24 @@ def main():
             last = normalized_bars[-1]
             indicators = compute_indicators_from_bars(normalized_bars)
 
+            price = last.get("c")
+            if price in (None, 0, 0.0):
+                zero_priced.append(sym)
+
             feed_root["symbols"][sym] = {
                 "symbol": sym,
-                "price": last.get("c"),
+                "price": price,
                 "ts": last.get("t"),
-                "bars": normalized_bars[-200:],  # <-- publish_feed.py expects this key
-                "sector": sectors.get(sym, ""),      # optional; enrich via sectors.json
+                "bars": normalized_bars[-200:],
+                "sector": sectors.get(sym, ""),
                 "indicators": indicators,
-                "news": []                           # news added by fetch_news.py later
+                "news": []
             }
 
-            print(f"[OK] {i:>3}/{len(symbols)} {sym}: {len(normalized_bars)} bars, indicators: "
+            print(f"[OK] {i:>3}/{len(symbols)} {sym}: {len(normalized_bars)} bars, "
                   f"RSI={indicators.get('rsi14')}, MACD_HIST={indicators.get('macd_hist')}")
 
         except requests.HTTPError as http_err:
-            # Special case: 403 SIP handled in fetch_bars; others report
             try:
                 text = http_err.response.text
             except Exception:
@@ -301,7 +313,24 @@ def main():
         finally:
             time.sleep(REQUEST_SLEEP)
 
-    # Ensure output directory
+    # --- Coverage checks & diagnostics
+    returned_set = set((feed_root.get("symbols") or {}).keys())
+    requested_set_unique = list(dict.fromkeys(requested_set))  # preserve order, dedup
+    missing = [s for s in requested_set_unique if s not in returned_set]
+
+    if missing:
+        print(f"[ERROR] Missing symbols after fetch: {missing[:25]}{' …' if len(missing) > 25 else ''} "
+              f"(total {len(missing)})")
+
+    if zero_priced:
+        print(f"[WARN] Zero/None prices for: {zero_priced[:25]}{' …' if len(zero_priced) > 25 else ''} "
+              f"(total {len(zero_priced)})")
+
+    if missing and COVERAGE_STRICT:
+        # Fail fast to avoid downstream surprises
+        raise SystemExit(2)
+
+    # Ensure output directory & write
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(feed_root, f, indent=2)
