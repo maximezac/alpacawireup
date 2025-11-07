@@ -2,6 +2,8 @@
 from __future__ import annotations
 import os, json, math, yaml
 from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from typing import Dict, Any, List, Tuple
 from scripts.strategy.momentum_phase import momentum_phase_and_size
 from scripts.strategy.rotation_upgrade import pick_laggards_to_fund, RotationConfig
