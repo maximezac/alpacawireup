@@ -103,6 +103,9 @@ jobs:
           FINNHUB_KEY:  ${{ secrets.FINNHUB_KEY }}
           ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          USE_FINBERT: "1"
+          FINBERT_TRIGGER: "0.20"
+          FINBERT_FRACTION: "0.30"
         run: python scripts/fetch_news.py
 
 
