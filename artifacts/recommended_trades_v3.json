@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T13:25:22.259390+00:00",
+  "as_of_utc": "2025-11-07T14:14:58.755121+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 28.39,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.262033,
+          "score": -0.272761,
           "qty": 57,
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.13827,
-            "CDS": -0.262033,
+            "NS": 0.111449,
+            "CDS": -0.272761,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -47,6 +47,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:10:36+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Rosenblatt Maintains Buy on D-Wave Quantum, Raises Price Target to $40"
+            },
+            {
               "ts": "2025-11-07T13:19:48+00:00",
               "source": "tipranks",
               "tone": 0.58808,
@@ -57,12 +63,52 @@
               "source": "tipranks",
               "tone": 0.30544,
               "headline": "QBTS Stock Forecast: Top Analysts React to D-Wave\u2019s Q3 Earnings, Maintain Buy"
+            }
+          ]
+        },
+        {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 329.34,
+          "qty_hint": 11.48,
+          "reason": "score<sell",
+          "score": -0.300829,
+          "qty": 2,
+          "notional": 658.68,
+          "signals": {
+            "TS": -0.520567,
+            "NS": 0.028778,
+            "CDS": -0.300829,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.7610147949795,
+            "ema_slow": 331.04268358082317,
+            "macd": 1.7183312141563079,
+            "macd_signal": 2.2663963595202317,
+            "macd_hist": -0.5480651453639238,
+            "rsi14": 38.54929455033929,
+            "sma20": 331.242
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T20:44:02+00:00",
+              "source": "benzinga",
+              "tone": -0.71154,
+              "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
-              "ts": "2025-11-06T22:22:14+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "D-Wave Quantum (NYSE:QBTS) Stock Price Down 9.2% - Here's What Happened"
+              "ts": "2025-11-06T17:20:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.60201,
+              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
+            },
+            {
+              "ts": "2025-11-06T16:06:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.148,
+              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
             }
           ]
         },
@@ -72,13 +118,13 @@
           "px": 13.14,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.311401,
+          "score": -0.311288,
           "qty": 18,
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.109894,
-            "CDS": -0.311401,
+            "NS": 0.110176,
+            "CDS": -0.311288,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -93,7 +139,7 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T12:54:30+00:00",
+              "ts": "2025-11-07T13:57:35+00:00",
               "source": "aolcom",
               "tone": 0.45155,
               "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
@@ -118,13 +164,13 @@
           "px": 65.275,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.311432,
+          "score": -0.300005,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.084595,
-            "CDS": -0.311432,
+            "NS": 0.113162,
+            "CDS": -0.300005,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,6 +185,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:01:47+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+            },
+            {
               "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
               "tone": 0.28637999999999997,
@@ -149,12 +201,6 @@
               "source": "coincentral",
               "tone": 0.0,
               "headline": "AST SpaceMobile (ASTS) Stock: Teams Up With Vodafone to Build European Satellite Empire"
-            },
-            {
-              "ts": "2025-11-07T07:55:26+00:00",
-              "source": "benzinga",
-              "tone": 0.39636000000000005,
-              "headline": "Vodafone And AST SpaceMobile Choose Germany For Satellite Operations Centre Supporting EU Sovereign Connectivity And Digital Independence"
             }
           ]
         },
@@ -164,13 +210,13 @@
           "px": 49.605,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.338823,
+          "score": -0.340349,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.124984,
-            "CDS": -0.338823,
+            "NS": 0.12117,
+            "CDS": -0.340349,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -210,13 +256,13 @@
           "px": 34.345,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.273165,
+          "score": -0.279384,
           "qty": 3,
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.108269,
-            "CDS": -0.273165,
+            "NS": 0.09272,
+            "CDS": -0.279384,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -231,6 +277,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:01:30+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Insights into Rigetti Computing's Upcoming Earnings"
+            },
+            {
               "ts": "2025-11-07T10:45:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
@@ -241,12 +293,6 @@
               "source": "theglobeandmail",
               "tone": 0.0,
               "headline": "Nvidia Just Announced Massive Quantum Computing News"
-            },
-            {
-              "ts": "2025-11-06T22:22:09+00:00",
-              "source": "marketbeat",
-              "tone": 0.5441400000000001,
-              "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
             }
           ]
         },
@@ -256,13 +302,13 @@
           "px": 127.06,
           "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.268976,
+          "score": -0.280853,
           "qty": 1,
           "notional": 127.06,
           "signals": {
             "TS": -0.536778,
-            "NS": 0.132727,
-            "CDS": -0.268976,
+            "NS": 0.103035,
+            "CDS": -0.280853,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -277,22 +323,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:40:42+00:00",
+              "source": "coincentral",
+              "tone": -0.3301,
+              "headline": "Why HOOD Stock Fell Despite Strong Earnings: Here\u2019s What Happened"
+            },
+            {
+              "ts": "2025-11-07T13:31:35+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Citizens Maintains Market Outperform on Robinhood Markets, Raises Price Target to $180"
+            },
+            {
               "ts": "2025-11-07T12:38:48+00:00",
               "source": "benzinga",
               "tone": 0.03483,
               "headline": "Robinhood Beats Earnings Expectations \u2014 Yet HOOD Drops 10%"
-            },
-            {
-              "ts": "2025-11-07T11:47:21+00:00",
-              "source": "yahoofinance",
-              "tone": 0.32453,
-              "headline": "Robinhood floats Bitcoin treasury idea as analysts eye 12% jump in stock price"
-            },
-            {
-              "ts": "2025-11-07T10:43:23+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Analysts Offer Insights on Financial Companies: Robinhood (HOOD) and Chime Financial, Inc. Class A (CHYM)"
             }
           ]
         },
@@ -302,13 +348,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.528697,
+          "score": 0.529135,
           "qty": 2.1085,
           "notional": 600.48,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.371163,
-            "CDS": 0.528697,
+            "NS": 0.37226,
+            "CDS": 0.529135,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -323,68 +369,68 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-07T12:30:01+00:00",
+              "source": "cnbc",
+              "tone": -0.26335,
+              "headline": "Google's decade-long bet on custom chips is turning into company's secret weapon in AI race"
+            },
+            {
               "ts": "2025-11-07T12:15:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
               "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
-            },
-            {
-              "ts": "2025-11-07T11:48:56+00:00",
-              "source": "benzinga",
-              "tone": 0.80577,
-              "headline": "Elon Musk Predicts Tesla Will Receive This Major Boost In China Next Year"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
             }
           ]
         },
         {
-          "symbol": "AAPL",
+          "symbol": "FSLR",
           "action": "BUY",
-          "px": 269.85,
+          "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.494129,
-          "qty": 1.4805,
+          "score": 0.493932,
+          "qty": 1.4682,
           "notional": 399.51,
           "signals": {
-            "TS": 0.578813,
-            "NS": 0.367103,
-            "CDS": 0.494129,
+            "TS": 0.590301,
+            "NS": 0.349377,
+            "CDS": 0.493932,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
+            "ema_fast": 254.66756346321813,
+            "ema_slow": 242.081782295188,
+            "macd": 12.585781168030138,
+            "macd_signal": 9.279952147253411,
+            "macd_hist": 3.305829020776727,
+            "rsi14": 68.73795189199211,
+            "sma20": 242.33025000000012
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T09:07:22+00:00",
+              "ts": "2025-11-07T13:07:58+00:00",
               "source": "marketbeat",
-              "tone": 0.50166,
-              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
+              "tone": 0.47402999999999995,
+              "headline": "Kayne Anderson Capital Advisors LP Buys 5,951 Shares of First Solar, Inc. $FSLR"
             },
             {
-              "ts": "2025-11-07T09:03:43+00:00",
-              "source": "coincentral",
-              "tone": 0.0,
-              "headline": "Apple (AAPL) Stock: Morgan Stanley Projects $133 Billion Robotics Revenue by 2040"
-            },
-            {
-              "ts": "2025-11-07T08:37:33+00:00",
+              "ts": "2025-11-07T12:17:31+00:00",
               "source": "benzinga",
-              "tone": 0.59373,
-              "headline": "Jamie Dimon Refuses To Join Big Tech Donors Like Google, Apple, Amazon Funding Trump's $300 Million White House Ballroom: 'We Have An Issue...'"
+              "tone": 0.60435,
+              "headline": "Two Solar Stocks Surge In Momentum Amid Insatiable AI Power Demand"
+            },
+            {
+              "ts": "2025-11-07T00:00:04+00:00",
+              "source": "investingcomnigeria",
+              "tone": 0.0,
+              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock By Investing.com"
             }
           ]
         },
@@ -394,13 +440,13 @@
           "px": 19.98,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.372378,
+          "score": 0.360579,
           "qty": 0.0004,
           "notional": 0.01,
           "signals": {
             "TS": 0.306242,
-            "NS": 0.471583,
-            "CDS": 0.372378,
+            "NS": 0.442085,
+            "CDS": 0.360579,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -466,8 +512,8 @@
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.13827,
-            "CDS": -0.262033,
+            "NS": 0.111449,
+            "CDS": -0.272761,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -482,6 +528,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:10:36+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Rosenblatt Maintains Buy on D-Wave Quantum, Raises Price Target to $40"
+            },
+            {
               "ts": "2025-11-07T13:19:48+00:00",
               "source": "tipranks",
               "tone": 0.58808,
@@ -492,12 +544,6 @@
               "source": "tipranks",
               "tone": 0.30544,
               "headline": "QBTS Stock Forecast: Top Analysts React to D-Wave\u2019s Q3 Earnings, Maintain Buy"
-            },
-            {
-              "ts": "2025-11-06T22:22:14+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "D-Wave Quantum (NYSE:QBTS) Stock Price Down 9.2% - Here's What Happened"
             }
           ]
         },
@@ -512,8 +558,8 @@
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.218556,
-            "CDS": -0.224918,
+            "NS": 0.028778,
+            "CDS": -0.300829,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,22 +574,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T10:03:20+00:00",
-              "source": "newsercom",
-              "tone": 0.4063,
-              "headline": "What is the fair value estimate for VTI stock in 2025 - July 2025 Breakouts & Daily Volume Surge Signals"
+              "ts": "2025-11-06T20:44:02+00:00",
+              "source": "benzinga",
+              "tone": -0.71154,
+              "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
             },
             {
-              "ts": "2025-11-07T09:53:49+00:00",
-              "source": "newsercom",
-              "tone": 0.5,
-              "headline": "Will VTI stock top growth indexes - July 2025 Drop Watch & Growth Focused Stock Reports"
+              "ts": "2025-11-06T17:20:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.60201,
+              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
             },
             {
-              "ts": "2025-11-07T02:18:15+00:00",
-              "source": "newsercom",
-              "tone": 0.42405,
-              "headline": "Is VTI stock attractive post correction - Portfolio Update Summary & Free Risk Controlled Daily Trade Plans"
+              "ts": "2025-11-06T16:06:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.148,
+              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
             }
           ]
         },
@@ -558,8 +604,8 @@
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.109894,
-            "CDS": -0.311401,
+            "NS": 0.110176,
+            "CDS": -0.311288,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,7 +620,7 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T12:54:30+00:00",
+              "ts": "2025-11-07T13:57:35+00:00",
               "source": "aolcom",
               "tone": 0.45155,
               "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
@@ -604,8 +650,8 @@
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.084595,
-            "CDS": -0.311432,
+            "NS": 0.113162,
+            "CDS": -0.300005,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -620,6 +666,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:01:47+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+            },
+            {
               "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
               "tone": 0.28637999999999997,
@@ -630,12 +682,6 @@
               "source": "coincentral",
               "tone": 0.0,
               "headline": "AST SpaceMobile (ASTS) Stock: Teams Up With Vodafone to Build European Satellite Empire"
-            },
-            {
-              "ts": "2025-11-07T07:55:26+00:00",
-              "source": "benzinga",
-              "tone": 0.39636000000000005,
-              "headline": "Vodafone And AST SpaceMobile Choose Germany For Satellite Operations Centre Supporting EU Sovereign Connectivity And Digital Independence"
             }
           ]
         },
@@ -650,8 +696,8 @@
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.124984,
-            "CDS": -0.338823,
+            "NS": 0.12117,
+            "CDS": -0.340349,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -696,8 +742,8 @@
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.108269,
-            "CDS": -0.273165,
+            "NS": 0.09272,
+            "CDS": -0.279384,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -712,6 +758,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:01:30+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Insights into Rigetti Computing's Upcoming Earnings"
+            },
+            {
               "ts": "2025-11-07T10:45:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
@@ -722,12 +774,6 @@
               "source": "theglobeandmail",
               "tone": 0.0,
               "headline": "Nvidia Just Announced Massive Quantum Computing News"
-            },
-            {
-              "ts": "2025-11-06T22:22:09+00:00",
-              "source": "marketbeat",
-              "tone": 0.5441400000000001,
-              "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
             }
           ]
         },
@@ -742,8 +788,8 @@
           "notional": 366.98,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.371163,
-            "CDS": 0.528697,
+            "NS": 0.37226,
+            "CDS": 0.529135,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -758,22 +804,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-07T12:30:01+00:00",
+              "source": "cnbc",
+              "tone": -0.26335,
+              "headline": "Google's decade-long bet on custom chips is turning into company's secret weapon in AI race"
+            },
+            {
               "ts": "2025-11-07T12:15:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
               "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
-            },
-            {
-              "ts": "2025-11-07T11:48:56+00:00",
-              "source": "benzinga",
-              "tone": 0.80577,
-              "headline": "Elon Musk Predicts Tesla Will Receive This Major Boost In China Next Year"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
             }
           ]
         },
@@ -788,8 +834,8 @@
           "notional": 366.97,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.335869,
-            "CDS": 0.488529,
+            "NS": 0.349377,
+            "CDS": 0.493932,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -834,8 +880,8 @@
           "notional": 266.05,
           "signals": {
             "TS": 0.578813,
-            "NS": 0.367103,
-            "CDS": 0.494129,
+            "NS": 0.321009,
+            "CDS": 0.475691,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -850,22 +896,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:44:58+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "Apple (AAPL) Stock: Analysts See $133 Billion Robot Revenue Stream by 2040"
+            },
+            {
+              "ts": "2025-11-07T13:30:20+00:00",
+              "source": "247wallst",
+              "tone": 0.0,
+              "headline": "Apple (NASDAQ: AAPL) Stock Price Prediction and Forecast 2025-2030 (Nov 2025)"
+            },
+            {
               "ts": "2025-11-07T09:07:22+00:00",
               "source": "marketbeat",
               "tone": 0.50166,
               "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-07T09:03:43+00:00",
-              "source": "coincentral",
-              "tone": 0.0,
-              "headline": "Apple (AAPL) Stock: Morgan Stanley Projects $133 Billion Robotics Revenue by 2040"
-            },
-            {
-              "ts": "2025-11-07T08:37:33+00:00",
-              "source": "benzinga",
-              "tone": 0.59373,
-              "headline": "Jamie Dimon Refuses To Join Big Tech Donors Like Google, Apple, Amazon Funding Trump's $300 Million White House Ballroom: 'We Have An Issue...'"
             }
           ]
         }
@@ -960,13 +1006,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.528697,
+          "score": 0.529135,
           "qty": 3.5086,
           "notional": 999.21,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.371163,
-            "CDS": 0.528697,
+            "NS": 0.37226,
+            "CDS": 0.529135,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -981,68 +1027,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-07T12:30:01+00:00",
+              "source": "cnbc",
+              "tone": -0.26335,
+              "headline": "Google's decade-long bet on custom chips is turning into company's secret weapon in AI race"
+            },
+            {
               "ts": "2025-11-07T12:15:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
               "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
-            },
-            {
-              "ts": "2025-11-07T11:48:56+00:00",
-              "source": "benzinga",
-              "tone": 0.80577,
-              "headline": "Elon Musk Predicts Tesla Will Receive This Major Boost In China Next Year"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.494129,
-          "qty": 3.7028,
-          "notional": 999.2,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.367103,
-            "CDS": 0.494129,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T09:07:22+00:00",
-              "source": "marketbeat",
-              "tone": 0.50166,
-              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-07T09:03:43+00:00",
-              "source": "coincentral",
-              "tone": 0.0,
-              "headline": "Apple (AAPL) Stock: Morgan Stanley Projects $133 Billion Robotics Revenue by 2040"
-            },
-            {
-              "ts": "2025-11-07T08:37:33+00:00",
-              "source": "benzinga",
-              "tone": 0.59373,
-              "headline": "Jamie Dimon Refuses To Join Big Tech Donors Like Google, Apple, Amazon Funding Trump's $300 Million White House Ballroom: 'We Have An Issue...'"
             }
           ]
         },
@@ -1052,13 +1052,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.488529,
+          "score": 0.493932,
           "qty": 3.672,
           "notional": 999.19,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.335869,
-            "CDS": 0.488529,
+            "NS": 0.349377,
+            "CDS": 0.493932,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1093,18 +1093,64 @@
           ]
         },
         {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.475691,
+          "qty": 3.7028,
+          "notional": 999.2,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.321009,
+            "CDS": 0.475691,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T13:44:58+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "Apple (AAPL) Stock: Analysts See $133 Billion Robot Revenue Stream by 2040"
+            },
+            {
+              "ts": "2025-11-07T13:30:20+00:00",
+              "source": "247wallst",
+              "tone": 0.0,
+              "headline": "Apple (NASDAQ: AAPL) Stock Price Prediction and Forecast 2025-2030 (Nov 2025)"
+            },
+            {
+              "ts": "2025-11-07T09:07:22+00:00",
+              "source": "marketbeat",
+              "tone": 0.50166,
+              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.430528,
+          "score": 0.438121,
           "qty": 4.0796,
           "notional": 991.18,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.306069,
-            "CDS": 0.430528,
+            "NS": 0.325051,
+            "CDS": 0.438121,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1119,6 +1165,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
               "ts": "2025-11-07T13:15:58+00:00",
               "source": "247wallst",
               "tone": 0.08895,
@@ -1127,12 +1179,6 @@
             {
               "ts": "2025-11-07T11:56:52+00:00",
               "source": "theglobeandmail",
-              "tone": 0.3872,
-              "headline": "Why Are Investors Excited About Amazon Stock?"
-            },
-            {
-              "ts": "2025-11-07T11:48:37+00:00",
-              "source": "themotleyfool",
               "tone": 0.3872,
               "headline": "Why Are Investors Excited About Amazon Stock?"
             }
@@ -1166,13 +1212,13 @@
           "px": 65.275,
           "qty_hint": 6.49,
           "reason": "score<sell",
-          "score": -0.311432,
+          "score": -0.300005,
           "qty": 1,
           "notional": 65.28,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.084595,
-            "CDS": -0.311432,
+            "NS": 0.113162,
+            "CDS": -0.300005,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1187,6 +1233,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:01:47+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+            },
+            {
               "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
               "tone": 0.28637999999999997,
@@ -1197,12 +1249,6 @@
               "source": "coincentral",
               "tone": 0.0,
               "headline": "AST SpaceMobile (ASTS) Stock: Teams Up With Vodafone to Build European Satellite Empire"
-            },
-            {
-              "ts": "2025-11-07T07:55:26+00:00",
-              "source": "benzinga",
-              "tone": 0.39636000000000005,
-              "headline": "Vodafone And AST SpaceMobile Choose Germany For Satellite Operations Centre Supporting EU Sovereign Connectivity And Digital Independence"
             }
           ]
         },
@@ -1212,13 +1258,13 @@
           "px": 28.39,
           "qty_hint": 129.08,
           "reason": "score<sell",
-          "score": -0.262033,
+          "score": -0.272761,
           "qty": 32,
           "notional": 908.48,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.13827,
-            "CDS": -0.262033,
+            "NS": 0.111449,
+            "CDS": -0.272761,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1233,6 +1279,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:10:36+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Rosenblatt Maintains Buy on D-Wave Quantum, Raises Price Target to $40"
+            },
+            {
               "ts": "2025-11-07T13:19:48+00:00",
               "source": "tipranks",
               "tone": 0.58808,
@@ -1243,12 +1295,6 @@
               "source": "tipranks",
               "tone": 0.30544,
               "headline": "QBTS Stock Forecast: Top Analysts React to D-Wave\u2019s Q3 Earnings, Maintain Buy"
-            },
-            {
-              "ts": "2025-11-06T22:22:14+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "D-Wave Quantum (NYSE:QBTS) Stock Price Down 9.2% - Here's What Happened"
             }
           ]
         },
@@ -1258,13 +1304,13 @@
           "px": 13.14,
           "qty_hint": 43.39,
           "reason": "score<sell",
-          "score": -0.311401,
+          "score": -0.311288,
           "qty": 10,
           "notional": 131.4,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.109894,
-            "CDS": -0.311401,
+            "NS": 0.110176,
+            "CDS": -0.311288,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1279,7 +1325,7 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T12:54:30+00:00",
+              "ts": "2025-11-07T13:57:35+00:00",
               "source": "aolcom",
               "tone": 0.45155,
               "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
@@ -1304,13 +1350,13 @@
           "px": 34.345,
           "qty_hint": 7.17,
           "reason": "score<sell",
-          "score": -0.273165,
+          "score": -0.279384,
           "qty": 1,
           "notional": 34.34,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.108269,
-            "CDS": -0.273165,
+            "NS": 0.09272,
+            "CDS": -0.279384,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1325,6 +1371,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T14:01:30+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Insights into Rigetti Computing's Upcoming Earnings"
+            },
+            {
               "ts": "2025-11-07T10:45:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
@@ -1335,12 +1387,6 @@
               "source": "theglobeandmail",
               "tone": 0.0,
               "headline": "Nvidia Just Announced Massive Quantum Computing News"
-            },
-            {
-              "ts": "2025-11-06T22:22:09+00:00",
-              "source": "marketbeat",
-              "tone": 0.5441400000000001,
-              "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
             }
           ]
         },
@@ -1350,13 +1396,13 @@
           "px": 49.605,
           "qty_hint": 5.27,
           "reason": "score<sell",
-          "score": -0.338823,
+          "score": -0.340349,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.124984,
-            "CDS": -0.338823,
+            "NS": 0.12117,
+            "CDS": -0.340349,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1391,18 +1437,64 @@
           ]
         },
         {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 329.34,
+          "qty_hint": 7.48,
+          "reason": "score<sell",
+          "score": -0.300829,
+          "qty": 1,
+          "notional": 329.34,
+          "signals": {
+            "TS": -0.520567,
+            "NS": 0.028778,
+            "CDS": -0.300829,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.7610147949795,
+            "ema_slow": 331.04268358082317,
+            "macd": 1.7183312141563079,
+            "macd_signal": 2.2663963595202317,
+            "macd_hist": -0.5480651453639238,
+            "rsi14": 38.54929455033929,
+            "sma20": 331.242
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T20:44:02+00:00",
+              "source": "benzinga",
+              "tone": -0.71154,
+              "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
+            },
+            {
+              "ts": "2025-11-06T17:20:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.60201,
+              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
+            },
+            {
+              "ts": "2025-11-06T16:06:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.148,
+              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
+            }
+          ]
+        },
+        {
           "symbol": "GOOGL",
           "action": "BUY",
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.528697,
+          "score": 0.529135,
           "qty": 2.0129,
           "notional": 573.25,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.371163,
-            "CDS": 0.528697,
+            "NS": 0.37226,
+            "CDS": 0.529135,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1417,68 +1509,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-07T12:30:01+00:00",
+              "source": "cnbc",
+              "tone": -0.26335,
+              "headline": "Google's decade-long bet on custom chips is turning into company's secret weapon in AI race"
+            },
+            {
               "ts": "2025-11-07T12:15:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
               "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
-            },
-            {
-              "ts": "2025-11-07T11:48:56+00:00",
-              "source": "benzinga",
-              "tone": 0.80577,
-              "headline": "Elon Musk Predicts Tesla Will Receive This Major Boost In China Next Year"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.494129,
-          "qty": 2.1243,
-          "notional": 573.24,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.367103,
-            "CDS": 0.494129,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T09:07:22+00:00",
-              "source": "marketbeat",
-              "tone": 0.50166,
-              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-07T09:03:43+00:00",
-              "source": "coincentral",
-              "tone": 0.0,
-              "headline": "Apple (AAPL) Stock: Morgan Stanley Projects $133 Billion Robotics Revenue by 2040"
-            },
-            {
-              "ts": "2025-11-07T08:37:33+00:00",
-              "source": "benzinga",
-              "tone": 0.59373,
-              "headline": "Jamie Dimon Refuses To Join Big Tech Donors Like Google, Apple, Amazon Funding Trump's $300 Million White House Ballroom: 'We Have An Issue...'"
             }
           ]
         },
@@ -1488,13 +1534,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.488529,
+          "score": 0.493932,
           "qty": 2.1067,
           "notional": 573.25,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.335869,
-            "CDS": 0.488529,
+            "NS": 0.349377,
+            "CDS": 0.493932,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1529,18 +1575,64 @@
           ]
         },
         {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.475691,
+          "qty": 2.1243,
+          "notional": 573.24,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.321009,
+            "CDS": 0.475691,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T13:44:58+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "Apple (AAPL) Stock: Analysts See $133 Billion Robot Revenue Stream by 2040"
+            },
+            {
+              "ts": "2025-11-07T13:30:20+00:00",
+              "source": "247wallst",
+              "tone": 0.0,
+              "headline": "Apple (NASDAQ: AAPL) Stock Price Prediction and Forecast 2025-2030 (Nov 2025)"
+            },
+            {
+              "ts": "2025-11-07T09:07:22+00:00",
+              "source": "marketbeat",
+              "tone": 0.50166,
+              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.430528,
+          "score": 0.438121,
           "qty": 2.3594,
           "notional": 573.24,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.306069,
-            "CDS": 0.430528,
+            "NS": 0.325051,
+            "CDS": 0.438121,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1555,6 +1647,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
               "ts": "2025-11-07T13:15:58+00:00",
               "source": "247wallst",
               "tone": 0.08895,
@@ -1563,12 +1661,6 @@
             {
               "ts": "2025-11-07T11:56:52+00:00",
               "source": "theglobeandmail",
-              "tone": 0.3872,
-              "headline": "Why Are Investors Excited About Amazon Stock?"
-            },
-            {
-              "ts": "2025-11-07T11:48:37+00:00",
-              "source": "themotleyfool",
               "tone": 0.3872,
               "headline": "Why Are Investors Excited About Amazon Stock?"
             }
@@ -1580,13 +1672,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.416285,
+          "score": 0.413444,
           "qty": 0.1426,
           "notional": 67.74,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.237146,
-            "CDS": 0.416285,
+            "NS": 0.230045,
+            "CDS": 0.413444,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1648,13 +1740,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.528697,
+          "score": 0.529135,
           "qty": 2.1056,
           "notional": 599.65,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.371163,
-            "CDS": 0.528697,
+            "NS": 0.37226,
+            "CDS": 0.529135,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1669,68 +1761,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
+              "ts": "2025-11-07T12:30:01+00:00",
+              "source": "cnbc",
+              "tone": -0.26335,
+              "headline": "Google's decade-long bet on custom chips is turning into company's secret weapon in AI race"
+            },
+            {
               "ts": "2025-11-07T12:15:00+00:00",
               "source": "themotleyfool",
               "tone": 0.0,
               "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
-            },
-            {
-              "ts": "2025-11-07T11:48:56+00:00",
-              "source": "benzinga",
-              "tone": 0.80577,
-              "headline": "Elon Musk Predicts Tesla Will Receive This Major Boost In China Next Year"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.494129,
-          "qty": 2.2221,
-          "notional": 599.63,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.367103,
-            "CDS": 0.494129,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T09:07:22+00:00",
-              "source": "marketbeat",
-              "tone": 0.50166,
-              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
-            },
-            {
-              "ts": "2025-11-07T09:03:43+00:00",
-              "source": "coincentral",
-              "tone": 0.0,
-              "headline": "Apple (AAPL) Stock: Morgan Stanley Projects $133 Billion Robotics Revenue by 2040"
-            },
-            {
-              "ts": "2025-11-07T08:37:33+00:00",
-              "source": "benzinga",
-              "tone": 0.59373,
-              "headline": "Jamie Dimon Refuses To Join Big Tech Donors Like Google, Apple, Amazon Funding Trump's $300 Million White House Ballroom: 'We Have An Issue...'"
             }
           ]
         },
@@ -1740,13 +1786,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.488529,
+          "score": 0.493932,
           "qty": 2.2037,
           "notional": 599.65,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.335869,
-            "CDS": 0.488529,
+            "NS": 0.349377,
+            "CDS": 0.493932,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1781,18 +1827,64 @@
           ]
         },
         {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.475691,
+          "qty": 2.2221,
+          "notional": 599.63,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.321009,
+            "CDS": 0.475691,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T13:44:58+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "Apple (AAPL) Stock: Analysts See $133 Billion Robot Revenue Stream by 2040"
+            },
+            {
+              "ts": "2025-11-07T13:30:20+00:00",
+              "source": "247wallst",
+              "tone": 0.0,
+              "headline": "Apple (NASDAQ: AAPL) Stock Price Prediction and Forecast 2025-2030 (Nov 2025)"
+            },
+            {
+              "ts": "2025-11-07T09:07:22+00:00",
+              "source": "marketbeat",
+              "tone": 0.50166,
+              "headline": "Bey Douglas LLC Boosts Stock Position in Apple Inc. $AAPL"
+            }
+          ]
+        },
+        {
           "symbol": "AMZN",
           "action": "BUY",
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.430528,
+          "score": 0.438121,
           "qty": 2.4681,
           "notional": 599.65,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.306069,
-            "CDS": 0.430528,
+            "NS": 0.325051,
+            "CDS": 0.438121,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1807,6 +1899,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:31:37+00:00",
+              "source": "benzinga",
+              "tone": -0.28637999999999997,
+              "headline": "Stock Market Today: S&P 500, Nasdaq Futures Down As Tech Stocks Fall\u2014 Tesla, Expedia, IREN, Archer Aviation In Focus (UPDATED)"
+            },
+            {
               "ts": "2025-11-07T13:15:58+00:00",
               "source": "247wallst",
               "tone": 0.08895,
@@ -1815,12 +1913,6 @@
             {
               "ts": "2025-11-07T11:56:52+00:00",
               "source": "theglobeandmail",
-              "tone": 0.3872,
-              "headline": "Why Are Investors Excited About Amazon Stock?"
-            },
-            {
-              "ts": "2025-11-07T11:48:37+00:00",
-              "source": "themotleyfool",
               "tone": 0.3872,
               "headline": "Why Are Investors Excited About Amazon Stock?"
             }
@@ -1832,13 +1924,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.416285,
+          "score": 0.413444,
           "qty": 1.2622,
           "notional": 599.62,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.237146,
-            "CDS": 0.416285,
+            "NS": 0.230045,
+            "CDS": 0.413444,
             "wT": 0.6,
             "wN": 0.4
           },
