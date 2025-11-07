@@ -81,6 +81,42 @@ def load_last_applied(path: str | Path) -> str | None:
             return None
     return None
 
+from pathlib import Path
+
+def ensure_portfolio_ledger(folder: Path) -> Path:
+    """Create per-portfolio ledger with header if missing."""
+    p = folder / "trades_ledger.csv"
+    if not p.exists():
+        p.write_text(
+            "datetime_utc,portfolio_id,symbol,action,qty,price_exec,slippage_bps,liquidity_impact_bps,fees,"
+            "gross_amount,post_trade_cash,post_trade_position,signal_snapshot,rationale,run_id\n"
+        )
+    return p
+
+def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: list) -> None:
+    """Persist what we actually attempted to execute for this portfolio."""
+    asof = (prices or {}).get("as_of_utc", "")
+    obj = {
+        "as_of_utc": asof,
+        "portfolio_id": portfolio_id,
+        "trades": trades,
+    }
+    # rolling pointer
+    write_json(str(folder / "trades_applied.json"), obj)
+    # versioned
+    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
+    if safe_asof:
+        write_json(str(folder / f"trades_applied_{safe_asof}.json"), obj)
+
+def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path, cash: float) -> None:
+    write_json(str(folder / "last_execution_summary.json"), {
+        "datetime_utc": utc_now_iso(),
+        "portfolio_id": portfolio_id,
+        "positions_path": str(positions_csv),
+        "cash": round(cash, 2),
+        "run_id": os.getenv("GITHUB_RUN_ID", ""),
+    })
+
 def write_last_applied(path: str | Path, asof: str):
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
@@ -194,6 +230,9 @@ def apply_trades_to_portfolio(
 ):
     folder.mkdir(parents=True, exist_ok=True)
     cash, pos = read_positions_csv(str(positions_csv))
+    portfolio_ledger_path = ensure_portfolio_ledger(folder)
+    applied_trades: List[dict] = []  # capture what we actually execute (after sizing)
+
 
     for t in trades:
         sym = str(t.get("symbol", "")).upper()
@@ -241,7 +280,7 @@ def apply_trades_to_portfolio(
         else:
             continue
 
-        append_ledger(ledger_path, {
+        row = {
             "datetime_utc": utc_now_iso(),
             "portfolio_id": portfolio_id,
             "symbol": sym,
@@ -257,7 +296,27 @@ def apply_trades_to_portfolio(
             "signal_snapshot": json.dumps((node.get("signals") or {}), separators=(",", ":")),
             "rationale": t.get("reason", ""),
             "run_id": os.getenv("GITHUB_RUN_ID", ""),
+        }
+        
+        # Global ledger (existing)
+        append_ledger(ledger_path, row)
+        # Per-portfolio ledger (new)
+        append_ledger(str(portfolio_ledger_path), row)
+        
+        # Track what we executed this run (for trades_applied*.json)
+        applied_trades.append({
+            "symbol": sym,
+            "action": side,
+            "qty": qty,
+            "px_exec": row["price_exec"],
+            "slippage_bps": row["slippage_bps"],
+            "reason": row["rationale"],
+            "signals": json.loads(row["signal_snapshot"] or "{}"),
         })
+
+    # Persist what we attempted/applied this run to the portfolio folder
+    write_applied_trades(folder, portfolio_id, prices, applied_trades)
+    write_execution_summary(folder, portfolio_id, positions_csv, cash)
 
     write_positions_csv(str(positions_csv), cash, pos)
     append_history_row(folder, portfolio_id, cash, pos, prices)
