@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T00:32:05.137474+00:00",
+  "as_of_utc": "2025-11-07T00:41:28.915262+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 28.39,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.290694,
+          "score": -0.29809,
           "qty": 57,
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.066616,
-            "CDS": -0.290694,
+            "NS": 0.048128,
+            "CDS": -0.29809,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -118,13 +118,13 @@
           "px": 13.14,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.330096,
+          "score": -0.329653,
           "qty": 18,
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.063156,
-            "CDS": -0.330096,
+            "NS": 0.064265,
+            "CDS": -0.329653,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -164,13 +164,13 @@
           "px": 65.275,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.362354,
+          "score": -0.345912,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": -0.04271,
-            "CDS": -0.362354,
+            "NS": -0.001604,
+            "CDS": -0.345912,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -210,13 +210,13 @@
           "px": 49.605,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.356651,
+          "score": -0.364256,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.080416,
-            "CDS": -0.356651,
+            "NS": 0.061403,
+            "CDS": -0.364256,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -256,13 +256,13 @@
           "px": 34.345,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.274266,
+          "score": -0.273611,
           "qty": 3,
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.105516,
-            "CDS": -0.274266,
+            "NS": 0.107153,
+            "CDS": -0.273611,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -302,13 +302,13 @@
           "px": 127.06,
           "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.271001,
+          "score": -0.275974,
           "qty": 1,
           "notional": 127.06,
           "signals": {
             "TS": -0.536778,
-            "NS": 0.127664,
-            "CDS": -0.271001,
+            "NS": 0.115233,
+            "CDS": -0.275974,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -343,64 +343,18 @@
           ]
         },
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.48953,
-          "qty": 2.2253,
-          "notional": 600.5,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.355607,
-            "CDS": 0.48953,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T18:01:53+00:00",
-              "source": "benzinga",
-              "tone": 0.44451,
-              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
-            },
-            {
-              "ts": "2025-11-06T17:38:34+00:00",
-              "source": "benzinga",
-              "tone": 0.77751,
-              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
-            },
-            {
-              "ts": "2025-11-06T17:36:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.472489,
-          "qty": 1.4682,
-          "notional": 399.51,
+          "score": 0.482432,
+          "qty": 2.2068,
+          "notional": 600.49,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
+            "NS": 0.320628,
+            "CDS": 0.482432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -431,6 +385,52 @@
               "source": "newsercom",
               "tone": 0.45405,
               "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.469894,
+          "qty": 1.4805,
+          "notional": 399.51,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.306517,
+            "CDS": 0.469894,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T00:29:32+00:00",
+              "source": "tipranks",
+              "tone": -0.5095200000000001,
+              "headline": "\u2018Don\u2019t Fight the Valuation,\u2019 Says Analyst About Apple (AAPL) Stock"
+            },
+            {
+              "ts": "2025-11-06T18:01:53+00:00",
+              "source": "benzinga",
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
+            },
+            {
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             }
           ]
         }
@@ -466,8 +466,8 @@
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.066616,
-            "CDS": -0.290694,
+            "NS": 0.048128,
+            "CDS": -0.29809,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -558,8 +558,8 @@
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.063156,
-            "CDS": -0.330096,
+            "NS": 0.064265,
+            "CDS": -0.329653,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -604,8 +604,8 @@
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": -0.04271,
-            "CDS": -0.362354,
+            "NS": -0.001604,
+            "CDS": -0.345912,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -650,8 +650,8 @@
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.080416,
-            "CDS": -0.356651,
+            "NS": 0.061403,
+            "CDS": -0.364256,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -696,8 +696,8 @@
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.105516,
-            "CDS": -0.274266,
+            "NS": 0.107153,
+            "CDS": -0.273611,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -788,8 +788,8 @@
           "notional": 366.97,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
+            "NS": 0.320628,
+            "CDS": 0.482432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -834,8 +834,8 @@
           "notional": 266.05,
           "signals": {
             "TS": 0.578813,
-            "NS": 0.355607,
-            "CDS": 0.48953,
+            "NS": 0.306517,
+            "CDS": 0.469894,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -850,6 +850,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T00:29:32+00:00",
+              "source": "tipranks",
+              "tone": -0.5095200000000001,
+              "headline": "\u2018Don\u2019t Fight the Valuation,\u2019 Says Analyst About Apple (AAPL) Stock"
+            },
+            {
               "ts": "2025-11-06T18:01:53+00:00",
               "source": "benzinga",
               "tone": 0.44451,
@@ -860,12 +866,6 @@
               "source": "benzinga",
               "tone": 0.77751,
               "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
-            },
-            {
-              "ts": "2025-11-06T17:36:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
             }
           ]
         }
@@ -955,64 +955,18 @@
       "cash_start": 7990.38,
       "trades": [
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.48953,
-          "qty": 3.7035,
-          "notional": 999.39,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.355607,
-            "CDS": 0.48953,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T18:01:53+00:00",
-              "source": "benzinga",
-              "tone": 0.44451,
-              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
-            },
-            {
-              "ts": "2025-11-06T17:38:34+00:00",
-              "source": "benzinga",
-              "tone": 0.77751,
-              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
-            },
-            {
-              "ts": "2025-11-06T17:36:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.472489,
+          "score": 0.482432,
           "qty": 3.6728,
           "notional": 999.41,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
+            "NS": 0.320628,
+            "CDS": 0.482432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1043,6 +997,52 @@
               "source": "newsercom",
               "tone": 0.45405,
               "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.469894,
+          "qty": 3.7035,
+          "notional": 999.39,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.306517,
+            "CDS": 0.469894,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T00:29:32+00:00",
+              "source": "tipranks",
+              "tone": -0.5095200000000001,
+              "headline": "\u2018Don\u2019t Fight the Valuation,\u2019 Says Analyst About Apple (AAPL) Stock"
+            },
+            {
+              "ts": "2025-11-06T18:01:53+00:00",
+              "source": "benzinga",
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
+            },
+            {
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             }
           ]
         },
@@ -1098,13 +1098,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.411815,
+          "score": 0.408212,
           "qty": 4.1134,
           "notional": 999.39,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.259286,
-            "CDS": 0.411815,
+            "NS": 0.250278,
+            "CDS": 0.408212,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1166,13 +1166,13 @@
           "px": 65.275,
           "qty_hint": 8.49,
           "reason": "score<sell",
-          "score": -0.362354,
+          "score": -0.345912,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": -0.04271,
-            "CDS": -0.362354,
+            "NS": -0.001604,
+            "CDS": -0.345912,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1212,13 +1212,13 @@
           "px": 28.39,
           "qty_hint": 172.08,
           "reason": "score<sell",
-          "score": -0.290694,
+          "score": -0.29809,
           "qty": 43,
           "notional": 1220.77,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.066616,
-            "CDS": -0.290694,
+            "NS": 0.048128,
+            "CDS": -0.29809,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1258,13 +1258,13 @@
           "px": 13.14,
           "qty_hint": 57.39,
           "reason": "score<sell",
-          "score": -0.330096,
+          "score": -0.329653,
           "qty": 14,
           "notional": 183.96,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.063156,
-            "CDS": -0.330096,
+            "NS": 0.064265,
+            "CDS": -0.329653,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1304,13 +1304,13 @@
           "px": 34.345,
           "qty_hint": 9.17,
           "reason": "score<sell",
-          "score": -0.274266,
+          "score": -0.273611,
           "qty": 2,
           "notional": 68.69,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.105516,
-            "CDS": -0.274266,
+            "NS": 0.107153,
+            "CDS": -0.273611,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1350,13 +1350,13 @@
           "px": 49.605,
           "qty_hint": 6.27,
           "reason": "score<sell",
-          "score": -0.356651,
+          "score": -0.364256,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.080416,
-            "CDS": -0.356651,
+            "NS": 0.061403,
+            "CDS": -0.364256,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1437,64 +1437,18 @@
           ]
         },
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.48953,
-          "qty": 2.1249,
-          "notional": 573.4,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.355607,
-            "CDS": 0.48953,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T18:01:53+00:00",
-              "source": "benzinga",
-              "tone": 0.44451,
-              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
-            },
-            {
-              "ts": "2025-11-06T17:38:34+00:00",
-              "source": "benzinga",
-              "tone": 0.77751,
-              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
-            },
-            {
-              "ts": "2025-11-06T17:36:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.472489,
+          "score": 0.482432,
           "qty": 2.1072,
           "notional": 573.39,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
+            "NS": 0.320628,
+            "CDS": 0.482432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1525,6 +1479,52 @@
               "source": "newsercom",
               "tone": 0.45405,
               "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.469894,
+          "qty": 2.1249,
+          "notional": 573.4,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.306517,
+            "CDS": 0.469894,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T00:29:32+00:00",
+              "source": "tipranks",
+              "tone": -0.5095200000000001,
+              "headline": "\u2018Don\u2019t Fight the Valuation,\u2019 Says Analyst About Apple (AAPL) Stock"
+            },
+            {
+              "ts": "2025-11-06T18:01:53+00:00",
+              "source": "benzinga",
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
+            },
+            {
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             }
           ]
         },
@@ -1580,13 +1580,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.411815,
+          "score": 0.408212,
           "qty": 2.3601,
           "notional": 573.41,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.259286,
-            "CDS": 0.411815,
+            "NS": 0.250278,
+            "CDS": 0.408212,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1626,13 +1626,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.390365,
+          "score": 0.400439,
           "qty": 1.207,
           "notional": 573.4,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.172348,
-            "CDS": 0.390365,
+            "NS": 0.197532,
+            "CDS": 0.400439,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1653,16 +1653,16 @@
               "headline": "Watching Boeing, John Deere, Nvidia; Hearing Co's Sign Deals With Central Asian Nations; John Deere Signs Deal Between $3B-$5B For Agriculture Machinery"
             },
             {
+              "ts": "2025-11-06T18:47:51+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "How RLI Corp. Common Stock (DE) stock performs in volatility spikes - Earnings Overview Report & Reliable Entry Point Alerts"
+            },
+            {
               "ts": "2025-11-06T15:50:55+00:00",
               "source": "newsercom",
               "tone": -0.24695,
               "headline": "Can Betterware de Mexico S.A.P.I. de stock hit consensus price targets - Weekly Risk Summary & Step-by-Step Trade Execution Guides"
-            },
-            {
-              "ts": "2025-11-06T12:34:16+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.0,
-              "headline": "Is DuPont de Nemours Inc. stock a contrarian buy - July 2025 Market Mood & Expert Verified Stock Movement Alerts"
             }
           ]
         }
@@ -1689,64 +1689,18 @@
       "cash_start": 10992.35,
       "trades": [
         {
-          "symbol": "AAPL",
-          "action": "BUY",
-          "px": 269.85,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.48953,
-          "qty": 2.2225,
-          "notional": 599.74,
-          "signals": {
-            "TS": 0.578813,
-            "NS": 0.355607,
-            "CDS": 0.48953,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 266.97054671527735,
-            "ema_slow": 261.0862162393808,
-            "macd": 5.884330475896547,
-            "macd_signal": 5.745430859343868,
-            "macd_hist": 0.13889961655267946,
-            "rsi14": 68.03847666832652,
-            "sma20": 261.21475
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T18:01:53+00:00",
-              "source": "benzinga",
-              "tone": 0.44451,
-              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
-            },
-            {
-              "ts": "2025-11-06T17:38:34+00:00",
-              "source": "benzinga",
-              "tone": 0.77751,
-              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
-            },
-            {
-              "ts": "2025-11-06T17:36:06+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Information Technology Stocks With Whale Alerts In Today's Session"
-            }
-          ]
-        },
-        {
           "symbol": "FSLR",
           "action": "BUY",
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.472489,
+          "score": 0.482432,
           "qty": 2.204,
           "notional": 599.73,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
+            "NS": 0.320628,
+            "CDS": 0.482432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1777,6 +1731,52 @@
               "source": "newsercom",
               "tone": 0.45405,
               "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "BUY",
+          "px": 269.85,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.469894,
+          "qty": 2.2225,
+          "notional": 599.74,
+          "signals": {
+            "TS": 0.578813,
+            "NS": 0.306517,
+            "CDS": 0.469894,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 266.97054671527735,
+            "ema_slow": 261.0862162393808,
+            "macd": 5.884330475896547,
+            "macd_signal": 5.745430859343868,
+            "macd_hist": 0.13889961655267946,
+            "rsi14": 68.03847666832652,
+            "sma20": 261.21475
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T00:29:32+00:00",
+              "source": "tipranks",
+              "tone": -0.5095200000000001,
+              "headline": "\u2018Don\u2019t Fight the Valuation,\u2019 Says Analyst About Apple (AAPL) Stock"
+            },
+            {
+              "ts": "2025-11-06T18:01:53+00:00",
+              "source": "benzinga",
+              "tone": 0.44451,
+              "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
+            },
+            {
+              "ts": "2025-11-06T17:38:34+00:00",
+              "source": "benzinga",
+              "tone": 0.77751,
+              "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             }
           ]
         },
@@ -1832,13 +1832,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.411815,
+          "score": 0.408212,
           "qty": 2.4684,
           "notional": 599.72,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.259286,
-            "CDS": 0.411815,
+            "NS": 0.250278,
+            "CDS": 0.408212,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1878,13 +1878,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.390365,
+          "score": 0.400439,
           "qty": 1.2624,
           "notional": 599.72,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.172348,
-            "CDS": 0.390365,
+            "NS": 0.197532,
+            "CDS": 0.400439,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1905,16 +1905,16 @@
               "headline": "Watching Boeing, John Deere, Nvidia; Hearing Co's Sign Deals With Central Asian Nations; John Deere Signs Deal Between $3B-$5B For Agriculture Machinery"
             },
             {
+              "ts": "2025-11-06T18:47:51+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "How RLI Corp. Common Stock (DE) stock performs in volatility spikes - Earnings Overview Report & Reliable Entry Point Alerts"
+            },
+            {
               "ts": "2025-11-06T15:50:55+00:00",
               "source": "newsercom",
               "tone": -0.24695,
               "headline": "Can Betterware de Mexico S.A.P.I. de stock hit consensus price targets - Weekly Risk Summary & Step-by-Step Trade Execution Guides"
-            },
-            {
-              "ts": "2025-11-06T12:34:16+00:00",
-              "source": "fcppagovbr",
-              "tone": 0.0,
-              "headline": "Is DuPont de Nemours Inc. stock a contrarian buy - July 2025 Market Mood & Expert Verified Stock Movement Alerts"
             }
           ]
         }
