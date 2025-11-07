@@ -21,6 +21,11 @@ permissions:
 env:
   INPUT_BASE: data/prices.json
   INPUT_FINAL: data/prices_final.json
+  PORTFOLIOS_YML: config/portfolios.yml
+  OUT_TRADES: artifacts/recommended_trades_v3.json
+  OUT_WATCHLIST: data/watchlist_summary.json
+  # Optional: reduce clutter from versioned artifacts created by scripts
+  V3_DISABLE_VERSIONED_ARTIFACTS: "1"
 
 concurrency:
   group: gather-data-${{ github.ref }}
@@ -50,6 +55,9 @@ jobs:
       - name: Ensure jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      - name: Export PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> "$GITHUB_ENV"
+
       - name: Probe freshness
         id: probe
         shell: bash
@@ -73,7 +81,6 @@ jobs:
           echo "fresh_prices=$(is_fresh_file '${INPUT_BASE}' 6)"  | tee -a "$GITHUB_OUTPUT"
           echo "fresh_base=$(is_fresh_file '${INPUT_BASE}' 24)"   | tee -a "$GITHUB_OUTPUT"
 
-      # restore this so prices refresh when stale
       - name: Fetch prices (if stale)
         if: steps.probe.outputs.fresh_prices != 'true'
         env:
@@ -85,11 +92,9 @@ jobs:
           DAYS_BACK:         "270"
         run: python fetch_prices.py
 
-      # set WEEKDAY before the conditional
       - name: Set WEEKDAY
         run: echo "WEEKDAY=$(date -u +%a)" >> "$GITHUB_ENV"
 
-      # single news step (weekday gate), with creds
       - name: Fetch news (weekday always)
         if: contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
         continue-on-error: true
@@ -107,7 +112,6 @@ jobs:
           FINBERT_TRIGGER: "0.20"
           FINBERT_FRACTION: "0.30"
         run: python scripts/fetch_news.py
-
 
       - name: Generate enriched feed
         env:
@@ -127,49 +131,35 @@ jobs:
           echo "symbols:"   $(jq '.symbols|keys|length' data/prices_final.json)
           echo "news items in base:" $(jq '[.symbols[]|.news?|length]|add' data/prices.json)
 
-      - name: Postprocess (multi-portfolio ideas; no execution)
+      - name: Postprocess (plans only; NO execution)
         env:
-          INPUT_PATH:       data/prices.json
-          INPUT_FINAL:      data/prices_final.json
-          OUTPUT_DIR:       artifacts
-          CONFIG_PORTFOLIOS: config/portfolios.yml
-          CONFIG_STRATEGIES: config/strategies.yml
+          INPUT_FINAL:        data/prices_final.json
+          PORTFOLIOS_YML:     config/portfolios.yml
+          OUT_WATCHLIST:      data/watchlist_summary.json
+          OUT_TRADES:         artifacts/recommended_trades_v3.json
         run: |
-          mkdir -p artifacts
-          which python
-          python -m pip show pyyaml
           python scripts/postprocess_v3.py
-          printf '%s\n' \
-            'import json,sys' \
-            'p="artifacts/recommended_trades_v3.json"' \
-            'try:' \
-            '    with open(p) as f: obj=json.load(f)' \
-            '    ports=obj.get("portfolios") or {}' \
-            '    tot=0' \
-            '    for name,node in ports.items():' \
-            '        m=len(node.get("trades") or [])' \
-            '        print(f"- {name}: {m} trades")' \
-            '        tot+=m' \
-            '    print("TOTAL TRADES:", tot)' \
-            'except Exception as e:' \
-            '    print("summarize trades failed:", e, file=sys.stderr)' \
-          > /tmp/summarize_trades.py
-          python /tmp/summarize_trades.py
+          python - <<'PY'
+          import json,sys
+          try:
+              obj=json.load(open("artifacts/recommended_trades_v3.json"))
+              total=0
+              for name,node in (obj.get("portfolios") or {}).items():
+                  n=len(node.get("trades") or [])
+                  print(f"- {name}: {n} trades")
+                  total+=n
+              print("TOTAL TRADES:", total)
+          except Exception as e:
+              print("summarize trades failed:", e, file=sys.stderr)
+          PY
 
-      - name: Snapshots (no trades)
-        env:
-          PRICES_FINAL:   data/prices_final.json
-          TRADES_RECS:    artifacts/recommended_trades_v3.json   # <-- same file executor reads
-          TRADES_LEDGER:  data/trades_ledger.csv
-          APPLY_TRADES:   "0"
-        run: python scripts/update_performance_v3.py
+      # NOTE: no update_performance_v3.py here (that can mark last_applied and block real execution)
 
-      - name: Commit & push
+      - name: Commit & push (ideas only)
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin ${{ github.ref_name }}
-          git add data/*.json data/*history.csv data/trades_ledger.csv \
-                  artifacts/*.yaml artifacts/*.json || true
+          git add data/*.json artifacts/*.json data/watchlist_summary.json || true
           git commit -m "v3: ideas-only refresh (multi-portfolio)" || echo "No changes."
           git push
