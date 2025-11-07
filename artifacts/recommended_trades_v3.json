@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T19:37:09.861235+00:00",
+  "as_of_utc": "2025-11-07T19:39:14.707340+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -1065,14 +1065,14 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 13130.63,
-      "cash_start": 1368.0,
+      "portfolio_value_est": 13564.99,
+      "cash_start": 931.34,
       "trades": [
         {
           "symbol": "ASTS",
           "action": "SELL",
           "px": 68.56,
-          "qty_hint": 5.49,
+          "qty_hint": 4.49,
           "reason": "score<sell",
           "score": -0.280133,
           "qty": 1,
@@ -1118,11 +1118,11 @@
           "symbol": "QBTS",
           "action": "SELL",
           "px": 28.42,
-          "qty_hint": 97.08,
+          "qty_hint": 73.08,
           "reason": "score<sell",
           "score": -0.262477,
-          "qty": 24,
-          "notional": 682.08,
+          "qty": 18,
+          "notional": 511.56,
           "signals": {
             "TS": -0.530221,
             "NS": 0.139139,
@@ -1164,11 +1164,11 @@
           "symbol": "QUBT",
           "action": "SELL",
           "px": 12.47,
-          "qty_hint": 33.39,
+          "qty_hint": 25.39,
           "reason": "score<sell",
           "score": -0.31578,
-          "qty": 8,
-          "notional": 99.76,
+          "qty": 6,
+          "notional": 74.82,
           "signals": {
             "TS": -0.617424,
             "NS": 0.136687,
@@ -1210,7 +1210,7 @@
           "symbol": "RGTI",
           "action": "SELL",
           "px": 32.43,
-          "qty_hint": 6.17,
+          "qty_hint": 5.17,
           "reason": "score<sell",
           "score": -0.31541,
           "qty": 1,
@@ -1253,60 +1253,14 @@
           ]
         },
         {
-          "symbol": "RKLB",
-          "action": "SELL",
-          "px": 50.815,
-          "qty_hint": 4.27,
-          "reason": "score<sell",
-          "score": -0.346364,
-          "qty": 1,
-          "notional": 50.81,
-          "signals": {
-            "TS": -0.613176,
-            "NS": 0.053854,
-            "CDS": -0.346364,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 58.19773086154548,
-            "ema_slow": 58.961855815080284,
-            "macd": -0.7641249535348038,
-            "macd_signal": 1.4398177370983924,
-            "macd_hist": -2.2039426906331965,
-            "rsi14": 27.427009530660285,
-            "sma20": 62.57925
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T17:08:14+00:00",
-              "source": "moneymorning",
-              "tone": 0.5472666310109564,
-              "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
-            },
-            {
-              "ts": "2025-11-07T15:31:30+00:00",
-              "source": "msn",
-              "tone": 0.0,
-              "headline": "Rocket Lab USA Q3 preview: What to Expect"
-            },
-            {
-              "ts": "2025-11-07T11:01:04+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Strs Ohio Has $1.10 Million Stake in Rocket Lab Corporation $RKLB"
-            }
-          ]
-        },
-        {
           "symbol": "JPM",
           "action": "BUY",
           "px": 313.065,
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.49362,
-          "qty": 1.3894,
-          "notional": 434.97,
+          "qty": 1.3891,
+          "notional": 434.88,
           "signals": {
             "TS": 0.577324,
             "NS": 0.368065,
@@ -1351,8 +1305,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.464091,
-          "qty": 8.9979,
-          "notional": 434.96,
+          "qty": 8.9965,
+          "notional": 434.89,
           "signals": {
             "TS": 0.635934,
             "NS": 0.206328,
@@ -1397,8 +1351,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.452626,
-          "qty": 1.5668,
-          "notional": 434.96,
+          "qty": 0.2218,
+          "notional": 61.57,
           "signals": {
             "TS": 0.505175,
             "NS": 0.373804,
@@ -1433,52 +1387,6 @@
               "source": "benzinga",
               "tone": 0.8728757689381605,
               "headline": "Meta To Spend $600 Billion In US On AI, Aims For 'Personal Superintelligence' For Everyone"
-            }
-          ]
-        },
-        {
-          "symbol": "DDOG",
-          "action": "BUY",
-          "px": 187.61,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.446323,
-          "qty": 0.3364,
-          "notional": 63.11,
-          "signals": {
-            "TS": 0.651812,
-            "NS": 0.138089,
-            "CDS": 0.446323,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 166.46797740533387,
-            "ema_slow": 159.7023699986148,
-            "macd": 6.765607406719056,
-            "macd_signal": 4.348211011356005,
-            "macd_hist": 2.417396395363051,
-            "rsi14": 76.66739425624104,
-            "sma20": 160.64249999999987
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T19:16:10+00:00",
-              "source": "benzinga",
-              "tone": -0.12022406258555136,
-              "headline": "Wells Fargo Maintains Overweight on Datadog, Raises Price Target to $230"
-            },
-            {
-              "ts": "2025-11-07T18:49:32+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "RBC Capital Maintains Outperform on Datadog, Raises Price Target to $216"
-            },
-            {
-              "ts": "2025-11-07T18:49:11+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Analysts Offer Insights on Technology Companies: Datadog (DDOG), Backblaze (BLZE) and Paycom (PAYC)"
             }
           ]
         }
@@ -1501,8 +1409,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 14750.76,
-      "cash_start": 5021.44,
+      "portfolio_value_est": 17716.6,
+      "cash_start": 2052.63,
       "trades": [
         {
           "symbol": "JPM",
@@ -1511,8 +1419,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.49362,
-          "qty": 1.8947,
-          "notional": 593.16,
+          "qty": 1.8944,
+          "notional": 593.07,
           "signals": {
             "TS": 0.577324,
             "NS": 0.368065,
@@ -1557,8 +1465,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.464091,
-          "qty": 12.2707,
-          "notional": 593.17,
+          "qty": 12.2689,
+          "notional": 593.08,
           "signals": {
             "TS": 0.635934,
             "NS": 0.206328,
@@ -1603,8 +1511,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.452626,
-          "qty": 2.1367,
-          "notional": 593.17,
+          "qty": 2.1364,
+          "notional": 593.09,
           "signals": {
             "TS": 0.505175,
             "NS": 0.373804,
@@ -1649,8 +1557,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.446323,
-          "qty": 3.1617,
-          "notional": 593.17,
+          "qty": 1.4573,
+          "notional": 273.4,
           "signals": {
             "TS": 0.651812,
             "NS": 0.138089,
@@ -1687,55 +1595,9 @@
               "headline": "Analysts Offer Insights on Technology Companies: Datadog (DDOG), Backblaze (BLZE) and Paycom (PAYC)"
             }
           ]
-        },
-        {
-          "symbol": "CMI",
-          "action": "BUY",
-          "px": 477.445,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.444719,
-          "qty": 1.2424,
-          "notional": 593.18,
-          "signals": {
-            "TS": 0.672457,
-            "NS": 0.103112,
-            "CDS": 0.444719,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 441.3552221668402,
-            "ema_slow": 431.1463369742884,
-            "macd": 10.208885192551804,
-            "macd_signal": 5.624464037376127,
-            "macd_hist": 4.5844211551756775,
-            "rsi14": 79.71522979015735,
-            "sma20": 428.05299999999977
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T16:21:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.0,
-              "headline": "New Analyst Forecast: $CMI Given $522.0 Price Target"
-            },
-            {
-              "ts": "2025-11-07T15:58:53+00:00",
-              "source": "benzinga",
-              "tone": 0.37088361485159765,
-              "headline": "Truist Securities Maintains Hold on Cummins, Raises Price Target to $522"
-            },
-            {
-              "ts": "2025-11-07T15:02:26+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Cummins (NYSE:CMI) Hits New 12-Month High Following Better-Than-Expected Earnings"
-            }
-          ]
         }
       ],
-      "cash_left": 2055.6
+      "cash_left": -0.01
     },
     "portfolio_paper_TS_only": {
       "meta": {
