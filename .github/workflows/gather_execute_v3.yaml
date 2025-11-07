@@ -188,6 +188,18 @@ jobs:
           APPLY_TRADES:       "0"
         run: python scripts/update_performance_v3.py
 
+      - name: Build performance timeseries (+ charts)
+        run: python scripts/build_perf_timeseries.py
+
+      - name: Commit & push (perf artifacts)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin ${{ github.ref_name }}
+          git add data/perf_timeseries.csv data/perf_timeseries.json artifacts/perf_charts/*.png || true
+          git commit -m "perf: update consolidated timeseries and charts" || echo "No changes."
+          git push
+
       - name: Inspect per-portfolio outputs
         run: |
           echo "=== portfolios tree after update_performance ==="
