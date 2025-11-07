@@ -81,7 +81,39 @@ def load_last_applied(path: str | Path) -> str | None:
             return None
     return None
 
-from pathlib import Path
+def portfolio_snapshot(portfolio_id: str, cash: float, pos: Dict[str, dict], prices: Dict[str, Any]) -> dict:
+    syms = (prices or {}).get("symbols") or {}
+    market_value = 0.0
+    holdings = {}
+    for sym, p in sorted(pos.items()):
+        node = syms.get(sym) or {}
+        px = latest_px(node)
+        mv = float(p["qty"]) * float(px)
+        market_value += mv
+        holdings[sym] = {
+            "qty": round(p["qty"], 6),
+            "avg_cost": round(p["avg_cost"], 6),
+            "mark": round(px, 6),
+            "market_value": round(mv, 2),
+        }
+    equity = cash + market_value
+    return {
+        "as_of_utc": (prices or {}).get("as_of_utc"),
+        "portfolio_id": portfolio_id,
+        "cash": round(cash, 2),
+        "market_value": round(market_value, 2),
+        "equity": round(equity, 2),
+        "holdings": holdings,
+    }
+
+def write_portfolio_value(folder: Path, snap: dict) -> None:
+    """Write rolling and versioned portfolio value snapshots."""
+    write_json(str(folder / "portfolio_value.json"), snap)
+    asof = (snap.get("as_of_utc") or "")
+    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
+    if safe_asof:
+        write_json(str(folder / f"portfolio_value_{safe_asof}.json"), snap)
+
 
 def ensure_portfolio_ledger(folder: Path) -> Path:
     """Create per-portfolio ledger with header if missing."""
@@ -108,14 +140,21 @@ def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: 
     if safe_asof:
         write_json(str(folder / f"trades_applied_{safe_asof}.json"), obj)
 
-def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path, cash: float) -> None:
-    write_json(str(folder / "last_execution_summary.json"), {
+def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path, cash: float, snap: dict | None = None) -> None:
+    base = {
         "datetime_utc": utc_now_iso(),
         "portfolio_id": portfolio_id,
         "positions_path": str(positions_csv),
         "cash": round(cash, 2),
         "run_id": os.getenv("GITHUB_RUN_ID", ""),
-    })
+    }
+    if snap:
+        base.update({
+            "market_value": snap.get("market_value"),
+            "equity": snap.get("equity"),
+            "as_of_utc": snap.get("as_of_utc"),
+        })
+    write_json(str(folder / "last_execution_summary.json"), base)
 
 def write_last_applied(path: str | Path, asof: str):
     p = Path(path)
@@ -230,6 +269,8 @@ def apply_trades_to_portfolio(
 ):
     folder.mkdir(parents=True, exist_ok=True)
     cash, pos = read_positions_csv(str(positions_csv))
+    pre_snap = portfolio_snapshot(portfolio_id, cash, pos, prices)
+    write_portfolio_value(folder, pre_snap)
     portfolio_ledger_path = ensure_portfolio_ledger(folder)
     applied_trades: List[dict] = []  # capture what we actually execute (after sizing)
 
@@ -314,9 +355,18 @@ def apply_trades_to_portfolio(
             "signals": json.loads(row["signal_snapshot"] or "{}"),
         })
 
-    # Persist what we attempted/applied this run to the portfolio folder
-    write_applied_trades(folder, portfolio_id, prices, applied_trades)
-    write_execution_summary(folder, portfolio_id, positions_csv, cash)
+    # --- NEW: snapshot AFTER trades (post state)
+    post_snap = portfolio_snapshot(portfolio_id, cash, pos, prices)
+    
+    # Persist applied trades w/ pre/post equity
+    write_applied_trades(folder, portfolio_id, prices, {
+        "pre": pre_snap,
+        "post": post_snap,
+        "trades": applied_trades,
+    })
+    
+    # Update summary with equity/mv
+    write_execution_summary(folder, portfolio_id, positions_csv, cash, snap=post_snap)
 
     write_positions_csv(str(positions_csv), cash, pos)
     append_history_row(folder, portfolio_id, cash, pos, prices)
@@ -372,6 +422,10 @@ def main():
             cash, pos = read_positions_csv(str(positions_csv))
             append_history_row(folder, pid, cash, pos, prices)
             write_last_applied(folder / "last_applied.json", asof)
+            snap = portfolio_snapshot(pid, cash, pos, prices)
+            write_portfolio_value(folder, snap)
+            write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
+
             continue
 
         apply_trades_to_portfolio(
