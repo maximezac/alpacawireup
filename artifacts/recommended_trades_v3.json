@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T19:34:42.818244+00:00",
+  "as_of_utc": "2025-11-07T19:37:09.861235+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -997,8 +997,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 15675.47,
-      "cash_start": 3988.78,
+      "portfolio_value_est": 19608.32,
+      "cash_start": 52.0,
       "trades": [
         {
           "symbol": "JPM",
@@ -1007,8 +1007,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.49362,
-          "qty": 3.1406,
-          "notional": 983.21,
+          "qty": 0.1661,
+          "notional": 52.0,
           "signals": {
             "TS": 0.577324,
             "NS": 0.368065,
@@ -1045,193 +1045,9 @@
               "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
-        },
-        {
-          "symbol": "DOCN",
-          "action": "BUY",
-          "px": 48.34,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.464091,
-          "qty": 20.3395,
-          "notional": 983.21,
-          "signals": {
-            "TS": 0.635934,
-            "NS": 0.206328,
-            "CDS": 0.464091,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 42.71523033127496,
-            "ema_slow": 40.70912158666568,
-            "macd": 2.0061087446092785,
-            "macd_signal": 1.3279469587461672,
-            "macd_hist": 0.6781617858631113,
-            "rsi14": 74.50983570141823,
-            "sma20": 41.33475000000001
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
-            },
-            {
-              "ts": "2025-11-07T16:09:49+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How DOCN stock valuations compare to rivals - CEO Change & Daily Market Momentum Tracking"
-            },
-            {
-              "ts": "2025-11-07T15:49:22+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How DOCN stock moves on employment data - Trade Analysis Summary & Real-Time Market Sentiment Alerts"
-            }
-          ]
-        },
-        {
-          "symbol": "GOOGL",
-          "action": "BUY",
-          "px": 277.61,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.452626,
-          "qty": 3.5417,
-          "notional": 983.21,
-          "signals": {
-            "TS": 0.505175,
-            "NS": 0.373804,
-            "CDS": 0.452626,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 274.48355685021806,
-            "ema_slow": 264.0130752574406,
-            "macd": 10.470481592777446,
-            "macd_signal": 9.441184983561154,
-            "macd_hist": 1.029296609216292,
-            "rsi14": 58.405429487240525,
-            "sma20": 264.97050000000013
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T19:12:50+00:00",
-              "source": "benzinga",
-              "tone": 0.8934203016051684,
-              "headline": "\"Top Disney Exec Trio Sees No End To YouTube TV Clash As 'Sports-Packed Weekend' Approaches; YouTube TV Says Ready To Make A Fair Agreement In Line With Disney's Deals With Other Distributors; 'Encourage Disney To Come To The Table And Do What's Best For Our Mutual Customers'\" - Deadline"
-            },
-            {
-              "ts": "2025-11-07T18:58:05+00:00",
-              "source": "benzinga",
-              "tone": 0.2371913093348082,
-              "headline": "Bill Ackman's Amazon Trade Reverses Course \u2013 Now Up $119 Million And Counting In Third Quarter"
-            },
-            {
-              "ts": "2025-11-07T18:05:50+00:00",
-              "source": "benzinga",
-              "tone": 0.8728757689381605,
-              "headline": "Meta To Spend $600 Billion In US On AI, Aims For 'Personal Superintelligence' For Everyone"
-            }
-          ]
-        },
-        {
-          "symbol": "DDOG",
-          "action": "BUY",
-          "px": 187.61,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.446323,
-          "qty": 5.2407,
-          "notional": 983.21,
-          "signals": {
-            "TS": 0.651812,
-            "NS": 0.138089,
-            "CDS": 0.446323,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 166.46797740533387,
-            "ema_slow": 159.7023699986148,
-            "macd": 6.765607406719056,
-            "macd_signal": 4.348211011356005,
-            "macd_hist": 2.417396395363051,
-            "rsi14": 76.66739425624104,
-            "sma20": 160.64249999999987
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T19:16:10+00:00",
-              "source": "benzinga",
-              "tone": -0.12022406258555136,
-              "headline": "Wells Fargo Maintains Overweight on Datadog, Raises Price Target to $230"
-            },
-            {
-              "ts": "2025-11-07T18:49:32+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "RBC Capital Maintains Outperform on Datadog, Raises Price Target to $216"
-            },
-            {
-              "ts": "2025-11-07T18:49:11+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Analysts Offer Insights on Technology Companies: Datadog (DDOG), Backblaze (BLZE) and Paycom (PAYC)"
-            }
-          ]
-        },
-        {
-          "symbol": "ICLN",
-          "action": "BUY",
-          "px": 17.48,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.439199,
-          "qty": 0.0004,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.491686,
-            "NS": 0.360467,
-            "CDS": 0.439199,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 17.25472159551076,
-            "ema_slow": 16.73534830276305,
-            "macd": 0.5193732927477086,
-            "macd_signal": 0.48289550325482855,
-            "macd_hist": 0.03647778949288005,
-            "rsi14": 56.936289240092876,
-            "sma20": 16.923
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T16:33:11+00:00",
-              "source": "benzinga",
-              "tone": 0.5126503474408789,
-              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
-            },
-            {
-              "ts": "2025-11-05T16:01:19+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Big Money Buys: Investment Advisor Goes All-In on Sector ETF With $17.6 Million Purchase"
-            },
-            {
-              "ts": "2025-11-04T21:46:47+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.16355813083953724,
-              "headline": "Murray Wealth Group: Growth with the Global Equity Growth Fund"
-            }
-          ]
         }
       ],
-      "cash_left": 55.93
+      "cash_left": 0.0
     },
     "portfolio_max_autotrader": {
       "meta": {
@@ -1249,14 +1065,14 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 12141.27,
-      "cash_start": 2360.73,
+      "portfolio_value_est": 13130.63,
+      "cash_start": 1368.0,
       "trades": [
         {
           "symbol": "ASTS",
           "action": "SELL",
           "px": 68.56,
-          "qty_hint": 6.49,
+          "qty_hint": 5.49,
           "reason": "score<sell",
           "score": -0.280133,
           "qty": 1,
@@ -1302,11 +1118,11 @@
           "symbol": "QBTS",
           "action": "SELL",
           "px": 28.42,
-          "qty_hint": 129.08,
+          "qty_hint": 97.08,
           "reason": "score<sell",
           "score": -0.262477,
-          "qty": 32,
-          "notional": 909.44,
+          "qty": 24,
+          "notional": 682.08,
           "signals": {
             "TS": -0.530221,
             "NS": 0.139139,
@@ -1348,11 +1164,11 @@
           "symbol": "QUBT",
           "action": "SELL",
           "px": 12.47,
-          "qty_hint": 43.39,
+          "qty_hint": 33.39,
           "reason": "score<sell",
           "score": -0.31578,
-          "qty": 10,
-          "notional": 124.7,
+          "qty": 8,
+          "notional": 99.76,
           "signals": {
             "TS": -0.617424,
             "NS": 0.136687,
@@ -1394,7 +1210,7 @@
           "symbol": "RGTI",
           "action": "SELL",
           "px": 32.43,
-          "qty_hint": 7.17,
+          "qty_hint": 6.17,
           "reason": "score<sell",
           "score": -0.31541,
           "qty": 1,
@@ -1440,7 +1256,7 @@
           "symbol": "RKLB",
           "action": "SELL",
           "px": 50.815,
-          "qty_hint": 5.27,
+          "qty_hint": 4.27,
           "reason": "score<sell",
           "score": -0.346364,
           "qty": 1,
@@ -1489,8 +1305,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.49362,
-          "qty": 1.3897,
-          "notional": 435.07,
+          "qty": 1.3894,
+          "notional": 434.97,
           "signals": {
             "TS": 0.577324,
             "NS": 0.368065,
@@ -1535,8 +1351,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.464091,
-          "qty": 9.0,
-          "notional": 435.06,
+          "qty": 8.9979,
+          "notional": 434.96,
           "signals": {
             "TS": 0.635934,
             "NS": 0.206328,
@@ -1581,8 +1397,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.452626,
-          "qty": 1.5672,
-          "notional": 435.07,
+          "qty": 1.5668,
+          "notional": 434.96,
           "signals": {
             "TS": 0.505175,
             "NS": 0.373804,
@@ -1627,8 +1443,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.446323,
-          "qty": 2.319,
-          "notional": 435.07,
+          "qty": 0.3364,
+          "notional": 63.11,
           "signals": {
             "TS": 0.651812,
             "NS": 0.138089,
@@ -1665,55 +1481,9 @@
               "headline": "Analysts Offer Insights on Technology Companies: Datadog (DDOG), Backblaze (BLZE) and Paycom (PAYC)"
             }
           ]
-        },
-        {
-          "symbol": "CMI",
-          "action": "BUY",
-          "px": 477.445,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.444719,
-          "qty": 0.9112,
-          "notional": 435.05,
-          "signals": {
-            "TS": 0.672457,
-            "NS": 0.103112,
-            "CDS": 0.444719,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 441.3552221668402,
-            "ema_slow": 431.1463369742884,
-            "macd": 10.208885192551804,
-            "macd_signal": 5.624464037376127,
-            "macd_hist": 4.5844211551756775,
-            "rsi14": 79.71522979015735,
-            "sma20": 428.05299999999977
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T16:21:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.0,
-              "headline": "New Analyst Forecast: $CMI Given $522.0 Price Target"
-            },
-            {
-              "ts": "2025-11-07T15:58:53+00:00",
-              "source": "benzinga",
-              "tone": 0.37088361485159765,
-              "headline": "Truist Securities Maintains Hold on Cummins, Raises Price Target to $522"
-            },
-            {
-              "ts": "2025-11-07T15:02:26+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Cummins (NYSE:CMI) Hits New 12-Month High Following Better-Than-Expected Earnings"
-            }
-          ]
         }
       ],
-      "cash_left": 185.42
+      "cash_left": 0.0
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1731,8 +1501,8 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 11784.46,
-      "cash_start": 7990.7,
+      "portfolio_value_est": 14750.76,
+      "cash_start": 5021.44,
       "trades": [
         {
           "symbol": "JPM",
@@ -1741,8 +1511,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.49362,
-          "qty": 1.895,
-          "notional": 593.26,
+          "qty": 1.8947,
+          "notional": 593.16,
           "signals": {
             "TS": 0.577324,
             "NS": 0.368065,
@@ -1787,8 +1557,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.464091,
-          "qty": 12.2725,
-          "notional": 593.25,
+          "qty": 12.2707,
+          "notional": 593.17,
           "signals": {
             "TS": 0.635934,
             "NS": 0.206328,
@@ -1833,8 +1603,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.452626,
-          "qty": 2.137,
-          "notional": 593.25,
+          "qty": 2.1367,
+          "notional": 593.17,
           "signals": {
             "TS": 0.505175,
             "NS": 0.373804,
@@ -1879,8 +1649,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.446323,
-          "qty": 3.1622,
-          "notional": 593.26,
+          "qty": 3.1617,
+          "notional": 593.17,
           "signals": {
             "TS": 0.651812,
             "NS": 0.138089,
@@ -1925,8 +1695,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.444719,
-          "qty": 1.2426,
-          "notional": 593.27,
+          "qty": 1.2424,
+          "notional": 593.18,
           "signals": {
             "TS": 0.672457,
             "NS": 0.103112,
@@ -1965,7 +1735,7 @@
           ]
         }
       ],
-      "cash_left": 5024.4
+      "cash_left": 2055.6
     },
     "portfolio_paper_TS_only": {
       "meta": {
