@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T23:01:45.680657+00:00",
+  "as_of_utc": "2025-11-07T23:14:46.833368+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,22 +17,69 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 19269.04,
+      "portfolio_value_est": 19726.17,
       "cash_start": 0.0,
       "trades": [
+        {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 330.125,
+          "qty_hint": 9.48,
+          "reason": "score<sell",
+          "score": -0.250244,
+          "qty": 2,
+          "notional": 660.25,
+          "signals": {
+            "TS": -0.494979,
+            "NS": 0.116859,
+            "CDS": -0.250244,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.35547405729034,
+            "ema_slow": 330.97470687462123,
+            "macd": 1.3807671826691035,
+            "macd_signal": 2.089270707952628,
+            "macd_hist": -0.7085035252835246,
+            "macd_hist_prev": -0.5480652188849975,
+            "rsi14": 41.77325478873546,
+            "sma20": 331.66225
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T19:53:32+00:00",
+              "source": "benzinga",
+              "tone": -0.8393139850853588,
+              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
+            },
+            {
+              "ts": "2025-11-07T16:32:21+00:00",
+              "source": "seekingalpha",
+              "tone": 0.5994579770299066,
+              "headline": "Undercovered Dozen: Okta, Arbor Realty Trust, CVR Partners And More"
+            },
+            {
+              "ts": "2025-11-07T16:06:02+00:00",
+              "source": "newsercom",
+              "tone": 0.6032172193675835,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
+            }
+          ]
+        },
         {
           "symbol": "QUBT",
           "action": "SELL",
           "px": 12.86,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.404722,
+          "score": -0.413501,
           "qty": 18,
           "notional": 231.48,
           "signals": {
             "TS": -0.603998,
-            "NS": -0.105808,
-            "CDS": -0.404722,
+            "NS": -0.127755,
+            "CDS": -0.413501,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -50,20 +97,20 @@
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5292383992515479,
+              "tone": -0.5249914626689366,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
-            },
-            {
-              "ts": "2025-11-07T15:05:58+00:00",
-              "source": "stockstotrade",
-              "tone": 0.0,
-              "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.59247737544057,
+              "tone": -0.5877229696803471,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+            },
+            {
+              "ts": "2025-11-07T14:12:47+00:00",
+              "source": "sherwoodnews",
+              "tone": 0.0,
+              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             }
           ]
         },
@@ -73,13 +120,13 @@
           "px": 51.635,
           "qty_hint": 6.27,
           "reason": "score<sell",
-          "score": -0.336428,
+          "score": -0.334311,
           "qty": 1,
           "notional": 51.63,
           "signals": {
             "TS": -0.590189,
-            "NS": 0.044213,
-            "CDS": -0.336428,
+            "NS": 0.049508,
+            "CDS": -0.334311,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -97,7 +144,7 @@
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5112197315578401,
+              "tone": 0.5071163963809724,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -120,13 +167,13 @@
           "px": 33.765,
           "qty_hint": 10.17,
           "reason": "score<sell",
-          "score": -0.310336,
+          "score": -0.310244,
           "qty": 2,
           "notional": 67.53,
           "signals": {
             "TS": -0.53846,
-            "NS": 0.031849,
-            "CDS": -0.310336,
+            "NS": 0.032079,
+            "CDS": -0.310244,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -167,13 +214,13 @@
           "px": 69.21,
           "qty_hint": 8.49,
           "reason": "score<sell",
-          "score": -0.262526,
+          "score": -0.262814,
           "qty": 2,
           "notional": 138.42,
           "signals": {
             "TS": -0.497663,
-            "NS": 0.090178,
-            "CDS": -0.262526,
+            "NS": 0.089458,
+            "CDS": -0.262814,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -203,13 +250,13 @@
             {
               "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
-              "tone": 0.3318505977896922,
+              "tone": 0.32919963699705973,
               "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         }
       ],
-      "cash_left": 489.06
+      "cash_left": 1149.32
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -226,7 +273,7 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 19269.04,
+      "portfolio_value_est": 19726.17,
       "cash_start": 0.0,
       "trades": [
         {
@@ -240,8 +287,8 @@
           "notional": 1683.21,
           "signals": {
             "TS": -0.498298,
-            "NS": 0.208057,
-            "CDS": -0.215756,
+            "NS": 0.19153,
+            "CDS": -0.222367,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -257,6 +304,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T22:50:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum (NYSE:QBTS) Price Target Raised to $41.00"
+            },
+            {
               "ts": "2025-11-07T22:06:03+00:00",
               "source": "benzinga",
               "tone": 0.0,
@@ -265,14 +318,8 @@
             {
               "ts": "2025-11-07T22:00:35+00:00",
               "source": "marketbeat",
-              "tone": 0.8844268311639102,
+              "tone": 0.8773300526548298,
               "headline": "D-Wave Quantum (NYSE:QBTS) Trading 4.1% Higher on Strong Earnings"
-            },
-            {
-              "ts": "2025-11-07T17:30:34+00:00",
-              "source": "marketbeat",
-              "tone": 0.8052751286122193,
-              "headline": "Rosenblatt Securities Boosts D-Wave Quantum (NYSE:QBTS) Price Target to $40.00"
             }
           ]
         },
@@ -287,8 +334,8 @@
           "notional": 660.25,
           "signals": {
             "TS": -0.494979,
-            "NS": 0.128479,
-            "CDS": -0.245596,
+            "NS": 0.116859,
+            "CDS": -0.250244,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -306,19 +353,19 @@
             {
               "ts": "2025-11-07T19:53:32+00:00",
               "source": "benzinga",
-              "tone": -0.846114407705693,
+              "tone": -0.8393139850853588,
               "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
             },
             {
               "ts": "2025-11-07T16:32:21+00:00",
               "source": "seekingalpha",
-              "tone": 0.6043150004691844,
+              "tone": 0.5994579770299066,
               "headline": "Undercovered Dozen: Okta, Arbor Realty Trust, CVR Partners And More"
             },
             {
               "ts": "2025-11-07T16:06:02+00:00",
               "source": "newsercom",
-              "tone": 0.6081047017365828,
+              "tone": 0.6032172193675835,
               "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
             }
           ]
@@ -334,8 +381,8 @@
           "notional": 231.48,
           "signals": {
             "TS": -0.603998,
-            "NS": -0.105808,
-            "CDS": -0.404722,
+            "NS": -0.127755,
+            "CDS": -0.413501,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -353,20 +400,20 @@
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5292383992515479,
+              "tone": -0.5249914626689366,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
-            },
-            {
-              "ts": "2025-11-07T15:05:58+00:00",
-              "source": "stockstotrade",
-              "tone": 0.0,
-              "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.59247737544057,
+              "tone": -0.5877229696803471,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+            },
+            {
+              "ts": "2025-11-07T14:12:47+00:00",
+              "source": "sherwoodnews",
+              "tone": 0.0,
+              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             }
           ]
         },
@@ -381,8 +428,8 @@
           "notional": 130.36,
           "signals": {
             "TS": -0.501386,
-            "NS": 0.214019,
-            "CDS": -0.215224,
+            "NS": 0.208281,
+            "CDS": -0.217519,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -400,19 +447,19 @@
             {
               "ts": "2025-11-07T22:00:45+00:00",
               "source": "marketbeat",
-              "tone": 0.884626519438022,
+              "tone": 0.8775394403151907,
               "headline": "Robinhood Markets (NASDAQ:HOOD) Shares Up 2.6% After Analyst Upgrade"
             },
             {
               "ts": "2025-11-07T21:10:25+00:00",
               "source": "benzinga",
-              "tone": -0.8693004944786551,
+              "tone": -0.8623361972655822,
               "headline": "Main Street's Job Fears Hit Wall Street As AI Rally Falters: This Week In Markets"
             },
             {
               "ts": "2025-11-07T19:03:47+00:00",
               "source": "benzinga",
-              "tone": 0.3409149071595765,
+              "tone": 0.3381837080973718,
               "headline": "Stock Of The Day: Where Will The Robinhood Sell-Off End?"
             }
           ]
@@ -428,8 +475,8 @@
           "notional": 51.63,
           "signals": {
             "TS": -0.590189,
-            "NS": 0.044213,
-            "CDS": -0.336428,
+            "NS": 0.049508,
+            "CDS": -0.334311,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -447,7 +494,7 @@
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5112197315578401,
+              "tone": 0.5071163963809724,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -475,8 +522,8 @@
           "notional": 67.53,
           "signals": {
             "TS": -0.53846,
-            "NS": 0.031849,
-            "CDS": -0.310336,
+            "NS": 0.032079,
+            "CDS": -0.310244,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -522,8 +569,8 @@
           "notional": 138.42,
           "signals": {
             "TS": -0.497663,
-            "NS": 0.090178,
-            "CDS": -0.262526,
+            "NS": 0.089458,
+            "CDS": -0.262814,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -553,75 +600,13 @@
             {
               "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
-              "tone": 0.3318505977896922,
+              "tone": 0.32919963699705973,
               "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         }
       ],
       "cash_left": 2962.89
-    },
-    "portfolio_max_NS_higher_weight": {
-      "meta": {
-        "title": "Max NS+",
-        "trade_scope": "none",
-        "decision_source": "CDS",
-        "ns_weight_boost": 1.7,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas"
-        ],
-        "positions_path": "data/portfolios/portfolio_max_NS_higher_weight/positions.csv"
-      },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
-    },
-    "portfolio_nicky_personal": {
-      "meta": {
-        "title": "Nicky Personal",
-        "trade_scope": "real",
-        "decision_source": "CDS",
-        "ns_weight_boost": 1.0,
-        "per_line_frac": 0.015,
-        "max_deploy_frac": 0.1,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas",
-          "personal"
-        ],
-        "positions_path": "data/portfolios/portfolio_nicky_personal/positions.csv"
-      },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
-    },
-    "portfolio_vince_personal": {
-      "meta": {
-        "title": "Vince Personal",
-        "trade_scope": "real",
-        "decision_source": "CDS",
-        "ns_weight_boost": 1.0,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas",
-          "personal"
-        ],
-        "positions_path": "data/portfolios/portfolio_vince_personal/positions.csv"
-      },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
     },
     "portfolio_paper_aggressive_trades": {
       "meta": {
@@ -648,14 +633,14 @@
           "action": "BUY",
           "px": 314.265,
           "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.497177,
-          "qty": 0.0309,
-          "notional": 9.71,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.500901,
+          "qty": 2.363422,
+          "notional": 742.74,
           "signals": {
             "TS": 0.605219,
-            "NS": 0.335114,
-            "CDS": 0.497177,
+            "NS": 0.344424,
+            "CDS": 0.500901,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -671,8 +656,14 @@
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.0412,
+          "qty_prev": 0.0309,
           "news_preview": [
+            {
+              "ts": "2025-11-07T23:01:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.3094379732217262,
+              "headline": "Insider Sale: Head of Human Resources of $JPM Sells 966 Shares"
+            },
             {
               "ts": "2025-11-07T18:26:00+00:00",
               "source": "nasdaq",
@@ -684,12 +675,6 @@
               "source": "benzinga",
               "tone": 0.0,
               "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-07T14:30:02+00:00",
-              "source": "yahoofinanceaustralia",
-              "tone": 0.5883461783654536,
-              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
         },
@@ -699,13 +684,13 @@
           "px": 17.66,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.45498,
+          "score": 0.453865,
           "qty": 7.5e-05,
           "notional": 0.0,
           "signals": {
             "TS": 0.52644,
-            "NS": 0.34779,
-            "CDS": 0.45498,
+            "NS": 0.345003,
+            "CDS": 0.453865,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -726,7 +711,7 @@
             {
               "ts": "2025-11-06T16:33:11+00:00",
               "source": "benzinga",
-              "tone": 0.4788651444283749,
+              "tone": 0.4750286019834686,
               "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
             },
             {
@@ -738,7 +723,7 @@
             {
               "ts": "2025-11-04T18:00:59+00:00",
               "source": "benzinga",
-              "tone": 0.07664185358669763,
+              "tone": 0.07602781907092258,
               "headline": "Blink Charging Expands In U.K. With Karbon Homes Deal, Launches Affordable EV Chargers"
             }
           ]
@@ -749,13 +734,13 @@
           "px": 8.205,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.408205,
+          "score": 0.405876,
           "qty": 0.0001,
           "notional": 0.0,
           "signals": {
             "TS": 0.538108,
-            "NS": 0.213351,
-            "CDS": 0.408205,
+            "NS": 0.207527,
+            "CDS": 0.405876,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -785,10 +770,56 @@
               "headline": "Snap Sees Unusually High Options Volume (NYSE:SNAP)"
             },
             {
-              "ts": "2025-11-07T17:02:00+00:00",
-              "source": "marketsfinancialcontent",
+              "ts": "2025-11-07T17:02:42+00:00",
+              "source": "barchartcom",
               "tone": 0.0,
               "headline": "Snap Has a $400 Million Catalyst Right Now. Does It Make SNAP Stock a Buy?"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "SELL",
+          "px": 268.47,
+          "qty": 2.730398,
+          "notional": 733.03,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.284986,
+            "NS": 0.306903,
+            "CDS": -0.04823,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 267.2012318360039,
+            "ema_slow": 261.6331630358192,
+            "macd": 5.568068800184676,
+            "macd_signal": 5.7099586365661885,
+            "macd_hist": -0.14188983638151242,
+            "macd_hist_prev": 0.1388995409310425,
+            "rsi": 60.09432802660258,
+            "sma20": 262.3735,
+            "price": 268.47
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T20:29:18+00:00",
+              "source": "benzinga",
+              "tone": 0.11428343534074847,
+              "headline": "Magnificent Seven Wiped Out Over $1 Trillion This Week: Is The AI Bubble Bursting?"
+            },
+            {
+              "ts": "2025-11-07T19:58:26+00:00",
+              "source": "yahoo",
+              "tone": 0.9249636147501432,
+              "headline": "Arm Stock Triggers Sell Rule And Breaches Key Support Level"
+            },
+            {
+              "ts": "2025-11-07T18:54:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.639835720064118,
+              "headline": "Fund Update: New $140.5M $AAPL stock position opened by AXXCESS WEALTH MANAGEMENT, LLC"
             }
           ]
         }
@@ -811,7 +842,7 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 18779.97,
+      "portfolio_value_est": 19237.1,
       "cash_start": 488.58,
       "trades": [
         {
@@ -820,13 +851,13 @@
           "px": 69.21,
           "qty_hint": 6.49,
           "reason": "score<sell",
-          "score": -0.262526,
+          "score": -0.262814,
           "qty": 1,
           "notional": 69.21,
           "signals": {
             "TS": -0.497663,
-            "NS": 0.090178,
-            "CDS": -0.262526,
+            "NS": 0.089458,
+            "CDS": -0.262814,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -856,7 +887,7 @@
             {
               "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
-              "tone": 0.3318505977896922,
+              "tone": 0.32919963699705973,
               "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
@@ -867,13 +898,13 @@
           "px": 12.86,
           "qty_hint": 57.39,
           "reason": "score<sell",
-          "score": -0.404722,
+          "score": -0.413501,
           "qty": 14,
           "notional": 180.04,
           "signals": {
             "TS": -0.603998,
-            "NS": -0.105808,
-            "CDS": -0.404722,
+            "NS": -0.127755,
+            "CDS": -0.413501,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -891,20 +922,20 @@
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5292383992515479,
+              "tone": -0.5249914626689366,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
-            },
-            {
-              "ts": "2025-11-07T15:05:58+00:00",
-              "source": "stockstotrade",
-              "tone": 0.0,
-              "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.59247737544057,
+              "tone": -0.5877229696803471,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+            },
+            {
+              "ts": "2025-11-07T14:12:47+00:00",
+              "source": "sherwoodnews",
+              "tone": 0.0,
+              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             }
           ]
         },
@@ -914,13 +945,13 @@
           "px": 33.765,
           "qty_hint": 8.17,
           "reason": "score<sell",
-          "score": -0.310336,
+          "score": -0.310244,
           "qty": 2,
           "notional": 67.53,
           "signals": {
             "TS": -0.53846,
-            "NS": 0.031849,
-            "CDS": -0.310336,
+            "NS": 0.032079,
+            "CDS": -0.310244,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -961,13 +992,13 @@
           "px": 51.635,
           "qty_hint": 5.27,
           "reason": "score<sell",
-          "score": -0.336428,
+          "score": -0.334311,
           "qty": 1,
           "notional": 51.63,
           "signals": {
             "TS": -0.590189,
-            "NS": 0.044213,
-            "CDS": -0.336428,
+            "NS": 0.049508,
+            "CDS": -0.334311,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -985,7 +1016,7 @@
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5112197315578401,
+              "tone": 0.5071163963809724,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -1003,18 +1034,65 @@
           ]
         },
         {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 330.125,
+          "qty_hint": 9.48,
+          "reason": "score<sell",
+          "score": -0.250244,
+          "qty": 2,
+          "notional": 660.25,
+          "signals": {
+            "TS": -0.494979,
+            "NS": 0.116859,
+            "CDS": -0.250244,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.35547405729034,
+            "ema_slow": 330.97470687462123,
+            "macd": 1.3807671826691035,
+            "macd_signal": 2.089270707952628,
+            "macd_hist": -0.7085035252835246,
+            "macd_hist_prev": -0.5480652188849975,
+            "rsi14": 41.77325478873546,
+            "sma20": 331.66225
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T19:53:32+00:00",
+              "source": "benzinga",
+              "tone": -0.8393139850853588,
+              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
+            },
+            {
+              "ts": "2025-11-07T16:32:21+00:00",
+              "source": "seekingalpha",
+              "tone": 0.5994579770299066,
+              "headline": "Undercovered Dozen: Okta, Arbor Realty Trust, CVR Partners And More"
+            },
+            {
+              "ts": "2025-11-07T16:06:02+00:00",
+              "source": "newsercom",
+              "tone": 0.6032172193675835,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
+            }
+          ]
+        },
+        {
           "symbol": "JPM",
           "action": "BUY",
           "px": 314.265,
           "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.497177,
-          "qty": 1.166025,
-          "notional": 366.44,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.500901,
+          "qty": 1.377324,
+          "notional": 432.84,
           "signals": {
             "TS": 0.605219,
-            "NS": 0.335114,
-            "CDS": 0.497177,
+            "NS": 0.344424,
+            "CDS": 0.500901,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1030,8 +1108,14 @@
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 1.5547,
+          "qty_prev": 1.166025,
           "news_preview": [
+            {
+              "ts": "2025-11-07T23:01:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.3094379732217262,
+              "headline": "Insider Sale: Head of Human Resources of $JPM Sells 966 Shares"
+            },
             {
               "ts": "2025-11-07T18:26:00+00:00",
               "source": "nasdaq",
@@ -1043,17 +1127,57 @@
               "source": "benzinga",
               "tone": 0.0,
               "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
+            }
+          ]
+        },
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 12.86,
+          "qty": 5.163603,
+          "notional": 66.4,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.603998,
+            "NS": -0.127755,
+            "CDS": -0.413501,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 14.920424843528536,
+            "ema_slow": 16.34369736539872,
+            "macd": -1.4232725218701852,
+            "macd_signal": -1.073359602532031,
+            "macd_hist": -0.34991291933815405,
+            "macd_hist_prev": -0.34146423958122163,
+            "rsi": 30.427151809304206,
+            "sma20": 16.413999999999994,
+            "price": 12.86
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T15:37:27+00:00",
+              "source": "newsercom",
+              "tone": -0.5249914626689366,
+              "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
             },
             {
-              "ts": "2025-11-07T14:30:02+00:00",
-              "source": "yahoofinanceaustralia",
-              "tone": 0.5883461783654536,
-              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
+              "ts": "2025-11-07T14:50:36+00:00",
+              "source": "newsercom",
+              "tone": -0.5877229696803471,
+              "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+            },
+            {
+              "ts": "2025-11-07T14:12:47+00:00",
+              "source": "sherwoodnews",
+              "tone": 0.0,
+              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             }
           ]
         }
       ],
-      "cash_left": 1.96
+      "cash_left": 662.21
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1079,14 +1203,14 @@
           "action": "BUY",
           "px": 314.265,
           "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.497177,
-          "qty": 0.16155,
-          "notional": 50.77,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.500901,
+          "qty": 1.4216650000000002,
+          "notional": 446.78,
           "signals": {
             "TS": 0.605219,
-            "NS": 0.335114,
-            "CDS": 0.497177,
+            "NS": 0.344424,
+            "CDS": 0.500901,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1102,8 +1226,14 @@
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.2154,
+          "qty_prev": 0.16155,
           "news_preview": [
+            {
+              "ts": "2025-11-07T23:01:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.3094379732217262,
+              "headline": "Insider Sale: Head of Human Resources of $JPM Sells 966 Shares"
+            },
             {
               "ts": "2025-11-07T18:26:00+00:00",
               "source": "nasdaq",
@@ -1115,12 +1245,6 @@
               "source": "benzinga",
               "tone": 0.0,
               "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-07T14:30:02+00:00",
-              "source": "yahoofinanceaustralia",
-              "tone": 0.5883461783654536,
-              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
         },
@@ -1130,13 +1254,13 @@
           "px": 95.23,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.476136,
+          "score": 0.472935,
           "qty": 0.0001,
           "notional": 0.01,
           "signals": {
             "TS": 0.526972,
-            "NS": 0.399881,
-            "CDS": 0.476136,
+            "NS": 0.391879,
+            "CDS": 0.472935,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1156,67 +1280,71 @@
             {
               "ts": "2025-11-07T20:09:10+00:00",
               "source": "yahoo",
-              "tone": 0.945361144752643,
+              "tone": 0.9377716618110895,
               "headline": "Is Charles Schwab (SCHW) Still Undervalued After Its Strong Year-to-Date Share Price Gains?"
             },
             {
               "ts": "2025-11-07T20:09:10+00:00",
               "source": "yahoofinancecanada",
-              "tone": 0.6617527757183957,
+              "tone": 0.6564401372000989,
               "headline": "Is Charles Schwab (SCHW) Still Undervalued After Its Strong Year-to-Date Share Price Gains?"
             },
             {
               "ts": "2025-11-07T14:43:00+00:00",
               "source": "yahoo",
-              "tone": 0.8441369144974177,
+              "tone": 0.837360072908744,
               "headline": "Originally Aimed at Breakaways, Schwab Opens Program Aimed at Boosting Growth to More RIAs"
+            }
+          ]
+        },
+        {
+          "symbol": "AAPL",
+          "action": "SELL",
+          "px": 268.47,
+          "qty": 1.475062,
+          "notional": 396.01,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.284986,
+            "NS": 0.306903,
+            "CDS": -0.04823,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 267.2012318360039,
+            "ema_slow": 261.6331630358192,
+            "macd": 5.568068800184676,
+            "macd_signal": 5.7099586365661885,
+            "macd_hist": -0.14188983638151242,
+            "macd_hist_prev": 0.1388995409310425,
+            "rsi": 60.09432802660258,
+            "sma20": 262.3735,
+            "price": 268.47
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T20:29:18+00:00",
+              "source": "benzinga",
+              "tone": 0.11428343534074847,
+              "headline": "Magnificent Seven Wiped Out Over $1 Trillion This Week: Is The AI Bubble Bursting?"
+            },
+            {
+              "ts": "2025-11-07T19:58:26+00:00",
+              "source": "yahoo",
+              "tone": 0.9249636147501432,
+              "headline": "Arm Stock Triggers Sell Rule And Breaches Key Support Level"
+            },
+            {
+              "ts": "2025-11-07T18:54:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.639835720064118,
+              "headline": "Fund Update: New $140.5M $AAPL stock position opened by AXXCESS WEALTH MANAGEMENT, LLC"
             }
           ]
         }
       ],
       "cash_left": -50.78
-    },
-    "portfolio_paper_TS_only": {
-      "meta": {
-        "title": "Paper TS Only",
-        "trade_scope": "paper",
-        "decision_source": "TS_ONLY",
-        "ns_weight_boost": 1.0,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.12,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas",
-          "paper"
-        ],
-        "positions_path": "data/portfolios/portfolio_paper_TS_only/positions.csv"
-      },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
-    },
-    "portfolio_paper_NS_higher_weight": {
-      "meta": {
-        "title": "Paper NS+",
-        "trade_scope": "paper",
-        "decision_source": "CDS",
-        "ns_weight_boost": 1.7,
-        "per_line_frac": 0.02,
-        "max_deploy_frac": 0.15,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas",
-          "paper"
-        ],
-        "positions_path": "data/portfolios/portfolio_paper_NS_higher_weight/positions.csv"
-      },
-      "portfolio_value_est": 0.0,
-      "cash_start": 0.0,
-      "trades": [],
-      "cash_left": 0.0
     }
   }
 }
