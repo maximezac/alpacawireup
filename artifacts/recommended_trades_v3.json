@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T12:27:05.690310+00:00",
+  "as_of_utc": "2025-11-07T13:25:22.259390+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 28.39,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.268465,
+          "score": -0.262033,
           "qty": 57,
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.12219,
-            "CDS": -0.268465,
+            "NS": 0.13827,
+            "CDS": -0.262033,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -47,10 +47,10 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T05:15:26+00:00",
+              "ts": "2025-11-07T13:19:48+00:00",
               "source": "tipranks",
-              "tone": 0.8,
-              "headline": "D-Wave Quantum Inc. Reports Strong Q3 2025 Growth"
+              "tone": 0.58808,
+              "headline": "IONQ and QBTS: Top Cantor Analyst Boosts Price Targets on Two Key Quantum Stocks Post Q3 Earnings"
             },
             {
               "ts": "2025-11-07T05:10:24+00:00",
@@ -67,64 +67,18 @@
           ]
         },
         {
-          "symbol": "VTI",
-          "action": "SELL",
-          "px": 329.34,
-          "qty_hint": 11.48,
-          "reason": "score<sell",
-          "score": -0.300865,
-          "qty": 2,
-          "notional": 658.68,
-          "signals": {
-            "TS": -0.520567,
-            "NS": 0.028687,
-            "CDS": -0.300865,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 332.7610147949795,
-            "ema_slow": 331.04268358082317,
-            "macd": 1.7183312141563079,
-            "macd_signal": 2.2663963595202317,
-            "macd_hist": -0.5480651453639238,
-            "rsi14": 38.54929455033929,
-            "sma20": 331.242
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T20:44:02+00:00",
-              "source": "benzinga",
-              "tone": -0.71154,
-              "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
-            },
-            {
-              "ts": "2025-11-06T17:20:54+00:00",
-              "source": "seekingalpha",
-              "tone": -0.60201,
-              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
-            },
-            {
-              "ts": "2025-11-06T16:06:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.148,
-              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
-            }
-          ]
-        },
-        {
           "symbol": "QUBT",
           "action": "SELL",
           "px": 13.14,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.336615,
+          "score": -0.311401,
           "qty": 18,
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.046858,
-            "CDS": -0.336615,
+            "NS": 0.109894,
+            "CDS": -0.311401,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -139,6 +93,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:54:30+00:00",
+              "source": "aolcom",
+              "tone": 0.45155,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
+            {
               "ts": "2025-11-07T08:50:15+00:00",
               "source": "newsercom",
               "tone": -0.3062,
@@ -149,12 +109,6 @@
               "source": "simplywallst",
               "tone": 0.26335,
               "headline": "Quantum Computing (QUBT): Assessing Valuation After Recent Share Price Volatility"
-            },
-            {
-              "ts": "2025-11-06T22:22:06+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Trading Down 7.3% - Time to Sell?"
             }
           ]
         },
@@ -164,13 +118,13 @@
           "px": 65.275,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.268039,
+          "score": -0.311432,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.193079,
-            "CDS": -0.268039,
+            "NS": 0.084595,
+            "CDS": -0.311432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -197,10 +151,10 @@
               "headline": "AST SpaceMobile (ASTS) Stock: Teams Up With Vodafone to Build European Satellite Empire"
             },
             {
-              "ts": "2025-11-07T09:55:06+00:00",
-              "source": "newsercom",
-              "tone": 0.5,
-              "headline": "Can ASTS stock resist market sell offs - Weekly Gains Summary & Scalable Portfolio Growth Methods"
+              "ts": "2025-11-07T07:55:26+00:00",
+              "source": "benzinga",
+              "tone": 0.39636000000000005,
+              "headline": "Vodafone And AST SpaceMobile Choose Germany For Satellite Operations Centre Supporting EU Sovereign Connectivity And Digital Independence"
             }
           ]
         },
@@ -256,13 +210,13 @@
           "px": 34.345,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.27893,
+          "score": -0.273165,
           "qty": 3,
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.093855,
-            "CDS": -0.27893,
+            "NS": 0.108269,
+            "CDS": -0.273165,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -302,13 +256,13 @@
           "px": 127.06,
           "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.2708,
+          "score": -0.268976,
           "qty": 1,
           "notional": 127.06,
           "signals": {
             "TS": -0.536778,
-            "NS": 0.128167,
-            "CDS": -0.2708,
+            "NS": 0.132727,
+            "CDS": -0.268976,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -323,22 +277,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:38:48+00:00",
+              "source": "benzinga",
+              "tone": 0.03483,
+              "headline": "Robinhood Beats Earnings Expectations \u2014 Yet HOOD Drops 10%"
+            },
+            {
+              "ts": "2025-11-07T11:47:21+00:00",
+              "source": "yahoofinance",
+              "tone": 0.32453,
+              "headline": "Robinhood floats Bitcoin treasury idea as analysts eye 12% jump in stock price"
+            },
+            {
               "ts": "2025-11-07T10:43:23+00:00",
               "source": "theglobeandmail",
               "tone": 0.0,
               "headline": "Analysts Offer Insights on Financial Companies: Robinhood (HOOD) and Chime Financial, Inc. Class A (CHYM)"
-            },
-            {
-              "ts": "2025-11-07T09:30:56+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "These 3 Stocks Have Been the S&P 500's Hottest Buys This Year. Can They Still Go Higher?"
-            },
-            {
-              "ts": "2025-11-07T09:24:43+00:00",
-              "source": "coindesk",
-              "tone": -0.47515,
-              "headline": "Robinhood\u2019s Crypto Revenue Miss Tempers Solid Quarter: JPMorgan"
             }
           ]
         },
@@ -348,13 +302,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.535383,
+          "score": 0.528697,
           "qty": 2.1085,
           "notional": 600.48,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.387879,
-            "CDS": 0.535383,
+            "NS": 0.371163,
+            "CDS": 0.528697,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -369,6 +323,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
+            },
+            {
               "ts": "2025-11-07T11:48:56+00:00",
               "source": "benzinga",
               "tone": 0.80577,
@@ -379,12 +339,6 @@
               "source": "benzinga",
               "tone": 0.04644,
               "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            },
-            {
-              "ts": "2025-11-07T10:40:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Hikari Power Ltd Decreases Stock Position in Alphabet Inc. $GOOGL"
             }
           ]
         },
@@ -440,13 +394,13 @@
           "px": 19.98,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.362796,
+          "score": 0.372378,
           "qty": 0.0004,
           "notional": 0.01,
           "signals": {
             "TS": 0.306242,
-            "NS": 0.447627,
-            "CDS": 0.362796,
+            "NS": 0.471583,
+            "CDS": 0.372378,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -512,8 +466,8 @@
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.12219,
-            "CDS": -0.268465,
+            "NS": 0.13827,
+            "CDS": -0.262033,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -528,10 +482,10 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T05:15:26+00:00",
+              "ts": "2025-11-07T13:19:48+00:00",
               "source": "tipranks",
-              "tone": 0.8,
-              "headline": "D-Wave Quantum Inc. Reports Strong Q3 2025 Growth"
+              "tone": 0.58808,
+              "headline": "IONQ and QBTS: Top Cantor Analyst Boosts Price Targets on Two Key Quantum Stocks Post Q3 Earnings"
             },
             {
               "ts": "2025-11-07T05:10:24+00:00",
@@ -558,8 +512,8 @@
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": 0.028687,
-            "CDS": -0.300865,
+            "NS": 0.218556,
+            "CDS": -0.224918,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -574,22 +528,22 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T20:44:02+00:00",
-              "source": "benzinga",
-              "tone": -0.71154,
-              "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
+              "ts": "2025-11-07T10:03:20+00:00",
+              "source": "newsercom",
+              "tone": 0.4063,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - July 2025 Breakouts & Daily Volume Surge Signals"
             },
             {
-              "ts": "2025-11-06T17:20:54+00:00",
-              "source": "seekingalpha",
-              "tone": -0.60201,
-              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
+              "ts": "2025-11-07T09:53:49+00:00",
+              "source": "newsercom",
+              "tone": 0.5,
+              "headline": "Will VTI stock top growth indexes - July 2025 Drop Watch & Growth Focused Stock Reports"
             },
             {
-              "ts": "2025-11-06T16:06:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.148,
-              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
+              "ts": "2025-11-07T02:18:15+00:00",
+              "source": "newsercom",
+              "tone": 0.42405,
+              "headline": "Is VTI stock attractive post correction - Portfolio Update Summary & Free Risk Controlled Daily Trade Plans"
             }
           ]
         },
@@ -604,8 +558,8 @@
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.046858,
-            "CDS": -0.336615,
+            "NS": 0.109894,
+            "CDS": -0.311401,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -620,6 +574,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:54:30+00:00",
+              "source": "aolcom",
+              "tone": 0.45155,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
+            {
               "ts": "2025-11-07T08:50:15+00:00",
               "source": "newsercom",
               "tone": -0.3062,
@@ -630,12 +590,6 @@
               "source": "simplywallst",
               "tone": 0.26335,
               "headline": "Quantum Computing (QUBT): Assessing Valuation After Recent Share Price Volatility"
-            },
-            {
-              "ts": "2025-11-06T22:22:06+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Trading Down 7.3% - Time to Sell?"
             }
           ]
         },
@@ -650,8 +604,8 @@
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.193079,
-            "CDS": -0.268039,
+            "NS": 0.084595,
+            "CDS": -0.311432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -678,10 +632,10 @@
               "headline": "AST SpaceMobile (ASTS) Stock: Teams Up With Vodafone to Build European Satellite Empire"
             },
             {
-              "ts": "2025-11-07T09:55:06+00:00",
-              "source": "newsercom",
-              "tone": 0.5,
-              "headline": "Can ASTS stock resist market sell offs - Weekly Gains Summary & Scalable Portfolio Growth Methods"
+              "ts": "2025-11-07T07:55:26+00:00",
+              "source": "benzinga",
+              "tone": 0.39636000000000005,
+              "headline": "Vodafone And AST SpaceMobile Choose Germany For Satellite Operations Centre Supporting EU Sovereign Connectivity And Digital Independence"
             }
           ]
         },
@@ -742,8 +696,8 @@
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.093855,
-            "CDS": -0.27893,
+            "NS": 0.108269,
+            "CDS": -0.273165,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -788,8 +742,8 @@
           "notional": 366.98,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.387879,
-            "CDS": 0.535383,
+            "NS": 0.371163,
+            "CDS": 0.528697,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -804,6 +758,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
+            },
+            {
               "ts": "2025-11-07T11:48:56+00:00",
               "source": "benzinga",
               "tone": 0.80577,
@@ -814,12 +774,6 @@
               "source": "benzinga",
               "tone": 0.04644,
               "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            },
-            {
-              "ts": "2025-11-07T10:40:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Hikari Power Ltd Decreases Stock Position in Alphabet Inc. $GOOGL"
             }
           ]
         },
@@ -834,8 +788,8 @@
           "notional": 366.97,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.304927,
-            "CDS": 0.476152,
+            "NS": 0.335869,
+            "CDS": 0.488529,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -850,6 +804,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:07:58+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Kayne Anderson Capital Advisors LP Buys 5,951 Shares of First Solar, Inc. $FSLR"
+            },
+            {
               "ts": "2025-11-07T12:17:31+00:00",
               "source": "benzinga",
               "tone": 0.60435,
@@ -860,12 +820,6 @@
               "source": "investingcomnigeria",
               "tone": 0.0,
               "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock By Investing.com"
-            },
-            {
-              "ts": "2025-11-06T23:56:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
             }
           ]
         },
@@ -1006,13 +960,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.535383,
+          "score": 0.528697,
           "qty": 3.5086,
           "notional": 999.21,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.387879,
-            "CDS": 0.535383,
+            "NS": 0.371163,
+            "CDS": 0.528697,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1027,6 +981,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
+            },
+            {
               "ts": "2025-11-07T11:48:56+00:00",
               "source": "benzinga",
               "tone": 0.80577,
@@ -1037,12 +997,6 @@
               "source": "benzinga",
               "tone": 0.04644,
               "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            },
-            {
-              "ts": "2025-11-07T10:40:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Hikari Power Ltd Decreases Stock Position in Alphabet Inc. $GOOGL"
             }
           ]
         },
@@ -1098,13 +1052,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.476152,
+          "score": 0.488529,
           "qty": 3.672,
           "notional": 999.19,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.304927,
-            "CDS": 0.476152,
+            "NS": 0.335869,
+            "CDS": 0.488529,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1119,6 +1073,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:07:58+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Kayne Anderson Capital Advisors LP Buys 5,951 Shares of First Solar, Inc. $FSLR"
+            },
+            {
               "ts": "2025-11-07T12:17:31+00:00",
               "source": "benzinga",
               "tone": 0.60435,
@@ -1129,12 +1089,6 @@
               "source": "investingcomnigeria",
               "tone": 0.0,
               "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock By Investing.com"
-            },
-            {
-              "ts": "2025-11-06T23:56:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
             }
           ]
         },
@@ -1144,13 +1098,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.431879,
+          "score": 0.430528,
           "qty": 4.0796,
           "notional": 991.18,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.309447,
-            "CDS": 0.431879,
+            "NS": 0.306069,
+            "CDS": 0.430528,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1165,6 +1119,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:15:58+00:00",
+              "source": "247wallst",
+              "tone": 0.08895,
+              "headline": "Amazon (NASDAQ: AMZN) Stock Price Prediction in 2030: Bull, Bear, & Baseline Forecasts (Nov 7)"
+            },
+            {
               "ts": "2025-11-07T11:56:52+00:00",
               "source": "theglobeandmail",
               "tone": 0.3872,
@@ -1175,12 +1135,6 @@
               "source": "themotleyfool",
               "tone": 0.3872,
               "headline": "Why Are Investors Excited About Amazon Stock?"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
             }
           ]
         }
@@ -1212,13 +1166,13 @@
           "px": 65.275,
           "qty_hint": 6.49,
           "reason": "score<sell",
-          "score": -0.268039,
+          "score": -0.311432,
           "qty": 1,
           "notional": 65.28,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.193079,
-            "CDS": -0.268039,
+            "NS": 0.084595,
+            "CDS": -0.311432,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1245,10 +1199,10 @@
               "headline": "AST SpaceMobile (ASTS) Stock: Teams Up With Vodafone to Build European Satellite Empire"
             },
             {
-              "ts": "2025-11-07T09:55:06+00:00",
-              "source": "newsercom",
-              "tone": 0.5,
-              "headline": "Can ASTS stock resist market sell offs - Weekly Gains Summary & Scalable Portfolio Growth Methods"
+              "ts": "2025-11-07T07:55:26+00:00",
+              "source": "benzinga",
+              "tone": 0.39636000000000005,
+              "headline": "Vodafone And AST SpaceMobile Choose Germany For Satellite Operations Centre Supporting EU Sovereign Connectivity And Digital Independence"
             }
           ]
         },
@@ -1258,13 +1212,13 @@
           "px": 28.39,
           "qty_hint": 129.08,
           "reason": "score<sell",
-          "score": -0.268465,
+          "score": -0.262033,
           "qty": 32,
           "notional": 908.48,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.12219,
-            "CDS": -0.268465,
+            "NS": 0.13827,
+            "CDS": -0.262033,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1279,10 +1233,10 @@
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T05:15:26+00:00",
+              "ts": "2025-11-07T13:19:48+00:00",
               "source": "tipranks",
-              "tone": 0.8,
-              "headline": "D-Wave Quantum Inc. Reports Strong Q3 2025 Growth"
+              "tone": 0.58808,
+              "headline": "IONQ and QBTS: Top Cantor Analyst Boosts Price Targets on Two Key Quantum Stocks Post Q3 Earnings"
             },
             {
               "ts": "2025-11-07T05:10:24+00:00",
@@ -1304,13 +1258,13 @@
           "px": 13.14,
           "qty_hint": 43.39,
           "reason": "score<sell",
-          "score": -0.336615,
+          "score": -0.311401,
           "qty": 10,
           "notional": 131.4,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.046858,
-            "CDS": -0.336615,
+            "NS": 0.109894,
+            "CDS": -0.311401,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1325,6 +1279,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:54:30+00:00",
+              "source": "aolcom",
+              "tone": 0.45155,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
+            {
               "ts": "2025-11-07T08:50:15+00:00",
               "source": "newsercom",
               "tone": -0.3062,
@@ -1335,12 +1295,6 @@
               "source": "simplywallst",
               "tone": 0.26335,
               "headline": "Quantum Computing (QUBT): Assessing Valuation After Recent Share Price Volatility"
-            },
-            {
-              "ts": "2025-11-06T22:22:06+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Quantum Computing (NASDAQ:QUBT) Trading Down 7.3% - Time to Sell?"
             }
           ]
         },
@@ -1350,13 +1304,13 @@
           "px": 34.345,
           "qty_hint": 7.17,
           "reason": "score<sell",
-          "score": -0.27893,
+          "score": -0.273165,
           "qty": 1,
           "notional": 34.34,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.093855,
-            "CDS": -0.27893,
+            "NS": 0.108269,
+            "CDS": -0.273165,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1437,64 +1391,18 @@
           ]
         },
         {
-          "symbol": "VTI",
-          "action": "SELL",
-          "px": 329.34,
-          "qty_hint": 7.48,
-          "reason": "score<sell",
-          "score": -0.300865,
-          "qty": 1,
-          "notional": 329.34,
-          "signals": {
-            "TS": -0.520567,
-            "NS": 0.028687,
-            "CDS": -0.300865,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 332.7610147949795,
-            "ema_slow": 331.04268358082317,
-            "macd": 1.7183312141563079,
-            "macd_signal": 2.2663963595202317,
-            "macd_hist": -0.5480651453639238,
-            "rsi14": 38.54929455033929,
-            "sma20": 331.242
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T20:44:02+00:00",
-              "source": "benzinga",
-              "tone": -0.71154,
-              "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
-            },
-            {
-              "ts": "2025-11-06T17:20:54+00:00",
-              "source": "seekingalpha",
-              "tone": -0.60201,
-              "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
-            },
-            {
-              "ts": "2025-11-06T16:06:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.148,
-              "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
-            }
-          ]
-        },
-        {
           "symbol": "GOOGL",
           "action": "BUY",
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.535383,
+          "score": 0.528697,
           "qty": 2.0129,
           "notional": 573.25,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.387879,
-            "CDS": 0.535383,
+            "NS": 0.371163,
+            "CDS": 0.528697,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1509,6 +1417,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
+            },
+            {
               "ts": "2025-11-07T11:48:56+00:00",
               "source": "benzinga",
               "tone": 0.80577,
@@ -1519,12 +1433,6 @@
               "source": "benzinga",
               "tone": 0.04644,
               "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            },
-            {
-              "ts": "2025-11-07T10:40:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Hikari Power Ltd Decreases Stock Position in Alphabet Inc. $GOOGL"
             }
           ]
         },
@@ -1580,13 +1488,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.476152,
+          "score": 0.488529,
           "qty": 2.1067,
           "notional": 573.25,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.304927,
-            "CDS": 0.476152,
+            "NS": 0.335869,
+            "CDS": 0.488529,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1601,6 +1509,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:07:58+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Kayne Anderson Capital Advisors LP Buys 5,951 Shares of First Solar, Inc. $FSLR"
+            },
+            {
               "ts": "2025-11-07T12:17:31+00:00",
               "source": "benzinga",
               "tone": 0.60435,
@@ -1611,12 +1525,6 @@
               "source": "investingcomnigeria",
               "tone": 0.0,
               "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock By Investing.com"
-            },
-            {
-              "ts": "2025-11-06T23:56:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
             }
           ]
         },
@@ -1626,13 +1534,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.431879,
+          "score": 0.430528,
           "qty": 2.3594,
           "notional": 573.24,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.309447,
-            "CDS": 0.431879,
+            "NS": 0.306069,
+            "CDS": 0.430528,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1647,6 +1555,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:15:58+00:00",
+              "source": "247wallst",
+              "tone": 0.08895,
+              "headline": "Amazon (NASDAQ: AMZN) Stock Price Prediction in 2030: Bull, Bear, & Baseline Forecasts (Nov 7)"
+            },
+            {
               "ts": "2025-11-07T11:56:52+00:00",
               "source": "theglobeandmail",
               "tone": 0.3872,
@@ -1657,12 +1571,6 @@
               "source": "themotleyfool",
               "tone": 0.3872,
               "headline": "Why Are Investors Excited About Amazon Stock?"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
             }
           ]
         },
@@ -1672,13 +1580,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.428909,
+          "score": 0.416285,
           "qty": 0.1426,
           "notional": 67.74,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.268708,
-            "CDS": 0.428909,
+            "NS": 0.237146,
+            "CDS": 0.416285,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1693,22 +1601,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T10:56:26+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Why global investors buy Betterware de Mexico S.A.P.I. de stock - Quarterly Performance Summary & Technical Pattern Based Signals"
+            },
+            {
+              "ts": "2025-11-07T10:34:08+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Is DE stock nearing a technical breakout - July 2025 Levels & Weekly Momentum Stock Picks"
+            },
+            {
               "ts": "2025-11-07T09:54:03+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
               "headline": "Commonwealth Equity Services LLC Sells 10,796 Shares of Deere & Company $DE"
-            },
-            {
-              "ts": "2025-11-07T09:39:43+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "First Horizon Advisors Inc. Sells 1,362 Shares of Deere & Company $DE"
-            },
-            {
-              "ts": "2025-11-07T08:40:40+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Andra AP fonden Purchases 4,800 Shares of Deere & Company $DE"
             }
           ]
         }
@@ -1740,13 +1648,13 @@
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.535383,
+          "score": 0.528697,
           "qty": 2.1056,
           "notional": 599.65,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.387879,
-            "CDS": 0.535383,
+            "NS": 0.371163,
+            "CDS": 0.528697,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1761,6 +1669,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T12:15:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Prediction: Alphabet Stock Will Soar 50% by 2026"
+            },
+            {
               "ts": "2025-11-07T11:48:56+00:00",
               "source": "benzinga",
               "tone": 0.80577,
@@ -1771,12 +1685,6 @@
               "source": "benzinga",
               "tone": 0.04644,
               "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
-            },
-            {
-              "ts": "2025-11-07T10:40:58+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Hikari Power Ltd Decreases Stock Position in Alphabet Inc. $GOOGL"
             }
           ]
         },
@@ -1832,13 +1740,13 @@
           "px": 272.11,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.476152,
+          "score": 0.488529,
           "qty": 2.2037,
           "notional": 599.65,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.304927,
-            "CDS": 0.476152,
+            "NS": 0.335869,
+            "CDS": 0.488529,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1853,6 +1761,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:07:58+00:00",
+              "source": "marketbeat",
+              "tone": 0.47402999999999995,
+              "headline": "Kayne Anderson Capital Advisors LP Buys 5,951 Shares of First Solar, Inc. $FSLR"
+            },
+            {
               "ts": "2025-11-07T12:17:31+00:00",
               "source": "benzinga",
               "tone": 0.60435,
@@ -1863,12 +1777,6 @@
               "source": "investingcomnigeria",
               "tone": 0.0,
               "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock By Investing.com"
-            },
-            {
-              "ts": "2025-11-06T23:56:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
             }
           ]
         },
@@ -1878,13 +1786,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.431879,
+          "score": 0.430528,
           "qty": 2.4681,
           "notional": 599.65,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.309447,
-            "CDS": 0.431879,
+            "NS": 0.306069,
+            "CDS": 0.430528,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1899,6 +1807,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T13:15:58+00:00",
+              "source": "247wallst",
+              "tone": 0.08895,
+              "headline": "Amazon (NASDAQ: AMZN) Stock Price Prediction in 2030: Bull, Bear, & Baseline Forecasts (Nov 7)"
+            },
+            {
               "ts": "2025-11-07T11:56:52+00:00",
               "source": "theglobeandmail",
               "tone": 0.3872,
@@ -1909,12 +1823,6 @@
               "source": "themotleyfool",
               "tone": 0.3872,
               "headline": "Why Are Investors Excited About Amazon Stock?"
-            },
-            {
-              "ts": "2025-11-07T11:14:56+00:00",
-              "source": "benzinga",
-              "tone": 0.04644,
-              "headline": "Google Fires Back At Nvidia With Its New Ironwood AI Chip"
             }
           ]
         },
@@ -1924,13 +1832,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.428909,
+          "score": 0.416285,
           "qty": 1.2622,
           "notional": 599.62,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.268708,
-            "CDS": 0.428909,
+            "NS": 0.237146,
+            "CDS": 0.416285,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1945,22 +1853,22 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-07T10:56:26+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Why global investors buy Betterware de Mexico S.A.P.I. de stock - Quarterly Performance Summary & Technical Pattern Based Signals"
+            },
+            {
+              "ts": "2025-11-07T10:34:08+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Is DE stock nearing a technical breakout - July 2025 Levels & Weekly Momentum Stock Picks"
+            },
+            {
               "ts": "2025-11-07T09:54:03+00:00",
               "source": "marketbeat",
               "tone": 0.47402999999999995,
               "headline": "Commonwealth Equity Services LLC Sells 10,796 Shares of Deere & Company $DE"
-            },
-            {
-              "ts": "2025-11-07T09:39:43+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "First Horizon Advisors Inc. Sells 1,362 Shares of Deere & Company $DE"
-            },
-            {
-              "ts": "2025-11-07T08:40:40+00:00",
-              "source": "marketbeat",
-              "tone": 0.47402999999999995,
-              "headline": "Andra AP fonden Purchases 4,800 Shares of Deere & Company $DE"
             }
           ]
         }
