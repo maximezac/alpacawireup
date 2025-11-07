@@ -10,6 +10,15 @@ defaults:
   fractional_buys: true
   tags: [ideas]
   trade_scope: none             # none | paper | real | both
+  enable_momentum_phase: true
+  enable_rotation_upgrade: true
+  rotation:
+    trigger_cds: 0.50
+    min_gap: 0.25
+    max_turnover_frac: 0.10
+    sell_step_frac: 0.25
+    protect_profitable: true
+
 
 portfolios:
   portfolio_max_personal:
