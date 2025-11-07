@@ -1,0 +1,434 @@
+{
+  "as_of_utc": "2025-11-07T01:05:12.470374+00:00",
+  "portfolio_id": "portfolio_max_TS_only",
+  "meta": {
+    "title": "Max TS Only",
+    "trade_scope": "none",
+    "decision_source": "TS_ONLY",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.02,
+    "max_deploy_frac": 0.15,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 28.39,
+      "qty_hint": 229.08,
+      "reason": "score<sell",
+      "score": -0.528902,
+      "qty": 57,
+      "notional": 1618.23,
+      "signals": {
+        "TS": -0.528902,
+        "NS": 0.083022,
+        "CDS": -0.284132,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 32.47037205259351,
+        "ema_slow": 32.013041755858175,
+        "macd": 0.45733029673533565,
+        "macd_signal": 1.577408243560847,
+        "macd_hist": -1.1200779468255113,
+        "rsi14": 37.280108197454446,
+        "sma20": 34.72299999999998
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T22:22:14+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum (NYSE:QBTS) Stock Price Down 9.2% - Here's What Happened"
+        },
+        {
+          "ts": "2025-11-06T20:23:10+00:00",
+          "source": "fxleaders",
+          "tone": -0.2997,
+          "headline": "D-Wave\u2019s Slide Deepens Amid Investor Disillusion on Q3 Loss, QBTS Stock Tests Support"
+        },
+        {
+          "ts": "2025-11-06T17:45:11+00:00",
+          "source": "benzinga",
+          "tone": -0.34362,
+          "headline": "AI Stocks Slide Again, Bitcoin Dips Near $100,000: What's Moving Markets Thursday?"
+        }
+      ]
+    },
+    {
+      "symbol": "VTI",
+      "action": "SELL",
+      "px": 329.34,
+      "qty_hint": 11.48,
+      "reason": "score<sell",
+      "score": -0.520567,
+      "qty": 2,
+      "notional": 658.68,
+      "signals": {
+        "TS": -0.520567,
+        "NS": -0.104224,
+        "CDS": -0.35403,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 332.7610147949795,
+        "ema_slow": 331.04268358082317,
+        "macd": 1.7183312141563079,
+        "macd_signal": 2.2663963595202317,
+        "macd_hist": -0.5480651453639238,
+        "rsi14": 38.54929455033929,
+        "sma20": 331.242
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T20:44:02+00:00",
+          "source": "benzinga",
+          "tone": -0.71154,
+          "headline": "Benzinga Market Summary: S&P Falls As Chicago Fed President Expresses Rate Cut Uncertainty Amid Lack Of Data, Chip And Tech Stocks Pull Back, Airline Stocks Fall As FAA Cuts Air Traffic"
+        },
+        {
+          "ts": "2025-11-06T17:20:54+00:00",
+          "source": "seekingalpha",
+          "tone": -0.60201,
+          "headline": "PKB: In Fine Form, But Not The Best Price Point To Dive In"
+        },
+        {
+          "ts": "2025-11-06T16:06:00+00:00",
+          "source": "nasdaq",
+          "tone": 0.148,
+          "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
+        }
+      ]
+    },
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 13.14,
+      "qty_hint": 75.39,
+      "reason": "score<sell",
+      "score": -0.592264,
+      "qty": 18,
+      "notional": 236.52,
+      "signals": {
+        "TS": -0.592264,
+        "NS": 0.100926,
+        "CDS": -0.314988,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 15.295047542351908,
+        "ema_slow": 16.622393193688684,
+        "macd": -1.3273456513367758,
+        "macd_signal": -0.9858814301358166,
+        "macd_hist": -0.3414642212009592,
+        "rsi14": 31.713126429379557,
+        "sma20": 16.721499999999995
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T22:22:06+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Quantum Computing (NASDAQ:QUBT) Trading Down 7.3% - Time to Sell?"
+        },
+        {
+          "ts": "2025-11-06T18:43:38+00:00",
+          "source": "aolcom",
+          "tone": 0.0,
+          "headline": "Is Quantum Computing Inc. Stock a Buy Now?"
+        },
+        {
+          "ts": "2025-11-06T13:42:00+00:00",
+          "source": "investorsbusinessdaily",
+          "tone": -0.6990299999999999,
+          "headline": "Quantum Computing Stocks: IonQ Earnings Miss, Revenue Beats"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 65.275,
+      "qty_hint": 10.49,
+      "reason": "score<sell",
+      "score": -0.57545,
+      "qty": 2,
+      "notional": 130.55,
+      "signals": {
+        "TS": -0.57545,
+        "NS": 0.010958,
+        "CDS": -0.340887,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 73.68024935322241,
+        "ema_slow": 72.49786447204474,
+        "macd": 1.1823848811776685,
+        "macd_signal": 3.8235979655880126,
+        "macd_hist": -2.641213084410344,
+        "rsi14": 31.41098837646736,
+        "sma20": 79.25100000000006
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T23:00:02+00:00",
+          "source": "yahoofinance",
+          "tone": -0.727175,
+          "headline": "AST SpaceMobile, Inc. (ASTS) Suffers a Larger Drop Than the General Market: Key Insights"
+        },
+        {
+          "ts": "2025-11-06T22:22:05+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "AST SpaceMobile (NASDAQ:ASTS) Trading Down 7.2% - Here's What Happened"
+        },
+        {
+          "ts": "2025-11-06T18:31:59+00:00",
+          "source": "benzinga",
+          "tone": -0.34362,
+          "headline": "Space Stock Tracker\u2014BlackSky, Redwire Dump After Earnings; AST, Rocket Lab On Deck"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 49.605,
+      "qty_hint": 7.27,
+      "reason": "score<sell",
+      "score": -0.648029,
+      "qty": 1,
+      "notional": 49.6,
+      "signals": {
+        "TS": -0.648029,
+        "NS": 0.052011,
+        "CDS": -0.368013,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 59.54004556364467,
+        "ema_slow": 59.61360455704099,
+        "macd": -0.07355899339632543,
+        "macd_signal": 1.9908030027651242,
+        "macd_hist": -2.0643619961614497,
+        "rsi14": 22.77723975299783,
+        "sma20": 63.249
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T22:22:04+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Rocket Lab (NASDAQ:RKLB) Trading Down 12.1% - Here's Why"
+        },
+        {
+          "ts": "2025-11-06T19:18:18+00:00",
+          "source": "benzinga",
+          "tone": -0.42453,
+          "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
+        },
+        {
+          "ts": "2025-11-06T18:36:50+00:00",
+          "source": "newsercom",
+          "tone": 0.3544,
+          "headline": "Can RKLB stock hit record highs again - Market Sentiment Review & Comprehensive Market Scan Reports"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 34.345,
+      "qty_hint": 12.17,
+      "reason": "score<sell",
+      "score": -0.527454,
+      "qty": 3,
+      "notional": 103.03,
+      "signals": {
+        "TS": -0.527454,
+        "NS": 0.107153,
+        "CDS": -0.273611,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 38.96946379691645,
+        "ema_slow": 38.52443509552607,
+        "macd": 0.44502870139037753,
+        "macd_signal": 1.9970603049422917,
+        "macd_hist": -1.5520316035519142,
+        "rsi14": 37.52941583095094,
+        "sma20": 42.64124999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T22:22:09+00:00",
+          "source": "marketbeat",
+          "tone": 0.5441400000000001,
+          "headline": "Rigetti Computing (NASDAQ:RGTI) Shares Down 7.9% - What's Next?"
+        },
+        {
+          "ts": "2025-11-06T16:29:43+00:00",
+          "source": "tradingview",
+          "tone": 0.0,
+          "headline": "Quantum Stocks -- Rigetti, IonQ, and D-Wave Surge After Game-Changing Launch"
+        },
+        {
+          "ts": "2025-11-06T15:43:41+00:00",
+          "source": "parameterio",
+          "tone": 0.0,
+          "headline": "Rigetti Computing (RGTI) Stock: Is It A Buy Ahead Of November 10 Earnings?"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "action": "BUY",
+      "px": 284.79,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.633719,
+      "qty": 1.2886,
+      "notional": 366.98,
+      "signals": {
+        "TS": 0.633719,
+        "NS": 0.204776,
+        "CDS": 0.462142,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 273.91511264116673,
+        "ema_slow": 262.9253207792086,
+        "macd": 10.98979186195811,
+        "macd_signal": 9.18386156482649,
+        "macd_hist": 1.8059302971316207,
+        "rsi14": 74.41990549276227,
+        "sma20": 262.9185000000002
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T21:00:00+00:00",
+          "source": "investorsbusinessdaily",
+          "tone": 0.74844,
+          "headline": "This Dancing Elephant Stomps All Magnificent 7 Stocks Except Google, Nvidia"
+        },
+        {
+          "ts": "2025-11-06T20:40:58+00:00",
+          "source": "benzinga",
+          "tone": 0.30600000000000005,
+          "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
+        },
+        {
+          "ts": "2025-11-06T19:05:48+00:00",
+          "source": "yahoofinance",
+          "tone": 0.5607449999999999,
+          "headline": "Alphabet (NASDAQ:GOOGL) Posted Healthy Earnings But There Are Some Other Factors To Be Aware Of"
+        }
+      ]
+    },
+    {
+      "symbol": "FSLR",
+      "action": "BUY",
+      "px": 272.11,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.590301,
+      "qty": 1.3486,
+      "notional": 366.97,
+      "signals": {
+        "TS": 0.590301,
+        "NS": 0.29577,
+        "CDS": 0.472489,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 254.66756346321813,
+        "ema_slow": 242.081782295188,
+        "macd": 12.585781168030138,
+        "macd_signal": 9.279952147253411,
+        "macd_hist": 3.305829020776727,
+        "rsi14": 68.73795189199211,
+        "sma20": 242.33025000000012
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-06T21:19:50+00:00",
+          "source": "investingcom",
+          "tone": 0.0,
+          "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
+        },
+        {
+          "ts": "2025-11-06T16:33:11+00:00",
+          "source": "benzinga",
+          "tone": 0.73584,
+          "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+        },
+        {
+          "ts": "2025-11-06T15:33:15+00:00",
+          "source": "newsercom",
+          "tone": 0.45405,
+          "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "action": "BUY",
+      "px": 269.85,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.578813,
+      "qty": 0.9859,
+      "notional": 266.05,
+      "signals": {
+        "TS": 0.578813,
+        "NS": 0.306517,
+        "CDS": 0.469894,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 266.97054671527735,
+        "ema_slow": 261.0862162393808,
+        "macd": 5.884330475896547,
+        "macd_signal": 5.745430859343868,
+        "macd_hist": 0.13889961655267946,
+        "rsi14": 68.03847666832652,
+        "sma20": 261.21475
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T00:29:32+00:00",
+          "source": "tipranks",
+          "tone": -0.5095200000000001,
+          "headline": "\u2018Don\u2019t Fight the Valuation,\u2019 Says Analyst About Apple (AAPL) Stock"
+        },
+        {
+          "ts": "2025-11-06T18:01:53+00:00",
+          "source": "benzinga",
+          "tone": 0.44451,
+          "headline": "CNBC Halftime Report Final Trades: Apple, Western Union, Invesco S&P 500 Equal Weight Health Care ETF, Palo Alto Networks"
+        },
+        {
+          "ts": "2025-11-06T17:38:34+00:00",
+          "source": "benzinga",
+          "tone": 0.77751,
+          "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
+        }
+      ]
+    }
+  ]
+}

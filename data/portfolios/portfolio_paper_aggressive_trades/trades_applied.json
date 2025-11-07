@@ -1,0 +1,146 @@
+{
+  "as_of_utc": "2025-11-07T01:05:12.470374+00:00",
+  "portfolio_id": "portfolio_paper_aggressive_trades",
+  "trades": {
+    "pre": {
+      "as_of_utc": "2025-11-07T01:05:12.470374+00:00",
+      "portfolio_id": "portfolio_paper_aggressive_trades",
+      "cash": 7990.38,
+      "market_value": 11997.62,
+      "equity": 19988.0,
+      "holdings": {
+        "AAPL": {
+          "qty": 11.1151,
+          "avg_cost": 270.11985,
+          "mark": 269.85,
+          "market_value": 2999.41
+        },
+        "AMZN": {
+          "qty": 0.0003,
+          "avg_cost": 243.20296,
+          "mark": 242.96,
+          "market_value": 0.07
+        },
+        "DE": {
+          "qty": 6.3135,
+          "avg_cost": 475.53506,
+          "mark": 475.06,
+          "market_value": 2999.29
+        },
+        "FSLR": {
+          "qty": 11.0228,
+          "avg_cost": 272.38211,
+          "mark": 272.11,
+          "market_value": 2999.41
+        },
+        "GOOGL": {
+          "qty": 10.5321,
+          "avg_cost": 285.07479,
+          "mark": 284.79,
+          "market_value": 2999.44
+        }
+      }
+    },
+    "post": {
+      "as_of_utc": "2025-11-07T01:05:12.470374+00:00",
+      "portfolio_id": "portfolio_paper_aggressive_trades",
+      "cash": 3988.78,
+      "market_value": 15995.23,
+      "equity": 19984.01,
+      "holdings": {
+        "AAPL": {
+          "qty": 14.8186,
+          "avg_cost": 270.11985,
+          "mark": 269.85,
+          "market_value": 3998.8
+        },
+        "AMZN": {
+          "qty": 4.1137,
+          "avg_cost": 243.20296,
+          "mark": 242.96,
+          "market_value": 999.46
+        },
+        "DE": {
+          "qty": 6.3135,
+          "avg_cost": 475.53506,
+          "mark": 475.06,
+          "market_value": 2999.29
+        },
+        "FSLR": {
+          "qty": 14.6956,
+          "avg_cost": 272.38211,
+          "mark": 272.11,
+          "market_value": 3998.82
+        },
+        "GOOGL": {
+          "qty": 14.0414,
+          "avg_cost": 285.07479,
+          "mark": 284.79,
+          "market_value": 3998.85
+        }
+      }
+    },
+    "trades": [
+      {
+        "symbol": "FSLR",
+        "action": "BUY",
+        "qty": 3.6728,
+        "px_exec": 272.38211,
+        "slippage_bps": 10.0,
+        "reason": "score>buy",
+        "signals": {
+          "TS": 0.590301,
+          "NS": 0.29577,
+          "CDS": 0.472489,
+          "wT": 0.6,
+          "wN": 0.4
+        }
+      },
+      {
+        "symbol": "AAPL",
+        "action": "BUY",
+        "qty": 3.7035,
+        "px_exec": 270.11985,
+        "slippage_bps": 10.0,
+        "reason": "score>buy",
+        "signals": {
+          "TS": 0.578813,
+          "NS": 0.306517,
+          "CDS": 0.469894,
+          "wT": 0.6,
+          "wN": 0.4
+        }
+      },
+      {
+        "symbol": "GOOGL",
+        "action": "BUY",
+        "qty": 3.5093,
+        "px_exec": 285.07479,
+        "slippage_bps": 10.0,
+        "reason": "score>buy",
+        "signals": {
+          "TS": 0.633719,
+          "NS": 0.204776,
+          "CDS": 0.462142,
+          "wT": 0.6,
+          "wN": 0.4
+        }
+      },
+      {
+        "symbol": "AMZN",
+        "action": "BUY",
+        "qty": 4.1134,
+        "px_exec": 243.20296,
+        "slippage_bps": 10.0,
+        "reason": "score>buy",
+        "signals": {
+          "TS": 0.513501,
+          "NS": 0.259286,
+          "CDS": 0.411815,
+          "wT": 0.6,
+          "wN": 0.4
+        }
+      }
+    ]
+  }
+}
