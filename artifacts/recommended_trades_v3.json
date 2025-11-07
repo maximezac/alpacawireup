@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T20:30:24.553034+00:00",
+  "as_of_utc": "2025-11-07T20:37:08.844325+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -927,14 +927,14 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 18137.74,
-      "cash_start": 450.63,
+      "portfolio_value_est": 18221.78,
+      "cash_start": 365.77,
       "trades": [
         {
           "symbol": "QUBT",
           "action": "SELL",
           "px": 12.58,
-          "qty_hint": 15.39,
+          "qty_hint": 12.39,
           "reason": "score<sell",
           "score": -0.362442,
           "qty": 3,
@@ -980,7 +980,7 @@
           "symbol": "VTI",
           "action": "SELL",
           "px": 328.85,
-          "qty_hint": 7.48,
+          "qty_hint": 6.48,
           "reason": "score<sell",
           "score": -0.28094,
           "qty": 1,
@@ -1029,8 +1029,8 @@
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.495868,
-          "qty": 1.4383,
-          "notional": 450.62,
+          "qty": 1.1675,
+          "notional": 365.78,
           "signals": {
             "TS": 0.585709,
             "NS": 0.361107,
@@ -1067,55 +1067,9 @@
               "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
-        },
-        {
-          "symbol": "TWLO",
-          "action": "BUY",
-          "px": 126.54,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.47379,
-          "qty": 0.0001,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.517713,
-            "NS": 0.407905,
-            "CDS": 0.47379,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 123.17608740959264,
-            "ema_slow": 117.28399745312913,
-            "macd": 5.892089956463508,
-            "macd_signal": 4.445031541851757,
-            "macd_hist": 1.4470584146117504,
-            "rsi14": 59.70819297058222,
-            "sma20": 116.56350000000005
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T13:13:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.6110105321676507,
-              "headline": "Soltis Investment Advisors LLC Purchases 7,621 Shares of Twilio Inc. $TWLO"
-            },
-            {
-              "ts": "2025-11-07T11:57:31+00:00",
-              "source": "newsercom",
-              "tone": 0.5858875045121604,
-              "headline": "Best data tools to analyze TWLO stock - Weekly Trade Recap & High Return Trade Opportunity Guides"
-            },
-            {
-              "ts": "2025-11-07T11:45:51+00:00",
-              "source": "yahoo",
-              "tone": 0.8335984922151508,
-              "headline": "Shareholders Can Be Confident That Twilio's (NYSE:TWLO) Earnings Are High Quality"
-            }
-          ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_paper_reasonable": {
       "meta": {
