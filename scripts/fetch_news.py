@@ -37,6 +37,7 @@ from __future__ import annotations
 import os, sys, json, re
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+import math
 
 import requests
 import feedparser
@@ -56,8 +57,8 @@ NEWS_LIMIT    = int(os.environ.get("NEWS_LIMIT_PER_SYMBOL", "25"))
 NEWS_SOURCES  = os.environ.get("NEWS_SOURCES", "").strip()
 
 USE_FINBERT       = os.environ.get("USE_FINBERT", "0") == "1"
-FINBERT_TRIGGER   = float(os.environ.get("FINBERT_TRIGGER", "0.20"))
-FINBERT_FRACTION  = float(os.environ.get("FINBERT_FRACTION", "0.30"))
+FINBERT_TRIGGER   = float(os.environ.get("FINBERT_TRIGGER", "0.30"))
+FINBERT_FRACTION  = float(os.environ.get("FINBERT_FRACTION", "0.40"))
 NEWSAPI_KEY       = os.environ.get("NEWSAPI_KEY")
 FINNHUB_KEY       = os.environ.get("FINNHUB_KEY")
 SRC_WEIGHTS_JSON  = os.environ.get("NEWS_SOURCE_WEIGHTS_JSON")  # optional path
@@ -107,7 +108,7 @@ NEWS_SOURCE_WEIGHTS_DEFAULT = {
 
     # transports: treat as neutral carriers; weight applies only if we
     # couldn't identify a better publisher
-    "googlerss": 0.50,
+    "googlerss": 0.70,
     "reddit": 0.35,
     "finnhub": 1.00,   # API carrier, but content often from publishers
     "newsapi": 0.30,
@@ -196,12 +197,25 @@ def finbert_score(text: str) -> float:
     probs = logits.softmax(dim=-1).tolist()  # [neg, neu, pos]
     return float(probs[2] - probs[0])  # [-1,1]
 
-def score_tone(headline: str, summary: str, src_token: str, via_token: str | None = None) -> float:
+def _parse_iso_dt(ts: str | None):
+    if not ts:
+        return None
+    try:
+        from dateutil import parser
+        dt = parser.isoparse(ts)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+def score_tone(headline: str, summary: str, ts_iso: str | None, src_token: str, via_token: str | None = None) -> float:
     text = " ".join([headline or "", summary or ""]).strip()
     if not text:
         return 0.0
 
     comp = analyzer.polarity_scores(text).get("compound", 0.0)
+    comp *= 1.5
 
     # Efficiency/speedup floor if we detect "from X to Y"
     if _SPEEDUP_RE.search(text):
@@ -210,6 +224,13 @@ def score_tone(headline: str, summary: str, src_token: str, via_token: str | Non
     # LM overlay
     comp += lm_overlay_score(text)
     comp = max(-1.0, min(1.0, comp))
+
+    # 2) time-decay (fresh news matters more). 48h time constant.
+    dt = _parse_iso_dt(ts_iso)
+    if dt is not None:
+        age_hours = max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0)
+        decay = math.exp(-age_hours / 48.0)
+        comp *= decay
 
     # Optional FinBERT on low-confidence
     if USE_FINBERT and abs(comp) < FINBERT_TRIGGER:
@@ -443,7 +464,7 @@ def main():
             for a in deduped:
                 src = norm_source(a.get("source"))
                 via = norm_source(a.get("via"))
-                a["tone"] = score_tone(a.get("headline",""), a.get("summary",""), src, via)
+                a["tone"] = score_tone(a.get("headline",""), a.get("summary",""), a.get("ts"), src, via)
 
             # Sort newest first
             from dateutil import parser
