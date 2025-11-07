@@ -121,6 +121,14 @@ jobs:
               print("summarize trades failed:", e, file=sys.stderr)
           PY
 
+      - name: Inspect per-portfolio plans
+        run: |
+          echo "=== portfolios tree after postprocess ==="
+          ls -R data/portfolios || true
+          echo "=== sample contents ==="
+          find data/portfolios -maxdepth 2 -type f -name 'trades_plan*.json' -print | head -n 30 || true
+
+
       - name: Check snapshot idempotency
         id: idem
         shell: bash
@@ -179,6 +187,19 @@ jobs:
           TRADES_LEDGER:      data/trades_ledger.csv
           APPLY_TRADES:       "0"
         run: python scripts/update_performance_v3.py
+
+      - name: Inspect per-portfolio outputs
+        run: |
+          echo "=== portfolios tree after update_performance ==="
+          ls -R data/portfolios || true
+          echo "=== sample files (value/applied/ledger/history) ==="
+          find data/portfolios -type f \( \
+            -name 'portfolio_value*.json' -o \
+            -name 'trades_applied*.json' -o \
+            -name 'trades_ledger.csv' -o \
+            -name 'history.csv' -o \
+            -name 'last_execution_summary.json' \
+          \) -print | head -n 100 || true
 
       - name: Commit & push all portfolio data
         run: |
