@@ -16,7 +16,7 @@ Environment variables:
 - SYMBOLS_PATH            : optional; default "data/symbols.txt"
 - OUTPUT_PATH             : optional; default "data/prices.json"
 - DAYS_BACK               : optional; default "200" (days of 1Day bars to request, max used for indicators)
-- MAX_SYMBOLS             : optional; default "100"  (cap to avoid rate limiting)
+- MAX_SYMBOLS             : optional; default "200"  (cap to avoid rate limiting)
 - REQUEST_TIMEOUT_SEC     : optional; default "15"
 - REQUEST_SLEEP_SEC       : optional; default "0.25" (sleep between symbols to ease rate limits)
 
