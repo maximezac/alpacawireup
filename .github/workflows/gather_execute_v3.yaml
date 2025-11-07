@@ -12,7 +12,6 @@ on:
         required: false
         default: "false"
   schedule:
-    # ~30 min before US close (handles DST with two crons)
     - cron: "30 19 * * 1-5"
     - cron: "30 20 * * 1-5"
 
@@ -29,13 +28,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
 
       - name: Set up Python
         uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+        with: { python-version: "3.11" }
 
       - name: Install dependencies
         run: |
@@ -44,6 +41,9 @@ jobs:
                       python-dateutil==2.9.0.post0 feedparser==6.0.11 \
                       vaderSentiment==3.3.2 pyyaml==6.0.2 matplotlib==3.9.2
           pip install -r requirements.txt || echo "requirements.txt already satisfied."
+
+      - name: Export PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> "$GITHUB_ENV"
 
       - name: Probe freshness
         id: probe
@@ -99,35 +99,6 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
         run: python publish_feed.py
 
-      - name: Diagnose portfolio value (max_autotrader)
-        run: |
-          python - <<'PY'
-          import json, pandas as pd
-          from pathlib import Path
-
-          pf = Path("data/portfolios/portfolio_max_autotrader")
-          prices = json.load(open("data/prices_final.json"))
-          symbols = prices.get("symbols", {})
-
-          pos = pd.read_csv(pf / "positions.csv")
-          missing = []
-          total_mv = 0.0
-          for _, r in pos.iterrows():
-              sym = str(r["symbol"]).strip()
-              if sym == "__CASH__":
-                  continue
-              node = symbols.get(sym)
-              if not node or node.get("price") in (None, 0):
-                  missing.append(sym)
-              else:
-                  mv = float(r["qty"]) * float(node["price"])
-                  total_mv += mv
-                  print(f"{sym}: qty={r['qty']} px={node['price']} → mv={mv:.2f}")
-          print("\nMissing / zero-priced symbols:", missing)
-          print("Computed market value:", round(total_mv, 2))
-          PY
-
-
       - name: Postprocess (build multi-portfolio plans)
         env:
           INPUT_FINAL:        data/prices_final.json
@@ -149,14 +120,6 @@ jobs:
           except Exception as e:
               print("summarize trades failed:", e, file=sys.stderr)
           PY
-
-      - name: Inspect per-portfolio plans
-        run: |
-          echo "=== portfolios tree after postprocess ==="
-          ls -R data/portfolios || true
-          echo "=== sample contents ==="
-          find data/portfolios -maxdepth 2 -type f -name 'trades_plan*.json' -print | head -n 30 || true
-
 
       - name: Check snapshot idempotency
         id: idem
@@ -220,44 +183,11 @@ jobs:
       - name: Build performance timeseries (+ charts)
         run: python scripts/build_perf_timeseries.py
 
-      - name: Commit & push (perf artifacts)
+      - name: Commit & push
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin ${{ github.ref_name }}
-          git add data/perf_timeseries.csv data/perf_timeseries.json artifacts/perf_charts/*.png || true
-          git commit -m "perf: update consolidated timeseries and charts" || echo "No changes."
-          git push
-
-      - name: Inspect per-portfolio outputs
-        run: |
-          echo "=== portfolios tree after update_performance ==="
-          ls -R data/portfolios || true
-          echo "=== sample files (value/applied/ledger/history) ==="
-          find data/portfolios -type f \( \
-            -name 'portfolio_value*.json' -o \
-            -name 'trades_applied*.json' -o \
-            -name 'trades_ledger.csv' -o \
-            -name 'history.csv' -o \
-            -name 'last_execution_summary.json' \
-          \) -print | head -n 100 || true
-
-      - name: Commit & push all portfolio data
-        run: |
-          set -e
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash origin ${{ github.ref_name }}
-      
-          # Stage whole directories; avoids pathspec errors when no files match
-          git add -A artifacts || true
-          git add -A data || true
-      
-          echo "=== staged files ==="
-          git status --porcelain
-      
+          git add -A artifacts data || true
           git commit -m "v3: persist per-portfolio artifacts (plans, ledgers, history, values) [skip ci]" || echo "No changes."
           git push
-
-
-
