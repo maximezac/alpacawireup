@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T22:22:10.428294+00:00",
+  "as_of_utc": "2025-11-07T22:51:31.531978+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,69 +17,22 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 18857.47,
-      "cash_start": 1000.0,
+      "portfolio_value_est": 19269.04,
+      "cash_start": 0.0,
       "trades": [
-        {
-          "symbol": "VTI",
-          "action": "SELL",
-          "px": 330.125,
-          "qty_hint": 11.48,
-          "reason": "score<sell",
-          "score": -0.28685,
-          "qty": 2,
-          "notional": 660.25,
-          "signals": {
-            "TS": -0.494979,
-            "NS": 0.025345,
-            "CDS": -0.28685,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 332.35547405729034,
-            "ema_slow": 330.97470687462123,
-            "macd": 1.3807671826691035,
-            "macd_signal": 2.089270707952628,
-            "macd_hist": -0.7085035252835246,
-            "macd_hist_prev": -0.5480652188849975,
-            "rsi14": 41.77325478873546,
-            "sma20": 331.66225
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T19:53:32+00:00",
-              "source": "benzinga",
-              "tone": -0.8547866830624704,
-              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
-            },
-            {
-              "ts": "2025-11-07T16:32:21+00:00",
-              "source": "seekingalpha",
-              "tone": 0.6105089461395152,
-              "headline": "Undercovered Dozen: Okta, Arbor Realty Trust, CVR Partners And More"
-            },
-            {
-              "ts": "2025-11-07T14:55:20+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/7/2025"
-            }
-          ]
-        },
         {
           "symbol": "QUBT",
           "action": "SELL",
           "px": 12.86,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.411817,
+          "score": -0.404722,
           "qty": 18,
           "notional": 231.48,
           "signals": {
             "TS": -0.603998,
-            "NS": -0.123544,
-            "CDS": -0.411817,
+            "NS": -0.105808,
+            "CDS": -0.404722,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -97,67 +50,20 @@
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5346703628325946,
+              "tone": -0.5292383992515479,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
+            },
+            {
+              "ts": "2025-11-07T15:05:58+00:00",
+              "source": "stockstotrade",
+              "tone": 0.0,
+              "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.5985584061000535,
+              "tone": -0.59247737544057,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
-            },
-            {
-              "ts": "2025-11-07T14:12:47+00:00",
-              "source": "sherwoodnews",
-              "tone": 0.0,
-              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
-            }
-          ]
-        },
-        {
-          "symbol": "ASTS",
-          "action": "SELL",
-          "px": 69.21,
-          "qty_hint": 10.49,
-          "reason": "score<sell",
-          "score": -0.279361,
-          "qty": 2,
-          "notional": 138.42,
-          "signals": {
-            "TS": -0.497663,
-            "NS": 0.048091,
-            "CDS": -0.279361,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 72.99251868349589,
-            "ema_slow": 72.25431907132457,
-            "macd": 0.7381996121713144,
-            "macd_signal": 3.206518147862554,
-            "macd_hist": -2.46831853569124,
-            "macd_hist_prev": -2.6412130255934985,
-            "rsi14": 41.286732200437456,
-            "sma20": 78.61100000000008
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T15:05:12+00:00",
-              "source": "parameterio",
-              "tone": 0.0,
-              "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
-            },
-            {
-              "ts": "2025-11-07T14:01:47+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
-            },
-            {
-              "ts": "2025-11-07T10:26:33+00:00",
-              "source": "benzinga",
-              "tone": 0.3352646934040895,
-              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         },
@@ -165,15 +71,15 @@
           "symbol": "RKLB",
           "action": "SELL",
           "px": 51.635,
-          "qty_hint": 7.27,
+          "qty_hint": 6.27,
           "reason": "score<sell",
-          "score": -0.333929,
+          "score": -0.336428,
           "qty": 1,
           "notional": 51.63,
           "signals": {
             "TS": -0.590189,
-            "NS": 0.050462,
-            "CDS": -0.333929,
+            "NS": 0.044213,
+            "CDS": -0.336428,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -191,7 +97,7 @@
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5164658905513329,
+              "tone": 0.5112197315578401,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -212,15 +118,15 @@
           "symbol": "RGTI",
           "action": "SELL",
           "px": 33.765,
-          "qty_hint": 12.17,
+          "qty_hint": 10.17,
           "reason": "score<sell",
-          "score": -0.310059,
-          "qty": 3,
-          "notional": 101.3,
+          "score": -0.310336,
+          "qty": 2,
+          "notional": 67.53,
           "signals": {
             "TS": -0.53846,
-            "NS": 0.032542,
-            "CDS": -0.310059,
+            "NS": 0.031849,
+            "CDS": -0.310336,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -256,157 +162,54 @@
           ]
         },
         {
-          "symbol": "JPM",
-          "action": "BUY",
-          "px": 314.265,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.503848,
-          "qty": 1.4217,
-          "notional": 446.79,
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.21,
+          "qty_hint": 8.49,
+          "reason": "score<sell",
+          "score": -0.262526,
+          "qty": 2,
+          "notional": 138.42,
           "signals": {
-            "TS": 0.605219,
-            "NS": 0.351792,
-            "CDS": 0.503848,
+            "TS": -0.497663,
+            "NS": 0.090178,
+            "CDS": -0.262526,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 308.8255944752825,
-            "ema_slow": 306.69860290161057,
-            "macd": 2.126991573671944,
-            "macd_signal": 0.74331440486118,
-            "macd_hist": 1.383677168810764,
-            "macd_hist_prev": 1.345925406208733,
-            "rsi14": 71.7289981569196,
-            "sma20": 304.7172500000001
+            "ema_fast": 72.99251868349589,
+            "ema_slow": 72.25431907132457,
+            "macd": 0.7381996121713144,
+            "macd_signal": 3.206518147862554,
+            "macd_hist": -2.46831853569124,
+            "macd_hist_prev": -2.6412130255934985,
+            "rsi14": 41.286732200437456,
+            "sma20": 78.61100000000008
           },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 1.8956,
           "news_preview": [
             {
-              "ts": "2025-11-07T18:26:00+00:00",
-              "source": "nasdaq",
+              "ts": "2025-11-07T15:05:12+00:00",
+              "source": "parameterio",
               "tone": 0.0,
-              "headline": "Noteworthy Friday Option Activity: LULU, JPM, SMCI"
+              "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
             },
             {
-              "ts": "2025-11-07T17:35:22+00:00",
+              "ts": "2025-11-07T14:01:47+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
             },
             {
-              "ts": "2025-11-07T14:30:02+00:00",
-              "source": "yahoofinanceaustralia",
-              "tone": 0.594389498769373,
-              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
-            }
-          ]
-        },
-        {
-          "symbol": "DDOG",
-          "action": "BUY",
-          "px": 191.21,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.487757,
-          "qty": 1.585725,
-          "notional": 303.21,
-          "signals": {
-            "TS": 0.697703,
-            "NS": 0.17284,
-            "CDS": 0.487757,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 167.02182355918,
-            "ema_slow": 159.9690366652815,
-            "macd": 7.052786893898514,
-            "macd_signal": 4.405646908791897,
-            "macd_hist": 2.647139985106617,
-            "macd_hist_prev": 1.4103517861935169,
-            "rsi14": 82.36065048946499,
-            "sma20": 160.82249999999988
-          },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 2.1143,
-          "news_preview": [
-            {
-              "ts": "2025-11-07T22:07:39+00:00",
-              "source": "gurufocus",
-              "tone": 0.0,
-              "headline": "Datadog (DDOG): Canaccord Genuity Raises Price Target to $225 |"
-            },
-            {
-              "ts": "2025-11-07T21:43:33+00:00",
-              "source": "gurufocus",
-              "tone": 0.6910343175814446,
-              "headline": "DDOG Sees Target Price Boost from Scotiabank Analyst | DDOG Stoc"
-            },
-            {
-              "ts": "2025-11-07T21:39:28+00:00",
+              "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Canaccord Genuity Maintains Buy on Datadog, Raises Price Target to $225"
-            }
-          ]
-        },
-        {
-          "symbol": "DOCN",
-          "action": "BUY",
-          "px": 49.495,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.463841,
-          "qty": 7.5e-05,
-          "notional": 0.0,
-          "signals": {
-            "TS": 0.65177,
-            "NS": 0.181947,
-            "CDS": 0.463841,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 42.89292263896726,
-            "ema_slow": 40.79467714222123,
-            "macd": 2.0982454967460313,
-            "macd_signal": 1.3463743091735179,
-            "macd_hist": 0.7518711875725135,
-            "macd_hist_prev": 0.4354871110819942,
-            "rsi14": 76.43548022092882,
-            "sma20": 41.392500000000005
-          },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 0.0001,
-          "news_preview": [
-            {
-              "ts": "2025-11-07T21:01:38+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Price Target Raised to $60.00 at Canaccord Genuity Group"
-            },
-            {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
-            },
-            {
-              "ts": "2025-11-07T16:09:49+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How DOCN stock valuations compare to rivals - CEO Change & Daily Market Momentum Tracking"
+              "tone": 0.3318505977896922,
+              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         }
       ],
-      "cash_left": 433.08
+      "cash_left": 489.06
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -423,22 +226,22 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 17174.86,
-      "cash_start": 1000.0,
+      "portfolio_value_est": 19269.04,
+      "cash_start": 0.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
           "px": 29.53,
-          "qty_hint": 229.08,
+          "qty_hint": 230.08,
           "reason": "score<sell",
           "score": -0.498298,
           "qty": 57,
           "notional": 1683.21,
           "signals": {
             "TS": -0.498298,
-            "NS": 0.208296,
-            "CDS": -0.215661,
+            "NS": 0.208057,
+            "CDS": -0.215756,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -462,13 +265,13 @@
             {
               "ts": "2025-11-07T22:00:35+00:00",
               "source": "marketbeat",
-              "tone": 0.8935056709645128,
+              "tone": 0.8844268311639102,
               "headline": "D-Wave Quantum (NYSE:QBTS) Trading 4.1% Higher on Strong Earnings"
             },
             {
               "ts": "2025-11-07T17:30:34+00:00",
               "source": "marketbeat",
-              "tone": 0.8135414594020908,
+              "tone": 0.8052751286122193,
               "headline": "Rosenblatt Securities Boosts D-Wave Quantum (NYSE:QBTS) Price Target to $40.00"
             }
           ]
@@ -477,15 +280,15 @@
           "symbol": "VTI",
           "action": "SELL",
           "px": 330.125,
-          "qty_hint": 11.48,
+          "qty_hint": 9.48,
           "reason": "score<sell",
           "score": -0.494979,
           "qty": 2,
           "notional": 660.25,
           "signals": {
             "TS": -0.494979,
-            "NS": 0.025345,
-            "CDS": -0.28685,
+            "NS": 0.128479,
+            "CDS": -0.245596,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -503,20 +306,20 @@
             {
               "ts": "2025-11-07T19:53:32+00:00",
               "source": "benzinga",
-              "tone": -0.8547866830624704,
+              "tone": -0.846114407705693,
               "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
             },
             {
               "ts": "2025-11-07T16:32:21+00:00",
               "source": "seekingalpha",
-              "tone": 0.6105089461395152,
+              "tone": 0.6043150004691844,
               "headline": "Undercovered Dozen: Okta, Arbor Realty Trust, CVR Partners And More"
             },
             {
-              "ts": "2025-11-07T14:55:20+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/7/2025"
+              "ts": "2025-11-07T16:06:02+00:00",
+              "source": "newsercom",
+              "tone": 0.6081047017365828,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
             }
           ]
         },
@@ -531,8 +334,8 @@
           "notional": 231.48,
           "signals": {
             "TS": -0.603998,
-            "NS": -0.123544,
-            "CDS": -0.411817,
+            "NS": -0.105808,
+            "CDS": -0.404722,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -550,67 +353,67 @@
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5346703628325946,
+              "tone": -0.5292383992515479,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
+            },
+            {
+              "ts": "2025-11-07T15:05:58+00:00",
+              "source": "stockstotrade",
+              "tone": 0.0,
+              "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.5985584061000535,
+              "tone": -0.59247737544057,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
-            },
-            {
-              "ts": "2025-11-07T14:12:47+00:00",
-              "source": "sherwoodnews",
-              "tone": 0.0,
-              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             }
           ]
         },
         {
-          "symbol": "ASTS",
+          "symbol": "HOOD",
           "action": "SELL",
-          "px": 69.21,
-          "qty_hint": 10.49,
+          "px": 130.36,
+          "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.497663,
-          "qty": 2,
-          "notional": 138.42,
+          "score": -0.501386,
+          "qty": 1,
+          "notional": 130.36,
           "signals": {
-            "TS": -0.497663,
-            "NS": 0.048091,
-            "CDS": -0.279361,
+            "TS": -0.501386,
+            "NS": 0.214019,
+            "CDS": -0.215224,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 72.99251868349589,
-            "ema_slow": 72.25431907132457,
-            "macd": 0.7381996121713144,
-            "macd_signal": 3.206518147862554,
-            "macd_hist": -2.46831853569124,
-            "macd_hist_prev": -2.6412130255934985,
-            "rsi14": 41.286732200437456,
-            "sma20": 78.61100000000008
+            "ema_fast": 137.51390305756442,
+            "ema_slow": 136.35964578627716,
+            "macd": 1.154257271287264,
+            "macd_signal": 2.886370255462074,
+            "macd_hist": -1.73211298417481,
+            "macd_hist_prev": -1.344403246290784,
+            "rsi14": 40.86506746411284,
+            "sma20": 137.28600000000006
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T15:05:12+00:00",
-              "source": "parameterio",
-              "tone": 0.0,
-              "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
+              "ts": "2025-11-07T22:00:45+00:00",
+              "source": "marketbeat",
+              "tone": 0.884626519438022,
+              "headline": "Robinhood Markets (NASDAQ:HOOD) Shares Up 2.6% After Analyst Upgrade"
             },
             {
-              "ts": "2025-11-07T14:01:47+00:00",
+              "ts": "2025-11-07T21:10:25+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+              "tone": -0.8693004944786551,
+              "headline": "Main Street's Job Fears Hit Wall Street As AI Rally Falters: This Week In Markets"
             },
             {
-              "ts": "2025-11-07T10:26:33+00:00",
+              "ts": "2025-11-07T19:03:47+00:00",
               "source": "benzinga",
-              "tone": 0.3352646934040895,
-              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
+              "tone": 0.3409149071595765,
+              "headline": "Stock Of The Day: Where Will The Robinhood Sell-Off End?"
             }
           ]
         },
@@ -618,15 +421,15 @@
           "symbol": "RKLB",
           "action": "SELL",
           "px": 51.635,
-          "qty_hint": 7.27,
+          "qty_hint": 6.27,
           "reason": "score<sell",
           "score": -0.590189,
           "qty": 1,
           "notional": 51.63,
           "signals": {
             "TS": -0.590189,
-            "NS": 0.050462,
-            "CDS": -0.333929,
+            "NS": 0.044213,
+            "CDS": -0.336428,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -644,7 +447,7 @@
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5164658905513329,
+              "tone": 0.5112197315578401,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -665,15 +468,15 @@
           "symbol": "RGTI",
           "action": "SELL",
           "px": 33.765,
-          "qty_hint": 12.17,
+          "qty_hint": 10.17,
           "reason": "score<sell",
           "score": -0.53846,
-          "qty": 3,
-          "notional": 101.3,
+          "qty": 2,
+          "notional": 67.53,
           "signals": {
             "TS": -0.53846,
-            "NS": 0.032542,
-            "CDS": -0.310059,
+            "NS": 0.031849,
+            "CDS": -0.310336,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -709,157 +512,54 @@
           ]
         },
         {
-          "symbol": "DDOG",
-          "action": "BUY",
-          "px": 191.21,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.697703,
-          "qty": 1.42575,
-          "notional": 272.62,
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.21,
+          "qty_hint": 8.49,
+          "reason": "score<sell",
+          "score": -0.497663,
+          "qty": 2,
+          "notional": 138.42,
           "signals": {
-            "TS": 0.697703,
-            "NS": 0.17284,
-            "CDS": 0.487757,
+            "TS": -0.497663,
+            "NS": 0.090178,
+            "CDS": -0.262526,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 167.02182355918,
-            "ema_slow": 159.9690366652815,
-            "macd": 7.052786893898514,
-            "macd_signal": 4.405646908791897,
-            "macd_hist": 2.647139985106617,
-            "macd_hist_prev": 1.4103517861935169,
-            "rsi14": 82.36065048946499,
-            "sma20": 160.82249999999988
+            "ema_fast": 72.99251868349589,
+            "ema_slow": 72.25431907132457,
+            "macd": 0.7381996121713144,
+            "macd_signal": 3.206518147862554,
+            "macd_hist": -2.46831853569124,
+            "macd_hist_prev": -2.6412130255934985,
+            "rsi14": 41.286732200437456,
+            "sma20": 78.61100000000008
           },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 1.901,
           "news_preview": [
             {
-              "ts": "2025-11-07T22:07:39+00:00",
-              "source": "gurufocus",
+              "ts": "2025-11-07T15:05:12+00:00",
+              "source": "parameterio",
               "tone": 0.0,
-              "headline": "Datadog (DDOG): Canaccord Genuity Raises Price Target to $225 |"
+              "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
             },
             {
-              "ts": "2025-11-07T21:43:33+00:00",
-              "source": "gurufocus",
-              "tone": 0.6910343175814446,
-              "headline": "DDOG Sees Target Price Boost from Scotiabank Analyst | DDOG Stoc"
-            },
-            {
-              "ts": "2025-11-07T21:39:28+00:00",
+              "ts": "2025-11-07T14:01:47+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "Canaccord Genuity Maintains Buy on Datadog, Raises Price Target to $225"
-            }
-          ]
-        },
-        {
-          "symbol": "CMI",
-          "action": "BUY",
-          "px": 473.345,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.662822,
-          "qty": 0.575925,
-          "notional": 272.61,
-          "signals": {
-            "TS": 0.662822,
-            "NS": 0.064206,
-            "CDS": 0.423376,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 440.724452936071,
-            "ema_slow": 430.84263327058466,
-            "macd": 9.881819665486319,
-            "macd_signal": 5.55905093196303,
-            "macd_hist": 4.322768733523288,
-            "macd_hist_prev": 2.872641698179324,
-            "rsi14": 78.52938839011513,
-            "sma20": 427.8479999999998
-          },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 0.7679,
-          "news_preview": [
-            {
-              "ts": "2025-11-07T21:43:34+00:00",
-              "source": "gurufocus",
-              "tone": 0.0,
-              "headline": "Cummins (CMI) Sees Price Target Raised to $530 by Citigroup | CM"
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
             },
             {
-              "ts": "2025-11-07T20:41:20+00:00",
+              "ts": "2025-11-07T10:26:33+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Citigroup Maintains Buy on Cummins, Raises Price Target to $530"
-            },
-            {
-              "ts": "2025-11-07T19:53:53+00:00",
-              "source": "yahoo",
-              "tone": -0.9503325325175397,
-              "headline": "Market Skids, But This Stock Didn't Get The Memo. It's Up 9% This Week."
-            }
-          ]
-        },
-        {
-          "symbol": "DOCN",
-          "action": "BUY",
-          "px": 49.495,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.65177,
-          "qty": 4.137225,
-          "notional": 204.77,
-          "signals": {
-            "TS": 0.65177,
-            "NS": 0.181947,
-            "CDS": 0.463841,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 42.89292263896726,
-            "ema_slow": 40.79467714222123,
-            "macd": 2.0982454967460313,
-            "macd_signal": 1.3463743091735179,
-            "macd_hist": 0.7518711875725135,
-            "macd_hist_prev": 0.4354871110819942,
-            "rsi14": 76.43548022092882,
-            "sma20": 41.392500000000005
-          },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 5.5163,
-          "news_preview": [
-            {
-              "ts": "2025-11-07T21:01:38+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Price Target Raised to $60.00 at Canaccord Genuity Group"
-            },
-            {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
-            },
-            {
-              "ts": "2025-11-07T16:09:49+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How DOCN stock valuations compare to rivals - CEO Change & Daily Market Momentum Tracking"
+              "tone": 0.3318505977896922,
+              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         }
       ],
-      "cash_left": 2116.29
+      "cash_left": 2962.89
     },
     "portfolio_max_NS_higher_weight": {
       "meta": {
@@ -948,14 +648,14 @@
           "action": "BUY",
           "px": 314.265,
           "qty_hint": 0.0,
-          "reason": "score>buy|topped_by_rotation",
-          "score": 0.503848,
-          "qty": 2.3587979999999997,
-          "notional": 741.29,
+          "reason": "score>buy",
+          "score": 0.497177,
+          "qty": 0.124125,
+          "notional": 39.01,
           "signals": {
             "TS": 0.605219,
-            "NS": 0.351792,
-            "CDS": 0.503848,
+            "NS": 0.335114,
+            "CDS": 0.497177,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -971,7 +671,7 @@
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.124125,
+          "qty_prev": 0.1655,
           "news_preview": [
             {
               "ts": "2025-11-07T18:26:00+00:00",
@@ -988,54 +688,8 @@
             {
               "ts": "2025-11-07T14:30:02+00:00",
               "source": "yahoofinanceaustralia",
-              "tone": 0.594389498769373,
+              "tone": 0.5883461783654536,
               "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "SELL",
-          "px": 268.47,
-          "qty": 2.615859,
-          "notional": 702.28,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.284986,
-            "NS": 0.288998,
-            "CDS": -0.055392,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 267.2012318360039,
-            "ema_slow": 261.6331630358192,
-            "macd": 5.568068800184676,
-            "macd_signal": 5.7099586365661885,
-            "macd_hist": -0.14188983638151242,
-            "macd_hist_prev": 0.1388995409310425,
-            "rsi": 60.09432802660258,
-            "sma20": 262.3735,
-            "price": 268.47
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T20:29:18+00:00",
-              "source": "benzinga",
-              "tone": 0.11638887917190872,
-              "headline": "Magnificent Seven Wiped Out Over $1 Trillion This Week: Is The AI Bubble Bursting?"
-            },
-            {
-              "ts": "2025-11-07T19:58:26+00:00",
-              "source": "yahoo",
-              "tone": 0.942004223988911,
-              "headline": "Arm Stock Triggers Sell Rule And Breaches Key Support Level"
-            },
-            {
-              "ts": "2025-11-07T18:54:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.6516234474632303,
-              "headline": "Fund Update: New $140.5M $AAPL stock position opened by AXXCESS WEALTH MANAGEMENT, LLC"
             }
           ]
         }
@@ -1058,22 +712,22 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 18350.31,
-      "cash_start": 365.85,
+      "portfolio_value_est": 19269.04,
+      "cash_start": 0.0,
       "trades": [
         {
           "symbol": "QUBT",
           "action": "SELL",
           "px": 12.86,
-          "qty_hint": 9.39,
+          "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.411817,
-          "qty": 2,
-          "notional": 25.72,
+          "score": -0.404722,
+          "qty": 18,
+          "notional": 231.48,
           "signals": {
             "TS": -0.603998,
-            "NS": -0.123544,
-            "CDS": -0.411817,
+            "NS": -0.105808,
+            "CDS": -0.404722,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1091,213 +745,20 @@
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5346703628325946,
+              "tone": -0.5292383992515479,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
+            },
+            {
+              "ts": "2025-11-07T15:05:58+00:00",
+              "source": "stockstotrade",
+              "tone": 0.0,
+              "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.5985584061000535,
+              "tone": -0.59247737544057,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
-            },
-            {
-              "ts": "2025-11-07T14:12:47+00:00",
-              "source": "sherwoodnews",
-              "tone": 0.0,
-              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
-            }
-          ]
-        },
-        {
-          "symbol": "VTI",
-          "action": "SELL",
-          "px": 330.125,
-          "qty_hint": 5.48,
-          "reason": "score<sell",
-          "score": -0.28685,
-          "qty": 1,
-          "notional": 330.12,
-          "signals": {
-            "TS": -0.494979,
-            "NS": 0.025345,
-            "CDS": -0.28685,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 332.35547405729034,
-            "ema_slow": 330.97470687462123,
-            "macd": 1.3807671826691035,
-            "macd_signal": 2.089270707952628,
-            "macd_hist": -0.7085035252835246,
-            "macd_hist_prev": -0.5480652188849975,
-            "rsi14": 41.77325478873546,
-            "sma20": 331.66225
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T19:53:32+00:00",
-              "source": "benzinga",
-              "tone": -0.8547866830624704,
-              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
-            },
-            {
-              "ts": "2025-11-07T16:32:21+00:00",
-              "source": "seekingalpha",
-              "tone": 0.6105089461395152,
-              "headline": "Undercovered Dozen: Okta, Arbor Realty Trust, CVR Partners And More"
-            },
-            {
-              "ts": "2025-11-07T14:55:20+00:00",
-              "source": "tipranks",
-              "tone": 0.0,
-              "headline": "VTI ETF Daily Update: What Investors Need to Know \u2013 11/7/2025"
-            }
-          ]
-        },
-        {
-          "symbol": "JPM",
-          "action": "BUY",
-          "px": 314.265,
-          "qty_hint": 0.0,
-          "reason": "score>buy|topped_by_rotation",
-          "score": 0.503848,
-          "qty": 1.313833,
-          "notional": 412.89,
-          "signals": {
-            "TS": 0.605219,
-            "NS": 0.351792,
-            "CDS": 0.503848,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 308.8255944752825,
-            "ema_slow": 306.69860290161057,
-            "macd": 2.126991573671944,
-            "macd_signal": 0.74331440486118,
-            "macd_hist": 1.383677168810764,
-            "macd_hist_prev": 1.345925406208733,
-            "rsi14": 71.7289981569196,
-            "sma20": 304.7172500000001
-          },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 0.873075,
-          "news_preview": [
-            {
-              "ts": "2025-11-07T18:26:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.0,
-              "headline": "Noteworthy Friday Option Activity: LULU, JPM, SMCI"
-            },
-            {
-              "ts": "2025-11-07T17:35:22+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-07T14:30:02+00:00",
-              "source": "yahoofinanceaustralia",
-              "tone": 0.594389498769373,
-              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
-            }
-          ]
-        },
-        {
-          "symbol": "DDOG",
-          "action": "BUY",
-          "px": 191.21,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.487757,
-          "qty": 7.5e-05,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.697703,
-            "NS": 0.17284,
-            "CDS": 0.487757,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 167.02182355918,
-            "ema_slow": 159.9690366652815,
-            "macd": 7.052786893898514,
-            "macd_signal": 4.405646908791897,
-            "macd_hist": 2.647139985106617,
-            "macd_hist_prev": 1.4103517861935169,
-            "rsi14": 82.36065048946499,
-            "sma20": 160.82249999999988
-          },
-          "phase": "mid",
-          "size_k": 0.75,
-          "qty_prev": 0.0001,
-          "news_preview": [
-            {
-              "ts": "2025-11-07T22:07:39+00:00",
-              "source": "gurufocus",
-              "tone": 0.0,
-              "headline": "Datadog (DDOG): Canaccord Genuity Raises Price Target to $225 |"
-            },
-            {
-              "ts": "2025-11-07T21:43:33+00:00",
-              "source": "gurufocus",
-              "tone": 0.6910343175814446,
-              "headline": "DDOG Sees Target Price Boost from Scotiabank Analyst | DDOG Stoc"
-            },
-            {
-              "ts": "2025-11-07T21:39:28+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Canaccord Genuity Maintains Buy on Datadog, Raises Price Target to $225"
-            }
-          ]
-        },
-        {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 12.86,
-          "qty": 2.3475,
-          "notional": 30.19,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.603998,
-            "NS": -0.123544,
-            "CDS": -0.411817,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 14.920424843528536,
-            "ema_slow": 16.34369736539872,
-            "macd": -1.4232725218701852,
-            "macd_signal": -1.073359602532031,
-            "macd_hist": -0.34991291933815405,
-            "macd_hist_prev": -0.34146423958122163,
-            "rsi": 30.427151809304206,
-            "sma20": 16.413999999999994,
-            "price": 12.86
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T15:37:27+00:00",
-              "source": "newsercom",
-              "tone": -0.5346703628325946,
-              "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
-            },
-            {
-              "ts": "2025-11-07T14:50:36+00:00",
-              "source": "newsercom",
-              "tone": -0.5985584061000535,
-              "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
-            },
-            {
-              "ts": "2025-11-07T14:12:47+00:00",
-              "source": "sherwoodnews",
-              "tone": 0.0,
-              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             }
           ]
         },
@@ -1305,13 +766,15 @@
           "symbol": "RKLB",
           "action": "SELL",
           "px": 51.635,
-          "qty": 0.8175,
-          "notional": 42.21,
-          "reason": "rotation_upgrade",
+          "qty_hint": 6.27,
+          "reason": "score<sell",
+          "score": -0.336428,
+          "qty": 1,
+          "notional": 51.63,
           "signals": {
             "TS": -0.590189,
-            "NS": 0.050462,
-            "CDS": -0.333929,
+            "NS": 0.044213,
+            "CDS": -0.336428,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1322,15 +785,14 @@
             "macd_signal": 1.4529003581810125,
             "macd_hist": -2.1516122063027163,
             "macd_hist_prev": -2.0643621263987457,
-            "rsi": 30.272258092627183,
-            "sma20": 62.62025,
-            "price": 51.635
+            "rsi14": 30.272258092627183,
+            "sma20": 62.62025
           },
           "news_preview": [
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5164658905513329,
+              "tone": 0.5112197315578401,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -1348,53 +810,101 @@
           ]
         },
         {
-          "symbol": "MSFT",
+          "symbol": "RGTI",
           "action": "SELL",
-          "px": 496.81,
-          "qty": 0.133078,
-          "notional": 66.11,
-          "reason": "rotation_upgrade",
+          "px": 33.765,
+          "qty_hint": 10.17,
+          "reason": "score<sell",
+          "score": -0.310336,
+          "qty": 2,
+          "notional": 67.53,
           "signals": {
-            "TS": -0.646379,
-            "NS": 0.166236,
-            "CDS": -0.321333,
+            "TS": -0.53846,
+            "NS": 0.031849,
+            "CDS": -0.310336,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 513.4989849915758,
-            "ema_slow": 516.0784353807418,
-            "macd": -2.579450389166027,
-            "macd_signal": 1.0682712879353276,
-            "macd_hist": -3.6477216771013543,
-            "macd_hist_prev": -3.066766019276896,
-            "rsi": 23.077536743723286,
-            "sma20": 517.9074999999998,
-            "price": 496.81
+            "ema_fast": 38.1687770589293,
+            "ema_slow": 38.17188429707849,
+            "macd": -0.003107238149191005,
+            "macd_signal": 1.5970268606549347,
+            "macd_hist": -1.6001340988041257,
+            "macd_hist_prev": -1.5520316292842873,
+            "rsi14": 36.44451111785996,
+            "sma20": 42.13399999999999
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T20:59:03+00:00",
-              "source": "benzinga",
-              "tone": 0.7864346420961759,
-              "headline": "Watching Microsoft; Traders Circulate 'OpenAI Asks U.S. To Expand Chips Act Tax Credit To Data Centers'"
+              "ts": "2025-11-07T17:39:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Rigetti Pre-Q3 Earnings Analysis: Buy, Sell or Hold the Stock?"
             },
             {
-              "ts": "2025-11-07T20:29:18+00:00",
-              "source": "benzinga",
-              "tone": 0.1163503528464598,
-              "headline": "Magnificent Seven Wiped Out Over $1 Trillion This Week: Is The AI Bubble Bursting?"
+              "ts": "2025-11-07T14:12:47+00:00",
+              "source": "sherwoodnews",
+              "tone": 0.0,
+              "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
             },
             {
-              "ts": "2025-11-07T19:00:32+00:00",
+              "ts": "2025-11-07T14:01:30+00:00",
               "source": "benzinga",
               "tone": 0.0,
-              "headline": "Price Over Earnings Overview: Microsoft"
+              "headline": "Insights into Rigetti Computing's Upcoming Earnings"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.21,
+          "qty_hint": 8.49,
+          "reason": "score<sell",
+          "score": -0.262526,
+          "qty": 2,
+          "notional": 138.42,
+          "signals": {
+            "TS": -0.497663,
+            "NS": 0.090178,
+            "CDS": -0.262526,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 72.99251868349589,
+            "ema_slow": 72.25431907132457,
+            "macd": 0.7381996121713144,
+            "macd_signal": 3.206518147862554,
+            "macd_hist": -2.46831853569124,
+            "macd_hist_prev": -2.6412130255934985,
+            "rsi14": 41.286732200437456,
+            "sma20": 78.61100000000008
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T15:05:12+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
+            },
+            {
+              "ts": "2025-11-07T14:01:47+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+            },
+            {
+              "ts": "2025-11-07T10:26:33+00:00",
+              "source": "benzinga",
+              "tone": 0.3318505977896922,
+              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         }
       ],
-      "cash_left": 81.44
+      "cash_left": 489.06
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1420,14 +930,14 @@
           "action": "BUY",
           "px": 314.265,
           "qty_hint": 0.0,
-          "reason": "score>buy|topped_by_rotation",
-          "score": 0.503848,
-          "qty": 1.407079,
-          "notional": 442.19,
+          "reason": "score>buy",
+          "score": 0.497177,
+          "qty": 0.648225,
+          "notional": 203.71,
           "signals": {
             "TS": 0.605219,
-            "NS": 0.351792,
-            "CDS": 0.503848,
+            "NS": 0.335114,
+            "CDS": 0.497177,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1443,7 +953,7 @@
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.648225,
+          "qty_prev": 0.8643,
           "news_preview": [
             {
               "ts": "2025-11-07T18:26:00+00:00",
@@ -1460,7 +970,7 @@
             {
               "ts": "2025-11-07T14:30:02+00:00",
               "source": "yahoofinanceaustralia",
-              "tone": 0.594389498769373,
+              "tone": 0.5883461783654536,
               "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
@@ -1471,13 +981,13 @@
           "px": 8.205,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.409185,
+          "score": 0.408205,
           "qty": 0.0001,
           "notional": 0.0,
           "signals": {
             "TS": 0.538108,
-            "NS": 0.215801,
-            "CDS": 0.409185,
+            "NS": 0.213351,
+            "CDS": 0.408205,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1511,52 +1021,6 @@
               "source": "marketsfinancialcontent",
               "tone": 0.0,
               "headline": "Snap Has a $400 Million Catalyst Right Now. Does It Make SNAP Stock a Buy?"
-            }
-          ]
-        },
-        {
-          "symbol": "AAPL",
-          "action": "SELL",
-          "px": 268.47,
-          "qty": 0.888298,
-          "notional": 238.48,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.284986,
-            "NS": 0.288998,
-            "CDS": -0.055392,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 267.2012318360039,
-            "ema_slow": 261.6331630358192,
-            "macd": 5.568068800184676,
-            "macd_signal": 5.7099586365661885,
-            "macd_hist": -0.14188983638151242,
-            "macd_hist_prev": 0.1388995409310425,
-            "rsi": 60.09432802660258,
-            "sma20": 262.3735,
-            "price": 268.47
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T20:29:18+00:00",
-              "source": "benzinga",
-              "tone": 0.11638887917190872,
-              "headline": "Magnificent Seven Wiped Out Over $1 Trillion This Week: Is The AI Bubble Bursting?"
-            },
-            {
-              "ts": "2025-11-07T19:58:26+00:00",
-              "source": "yahoo",
-              "tone": 0.942004223988911,
-              "headline": "Arm Stock Triggers Sell Rule And Breaches Key Support Level"
-            },
-            {
-              "ts": "2025-11-07T18:54:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.6516234474632303,
-              "headline": "Fund Update: New $140.5M $AAPL stock position opened by AXXCESS WEALTH MANAGEMENT, LLC"
             }
           ]
         }
