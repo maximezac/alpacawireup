@@ -185,9 +185,14 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin ${{ github.ref_name }}
+          
+          # Stage everything relevant: modified and new files in artifacts + data/portfolios
           git add \
             artifacts/**/*.json \
             data/*.json data/*history.csv data/trades_ledger.csv \
-            data/portfolios/**/*.json data/portfolios/**/*.csv || true
-          git commit -m "v3: gather+execute (paper=${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'and personal' || 'only' }}, dry_run=${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'schedule' }}) [skip ci]" || echo "No changes."
+            data/portfolios/**/*.json data/portfolios/**/*.csv data/portfolios/**/*.yaml \
+            data/portfolios/**/ || true
+          
+          git commit -m "v3: gather+execute (paper=${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.apply_personal == 'true') && 'and personal' || 'only' }}, dry_run=${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'schedule' }}) [skip ci]" || echo 'No changes.'
           git push
+
