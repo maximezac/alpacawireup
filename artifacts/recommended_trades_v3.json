@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T20:16:44.271292+00:00",
+  "as_of_utc": "2025-11-07T20:30:24.553034+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,85 +17,177 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 13481.88,
+      "portfolio_value_est": 18642.09,
       "cash_start": 1000.0,
       "trades": [
         {
-          "symbol": "QUBT",
+          "symbol": "VTI",
           "action": "SELL",
-          "px": 12.73,
-          "qty_hint": 75.39,
+          "px": 328.85,
+          "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.362904,
-          "qty": 18,
-          "notional": 229.14,
+          "score": -0.28094,
+          "qty": 2,
+          "notional": 657.7,
           "signals": {
-            "TS": -0.608634,
-            "NS": 0.005692,
-            "CDS": -0.362904,
+            "TS": -0.531135,
+            "NS": 0.094351,
+            "CDS": -0.28094,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 14.900424843528537,
-            "ema_slow": 16.334067735769093,
-            "macd": -1.433642892240556,
-            "macd_signal": -1.0754336766061052,
-            "macd_hist": -0.35820921563445074,
-            "rsi14": 29.86488873793556,
-            "sma20": 16.407499999999995
+            "ema_fast": 332.1593202111365,
+            "ema_slow": 330.8802624301768,
+            "macd": 1.279057780959704,
+            "macd_signal": 2.0689288276107485,
+            "macd_hist": -0.7898710466510446,
+            "rsi14": 37.261478971057585,
+            "sma20": 331.5985
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T19:24:02+00:00",
+              "ts": "2025-11-07T19:53:32+00:00",
+              "source": "benzinga",
+              "tone": -0.8886302613497677,
+              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
+            },
+            {
+              "ts": "2025-11-07T16:06:02+00:00",
+              "source": "newsercom",
+              "tone": 0.6386609623499842,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
+            },
+            {
+              "ts": "2025-11-07T15:53:54+00:00",
+              "source": "newsercom",
+              "tone": 0.635975969485962,
+              "headline": "Will VTI stock top growth indexes - July 2025 Technicals & Fast Exit and Entry Trade Guides"
+            }
+          ]
+        },
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 12.58,
+          "qty_hint": 75.39,
+          "reason": "score<sell",
+          "score": -0.362442,
+          "qty": 18,
+          "notional": 226.44,
+          "signals": {
+            "TS": -0.61378,
+            "NS": 0.014566,
+            "CDS": -0.362442,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 14.877347920451614,
+            "ema_slow": 16.322956624657984,
+            "macd": -1.4456087042063697,
+            "macd_signal": -1.077826838999268,
+            "macd_hist": -0.36778186520710165,
+            "rsi14": 29.241406024008015,
+            "sma20": 16.399999999999995
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T20:24:25+00:00",
               "source": "aolcom",
-              "tone": 0.6873254914952542,
+              "tone": 0.698746234925182,
               "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
             },
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5583534430925089,
+              "tone": -0.5558538525157952,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.6250713912191629,
+              "tone": -0.6222731221733272,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 68.56,
+          "qty_hint": 10.49,
+          "reason": "score<sell",
+          "score": -0.282706,
+          "qty": 2,
+          "notional": 137.12,
+          "signals": {
+            "TS": -0.509249,
+            "NS": 0.057108,
+            "CDS": -0.282706,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 72.8925186834959,
+            "ema_slow": 72.20617092317643,
+            "macd": 0.6863477603194639,
+            "macd_signal": 3.196147777492184,
+            "macd_hist": -2.50980001717272,
+            "rsi14": 39.856277208008805,
+            "sma20": 78.57850000000006
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T15:05:12+00:00",
+              "source": "parameterio",
+              "tone": 0.0,
+              "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
+            },
+            {
+              "ts": "2025-11-07T14:01:47+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+            },
+            {
+              "ts": "2025-11-07T10:26:33+00:00",
+              "source": "benzinga",
+              "tone": 0.3485571538295052,
+              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         },
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.59,
+          "px": 50.78,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.31851,
+          "score": -0.347036,
           "qty": 1,
-          "notional": 51.59,
+          "notional": 50.78,
           "signals": {
-            "TS": -0.591404,
-            "NS": 0.090832,
-            "CDS": -0.31851,
+            "TS": -0.614198,
+            "NS": 0.053707,
+            "CDS": -0.347036,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 58.31696163077625,
-            "ema_slow": 59.019263222487695,
-            "macd": -0.7023015917114463,
-            "macd_signal": 1.452182409463064,
-            "macd_hist": -2.1544840011745103,
-            "rsi14": 30.121914524780337,
-            "sma20": 62.617999999999995
+            "ema_fast": 58.19234624616086,
+            "ema_slow": 58.95926322248769,
+            "macd": -0.7669169763268329,
+            "macd_signal": 1.4392593325399865,
+            "macd_hist": -2.2061763088668194,
+            "rsi14": 27.300389945937326,
+            "sma20": 62.5775
           },
           "news_preview": [
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5393391845274089,
+              "tone": 0.5369276546860928,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -115,27 +207,27 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 33.37,
+          "px": 32.89,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.308203,
+          "score": -0.316942,
           "qty": 3,
-          "notional": 100.11,
+          "notional": 98.67,
           "signals": {
-            "TS": -0.544254,
-            "NS": 0.045875,
-            "CDS": -0.308203,
+            "TS": -0.55101,
+            "NS": 0.03416,
+            "CDS": -0.316942,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 38.10800782816007,
-            "ema_slow": 38.142625037819236,
-            "macd": -0.03461720965916726,
-            "macd_signal": 1.5907248663529396,
-            "macd_hist": -1.625342076012107,
-            "rsi14": 35.74086554546672,
-            "sma20": 42.11424999999999
+            "ema_fast": 38.03416167431392,
+            "ema_slow": 38.10706948226368,
+            "macd": -0.07290780794976115,
+            "macd_signal": 1.5830667466948207,
+            "macd_hist": -1.6559745546445819,
+            "rsi14": 34.92153472112447,
+            "sma20": 42.09024999999999
           },
           "news_preview": [
             {
@@ -159,75 +251,29 @@
           ]
         },
         {
-          "symbol": "DOCN",
-          "action": "BUY",
-          "px": 49.045,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.475319,
-          "qty": 8.8583,
-          "notional": 434.46,
-          "signals": {
-            "TS": 0.645886,
-            "NS": 0.21947,
-            "CDS": 0.475319,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 42.82369186973649,
-            "ema_slow": 40.7613438088879,
-            "macd": 2.062348060848592,
-            "macd_signal": 1.33919482199403,
-            "macd_hist": 0.7231532388545621,
-            "rsi14": 75.72087354375641,
-            "sma20": 41.370000000000005
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
-            },
-            {
-              "ts": "2025-11-07T15:02:28+00:00",
-              "source": "marketbeat",
-              "tone": 0.2018158884672445,
-              "headline": "DigitalOcean (NYSE:DOCN) Sets New 12-Month High on Analyst Upgrade"
-            },
-            {
-              "ts": "2025-11-07T14:41:30+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Stock Price Expected to Rise, Barclays Analyst Says"
-            }
-          ]
-        },
-        {
           "symbol": "JPM",
           "action": "BUY",
-          "px": 313.39,
+          "px": 313.3,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.475317,
-          "qty": 1.3863,
-          "notional": 434.45,
+          "score": 0.495868,
+          "qty": 1.8808,
+          "notional": 589.25,
           "signals": {
-            "TS": 0.588989,
-            "NS": 0.304809,
-            "CDS": 0.475317,
+            "TS": 0.585709,
+            "NS": 0.361107,
+            "CDS": 0.495868,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 308.6909790906671,
-            "ema_slow": 306.63378808679573,
-            "macd": 2.0571910038713668,
-            "macd_signal": 0.7293542909010645,
-            "macd_hist": 1.3278367129703024,
-            "rsi14": 69.70589022360004,
-            "sma20": 304.6735000000001
+            "ema_fast": 308.67713293682095,
+            "ema_slow": 306.6271214201291,
+            "macd": 2.0500115166918818,
+            "macd_signal": 0.7279183934651675,
+            "macd_hist": 1.3220931232267144,
+            "rsi14": 69.2965138672226,
+            "sma20": 304.6690000000001
           },
           "news_preview": [
             {
@@ -245,54 +291,54 @@
             {
               "ts": "2025-11-07T14:30:02+00:00",
               "source": "yahoofinanceaustralia",
-              "tone": 0.6207535916318344,
+              "tone": 0.617946987325592,
               "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
         },
         {
-          "symbol": "GOOGL",
+          "symbol": "TWLO",
           "action": "BUY",
-          "px": 278.51,
+          "px": 126.54,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.472554,
-          "qty": 0.4707,
-          "notional": 131.09,
+          "score": 0.47379,
+          "qty": 3.246,
+          "notional": 410.75,
           "signals": {
-            "TS": 0.51818,
-            "NS": 0.404114,
-            "CDS": 0.472554,
+            "TS": 0.517713,
+            "NS": 0.407905,
+            "CDS": 0.47379,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 274.62201838867963,
-            "ema_slow": 264.0797419241073,
-            "macd": 10.542276464572353,
-            "macd_signal": 9.455543957920135,
-            "macd_hist": 1.0867325066522184,
-            "rsi14": 60.02451713383526,
-            "sma20": 265.01550000000015
+            "ema_fast": 123.17608740959264,
+            "ema_slow": 117.28399745312913,
+            "macd": 5.892089956463508,
+            "macd_signal": 4.445031541851757,
+            "macd_hist": 1.4470584146117504,
+            "rsi14": 59.70819297058222,
+            "sma20": 116.56350000000005
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T19:12:59+00:00",
-              "source": "ts2tech",
-              "tone": 0.6291406106402302,
-              "headline": "Alphabet (GOOGL) Stock Today, Nov 7, 2025: Shares Slip ~2.6% as YouTube TV\u2013Disney Blackout Persists; DOJ Clears $32B Wiz Deal"
+              "ts": "2025-11-07T13:13:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.6110105321676507,
+              "headline": "Soltis Investment Advisors LLC Purchases 7,621 Shares of Twilio Inc. $TWLO"
             },
             {
-              "ts": "2025-11-07T19:12:50+00:00",
-              "source": "benzinga",
-              "tone": 0.8805282280649331,
-              "headline": "\"Top Disney Exec Trio Sees No End To YouTube TV Clash As 'Sports-Packed Weekend' Approaches; YouTube TV Says Ready To Make A Fair Agreement In Line With Disney's Deals With Other Distributors; 'Encourage Disney To Come To The Table And Do What's Best For Our Mutual Customers'\" - Deadline"
+              "ts": "2025-11-07T11:57:31+00:00",
+              "source": "newsercom",
+              "tone": 0.5858875045121604,
+              "headline": "Best data tools to analyze TWLO stock - Weekly Trade Recap & High Return Trade Opportunity Guides"
             },
             {
-              "ts": "2025-11-07T18:58:05+00:00",
-              "source": "benzinga",
-              "tone": 0.2337686337764565,
-              "headline": "Bill Ackman's Amazon Trade Reverses Course \u2013 Now Up $119 Million And Counting In Third Quarter"
+              "ts": "2025-11-07T11:45:51+00:00",
+              "source": "yahoo",
+              "tone": 0.8335984922151508,
+              "headline": "Shareholders Can Be Confident That Twilio's (NYSE:TWLO) Earnings Are High Quality"
             }
           ]
         }
@@ -314,97 +360,143 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 12210.74,
+      "portfolio_value_est": 16970.98,
       "cash_start": 1000.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.57,
+          "px": 29.06,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.497221,
+          "score": -0.511322,
           "qty": 57,
-          "notional": 1685.49,
+          "notional": 1656.42,
           "signals": {
-            "TS": -0.497221,
-            "NS": 0.149291,
-            "CDS": -0.238616,
+            "TS": -0.511322,
+            "NS": 0.148417,
+            "CDS": -0.247426,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.02416096757913,
-            "ema_slow": 31.83207571226806,
-            "macd": 0.19208525531106702,
-            "macd_signal": 1.3003436301563858,
-            "macd_hist": -1.1082583748453187,
-            "rsi14": 41.44643193137447,
-            "sma20": 34.55149999999998
+            "ema_fast": 31.94569942911759,
+            "ema_slow": 31.79429793449028,
+            "macd": 0.1514014946273079,
+            "macd_signal": 1.2922068780196339,
+            "macd_hist": -1.140805383392326,
+            "rsi14": 39.71565775099823,
+            "sma20": 34.525999999999975
           },
           "news_preview": [
             {
               "ts": "2025-11-07T17:30:34+00:00",
               "source": "marketbeat",
-              "tone": 0.8495801500465625,
+              "tone": 0.8457733910210021,
               "headline": "Rosenblatt Securities Boosts D-Wave Quantum (NYSE:QBTS) Price Target to $40.00"
             },
             {
               "ts": "2025-11-07T17:13:56+00:00",
               "source": "benzinga",
-              "tone": 0.8446876219189783,
+              "tone": 0.840902777153175,
               "headline": "Analyst Optimistic On D-Wave Quantum Despite Q3 Miss, Raises Estimates"
             },
             {
               "ts": "2025-11-07T16:15:32+00:00",
               "source": "benzinga",
-              "tone": -0.44846505048098506,
+              "tone": -0.4464555850540927,
               "headline": "Cantor Fitzgerald Maintains Overweight on D-Wave Quantum, Raises Price Target to $40"
+            }
+          ]
+        },
+        {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 328.85,
+          "qty_hint": 11.48,
+          "reason": "score<sell",
+          "score": -0.531135,
+          "qty": 2,
+          "notional": 657.7,
+          "signals": {
+            "TS": -0.531135,
+            "NS": 0.094351,
+            "CDS": -0.28094,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.1593202111365,
+            "ema_slow": 330.8802624301768,
+            "macd": 1.279057780959704,
+            "macd_signal": 2.0689288276107485,
+            "macd_hist": -0.7898710466510446,
+            "rsi14": 37.261478971057585,
+            "sma20": 331.5985
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T19:53:32+00:00",
+              "source": "benzinga",
+              "tone": -0.8886302613497677,
+              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
+            },
+            {
+              "ts": "2025-11-07T16:06:02+00:00",
+              "source": "newsercom",
+              "tone": 0.6386609623499842,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
+            },
+            {
+              "ts": "2025-11-07T15:53:54+00:00",
+              "source": "newsercom",
+              "tone": 0.635975969485962,
+              "headline": "Will VTI stock top growth indexes - July 2025 Technicals & Fast Exit and Entry Trade Guides"
             }
           ]
         },
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 12.73,
+          "px": 12.58,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.608634,
+          "score": -0.61378,
           "qty": 18,
-          "notional": 229.14,
+          "notional": 226.44,
           "signals": {
-            "TS": -0.608634,
-            "NS": 0.005692,
-            "CDS": -0.362904,
+            "TS": -0.61378,
+            "NS": 0.014566,
+            "CDS": -0.362442,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 14.900424843528537,
-            "ema_slow": 16.334067735769093,
-            "macd": -1.433642892240556,
-            "macd_signal": -1.0754336766061052,
-            "macd_hist": -0.35820921563445074,
-            "rsi14": 29.86488873793556,
-            "sma20": 16.407499999999995
+            "ema_fast": 14.877347920451614,
+            "ema_slow": 16.322956624657984,
+            "macd": -1.4456087042063697,
+            "macd_signal": -1.077826838999268,
+            "macd_hist": -0.36778186520710165,
+            "rsi14": 29.241406024008015,
+            "sma20": 16.399999999999995
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T19:24:02+00:00",
+              "ts": "2025-11-07T20:24:25+00:00",
               "source": "aolcom",
-              "tone": 0.6873254914952542,
+              "tone": 0.698746234925182,
               "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
             },
             {
               "ts": "2025-11-07T15:37:27+00:00",
               "source": "newsercom",
-              "tone": -0.5583534430925089,
+              "tone": -0.5558538525157952,
               "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
             },
             {
               "ts": "2025-11-07T14:50:36+00:00",
               "source": "newsercom",
-              "tone": -0.6250713912191629,
+              "tone": -0.6222731221733272,
               "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
             }
           ]
@@ -412,27 +504,27 @@
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 69.37,
+          "px": 68.56,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.494894,
+          "score": -0.509249,
           "qty": 2,
-          "notional": 138.74,
+          "notional": 137.12,
           "signals": {
-            "TS": -0.494894,
-            "NS": 0.149738,
-            "CDS": -0.237041,
+            "TS": -0.509249,
+            "NS": 0.057108,
+            "CDS": -0.282706,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 73.01713406811128,
-            "ema_slow": 72.26617092317643,
-            "macd": 0.7509631449348433,
-            "macd_signal": 3.20907085441526,
-            "macd_hist": -2.4581077094804167,
-            "rsi14": 41.62846888551235,
-            "sma20": 78.61900000000006
+            "ema_fast": 72.8925186834959,
+            "ema_slow": 72.20617092317643,
+            "macd": 0.6863477603194639,
+            "macd_signal": 3.196147777492184,
+            "macd_hist": -2.50980001717272,
+            "rsi14": 39.856277208008805,
+            "sma20": 78.57850000000006
           },
           "news_preview": [
             {
@@ -448,43 +540,43 @@
               "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
             },
             {
-              "ts": "2025-11-07T10:42:26+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Is ASTS stock overvalued by current metrics - Trade Signal Summary & High Accuracy Trade Alerts"
+              "ts": "2025-11-07T10:26:33+00:00",
+              "source": "benzinga",
+              "tone": 0.3485571538295052,
+              "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
             }
           ]
         },
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.59,
+          "px": 50.78,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.591404,
+          "score": -0.614198,
           "qty": 1,
-          "notional": 51.59,
+          "notional": 50.78,
           "signals": {
-            "TS": -0.591404,
-            "NS": 0.090832,
-            "CDS": -0.31851,
+            "TS": -0.614198,
+            "NS": 0.053707,
+            "CDS": -0.347036,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 58.31696163077625,
-            "ema_slow": 59.019263222487695,
-            "macd": -0.7023015917114463,
-            "macd_signal": 1.452182409463064,
-            "macd_hist": -2.1544840011745103,
-            "rsi14": 30.121914524780337,
-            "sma20": 62.617999999999995
+            "ema_fast": 58.19234624616086,
+            "ema_slow": 58.95926322248769,
+            "macd": -0.7669169763268329,
+            "macd_signal": 1.4392593325399865,
+            "macd_hist": -2.2061763088668194,
+            "rsi14": 27.300389945937326,
+            "sma20": 62.5775
           },
           "news_preview": [
             {
               "ts": "2025-11-07T17:08:14+00:00",
               "source": "moneymorning",
-              "tone": 0.5393391845274089,
+              "tone": 0.5369276546860928,
               "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
             },
             {
@@ -504,27 +596,27 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 33.37,
+          "px": 32.89,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.544254,
+          "score": -0.55101,
           "qty": 3,
-          "notional": 100.11,
+          "notional": 98.67,
           "signals": {
-            "TS": -0.544254,
-            "NS": 0.045875,
-            "CDS": -0.308203,
+            "TS": -0.55101,
+            "NS": 0.03416,
+            "CDS": -0.316942,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 38.10800782816007,
-            "ema_slow": 38.142625037819236,
-            "macd": -0.03461720965916726,
-            "macd_signal": 1.5907248663529396,
-            "macd_hist": -1.625342076012107,
-            "rsi14": 35.74086554546672,
-            "sma20": 42.11424999999999
+            "ema_fast": 38.03416167431392,
+            "ema_slow": 38.10706948226368,
+            "macd": -0.07290780794976115,
+            "macd_signal": 1.5830667466948207,
+            "macd_hist": -1.6559745546445819,
+            "rsi14": 34.92153472112447,
+            "sma20": 42.09024999999999
           },
           "news_preview": [
             {
@@ -550,75 +642,81 @@
         {
           "symbol": "DDOG",
           "action": "BUY",
-          "px": 190.37,
+          "px": 189.88,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.689042,
-          "qty": 1.3879,
-          "notional": 264.21,
+          "score": 0.68211,
+          "qty": 1.8929,
+          "notional": 359.42,
           "signals": {
-            "TS": 0.689042,
-            "NS": 0.143355,
-            "CDS": 0.470767,
+            "TS": 0.68211,
+            "NS": 0.109799,
+            "CDS": 0.453186,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 166.89259278994925,
-            "ema_slow": 159.90681444305926,
-            "macd": 6.985778346889987,
-            "macd_signal": 4.392245199390191,
-            "macd_hist": 2.5935331474997954,
-            "rsi14": 81.28805323199578,
-            "sma20": 160.78049999999988
+            "ema_fast": 166.81720817456463,
+            "ema_slow": 159.87051814676298,
+            "macd": 6.946690027801651,
+            "macd_signal": 4.384427535572524,
+            "macd_hist": 2.5622624922291273,
+            "rsi14": 80.42748619519308,
+            "sma20": 160.7559999999999
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T19:48:04+00:00",
-              "source": "marketbeat",
-              "tone": 0.6604297969491717,
-              "headline": "Datadog (NASDAQ:DDOG) Rating Increased to Neutral at Guggenheim"
+              "ts": "2025-11-07T20:10:45+00:00",
+              "source": "gurufocus",
+              "tone": -0.478743414866933,
+              "headline": "Wells Fargo Raises Price Target for DDOG, Maintains Overweight R"
             },
             {
-              "ts": "2025-11-07T19:45:09+00:00",
+              "ts": "2025-11-07T20:07:48+00:00",
               "source": "gurufocus",
               "tone": 0.0,
-              "headline": "Goldman Sachs Raises Price Target for Datadog (DDOG) to $225 | D"
+              "headline": "Datadog (DDOG): RBC Capital Raises Price Target to $216 | DDOG S"
             },
             {
-              "ts": "2025-11-07T19:16:10+00:00",
-              "source": "benzinga",
-              "tone": -0.11849097320908028,
-              "headline": "Wells Fargo Maintains Overweight on Datadog, Raises Price Target to $230"
+              "ts": "2025-11-07T19:48:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.6574191163777027,
+              "headline": "Datadog (NASDAQ:DDOG) Rating Increased to Neutral at Guggenheim"
             }
           ]
         },
         {
           "symbol": "CMI",
           "action": "BUY",
-          "px": 478.15,
+          "px": 477.12,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.67401,
-          "qty": 0.5526,
-          "notional": 264.23,
+          "score": 0.671732,
+          "qty": 0.7533,
+          "notional": 359.41,
           "signals": {
-            "TS": 0.67401,
-            "NS": 0.102972,
-            "CDS": 0.445595,
+            "TS": 0.671732,
+            "NS": 0.092583,
+            "CDS": 0.440072,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 441.4636837053017,
-            "ema_slow": 431.1985591965106,
-            "macd": 10.265124508791132,
-            "macd_signal": 5.635711900623993,
-            "macd_hist": 4.629412608167139,
-            "rsi14": 79.90606236178573,
-            "sma20": 428.0882499999998
+            "ema_fast": 441.30522216684017,
+            "ema_slow": 431.1222629002143,
+            "macd": 10.182959266625858,
+            "macd_signal": 5.619278852190938,
+            "macd_hist": 4.56368041443492,
+            "rsi14": 79.62603133545913,
+            "sma20": 428.03674999999987
           },
           "news_preview": [
+            {
+              "ts": "2025-11-07T19:53:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": 0.0,
+              "headline": "Market Slides, But This Stock Didn't Get The Memo"
+            },
             {
               "ts": "2025-11-07T16:21:00+00:00",
               "source": "quiverquantitative",
@@ -628,41 +726,35 @@
             {
               "ts": "2025-11-07T15:58:53+00:00",
               "source": "benzinga",
-              "tone": 0.3655396809662874,
+              "tone": 0.36387029673680993,
               "headline": "Truist Securities Maintains Hold on Cummins, Raises Price Target to $522"
-            },
-            {
-              "ts": "2025-11-07T15:02:26+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Cummins (NYSE:CMI) Hits New 12-Month High Following Better-Than-Expected Earnings"
             }
           ]
         },
         {
           "symbol": "DOCN",
           "action": "BUY",
-          "px": 49.045,
+          "px": 48.91,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.645886,
-          "qty": 5.3872,
-          "notional": 264.22,
+          "score": 0.644052,
+          "qty": 5.7486,
+          "notional": 281.16,
           "signals": {
-            "TS": 0.645886,
-            "NS": 0.21947,
-            "CDS": 0.475319,
+            "TS": 0.644052,
+            "NS": 0.202427,
+            "CDS": 0.467402,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 42.82369186973649,
-            "ema_slow": 40.7613438088879,
-            "macd": 2.062348060848592,
-            "macd_signal": 1.33919482199403,
-            "macd_hist": 0.7231532388545621,
-            "rsi14": 75.72087354375641,
-            "sma20": 41.370000000000005
+            "ema_fast": 42.80292263896727,
+            "ema_slow": 40.7513438088879,
+            "macd": 2.0515788300793645,
+            "macd_signal": 1.3370409758401844,
+            "macd_hist": 0.71453785423918,
+            "rsi14": 75.4979623209442,
+            "sma20": 41.36325000000001
           },
           "news_preview": [
             {
@@ -672,108 +764,16 @@
               "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
             },
             {
-              "ts": "2025-11-07T15:02:28+00:00",
-              "source": "marketbeat",
-              "tone": 0.2018158884672445,
-              "headline": "DigitalOcean (NYSE:DOCN) Sets New 12-Month High on Analyst Upgrade"
+              "ts": "2025-11-07T16:09:49+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "How DOCN stock valuations compare to rivals - CEO Change & Daily Market Momentum Tracking"
             },
             {
-              "ts": "2025-11-07T14:41:30+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-07T15:49:22+00:00",
+              "source": "newsercom",
               "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Stock Price Expected to Rise, Barclays Analyst Says"
-            }
-          ]
-        },
-        {
-          "symbol": "LLY",
-          "action": "BUY",
-          "px": 919.07,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.62299,
-          "qty": 0.2256,
-          "notional": 207.34,
-          "signals": {
-            "TS": 0.62299,
-            "NS": 0.063504,
-            "CDS": 0.399195,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 879.6425018520953,
-            "ema_slow": 846.1395450661853,
-            "macd": 33.50295678590999,
-            "macd_signal": 24.29063865038451,
-            "macd_hist": 9.212318135525479,
-            "rsi14": 73.13382017070955,
-            "sma20": 845.158749999999
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T17:36:13+00:00",
-              "source": "seekingalpha",
-              "tone": 0.0,
-              "headline": "Eli Lilly, Novo down after U.S. drug pricing deal (LLY:NYSE)"
-            },
-            {
-              "ts": "2025-11-07T17:33:23+00:00",
-              "source": "benzinga",
-              "tone": -0.023041777031841362,
-              "headline": "Eli Lilly's Investigational Obesity Drug Shows Up To 20% Weight Loss In Phase 2 Study, Analyst Sees It As Emerging Cornerstone In Obesity Treatment"
-            },
-            {
-              "ts": "2025-11-07T16:31:43+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "UBS Maintains Buy on Eli Lilly, Raises Price Target to $1080"
-            }
-          ]
-        },
-        {
-          "symbol": "LYFT",
-          "action": "BUY",
-          "px": 21.905,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.558314,
-          "qty": 0.0001,
-          "notional": 0.0,
-          "signals": {
-            "TS": 0.558314,
-            "NS": 0.151664,
-            "CDS": 0.395654,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 20.605243581217547,
-            "ema_slow": 20.428792575627366,
-            "macd": 0.1764510055901809,
-            "macd_signal": 0.07633508879339615,
-            "macd_hist": 0.10011591679678475,
-            "rsi14": 65.82376865223296,
-            "sma20": 20.312000000000012
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T20:05:57+00:00",
-              "source": "investingcom",
-              "tone": 0.09374758281870797,
-              "headline": "Canaccord Genuity raises Lyft stock price target to $19 on FREENOW acquisition"
-            },
-            {
-              "ts": "2025-11-07T19:45:10+00:00",
-              "source": "gurufocus",
-              "tone": 0.0,
-              "headline": "Goldman Sachs Raises Lyft (LYFT) Price Target to $26, Maintains Buy Rating | LYFT Stock News"
-            },
-            {
-              "ts": "2025-11-07T17:59:48+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Goldman Sachs Maintains Buy on Lyft, Raises Price Target to $26"
+              "headline": "How DOCN stock moves on employment data - Trade Analysis Summary & Real-Time Market Sentiment Alerts"
             }
           ]
         }
@@ -859,193 +859,33 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 19719.67,
+      "portfolio_value_est": 19652.91,
       "cash_start": 52.0,
       "trades": [
         {
-          "symbol": "DOCN",
-          "action": "BUY",
-          "px": 49.045,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.475319,
-          "qty": 1.0603,
-          "notional": 52.0,
-          "signals": {
-            "TS": 0.645886,
-            "NS": 0.21947,
-            "CDS": 0.475319,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 42.82369186973649,
-            "ema_slow": 40.7613438088879,
-            "macd": 2.062348060848592,
-            "macd_signal": 1.33919482199403,
-            "macd_hist": 0.7231532388545621,
-            "rsi14": 75.72087354375641,
-            "sma20": 41.370000000000005
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
-            },
-            {
-              "ts": "2025-11-07T15:02:28+00:00",
-              "source": "marketbeat",
-              "tone": 0.2018158884672445,
-              "headline": "DigitalOcean (NYSE:DOCN) Sets New 12-Month High on Analyst Upgrade"
-            },
-            {
-              "ts": "2025-11-07T14:41:30+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Stock Price Expected to Rise, Barclays Analyst Says"
-            }
-          ]
-        }
-      ],
-      "cash_left": 0.0
-    },
-    "portfolio_max_autotrader": {
-      "meta": {
-        "title": "AutoTrade my portfolio",
-        "trade_scope": "paper",
-        "decision_source": "CDS",
-        "ns_weight_boost": 1.0,
-        "per_line_frac": 0.03,
-        "max_deploy_frac": 0.15,
-        "trim_fraction": 0.25,
-        "fractional_buys": true,
-        "tags": [
-          "ideas",
-          "paper"
-        ],
-        "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
-      },
-      "portfolio_value_est": 14191.1,
-      "cash_start": 450.63,
-      "trades": [
-        {
-          "symbol": "QUBT",
-          "action": "SELL",
-          "px": 12.73,
-          "qty_hint": 15.39,
-          "reason": "score<sell",
-          "score": -0.362904,
-          "qty": 3,
-          "notional": 38.19,
-          "signals": {
-            "TS": -0.608634,
-            "NS": 0.005692,
-            "CDS": -0.362904,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 14.900424843528537,
-            "ema_slow": 16.334067735769093,
-            "macd": -1.433642892240556,
-            "macd_signal": -1.0754336766061052,
-            "macd_hist": -0.35820921563445074,
-            "rsi14": 29.86488873793556,
-            "sma20": 16.407499999999995
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T19:24:02+00:00",
-              "source": "aolcom",
-              "tone": 0.6873254914952542,
-              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
-            },
-            {
-              "ts": "2025-11-07T15:37:27+00:00",
-              "source": "newsercom",
-              "tone": -0.5583534430925089,
-              "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
-            },
-            {
-              "ts": "2025-11-07T14:50:36+00:00",
-              "source": "newsercom",
-              "tone": -0.6250713912191629,
-              "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
-            }
-          ]
-        },
-        {
-          "symbol": "DOCN",
-          "action": "BUY",
-          "px": 49.045,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.475319,
-          "qty": 8.9561,
-          "notional": 439.25,
-          "signals": {
-            "TS": 0.645886,
-            "NS": 0.21947,
-            "CDS": 0.475319,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 42.82369186973649,
-            "ema_slow": 40.7613438088879,
-            "macd": 2.062348060848592,
-            "macd_signal": 1.33919482199403,
-            "macd_hist": 0.7231532388545621,
-            "rsi14": 75.72087354375641,
-            "sma20": 41.370000000000005
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
-            },
-            {
-              "ts": "2025-11-07T15:02:28+00:00",
-              "source": "marketbeat",
-              "tone": 0.2018158884672445,
-              "headline": "DigitalOcean (NYSE:DOCN) Sets New 12-Month High on Analyst Upgrade"
-            },
-            {
-              "ts": "2025-11-07T14:41:30+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Stock Price Expected to Rise, Barclays Analyst Says"
-            }
-          ]
-        },
-        {
           "symbol": "JPM",
           "action": "BUY",
-          "px": 313.39,
+          "px": 313.3,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.475317,
-          "qty": 0.0363,
-          "notional": 11.38,
+          "score": 0.495868,
+          "qty": 0.166,
+          "notional": 52.01,
           "signals": {
-            "TS": 0.588989,
-            "NS": 0.304809,
-            "CDS": 0.475317,
+            "TS": 0.585709,
+            "NS": 0.361107,
+            "CDS": 0.495868,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 308.6909790906671,
-            "ema_slow": 306.63378808679573,
-            "macd": 2.0571910038713668,
-            "macd_signal": 0.7293542909010645,
-            "macd_hist": 1.3278367129703024,
-            "rsi14": 69.70589022360004,
-            "sma20": 304.6735000000001
+            "ema_fast": 308.67713293682095,
+            "ema_slow": 306.6271214201291,
+            "macd": 2.0500115166918818,
+            "macd_signal": 0.7279183934651675,
+            "macd_hist": 1.3220931232267144,
+            "rsi14": 69.2965138672226,
+            "sma20": 304.6690000000001
           },
           "news_preview": [
             {
@@ -1063,54 +903,214 @@
             {
               "ts": "2025-11-07T14:30:02+00:00",
               "source": "yahoofinanceaustralia",
-              "tone": 0.6207535916318344,
+              "tone": 0.617946987325592,
+              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
+            }
+          ]
+        }
+      ],
+      "cash_left": -0.01
+    },
+    "portfolio_max_autotrader": {
+      "meta": {
+        "title": "AutoTrade my portfolio",
+        "trade_scope": "paper",
+        "decision_source": "CDS",
+        "ns_weight_boost": 1.0,
+        "per_line_frac": 0.03,
+        "max_deploy_frac": 0.15,
+        "trim_fraction": 0.25,
+        "fractional_buys": true,
+        "tags": [
+          "ideas",
+          "paper"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
+      },
+      "portfolio_value_est": 18137.74,
+      "cash_start": 450.63,
+      "trades": [
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 12.58,
+          "qty_hint": 15.39,
+          "reason": "score<sell",
+          "score": -0.362442,
+          "qty": 3,
+          "notional": 37.74,
+          "signals": {
+            "TS": -0.61378,
+            "NS": 0.014566,
+            "CDS": -0.362442,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 14.877347920451614,
+            "ema_slow": 16.322956624657984,
+            "macd": -1.4456087042063697,
+            "macd_signal": -1.077826838999268,
+            "macd_hist": -0.36778186520710165,
+            "rsi14": 29.241406024008015,
+            "sma20": 16.399999999999995
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T20:24:25+00:00",
+              "source": "aolcom",
+              "tone": 0.698746234925182,
+              "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+            },
+            {
+              "ts": "2025-11-07T15:37:27+00:00",
+              "source": "newsercom",
+              "tone": -0.5558538525157952,
+              "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
+            },
+            {
+              "ts": "2025-11-07T14:50:36+00:00",
+              "source": "newsercom",
+              "tone": -0.6222731221733272,
+              "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+            }
+          ]
+        },
+        {
+          "symbol": "VTI",
+          "action": "SELL",
+          "px": 328.85,
+          "qty_hint": 7.48,
+          "reason": "score<sell",
+          "score": -0.28094,
+          "qty": 1,
+          "notional": 328.85,
+          "signals": {
+            "TS": -0.531135,
+            "NS": 0.094351,
+            "CDS": -0.28094,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 332.1593202111365,
+            "ema_slow": 330.8802624301768,
+            "macd": 1.279057780959704,
+            "macd_signal": 2.0689288276107485,
+            "macd_hist": -0.7898710466510446,
+            "rsi14": 37.261478971057585,
+            "sma20": 331.5985
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T19:53:32+00:00",
+              "source": "benzinga",
+              "tone": -0.8886302613497677,
+              "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
+            },
+            {
+              "ts": "2025-11-07T16:06:02+00:00",
+              "source": "newsercom",
+              "tone": 0.6386609623499842,
+              "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
+            },
+            {
+              "ts": "2025-11-07T15:53:54+00:00",
+              "source": "newsercom",
+              "tone": 0.635975969485962,
+              "headline": "Will VTI stock top growth indexes - July 2025 Technicals & Fast Exit and Entry Trade Guides"
+            }
+          ]
+        },
+        {
+          "symbol": "JPM",
+          "action": "BUY",
+          "px": 313.3,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.495868,
+          "qty": 1.4383,
+          "notional": 450.62,
+          "signals": {
+            "TS": 0.585709,
+            "NS": 0.361107,
+            "CDS": 0.495868,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 308.67713293682095,
+            "ema_slow": 306.6271214201291,
+            "macd": 2.0500115166918818,
+            "macd_signal": 0.7279183934651675,
+            "macd_hist": 1.3220931232267144,
+            "rsi14": 69.2965138672226,
+            "sma20": 304.6690000000001
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-07T18:26:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Noteworthy Friday Option Activity: LULU, JPM, SMCI"
+            },
+            {
+              "ts": "2025-11-07T17:35:22+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
+            },
+            {
+              "ts": "2025-11-07T14:30:02+00:00",
+              "source": "yahoofinanceaustralia",
+              "tone": 0.617946987325592,
               "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
         },
         {
-          "symbol": "ICLN",
+          "symbol": "TWLO",
           "action": "BUY",
-          "px": 17.625,
+          "px": 126.54,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.454785,
+          "score": 0.47379,
           "qty": 0.0001,
-          "notional": 0.0,
+          "notional": 0.01,
           "signals": {
-            "TS": 0.519277,
-            "NS": 0.358047,
-            "CDS": 0.454785,
+            "TS": 0.517713,
+            "NS": 0.407905,
+            "CDS": 0.47379,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 17.27702928781845,
-            "ema_slow": 16.74608904350379,
-            "macd": 0.5309402443146602,
-            "macd_signal": 0.4852088935682189,
-            "macd_hist": 0.04573135074644136,
-            "rsi14": 60.36809804386215,
-            "sma20": 16.930249999999997
+            "ema_fast": 123.17608740959264,
+            "ema_slow": 117.28399745312913,
+            "macd": 5.892089956463508,
+            "macd_signal": 4.445031541851757,
+            "macd_hist": 1.4470584146117504,
+            "rsi14": 59.70819297058222,
+            "sma20": 116.56350000000005
           },
           "news_preview": [
             {
-              "ts": "2025-11-06T16:33:11+00:00",
-              "source": "benzinga",
-              "tone": 0.5052488802047079,
-              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+              "ts": "2025-11-07T13:13:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.6110105321676507,
+              "headline": "Soltis Investment Advisors LLC Purchases 7,621 Shares of Twilio Inc. $TWLO"
             },
             {
-              "ts": "2025-11-05T16:01:19+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Big Money Buys: Investment Advisor Goes All-In on Sector ETF With $17.6 Million Purchase"
+              "ts": "2025-11-07T11:57:31+00:00",
+              "source": "newsercom",
+              "tone": 0.5858875045121604,
+              "headline": "Best data tools to analyze TWLO stock - Weekly Trade Recap & High Return Trade Opportunity Guides"
             },
             {
-              "ts": "2025-11-04T21:46:47+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.1611967346173301,
-              "headline": "Murray Wealth Group: Growth with the Global Equity Growth Fund"
+              "ts": "2025-11-07T11:45:51+00:00",
+              "source": "yahoo",
+              "tone": 0.8335984922151508,
+              "headline": "Shareholders Can Be Confident That Twilio's (NYSE:TWLO) Earnings Are High Quality"
             }
           ]
         }
@@ -1133,57 +1133,57 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 19612.51,
+      "portfolio_value_est": 19556.37,
       "cash_start": 271.62,
       "trades": [
         {
-          "symbol": "DOCN",
+          "symbol": "JPM",
           "action": "BUY",
-          "px": 49.045,
+          "px": 313.3,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.475319,
-          "qty": 5.5382,
-          "notional": 271.62,
+          "score": 0.495868,
+          "qty": 0.867,
+          "notional": 271.63,
           "signals": {
-            "TS": 0.645886,
-            "NS": 0.21947,
-            "CDS": 0.475319,
+            "TS": 0.585709,
+            "NS": 0.361107,
+            "CDS": 0.495868,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 42.82369186973649,
-            "ema_slow": 40.7613438088879,
-            "macd": 2.062348060848592,
-            "macd_signal": 1.33919482199403,
-            "macd_hist": 0.7231532388545621,
-            "rsi14": 75.72087354375641,
-            "sma20": 41.370000000000005
+            "ema_fast": 308.67713293682095,
+            "ema_slow": 306.6271214201291,
+            "macd": 2.0500115166918818,
+            "macd_signal": 0.7279183934651675,
+            "macd_hist": 1.3220931232267144,
+            "rsi14": 69.2965138672226,
+            "sma20": 304.6690000000001
           },
           "news_preview": [
             {
-              "ts": "2025-11-07T17:54:46+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-07T18:26:00+00:00",
+              "source": "nasdaq",
               "tone": 0.0,
-              "headline": "UBS Group Raises DigitalOcean (NYSE:DOCN) Price Target to $48.00"
+              "headline": "Noteworthy Friday Option Activity: LULU, JPM, SMCI"
             },
             {
-              "ts": "2025-11-07T15:02:28+00:00",
-              "source": "marketbeat",
-              "tone": 0.2018158884672445,
-              "headline": "DigitalOcean (NYSE:DOCN) Sets New 12-Month High on Analyst Upgrade"
+              "ts": "2025-11-07T17:35:22+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
             },
             {
-              "ts": "2025-11-07T14:41:30+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "DigitalOcean (NYSE:DOCN) Stock Price Expected to Rise, Barclays Analyst Says"
+              "ts": "2025-11-07T14:30:02+00:00",
+              "source": "yahoofinanceaustralia",
+              "tone": 0.617946987325592,
+              "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
             }
           ]
         }
       ],
-      "cash_left": 0.0
+      "cash_left": -0.01
     },
     "portfolio_paper_TS_only": {
       "meta": {
