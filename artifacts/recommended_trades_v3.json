@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-07T01:05:12.470374+00:00",
+  "as_of_utc": "2025-11-07T02:44:50.631073+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -26,13 +26,13 @@
           "px": 28.39,
           "qty_hint": 229.08,
           "reason": "score<sell",
-          "score": -0.284132,
+          "score": -0.289849,
           "qty": 57,
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.083022,
-            "CDS": -0.284132,
+            "NS": 0.068729,
+            "CDS": -0.289849,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -72,13 +72,13 @@
           "px": 329.34,
           "qty_hint": 11.48,
           "reason": "score<sell",
-          "score": -0.35403,
+          "score": -0.300358,
           "qty": 2,
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": -0.104224,
-            "CDS": -0.35403,
+            "NS": 0.029956,
+            "CDS": -0.300358,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -118,13 +118,13 @@
           "px": 13.14,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.314988,
+          "score": -0.316474,
           "qty": 18,
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.100926,
-            "CDS": -0.314988,
+            "NS": 0.097212,
+            "CDS": -0.316474,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -164,13 +164,13 @@
           "px": 65.275,
           "qty_hint": 10.49,
           "reason": "score<sell",
-          "score": -0.340887,
+          "score": -0.3601,
           "qty": 2,
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.010958,
-            "CDS": -0.340887,
+            "NS": -0.037075,
+            "CDS": -0.3601,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -210,13 +210,13 @@
           "px": 49.605,
           "qty_hint": 7.27,
           "reason": "score<sell",
-          "score": -0.368013,
+          "score": -0.365876,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.052011,
-            "CDS": -0.368013,
+            "NS": 0.057353,
+            "CDS": -0.365876,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -243,10 +243,10 @@
               "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
             },
             {
-              "ts": "2025-11-06T18:36:50+00:00",
-              "source": "newsercom",
-              "tone": 0.3544,
-              "headline": "Can RKLB stock hit record highs again - Market Sentiment Review & Comprehensive Market Scan Reports"
+              "ts": "2025-11-06T18:31:59+00:00",
+              "source": "benzinga",
+              "tone": -0.34362,
+              "headline": "Space Stock Tracker\u2014BlackSky, Redwire Dump After Earnings; AST, Rocket Lab On Deck"
             }
           ]
         },
@@ -256,13 +256,13 @@
           "px": 34.345,
           "qty_hint": 12.17,
           "reason": "score<sell",
-          "score": -0.273611,
+          "score": -0.273128,
           "qty": 3,
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.107153,
-            "CDS": -0.273611,
+            "NS": 0.108361,
+            "CDS": -0.273128,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -302,13 +302,13 @@
           "px": 127.06,
           "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.272641,
+          "score": -0.27049,
           "qty": 1,
           "notional": 127.06,
           "signals": {
             "TS": -0.536778,
-            "NS": 0.123564,
-            "CDS": -0.272641,
+            "NS": 0.128941,
+            "CDS": -0.27049,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -343,60 +343,14 @@
           ]
         },
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 272.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.472489,
-          "qty": 2.2068,
-          "notional": 600.49,
-          "signals": {
-            "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 254.66756346321813,
-            "ema_slow": 242.081782295188,
-            "macd": 12.585781168030138,
-            "macd_signal": 9.279952147253411,
-            "macd_hist": 3.305829020776727,
-            "rsi14": 68.73795189199211,
-            "sma20": 242.33025000000012
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T21:19:50+00:00",
-              "source": "investingcom",
-              "tone": 0.0,
-              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
-            },
-            {
-              "ts": "2025-11-06T16:33:11+00:00",
-              "source": "benzinga",
-              "tone": 0.73584,
-              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
-            },
-            {
-              "ts": "2025-11-06T15:33:15+00:00",
-              "source": "newsercom",
-              "tone": 0.45405,
-              "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
-            }
-          ]
-        },
-        {
           "symbol": "AAPL",
           "action": "BUY",
           "px": 269.85,
           "qty_hint": 0.0,
           "reason": "score>buy",
           "score": 0.469894,
-          "qty": 1.4805,
-          "notional": 399.51,
+          "qty": 2.2253,
+          "notional": 600.5,
           "signals": {
             "TS": 0.578813,
             "NS": 0.306517,
@@ -433,6 +387,52 @@
               "headline": "Qualcomm Faces Long-Term Squeeze From Apple, Samsung Despite iPhone 17 Share, Meta Partnership: Analysts"
             }
           ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 272.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.458231,
+          "qty": 1.4682,
+          "notional": 399.51,
+          "signals": {
+            "TS": 0.590301,
+            "NS": 0.260125,
+            "CDS": 0.458231,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.66756346321813,
+            "ema_slow": 242.081782295188,
+            "macd": 12.585781168030138,
+            "macd_signal": 9.279952147253411,
+            "macd_hist": 3.305829020776727,
+            "rsi14": 68.73795189199211,
+            "sma20": 242.33025000000012
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T23:56:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
+            },
+            {
+              "ts": "2025-11-06T21:19:50+00:00",
+              "source": "investingcom",
+              "tone": 0.0,
+              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
+            },
+            {
+              "ts": "2025-11-06T16:33:11+00:00",
+              "source": "benzinga",
+              "tone": 0.73584,
+              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+            }
+          ]
         }
       ],
       "cash_left": -0.01
@@ -466,8 +466,8 @@
           "notional": 1618.23,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.083022,
-            "CDS": -0.284132,
+            "NS": 0.068729,
+            "CDS": -0.289849,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -512,8 +512,8 @@
           "notional": 658.68,
           "signals": {
             "TS": -0.520567,
-            "NS": -0.104224,
-            "CDS": -0.35403,
+            "NS": 0.029956,
+            "CDS": -0.300358,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -558,8 +558,8 @@
           "notional": 236.52,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.100926,
-            "CDS": -0.314988,
+            "NS": 0.097212,
+            "CDS": -0.316474,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -604,8 +604,8 @@
           "notional": 130.55,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.010958,
-            "CDS": -0.340887,
+            "NS": -0.037075,
+            "CDS": -0.3601,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -650,8 +650,8 @@
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.052011,
-            "CDS": -0.368013,
+            "NS": 0.057353,
+            "CDS": -0.365876,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -678,10 +678,10 @@
               "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
             },
             {
-              "ts": "2025-11-06T18:36:50+00:00",
-              "source": "newsercom",
-              "tone": 0.3544,
-              "headline": "Can RKLB stock hit record highs again - Market Sentiment Review & Comprehensive Market Scan Reports"
+              "ts": "2025-11-06T18:31:59+00:00",
+              "source": "benzinga",
+              "tone": -0.34362,
+              "headline": "Space Stock Tracker\u2014BlackSky, Redwire Dump After Earnings; AST, Rocket Lab On Deck"
             }
           ]
         },
@@ -696,8 +696,8 @@
           "notional": 103.03,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.107153,
-            "CDS": -0.273611,
+            "NS": 0.108361,
+            "CDS": -0.273128,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -742,8 +742,8 @@
           "notional": 366.98,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.204776,
-            "CDS": 0.462142,
+            "NS": 0.192218,
+            "CDS": 0.457118,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -758,6 +758,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T23:47:37+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
               "ts": "2025-11-06T21:00:00+00:00",
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
@@ -768,12 +774,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T19:05:48+00:00",
-              "source": "yahoofinance",
-              "tone": 0.5607449999999999,
-              "headline": "Alphabet (NASDAQ:GOOGL) Posted Healthy Earnings But There Are Some Other Factors To Be Aware Of"
             }
           ]
         },
@@ -788,8 +788,8 @@
           "notional": 366.97,
           "signals": {
             "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
+            "NS": 0.260125,
+            "CDS": 0.458231,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -804,6 +804,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T23:56:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
+            },
+            {
               "ts": "2025-11-06T21:19:50+00:00",
               "source": "investingcom",
               "tone": 0.0,
@@ -814,12 +820,6 @@
               "source": "benzinga",
               "tone": 0.73584,
               "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
-            },
-            {
-              "ts": "2025-11-06T15:33:15+00:00",
-              "source": "newsercom",
-              "tone": 0.45405,
-              "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
             }
           ]
         },
@@ -955,52 +955,6 @@
       "cash_start": 3988.78,
       "trades": [
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 272.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.472489,
-          "qty": 3.672,
-          "notional": 999.19,
-          "signals": {
-            "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 254.66756346321813,
-            "ema_slow": 242.081782295188,
-            "macd": 12.585781168030138,
-            "macd_signal": 9.279952147253411,
-            "macd_hist": 3.305829020776727,
-            "rsi14": 68.73795189199211,
-            "sma20": 242.33025000000012
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T21:19:50+00:00",
-              "source": "investingcom",
-              "tone": 0.0,
-              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
-            },
-            {
-              "ts": "2025-11-06T16:33:11+00:00",
-              "source": "benzinga",
-              "tone": 0.73584,
-              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
-            },
-            {
-              "ts": "2025-11-06T15:33:15+00:00",
-              "source": "newsercom",
-              "tone": 0.45405,
-              "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
-            }
-          ]
-        },
-        {
           "symbol": "AAPL",
           "action": "BUY",
           "px": 269.85,
@@ -1047,18 +1001,64 @@
           ]
         },
         {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 272.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.458231,
+          "qty": 3.672,
+          "notional": 999.19,
+          "signals": {
+            "TS": 0.590301,
+            "NS": 0.260125,
+            "CDS": 0.458231,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.66756346321813,
+            "ema_slow": 242.081782295188,
+            "macd": 12.585781168030138,
+            "macd_signal": 9.279952147253411,
+            "macd_hist": 3.305829020776727,
+            "rsi14": 68.73795189199211,
+            "sma20": 242.33025000000012
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T23:56:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
+            },
+            {
+              "ts": "2025-11-06T21:19:50+00:00",
+              "source": "investingcom",
+              "tone": 0.0,
+              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
+            },
+            {
+              "ts": "2025-11-06T16:33:11+00:00",
+              "source": "benzinga",
+              "tone": 0.73584,
+              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+            }
+          ]
+        },
+        {
           "symbol": "GOOGL",
           "action": "BUY",
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.462142,
+          "score": 0.457118,
           "qty": 3.5086,
           "notional": 999.21,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.204776,
-            "CDS": 0.462142,
+            "NS": 0.192218,
+            "CDS": 0.457118,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1073,6 +1073,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T23:47:37+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
               "ts": "2025-11-06T21:00:00+00:00",
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
@@ -1083,12 +1089,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T19:05:48+00:00",
-              "source": "yahoofinance",
-              "tone": 0.5607449999999999,
-              "headline": "Alphabet (NASDAQ:GOOGL) Posted Healthy Earnings But There Are Some Other Factors To Be Aware Of"
             }
           ]
         },
@@ -1098,13 +1098,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.411815,
+          "score": 0.411617,
           "qty": 4.0796,
           "notional": 991.18,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.259286,
-            "CDS": 0.411815,
+            "NS": 0.258792,
+            "CDS": 0.411617,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1166,13 +1166,13 @@
           "px": 65.275,
           "qty_hint": 6.49,
           "reason": "score<sell",
-          "score": -0.340887,
+          "score": -0.3601,
           "qty": 1,
           "notional": 65.28,
           "signals": {
             "TS": -0.57545,
-            "NS": 0.010958,
-            "CDS": -0.340887,
+            "NS": -0.037075,
+            "CDS": -0.3601,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1212,13 +1212,13 @@
           "px": 28.39,
           "qty_hint": 129.08,
           "reason": "score<sell",
-          "score": -0.284132,
+          "score": -0.289849,
           "qty": 32,
           "notional": 908.48,
           "signals": {
             "TS": -0.528902,
-            "NS": 0.083022,
-            "CDS": -0.284132,
+            "NS": 0.068729,
+            "CDS": -0.289849,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1258,13 +1258,13 @@
           "px": 13.14,
           "qty_hint": 43.39,
           "reason": "score<sell",
-          "score": -0.314988,
+          "score": -0.316474,
           "qty": 10,
           "notional": 131.4,
           "signals": {
             "TS": -0.592264,
-            "NS": 0.100926,
-            "CDS": -0.314988,
+            "NS": 0.097212,
+            "CDS": -0.316474,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1304,13 +1304,13 @@
           "px": 34.345,
           "qty_hint": 7.17,
           "reason": "score<sell",
-          "score": -0.273611,
+          "score": -0.273128,
           "qty": 1,
           "notional": 34.34,
           "signals": {
             "TS": -0.527454,
-            "NS": 0.107153,
-            "CDS": -0.273611,
+            "NS": 0.108361,
+            "CDS": -0.273128,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1350,13 +1350,13 @@
           "px": 49.605,
           "qty_hint": 5.27,
           "reason": "score<sell",
-          "score": -0.368013,
+          "score": -0.365876,
           "qty": 1,
           "notional": 49.6,
           "signals": {
             "TS": -0.648029,
-            "NS": 0.052011,
-            "CDS": -0.368013,
+            "NS": 0.057353,
+            "CDS": -0.365876,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1383,10 +1383,10 @@
               "headline": "Rocket Lab Stock Dives Despite Successful Satellite Launch"
             },
             {
-              "ts": "2025-11-06T18:36:50+00:00",
-              "source": "newsercom",
-              "tone": 0.3544,
-              "headline": "Can RKLB stock hit record highs again - Market Sentiment Review & Comprehensive Market Scan Reports"
+              "ts": "2025-11-06T18:31:59+00:00",
+              "source": "benzinga",
+              "tone": -0.34362,
+              "headline": "Space Stock Tracker\u2014BlackSky, Redwire Dump After Earnings; AST, Rocket Lab On Deck"
             }
           ]
         },
@@ -1396,13 +1396,13 @@
           "px": 329.34,
           "qty_hint": 7.48,
           "reason": "score<sell",
-          "score": -0.35403,
+          "score": -0.300358,
           "qty": 1,
           "notional": 329.34,
           "signals": {
             "TS": -0.520567,
-            "NS": -0.104224,
-            "CDS": -0.35403,
+            "NS": 0.029956,
+            "CDS": -0.300358,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1433,52 +1433,6 @@
               "source": "nasdaq",
               "tone": 0.148,
               "headline": "VTI, AMD, PM, CAT: ETF Inflow Alert"
-            }
-          ]
-        },
-        {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 272.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.472489,
-          "qty": 2.1067,
-          "notional": 573.25,
-          "signals": {
-            "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 254.66756346321813,
-            "ema_slow": 242.081782295188,
-            "macd": 12.585781168030138,
-            "macd_signal": 9.279952147253411,
-            "macd_hist": 3.305829020776727,
-            "rsi14": 68.73795189199211,
-            "sma20": 242.33025000000012
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T21:19:50+00:00",
-              "source": "investingcom",
-              "tone": 0.0,
-              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
-            },
-            {
-              "ts": "2025-11-06T16:33:11+00:00",
-              "source": "benzinga",
-              "tone": 0.73584,
-              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
-            },
-            {
-              "ts": "2025-11-06T15:33:15+00:00",
-              "source": "newsercom",
-              "tone": 0.45405,
-              "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
             }
           ]
         },
@@ -1529,18 +1483,64 @@
           ]
         },
         {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 272.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.458231,
+          "qty": 2.1067,
+          "notional": 573.25,
+          "signals": {
+            "TS": 0.590301,
+            "NS": 0.260125,
+            "CDS": 0.458231,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.66756346321813,
+            "ema_slow": 242.081782295188,
+            "macd": 12.585781168030138,
+            "macd_signal": 9.279952147253411,
+            "macd_hist": 3.305829020776727,
+            "rsi14": 68.73795189199211,
+            "sma20": 242.33025000000012
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T23:56:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
+            },
+            {
+              "ts": "2025-11-06T21:19:50+00:00",
+              "source": "investingcom",
+              "tone": 0.0,
+              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
+            },
+            {
+              "ts": "2025-11-06T16:33:11+00:00",
+              "source": "benzinga",
+              "tone": 0.73584,
+              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+            }
+          ]
+        },
+        {
           "symbol": "GOOGL",
           "action": "BUY",
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.462142,
+          "score": 0.457118,
           "qty": 2.0129,
           "notional": 573.25,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.204776,
-            "CDS": 0.462142,
+            "NS": 0.192218,
+            "CDS": 0.457118,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1555,6 +1555,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T23:47:37+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
               "ts": "2025-11-06T21:00:00+00:00",
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
@@ -1565,12 +1571,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T19:05:48+00:00",
-              "source": "yahoofinance",
-              "tone": 0.5607449999999999,
-              "headline": "Alphabet (NASDAQ:GOOGL) Posted Healthy Earnings But There Are Some Other Factors To Be Aware Of"
             }
           ]
         },
@@ -1580,13 +1580,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.411815,
+          "score": 0.411617,
           "qty": 2.3594,
           "notional": 573.24,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.259286,
-            "CDS": 0.411815,
+            "NS": 0.258792,
+            "CDS": 0.411617,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1626,13 +1626,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.408159,
+          "score": 0.402201,
           "qty": 0.1426,
           "notional": 67.74,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.216831,
-            "CDS": 0.408159,
+            "NS": 0.201938,
+            "CDS": 0.402201,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1689,52 +1689,6 @@
       "cash_start": 7990.7,
       "trades": [
         {
-          "symbol": "FSLR",
-          "action": "BUY",
-          "px": 272.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.472489,
-          "qty": 2.2037,
-          "notional": 599.65,
-          "signals": {
-            "TS": 0.590301,
-            "NS": 0.29577,
-            "CDS": 0.472489,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 254.66756346321813,
-            "ema_slow": 242.081782295188,
-            "macd": 12.585781168030138,
-            "macd_signal": 9.279952147253411,
-            "macd_hist": 3.305829020776727,
-            "rsi14": 68.73795189199211,
-            "sma20": 242.33025000000012
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-06T21:19:50+00:00",
-              "source": "investingcom",
-              "tone": 0.0,
-              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
-            },
-            {
-              "ts": "2025-11-06T16:33:11+00:00",
-              "source": "benzinga",
-              "tone": 0.73584,
-              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
-            },
-            {
-              "ts": "2025-11-06T15:33:15+00:00",
-              "source": "newsercom",
-              "tone": 0.45405,
-              "headline": "Why FSLR stock is popular among millennials - Global Markets & Fast Gain Stock Tips"
-            }
-          ]
-        },
-        {
           "symbol": "AAPL",
           "action": "BUY",
           "px": 269.85,
@@ -1781,18 +1735,64 @@
           ]
         },
         {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 272.11,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.458231,
+          "qty": 2.2037,
+          "notional": 599.65,
+          "signals": {
+            "TS": 0.590301,
+            "NS": 0.260125,
+            "CDS": 0.458231,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 254.66756346321813,
+            "ema_slow": 242.081782295188,
+            "macd": 12.585781168030138,
+            "macd_signal": 9.279952147253411,
+            "macd_hist": 3.305829020776727,
+            "rsi14": 68.73795189199211,
+            "sma20": 242.33025000000012
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-06T23:56:00+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Should the Hype for First Solar (FLSR) Stock Continue?"
+            },
+            {
+              "ts": "2025-11-06T21:19:50+00:00",
+              "source": "investingcom",
+              "tone": 0.0,
+              "headline": "First solar CCO Antoun sells $9.9 million in FSLR stock"
+            },
+            {
+              "ts": "2025-11-06T16:33:11+00:00",
+              "source": "benzinga",
+              "tone": 0.73584,
+              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+            }
+          ]
+        },
+        {
           "symbol": "GOOGL",
           "action": "BUY",
           "px": 284.79,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.462142,
+          "score": 0.457118,
           "qty": 2.1056,
           "notional": 599.65,
           "signals": {
             "TS": 0.633719,
-            "NS": 0.204776,
-            "CDS": 0.462142,
+            "NS": 0.192218,
+            "CDS": 0.457118,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1807,6 +1807,12 @@
           },
           "news_preview": [
             {
+              "ts": "2025-11-06T23:47:37+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "How Internet Search King Alphabet (GOOGL) Ran Into Valuation Excess"
+            },
+            {
               "ts": "2025-11-06T21:00:00+00:00",
               "source": "investorsbusinessdaily",
               "tone": 0.74844,
@@ -1817,12 +1823,6 @@
               "source": "benzinga",
               "tone": 0.30600000000000005,
               "headline": "Lyft Remains A 'Show-Me' Story, Analysts Press For Execution"
-            },
-            {
-              "ts": "2025-11-06T19:05:48+00:00",
-              "source": "yahoofinance",
-              "tone": 0.5607449999999999,
-              "headline": "Alphabet (NASDAQ:GOOGL) Posted Healthy Earnings But There Are Some Other Factors To Be Aware Of"
             }
           ]
         },
@@ -1832,13 +1832,13 @@
           "px": 242.96,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.411815,
+          "score": 0.411617,
           "qty": 2.4681,
           "notional": 599.65,
           "signals": {
             "TS": 0.513501,
-            "NS": 0.259286,
-            "CDS": 0.411815,
+            "NS": 0.258792,
+            "CDS": 0.411617,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -1878,13 +1878,13 @@
           "px": 475.06,
           "qty_hint": 0.0,
           "reason": "score>buy",
-          "score": 0.408159,
+          "score": 0.402201,
           "qty": 1.2622,
           "notional": 599.62,
           "signals": {
             "TS": 0.53571,
-            "NS": 0.216831,
-            "CDS": 0.408159,
+            "NS": 0.201938,
+            "CDS": 0.402201,
             "wT": 0.6,
             "wN": 0.4
           },
