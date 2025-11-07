@@ -31,6 +31,10 @@ SMALLCAPS      = set(s.strip().upper() for s in os.getenv("SMALLCAPS", "").split
 ARTIFACT_VERSIONED  = os.getenv("ARTIFACT_VERSIONED", "false").lower() == "true"
 ARTIFACT_RETENTION  = int(os.getenv("ARTIFACT_RETENTION", "3"))  # keep last N snapshots when versioning is on
 
+APPLY_TRADES = os.getenv("APPLY_TRADES", "1").strip() == "1"
+DISABLE_VERSIONED = os.getenv("V3_DISABLE_VERSIONED_ARTIFACTS", "0").strip() == "1"
+
+
 def _utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -148,8 +152,23 @@ def portfolio_snapshot(portfolio_id: str, cash: float, pos: Dict[str, dict], pri
     }
 
 def write_portfolio_value(folder: Path, snap: dict) -> None:
-    """Rolling only; optional versioned snapshots controlled by env."""
-    write_artifact(folder, "portfolio_value", snap)
+    write_json(str(folder / "portfolio_value.json"), snap)
+    if DISABLE_VERSIONED:
+        return
+    asof = (snap.get("as_of_utc") or "")
+    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
+    if safe_asof:
+        write_json(str(folder / f"portfolio_value_{safe_asof}.json"), snap)
+
+def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: list) -> None:
+    asof = (prices or {}).get("as_of_utc", "")
+    obj = {"as_of_utc": asof, "portfolio_id": portfolio_id, "trades": trades}
+    write_json(str(folder / "trades_applied.json"), obj)
+    if DISABLE_VERSIONED:
+        return
+    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
+    if safe_asof:
+        write_json(str(folder / f"trades_applied_{safe_asof}.json"), obj)
 
 def ensure_portfolio_ledger(folder: Path) -> Path:
     """Create per-portfolio ledger with header if missing."""
@@ -160,16 +179,6 @@ def ensure_portfolio_ledger(folder: Path) -> Path:
             "gross_amount,post_trade_cash,post_trade_position,signal_snapshot,rationale,run_id\n"
         )
     return p
-
-def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: list) -> None:
-    """Persist what we actually attempted to execute for this portfolio."""
-    asof = (prices or {}).get("as_of_utc", "")
-    obj = {
-        "as_of_utc": asof,
-        "portfolio_id": portfolio_id,
-        "trades": trades,
-    }
-    write_artifact(folder, "trades_applied", obj)
 
 def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path, cash: float, snap: dict | None = None) -> None:
     base = {
@@ -448,14 +457,15 @@ def main():
 
         trades = block.get("trades") or []
         if not trades:
-            # even with no trades, record a history snapshot
             cash, pos = read_positions_csv(str(positions_csv))
             append_history_row(folder, pid, cash, pos, prices)
-            write_last_applied(folder / "last_applied.json", asof)
+            if APPLY_TRADES:  # only mark as applied when we truly applied
+                write_last_applied(folder / "last_applied.json", asof)
             snap = portfolio_snapshot(pid, cash, pos, prices)
             write_portfolio_value(folder, snap)
             write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
             continue
+
 
         apply_trades_to_portfolio(
             pid,
@@ -466,8 +476,25 @@ def main():
             trades,
             LEDGER_PATH
         )
-        write_last_applied(folder / "last_applied.json", asof)
-        executed.append(pid)
+        if APPLY_TRADES:
+            apply_trades_to_portfolio(
+                pid,
+                scope if scope in ("paper", "real") else EXECUTE_SCOPE,
+                folder,
+                positions_csv,
+                prices,
+                trades,
+                LEDGER_PATH
+            )
+            write_last_applied(folder / "last_applied.json", asof)
+            executed.append(pid)
+        else:
+            # Dry-run: do NOT modify positions; just snapshot current state
+            cash, pos = read_positions_csv(str(positions_csv))
+            snap = portfolio_snapshot(pid, cash, pos, prices)
+            write_portfolio_value(folder, snap)
+            write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
+
 
     print(f"[OK] update_performance_v3 complete. executed: {executed}")
 
