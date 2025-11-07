@@ -243,6 +243,7 @@ def main():
             "macd": m_line[-1] if m_line else None,
             "macd_signal": m_sig[-1] if m_sig else None,
             "macd_hist": m_hist[-1] if m_hist else None,
+            "macd_hist_prev": (m_hist[-2] if m_hist and len(m_hist) > 1 else (m_hist[-1] if m_hist else None)),
             "rsi": rsi_arr[-1] if rsi_arr else None,
             "sma20": sma_arr[-1] if sma_arr else None,
             "price": px
