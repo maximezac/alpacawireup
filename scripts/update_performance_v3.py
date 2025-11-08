@@ -34,6 +34,11 @@ ARTIFACT_RETENTION  = int(os.getenv("ARTIFACT_RETENTION", "3"))  # keep last N s
 APPLY_TRADES = os.getenv("APPLY_TRADES", "1").strip() == "1"
 DISABLE_VERSIONED = os.getenv("V3_DISABLE_VERSIONED_ARTIFACTS", "0").strip() == "1"
 
+# Prefer a single switch
+ARTIFACT_VERSIONED = (os.getenv("ARTIFACT_VERSIONED", "false").lower() == "true")
+DISABLE_VERSIONED  = (os.getenv("V3_DISABLE_VERSIONED_ARTIFACTS", "0").strip() == "1")
+VERSIONING_ENABLED = ARTIFACT_VERSIONED and not DISABLE_VERSIONED
+
 
 def _utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -153,7 +158,7 @@ def portfolio_snapshot(portfolio_id: str, cash: float, pos: Dict[str, dict], pri
 
 def write_portfolio_value(folder: Path, snap: dict) -> None:
     write_json(str(folder / "portfolio_value.json"), snap)
-    if DISABLE_VERSIONED:
+    if not VERSIONING_ENABLED:
         return
     asof = (snap.get("as_of_utc") or "")
     safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
@@ -164,7 +169,7 @@ def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: 
     asof = (prices or {}).get("as_of_utc", "")
     obj = {"as_of_utc": asof, "portfolio_id": portfolio_id, "trades": trades}
     write_json(str(folder / "trades_applied.json"), obj)
-    if DISABLE_VERSIONED:
+    if not VERSIONING_ENABLED:
         return
     safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
     if safe_asof:
@@ -444,9 +449,10 @@ def main():
         positions_csv = Path(positions_path)
         folder = positions_csv.parent
 
-        # idempotency per as_of_utc
+                # idempotency per as_of_utc
         last_applied = load_last_applied(folder / "last_applied.json")
-        if last_applied == asof:
+        # Only skip if we're actually applying trades; gather runs should still proceed.
+        if APPLY_TRADES and last_applied == asof:
             continue
 
         # If positions file missing, don't block execution for this snapshot later.
@@ -455,28 +461,25 @@ def main():
             print(f"[skip] {pid}: positions file missing at {positions_csv}")
             continue
 
+        # ------------------------
+        # Build & possibly apply
+        # ------------------------
         trades = block.get("trades") or []
+
         if not trades:
+            # No trades: still maintain history/snapshots.
             cash, pos = read_positions_csv(str(positions_csv))
             append_history_row(folder, pid, cash, pos, prices)
-            if APPLY_TRADES:  # only mark as applied when we truly applied
+            # Mark last_applied ONLY when we truly applied trades (APPLY_TRADES==True).
+            if APPLY_TRADES:
                 write_last_applied(folder / "last_applied.json", asof)
             snap = portfolio_snapshot(pid, cash, pos, prices)
             write_portfolio_value(folder, snap)
             write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
             continue
 
-
-        apply_trades_to_portfolio(
-            pid,
-            scope if scope in ("paper", "real") else EXECUTE_SCOPE,
-            folder,
-            positions_csv,
-            prices,
-            trades,
-            LEDGER_PATH
-        )
         if APPLY_TRADES:
+            # REAL/PAPER execution path
             apply_trades_to_portfolio(
                 pid,
                 scope if scope in ("paper", "real") else EXECUTE_SCOPE,
@@ -489,12 +492,13 @@ def main():
             write_last_applied(folder / "last_applied.json", asof)
             executed.append(pid)
         else:
-            # Dry-run: do NOT modify positions; just snapshot current state
+            # DRY-RUN / GATHER: do NOT apply trades (no ledger/positions changes).
             cash, pos = read_positions_csv(str(positions_csv))
             snap = portfolio_snapshot(pid, cash, pos, prices)
             write_portfolio_value(folder, snap)
             write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
-
+            append_history_row(folder, pid, cash, pos, prices) 
+            # Intentionally NOT writing last_applied here.
 
     print(f"[OK] update_performance_v3 complete. executed: {executed}")
 
