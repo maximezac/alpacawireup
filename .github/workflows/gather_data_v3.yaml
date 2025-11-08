@@ -63,23 +63,40 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          is_fresh_file() {
-            local f="$1" max_age_hours="$2"
-            [ -f "$f" ] || { echo "false"; return; }
-            if jq -e 'has("as_of_utc")' "$f" >/dev/null 2>&1; then
-              ts=$(jq -r '.as_of_utc' "$f" | sed 's/Z$/+00:00/')
-              now=$(date -u +%s)
-              file=$(date -u -d "$ts" +%s 2>/dev/null || echo 0)
-              age=$(( (now - file) / 3600 ))
-            else
-              mtime=$(date -u -r "$f" +%s)
-              now=$(date -u +%s)
-              age=$(( (now - mtime) / 3600 ))
-            fi
-            if [ "$age" -le "$max_age_hours" ]; then echo "true"; else echo "false"; fi
-          }
-          echo "fresh_prices=$(is_fresh_file '${INPUT_BASE}' 6)"  | tee -a "$GITHUB_OUTPUT"
-          echo "fresh_base=$(is_fresh_file '${INPUT_BASE}' 24)"   | tee -a "$GITHUB_OUTPUT"
+          base="${INPUT_BASE}"          # data/prices.json
+          final="${INPUT_FINAL}"        # data/prices_final.json
+          now=$(date -u +%s)
+      
+          # defaults
+          fresh_prices=false
+          fresh_base=false
+          needs_news=false
+      
+          # fresh_prices: final feed (or base) generated within last 10 min
+          if [[ -f "$final" ]]; then
+            [[ $((now - $(stat -c %Y "$final"))) -lt 600 ]] && fresh_prices=true
+          elif [[ -f "$base" ]]; then
+            [[ $((now - $(stat -c %Y "$base"))) -lt 600 ]] && fresh_prices=true
+          fi
+      
+          # fresh_base & needs_news from base file (if exists)
+          if [[ -f "$base" ]]; then
+            mtime=$(stat -c %Y "$base")
+            age_h=$(( (now - mtime) / 3600 ))
+            [[ $age_h -le 24 ]] && fresh_base=true
+            total_news=$(jq -r '[.symbols? // {} | to_entries[] | .value.news? | length] | add // 0' "$base")
+            [[ "$total_news" -eq 0 || $age_h -gt 24 ]] && needs_news=true
+          else
+            # no base file yet ⇒ we need both prices and news
+            needs_news=true
+          fi
+      
+          {
+            echo "fresh_prices=${fresh_prices}"
+            echo "fresh_base=${fresh_base}"
+            echo "needs_news=${needs_news}"
+          } >> "$GITHUB_OUTPUT"
+
 
       - name: Fetch prices (if stale)
         if: steps.probe.outputs.fresh_prices != 'true'
@@ -92,11 +109,8 @@ jobs:
           DAYS_BACK:         "270"
         run: python fetch_prices.py
 
-      - name: Set WEEKDAY
-        run: echo "WEEKDAY=$(date -u +%a)" >> "$GITHUB_ENV"
-
-      - name: Fetch news (weekday always)
-        if: contains('Mon Tue Wed Thu Fri', env.WEEKDAY)
+      - name: Fetch news (if missing/stale or manual)
+        if: steps.probe.outputs.needs_news == 'true' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
         env:
           INPUT_PATH:  data/prices.json
