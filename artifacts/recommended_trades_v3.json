@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-10T16:36:28.104083+00:00",
+  "as_of_utc": "2025-11-10T16:55:13.322203+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,34 +17,34 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 19726.17,
+      "portfolio_value_est": 19646.93,
       "cash_start": 0.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.53,
+          "px": 28.66,
           "qty_hint": 230.08,
           "reason": "score<sell",
-          "score": -0.283851,
+          "score": -0.275738,
           "qty": 57,
-          "notional": 1683.21,
+          "notional": 1633.62,
           "signals": {
-            "TS": -0.498298,
-            "NS": 0.03782,
-            "CDS": -0.283851,
+            "TS": -0.51779,
+            "NS": 0.087341,
+            "CDS": -0.275738,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.01800712142528,
-            "ema_slow": 31.829112749305096,
-            "macd": 0.18889437212018123,
-            "macd_signal": 1.2997054535182084,
-            "macd_hist": -1.1108110813980272,
-            "macd_hist_prev": -1.1200779405237085,
-            "rsi14": 41.31428469084056,
-            "sma20": 34.54949999999998
+            "ema_fast": 31.501390641206,
+            "ema_slow": 31.594363547236075,
+            "macd": -0.09297290603007369,
+            "macd_signal": 1.021169920773404,
+            "macd_hist": -1.1141428268034776,
+            "macd_hist_prev": -1.1108111370639642,
+            "rsi14": 39.09973361784686,
+            "sma20": 33.951499999999974
           },
           "news_preview": [
             {
@@ -70,46 +70,46 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 12.86,
+          "px": 12.68,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.405562,
+          "score": -0.368823,
           "qty": 18,
-          "notional": 231.48,
+          "notional": 228.24,
           "signals": {
-            "TS": -0.603998,
-            "NS": -0.107908,
-            "CDS": -0.405562,
+            "TS": -0.612312,
+            "NS": -0.003588,
+            "CDS": -0.368823,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 14.920424843528536,
-            "ema_slow": 16.34369736539872,
-            "macd": -1.4232725218701852,
-            "macd_signal": -1.073359602532031,
-            "macd_hist": -0.34991291933815405,
-            "macd_hist_prev": -0.34146423958122163,
-            "rsi14": 30.427151809304206,
-            "sma20": 16.413999999999994
+            "ema_fast": 14.575744098370297,
+            "ema_slow": 16.072312168712767,
+            "macd": -1.4965680703424695,
+            "macd_signal": -1.1580010335189126,
+            "macd_hist": -0.33856703682355693,
+            "macd_hist_prev": -0.3499130243682316,
+            "rsi14": 29.538673742730467,
+            "sma20": 15.976499999999996
           },
           "news_preview": [
             {
               "ts": "2025-11-10T08:38:14+00:00",
               "source": "newsercom",
-              "tone": 0.33968029524467647,
+              "tone": 0.33748771917394804,
               "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
             },
             {
               "ts": "2025-11-10T06:36:58+00:00",
               "source": "newsercom",
-              "tone": -0.5686650812045856,
+              "tone": -0.5649944460655115,
               "headline": "Will QUBT stock return to pre crisis levels - Earnings Miss & Real-Time Chart Breakout Alerts"
             },
             {
               "ts": "2025-11-10T06:09:09+00:00",
               "source": "newsercom",
-              "tone": -0.5631990271689429,
+              "tone": -0.5595636780517733,
               "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
             }
           ]
@@ -117,40 +117,40 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 33.765,
+          "px": 32.92,
           "qty_hint": 10.17,
           "reason": "score<sell",
-          "score": -0.280781,
+          "score": -0.290446,
           "qty": 2,
-          "notional": 67.53,
+          "notional": 65.84,
           "signals": {
-            "TS": -0.53846,
-            "NS": 0.105738,
-            "CDS": -0.280781,
+            "TS": -0.554187,
+            "NS": 0.105165,
+            "CDS": -0.290446,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 38.1687770589293,
-            "ema_slow": 38.17188429707849,
-            "macd": -0.003107238149191005,
-            "macd_signal": 1.5970268606549347,
-            "macd_hist": -1.6001340988041257,
-            "macd_hist_prev": -1.5520316292842873,
-            "rsi14": 36.44451111785996,
-            "sma20": 42.13399999999999
+            "ema_fast": 37.361272896017105,
+            "ema_slow": 37.78285566943622,
+            "macd": -0.421582773419118,
+            "macd_signal": 1.1933051386487856,
+            "macd_hist": -1.6148879120679036,
+            "macd_hist_prev": -1.6001341807275768,
+            "rsi14": 34.755546560123605,
+            "sma20": 41.032499999999985
           },
           "news_preview": [
             {
               "ts": "2025-11-10T13:38:37+00:00",
               "source": "benzinga",
-              "tone": 0.25683995874068954,
+              "tone": 0.2551810918581027,
               "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
             },
             {
               "ts": "2025-11-10T13:38:37+00:00",
               "source": "benzinga",
-              "tone": 0.2568399432217895,
+              "tone": 0.25518107924524597,
               "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
             },
             {
@@ -162,7 +162,7 @@
           ]
         }
       ],
-      "cash_left": 1982.22
+      "cash_left": 1927.7
     },
     "portfolio_max_TS_only": {
       "meta": {
@@ -179,34 +179,34 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 19726.17,
+      "portfolio_value_est": 19646.93,
       "cash_start": 0.0,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.53,
+          "px": 28.66,
           "qty_hint": 230.08,
           "reason": "score<sell",
-          "score": -0.498298,
+          "score": -0.51779,
           "qty": 57,
-          "notional": 1683.21,
+          "notional": 1633.62,
           "signals": {
-            "TS": -0.498298,
-            "NS": 0.03782,
-            "CDS": -0.283851,
+            "TS": -0.51779,
+            "NS": 0.087341,
+            "CDS": -0.275738,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.01800712142528,
-            "ema_slow": 31.829112749305096,
-            "macd": 0.18889437212018123,
-            "macd_signal": 1.2997054535182084,
-            "macd_hist": -1.1108110813980272,
-            "macd_hist_prev": -1.1200779405237085,
-            "rsi14": 41.31428469084056,
-            "sma20": 34.54949999999998
+            "ema_fast": 31.501390641206,
+            "ema_slow": 31.594363547236075,
+            "macd": -0.09297290603007369,
+            "macd_signal": 1.021169920773404,
+            "macd_hist": -1.1141428268034776,
+            "macd_hist_prev": -1.1108111370639642,
+            "rsi14": 39.09973361784686,
+            "sma20": 33.951499999999974
           },
           "news_preview": [
             {
@@ -232,28 +232,28 @@
         {
           "symbol": "VTI",
           "action": "SELL",
-          "px": 330.125,
+          "px": 332.33,
           "qty_hint": 9.48,
           "reason": "score<sell",
-          "score": -0.494979,
+          "score": -0.367346,
           "qty": 2,
-          "notional": 660.25,
+          "notional": 664.66,
           "signals": {
-            "TS": -0.494979,
-            "NS": 0.235108,
-            "CDS": -0.202944,
+            "TS": -0.367346,
+            "NS": 0.234236,
+            "CDS": -0.126714,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 332.35547405729034,
-            "ema_slow": 330.97470687462123,
-            "macd": 1.3807671826691035,
-            "macd_signal": 2.089270707952628,
-            "macd_hist": -0.7085035252835246,
-            "macd_hist_prev": -0.5480652188849975,
-            "rsi14": 41.77325478873546,
-            "sma20": 331.66225
+            "ema_fast": 332.35155497155324,
+            "ema_slow": 331.0750980590273,
+            "macd": 1.27645691252593,
+            "macd_signal": 1.926709091069339,
+            "macd_hist": -0.650252178543409,
+            "macd_hist_prev": -0.7085039821644199,
+            "rsi14": 50.23522833940028,
+            "sma20": 331.9340000000001
           },
           "news_preview": [
             {
@@ -265,7 +265,7 @@
             {
               "ts": "2025-11-10T10:04:00+00:00",
               "source": "seekingalpha",
-              "tone": 0.5712443194826965,
+              "tone": 0.5675392482647326,
               "headline": "The Genius-Is-A-Bull-Market Trade Keeps On Winning In 2025"
             },
             {
@@ -279,46 +279,46 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 12.86,
+          "px": 12.68,
           "qty_hint": 75.39,
           "reason": "score<sell",
-          "score": -0.603998,
+          "score": -0.612312,
           "qty": 18,
-          "notional": 231.48,
+          "notional": 228.24,
           "signals": {
-            "TS": -0.603998,
-            "NS": -0.107908,
-            "CDS": -0.405562,
+            "TS": -0.612312,
+            "NS": -0.003588,
+            "CDS": -0.368823,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 14.920424843528536,
-            "ema_slow": 16.34369736539872,
-            "macd": -1.4232725218701852,
-            "macd_signal": -1.073359602532031,
-            "macd_hist": -0.34991291933815405,
-            "macd_hist_prev": -0.34146423958122163,
-            "rsi14": 30.427151809304206,
-            "sma20": 16.413999999999994
+            "ema_fast": 14.575744098370297,
+            "ema_slow": 16.072312168712767,
+            "macd": -1.4965680703424695,
+            "macd_signal": -1.1580010335189126,
+            "macd_hist": -0.33856703682355693,
+            "macd_hist_prev": -0.3499130243682316,
+            "rsi14": 29.538673742730467,
+            "sma20": 15.976499999999996
           },
           "news_preview": [
             {
               "ts": "2025-11-10T08:38:14+00:00",
               "source": "newsercom",
-              "tone": 0.33968029524467647,
+              "tone": 0.33748771917394804,
               "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
             },
             {
               "ts": "2025-11-10T06:36:58+00:00",
               "source": "newsercom",
-              "tone": -0.5686650812045856,
+              "tone": -0.5649944460655115,
               "headline": "Will QUBT stock return to pre crisis levels - Earnings Miss & Real-Time Chart Breakout Alerts"
             },
             {
               "ts": "2025-11-10T06:09:09+00:00",
               "source": "newsercom",
-              "tone": -0.5631990271689429,
+              "tone": -0.5595636780517733,
               "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
             }
           ]
@@ -326,40 +326,40 @@
         {
           "symbol": "HOOD",
           "action": "SELL",
-          "px": 130.36,
+          "px": 133.91,
           "qty_hint": 4.0,
           "reason": "score<sell",
-          "score": -0.501386,
+          "score": -0.463228,
           "qty": 1,
-          "notional": 130.36,
+          "notional": 133.91,
           "signals": {
-            "TS": -0.501386,
-            "NS": 0.425238,
-            "CDS": -0.130737,
+            "TS": -0.463228,
+            "NS": 0.420477,
+            "CDS": -0.109746,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 137.51390305756442,
-            "ema_slow": 136.35964578627716,
-            "macd": 1.154257271287264,
-            "macd_signal": 2.886370255462074,
-            "macd_hist": -1.73211298417481,
-            "macd_hist_prev": -1.344403246290784,
-            "rsi14": 40.86506746411284,
-            "sma20": 137.28600000000006
+            "ema_fast": 136.95945643332368,
+            "ema_slow": 136.17818984641707,
+            "macd": 0.7812665869066109,
+            "macd_signal": 2.465350406629394,
+            "macd_hist": -1.6840838197227832,
+            "macd_hist_prev": -1.7321133381261644,
+            "rsi14": 45.703054278280796,
+            "sma20": 136.94800000000004
           },
           "news_preview": [
             {
               "ts": "2025-11-10T15:33:18+00:00",
               "source": "benzinga",
-              "tone": 0.6748072775895,
+              "tone": 0.6704732905235647,
               "headline": "Markets Cheer As Shutdown End Nears: These 15 Stocks Are Rallying"
             },
             {
               "ts": "2025-11-10T15:22:48+00:00",
               "source": "benzinga",
-              "tone": 0.8778581032454514,
+              "tone": 0.8722200109194386,
               "headline": "Robinhood's 340% Rally Proves Jim Cramer Right: 'It Gives People What They Want'"
             },
             {
@@ -373,40 +373,40 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 51.635,
+          "px": 51.35,
           "qty_hint": 6.27,
           "reason": "score<sell",
-          "score": -0.590189,
+          "score": -0.595687,
           "qty": 1,
-          "notional": 51.63,
+          "notional": 51.35,
           "signals": {
-            "TS": -0.590189,
-            "NS": 0.297737,
-            "CDS": -0.235019,
+            "TS": -0.595687,
+            "NS": 0.344286,
+            "CDS": -0.219698,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 58.32388470769932,
-            "ema_slow": 59.022596555821025,
-            "macd": -0.6987118481217038,
-            "macd_signal": 1.4529003581810125,
-            "macd_hist": -2.1516122063027163,
-            "macd_hist_prev": -2.0643621263987457,
-            "rsi14": 30.272258092627183,
-            "sma20": 62.62025
+            "ema_fast": 57.25097936805327,
+            "ema_slow": 58.454255880080744,
+            "macd": -1.2032765120274718,
+            "macd_signal": 0.9216652257085062,
+            "macd_hist": -2.124941737735978,
+            "macd_hist_prev": -2.1516123029303853,
+            "rsi14": 29.80366723246503,
+            "sma20": 61.918249999999986
           },
           "news_preview": [
             {
               "ts": "2025-11-10T16:07:19+00:00",
               "source": "yahoofinance",
-              "tone": 0.8417291114164251,
+              "tone": 0.8362915397161609,
               "headline": "Assessing Rocket Lab After 249% Rally and Satellite Launch Success in 2025"
             },
             {
               "ts": "2025-11-10T15:27:33+00:00",
               "source": "benzinga",
-              "tone": 0.39028533572010343,
+              "tone": 0.38776408987304867,
               "headline": "Rocket Lab (RKLB) Stock Climbs Ahead Of Q3 Earnings Report"
             },
             {
@@ -420,40 +420,40 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 33.765,
+          "px": 32.92,
           "qty_hint": 10.17,
           "reason": "score<sell",
-          "score": -0.53846,
+          "score": -0.554187,
           "qty": 2,
-          "notional": 67.53,
+          "notional": 65.84,
           "signals": {
-            "TS": -0.53846,
-            "NS": 0.105738,
-            "CDS": -0.280781,
+            "TS": -0.554187,
+            "NS": 0.105165,
+            "CDS": -0.290446,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 38.1687770589293,
-            "ema_slow": 38.17188429707849,
-            "macd": -0.003107238149191005,
-            "macd_signal": 1.5970268606549347,
-            "macd_hist": -1.6001340988041257,
-            "macd_hist_prev": -1.5520316292842873,
-            "rsi14": 36.44451111785996,
-            "sma20": 42.13399999999999
+            "ema_fast": 37.361272896017105,
+            "ema_slow": 37.78285566943622,
+            "macd": -0.421582773419118,
+            "macd_signal": 1.1933051386487856,
+            "macd_hist": -1.6148879120679036,
+            "macd_hist_prev": -1.6001341807275768,
+            "rsi14": 34.755546560123605,
+            "sma20": 41.032499999999985
           },
           "news_preview": [
             {
               "ts": "2025-11-10T13:38:37+00:00",
               "source": "benzinga",
-              "tone": 0.25683995874068954,
+              "tone": 0.2551810918581027,
               "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
             },
             {
               "ts": "2025-11-10T13:38:37+00:00",
               "source": "benzinga",
-              "tone": 0.2568399432217895,
+              "tone": 0.25518107924524597,
               "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
             },
             {
@@ -467,52 +467,52 @@
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 69.21,
+          "px": 68.08,
           "qty_hint": 8.49,
           "reason": "score<sell",
-          "score": -0.497663,
+          "score": -0.513936,
           "qty": 2,
-          "notional": 138.42,
+          "notional": 136.16,
           "signals": {
-            "TS": -0.497663,
-            "NS": 0.18438,
-            "CDS": -0.224846,
+            "TS": -0.513936,
+            "NS": 0.202006,
+            "CDS": -0.227559,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 72.99251868349589,
-            "ema_slow": 72.25431907132457,
-            "macd": 0.7381996121713144,
-            "macd_signal": 3.206518147862554,
-            "macd_hist": -2.46831853569124,
-            "macd_hist_prev": -2.6412130255934985,
-            "rsi14": 41.286732200437456,
-            "sma20": 78.61100000000008
+            "ema_fast": 72.23674657834268,
+            "ema_slow": 71.94511000530531,
+            "macd": 0.29163657303736557,
+            "macd_signal": 2.6235421453620167,
+            "macd_hist": -2.331905572324651,
+            "macd_hist_prev": -2.46831866067703,
+            "rsi14": 39.40669312209672,
+            "sma20": 77.49250000000006
           },
           "news_preview": [
             {
               "ts": "2025-11-10T15:42:40+00:00",
               "source": "benzinga",
-              "tone": 0.6084945421282147,
-              "headline": "AST SpaceMobile (ASTS) Stock Holds Steady As Investors Await Q3 Results"
-            },
-            {
-              "ts": "2025-11-10T15:42:40+00:00",
-              "source": "inkl",
-              "tone": 0.2086818517831496,
+              "tone": 0.604610405119926,
               "headline": "AST SpaceMobile (ASTS) Stock Holds Steady As Investors Await Q3 Results"
             },
             {
               "ts": "2025-11-10T15:38:24+00:00",
               "source": "simplywallst",
-              "tone": 0.4341531745075874,
+              "tone": 0.43138189304907215,
               "headline": "Assessing AST SpaceMobile After Its 220% 2025 Rally and Satellite Launch Progress"
+            },
+            {
+              "ts": "2025-11-10T13:38:37+00:00",
+              "source": "benzinga",
+              "tone": 0.2553534678362161,
+              "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
             }
           ]
         }
       ],
-      "cash_left": 2962.89
+      "cash_left": 2913.78
     },
     "portfolio_paper_aggressive_trades": {
       "meta": {
@@ -531,138 +531,189 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 19806.42,
-      "cash_start": 12.95,
+      "portfolio_value_est": 19074.52,
+      "cash_start": 1008.69,
       "trades": [
         {
           "symbol": "DDOG",
           "action": "BUY",
-          "px": 191.21,
+          "px": 198.21,
           "qty_hint": 0.0,
           "reason": "score>buy|topped_by_rotation",
-          "score": 0.580738,
-          "qty": 3.8844239999999997,
-          "notional": 742.74,
+          "score": 0.585473,
+          "qty": 5.056747,
+          "notional": 1002.29,
           "signals": {
-            "TS": 0.697703,
-            "NS": 0.405291,
-            "CDS": 0.580738,
+            "TS": 0.721208,
+            "NS": 0.381871,
+            "CDS": 0.585473,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 167.02182355918,
-            "ema_slow": 159.9690366652815,
-            "macd": 7.052786893898514,
-            "macd_signal": 4.405646908791897,
-            "macd_hist": 2.647139985106617,
-            "macd_hist_prev": 1.4103517861935169,
-            "rsi14": 82.36065048946499,
-            "sma20": 160.82249999999988
+            "ema_fast": 171.82000455007545,
+            "ema_slow": 162.80170084952317,
+            "macd": 9.01830370055228,
+            "macd_signal": 5.328177970434012,
+            "macd_hist": 3.690125730118268,
+            "macd_hist_prev": 2.64714010379062,
+            "rsi14": 85.01614307349861,
+            "sma20": 162.51949999999988
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.050775,
+          "qty_prev": 3.799575,
           "news_preview": [
             {
               "ts": "2025-11-10T14:27:45+00:00",
               "source": "marketbeat",
-              "tone": 0.8613538904707135,
+              "tone": 0.8558315455240388,
               "headline": "Robert W. Baird Issues Positive Forecast for Datadog (NASDAQ:DDOG) Stock Price"
             },
             {
               "ts": "2025-11-10T14:00:00+00:00",
               "source": "yahoo",
-              "tone": 0.45242434265275033,
+              "tone": 0.449523739648725,
               "headline": "groundcover Unveils Industry\u2019s First Automated Observability Migration Tool to Unleash Teams From Legacy Vendor Lock-In"
             },
             {
               "ts": "2025-11-10T14:00:00+00:00",
               "source": "yahoo",
-              "tone": 0.9478825517242463,
+              "tone": 0.9418054449258308,
               "headline": "Rokt Strengthens Its Board and Advisory Group with Appointment of Veteran Financial Leaders"
             }
           ]
         },
         {
-          "symbol": "ESTC",
+          "symbol": "BE",
           "action": "BUY",
-          "px": 90.04,
+          "px": 137.345,
           "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.472879,
-          "qty": 0.0001,
-          "notional": 0.01,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.58154,
+          "qty": 1.839043,
+          "notional": 252.58,
           "signals": {
-            "TS": 0.524125,
-            "NS": 0.396009,
-            "CDS": 0.472879,
+            "TS": 0.553787,
+            "NS": 0.623169,
+            "CDS": 0.58154,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 87.77338668159607,
-            "ema_slow": 86.7181630194496,
-            "macd": 1.0552236621464601,
-            "macd_signal": 0.8289143343711446,
-            "macd_hist": 0.22630932777531554,
-            "macd_hist_prev": 0.1365221057260919,
-            "rsi14": 61.46165170175712,
-            "sma20": 86.17275000000004
+            "ema_fast": 128.97332542111374,
+            "ema_slow": 115.55024905557316,
+            "macd": 13.423076365540581,
+            "macd_signal": 12.900566412138682,
+            "macd_hist": 0.5225099534018991,
+            "macd_hist_prev": 0.8745948665999173,
+            "rsi14": 62.56927021300331,
+            "sma20": 120.72200000000007
           },
-          "phase": "early",
-          "size_k": 1.0,
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.02475,
           "news_preview": [
             {
-              "ts": "2025-11-10T11:01:59+00:00",
-              "source": "newsercom",
-              "tone": 0.6237016410880866,
-              "headline": "Can ESTC stock attract analyst upgrades - Gap Up & Weekly Return Optimization Plans"
+              "ts": "2025-11-10T16:42:28+00:00",
+              "source": "marketbeat",
+              "tone": 0.8969346461442607,
+              "headline": "3 Stocks Showing Relative Strength as Markets Pull Back"
             },
             {
-              "ts": "2025-11-10T10:28:47+00:00",
+              "ts": "2025-11-10T12:11:25+00:00",
               "source": "newsercom",
-              "tone": 0.6165530342298514,
-              "headline": "Is ESTC stock supported by innovation pipeline - GDP Growth & Technical Entry and Exit Alerts"
+              "tone": 0.6349549031181352,
+              "headline": "How BE stock reacts to stronger dollar - Price Action & Free Technical Confirmation Trade Alerts"
             },
             {
-              "ts": "2025-11-10T07:54:22+00:00",
+              "ts": "2025-11-10T07:17:46+00:00",
               "source": "newsercom",
-              "tone": 0.09393975049648529,
-              "headline": "Will ESTC stock see insider buying - Portfolio Value Report & Low Drawdown Investment Strategies"
+              "tone": 0.5734049480534297,
+              "headline": "How dovish Fed policy supports BE stock - 2025 Big Picture & Safe Entry Zone Identification"
+            }
+          ]
+        },
+        {
+          "symbol": "ORA",
+          "action": "BUY",
+          "px": 114.135,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.517222,
+          "qty": 2.183315,
+          "notional": 249.19,
+          "signals": {
+            "TS": 0.60953,
+            "NS": 0.378759,
+            "CDS": 0.517222,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 110.26905265914891,
+            "ema_slow": 107.04875238940072,
+            "macd": 3.2203002697481935,
+            "macd_signal": 2.8292495524006607,
+            "macd_hist": 0.39105071734753283,
+            "macd_hist_prev": 0.3528136890139799,
+            "rsi14": 71.68928778981302,
+            "sma20": 108.55999999999999
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 7.5e-05,
+          "news_preview": [
+            {
+              "ts": "2025-11-10T13:29:51+00:00",
+              "source": "newsercom",
+              "tone": 0.6521475265169052,
+              "headline": "Why ORA stock stays on top picks - Profit Target & Technical Pattern Based Signals"
+            },
+            {
+              "ts": "2025-11-10T13:12:35+00:00",
+              "source": "newsercom",
+              "tone": 0.3712524051845876,
+              "headline": "Why ORA stock stays on top picks - July 2025 Institutional & Verified Trade Idea Suggestions"
+            },
+            {
+              "ts": "2025-11-10T12:23:05+00:00",
+              "source": "newsercom",
+              "tone": 0.6372027828550129,
+              "headline": "Can ORA stock sustain free cash flow - Quarterly Profit Report & Daily Entry Point Trade Alerts"
             }
           ]
         },
         {
           "symbol": "AAPL",
           "action": "SELL",
-          "px": 268.47,
-          "qty": 2.730406,
-          "notional": 733.03,
+          "px": 269.05,
+          "qty": 2.778488,
+          "notional": 747.55,
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.284986,
-            "NS": 0.261237,
-            "CDS": -0.066497,
+            "TS": -0.268091,
+            "NS": 0.25889,
+            "CDS": -0.057299,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.2012318360039,
-            "ema_slow": 261.6331630358192,
-            "macd": 5.568068800184676,
-            "macd_signal": 5.7099586365661885,
-            "macd_hist": -0.14188983638151242,
-            "macd_hist_prev": 0.1388995409310425,
-            "rsi": 60.09432802660258,
-            "sma20": 262.3735,
-            "price": 268.47
+            "ema_fast": 267.485657707388,
+            "ema_slow": 262.18255983995954,
+            "macd": 5.303097867428448,
+            "macd_signal": 5.6285846105774775,
+            "macd_hist": -0.32548674314902915,
+            "macd_hist_prev": -0.14188908751702556,
+            "rsi": 62.23280381798951,
+            "sma20": 263.44899999999996,
+            "price": 269.05
           },
           "news_preview": [
             {
               "ts": "2025-11-10T16:21:23+00:00",
               "source": "247wallst",
-              "tone": 0.6970610506894818,
+              "tone": 0.6926200960379525,
               "headline": "3 Reasons Apple Stock is a Great Buy at New Highs"
             },
             {
@@ -674,13 +725,13 @@
             {
               "ts": "2025-11-10T15:48:49+00:00",
               "source": "benzinga",
-              "tone": 0.42295666533716425,
+              "tone": 0.4202620087109497,
               "headline": "Aggressive Stock Buying on Government-Opening Optimism, Despite Slowing TSM Sales; Gold Surges"
             }
           ]
         }
       ],
-      "cash_left": -9.72
+      "cash_left": -756.53
     },
     "portfolio_max_autotrader": {
       "meta": {
@@ -698,34 +749,34 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 19237.1,
-      "cash_start": 488.58,
+      "portfolio_value_est": 17654.8,
+      "cash_start": 1996.75,
       "trades": [
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 29.53,
-          "qty_hint": 230.08,
+          "px": 28.66,
+          "qty_hint": 173.08,
           "reason": "score<sell",
-          "score": -0.283851,
-          "qty": 57,
-          "notional": 1683.21,
+          "score": -0.275738,
+          "qty": 43,
+          "notional": 1232.38,
           "signals": {
-            "TS": -0.498298,
-            "NS": 0.03782,
-            "CDS": -0.283851,
+            "TS": -0.51779,
+            "NS": 0.087341,
+            "CDS": -0.275738,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.01800712142528,
-            "ema_slow": 31.829112749305096,
-            "macd": 0.18889437212018123,
-            "macd_signal": 1.2997054535182084,
-            "macd_hist": -1.1108110813980272,
-            "macd_hist_prev": -1.1200779405237085,
-            "rsi14": 41.31428469084056,
-            "sma20": 34.54949999999998
+            "ema_fast": 31.501390641206,
+            "ema_slow": 31.594363547236075,
+            "macd": -0.09297290603007369,
+            "macd_signal": 1.021169920773404,
+            "macd_hist": -1.1141428268034776,
+            "macd_hist_prev": -1.1108111370639642,
+            "rsi14": 39.09973361784686,
+            "sma20": 33.951499999999974
           },
           "news_preview": [
             {
@@ -751,46 +802,46 @@
         {
           "symbol": "QUBT",
           "action": "SELL",
-          "px": 12.86,
-          "qty_hint": 57.39,
+          "px": 12.68,
+          "qty_hint": 43.39,
           "reason": "score<sell",
-          "score": -0.405562,
-          "qty": 14,
-          "notional": 180.04,
+          "score": -0.368823,
+          "qty": 10,
+          "notional": 126.8,
           "signals": {
-            "TS": -0.603998,
-            "NS": -0.107908,
-            "CDS": -0.405562,
+            "TS": -0.612312,
+            "NS": -0.003588,
+            "CDS": -0.368823,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 14.920424843528536,
-            "ema_slow": 16.34369736539872,
-            "macd": -1.4232725218701852,
-            "macd_signal": -1.073359602532031,
-            "macd_hist": -0.34991291933815405,
-            "macd_hist_prev": -0.34146423958122163,
-            "rsi14": 30.427151809304206,
-            "sma20": 16.413999999999994
+            "ema_fast": 14.575744098370297,
+            "ema_slow": 16.072312168712767,
+            "macd": -1.4965680703424695,
+            "macd_signal": -1.1580010335189126,
+            "macd_hist": -0.33856703682355693,
+            "macd_hist_prev": -0.3499130243682316,
+            "rsi14": 29.538673742730467,
+            "sma20": 15.976499999999996
           },
           "news_preview": [
             {
               "ts": "2025-11-10T08:38:14+00:00",
               "source": "newsercom",
-              "tone": 0.33968029524467647,
+              "tone": 0.33748771917394804,
               "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
             },
             {
               "ts": "2025-11-10T06:36:58+00:00",
               "source": "newsercom",
-              "tone": -0.5686650812045856,
+              "tone": -0.5649944460655115,
               "headline": "Will QUBT stock return to pre crisis levels - Earnings Miss & Real-Time Chart Breakout Alerts"
             },
             {
               "ts": "2025-11-10T06:09:09+00:00",
               "source": "newsercom",
-              "tone": -0.5631990271689429,
+              "tone": -0.5595636780517733,
               "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
             }
           ]
@@ -798,40 +849,40 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 33.765,
-          "qty_hint": 8.17,
+          "px": 32.92,
+          "qty_hint": 6.17,
           "reason": "score<sell",
-          "score": -0.280781,
-          "qty": 2,
-          "notional": 67.53,
+          "score": -0.290446,
+          "qty": 1,
+          "notional": 32.92,
           "signals": {
-            "TS": -0.53846,
-            "NS": 0.105738,
-            "CDS": -0.280781,
+            "TS": -0.554187,
+            "NS": 0.105165,
+            "CDS": -0.290446,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 38.1687770589293,
-            "ema_slow": 38.17188429707849,
-            "macd": -0.003107238149191005,
-            "macd_signal": 1.5970268606549347,
-            "macd_hist": -1.6001340988041257,
-            "macd_hist_prev": -1.5520316292842873,
-            "rsi14": 36.44451111785996,
-            "sma20": 42.13399999999999
+            "ema_fast": 37.361272896017105,
+            "ema_slow": 37.78285566943622,
+            "macd": -0.421582773419118,
+            "macd_signal": 1.1933051386487856,
+            "macd_hist": -1.6148879120679036,
+            "macd_hist_prev": -1.6001341807275768,
+            "rsi14": 34.755546560123605,
+            "sma20": 41.032499999999985
           },
           "news_preview": [
             {
               "ts": "2025-11-10T13:38:37+00:00",
               "source": "benzinga",
-              "tone": 0.25683995874068954,
+              "tone": 0.2551810918581027,
               "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
             },
             {
               "ts": "2025-11-10T13:38:37+00:00",
               "source": "benzinga",
-              "tone": 0.2568399432217895,
+              "tone": 0.25518107924524597,
               "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
             },
             {
@@ -845,133 +896,283 @@
         {
           "symbol": "DDOG",
           "action": "BUY",
-          "px": 191.21,
+          "px": 198.21,
           "qty_hint": 0.0,
           "reason": "score>buy|topped_by_rotation",
-          "score": 0.580738,
-          "qty": 2.263662,
-          "notional": 432.83,
+          "score": 0.585473,
+          "qty": 2.8598109999999997,
+          "notional": 566.85,
           "signals": {
-            "TS": 0.697703,
-            "NS": 0.405291,
-            "CDS": 0.580738,
+            "TS": 0.721208,
+            "NS": 0.381871,
+            "CDS": 0.585473,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 167.02182355918,
-            "ema_slow": 159.9690366652815,
-            "macd": 7.052786893898514,
-            "macd_signal": 4.405646908791897,
-            "macd_hist": 2.647139985106617,
-            "macd_hist_prev": 1.4103517861935169,
-            "rsi14": 82.36065048946499,
-            "sma20": 160.82249999999988
+            "ema_fast": 171.82000455007545,
+            "ema_slow": 162.80170084952317,
+            "macd": 9.01830370055228,
+            "macd_signal": 5.328177970434012,
+            "macd_hist": 3.690125730118268,
+            "macd_hist_prev": 2.64714010379062,
+            "rsi14": 85.01614307349861,
+            "sma20": 162.51949999999988
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 1.9164,
+          "qty_prev": 2.2308,
           "news_preview": [
             {
               "ts": "2025-11-10T14:27:45+00:00",
               "source": "marketbeat",
-              "tone": 0.8613538904707135,
+              "tone": 0.8558315455240388,
               "headline": "Robert W. Baird Issues Positive Forecast for Datadog (NASDAQ:DDOG) Stock Price"
             },
             {
               "ts": "2025-11-10T14:00:00+00:00",
               "source": "yahoo",
-              "tone": 0.45242434265275033,
+              "tone": 0.449523739648725,
               "headline": "groundcover Unveils Industry\u2019s First Automated Observability Migration Tool to Unleash Teams From Legacy Vendor Lock-In"
             },
             {
               "ts": "2025-11-10T14:00:00+00:00",
               "source": "yahoo",
-              "tone": 0.9478825517242463,
+              "tone": 0.9418054449258308,
               "headline": "Rokt Strengthens Its Board and Advisory Group with Appointment of Veteran Financial Leaders"
             }
           ]
         },
         {
-          "symbol": "CTM",
+          "symbol": "BE",
           "action": "BUY",
-          "px": 1.2,
+          "px": 137.345,
           "qty_hint": 0.0,
-          "reason": "score>buy",
-          "score": 0.424769,
-          "qty": 0.00015,
-          "notional": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.58154,
+          "qty": 4.12706,
+          "notional": 566.83,
           "signals": {
-            "TS": 0.503671,
-            "NS": 0.306415,
-            "CDS": 0.424769,
+            "TS": 0.553787,
+            "NS": 0.623169,
+            "CDS": 0.58154,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 1.1406904695369042,
-            "ema_slow": 1.102554804041166,
-            "macd": 0.038135665495738325,
-            "macd_signal": 0.015358188060332557,
-            "macd_hist": 0.022777477435405768,
-            "macd_hist_prev": 0.02548391147767362,
-            "rsi14": 58.346328407490795,
-            "sma20": 1.0675350000000001
+            "ema_fast": 128.97332542111374,
+            "ema_slow": 115.55024905557316,
+            "macd": 13.423076365540581,
+            "macd_signal": 12.900566412138682,
+            "macd_hist": 0.5225099534018991,
+            "macd_hist_prev": 0.8745948665999173,
+            "rsi14": 62.56927021300331,
+            "sma20": 120.72200000000007
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.0002,
+          "qty_prev": 3.2193,
           "news_preview": [
             {
-              "ts": "2025-11-10T13:37:13+00:00",
-              "source": "newsercom",
-              "tone": 0.658293745148921,
-              "headline": "Why CTM stock remains top rated - July 2025 Movers & Safe Capital Growth Tips"
+              "ts": "2025-11-10T16:42:28+00:00",
+              "source": "marketbeat",
+              "tone": 0.8969346461442607,
+              "headline": "3 Stocks Showing Relative Strength as Markets Pull Back"
             },
             {
-              "ts": "2025-11-10T12:18:37+00:00",
+              "ts": "2025-11-10T12:11:25+00:00",
               "source": "newsercom",
-              "tone": 0.6338767977964591,
-              "headline": "Why CTM stock signals breakout potential - July 2025 Highlights & Smart Swing Trading Alerts"
+              "tone": 0.6349549031181352,
+              "headline": "How BE stock reacts to stronger dollar - Price Action & Free Technical Confirmation Trade Alerts"
             },
             {
-              "ts": "2025-11-10T10:26:40+00:00",
+              "ts": "2025-11-10T07:17:46+00:00",
               "source": "newsercom",
-              "tone": 0.35286826305311914,
-              "headline": "Why CTM stock remains top rated - CEO Change & Verified Technical Signals"
+              "tone": 0.5734049480534297,
+              "headline": "How dovish Fed policy supports BE stock - 2025 Big Picture & Safe Entry Zone Identification"
+            }
+          ]
+        },
+        {
+          "symbol": "GOOGL",
+          "action": "BUY",
+          "px": 285.92,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.576375,
+          "qty": 1.982478,
+          "notional": 566.83,
+          "signals": {
+            "TS": 0.58715,
+            "NS": 0.560212,
+            "CDS": 0.576375,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 276.40638242355726,
+            "ema_slow": 265.721885543432,
+            "macd": 10.684496880125266,
+            "macd_signal": 9.705867753547459,
+            "macd_hist": 0.9786291265778075,
+            "macd_hist_prev": 1.1093869144853787,
+            "rsi14": 68.63854892115974,
+            "sma20": 267.12225000000024
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 1.546425,
+          "news_preview": [
+            {
+              "ts": "2025-11-10T16:42:28+00:00",
+              "source": "marketbeat",
+              "tone": 0.8967126817124869,
+              "headline": "3 Stocks Showing Relative Strength as Markets Pull Back"
+            },
+            {
+              "ts": "2025-11-10T16:15:00+00:00",
+              "source": "seekingalpha",
+              "tone": 0.8882013513530115,
+              "headline": "Alphabet's Breakout Is Here, Robust Advertising/Cloud/AI Monetization Prospects (GOOG)"
+            },
+            {
+              "ts": "2025-11-10T16:00:29+00:00",
+              "source": "benzinga",
+              "tone": 0.2999841409312313,
+              "headline": "$1000 Invested In Alphabet 15 Years Ago Would Be Worth This Much Today"
+            }
+          ]
+        },
+        {
+          "symbol": "CMI",
+          "action": "BUY",
+          "px": 480.82,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.564912,
+          "qty": 0.6150990000000001,
+          "notional": 295.76,
+          "signals": {
+            "TS": 0.682729,
+            "NS": 0.388187,
+            "CDS": 0.564912,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 446.89299863821384,
+            "ema_slow": 434.54465653302003,
+            "macd": 12.348342105193808,
+            "macd_signal": 6.916914125341921,
+            "macd_hist": 5.431427979851887,
+            "macd_hist_prev": 4.322766750030279,
+            "rsi14": 80.88066896424046,
+            "sma20": 431.43849999999975
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.3558,
+          "news_preview": [
+            {
+              "ts": "2025-11-10T12:19:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.8184812661157749,
+              "headline": "Cummins Inc. $CMI Shares Acquired by Mitsubishi UFJ Asset Management Co. Ltd."
+            },
+            {
+              "ts": "2025-11-10T11:51:00+00:00",
+              "source": "yahoo",
+              "tone": 0.0,
+              "headline": "Auto & Transport Roundup: Market Talk"
+            },
+            {
+              "ts": "2025-11-10T11:32:15+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Los Angeles Capital Management LLC Trims Stake in Cummins Inc. $CMI"
+            }
+          ]
+        },
+        {
+          "symbol": "MU",
+          "action": "BUY",
+          "px": 252.935,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.544061,
+          "qty": 0.492993,
+          "notional": 124.7,
+          "signals": {
+            "TS": 0.657471,
+            "NS": 0.373947,
+            "CDS": 0.544061,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 229.39607785878098,
+            "ema_slow": 212.54156894864502,
+            "macd": 16.854508910135962,
+            "macd_signal": 15.620354091894537,
+            "macd_hist": 1.234154818241425,
+            "macd_hist_prev": 0.49436398123398817,
+            "rsi14": 76.45139456516101,
+            "sma20": 217.64424999999997
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 7.5e-05,
+          "news_preview": [
+            {
+              "ts": "2025-11-10T15:33:18+00:00",
+              "source": "benzinga",
+              "tone": 0.6703627136796184,
+              "headline": "Markets Cheer As Shutdown End Nears: These 15 Stocks Are Rallying"
+            },
+            {
+              "ts": "2025-11-10T15:03:00+00:00",
+              "source": "stockstotrade",
+              "tone": 0.0,
+              "headline": "Micron Technology\u2019s Surge: What\u2019s Next?"
+            },
+            {
+              "ts": "2025-11-10T15:01:52+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Pagaya Technologies Posts Upbeat Q3 Results, Joins Ironwood Pharmaceuticals, TreeHouse Foods And Other Big Stocks Moving Higher On Monday"
             }
           ]
         },
         {
           "symbol": "TTWO",
           "action": "SELL",
-          "px": 231.96,
-          "qty": 0.286256,
-          "notional": 66.4,
+          "px": 234.17,
+          "qty": 0.380831,
+          "notional": 89.18,
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.695005,
-            "NS": 0.011306,
-            "CDS": -0.41248,
+            "TS": -0.650152,
+            "NS": 0.017354,
+            "CDS": -0.38315,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 251.02250401539075,
-            "ema_slow": 252.5971656637405,
-            "macd": -1.5746616483497462,
-            "macd_signal": 0.5032308194288184,
-            "macd_hist": -2.0778924677785646,
-            "macd_hist_prev": -0.7824290168423138,
-            "rsi": 17.03026033885898,
-            "sma20": 254.94550000000004,
-            "price": 231.96
+            "ema_fast": 248.429811089946,
+            "ema_slow": 251.23219090056597,
+            "macd": -2.8023798106199536,
+            "macd_signal": -0.1578919052524036,
+            "macd_hist": -2.64448790536755,
+            "macd_hist_prev": -2.0778922283099854,
+            "rsi": 22.759866315021796,
+            "sma20": 253.81450000000012,
+            "price": 234.17
           },
           "news_preview": [
             {
               "ts": "2025-11-10T15:40:27+00:00",
               "source": "tipranks",
-              "tone": -0.7847362114834556,
+              "tone": -0.7796539852528794,
               "headline": "Take-Two Stock (TTWO) Jumps as Red Dead Redemption 2 Hits a New Milestone"
             },
             {
@@ -981,15 +1182,153 @@
               "headline": "After Plunging 7.9% in 4 Weeks, Here's Why the Trend Might Reverse for Take-Two (TTWO)"
             },
             {
-              "ts": "2025-11-10T13:05:06+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-10T13:59:14+00:00",
+              "source": "newsercom",
+              "tone": 0.6586380432962847,
+              "headline": "Is TTWO stock a safe haven asset - Treasury Yields & Real-Time Chart Pattern Alerts"
+            }
+          ]
+        },
+        {
+          "symbol": "QUBT",
+          "action": "SELL",
+          "px": 12.68,
+          "qty": 10.8475,
+          "notional": 137.55,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.612312,
+            "NS": -0.003588,
+            "CDS": -0.368823,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 14.575744098370297,
+            "ema_slow": 16.072312168712767,
+            "macd": -1.4965680703424695,
+            "macd_signal": -1.1580010335189126,
+            "macd_hist": -0.33856703682355693,
+            "macd_hist_prev": -0.3499130243682316,
+            "rsi": 29.538673742730467,
+            "sma20": 15.976499999999996,
+            "price": 12.68
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-10T08:38:14+00:00",
+              "source": "newsercom",
+              "tone": 0.33748771917394804,
+              "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
+            },
+            {
+              "ts": "2025-11-10T06:36:58+00:00",
+              "source": "newsercom",
+              "tone": -0.5649944460655115,
+              "headline": "Will QUBT stock return to pre crisis levels - Earnings Miss & Real-Time Chart Breakout Alerts"
+            },
+            {
+              "ts": "2025-11-10T06:09:09+00:00",
+              "source": "newsercom",
+              "tone": -0.5595636780517733,
+              "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 32.92,
+          "qty": 1.5425,
+          "notional": 50.78,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.554187,
+            "NS": 0.105165,
+            "CDS": -0.290446,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 37.361272896017105,
+            "ema_slow": 37.78285566943622,
+            "macd": -0.421582773419118,
+            "macd_signal": 1.1933051386487856,
+            "macd_hist": -1.6148879120679036,
+            "macd_hist_prev": -1.6001341807275768,
+            "rsi": 34.755546560123605,
+            "sma20": 41.032499999999985,
+            "price": 32.92
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-10T13:38:37+00:00",
+              "source": "benzinga",
+              "tone": 0.2551810918581027,
+              "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
+            },
+            {
+              "ts": "2025-11-10T13:38:37+00:00",
+              "source": "benzinga",
+              "tone": 0.25518107924524597,
+              "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
+            },
+            {
+              "ts": "2025-11-10T12:18:52+00:00",
+              "source": "tradingview",
               "tone": 0.0,
-              "headline": "Y Intercept Hong Kong Ltd Invests $265,000 in Take-Two Interactive Software, Inc. $TTWO"
+              "headline": "Rigetti Stock Soars 2,000% in a Year -- All Eyes on Q3 Earnings Tonight"
+            }
+          ]
+        },
+        {
+          "symbol": "QBTS",
+          "action": "SELL",
+          "px": 28.66,
+          "qty": 12.068271,
+          "notional": 345.88,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.51779,
+            "NS": 0.087341,
+            "CDS": -0.275738,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 31.501390641206,
+            "ema_slow": 31.594363547236075,
+            "macd": -0.09297290603007369,
+            "macd_signal": 1.021169920773404,
+            "macd_hist": -1.1141428268034776,
+            "macd_hist_prev": -1.1108111370639642,
+            "rsi": 39.09973361784686,
+            "sma20": 33.951499999999974,
+            "price": 28.66
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-10T16:02:43+00:00",
+              "source": "investingcom",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum stock price target raised to $35 from $20 at Benchmark"
+            },
+            {
+              "ts": "2025-11-10T15:47:30+00:00",
+              "source": "gurufocus",
+              "tone": 0.0,
+              "headline": "QBTS: Benchmark Raises Price Target, Maintains Buy Rating | QBTS Stock News"
+            },
+            {
+              "ts": "2025-11-10T15:36:18+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "D-Wave Quantum To Unveil Next-Gen Hybrid Tech To Power AI And Supercomputing Boom"
             }
           ]
         }
       ],
-      "cash_left": 1564.34
+      "cash_left": -105.48
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1007,89 +1346,139 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 19856.87,
-      "cash_start": 67.7,
+      "portfolio_value_est": 19755.03,
+      "cash_start": 470.08,
       "trades": [
         {
           "symbol": "DDOG",
           "action": "BUY",
-          "px": 191.21,
+          "px": 198.21,
           "qty_hint": 0.0,
           "reason": "score>buy|topped_by_rotation",
-          "score": 0.580738,
-          "qty": 2.336643,
-          "notional": 446.79,
+          "score": 0.585473,
+          "qty": 3.033422,
+          "notional": 601.26,
           "signals": {
-            "TS": 0.697703,
-            "NS": 0.405291,
-            "CDS": 0.580738,
+            "TS": 0.721208,
+            "NS": 0.381871,
+            "CDS": 0.585473,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 167.02182355918,
-            "ema_slow": 159.9690366652815,
-            "macd": 7.052786893898514,
-            "macd_signal": 4.405646908791897,
-            "macd_hist": 2.647139985106617,
-            "macd_hist_prev": 1.4103517861935169,
-            "rsi14": 82.36065048946499,
-            "sma20": 160.82249999999988
+            "ema_fast": 171.82000455007545,
+            "ema_slow": 162.80170084952317,
+            "macd": 9.01830370055228,
+            "macd_signal": 5.328177970434012,
+            "macd_hist": 3.690125730118268,
+            "macd_hist_prev": 2.64714010379062,
+            "rsi14": 85.01614307349861,
+            "sma20": 162.51949999999988
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 0.265575,
+          "qty_prev": 1.7787,
           "news_preview": [
             {
               "ts": "2025-11-10T14:27:45+00:00",
               "source": "marketbeat",
-              "tone": 0.8613538904707135,
+              "tone": 0.8558315455240388,
               "headline": "Robert W. Baird Issues Positive Forecast for Datadog (NASDAQ:DDOG) Stock Price"
             },
             {
               "ts": "2025-11-10T14:00:00+00:00",
               "source": "yahoo",
-              "tone": 0.45242434265275033,
+              "tone": 0.449523739648725,
               "headline": "groundcover Unveils Industry\u2019s First Automated Observability Migration Tool to Unleash Teams From Legacy Vendor Lock-In"
             },
             {
               "ts": "2025-11-10T14:00:00+00:00",
               "source": "yahoo",
-              "tone": 0.9478825517242463,
+              "tone": 0.9418054449258308,
               "headline": "Rokt Strengthens Its Board and Advisory Group with Appointment of Veteran Financial Leaders"
             }
           ]
         },
         {
-          "symbol": "AAPL",
-          "action": "SELL",
-          "px": 268.47,
-          "qty": 1.475058,
-          "notional": 396.01,
-          "reason": "rotation_upgrade",
+          "symbol": "ESTC",
+          "action": "BUY",
+          "px": 92.77,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.508755,
+          "qty": 2.6809060000000002,
+          "notional": 248.71,
           "signals": {
-            "TS": -0.284986,
-            "NS": 0.261237,
-            "CDS": -0.066497,
+            "TS": 0.587152,
+            "NS": 0.39116,
+            "CDS": 0.508755,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 267.2012318360039,
-            "ema_slow": 261.6331630358192,
-            "macd": 5.568068800184676,
-            "macd_signal": 5.7099586365661885,
-            "macd_hist": -0.14188983638151242,
-            "macd_hist_prev": 0.1388995409310425,
-            "rsi": 60.09432802660258,
-            "sma20": 262.3735,
-            "price": 268.47
+            "ema_fast": 88.54209642288897,
+            "ema_slow": 87.16644736215841,
+            "macd": 1.3756490607305665,
+            "macd_signal": 0.9382611247236484,
+            "macd_hist": 0.43738793600691805,
+            "macd_hist_prev": 0.2263093897430667,
+            "rsi14": 69.24950621920539,
+            "sma20": 86.57650000000004
+          },
+          "phase": "early",
+          "size_k": 1.0,
+          "news_preview": [
+            {
+              "ts": "2025-11-10T11:01:59+00:00",
+              "source": "newsercom",
+              "tone": 0.6197008188294422,
+              "headline": "Can ESTC stock attract analyst upgrades - Gap Up & Weekly Return Optimization Plans"
+            },
+            {
+              "ts": "2025-11-10T10:28:47+00:00",
+              "source": "newsercom",
+              "tone": 0.612598066336857,
+              "headline": "Is ESTC stock supported by innovation pipeline - GDP Growth & Technical Entry and Exit Alerts"
+            },
+            {
+              "ts": "2025-11-10T07:54:22+00:00",
+              "source": "newsercom",
+              "tone": 0.1333388009943147,
+              "headline": "Will ESTC stock see insider buying - Portfolio Value Report & Low Drawdown Investment Strategies"
+            }
+          ],
+          "qty_prev": 0.0001
+        },
+        {
+          "symbol": "AAPL",
+          "action": "SELL",
+          "px": 269.05,
+          "qty": 1.848714,
+          "notional": 497.4,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.268091,
+            "NS": 0.25889,
+            "CDS": -0.057299,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 267.485657707388,
+            "ema_slow": 262.18255983995954,
+            "macd": 5.303097867428448,
+            "macd_signal": 5.6285846105774775,
+            "macd_hist": -0.32548674314902915,
+            "macd_hist_prev": -0.14188908751702556,
+            "rsi": 62.23280381798951,
+            "sma20": 263.44899999999996,
+            "price": 269.05
           },
           "news_preview": [
             {
               "ts": "2025-11-10T16:21:23+00:00",
               "source": "247wallst",
-              "tone": 0.6970610506894818,
+              "tone": 0.6926200960379525,
               "headline": "3 Reasons Apple Stock is a Great Buy at New Highs"
             },
             {
@@ -1101,13 +1490,59 @@
             {
               "ts": "2025-11-10T15:48:49+00:00",
               "source": "benzinga",
-              "tone": 0.42295666533716425,
+              "tone": 0.4202620087109497,
               "headline": "Aggressive Stock Buying on Government-Opening Optimism, Despite Slowing TSM Sales; Gold Surges"
+            }
+          ]
+        },
+        {
+          "symbol": "SNAP",
+          "action": "SELL",
+          "px": 8.59,
+          "qty": 2.5e-05,
+          "notional": 0.0,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": 0.601597,
+            "NS": -0.070438,
+            "CDS": 0.332783,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 7.9325078838600085,
+            "ema_slow": 7.900759684160504,
+            "macd": 0.031748199699504376,
+            "macd_signal": -0.03892945816757342,
+            "macd_hist": 0.0706776578670778,
+            "macd_hist_prev": 0.023942276484645905,
+            "rsi": 71.34988035263753,
+            "sma20": 7.829500000000001,
+            "price": 8.59
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-10T09:30:52+00:00",
+              "source": "simplywallst",
+              "tone": 0.0,
+              "headline": "Will Snap's (SNAP) $500 Million Buyback Shift Its Capital Allocation Narrative?"
+            },
+            {
+              "ts": "2025-11-09T22:00:36+00:00",
+              "source": "benzinga",
+              "tone": -0.6071261941414652,
+              "headline": "Consumer Tech News (Nov 3-7): Trump Blocks Nvidia Blackwell AI Chip Exports, China Bans Foreign AI Chips In Data Centers & More"
+            },
+            {
+              "ts": "2025-11-09T13:52:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.4048221926860402,
+              "headline": "Snap Inc. $SNAP Shares Sold by Marathon Trading Investment Management LLC"
             }
           ]
         }
       ],
-      "cash_left": -50.79
+      "cash_left": -352.57
     }
   }
 }
