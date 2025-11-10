@@ -4,8 +4,8 @@ defaults:
   allow_new_symbols: true
   decision_source: CDS          # CDS | TS_ONLY | NS_ONLY
   ns_weight_boost: 1.0
-  per_line_frac: 0.02           # of (equity + cash)
-  max_deploy_frac: 0.15         # cap total deployed in a single run (null = unlimited)
+  per_line_frac: 0.10           # of (equity + cash)
+  max_deploy_frac: 0.30         # cap total deployed in a single run (null = unlimited)
   trim_fraction: 0.25
   fractional_buys: true
   tags: [ideas]
@@ -51,8 +51,8 @@ portfolios:
   portfolio_max_autotrader:
     title: "AutoTrade my portfolio"
     path: data/portfolios/portfolio_max_autotrader
-    per_line_frac: 0.03
-    max_deploy_frac: 0.15
+    per_line_frac: 0.15
+    max_deploy_frac: 0.35
     trade_scope: paper
     tags: [ideas, paper]
 
