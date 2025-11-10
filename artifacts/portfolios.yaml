@@ -8,8 +8,8 @@ defaults:
   sizing:
     # universal sane defaults (can be overridden per portfolio)
     # caps are fractions of equity (+cash)
-    max_deploy_frac: 0.15
-    per_line_frac:  0.04
+    max_deploy_frac: 0.35
+    per_line_frac:  0.10
     sell_trim_fraction: 0.25
   exec:
     slippage_bps: 10
@@ -27,8 +27,8 @@ portfolios:
     strategy: default
     trade_scope: real
     sizing:
-      per_line_frac: 0.02
-      trim_fraction: 0.25
+      per_line_frac: 0.07
+      trim_fraction: 0.30
 
   portfolio_max_autotrader:
     enabled: true
@@ -38,8 +38,8 @@ portfolios:
     strategy: default
     trade_scope: paper
     sizing:
-      per_line_frac: 0.02
-      trim_fraction: 0.25
+      per_line_frac: 0.10
+      trim_fraction: 0.35
 
   portfolio_max_TS_only:
     enabled: true
