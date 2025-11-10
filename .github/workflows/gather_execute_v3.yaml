@@ -45,25 +45,8 @@ jobs:
       - name: Export PYTHONPATH
         run: echo "PYTHONPATH=$PWD" >> "$GITHUB_ENV"
 
-      - name: Probe freshness
-        id: probe
-        shell: bash
-        run: |
-          set -euo pipefail
-          prices_final="data/prices_final.json"
-          prices_base="data/prices.json"
-          now=$(date +%s)
-          fresh_prices=false
-          fresh_base=false
-          [[ -f "$prices_final" ]] && [[ $((now - $(stat -c %Y "$prices_final"))) -lt 600  ]] && fresh_prices=true
-          [[ -f "$prices_base"  ]] && [[ $((now - $(stat -c %Y "$prices_base")))  -lt 3600 ]] && fresh_base=true
-          {
-            echo "fresh_prices=$fresh_prices"
-            echo "fresh_base=$fresh_base"
-          } >> "$GITHUB_OUTPUT"
-
-      - name: Fetch prices (if stale)
-        if: steps.probe.outputs.fresh_prices != 'true'
+      # ---- ALWAYS fetch prices ----
+      - name: Fetch prices (always)
         env:
           ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -73,8 +56,8 @@ jobs:
           DAYS_BACK:         "270"
         run: python fetch_prices.py
 
-      - name: Fetch news (if stale)
-        if: steps.probe.outputs.fresh_base != 'true'
+      # (Optional) keep news conditional, or remove the if to always fetch news too
+      - name: Fetch news (lways or keep stale-check)
         env:
           ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -114,8 +97,7 @@ jobs:
               total=0
               for name,node in (obj.get("portfolios") or {}).items():
                   n=len(node.get("trades") or [])
-                  print(f"- {name}: {n} trades")
-                  total+=n
+                  print(f"- {name}: {n} trades"); total+=n
               print("TOTAL TRADES:", total)
           except Exception as e:
               print("summarize trades failed:", e, file=sys.stderr)
