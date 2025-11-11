@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "as_of_utc": "2025-11-11T17:38:00.255321+00:00",
+=======
+  "as_of_utc": "2025-11-11T17:41:17.016763+00:00",
+>>>>>>> Stashed changes
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,6 +21,7 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
+<<<<<<< Updated upstream
       "portfolio_value_est": 25223.78,
       "cash_start": 120.0,
       "trades": [
@@ -382,34 +387,289 @@
           "score": -0.482519,
           "qty": 1,
           "notional": 69.81,
+=======
+      "portfolio_value_est": 25261.82,
+      "cash_start": 120.0,
+      "trades": [
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.58,
+          "qty_hint": 7.49,
+          "reason": "score<sell",
+          "score": -0.308227,
+          "qty": 1,
+          "notional": 69.58,
+>>>>>>> Stashed changes
           "signals": {
-            "TS": -0.482519,
-            "NS": -0.016586,
-            "CDS": -0.296146,
+            "TS": -0.487346,
+            "NS": -0.039549,
+            "CDS": -0.308227,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 71.9467145603728,
-            "ema_slow": 71.83084966493848,
-            "macd": 0.11586489543431355,
-            "macd_signal": 2.130175091144159,
-            "macd_hist": -2.0143101957098453,
+            "ema_fast": 71.91132994498818,
+            "ema_slow": 71.81381262790144,
+            "macd": 0.09751731708674072,
+            "macd_signal": 2.1265055754746442,
+            "macd_hist": -2.0289882583879035,
             "macd_hist_prev": -2.2910621614009723,
-            "rsi14": 43.39471929923673,
-            "sma20": 76.29150000000007
+            "rsi14": 42.79783762684566,
+            "sma20": 76.28000000000006
           },
           "news_preview": [
             {
               "ts": "2025-11-11T16:11:58+00:00",
               "source": "tradingview",
-              "tone": 0.5413566228056436,
+              "tone": 0.5365367086044479,
               "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
             },
             {
               "ts": "2025-11-11T15:10:02+00:00",
               "source": "sharewisecom",
-              "tone": -0.5607221966182713,
+              "tone": -0.5557298629927303,
+              "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
+            },
+            {
+              "ts": "2025-11-11T14:00:07+00:00",
+              "source": "seekingalpha",
+              "tone": 0.0,
+              "headline": "4 stocks to watch on Tuesday: NVDA, META, NBIS, ASTS (SP500:)"
+            }
+          ]
+<<<<<<< Updated upstream
+=======
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 30.7,
+          "qty_hint": 6.17,
+          "reason": "score<sell",
+          "score": -0.333803,
+          "qty": 1,
+          "notional": 30.7,
+          "signals": {
+            "TS": -0.591314,
+            "NS": 0.052464,
+            "CDS": -0.333803,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 36.35078120787246,
+            "ema_slow": 37.26574440470135,
+            "macd": -0.9149631968288929,
+            "macd_signal": 0.7730552960477246,
+            "macd_hist": -1.6880184928766175,
+            "macd_hist_prev": -1.6078679034041599,
+            "rsi14": 30.44955385418463,
+            "sma20": 39.76624999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:38:58+00:00",
+              "source": "simplywallst",
+              "tone": 0.552737589712469,
+              "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+            },
+            {
+              "ts": "2025-11-11T17:07:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.22246625921335106,
+              "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+            },
+            {
+              "ts": "2025-11-11T16:58:53+00:00",
+              "source": "benzinga",
+              "tone": 0.6328009936193953,
+              "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+            }
+          ]
+        },
+        {
+          "symbol": "ESTC",
+          "action": "BUY",
+          "px": 93.96,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.705814,
+          "qty": 6.049284999999999,
+          "notional": 568.39,
+          "signals": {
+            "TS": 0.609821,
+            "NS": 0.76981,
+            "CDS": 0.705814,
+            "wT": 0.4,
+            "wN": 0.6
+          },
+          "indicators": {
+            "ema_fast": 89.42118218031437,
+            "ema_slow": 87.6936815185221,
+            "macd": 1.727500661792277,
+            "macd_signal": 1.1005730310523314,
+            "macd_hist": 0.6269276307399456,
+            "macd_hist_prev": 0.45972541336394523,
+            "rsi14": 71.98521664714656,
+            "sma20": 87.20400000000004
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.957825,
+          "news_preview": [
+            {
+              "ts": "2025-11-11T10:38:38+00:00",
+              "source": "seekingalpha",
+              "tone": 0.7775875317194374,
+              "headline": "Elastic: Is The Company Likely To Stretch In The Right Direction?"
+            },
+            {
+              "ts": "2025-11-07T18:44:57+00:00",
+              "source": "yahoo",
+              "tone": 0.1384371851966358,
+              "headline": "1 Cash-Producing Stock with Solid Fundamentals and 2 Facing Headwinds"
+            },
+            {
+              "ts": "2025-11-07T00:00:03+00:00",
+              "source": "yahoo",
+              "tone": -0.035127951552556935,
+              "headline": "Inseego (INSG) Lags Q3 Earnings Estimates"
+            }
+          ]
+        },
+        {
+          "symbol": "DOCN",
+          "action": "BUY",
+          "px": 50.48,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.483246,
+          "qty": 7.5e-05,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.629169,
+            "NS": 0.264363,
+            "CDS": 0.483246,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 45.20599786576947,
+            "ema_slow": 42.25973042912336,
+            "macd": 2.94626743664611,
+            "macd_signal": 1.8741293639427177,
+            "macd_hist": 1.0721380727033925,
+            "macd_hist_prev": 1.0388846775983602,
+            "rsi14": 73.15316958176787,
+            "sma20": 42.49875000000001
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.0001,
+          "news_preview": [
+            {
+              "ts": "2025-11-11T16:14:13+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Oppenheimer Begins Coverage on DigitalOcean (NYSE:DOCN)"
+            },
+            {
+              "ts": "2025-11-11T12:57:59+00:00",
+              "source": "newsercom",
+              "tone": 0.6347930322647454,
+              "headline": "Signal strength of DOCN stock in tech scanners - Portfolio Value Report & Daily Technical Stock Forecast Reports"
+            },
+            {
+              "ts": "2025-11-11T10:22:06+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.6013474317786803,
+              "headline": "2026 Is Coming: 1 Magnificent Artificial Intelligence (AI) Stock to Buy as Part of Your New Year's Resolution"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 30.7,
+          "qty": 1.5425,
+          "notional": 47.35,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.591314,
+            "NS": 0.052464,
+            "CDS": -0.333803,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 36.35078120787246,
+            "ema_slow": 37.26574440470135,
+            "macd": -0.9149631968288929,
+            "macd_signal": 0.7730552960477246,
+            "macd_hist": -1.6880184928766175,
+            "macd_hist_prev": -1.6078679034041599,
+            "rsi": 30.44955385418463,
+            "sma20": 39.76624999999999,
+            "price": 30.7
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:38:58+00:00",
+              "source": "simplywallst",
+              "tone": 0.552737589712469,
+              "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+            },
+            {
+              "ts": "2025-11-11T17:07:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.22246625921335106,
+              "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+            },
+            {
+              "ts": "2025-11-11T16:58:53+00:00",
+              "source": "benzinga",
+              "tone": 0.6328009936193953,
+              "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.58,
+          "qty": 1.8725,
+          "notional": 130.29,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.487346,
+            "NS": -0.039549,
+            "CDS": -0.308227,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 71.91132994498818,
+            "ema_slow": 71.81381262790144,
+            "macd": 0.09751731708674072,
+            "macd_signal": 2.1265055754746442,
+            "macd_hist": -2.0289882583879035,
+            "macd_hist_prev": -2.2910621614009723,
+            "rsi": 42.79783762684566,
+            "sma20": 76.28000000000006,
+            "price": 69.58
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T16:11:58+00:00",
+              "source": "tradingview",
+              "tone": 0.5365367086044479,
+              "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
+            },
+            {
+              "ts": "2025-11-11T15:10:02+00:00",
+              "source": "sharewisecom",
+              "tone": -0.5557298629927303,
               "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
             },
             {
@@ -421,32 +681,153 @@
           ]
         },
         {
-          "symbol": "HOOD",
+          "symbol": "NVDA",
           "action": "SELL",
-          "px": 131.62,
-          "qty_hint": 4.0,
-          "reason": "score<sell",
-          "score": -0.482508,
-          "qty": 1,
-          "notional": 131.62,
+          "px": 192.61,
+          "qty": 1.561447,
+          "notional": 300.75,
+          "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.482508,
-            "NS": 0.238215,
-            "CDS": -0.194219,
+            "TS": -0.382277,
+            "NS": -0.012105,
+            "CDS": -0.234208,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 136.39184775127393,
-            "ema_slow": 135.97429134897348,
-            "macd": 0.4175564023004483,
-            "macd_signal": 2.0806800640292,
-            "macd_hist": -1.6631236617287515,
-            "macd_hist_prev": -1.5596392030289916,
-            "rsi14": 43.35973936781526,
-            "sma20": 136.87850000000006
+            "ema_fast": 194.2832868099523,
+            "ema_slow": 191.14267033283073,
+            "macd": 3.1406164771215686,
+            "macd_signal": 3.852632614047099,
+            "macd_hist": -0.7120161369255302,
+            "macd_hist_prev": -0.4683998323375178,
+            "rsi": 48.054552398440336,
+            "sma20": 191.5497500000001,
+            "price": 192.61
           },
           "news_preview": [
+            {
+              "ts": "2025-11-11T17:19:07+00:00",
+              "source": "yahoofinance",
+              "tone": 0.6666305949312036,
+              "headline": "Stock market today: S&P 500, Nasdaq slip as Nvidia slides after SoftBank share sale"
+            },
+            {
+              "ts": "2025-11-11T17:04:05+00:00",
+              "source": "benzinga",
+              "tone": -0.4815333936400788,
+              "headline": "Burry's Big Short 2.0: From Palantir Hype To Big Tech's 'Frauds Of The Modern Era'"
+            },
+            {
+              "ts": "2025-11-11T16:59:00+00:00",
+              "source": "barrons",
+              "tone": 0.0,
+              "headline": "Stock Market Today: Dow Rises, S&P 500, Nasdaq Fall; Nvidia, Tesla, CoreWeave, AMD, More Movers"
+            }
+          ]
+        }
+      ],
+      "cash_left": 10.28
+    },
+    "portfolio_max_TS_only": {
+      "meta": {
+        "title": "Max TS Only",
+        "trade_scope": "none",
+        "decision_source": "TS_ONLY",
+        "ns_weight_boost": 1.0,
+        "per_line_frac": 0.1,
+        "max_deploy_frac": 0.3,
+        "trim_fraction": 0.25,
+        "fractional_buys": true,
+        "tags": [
+          "ideas"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
+      },
+      "portfolio_value_est": 25261.82,
+      "cash_start": 120.0,
+      "trades": [
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.58,
+          "qty_hint": 7.49,
+          "reason": "score<sell",
+          "score": -0.487346,
+          "qty": 1,
+          "notional": 69.58,
+          "signals": {
+            "TS": -0.487346,
+            "NS": -0.039549,
+            "CDS": -0.308227,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 71.91132994498818,
+            "ema_slow": 71.81381262790144,
+            "macd": 0.09751731708674072,
+            "macd_signal": 2.1265055754746442,
+            "macd_hist": -2.0289882583879035,
+            "macd_hist_prev": -2.2910621614009723,
+            "rsi14": 42.79783762684566,
+            "sma20": 76.28000000000006
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T16:11:58+00:00",
+              "source": "tradingview",
+              "tone": 0.5365367086044479,
+              "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
+            },
+            {
+              "ts": "2025-11-11T15:10:02+00:00",
+              "source": "sharewisecom",
+              "tone": -0.5557298629927303,
+              "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
+            },
+            {
+              "ts": "2025-11-11T14:00:07+00:00",
+              "source": "seekingalpha",
+              "tone": 0.0,
+              "headline": "4 stocks to watch on Tuesday: NVDA, META, NBIS, ASTS (SP500:)"
+            }
+          ]
+>>>>>>> Stashed changes
+        },
+        {
+          "symbol": "HOOD",
+          "action": "SELL",
+          "px": 131.75,
+          "qty_hint": 4.0,
+          "reason": "score<sell",
+          "score": -0.481454,
+          "qty": 1,
+          "notional": 131.75,
+          "signals": {
+            "TS": -0.481454,
+            "NS": 0.212623,
+            "CDS": -0.203823,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 136.41184775127394,
+            "ema_slow": 135.9839209786031,
+            "macd": 0.427926772670844,
+            "macd_signal": 2.082754138103279,
+            "macd_hist": -1.654827365432435,
+            "macd_hist_prev": -1.5596392030289916,
+            "rsi14": 43.48960011104149,
+            "sma20": 136.88500000000005
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:32:08+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "SoFi To Rival Coinbase, Robinhood As First Nationally Chartered US Bank With Bitcoin Trading"
+            },
             {
               "ts": "2025-11-11T15:00:12+00:00",
               "source": "benzinga",
@@ -456,14 +837,149 @@
             {
               "ts": "2025-11-11T14:00:04+00:00",
               "source": "yahoofinance",
-              "tone": 0.6163518524762313,
+              "tone": 0.6108660896738343,
               "headline": "Is Most-Watched Stock Robinhood Markets, Inc. (HOOD) Worth Betting on Now?"
+            }
+          ]
+        },
+        {
+          "symbol": "NVDA",
+          "action": "SELL",
+          "px": 192.61,
+          "qty_hint": 28.5,
+          "reason": "score<sell",
+          "score": -0.382277,
+          "qty": 7,
+          "notional": 1348.27,
+          "signals": {
+            "TS": -0.382277,
+            "NS": -0.012105,
+            "CDS": -0.234208,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 194.2832868099523,
+            "ema_slow": 191.14267033283073,
+            "macd": 3.1406164771215686,
+            "macd_signal": 3.852632614047099,
+            "macd_hist": -0.7120161369255302,
+            "macd_hist_prev": -0.4683998323375178,
+            "rsi14": 48.054552398440336,
+            "sma20": 191.5497500000001
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:19:07+00:00",
+              "source": "yahoofinance",
+              "tone": 0.6666305949312036,
+              "headline": "Stock market today: S&P 500, Nasdaq slip as Nvidia slides after SoftBank share sale"
             },
             {
-              "ts": "2025-11-11T11:34:21+00:00",
+              "ts": "2025-11-11T17:04:05+00:00",
               "source": "benzinga",
-              "tone": 0.6333276289161631,
-              "headline": "Robinhood CEO Says Tokenization Will 'Unlock 24/7 Markets' And Investors Will 'Never Go Back'"
+              "tone": -0.4815333936400788,
+              "headline": "Burry's Big Short 2.0: From Palantir Hype To Big Tech's 'Frauds Of The Modern Era'"
+            },
+            {
+              "ts": "2025-11-11T16:59:00+00:00",
+              "source": "barrons",
+              "tone": 0.0,
+              "headline": "Stock Market Today: Dow Rises, S&P 500, Nasdaq Fall; Nvidia, Tesla, CoreWeave, AMD, More Movers"
+            }
+          ]
+        },
+        {
+          "symbol": "QBTS",
+          "action": "SELL",
+          "px": 28.98,
+          "qty_hint": 230.08,
+          "reason": "score<sell",
+          "score": -0.513631,
+          "qty": 57,
+          "notional": 1651.86,
+          "signals": {
+            "TS": -0.513631,
+            "NS": 0.205318,
+            "CDS": -0.226052,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 31.2046086490678,
+            "ema_slow": 31.448717997250043,
+            "macd": -0.24410934818224206,
+            "macd_signal": 0.7770484952789696,
+            "macd_hist": -1.0211578434612116,
+            "macd_hist_prev": -1.0694704442760046,
+            "rsi14": 39.740103306304555,
+            "sma20": 33.28424999999998
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T11:44:40+00:00",
+              "source": "newsercom",
+              "tone": 0.6186566656039153,
+              "headline": "Why QBTS stock stays undervalued - 2025 Volatility Report & Free Technical Confirmation Trade Alerts"
+            },
+            {
+              "ts": "2025-11-11T11:01:38+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Published on: 2025-11-11 05:01:38"
+            },
+            {
+              "ts": "2025-11-11T10:00:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.05085816630151137,
+              "headline": "Breaking Quantum Computing Stock News That IonQ, Rigetti Computing, and D-Wave Investors Can't Afford to Miss"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 30.7,
+          "qty_hint": 6.17,
+          "reason": "score<sell",
+          "score": -0.591314,
+          "qty": 1,
+          "notional": 30.7,
+          "signals": {
+            "TS": -0.591314,
+            "NS": 0.052464,
+            "CDS": -0.333803,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 36.35078120787246,
+            "ema_slow": 37.26574440470135,
+            "macd": -0.9149631968288929,
+            "macd_signal": 0.7730552960477246,
+            "macd_hist": -1.6880184928766175,
+            "macd_hist_prev": -1.6078679034041599,
+            "rsi14": 30.44955385418463,
+            "sma20": 39.76624999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:38:58+00:00",
+              "source": "simplywallst",
+              "tone": 0.552737589712469,
+              "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+            },
+            {
+              "ts": "2025-11-11T17:07:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.22246625921335106,
+              "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+            },
+            {
+              "ts": "2025-11-11T16:58:53+00:00",
+              "source": "benzinga",
+              "tone": 0.6328009936193953,
+              "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
             }
           ]
         },
@@ -611,34 +1127,34 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 53.29,
+          "px": 53.43,
           "qty_hint": 6.27,
           "reason": "score<sell",
-          "score": -0.540657,
+          "score": -0.536562,
           "qty": 1,
-          "notional": 53.29,
+          "notional": 53.43,
           "signals": {
-            "TS": -0.540657,
-            "NS": 0.311454,
-            "CDS": -0.199813,
+            "TS": -0.536562,
+            "NS": 0.293765,
+            "CDS": -0.204432,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 56.71905354811608,
-            "ema_slow": 58.11252764439971,
-            "macd": -1.393474096283633,
-            "macd_signal": 0.4662317788374684,
-            "macd_hist": -1.8597058751211013,
+            "ema_fast": 56.74059200965454,
+            "ema_slow": 58.12289801477009,
+            "macd": -1.3823060051155451,
+            "macd_signal": 0.468465397071086,
+            "macd_hist": -1.850771402186631,
             "macd_hist_prev": -2.0869702739777045,
-            "rsi14": 36.76731018746024,
-            "sma20": 61.21074999999998
+            "rsi14": 37.274227662432764,
+            "sma20": 61.21774999999999
           },
           "news_preview": [
             {
               "ts": "2025-11-11T17:00:00+00:00",
               "source": "yahoofinance",
-              "tone": 0.41250627250886485,
+              "tone": 0.4088357249505587,
               "headline": "Rocket Lab stock soars despite delayed launch: What to know"
             },
             {
@@ -650,7 +1166,7 @@
             {
               "ts": "2025-11-11T15:57:59+00:00",
               "source": "marketbeat",
-              "tone": 0.8763153887864823,
+              "tone": 0.8685177935646456,
               "headline": "Rocket Lab (NASDAQ:RKLB) Shares Gap Up Following Earnings Beat"
             }
           ]
@@ -658,6 +1174,7 @@
         {
           "symbol": "VTI",
           "action": "SELL",
+<<<<<<< Updated upstream
           "px": 334.66,
           "qty_hint": 9.48,
           "reason": "score<sell",
@@ -668,10 +1185,23 @@
             "TS": -0.316785,
             "NS": 0.115448,
             "CDS": -0.143892,
+=======
+          "px": 334.87,
+          "qty_hint": 9.48,
+          "reason": "score<sell",
+          "score": -0.310625,
+          "qty": 2,
+          "notional": 669.74,
+          "signals": {
+            "TS": -0.310625,
+            "NS": 0.109031,
+            "CDS": -0.142763,
+>>>>>>> Stashed changes
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
+<<<<<<< Updated upstream
             "ema_fast": 333.0438601238588,
             "ema_slow": 331.51828750009054,
             "macd": 1.5255726237682552,
@@ -680,18 +1210,36 @@
             "macd_hist_prev": -0.4849641519761483,
             "rsi14": 56.53666413710463,
             "sma20": 332.4525
+=======
+            "ema_fast": 333.0761678161665,
+            "ema_slow": 331.53384305564606,
+            "macd": 1.5423247605204438,
+            "macd_signal": 1.882889081618718,
+            "macd_hist": -0.3405643210982743,
+            "macd_hist_prev": -0.4849641519761483,
+            "rsi14": 57.30541043631655,
+            "sma20": 332.463
+>>>>>>> Stashed changes
           },
           "news_preview": [
             {
               "ts": "2025-11-11T16:32:59+00:00",
               "source": "247wallst",
+<<<<<<< Updated upstream
               "tone": -0.6897865173705313,
+=======
+              "tone": -0.6836524339447978,
+>>>>>>> Stashed changes
               "headline": "These Dow Stocks Have Crushed the VOO and VTI in 2025\u2014Here's Where They're Headed Next"
             },
             {
               "ts": "2025-11-11T16:06:17+00:00",
               "source": "benzinga",
+<<<<<<< Updated upstream
               "tone": -0.6047105859739368,
+=======
+              "tone": -0.599333057948451,
+>>>>>>> Stashed changes
               "headline": "Benzinga Market Summary: NVIDIA Falls As SoftBank Sells Stake, Dragging S&P Lower, CorWeave Cuts Guidance, Novo Nordisk Rises"
             },
             {
@@ -705,6 +1253,7 @@
         {
           "symbol": "LLY",
           "action": "BUY",
+<<<<<<< Updated upstream
           "px": 989.785,
           "qty_hint": 0.0,
           "reason": "score>buy",
@@ -715,10 +1264,23 @@
             "TS": 0.73195,
             "NS": 0.050509,
             "CDS": 0.459373,
+=======
+          "px": 997.73,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.737825,
+          "qty": 0.090225,
+          "notional": 90.02,
+          "signals": {
+            "TS": 0.737825,
+            "NS": 0.107728,
+            "CDS": 0.485786,
+>>>>>>> Stashed changes
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
+<<<<<<< Updated upstream
             "ema_fast": 908.4690784767163,
             "ema_slow": 865.3662005334271,
             "macd": 43.10287794328917,
@@ -799,11 +1361,47 @@
               "source": "seekingalpha",
               "tone": 0.770089863247907,
               "headline": "Investing In Health Stocks - How Policy Clarity Is Opening Doors"
+=======
+            "ema_fast": 909.691386169024,
+            "ema_slow": 865.9547190519456,
+            "macd": 43.736667117078355,
+            "macd_signal": 30.469595132906868,
+            "macd_hist": 13.267071984171487,
+            "macd_hist_prev": 11.11884175951759,
+            "rsi14": 87.21548011721708,
+            "sma20": 862.0297499999991
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.1203,
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:35:21+00:00",
+              "source": "benzinga",
+              "tone": 0.6656945022045591,
+              "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
+            },
+            {
+              "ts": "2025-11-11T16:31:52+00:00",
+              "source": "yahoofinance",
+              "tone": -0.7625607668893075,
+              "headline": "Eli Lilly stock soars to new highs, Novo Nordisk lags. Here's why."
+            },
+            {
+              "ts": "2025-11-11T15:29:21+00:00",
+              "source": "benzinga",
+              "tone": 0.19751985150835433,
+              "headline": "These 20 Stocks Now Make Up Half Of The S&P 500\u2014Here's Why That's Risky"
+>>>>>>> Stashed changes
             }
           ]
         }
       ],
+<<<<<<< Updated upstream
       "cash_left": 3855.63
+=======
+      "cash_left": 3865.28
+>>>>>>> Stashed changes
     },
     "portfolio_paper_aggressive_trades": {
       "meta": {
@@ -822,85 +1420,141 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 19909.55,
+      "portfolio_value_est": 19922.97,
       "cash_start": 193.86,
       "trades": [
         {
-          "symbol": "XOP",
+          "symbol": "ESTC",
           "action": "BUY",
-          "px": 134.6,
+          "px": 93.96,
           "qty_hint": 0.0,
           "reason": "score>buy|topped_by_rotation",
-          "score": 0.570585,
-          "qty": 4.072412,
-          "notional": 548.15,
+          "score": 0.705814,
+          "qty": 7.9513750000000005,
+          "notional": 747.11,
           "signals": {
-            "TS": 0.63052,
-            "NS": 0.480682,
-            "CDS": 0.570585,
+            "TS": 0.609821,
+            "NS": 0.76981,
+            "CDS": 0.705814,
+            "wT": 0.4,
+            "wN": 0.6
+          },
+          "indicators": {
+            "ema_fast": 89.42118218031437,
+            "ema_slow": 87.6936815185221,
+            "macd": 1.727500661792277,
+            "macd_signal": 1.1005730310523314,
+            "macd_hist": 0.6269276307399456,
+            "macd_hist_prev": 0.45972541336394523,
+            "rsi14": 71.98521664714656,
+            "sma20": 87.20400000000004
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 1.5474,
+          "news_preview": [
+            {
+              "ts": "2025-11-11T10:38:38+00:00",
+              "source": "seekingalpha",
+              "tone": 0.7775875317194374,
+              "headline": "Elastic: Is The Company Likely To Stretch In The Right Direction?"
+            },
+            {
+              "ts": "2025-11-07T18:44:57+00:00",
+              "source": "yahoo",
+              "tone": 0.1384371851966358,
+              "headline": "1 Cash-Producing Stock with Solid Fundamentals and 2 Facing Headwinds"
+            },
+            {
+              "ts": "2025-11-07T00:00:03+00:00",
+              "source": "yahoo",
+              "tone": -0.035127951552556935,
+              "headline": "Inseego (INSG) Lags Q3 Earnings Estimates"
+            }
+          ]
+        },
+        {
+          "symbol": "ARCC",
+          "action": "BUY",
+          "px": 20.295,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.472473,
+          "qty": 7.5e-05,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.459536,
+            "NS": 0.491877,
+            "CDS": 0.472473,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 128.74201480052142,
-            "ema_slow": 128.44092936349873,
-            "macd": 0.3010854370226923,
-            "macd_signal": -0.6232920017371799,
-            "macd_hist": 0.9243774387598722,
-            "macd_hist_prev": 0.5831092312829347,
-            "rsi14": 75.00642577039228,
-            "sma20": 126.96200000000002
+            "ema_fast": 20.223428803879624,
+            "ema_slow": 20.259044345092676,
+            "macd": -0.035615541213051216,
+            "macd_signal": -0.09038607927868035,
+            "macd_hist": 0.054770538065629135,
+            "macd_hist_prev": 0.05832668022546386,
+            "rsi14": 53.73691328540484,
+            "sma20": 20.120999999999984
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 1.080225,
+          "qty_prev": 0.0001,
           "news_preview": [
             {
-              "ts": "2025-11-11T11:20:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.4799018183674292,
-              "headline": "Should You Invest in the State Street SPDR S&P Oil & Gas Exploration & Production ETF (XOP)?"
+              "ts": "2025-11-11T12:12:06+00:00",
+              "source": "marketbeat",
+              "tone": 0.7379931371711048,
+              "headline": "Ares Capital Corporation $ARCC Holdings Boosted by Rathbones Group PLC"
             },
             {
-              "ts": "2025-11-10T20:19:25+00:00",
-              "source": "benzinga",
-              "tone": 0.5818701502187881,
-              "headline": "Shutdown Progress Sends Oil Higher\u2014Are Energy ETFs Finally Staging A Real Comeback?"
+              "ts": "2025-11-11T06:40:00+00:00",
+              "source": "tradingview",
+              "tone": 0.5568033368009354,
+              "headline": "Zacks Industry Outlook Ares Capital, Hercules and Runway Growth Finance"
             },
             {
-              "ts": "2025-11-10T06:55:11+00:00",
-              "source": "newsercom",
-              "tone": 0.3422991959244878,
-              "headline": "Can XOP stock sustain margin levels - 2025 Support & Resistance & Safe Swing Trade Setups"
+              "ts": "2025-11-10T10:16:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Could Buying Ares Capital Stock Today Set You Up for Life?"
             }
           ]
         },
         {
           "symbol": "AAPL",
           "action": "SELL",
-          "px": 272.25,
+          "px": 273.21,
           "qty": 1.479329,
-          "notional": 402.75,
+          "notional": 404.17,
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.19208,
-            "NS": 0.247585,
-            "CDS": -0.016214,
+            "TS": -0.175935,
+            "NS": 0.227029,
+            "CDS": -0.01475,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 268.26419557489044,
-            "ema_slow": 262.95230333999456,
-            "macd": 5.311892234895879,
-            "macd_signal": 5.569711205662945,
-            "macd_hist": -0.25781897076706617,
+            "ema_fast": 268.41188788258273,
+            "ema_slow": 263.0234144511056,
+            "macd": 5.388473431477109,
+            "macd_signal": 5.5850274449791915,
+            "macd_hist": -0.19655401350208201,
             "macd_hist_prev": -0.30314969431467453,
-            "rsi": 71.73474622585768,
-            "sma20": 264.6809999999999,
-            "price": 272.25
+            "rsi": 73.74568863195778,
+            "sma20": 264.7289999999999,
+            "price": 273.21
           },
           "news_preview": [
+            {
+              "ts": "2025-11-11T17:35:15+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Information Technology Stocks Whale Activity In Today's Session"
+            },
             {
               "ts": "2025-11-11T16:45:13+00:00",
               "source": "benzinga",
@@ -910,60 +1564,100 @@
             {
               "ts": "2025-11-11T15:29:21+00:00",
               "source": "benzinga",
-              "tone": 0.1993603426089602,
+              "tone": 0.19758517655312244,
               "headline": "These 20 Stocks Now Make Up Half Of The S&P 500\u2014Here's Why That's Risky"
-            },
-            {
-              "ts": "2025-11-11T15:01:02+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry"
             }
           ]
         },
         {
           "symbol": "ICLN",
           "action": "SELL",
-          "px": 17.8,
+          "px": 17.81,
           "qty": 5.6e-05,
           "notional": 0.0,
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": 0.522611,
-            "NS": -0.068097,
-            "CDS": 0.286328,
+            "TS": 0.524749,
+            "NS": -0.120161,
+            "CDS": 0.266785,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 17.45675788335841,
-            "ema_slow": 16.91306722801742,
-            "macd": 0.5436906553409884,
-            "macd_signal": 0.5079872410755315,
-            "macd_hist": 0.03570341426545687,
+            "ema_fast": 17.45829634489687,
+            "ema_slow": 16.913807968758164,
+            "macd": 0.5444883761387054,
+            "macd_signal": 0.508146785235075,
+            "macd_hist": 0.03634159090363043,
             "macd_hist_prev": 0.05317623201922739,
-            "rsi": 60.77411465780666,
-            "sma20": 17.081,
-            "price": 17.8
+            "rsi": 61.04020543693574,
+            "sma20": 17.0815,
+            "price": 17.81
           },
           "news_preview": [
             {
               "ts": "2025-11-10T16:56:18+00:00",
               "source": "benzinga",
-              "tone": -0.4653952263579427,
+              "tone": -0.4612533394816158,
               "headline": "Utilities ETFs Could Power Up As Polar Vortex Threatens To Freeze The Grid"
             },
             {
               "ts": "2025-11-10T15:41:00+00:00",
               "source": "nasdaq",
-              "tone": 0.24781088140080276,
+              "tone": 0.24560543390604062,
               "headline": "Interesting ICLN Put And Call Options For June 2027"
             },
             {
-              "ts": "2025-11-10T15:10:03+00:00",
-              "source": "yahoofinancecanada",
+              "ts": "2025-11-06T16:33:11+00:00",
+              "source": "benzinga",
+              "tone": 0.07218605140679084,
+              "headline": "Clean Energy ETFs Hit Fresh Highs As Renewables Rally Defies Policy Uncertainty"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "SELL",
+          "px": 264.81,
+          "qty": 0.746003,
+          "notional": 197.55,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": 0.498916,
+            "NS": 0.178252,
+            "CDS": 0.37065,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 259.9602125487225,
+            "ema_slow": 247.46521248802267,
+            "macd": 12.495000060699823,
+            "macd_signal": 10.954472242967544,
+            "macd_hist": 1.5405278177322792,
+            "macd_hist_prev": 2.4314632365276374,
+            "rsi": 57.35217147468186,
+            "sma20": 248.75625000000008,
+            "price": 264.81
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T13:53:38+00:00",
+              "source": "seekingalpha",
               "tone": 0.0,
-              "headline": "ICLN Nov 2025 16.000 call (ICLN251121C00016000) Stock Historical Prices & Data"
+              "headline": "First Solar: America\u2019s Sun Is Powering A Margin Supercycle (NASDAQ:FSLR)"
+            },
+            {
+              "ts": "2025-11-11T09:39:56+00:00",
+              "source": "simplywallst",
+              "tone": -0.13608575905440654,
+              "headline": "First Solar (FSLR): Evaluating Valuation After Q3 Revenue Jump and Lowered Full-Year Guidance"
+            },
+            {
+              "ts": "2025-11-11T08:53:38+00:00",
+              "source": "seekingalpha",
+              "tone": 0.7497367879686713,
+              "headline": "First Solar: America's Sun Is Powering A Margin Supercycle"
             }
           ]
         }
@@ -986,6 +1680,7 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
+<<<<<<< Updated upstream
       "portfolio_value_est": 25223.78,
       "cash_start": 120.0,
       "trades": [
@@ -1236,35 +1931,294 @@
           "qty": 1.8725,
           "notional": 130.72,
           "reason": "rotation_upgrade",
+=======
+      "portfolio_value_est": 25261.82,
+      "cash_start": 120.0,
+      "trades": [
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.58,
+          "qty_hint": 7.49,
+          "reason": "score<sell",
+          "score": -0.308227,
+          "qty": 1,
+          "notional": 69.58,
+>>>>>>> Stashed changes
           "signals": {
-            "TS": -0.482519,
-            "NS": -0.016586,
-            "CDS": -0.296146,
+            "TS": -0.487346,
+            "NS": -0.039549,
+            "CDS": -0.308227,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 71.9467145603728,
-            "ema_slow": 71.83084966493848,
-            "macd": 0.11586489543431355,
-            "macd_signal": 2.130175091144159,
-            "macd_hist": -2.0143101957098453,
+            "ema_fast": 71.91132994498818,
+            "ema_slow": 71.81381262790144,
+            "macd": 0.09751731708674072,
+            "macd_signal": 2.1265055754746442,
+            "macd_hist": -2.0289882583879035,
             "macd_hist_prev": -2.2910621614009723,
-            "rsi": 43.39471929923673,
-            "sma20": 76.29150000000007,
-            "price": 69.81
+            "rsi14": 42.79783762684566,
+            "sma20": 76.28000000000006
           },
           "news_preview": [
             {
               "ts": "2025-11-11T16:11:58+00:00",
               "source": "tradingview",
-              "tone": 0.5413566228056436,
+              "tone": 0.5365367086044479,
               "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
             },
             {
               "ts": "2025-11-11T15:10:02+00:00",
               "source": "sharewisecom",
-              "tone": -0.5607221966182713,
+              "tone": -0.5557298629927303,
+              "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
+            },
+            {
+              "ts": "2025-11-11T14:00:07+00:00",
+              "source": "seekingalpha",
+              "tone": 0.0,
+              "headline": "4 stocks to watch on Tuesday: NVDA, META, NBIS, ASTS (SP500:)"
+            }
+          ]
+        },
+        {
+<<<<<<< Updated upstream
+          "symbol": "NVDA",
+          "action": "SELL",
+          "px": 192.755,
+          "qty": 7.125,
+          "notional": 1373.38,
+=======
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 30.7,
+          "qty_hint": 6.17,
+          "reason": "score<sell",
+          "score": -0.333803,
+          "qty": 1,
+          "notional": 30.7,
+          "signals": {
+            "TS": -0.591314,
+            "NS": 0.052464,
+            "CDS": -0.333803,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 36.35078120787246,
+            "ema_slow": 37.26574440470135,
+            "macd": -0.9149631968288929,
+            "macd_signal": 0.7730552960477246,
+            "macd_hist": -1.6880184928766175,
+            "macd_hist_prev": -1.6078679034041599,
+            "rsi14": 30.44955385418463,
+            "sma20": 39.76624999999999
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:38:58+00:00",
+              "source": "simplywallst",
+              "tone": 0.552737589712469,
+              "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+            },
+            {
+              "ts": "2025-11-11T17:07:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.22246625921335106,
+              "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+            },
+            {
+              "ts": "2025-11-11T16:58:53+00:00",
+              "source": "benzinga",
+              "tone": 0.6328009936193953,
+              "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+            }
+          ]
+        },
+        {
+          "symbol": "ESTC",
+          "action": "BUY",
+          "px": 93.96,
+          "qty_hint": 0.0,
+          "reason": "score>buy|topped_by_rotation",
+          "score": 0.705814,
+          "qty": 27.843541,
+          "notional": 2616.18,
+          "signals": {
+            "TS": 0.609821,
+            "NS": 0.76981,
+            "CDS": 0.705814,
+            "wT": 0.4,
+            "wN": 0.6
+          },
+          "indicators": {
+            "ema_fast": 89.42118218031437,
+            "ema_slow": 87.6936815185221,
+            "macd": 1.727500661792277,
+            "macd_signal": 1.1005730310523314,
+            "macd_hist": 0.6269276307399456,
+            "macd_hist_prev": 0.45972541336394523,
+            "rsi14": 71.98521664714656,
+            "sma20": 87.20400000000004
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.957825,
+          "news_preview": [
+            {
+              "ts": "2025-11-11T10:38:38+00:00",
+              "source": "seekingalpha",
+              "tone": 0.7775875317194374,
+              "headline": "Elastic: Is The Company Likely To Stretch In The Right Direction?"
+            },
+            {
+              "ts": "2025-11-07T18:44:57+00:00",
+              "source": "yahoo",
+              "tone": 0.1384371851966358,
+              "headline": "1 Cash-Producing Stock with Solid Fundamentals and 2 Facing Headwinds"
+            },
+            {
+              "ts": "2025-11-07T00:00:03+00:00",
+              "source": "yahoo",
+              "tone": -0.035127951552556935,
+              "headline": "Inseego (INSG) Lags Q3 Earnings Estimates"
+            }
+          ]
+        },
+        {
+          "symbol": "DOCN",
+          "action": "BUY",
+          "px": 50.48,
+          "qty_hint": 0.0,
+          "reason": "score>buy",
+          "score": 0.483246,
+          "qty": 7.5e-05,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.629169,
+            "NS": 0.264363,
+            "CDS": 0.483246,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 45.20599786576947,
+            "ema_slow": 42.25973042912336,
+            "macd": 2.94626743664611,
+            "macd_signal": 1.8741293639427177,
+            "macd_hist": 1.0721380727033925,
+            "macd_hist_prev": 1.0388846775983602,
+            "rsi14": 73.15316958176787,
+            "sma20": 42.49875000000001
+          },
+          "phase": "mid",
+          "size_k": 0.75,
+          "qty_prev": 0.0001,
+          "news_preview": [
+            {
+              "ts": "2025-11-11T16:14:13+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Oppenheimer Begins Coverage on DigitalOcean (NYSE:DOCN)"
+            },
+            {
+              "ts": "2025-11-11T12:57:59+00:00",
+              "source": "newsercom",
+              "tone": 0.6347930322647454,
+              "headline": "Signal strength of DOCN stock in tech scanners - Portfolio Value Report & Daily Technical Stock Forecast Reports"
+            },
+            {
+              "ts": "2025-11-11T10:22:06+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.6013474317786803,
+              "headline": "2026 Is Coming: 1 Magnificent Artificial Intelligence (AI) Stock to Buy as Part of Your New Year's Resolution"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 30.7,
+          "qty": 1.5425,
+          "notional": 47.35,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.591314,
+            "NS": 0.052464,
+            "CDS": -0.333803,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 36.35078120787246,
+            "ema_slow": 37.26574440470135,
+            "macd": -0.9149631968288929,
+            "macd_signal": 0.7730552960477246,
+            "macd_hist": -1.6880184928766175,
+            "macd_hist_prev": -1.6078679034041599,
+            "rsi": 30.44955385418463,
+            "sma20": 39.76624999999999,
+            "price": 30.7
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T17:38:58+00:00",
+              "source": "simplywallst",
+              "tone": 0.552737589712469,
+              "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+            },
+            {
+              "ts": "2025-11-11T17:07:54+00:00",
+              "source": "seekingalpha",
+              "tone": -0.22246625921335106,
+              "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+            },
+            {
+              "ts": "2025-11-11T16:58:53+00:00",
+              "source": "benzinga",
+              "tone": 0.6328009936193953,
+              "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 69.58,
+          "qty": 1.8725,
+          "notional": 130.29,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.487346,
+            "NS": -0.039549,
+            "CDS": -0.308227,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 71.91132994498818,
+            "ema_slow": 71.81381262790144,
+            "macd": 0.09751731708674072,
+            "macd_signal": 2.1265055754746442,
+            "macd_hist": -2.0289882583879035,
+            "macd_hist_prev": -2.2910621614009723,
+            "rsi": 42.79783762684566,
+            "sma20": 76.28000000000006,
+            "price": 69.58
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-11T16:11:58+00:00",
+              "source": "tradingview",
+              "tone": 0.5365367086044479,
+              "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
+            },
+            {
+              "ts": "2025-11-11T15:10:02+00:00",
+              "source": "sharewisecom",
+              "tone": -0.5557298629927303,
               "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
             },
             {
@@ -1278,97 +2232,117 @@
         {
           "symbol": "NVDA",
           "action": "SELL",
-          "px": 192.755,
+          "px": 192.61,
           "qty": 7.125,
-          "notional": 1373.38,
+          "notional": 1372.35,
+>>>>>>> Stashed changes
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.380806,
-            "NS": -0.002389,
-            "CDS": -0.229439,
+            "TS": -0.382277,
+            "NS": -0.012105,
+            "CDS": -0.234208,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 194.30559450226,
-            "ema_slow": 191.15341107357148,
-            "macd": 3.1521834286885166,
-            "macd_signal": 3.8549460043604884,
-            "macd_hist": -0.7027625756719718,
+            "ema_fast": 194.2832868099523,
+            "ema_slow": 191.14267033283073,
+            "macd": 3.1406164771215686,
+            "macd_signal": 3.852632614047099,
+            "macd_hist": -0.7120161369255302,
             "macd_hist_prev": -0.4683998323375178,
-            "rsi": 48.236896798621544,
-            "sma20": 191.5570000000001,
-            "price": 192.755
+            "rsi": 48.054552398440336,
+            "sma20": 191.5497500000001,
+            "price": 192.61
           },
           "news_preview": [
             {
+              "ts": "2025-11-11T17:19:07+00:00",
+              "source": "yahoofinance",
+              "tone": 0.6666305949312036,
+              "headline": "Stock market today: S&P 500, Nasdaq slip as Nvidia slides after SoftBank share sale"
+            },
+            {
               "ts": "2025-11-11T17:04:05+00:00",
               "source": "benzinga",
-              "tone": -0.48585700026746725,
+              "tone": -0.4815333936400788,
               "headline": "Burry's Big Short 2.0: From Palantir Hype To Big Tech's 'Frauds Of The Modern Era'"
             },
             {
-              "ts": "2025-11-11T16:57:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": -0.3971770590420964,
-              "headline": "Stock Market Today: Indexes Mixed As Shutdown End Looms; IPO Stock Plummets (Live Coverage)"
-            },
-            {
-              "ts": "2025-11-11T16:45:53+00:00",
-              "source": "seekingalpha",
-              "tone": -0.481236746577791,
-              "headline": "Nvidia, Micron lead chip stocks lower while broader market shows mixed sentiment"
+              "ts": "2025-11-11T16:59:00+00:00",
+              "source": "barrons",
+              "tone": 0.0,
+              "headline": "Stock Market Today: Dow Rises, S&P 500, Nasdaq Fall; Nvidia, Tesla, CoreWeave, AMD, More Movers"
             }
           ]
         },
         {
           "symbol": "QBTS",
           "action": "SELL",
+<<<<<<< Updated upstream
           "px": 28.8,
           "qty": 33.711604,
           "notional": 970.89,
+=======
+          "px": 28.98,
+          "qty": 33.685036,
+          "notional": 976.19,
+>>>>>>> Stashed changes
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.517805,
-            "NS": 0.242375,
-            "CDS": -0.213733,
+            "TS": -0.513631,
+            "NS": 0.205318,
+            "CDS": -0.226052,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 31.176916341375495,
-            "ema_slow": 31.435384663916707,
-            "macd": -0.2584683225412121,
-            "macd_signal": 0.7741767004071756,
-            "macd_hist": -1.0326450229483877,
+            "ema_fast": 31.2046086490678,
+            "ema_slow": 31.448717997250043,
+            "macd": -0.24410934818224206,
+            "macd_signal": 0.7770484952789696,
+            "macd_hist": -1.0211578434612116,
             "macd_hist_prev": -1.0694704442760046,
-            "rsi": 39.22988173715867,
-            "sma20": 33.27524999999998,
-            "price": 28.8
+            "rsi": 39.740103306304555,
+            "sma20": 33.28424999999998,
+            "price": 28.98
           },
           "news_preview": [
             {
               "ts": "2025-11-11T11:44:40+00:00",
               "source": "newsercom",
-              "tone": 0.6242122373576637,
+              "tone": 0.6186566656039153,
               "headline": "Why QBTS stock stays undervalued - 2025 Volatility Report & Free Technical Confirmation Trade Alerts"
+            },
+            {
+              "ts": "2025-11-11T11:01:38+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Published on: 2025-11-11 05:01:38"
             },
             {
               "ts": "2025-11-11T10:00:00+00:00",
               "source": "nasdaq",
-              "tone": 0.05131487545852227,
+              "tone": 0.05085816630151137,
               "headline": "Breaking Quantum Computing Stock News That IonQ, Rigetti Computing, and D-Wave Investors Can't Afford to Miss"
+<<<<<<< Updated upstream
             },
             {
               "ts": "2025-11-11T07:12:34+00:00",
               "source": "yahoo",
               "tone": 0.8113392220944824,
               "headline": "D-Wave Quantum (QBTS): Assessing Valuation After Revenue Surge and Breakthrough Enterprise Deployments"
+=======
+>>>>>>> Stashed changes
             }
           ]
         }
       ],
+<<<<<<< Updated upstream
       "cash_left": 10.53
+=======
+      "cash_left": 10.28
+>>>>>>> Stashed changes
     },
     "portfolio_paper_reasonable": {
       "meta": {
@@ -1386,101 +2360,101 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 19884.6,
+      "portfolio_value_est": 19895.13,
       "cash_start": 354.48,
       "trades": [
         {
-          "symbol": "XOP",
+          "symbol": "ESTC",
           "action": "BUY",
-          "px": 134.6,
+          "px": 93.96,
           "qty_hint": 0.0,
           "reason": "score>buy|topped_by_rotation",
-          "score": 0.570585,
-          "qty": 3.323948,
-          "notional": 447.4,
+          "score": 0.705814,
+          "qty": 4.764158999999999,
+          "notional": 447.64,
           "signals": {
-            "TS": 0.63052,
-            "NS": 0.480682,
-            "CDS": 0.570585,
-            "wT": 0.6,
-            "wN": 0.4
+            "TS": 0.609821,
+            "NS": 0.76981,
+            "CDS": 0.705814,
+            "wT": 0.4,
+            "wN": 0.6
           },
           "indicators": {
-            "ema_fast": 128.74201480052142,
-            "ema_slow": 128.44092936349873,
-            "macd": 0.3010854370226923,
-            "macd_signal": -0.6232920017371799,
-            "macd_hist": 0.9243774387598722,
-            "macd_hist_prev": 0.5831092312829347,
-            "rsi14": 75.00642577039228,
-            "sma20": 126.96200000000002
+            "ema_fast": 89.42118218031437,
+            "ema_slow": 87.6936815185221,
+            "macd": 1.727500661792277,
+            "macd_signal": 1.1005730310523314,
+            "macd_hist": 0.6269276307399456,
+            "macd_hist_prev": 0.45972541336394523,
+            "rsi14": 71.98521664714656,
+            "sma20": 87.20400000000004
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 1.9752,
+          "qty_prev": 2.829525,
           "news_preview": [
             {
-              "ts": "2025-11-11T11:20:00+00:00",
-              "source": "nasdaq",
-              "tone": 0.4799018183674292,
-              "headline": "Should You Invest in the State Street SPDR S&P Oil & Gas Exploration & Production ETF (XOP)?"
+              "ts": "2025-11-11T10:38:38+00:00",
+              "source": "seekingalpha",
+              "tone": 0.7775875317194374,
+              "headline": "Elastic: Is The Company Likely To Stretch In The Right Direction?"
             },
             {
-              "ts": "2025-11-10T20:19:25+00:00",
-              "source": "benzinga",
-              "tone": 0.5818701502187881,
-              "headline": "Shutdown Progress Sends Oil Higher\u2014Are Energy ETFs Finally Staging A Real Comeback?"
+              "ts": "2025-11-07T18:44:57+00:00",
+              "source": "yahoo",
+              "tone": 0.1384371851966358,
+              "headline": "1 Cash-Producing Stock with Solid Fundamentals and 2 Facing Headwinds"
             },
             {
-              "ts": "2025-11-10T06:55:11+00:00",
-              "source": "newsercom",
-              "tone": 0.3422991959244878,
-              "headline": "Can XOP stock sustain margin levels - 2025 Support & Resistance & Safe Swing Trade Setups"
+              "ts": "2025-11-07T00:00:03+00:00",
+              "source": "yahoo",
+              "tone": -0.035127951552556935,
+              "headline": "Inseego (INSG) Lags Q3 Earnings Estimates"
             }
           ]
         },
         {
           "symbol": "BE",
           "action": "SELL",
-          "px": 132.24,
+          "px": 132.4,
           "qty": 0.336146,
-          "notional": 44.45,
+          "notional": 44.51,
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.307679,
-            "NS": 0.321181,
-            "CDS": -0.056135,
+            "TS": -0.30625,
+            "NS": 0.323267,
+            "CDS": -0.054444,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 129.7264824569187,
-            "ema_slow": 116.9185566631557,
-            "macd": 12.80792579376299,
-            "macd_signal": 12.906608620748118,
-            "macd_hist": -0.09868282698512765,
+            "ema_fast": 129.7510978415341,
+            "ema_slow": 116.93040851500756,
+            "macd": 12.820689326526534,
+            "macd_signal": 12.909161327300827,
+            "macd_hist": -0.08847200077429385,
             "macd_hist_prev": 0.6453587435649926,
-            "rsi": 55.05102657510618,
-            "sma20": 121.72375000000007,
-            "price": 132.24
+            "rsi": 55.22704941424099,
+            "sma20": 121.73175000000008,
+            "price": 132.4
           },
           "news_preview": [
             {
               "ts": "2025-11-11T15:04:43+00:00",
               "source": "benzinga",
-              "tone": 0.35268920434067097,
+              "tone": 0.3495502450335346,
               "headline": "Check Out What Whales Are Doing With Bloom Energy"
             },
             {
               "ts": "2025-11-10T16:42:28+00:00",
               "source": "marketbeat",
-              "tone": 0.5400243302504806,
+              "tone": 0.5352180772439594,
               "headline": "3 Stocks Showing Relative Strength as Markets Pull Back"
             },
             {
               "ts": "2025-11-10T15:19:25+00:00",
               "source": "yahoo",
-              "tone": -0.04512197828342969,
+              "tone": -0.044720389415380805,
               "headline": "Why Did Bloom Energy Stock Rocket Higher Again in October?"
             }
           ]
@@ -1488,29 +2462,35 @@
         {
           "symbol": "AAPL",
           "action": "SELL",
-          "px": 272.25,
-          "qty": 0.503543,
-          "notional": 137.09,
+          "px": 273.21,
+          "qty": 0.502443,
+          "notional": 137.27,
           "reason": "rotation_upgrade",
           "signals": {
-            "TS": -0.19208,
-            "NS": 0.247585,
-            "CDS": -0.016214,
+            "TS": -0.175935,
+            "NS": 0.227029,
+            "CDS": -0.01475,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 268.26419557489044,
-            "ema_slow": 262.95230333999456,
-            "macd": 5.311892234895879,
-            "macd_signal": 5.569711205662945,
-            "macd_hist": -0.25781897076706617,
+            "ema_fast": 268.41188788258273,
+            "ema_slow": 263.0234144511056,
+            "macd": 5.388473431477109,
+            "macd_signal": 5.5850274449791915,
+            "macd_hist": -0.19655401350208201,
             "macd_hist_prev": -0.30314969431467453,
-            "rsi": 71.73474622585768,
-            "sma20": 264.6809999999999,
-            "price": 272.25
+            "rsi": 73.74568863195778,
+            "sma20": 264.7289999999999,
+            "price": 273.21
           },
           "news_preview": [
+            {
+              "ts": "2025-11-11T17:35:15+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "10 Information Technology Stocks Whale Activity In Today's Session"
+            },
             {
               "ts": "2025-11-11T16:45:13+00:00",
               "source": "benzinga",
@@ -1520,14 +2500,8 @@
             {
               "ts": "2025-11-11T15:29:21+00:00",
               "source": "benzinga",
-              "tone": 0.1993603426089602,
+              "tone": 0.19758517655312244,
               "headline": "These 20 Stocks Now Make Up Half Of The S&P 500\u2014Here's Why That's Risky"
-            },
-            {
-              "ts": "2025-11-11T15:01:02+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Assessing Apple's Performance Against Competitors In Technology Hardware, Storage &amp; Peripherals Industry"
             }
           ]
         }
