@@ -171,9 +171,6 @@ def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: 
     write_json(str(folder / "trades_applied.json"), obj)
     if not VERSIONING_ENABLED:
         return
-    safe_asof = asof.replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
-    if safe_asof:
-        write_json(str(folder / f"trades_applied_{safe_asof}.json"), obj)
 
 def ensure_portfolio_ledger(folder: Path) -> Path:
     """Create per-portfolio ledger with header if missing."""
