@@ -99,7 +99,7 @@ jobs:
 
 
       - name: Fetch prices (if stale)
-        if: steps.probe.outputs.fresh_prices != 'true'
+        if: steps.probe.outputs.fresh_prices != 'true' || github.event_name == 'workflow_dispatch'
         env:
           ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
