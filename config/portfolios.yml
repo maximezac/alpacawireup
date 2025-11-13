@@ -63,3 +63,12 @@ portfolios:
     max_deploy_frac: 0.15
     trade_scope: paper
     tags: [ideas, paper]
+
+  portfolio_paper_TS_only:
+    title: "paper TS Only"
+    path: data/portfolios/portfolio_paper_TS_only
+    decision_source: TS_ONLY
+    buy_threshold: 0.55
+    sell_threshold: -0.20
+    trade_scope: none
+    tags: [ideas]
