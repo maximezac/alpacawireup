@@ -1,112 +1,13 @@
 {
-  "as_of_utc": "2025-11-13T04:56:43.497352+00:00",
+  "as_of_utc": "2025-11-13T05:22:06.386801+00:00",
   "portfolio_id": "portfolio_paper_reasonable",
   "trades": {
     "pre": {
-      "as_of_utc": "2025-11-13T04:56:43.497352+00:00",
-      "portfolio_id": "portfolio_paper_reasonable",
-      "cash": 189.31,
-      "market_value": 19874.15,
-      "equity": 20063.46,
-      "holdings": {
-        "AAPL": {
-          "qty": 1.162879,
-          "avg_cost": 270.11985,
-          "mark": 273.47,
-          "market_value": 318.01
-        },
-        "AMZN": {
-          "qty": 9.8759,
-          "avg_cost": 243.20296,
-          "mark": 244.22,
-          "market_value": 2411.89
-        },
-        "BE": {
-          "qty": 0.425435,
-          "avg_cost": 139.424285,
-          "mark": 126.77,
-          "market_value": 53.93
-        },
-        "CMI": {
-          "qty": 2.485,
-          "avg_cost": 477.922445,
-          "mark": 479.33,
-          "market_value": 1191.14
-        },
-        "DDOG": {
-          "qty": 9.511498,
-          "avg_cost": 192.406915,
-          "mark": 190.865,
-          "market_value": 1815.41
-        },
-        "DE": {
-          "qty": 5.0508,
-          "avg_cost": 475.53506,
-          "mark": 480.56,
-          "market_value": 2427.21
-        },
-        "DIS": {
-          "qty": 5.485231,
-          "avg_cost": 114.60449,
-          "mark": 116.67,
-          "market_value": 639.96
-        },
-        "DOCN": {
-          "qty": 27.609206,
-          "avg_cost": 48.388344,
-          "mark": 48.37,
-          "market_value": 1335.46
-        },
-        "FSLR": {
-          "qty": 6.6135,
-          "avg_cost": 272.38211,
-          "mark": 267.51,
-          "market_value": 1769.18
-        },
-        "GOOGL": {
-          "qty": 16.242147,
-          "avg_cost": 282.75889,
-          "mark": 286.79,
-          "market_value": 4658.09
-        },
-        "ICLN": {
-          "qty": 27.593463,
-          "avg_cost": 17.67308,
-          "mark": 17.665,
-          "market_value": 487.44
-        },
-        "JPM": {
-          "qty": 6.332325,
-          "avg_cost": 313.501029,
-          "mark": 320.42,
-          "market_value": 2029.0
-        },
-        "SNAP": {
-          "qty": 4.587034,
-          "avg_cost": 9.029006,
-          "mark": 9.085,
-          "market_value": 41.67
-        },
-        "XLE": {
-          "qty": 1.395993,
-          "avg_cost": 90.46037,
-          "mark": 90.23,
-          "market_value": 125.96
-        },
-        "XOP": {
-          "qty": 4.315346,
-          "avg_cost": 134.7346,
-          "mark": 132.04,
-          "market_value": 569.8
-        }
-      }
-    },
-    "post": {
-      "as_of_utc": "2025-11-13T04:56:43.497352+00:00",
+      "as_of_utc": "2025-11-13T05:22:06.386801+00:00",
       "portfolio_id": "portfolio_paper_reasonable",
       "cash": 93.59,
       "market_value": 19969.65,
-      "equity": 20063.25,
+      "equity": 20063.24,
       "holdings": {
         "AAPL": {
           "qty": 0.872159,
@@ -206,33 +107,123 @@
         }
       }
     },
-    "trades": [
-      {
-        "symbol": "EFA",
-        "action": "BUY",
-        "qty": 1.9517060000000002,
-        "px_exec": 96.691595,
-        "slippage_bps": 10.0,
-        "reason": "score>buy|topped_by_rotation",
-        "signals": {
-          "TS": 0.615503,
-          "NS": 0.262877,
-          "CDS": 0.474453,
-          "wT": 0.6,
-          "wN": 0.4
+    "post": {
+      "as_of_utc": "2025-11-13T05:22:06.386801+00:00",
+      "portfolio_id": "portfolio_paper_reasonable",
+      "cash": 163.26,
+      "market_value": 19899.91,
+      "equity": 20063.17,
+      "holdings": {
+        "AAPL": {
+          "qty": 0.654119,
+          "avg_cost": 270.11985,
+          "mark": 273.47,
+          "market_value": 178.88
+        },
+        "AMZN": {
+          "qty": 9.8759,
+          "avg_cost": 243.20296,
+          "mark": 244.22,
+          "market_value": 2411.89
+        },
+        "BE": {
+          "qty": 0.239307,
+          "avg_cost": 139.424285,
+          "mark": 126.77,
+          "market_value": 30.34
+        },
+        "CMI": {
+          "qty": 2.485,
+          "avg_cost": 477.922445,
+          "mark": 479.33,
+          "market_value": 1191.14
+        },
+        "DDOG": {
+          "qty": 9.511498,
+          "avg_cost": 192.406915,
+          "mark": 190.865,
+          "market_value": 1815.41
+        },
+        "DE": {
+          "qty": 5.0508,
+          "avg_cost": 475.53506,
+          "mark": 480.56,
+          "market_value": 2427.21
+        },
+        "DIS": {
+          "qty": 5.485231,
+          "avg_cost": 114.60449,
+          "mark": 116.67,
+          "market_value": 639.96
+        },
+        "DOCN": {
+          "qty": 27.609206,
+          "avg_cost": 48.388344,
+          "mark": 48.37,
+          "market_value": 1335.46
+        },
+        "EFA": {
+          "qty": 1.951706,
+          "avg_cost": 96.691595,
+          "mark": 96.575,
+          "market_value": 188.49
+        },
+        "FSLR": {
+          "qty": 6.6135,
+          "avg_cost": 272.38211,
+          "mark": 267.51,
+          "market_value": 1769.18
+        },
+        "GOOGL": {
+          "qty": 16.242147,
+          "avg_cost": 282.75889,
+          "mark": 286.79,
+          "market_value": 4658.09
+        },
+        "ICLN": {
+          "qty": 27.593463,
+          "avg_cost": 17.67308,
+          "mark": 17.665,
+          "market_value": 487.44
+        },
+        "JPM": {
+          "qty": 6.332325,
+          "avg_cost": 313.501029,
+          "mark": 320.42,
+          "market_value": 2029.0
+        },
+        "SNAP": {
+          "qty": 4.587034,
+          "avg_cost": 9.029006,
+          "mark": 9.085,
+          "market_value": 41.67
+        },
+        "XLE": {
+          "qty": 1.395993,
+          "avg_cost": 90.46037,
+          "mark": 90.23,
+          "market_value": 125.96
+        },
+        "XOP": {
+          "qty": 4.315346,
+          "avg_cost": 134.7346,
+          "mark": 132.04,
+          "market_value": 569.8
         }
-      },
+      }
+    },
+    "trades": [
       {
         "symbol": "BE",
         "action": "SELL",
-        "qty": 0.106359,
-        "px_exec": 126.26361,
+        "qty": 0.079769,
+        "px_exec": 126.64323,
         "slippage_bps": 10.0,
         "reason": "rotation_upgrade",
         "signals": {
           "TS": -0.353918,
-          "NS": 0.227875,
-          "CDS": -0.121201,
+          "NS": 0.206425,
+          "CDS": -0.129781,
           "wT": 0.6,
           "wN": 0.4
         }
@@ -240,14 +231,14 @@
       {
         "symbol": "AAPL",
         "action": "SELL",
-        "qty": 0.29072,
-        "px_exec": 273.691035,
+        "qty": 0.21804,
+        "px_exec": 273.19653,
         "slippage_bps": 10.0,
         "reason": "rotation_upgrade",
         "signals": {
           "TS": -0.223615,
-          "NS": 0.42659,
-          "CDS": 0.036467,
+          "NS": 0.422749,
+          "CDS": 0.03493,
           "wT": 0.6,
           "wN": 0.4
         }

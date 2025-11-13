@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-12T20:43:57.730396+00:00",
+  "as_of_utc": "2025-11-13T05:22:06.386801+00:00",
   "portfolio_id": "portfolio_paper_reasonable",
   "meta": {
     "title": "Paper Reasonable",
@@ -18,101 +18,101 @@
   },
   "trades": [
     {
-      "symbol": "EFA",
+      "symbol": "NEE",
       "action": "BUY",
-      "px": 96.595,
+      "px": 85.88,
       "qty_hint": 0.0,
       "reason": "score>buy|topped_by_rotation",
-      "score": 0.591562,
-      "qty": 1.9517060000000002,
-      "notional": 188.52,
+      "score": 0.558342,
+      "qty": 1.2325979999999999,
+      "notional": 105.85,
       "signals": {
-        "TS": 0.616572,
-        "NS": 0.554046,
-        "CDS": 0.591562,
+        "TS": 0.617948,
+        "NS": 0.468934,
+        "CDS": 0.558342,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 95.04323631788805,
-        "ema_slow": 94.58762073268147,
-        "macd": 0.45561558520657286,
-        "macd_signal": 0.35027084300215755,
-        "macd_hist": 0.10534474220441531,
-        "macd_hist_prev": 0.010132417847921515,
-        "rsi14": 73.20152983192047,
-        "sma20": 94.86124999999996
+        "ema_fast": 83.78774587345579,
+        "ema_slow": 82.55559375267775,
+        "macd": 1.2321521207780393,
+        "macd_signal": 1.2194888888947826,
+        "macd_hist": 0.012663231883256687,
+        "macd_hist_prev": -0.09862830155000557,
+        "rsi14": 73.12428933156166,
+        "sma20": 83.55599999999995
       },
       "phase": "mid",
-      "size_k": 0.75,
-      "qty_prev": 1.46985,
+      "size_k": 0.4882038333333333,
+      "qty_prev": 0.928075,
       "news_preview": [
         {
-          "ts": "2025-11-12T12:16:00+00:00",
-          "source": "seekingalpha",
-          "tone": 0.7548380271948566,
-          "headline": "2026 Macroeconomic Outlook: Treading A Finer Line"
+          "ts": "2025-11-12T20:11:26+00:00",
+          "source": "snopes",
+          "tone": 0.5783815964802911,
+          "headline": "Is the New York Stock Exchange moving to Texas because of Mamdani's win?"
         },
         {
-          "ts": "2025-11-12T09:30:00+00:00",
-          "source": "seekingalpha",
-          "tone": 0.47071722230872,
-          "headline": "Even As Global Uncertainty Surges, Economic Sentiment Remains Positive"
+          "ts": "2025-11-12T12:29:38+00:00",
+          "source": "marketbeat",
+          "tone": 0.6334626650214119,
+          "headline": "NextEra Energy, Inc. $NEE Stock Position Reduced by Mitsubishi UFJ Trust & Banking Corp"
         },
         {
-          "ts": "2025-11-12T08:18:46+00:00",
-          "source": "newsercom",
-          "tone": 0.5406737637844086,
-          "headline": "Will EFA stock announce a stock split - July 2025 Trade Ideas & Safe Capital Growth Stock Tips"
+          "ts": "2025-11-12T11:38:00+00:00",
+          "source": "yahoo",
+          "tone": 0.6726057776248606,
+          "headline": "The Zacks Analyst Blog Highlights Exxon Mobil, Home Depot, NextEra Energy and Ridge Bankshares"
         }
       ]
     },
     {
       "symbol": "ICLN",
       "action": "BUY",
-      "px": 17.66,
+      "px": 17.665,
       "qty_hint": 0.0,
       "reason": "score>buy|topped_by_rotation",
-      "score": 0.569212,
-      "qty": 2.635762,
-      "notional": 46.54,
+      "score": 0.524692,
+      "qty": 1.48051,
+      "notional": 26.15,
       "signals": {
-        "TS": 0.491395,
-        "NS": 0.685936,
-        "CDS": 0.569212,
+        "TS": 0.492477,
+        "NS": 0.573014,
+        "CDS": 0.524692,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 17.482818800711556,
-        "ema_slow": 16.965652126204546,
-        "macd": 0.5171666745070098,
-        "macd_signal": 0.5093125496907549,
-        "macd_hist": 0.007854124816254915,
+        "ema_fast": 17.483588031480785,
+        "ema_slow": 16.96602249657492,
+        "macd": 0.5175655349058665,
+        "macd_signal": 0.5093923217705262,
+        "macd_hist": 0.008173213135340363,
         "macd_hist_prev": 0.03315072241696071,
-        "rsi14": 56.918652326319815,
-        "sma20": 17.119
+        "rsi14": 57.05303599003068,
+        "sma20": 17.11925
       },
       "phase": "mid",
-      "size_k": 0.75,
-      "qty_prev": 0.00015,
+      "size_k": 0.4517496666666667,
+      "qty_prev": 4.5e-05,
       "news_preview": [
         {
           "ts": "2025-11-12T17:59:32+00:00",
           "source": "benzinga",
-          "tone": 0.8504193142356608,
+          "tone": 0.7104188685053626,
           "headline": "As COP30 Talks Climate, Investors Are Acting On It \u2014 Through These ETFs"
         },
         {
           "ts": "2025-11-11T21:57:14+00:00",
           "source": "theglobeandmail",
-          "tone": 0.43569821096545785,
+          "tone": 0.36397130791639404,
           "headline": "Clean Energy\u2019s Second Wind: What iShares Global Clean Energy ETF Tells Us Now"
         },
         {
           "ts": "2025-11-10T16:56:18+00:00",
           "source": "benzinga",
-          "tone": -0.26255156444578975,
+          "tone": -0.21932896190420173,
           "headline": "Utilities ETFs Could Power Up As Polar Vortex Threatens To Freeze The Grid"
         }
       ]
@@ -120,29 +120,35 @@
     {
       "symbol": "BE",
       "action": "SELL",
-      "px": 126.39,
-      "qty": 0.106359,
-      "notional": 13.44,
+      "px": 126.77,
+      "qty": 0.059827,
+      "notional": 7.58,
       "reason": "rotation_upgrade",
       "signals": {
-        "TS": -0.357063,
-        "NS": 0.376622,
-        "CDS": -0.063589,
+        "TS": -0.353918,
+        "NS": 0.206425,
+        "CDS": -0.129781,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 128.54015971206732,
-        "ema_slow": 117.2655501315804,
-        "macd": 11.274609580486924,
-        "macd_signal": 12.514220828409531,
-        "macd_hist": -1.239611247922607,
+        "ema_fast": 128.59862125052885,
+        "ema_slow": 117.29369827972855,
+        "macd": 11.304922970800305,
+        "macd_signal": 12.520283506472207,
+        "macd_hist": -1.215360535671902,
         "macd_hist_prev": -0.4286199409628999,
-        "rsi": 49.21342435857033,
-        "sma20": 121.95675000000008,
-        "price": 126.39
+        "rsi": 49.60071302140771,
+        "sma20": 121.97575000000009,
+        "price": 126.77
       },
       "news_preview": [
+        {
+          "ts": "2025-11-13T03:23:47+00:00",
+          "source": "newsercom",
+          "tone": 0.0,
+          "headline": "Is BE stock undervalued after correction - Portfolio Return Summary & Precise Entry and Exit Recommendations"
+        },
         {
           "ts": "2025-11-12T17:35:29+00:00",
           "source": "benzinga",
@@ -150,62 +156,56 @@
           "headline": "10 Industrials Stocks With Whale Alerts In Today's Session"
         },
         {
-          "ts": "2025-11-12T14:43:28+00:00",
-          "source": "newsercom",
-          "tone": 0.6180115685204137,
-          "headline": "How BE stock reacts to stronger dollar - Weekly Market Summary & Safe Entry Zone Identification"
-        },
-        {
-          "ts": "2025-11-12T12:42:00+00:00",
-          "source": "quiverquantitative",
-          "tone": 0.5924883762703629,
-          "headline": "Fund Update: 1,207,278 BLOOM ENERGY (BE) shares added to Handelsbanken Fonder AB portfolio"
+          "ts": "2025-11-12T16:24:05+00:00",
+          "source": "seekingalpha",
+          "tone": 0.0,
+          "headline": "FESM: Small-Cap ETF Outperforming The Benchmark"
         }
       ]
     },
     {
       "symbol": "AAPL",
       "action": "SELL",
-      "px": 273.965,
-      "qty": 0.29072,
-      "notional": 79.65,
+      "px": 273.47,
+      "qty": 0.16353,
+      "notional": 44.72,
       "reason": "rotation_upgrade",
       "signals": {
-        "TS": -0.205733,
-        "NS": 0.459305,
-        "CDS": 0.060282,
+        "TS": -0.223615,
+        "NS": 0.422749,
+        "CDS": 0.03493,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 269.55195246869425,
-        "ema_slow": 263.98445119060955,
-        "macd": 5.5675012780847055,
-        "macd_signal": 5.609537881122116,
-        "macd_hist": -0.042036603037410636,
+        "ema_fast": 269.4757986225404,
+        "ema_slow": 263.94778452394286,
+        "macd": 5.528014098597566,
+        "macd_signal": 5.601640445224689,
+        "macd_hist": -0.07362634662712253,
         "macd_hist_prev": -0.05647412746473801,
-        "rsi": 70.0048843039564,
-        "sma20": 266.06674999999996,
-        "price": 273.965
+        "rsi": 67.77380688380566,
+        "sma20": 266.042,
+        "price": 273.47
       },
       "news_preview": [
         {
+          "ts": "2025-11-13T01:32:02+00:00",
+          "source": "marketbeat",
+          "tone": 0.6569346331611742,
+          "headline": "Chris Kondo Sells 3,752 Shares of Apple (NASDAQ:AAPL) Stock"
+        },
+        {
+          "ts": "2025-11-12T20:00:00+00:00",
+          "source": "seekingalpha",
+          "tone": 0.7409657597740719,
+          "headline": "RiverPark Long/Short Opportunity Fund: Q3 2025 Top And Bottom Performers"
+        },
+        {
           "ts": "2025-11-12T19:55:43+00:00",
           "source": "benzinga",
-          "tone": 0.7404873467713728,
+          "tone": 0.6186007742038697,
           "headline": "15 Stocks To Consider Buying For The Supreme Court Ruling On Trump's Tariffs"
-        },
-        {
-          "ts": "2025-11-12T19:10:32+00:00",
-          "source": "benzinga",
-          "tone": 0.5752521249881436,
-          "headline": "Political Tailwind? Congress Trading Ban Could Boost SPY, IVV"
-        },
-        {
-          "ts": "2025-11-12T17:45:00+00:00",
-          "source": "simplywallst",
-          "tone": 0.0,
-          "headline": "How Apple\u2019s (AAPL) Google AI Integration and Earnings May Shape Its Investment Narrative"
         }
       ]
     }
