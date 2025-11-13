@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-13T05:22:06.386801+00:00",
+  "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
   "portfolio_id": "portfolio_max_TS_only",
   "meta": {
     "title": "Max TS Only",
@@ -11,7 +11,8 @@
     "trim_fraction": 0.25,
     "fractional_buys": true,
     "tags": [
-      "ideas"
+      "ideas",
+      "paper"
     ],
     "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
   },
@@ -19,429 +20,564 @@
     {
       "symbol": "ASTS",
       "action": "SELL",
-      "px": 64.57,
+      "px": 61.885,
       "qty_hint": 7.49,
       "reason": "score<sell",
-      "score": -0.566872,
+      "score": -0.60117,
       "qty": 1,
-      "notional": 64.57,
+      "notional": 61.88,
       "signals": {
-        "TS": -0.566872,
-        "NS": 0.035647,
-        "CDS": -0.325864,
+        "TS": -0.60117,
+        "NS": -0.152898,
+        "CDS": -0.421861,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 70.55278214280065,
-        "ema_slow": 71.1565201035501,
-        "macd": -0.6037379607494415,
-        "macd_signal": 1.5579936925624125,
-        "macd_hist": -2.161731653311854,
-        "macd_hist_prev": -2.141307603505533,
-        "rsi14": 33.1031539067267,
-        "sma20": 74.63650000000005
+        "ema_fast": 69.2192771977544,
+        "ema_slow": 70.46974093684885,
+        "macd": -1.2504637390944566,
+        "macd_signal": 0.9963020788820399,
+        "macd_hist": -2.2467658179764967,
+        "macd_hist_prev": -2.1617316023722726,
+        "rsi14": 29.047391932652616,
+        "sma20": 73.25575000000006
       },
       "news_preview": [
         {
-          "ts": "2025-11-12T17:32:00+00:00",
-          "source": "quiverquantitative",
-          "tone": 0.0,
-          "headline": "AST SpaceMobile Stock (ASTS) Opinions on Recent Volatility and Partnerships | ASTS Stock News"
+          "ts": "2025-11-13T16:53:23+00:00",
+          "source": "marketbeat",
+          "tone": -0.311647066179981,
+          "headline": "Q4 EPS Estimates for AST SpaceMobile Lowered by Roth Capital"
         },
         {
-          "ts": "2025-11-12T15:18:16+00:00",
+          "ts": "2025-11-13T16:53:20+00:00",
           "source": "marketbeat",
           "tone": 0.0,
-          "headline": "B. Riley Estimates AST SpaceMobile FY2027 Earnings"
+          "headline": "Q4 Earnings Forecast for AST SpaceMobile Issued By B. Riley"
         },
         {
-          "ts": "2025-11-12T15:18:14+00:00",
+          "ts": "2025-11-13T16:01:04+00:00",
           "source": "marketbeat",
-          "tone": 0.0,
-          "headline": "Analysts Issue Forecasts for AST SpaceMobile FY2028 Earnings"
+          "tone": -0.3060369500761259,
+          "headline": "FY2025 EPS Estimates for AST SpaceMobile Lowered by Analyst"
         }
       ]
     },
     {
       "symbol": "HOOD",
       "action": "SELL",
-      "px": 132.94,
+      "px": 121.53,
       "qty_hint": 4.0,
       "reason": "score<sell",
-      "score": -0.468676,
+      "score": -0.562529,
       "qty": 1,
-      "notional": 132.94,
+      "notional": 121.53,
       "signals": {
-        "TS": -0.468676,
-        "NS": 0.340815,
-        "CDS": -0.144879,
+        "TS": -0.562529,
+        "NS": 0.319815,
+        "CDS": -0.209592,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 135.9037528309596,
-        "ema_slow": 135.7721631457314,
-        "macd": 0.13158968522819237,
-        "macd_signal": 1.6950734788198185,
-        "macd_hist": -1.5634837935916261,
-        "macd_hist_prev": -1.642063642564465,
-        "rsi14": 45.14129321691638,
-        "sma20": 136.83450000000005
+        "ema_fast": 133.6924062415812,
+        "ema_slow": 134.71718846988102,
+        "macd": -1.024782228299813,
+        "macd_signal": 1.1511018647605051,
+        "macd_hist": -2.175884093060318,
+        "macd_hist_prev": -1.5634836045374876,
+        "rsi14": 33.6239793699323,
+        "sma20": 136.34100000000007
       },
       "news_preview": [
         {
-          "ts": "2025-11-12T22:31:30+00:00",
-          "source": "yahoofinance",
-          "tone": 0.0,
-          "headline": "Robinhood CEO Says Tokenization Will 'Unlock 24/7 Markets' And Investors Will 'Never Go Back'"
+          "ts": "2025-11-13T17:48:28+00:00",
+          "source": "yahoo",
+          "tone": 0.5949506081587931,
+          "headline": "FanDuel Prediction Market Strategy Pursues Rivals Polymarket, Kalshi"
         },
         {
-          "ts": "2025-11-12T22:02:40+00:00",
-          "source": "seekingalpha",
-          "tone": 0.5100282482711697,
-          "headline": "Tracking Cathie Wood's ARK Invest 13F Portfolio - Q3 2025 Update"
+          "ts": "2025-11-13T17:37:18+00:00",
+          "source": "benzinga",
+          "tone": -0.6665078545584538,
+          "headline": "Wall Street Falls On US Government Reopening Day, Bitcoin Slides To $100,000: What's Moving Markets Thursday?"
         },
         {
-          "ts": "2025-11-12T19:18:00+00:00",
-          "source": "quiverquantitative",
-          "tone": 0.0,
-          "headline": "Fund Update: New $26.6M $HOOD stock position opened by COMMONWEALTH OF PENNSYLVANIA PUBLIC SCHOOL EMPLS RETRMT SYS"
+          "ts": "2025-11-13T17:35:10+00:00",
+          "source": "benzinga",
+          "tone": 0.45673889319467553,
+          "headline": "Robinhood's Newest Feature Lets You Order Cash Like Takeout"
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "action": "SELL",
+      "px": 238.02,
+      "qty_hint": 4.0,
+      "reason": "score<sell",
+      "score": -0.305472,
+      "qty": 1,
+      "notional": 238.02,
+      "signals": {
+        "TS": -0.305472,
+        "NS": 0.365197,
+        "CDS": -0.037205,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 234.07547513008956,
+        "ema_slow": 218.48869801543862,
+        "macd": 15.586777114650943,
+        "macd_signal": 15.86622402614207,
+        "macd_hist": -0.279446911491128,
+        "macd_hist_prev": 0.4960091794173014,
+        "rsi14": 56.28229332960757,
+        "sma20": 224.78899999999993
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T18:25:31+00:00",
+          "source": "yahoo",
+          "tone": -0.07376802762868588,
+          "headline": "Micron's $325 Shockwave: Morgan Stanley Unleashes Top Pick Amid AI Memory Price Surge"
+        },
+        {
+          "ts": "2025-11-13T18:25:19+00:00",
+          "source": "yahoo",
+          "tone": 0.31201518202510997,
+          "headline": "Micron Gets New Street-High Target -- Analyst Call It a 'Top Pick' on DRAM Boom"
+        },
+        {
+          "ts": "2025-11-13T18:03:00+00:00",
+          "source": "marketwatch",
+          "tone": 0.3791027685915006,
+          "headline": "Why Micron\u2019s stock is Morgan Stanley\u2019s new top pick \u2014 even with its 180% rally this year"
         }
       ]
     },
     {
       "symbol": "NVDA",
       "action": "SELL",
-      "px": 193.86,
+      "px": 186.845,
       "qty_hint": 28.5,
       "reason": "score<sell",
-      "score": -0.368526,
+      "score": -0.507333,
       "qty": 7,
-      "notional": 1357.02,
+      "notional": 1307.91,
       "signals": {
-        "TS": -0.368526,
-        "NS": 0.252328,
-        "CDS": -0.120185,
+        "TS": -0.507333,
+        "NS": 0.318339,
+        "CDS": -0.177064,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 194.30343203445662,
-        "ema_slow": 191.3888775203826,
-        "macd": 2.9145545140740126,
-        "macd_signal": 3.6733784366431252,
-        "macd_hist": -0.7588239225691127,
-        "macd_hist_prev": -0.6702160985771677,
-        "rsi14": 49.803425662394325,
-        "sma20": 192.2820000000001
+        "ema_fast": 193.1559809522325,
+        "ema_slow": 191.05229424007572,
+        "macd": 2.1036867121567866,
+        "macd_signal": 3.3594397871586428,
+        "macd_hist": -1.2557530750018562,
+        "macd_hist_prev": -0.7588238007342429,
+        "rsi14": 40.05799875879248,
+        "sma20": 192.5322500000001
       },
       "news_preview": [
         {
-          "ts": "2025-11-13T04:24:45+00:00",
-          "source": "tipranks",
-          "tone": 0.7844855838622231,
-          "headline": "Top BofA Analyst Cranks Up the Optimism on Nvidia Stock"
+          "ts": "2025-11-13T20:33:38+00:00",
+          "source": "yahoo",
+          "tone": 0.2490981758993647,
+          "headline": "Stock Market Today: Dow Craters As Nvidia, Palantir Fall; Jobs Data On Watch (Live Coverage)"
         },
         {
-          "ts": "2025-11-13T02:51:55+00:00",
+          "ts": "2025-11-13T20:33:00+00:00",
+          "source": "investorsbusinessdaily",
+          "tone": 0.0,
+          "headline": "Stock Market Today: Dow Craters As Nvidia, Palantir Fall; Jobs Data On Watch (Live Coverage)"
+        },
+        {
+          "ts": "2025-11-13T20:28:19+00:00",
           "source": "benzinga",
-          "tone": -0.8010146434214974,
-          "headline": "Nvidia Quashes Talk Of $1 Billion AI Data Center In Mexico After Governor's Announcement Sparks Confusion"
-        },
-        {
-          "ts": "2025-11-12T21:16:16+00:00",
-          "source": "investopedia",
-          "tone": -0.46734083594165976,
-          "headline": "Nvidia's Earnings Are Almost Here. Investors Are Already Worried About the AI Rally."
+          "tone": 0.0,
+          "headline": "Rockwell Automation Integrates NVIDIA Nemotron Nano SLM Into FactoryTalk To Bring Generative AI To Industrial Edge"
         }
       ]
     },
     {
       "symbol": "QBTS",
       "action": "SELL",
-      "px": 26.385,
+      "px": 23.53,
       "qty_hint": 230.08,
       "reason": "score<sell",
-      "score": -0.572596,
+      "score": -0.624127,
       "qty": 57,
-      "notional": 1503.95,
+      "notional": 1341.21,
       "signals": {
-        "TS": -0.572596,
-        "NS": 0.053667,
-        "CDS": -0.322091,
+        "TS": -0.624127,
+        "NS": 0.005609,
+        "CDS": -0.372233,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 30.465733945660915,
-        "ema_slow": 31.07499947187959,
-        "macd": -0.6092655262186746,
-        "macd_signal": 0.5000410194012529,
-        "macd_hist": -1.1093065456199276,
-        "macd_hist_prev": -1.0198815132914738,
-        "rsi14": 32.665662608661506,
-        "sma20": 32.36349999999997
+        "ema_fast": 29.398697954020783,
+        "ema_slow": 30.5161106469095,
+        "macd": -1.117412692888717,
+        "macd_signal": 0.17655024543424178,
+        "macd_hist": -1.2939629383229587,
+        "macd_hist_prev": -1.1093065330163174,
+        "rsi14": 26.649463659977243,
+        "sma20": 31.513249999999978
       },
       "news_preview": [
         {
-          "ts": "2025-11-13T00:12:03+00:00",
-          "source": "newsstocktradersdailycom",
-          "tone": -0.6287285510150536,
-          "headline": "Avoiding Lag: Real-Time Signals in (QBTS) Movement"
+          "ts": "2025-11-13T17:49:34+00:00",
+          "source": "finviz",
+          "tone": -0.6588126091472366,
+          "headline": "D-Wave (QBTS) Falls 8.9% on Dismal Q3"
         },
         {
-          "ts": "2025-11-13T00:11:00+00:00",
-          "source": "marketbeat",
-          "tone": 0.6384161888564409,
-          "headline": "D-Wave Quantum (NYSE:QBTS) Shares Down 9.5% - Here's What Happened"
+          "ts": "2025-11-13T17:24:56+00:00",
+          "source": "ts2tech",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum (QBTS) Stock Plunges as Short Sellers Circle and Institutions Buy \u2013 All the Key News on 13 November 2025"
         },
         {
-          "ts": "2025-11-12T22:49:17+00:00",
-          "source": "newsercom",
-          "tone": -0.047284979252490644,
-          "headline": "How QBTS.W stock reacts to monetary easing - Weekly Risk Report & Stock Market Timing Techniques"
+          "ts": "2025-11-13T13:13:51+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.0,
+          "headline": "Could Investing $10,000 in D-Wave Quantum Make You a Millionaire?"
         }
       ]
     },
     {
       "symbol": "RGTI",
       "action": "SELL",
-      "px": 28.305,
+      "px": 25.44,
       "qty_hint": 6.17,
       "reason": "score<sell",
-      "score": -0.627757,
+      "score": -0.66411,
       "qty": 1,
-      "notional": 28.3,
+      "notional": 25.44,
       "signals": {
-        "TS": -0.627757,
-        "NS": 0.11689,
-        "CDS": -0.329898,
+        "TS": -0.66411,
+        "NS": 0.020478,
+        "CDS": -0.390275,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 35.20539474985657,
-        "ema_slow": 36.65068232430579,
-        "macd": -1.4452875744492175,
-        "macd_signal": 0.33844893261477865,
-        "macd_hist": -1.7837365070639961,
-        "macd_hist_prev": -1.642707992527809,
-        "rsi14": 26.266215179297674,
-        "sma20": 38.399999999999984
+        "ema_fast": 33.70302632680171,
+        "ema_slow": 35.820261335964666,
+        "macd": -2.117235009162954,
+        "macd_signal": -0.15268775990082056,
+        "macd_hist": -1.9645472492621334,
+        "macd_hist_prev": -1.7837365453999783,
+        "rsi14": 22.21393932736349,
+        "sma20": 37.27399999999999
       },
       "news_preview": [
         {
-          "ts": "2025-11-13T04:25:35+00:00",
-          "source": "theglobeandmail",
+          "ts": "2025-11-13T20:10:00+00:00",
+          "source": "barchartcom",
           "tone": 0.0,
-          "headline": "Rigetti Computing\u2019s Q3 2025 Financial Report and Strategic Advances"
+          "headline": "As Momentum Slows for Rigetti Computing, Should You Sell RGTI Stock Here?"
         },
         {
-          "ts": "2025-11-12T23:35:22+00:00",
-          "source": "fxleaders",
-          "tone": 0.6207521918915406,
-          "headline": "Rigetti\u2019s Speculative Run Ends As RGTI Stock Breaks Last Support \u2013 Where Next?"
+          "ts": "2025-11-13T18:38:25+00:00",
+          "source": "parameterio",
+          "tone": -0.4650215210840705,
+          "headline": "Rigetti Computing (RGTI) Stock Slides 9% Following Q3 Earnings Miss"
         },
         {
-          "ts": "2025-11-12T22:30:00+00:00",
-          "source": "marketsfinancialcontent",
-          "tone": 0.3094791165587234,
-          "headline": "Rigetti Computing Shares Plummet Amidst Wave of Analyst Skepticism"
+          "ts": "2025-11-13T18:33:16+00:00",
+          "source": "moneymorningcom",
+          "tone": 0.6688627029413193,
+          "headline": "With Rigetti Down 23% This Week, Is Now a Good Time to Buy RGTI Stock?"
         }
       ]
     },
     {
       "symbol": "RKLB",
       "action": "SELL",
-      "px": 49.965,
+      "px": 45.535,
       "qty_hint": 6.27,
       "reason": "score<sell",
-      "score": -0.615379,
+      "score": -0.672068,
       "qty": 1,
-      "notional": 49.97,
+      "notional": 45.53,
       "signals": {
-        "TS": -0.615379,
-        "NS": 0.184697,
-        "CDS": -0.295349,
+        "TS": -0.672068,
+        "NS": 0.236229,
+        "CDS": -0.308749,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 55.410500931246155,
-        "ema_slow": 57.36703174264058,
-        "macd": -1.9565308113944226,
-        "macd_signal": -0.04474121789464397,
-        "macd_hist": -1.9117895934997786,
-        "macd_hist_prev": -1.991808452877581,
-        "rsi14": 27.680179906099198,
-        "sma20": 60.140999999999984
+        "ema_fast": 53.89119309566982,
+        "ema_slow": 56.490584876626244,
+        "macd": -2.5993917809564238,
+        "macd_signal": -0.555671241231427,
+        "macd_hist": -2.0437205397249967,
+        "macd_hist_prev": -1.9117896292100074,
+        "rsi14": 20.891873117223724,
+        "sma20": 59.06824999999999
       },
       "news_preview": [
         {
-          "ts": "2025-11-12T22:08:05+00:00",
-          "source": "marketbeat",
-          "tone": 0.41815061860864505,
-          "headline": "Rocket Lab (NASDAQ:RKLB) Shares Down 2.5% Following Analyst Downgrade"
+          "ts": "2025-11-13T18:02:22+00:00",
+          "source": "newsercom",
+          "tone": 0.6617209652190149,
+          "headline": "Why RKLB stock could see breakout soon - Analyst Downgrade & Safe Capital Growth Plans"
         },
         {
-          "ts": "2025-11-12T19:26:18+00:00",
-          "source": "tradingview",
-          "tone": 0.5693219227093055,
-          "headline": "Rocket Lab Stock Extends Rally After Record Launch Contracts and Strong Q4 Guidance"
-        },
-        {
-          "ts": "2025-11-12T19:22:48+00:00",
+          "ts": "2025-11-13T17:35:27+00:00",
           "source": "benzinga",
           "tone": 0.0,
-          "headline": "Space Beats Silicon: Rocket Lab, Planet Labs, And Archer Aviation Outshine Nvidia In 2025"
+          "headline": "10 Industrials Stocks With Whale Alerts In Today's Session"
+        },
+        {
+          "ts": "2025-11-13T17:32:31+00:00",
+          "source": "newsercom",
+          "tone": 0.6548979196164009,
+          "headline": "Why RKLB stock could see breakout soon - July 2025 Breakouts & Safe Swing Trade Setups"
         }
       ]
     },
     {
       "symbol": "VTI",
       "action": "SELL",
-      "px": 335.855,
+      "px": 330.45,
       "qty_hint": 9.48,
       "reason": "score<sell",
-      "score": -0.288952,
+      "score": -0.495816,
       "qty": 2,
-      "notional": 671.71,
+      "notional": 660.9,
       "signals": {
-        "TS": -0.288952,
-        "NS": 0.109827,
-        "CDS": -0.12944,
+        "TS": -0.495816,
+        "NS": 0.139866,
+        "CDS": -0.241543,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 333.60521892137155,
-        "ema_slow": 331.9074264082958,
-        "macd": 1.6977925130757399,
-        "macd_signal": 1.8558256910708166,
-        "macd_hist": -0.15803317799507677,
-        "macd_hist_prev": -0.2907866903627008,
-        "rsi14": 60.00279085910898,
-        "sma20": 332.87925
+        "ema_fast": 333.119800625776,
+        "ema_slow": 331.7994692902506,
+        "macd": 1.3203313355253954,
+        "macd_signal": 1.7487263197560998,
+        "macd_hist": -0.42839498423070443,
+        "macd_hist_prev": -0.15803297791282556,
+        "rsi14": 41.673442520027905,
+        "sma20": 333.11225
       },
       "news_preview": [
         {
-          "ts": "2025-11-13T00:10:30+00:00",
+          "ts": "2025-11-13T16:04:02+00:00",
           "source": "newsercom",
-          "tone": 0.0,
-          "headline": "Is VTI stock undervalued by metrics - IPO Watch & Short-Term Swing Trade Alerts"
+          "tone": 0.5580398323850323,
+          "headline": "Will VTI stock outperform value peers - Bull Run & AI Based Buy and Sell Signals"
         },
         {
-          "ts": "2025-11-12T23:07:03+00:00",
-          "source": "newsercom",
+          "ts": "2025-11-13T14:42:53+00:00",
+          "source": "tipranks",
           "tone": 0.0,
-          "headline": "Is VTI stock a buy before earnings results - July 2025 Summary & Proven Capital Preservation Methods"
+          "headline": "Vanguard Total Stock Market ETF (VTI) Daily Snapshot \u2014 11/13/25"
         },
         {
-          "ts": "2025-11-12T22:44:20+00:00",
-          "source": "newsercom",
-          "tone": 0.0,
-          "headline": "Is VTI stock a buy before earnings results - Weekly Stock Recap & Technical Buy Zone Confirmations"
+          "ts": "2025-11-13T14:29:56+00:00",
+          "source": "benzinga",
+          "tone": -0.5483582950879584,
+          "headline": "Benzinga Market Summary: Trump Signs Bill To Reopen Government, Oppenheimer Raises NVIDIA Price Target, Disney Falls On Q4 Revenue Miss, S&P Pulls Back"
         }
       ]
     },
     {
       "symbol": "XLV",
       "action": "BUY",
-      "px": 152.8,
+      "px": 152.945,
       "qty_hint": 0.0,
-      "reason": "score>buy",
-      "score": 0.762946,
-      "qty": 0.206141,
-      "notional": 31.5,
+      "reason": "score>buy|topped_by_rotation",
+      "score": 0.764739,
+      "qty": 4.022857,
+      "notional": 615.28,
       "signals": {
-        "TS": 0.762946,
-        "NS": 0.090307,
-        "CDS": 0.49389,
+        "TS": 0.764739,
+        "NS": 0.127682,
+        "CDS": 0.509916,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 147.25348620334978,
-        "ema_slow": 145.21482159708478,
-        "macd": 2.0386646062650016,
-        "macd_signal": 1.540288063077201,
-        "macd_hist": 0.49837654318780067,
-        "macd_hist_prev": 0.22132789728154845,
-        "rsi14": 91.26740496639768,
-        "sma20": 145.78900000000004
+        "ema_fast": 148.1291037105268,
+        "ema_slow": 145.78742775602404,
+        "macd": 2.3416759545027617,
+        "macd_signal": 1.7005651949845058,
+        "macd_hist": 0.6411107595182559,
+        "macd_hist_prev": 0.4983767217389361,
+        "rsi14": 91.44086055277887,
+        "sma20": 146.31975000000006
       },
       "phase": "mid",
       "size_k": 0.26249999999999996,
-      "qty_prev": 0.7853,
+      "qty_prev": 0.205957,
       "news_preview": [
         {
-          "ts": "2025-11-12T20:35:11+00:00",
-          "source": "newsercom",
-          "tone": 0.0,
-          "headline": "Will XLV stock recover faster than industry - Watch List & Real-Time Market Sentiment Reports"
+          "ts": "2025-11-13T20:23:35+00:00",
+          "source": "benzinga",
+          "tone": 0.34147275943443534,
+          "headline": "Shutdown's Over, But Confidence Isn't Back: Sector ETFs Reveal Where Investors Are Hiding"
         },
         {
-          "ts": "2025-11-12T17:48:37+00:00",
+          "ts": "2025-11-13T17:37:18+00:00",
           "source": "benzinga",
-          "tone": 0.1768543011510951,
-          "headline": "Dow Jones Hits Record Highs, AMD Jumps: What's Moving Markets Wednesday?"
+          "tone": -0.6661747533239726,
+          "headline": "Wall Street Falls On US Government Reopening Day, Bitcoin Slides To $100,000: What's Moving Markets Thursday?"
         },
         {
-          "ts": "2025-11-12T13:10:09+00:00",
+          "ts": "2025-11-13T16:44:07+00:00",
           "source": "benzinga",
-          "tone": -0.26318171862924666,
-          "headline": "Leading And Lagging Sectors For November 12, 2025"
+          "tone": 0.5647099451916965,
+          "headline": "Money Moving Into Healthcare Not AI; Four Fed Presidents Do Not Want a Rate Cut; Euphoria Wearing Off"
         }
       ]
     },
     {
-      "symbol": "LYFT",
-      "action": "BUY",
-      "px": 24.56,
-      "qty_hint": 0.0,
-      "reason": "score>buy",
-      "score": 0.674459,
-      "qty": 7.9e-05,
-      "notional": 0.0,
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 61.885,
+      "qty": 1.8725,
+      "notional": 115.88,
+      "reason": "rotation_upgrade",
       "signals": {
-        "TS": 0.674459,
-        "NS": 0.105397,
-        "CDS": 0.446834,
+        "TS": -0.60117,
+        "NS": -0.152898,
+        "CDS": -0.421861,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 22.034493879269185,
-        "ema_slow": 21.20899316977974,
-        "macd": 0.8255007094894466,
-        "macd_signal": 0.3606736273025141,
-        "macd_hist": 0.4648270821869325,
-        "macd_hist_prev": 0.38993146810931834,
-        "rsi14": 79.58443074966732,
-        "sma20": 20.93375000000001
+        "ema_fast": 69.2192771977544,
+        "ema_slow": 70.46974093684885,
+        "macd": -1.2504637390944566,
+        "macd_signal": 0.9963020788820399,
+        "macd_hist": -2.2467658179764967,
+        "macd_hist_prev": -2.1617316023722726,
+        "rsi": 29.047391932652616,
+        "sma20": 73.25575000000006,
+        "price": 61.885
       },
-      "phase": "mid",
-      "size_k": 0.26249999999999996,
-      "qty_prev": 0.0003,
       "news_preview": [
         {
-          "ts": "2025-11-12T18:38:18+00:00",
-          "source": "gurufocus",
-          "tone": 0.0,
-          "headline": "Mizuho Maintains Neutral Rating on LYFT; Raises Price Target to $27.00 | LYFT Stock News"
+          "ts": "2025-11-13T16:53:23+00:00",
+          "source": "marketbeat",
+          "tone": -0.311647066179981,
+          "headline": "Q4 EPS Estimates for AST SpaceMobile Lowered by Roth Capital"
         },
         {
-          "ts": "2025-11-12T18:04:08+00:00",
-          "source": "benzinga",
+          "ts": "2025-11-13T16:53:20+00:00",
+          "source": "marketbeat",
           "tone": 0.0,
-          "headline": "Mizuho Maintains Neutral on Lyft, Raises Price Target to $27"
+          "headline": "Q4 Earnings Forecast for AST SpaceMobile Issued By B. Riley"
         },
         {
-          "ts": "2025-11-12T17:06:00+00:00",
-          "source": "marketsfinancialcontent",
+          "ts": "2025-11-13T16:01:04+00:00",
+          "source": "marketbeat",
+          "tone": -0.3060369500761259,
+          "headline": "FY2025 EPS Estimates for AST SpaceMobile Lowered by Analyst"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 25.44,
+      "qty": 1.5425,
+      "notional": 39.24,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.66411,
+        "NS": 0.020478,
+        "CDS": -0.390275,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 33.70302632680171,
+        "ema_slow": 35.820261335964666,
+        "macd": -2.117235009162954,
+        "macd_signal": -0.15268775990082056,
+        "macd_hist": -1.9645472492621334,
+        "macd_hist_prev": -1.7837365453999783,
+        "rsi": 22.21393932736349,
+        "sma20": 37.27399999999999,
+        "price": 25.44
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T20:10:00+00:00",
+          "source": "barchartcom",
           "tone": 0.0,
-          "headline": "Lyft (LYFT) Stock Is Up, What You Need To Know"
+          "headline": "As Momentum Slows for Rigetti Computing, Should You Sell RGTI Stock Here?"
+        },
+        {
+          "ts": "2025-11-13T18:38:25+00:00",
+          "source": "parameterio",
+          "tone": -0.4650215210840705,
+          "headline": "Rigetti Computing (RGTI) Stock Slides 9% Following Q3 Earnings Miss"
+        },
+        {
+          "ts": "2025-11-13T18:33:16+00:00",
+          "source": "moneymorningcom",
+          "tone": 0.6688627029413193,
+          "headline": "With Rigetti Down 23% This Week, Is Now a Good Time to Buy RGTI Stock?"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 23.53,
+      "qty": 18.217378,
+      "notional": 428.65,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.624127,
+        "NS": 0.005609,
+        "CDS": -0.372233,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 29.398697954020783,
+        "ema_slow": 30.5161106469095,
+        "macd": -1.117412692888717,
+        "macd_signal": 0.17655024543424178,
+        "macd_hist": -1.2939629383229587,
+        "macd_hist_prev": -1.1093065330163174,
+        "rsi": 26.649463659977243,
+        "sma20": 31.513249999999978,
+        "price": 23.53
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T17:49:34+00:00",
+          "source": "finviz",
+          "tone": -0.6588126091472366,
+          "headline": "D-Wave (QBTS) Falls 8.9% on Dismal Q3"
+        },
+        {
+          "ts": "2025-11-13T17:24:56+00:00",
+          "source": "ts2tech",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum (QBTS) Stock Plunges as Short Sellers Circle and Institutions Buy \u2013 All the Key News on 13 November 2025"
+        },
+        {
+          "ts": "2025-11-13T13:13:51+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.0,
+          "headline": "Could Investing $10,000 in D-Wave Quantum Make You a Millionaire?"
         }
       ]
     }

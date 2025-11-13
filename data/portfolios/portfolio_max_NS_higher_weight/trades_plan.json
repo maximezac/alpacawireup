@@ -1,17 +1,18 @@
 {
-  "as_of_utc": "2025-11-07T23:01:45.680657+00:00",
+  "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
   "portfolio_id": "portfolio_max_NS_higher_weight",
   "meta": {
-    "title": "Max NS+",
+    "title": "max NS Only",
     "trade_scope": "none",
-    "decision_source": "CDS",
-    "ns_weight_boost": 1.7,
-    "per_line_frac": 0.02,
-    "max_deploy_frac": 0.15,
+    "decision_source": "NS_ONLY",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.1,
+    "max_deploy_frac": 0.3,
     "trim_fraction": 0.25,
     "fractional_buys": true,
     "tags": [
-      "ideas"
+      "ideas",
+      "paper"
     ],
     "positions_path": "data/portfolios/portfolio_max_NS_higher_weight/positions.csv"
   },

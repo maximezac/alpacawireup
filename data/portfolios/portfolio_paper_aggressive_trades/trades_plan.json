@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-13T05:22:06.386801+00:00",
+  "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
   "portfolio_id": "portfolio_paper_aggressive_trades",
   "meta": {
     "title": "Paper Aggressive",
@@ -19,148 +19,302 @@
   },
   "trades": [
     {
-      "symbol": "NEE",
+      "symbol": "LLY",
       "action": "BUY",
-      "px": 85.88,
+      "px": 1020.755,
       "qty_hint": 0.0,
-      "reason": "score>buy|topped_by_rotation",
-      "score": 0.558342,
-      "qty": 1.4888489999999999,
-      "notional": 127.87,
+      "reason": "score>buy",
+      "score": 0.529456,
+      "qty": 0.856987,
+      "notional": 874.77,
       "signals": {
-        "TS": 0.617948,
-        "NS": 0.468934,
-        "CDS": 0.558342,
+        "TS": 0.755962,
+        "NS": 0.189698,
+        "CDS": 0.529456,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 83.78774587345579,
-        "ema_slow": 82.55559375267775,
-        "macd": 1.2321521207780393,
-        "macd_signal": 1.2194888888947826,
-        "macd_hist": 0.012663231883256687,
-        "macd_hist_prev": -0.09862830155000557,
-        "rsi14": 73.12428933156166,
-        "sma20": 83.55599999999995
+        "ema_fast": 939.8100366153277,
+        "ema_slow": 887.2363206604609,
+        "macd": 52.57371595486677,
+        "macd_signal": 37.6860839304781,
+        "macd_hist": 14.887632024388672,
+        "macd_hist_prev": 14.57376830770852,
+        "rsi14": 89.26385202905031,
+        "sma20": 881.1852499999993
       },
       "phase": "mid",
-      "size_k": 0.4882038333333333,
-      "qty_prev": 1.008336,
+      "size_k": 0.699924,
+      "qty_prev": 1.2244,
       "news_preview": [
         {
-          "ts": "2025-11-12T20:11:26+00:00",
-          "source": "snopes",
-          "tone": 0.5783815964802911,
-          "headline": "Is the New York Stock Exchange moving to Texas because of Mamdani's win?"
+          "ts": "2025-11-13T20:11:39+00:00",
+          "source": "gurufocus",
+          "tone": -0.1589729214234075,
+          "headline": "Eli Lilly (LLY) Clarifies No Ties with Mangoceuticals"
         },
         {
-          "ts": "2025-11-12T12:29:38+00:00",
-          "source": "marketbeat",
-          "tone": 0.6334626650214119,
-          "headline": "NextEra Energy, Inc. $NEE Stock Position Reduced by Mitsubishi UFJ Trust & Banking Corp"
+          "ts": "2025-11-13T19:05:33+00:00",
+          "source": "benzinga",
+          "tone": -0.386203832375888,
+          "headline": "Reuters Reports: Novo Nordisk, Eli Lilly Spokespeople Say The Companies Have No Affiliation With Telehealth Platform Mangoceuticals, In Response To Its Press Release On Weight-Loss Partnerships"
         },
         {
-          "ts": "2025-11-12T11:38:00+00:00",
+          "ts": "2025-11-13T17:34:11+00:00",
+          "source": "finviz",
+          "tone": 0.0,
+          "headline": "Jim Cramer Discusses Key Point For Eli Lilly (LLY)'s Drugs"
+        }
+      ]
+    },
+    {
+      "symbol": "MMM",
+      "action": "BUY",
+      "px": 170.025,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.523119,
+      "qty": 5.031526,
+      "notional": 855.49,
+      "signals": {
+        "TS": 0.562781,
+        "NS": 0.463628,
+        "CDS": 0.523119,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 166.53254727541687,
+        "ema_slow": 163.59286809192386,
+        "macd": 2.9396791834930127,
+        "macd_signal": 2.6102275690094077,
+        "macd_hist": 0.32945161448360505,
+        "macd_hist_prev": 0.2913936662809249,
+        "rsi14": 66.14848480556199,
+        "sma20": 165.363
+      },
+      "phase": "mid",
+      "size_k": 0.6844775624999999,
+      "qty_prev": 7.3509,
+      "news_preview": [
+        {
+          "ts": "2025-11-13T18:09:18+00:00",
+          "source": "newsercom",
+          "tone": 0.3651138940856576,
+          "headline": "How 3M Company (MMM) stock behaves under inflation pressure - 2025 Major Catalysts & Smart Money Movement Alerts"
+        },
+        {
+          "ts": "2025-11-13T17:31:16+00:00",
+          "source": "newsercom",
+          "tone": 0.6547177132551524,
+          "headline": "How MMM stock compares with market leaders - 2025 Short Interest & Reliable Price Action Trade Plans"
+        },
+        {
+          "ts": "2025-11-13T14:03:00+00:00",
           "source": "yahoo",
-          "tone": 0.6726057776248606,
-          "headline": "The Zacks Analyst Blog Highlights Exxon Mobil, Home Depot, NextEra Energy and Ridge Bankshares"
+          "tone": 0.8700618624730293,
+          "headline": "4 Stocks to Add to Your Portfolio as Dow Hits All-Time Closing High"
         }
       ]
     },
     {
-      "symbol": "ICLN",
+      "symbol": "XLV",
       "action": "BUY",
-      "px": 17.665,
+      "px": 152.945,
       "qty_hint": 0.0,
-      "reason": "score>buy|topped_by_rotation",
-      "score": 0.524692,
-      "qty": 2.3361490000000003,
-      "notional": 41.27,
+      "reason": "score>buy",
+      "score": 0.509916,
+      "qty": 5.330426,
+      "notional": 815.26,
       "signals": {
-        "TS": 0.492477,
-        "NS": 0.573014,
-        "CDS": 0.524692,
+        "TS": 0.764739,
+        "NS": 0.127682,
+        "CDS": 0.509916,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 17.483588031480785,
-        "ema_slow": 16.96602249657492,
-        "macd": 0.5175655349058665,
-        "macd_signal": 0.5093923217705262,
-        "macd_hist": 0.008173213135340363,
-        "macd_hist_prev": 0.03315072241696071,
-        "rsi14": 57.05303599003068,
-        "sma20": 17.11925
+        "ema_fast": 148.1291037105268,
+        "ema_slow": 145.78742775602404,
+        "macd": 2.3416759545027617,
+        "macd_signal": 1.7005651949845058,
+        "macd_hist": 0.6411107595182559,
+        "macd_hist_prev": 0.4983767217389361,
+        "rsi14": 91.44086055277887,
+        "sma20": 146.31975000000006
       },
       "phase": "mid",
-      "size_k": 0.4517496666666667,
-      "qty_prev": 9e-05,
+      "size_k": 0.65229525,
+      "qty_prev": 8.1718,
       "news_preview": [
         {
-          "ts": "2025-11-12T17:59:32+00:00",
+          "ts": "2025-11-13T20:23:35+00:00",
           "source": "benzinga",
-          "tone": 0.7104188685053626,
-          "headline": "As COP30 Talks Climate, Investors Are Acting On It \u2014 Through These ETFs"
+          "tone": 0.34147275943443534,
+          "headline": "Shutdown's Over, But Confidence Isn't Back: Sector ETFs Reveal Where Investors Are Hiding"
         },
         {
-          "ts": "2025-11-11T21:57:14+00:00",
-          "source": "theglobeandmail",
-          "tone": 0.36397130791639404,
-          "headline": "Clean Energy\u2019s Second Wind: What iShares Global Clean Energy ETF Tells Us Now"
+          "ts": "2025-11-13T17:37:18+00:00",
+          "source": "benzinga",
+          "tone": -0.6661747533239726,
+          "headline": "Wall Street Falls On US Government Reopening Day, Bitcoin Slides To $100,000: What's Moving Markets Thursday?"
         },
         {
-          "ts": "2025-11-10T16:56:18+00:00",
+          "ts": "2025-11-13T16:44:07+00:00",
           "source": "benzinga",
-          "tone": -0.21932896190420173,
-          "headline": "Utilities ETFs Could Power Up As Polar Vortex Threatens To Freeze The Grid"
+          "tone": 0.5647099451916965,
+          "headline": "Money Moving Into Healthcare Not AI; Four Fed Presidents Do Not Want a Rate Cut; Euphoria Wearing Off"
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "action": "SELL",
-      "px": 273.47,
-      "qty": 0.301799,
-      "notional": 82.53,
-      "reason": "rotation_upgrade",
+      "symbol": "PFE",
+      "action": "BUY",
+      "px": 25.78,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.50843,
+      "qty": 31.448127,
+      "notional": 810.73,
       "signals": {
-        "TS": -0.223615,
-        "NS": 0.422749,
-        "CDS": 0.03493,
+        "TS": 0.585581,
+        "NS": 0.392704,
+        "CDS": 0.50843,
         "wT": 0.6,
         "wN": 0.4
       },
       "indicators": {
-        "ema_fast": 269.4757986225404,
-        "ema_slow": 263.94778452394286,
-        "macd": 5.528014098597566,
-        "macd_signal": 5.601640445224689,
-        "macd_hist": -0.07362634662712253,
-        "macd_hist_prev": -0.05647412746473801,
-        "rsi": 67.77380688380566,
-        "sma20": 266.042,
-        "price": 273.47
+        "ema_fast": 25.03392100056239,
+        "ema_slow": 24.898296033361145,
+        "macd": 0.13562496720124528,
+        "macd_signal": -0.014003579106845965,
+        "macd_hist": 0.14962854630809125,
+        "macd_hist_prev": 0.12192127304575039,
+        "rsi14": 69.31180104632182,
+        "sma20": 24.764500000000034
       },
+      "phase": "mid",
+      "size_k": 0.6486731250000001,
+      "qty_prev": 48.4807,
       "news_preview": [
         {
-          "ts": "2025-11-13T01:32:02+00:00",
+          "ts": "2025-11-13T18:58:53+00:00",
+          "source": "yahoo",
+          "tone": 0.019619732452744947,
+          "headline": "Activist investor Jeff Smith: How Starboard 'lights a fire' under Corporate America"
+        },
+        {
+          "ts": "2025-11-13T18:24:42+00:00",
+          "source": "yahoo",
+          "tone": -0.18292588377730842,
+          "headline": "Pfizer Dumps BioNTech Stake as Obesity Gold Rush Heats Up"
+        },
+        {
+          "ts": "2025-11-13T18:15:32+00:00",
+          "source": "yahoo",
+          "tone": 0.6790911030930228,
+          "headline": "Future of medicine will be profoundly impacted by AI: Pfizer CEO"
+        }
+      ]
+    },
+    {
+      "symbol": "ESTC",
+      "action": "BUY",
+      "px": 91.3,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.502633,
+      "qty": 6.3e-05,
+      "notional": 0.01,
+      "signals": {
+        "TS": 0.486918,
+        "NS": 0.526205,
+        "CDS": 0.502633,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 90.16935346819957,
+        "ema_slow": 88.32428998261906,
+        "macd": 1.8450634855805106,
+        "macd_signal": 1.3795577086171755,
+        "macd_hist": 0.46550577696333506,
+        "macd_hist_prev": 0.6143669259036535,
+        "rsi14": 56.59261362452725,
+        "sma20": 88.38750000000007
+      },
+      "phase": "mid",
+      "size_k": 0.6345429374999999,
+      "qty_prev": 0.0001,
+      "news_preview": [
+        {
+          "ts": "2025-11-13T17:55:11+00:00",
+          "source": "newsercom",
+          "tone": 0.6602800458606902,
+          "headline": "How ESTC stock benefits from digital adoption - Quarterly Risk Review & High Win Rate Trade Alerts"
+        },
+        {
+          "ts": "2025-11-13T17:48:46+00:00",
+          "source": "finviz",
+          "tone": 0.5974753114301966,
+          "headline": "Elastic (ESTC) Expected to Beat Earnings Estimates: Should You Buy?"
+        },
+        {
+          "ts": "2025-11-13T17:21:33+00:00",
+          "source": "newsercom",
+          "tone": 0.6526139842264846,
+          "headline": "Why ESTC stock attracts HNW investors - CEO Change & Consistent Growth Equity Picks"
+        }
+      ]
+    },
+    {
+      "symbol": "LYFT",
+      "action": "BUY",
+      "px": 23.955,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.446005,
+      "qty": 3.3e-05,
+      "notional": 0.0,
+      "signals": {
+        "TS": 0.600981,
+        "NS": 0.213542,
+        "CDS": 0.446005,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 22.32995635938162,
+        "ema_slow": 21.412401108961443,
+        "macd": 0.9175552504201754,
+        "macd_signal": 0.47204991910414773,
+        "macd_hist": 0.44550533131602765,
+        "macd_hist_prev": 0.46482709531568733,
+        "rsi14": 70.3013927947433,
+        "sma20": 21.13750000000001
+      },
+      "phase": "late",
+      "size_k": 0.331008125,
+      "qty_prev": 0.0001,
+      "news_preview": [
+        {
+          "ts": "2025-11-13T20:24:31+00:00",
+          "source": "sharewisecom",
+          "tone": 0.6305929591238412,
+          "headline": "Earnings Estimates Rising for Lyft (LYFT): Will It Gain?"
+        },
+        {
+          "ts": "2025-11-13T19:09:00+00:00",
           "source": "marketbeat",
-          "tone": 0.6569346331611742,
-          "headline": "Chris Kondo Sells 3,752 Shares of Apple (NASDAQ:AAPL) Stock"
+          "tone": 0.0,
+          "headline": "Lyft (NASDAQ:LYFT) Price Target Raised to $27.00 at Mizuho"
         },
         {
-          "ts": "2025-11-12T20:00:00+00:00",
+          "ts": "2025-11-13T16:50:05+00:00",
           "source": "seekingalpha",
-          "tone": 0.7409657597740719,
-          "headline": "RiverPark Long/Short Opportunity Fund: Q3 2025 Top And Bottom Performers"
-        },
-        {
-          "ts": "2025-11-12T19:55:43+00:00",
-          "source": "benzinga",
-          "tone": 0.6186007742038697,
-          "headline": "15 Stocks To Consider Buying For The Supreme Court Ruling On Trump's Tariffs"
+          "tone": -0.5218496699625078,
+          "headline": "Lyft: High Growth And Low Leverage Make This Undervalued Turnaround Hard To Ignore (LYFT)"
         }
       ]
     }
