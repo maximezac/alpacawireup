@@ -387,10 +387,6 @@ def main():
         base.mkdir(parents=True, exist_ok=True)
         # rolling pointer
         write_json(str(base / "trades_plan.json"), plan)
-        # versioned by as_of_utc (safe for history / diffing)
-        safe_asof = (out["as_of_utc"] or "").replace(":", "").replace("-", "").replace("T","_").replace("+","Z")
-        if safe_asof:
-            write_json(str(base / f"trades_plan_{safe_asof}.json"), plan)
 
         total_trades += len(sized)
 
