@@ -26,9 +26,15 @@ TS_WATCH  = float(os.environ.get("TS_WATCH", "0.50"))
 NS_WATCH  = float(os.environ.get("NS_WATCH", "0.50"))
 WATCH_TOP = int(os.environ.get("WATCH_TOP", "20"))
 
-# -------- Feature toggles (can be overridden per-portfolio in YAML) --------
+# -------- Feature toggles --------
 ENABLE_MOMENTUM_PHASE   = os.environ.get("ENABLE_MOMENTUM_PHASE", "true").lower() == "true"
 ENABLE_ROTATION_UPGRADE = os.environ.get("ENABLE_ROTATION_UPGRADE", "true").lower() == "true"
+
+# How CDS maps to position size:
+# - At buy_threshold → we shrink to CDS_MIN_SIZE_K of normal size.
+# - At CDS_FULL_SIZE or above → full size (no downsize).
+CDS_FULL_SIZE   = float(os.environ.get("CDS_FULL_SIZE", "0.80"))
+CDS_MIN_SIZE_K  = float(os.environ.get("CDS_MIN_SIZE_K", "0.35"))
 
 # -------- helpers --------
 def _latest_px(node: dict) -> float:
@@ -195,204 +201,34 @@ def main():
                 "sma20":           ind.get("sma20"),
             }
 
-            # Momentum-phase sizing: only downsize "late" entries (safe; never increases spend)
-            if enable_momentum_phase and (t.get("action") == "BUY"):
-                # The helper expects keys: rsi (we have rsi14), macd_hist, macd_hist_prev
-                ind_for_phase = {
-                    "rsi": t["indicators"]["rsi14"],
-                    "macd_hist": t["indicators"]["macd_hist"],
-                    "macd_hist_prev": t["indicators"]["macd_hist_prev"],
-                }
-                phase, size_k = momentum_phase_and_size(ind_for_phase)
-                t["phase"] = phase
-                t["size_k"] = size_k
+            # Momentum + CDS-based sizing: only ever *downsize* buys
+            if t.get("action") == "BUY":
+                size_k = 1.0
+                phase = None
 
-                # Downsize qty if phase says mid/late. (keeps cash_left >= original)
-                q = float(t.get("qty") or 0.0)
-                if q > 0 and size_k < 1.0:
-                    if cfg.sizing.fractional_buys:
-                        new_q = round(q * size_k, 6)
-                    else:
-                        new_q = int(q * size_k)
-                    # Only update if it meaningfully changes size
-                    if new_q < q:
-                        t["qty_prev"] = q
-                        t["qty"] = new_q
-                        # Recompute notional to keep outputs consistent
-                        if t.get("px") is not None:
-                            t["notional"] = round(new_q * float(t["px"]), 2)
+                # --- Momentum phase part (optional) ---
+                if enable_momentum_phase:
+                    ind_for_phase = {
+                        "rsi": t["indicators"]["rsi14"],
+                        "macd_hist": t["indicators"]["macd_hist"],
+                        "macd_hist_prev": t["indicators"]["macd_hist_prev"],
+                    }
+                    phase, mp_k = momentum_phase_and_size(ind_for_phase)
+                    t["phase"] = phase
+                    if mp_k is not None:
+                        size_k *= float(mp_k)
 
-            # short news preview
-            t["news_preview"] = _news_preview(n.get("news"), max_items=3)
+                # --- CDS strength part ---
+                sig_t = t.get("signals") or {}
+                cds = float(sig_t.get("CDS") or 0.0)
+                buy_thr = float(cfg.strategy.buy_threshold)
 
-        # ---- Rotation upgrade: free cash from weak holds to fund strong buys ----
-        if enable_rotation_upgrade and sized:
-            rot_cfg = RotationConfig(
-                trigger_cds=float(rot_params.get("trigger_cds", 0.50)),
-                min_gap=float(rot_params.get("min_gap", 0.25)),
-                max_turnover_frac=float(rot_params.get("max_turnover_frac", 0.10)),
-                sell_step_frac=float(rot_params.get("sell_step_frac", 0.25)),
-                protect_profitable=bool(rot_params.get("protect_profitable", True)),
-            )
-
-            # Strong BUYs among the planned trades
-            strong_buys = [
-                t for t in sized
-                if t.get("action") == "BUY"
-                and (t.get("signals", {}).get("CDS", 0.0) >= rot_cfg.trigger_cds)
-            ]
-
-            # Only rotate if we actually need cash and have strong buys to fund
-            if strong_buys:
-                equity_now = port_val  # already computed
-                # Approximate remaining cash (post momentum downsize we usually have >= original cash_left)
-                cash_available = float(cash_left or 0.0)
-
-                # If we still have adequate cash, skip rotation
-                # You can tune this threshold; here we only rotate if cash < one per-line target.
-                per_line_dollars = equity_now * cfg.sizing.per_line_frac
-                if cash_available < 0.5 * per_line_dollars:
-                    # Build current holdings with CDS snapshots
-                    current_holdings = []
-                    for sym, p in (pos or {}).items():
-                        node_sym = symbols_map.get(sym, {})
-                        sig_sym  = node_sym.get("signals", {})
-                        current_holdings.append({
-                            "symbol": sym,
-                            "qty": float(p.get("qty") or 0.0),
-                            "px": float(node_sym.get("price") or 0.0),
-                            "unrealized_pnl": float(p.get("unrealized_pnl", 0.0)),
-                            "signals": {"CDS": float(sig_sym.get("CDS", 0.0))}
-                        })
-
-                    # Needed cash to bring all strong buys to their per-line target (minus what they already got)
-                    want = 0.0
-                    for b in strong_buys:
-                        px = float(b.get("px") or 0.0)
-                        if px <= 0:
-                            continue
-                        already = float(b.get("qty") or 0.0) * px
-                        # If momentum-phase applied, use size_k-adjusted per-line target; else 1.0x
-                        size_k = float(b.get("size_k", 1.0))
-                        target = per_line_dollars * size_k
-                        add = max(0.0, target - already)
-                        want += add
-
-                    need = max(0.0, want - cash_available)
-
-                    # Ask rotation module which laggards to trim to raise 'need' (bounded by max_turnover_frac)
-                    if need > 0.0 and current_holdings:
-                        sells_plan = pick_laggards_to_fund(
-                            candidates=[{
-                                "symbol": b["symbol"],
-                                "signals": {"CDS": float(b["signals"]["CDS"])},
-                                "px": float(b["px"]),
-                                "notional_target": per_line_dollars * float(b.get("size_k", 1.0))
-                            } for b in strong_buys],
-                            holdings=current_holdings,
-                            needed_cash=need,
-                            equity=equity_now,
-                            cfg=rot_cfg
-                        )
-
-                        # Emit SELL trades (append to 'sized') and track freed cash
-                        freed = 0.0
-                        for sym, amt in sells_plan:
-                            if amt <= 0:
-                                continue
-                            px = float(symbols_map.get(sym, {}).get("price") or 0.0)
-                            if px <= 0:
-                                continue
-                            if cfg.sizing.fractional_buys:
-                                q = round(amt / px, 6)
-                            else:
-                                q = int(amt // px)
-                            if q <= 0:
-                                continue
-                            sized.append({
-                                "symbol": sym,
-                                "action": "SELL",
-                                "px": px,
-                                "qty": q,
-                                "notional": round(q * px, 2),
-                                "reason": "rotation_upgrade",
-                                "signals": symbols_map.get(sym, {}).get("signals", {}),
-                                "indicators": symbols_map.get(sym, {}).get("indicators", {}),
-                                "news_preview": _news_preview(symbols_map.get(sym, {}).get("news"), max_items=3),
-                            })
-                            freed += q * px
-
-                        # Top-up strong buys with freed cash (simple even split; respects fractional_buys)
-                        if freed > 0 and strong_buys:
-                            per_buy_budget = freed / len(strong_buys)
-                            for b in strong_buys:
-                                px = float(b.get("px") or 0.0)
-                                if px <= 0:
-                                    continue
-                                add_notional = per_buy_budget
-                                if add_notional <= 0:
-                                    continue
-                                if cfg.sizing.fractional_buys:
-                                    add_q = round(add_notional / px, 6)
-                                else:
-                                    add_q = int(add_notional // px)
-                                if add_q <= 0:
-                                    continue
-                                # Increase qty & notional in-place
-                                prev_q = float(b.get("qty") or 0.0)
-                                b["qty_prev"] = prev_q
-                                b["qty"] = prev_q + add_q
-                                b["notional"] = round(float(b.get("notional", prev_q * px)) + add_q * px, 2)
-                                # Annotate reason
-                                b["reason"] = (b.get("reason") or "buy") + "|topped_by_rotation"
-
-        # --- Compute a simulated cash_left that reflects rotation/top-ups (optional but nice)
-        cash_left_sim = float(cash_left or 0.0)
-        for tr in sized:
-            side = tr.get("action")
-            px   = float(tr.get("px") or 0.0)
-            q    = float(tr.get("qty") or 0.0)
-            if side == "SELL":
-                cash_left_sim += q * px
-            elif side == "BUY":
-                cash_left_sim -= q * px
-
-        out["portfolios"][pid] = {
-            "meta": {
-                "title": cfg.title,
-                "trade_scope": cfg.trade_scope,
-                "decision_source": cfg.strategy.decision_source,
-                "ns_weight_boost": cfg.strategy.ns_weight_boost,
-                "per_line_frac": cfg.sizing.per_line_frac,
-                "max_deploy_frac": cfg.sizing.max_deploy_frac,
-                "trim_fraction": cfg.sizing.trim_fraction,
-                "fractional_buys": cfg.sizing.fractional_buys,
-                "tags": cfg.tags,
-                "positions_path": pos_path,
-            },
-            "portfolio_value_est": round(port_val, 2),
-            "cash_start": round(cash, 2),
-            "trades": sized,
-            "cash_left": round(float(cash_left_sim), 2),  # <- simulated, reflects rotation and downsizing
-        }
-
-        # --- NEW: also write a per-portfolio trade plan into its folder
-        plan = {
-            "as_of_utc": out["as_of_utc"],
-            "portfolio_id": pid,
-            "meta": out["portfolios"][pid]["meta"],
-            "trades": sized,
-        }
-        base = Path(out["portfolios"][pid]["meta"]["positions_path"]).parent
-        base.mkdir(parents=True, exist_ok=True)
-        # rolling pointer
-        write_json(str(base / "trades_plan.json"), plan)
-
-        total_trades += len(sized)
-
-    Path(OUT_TRADES).parent.mkdir(parents=True, exist_ok=True)
-    write_json(OUT_TRADES, out)
-    print(f"[OK] wrote {OUT_TRADES} with {len(out['portfolios'])} portfolios, {total_trades} total trades.")
-
-if __name__ == "__main__":
-    main()
+                if cds <= buy_thr:
+                    # Barely a buy → small probe size
+                    cds_k = CDS_MIN_SIZE_K
+                elif cds >= CDS_FULL_SIZE:
+                    # Strong conviction → full size
+                    cds_k = 1.0
+                else:
+                    # Linearly interpolate between CDS_MIN_SIZE_K and 1.0
+                    span = max(1e-6, CDS_FULL_SIZE - buy_thr)
