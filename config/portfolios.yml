@@ -38,7 +38,7 @@ portfolios:
     buy_threshold: 0.55
     sell_threshold: -0.20
     trade_scope: none
-    tags: [ideas]
+    tags: [ideas,paper]
 
   portfolio_paper_aggressive_trades:
     title: "Paper Aggressive"
@@ -71,4 +71,24 @@ portfolios:
     buy_threshold: 0.55
     sell_threshold: -0.20
     trade_scope: none
-    tags: [ideas]
+    tags: [ideas,paper]
+
+  portfolio_paper_NS_higher_weight:
+    title: "paper NS Only"
+    path: data/portfolios/portfolio_paper_NS_higher_weight
+    decision_source: NS_ONLY
+    buy_threshold: 0.55
+    sell_threshold: -0.20
+    trade_scope: none
+    tags: [ideas,paper]
+
+  portfolio_max_NS_higher_weight:
+    title: "max NS Only"
+    path: data/portfolios/portfolio_max_NS_higher_weight
+    decision_source: NS_ONLY
+    buy_threshold: 0.55
+    sell_threshold: -0.20
+    trade_scope: none
+    tags: [ideas,paper]
+
+    
