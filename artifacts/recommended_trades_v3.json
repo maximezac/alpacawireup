@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-13T05:30:31.601892+00:00",
+  "as_of_utc": "2025-11-13T05:38:18.966986+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -1096,18 +1096,65 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 22187.87,
-      "cash_start": 2793.66,
+      "portfolio_value_est": 24659.02,
+      "cash_start": 120.0,
       "trades": [
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 64.57,
+          "qty_hint": 7.49,
+          "reason": "score<sell",
+          "score": -0.325864,
+          "qty": 1,
+          "notional": 64.57,
+          "signals": {
+            "TS": -0.566872,
+            "NS": 0.035647,
+            "CDS": -0.325864,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 70.55278214280065,
+            "ema_slow": 71.1565201035501,
+            "macd": -0.6037379607494415,
+            "macd_signal": 1.5579936925624125,
+            "macd_hist": -2.161731653311854,
+            "macd_hist_prev": -2.141307603505533,
+            "rsi14": 33.1031539067267,
+            "sma20": 74.63650000000005
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-12T17:32:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.0,
+              "headline": "AST SpaceMobile Stock (ASTS) Opinions on Recent Volatility and Partnerships | ASTS Stock News"
+            },
+            {
+              "ts": "2025-11-12T15:18:16+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "B. Riley Estimates AST SpaceMobile FY2027 Earnings"
+            },
+            {
+              "ts": "2025-11-12T15:18:14+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Analysts Issue Forecasts for AST SpaceMobile FY2028 Earnings"
+            }
+          ]
+        },
         {
           "symbol": "QBTS",
           "action": "SELL",
           "px": 26.385,
-          "qty_hint": 9.296616,
+          "qty_hint": 230.08,
           "reason": "score<sell",
           "score": -0.322091,
-          "qty": 2,
-          "notional": 52.77,
+          "qty": 57,
+          "notional": 1503.95,
           "signals": {
             "TS": -0.572596,
             "NS": 0.053667,
@@ -1147,14 +1194,108 @@
           ]
         },
         {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 28.305,
+          "qty_hint": 6.17,
+          "reason": "score<sell",
+          "score": -0.329898,
+          "qty": 1,
+          "notional": 28.3,
+          "signals": {
+            "TS": -0.627757,
+            "NS": 0.11689,
+            "CDS": -0.329898,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 35.20539474985657,
+            "ema_slow": 36.65068232430579,
+            "macd": -1.4452875744492175,
+            "macd_signal": 0.33844893261477865,
+            "macd_hist": -1.7837365070639961,
+            "macd_hist_prev": -1.642707992527809,
+            "rsi14": 26.266215179297674,
+            "sma20": 38.399999999999984
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-13T04:25:35+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.0,
+              "headline": "Rigetti Computing\u2019s Q3 2025 Financial Report and Strategic Advances"
+            },
+            {
+              "ts": "2025-11-12T23:35:22+00:00",
+              "source": "fxleaders",
+              "tone": 0.6207521918915406,
+              "headline": "Rigetti\u2019s Speculative Run Ends As RGTI Stock Breaks Last Support \u2013 Where Next?"
+            },
+            {
+              "ts": "2025-11-12T22:30:00+00:00",
+              "source": "marketsfinancialcontent",
+              "tone": 0.3094791165587234,
+              "headline": "Rigetti Computing Shares Plummet Amidst Wave of Analyst Skepticism"
+            }
+          ]
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 49.965,
+          "qty_hint": 6.27,
+          "reason": "score<sell",
+          "score": -0.295349,
+          "qty": 1,
+          "notional": 49.97,
+          "signals": {
+            "TS": -0.615379,
+            "NS": 0.184697,
+            "CDS": -0.295349,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 55.410500931246155,
+            "ema_slow": 57.36703174264058,
+            "macd": -1.9565308113944226,
+            "macd_signal": -0.04474121789464397,
+            "macd_hist": -1.9117895934997786,
+            "macd_hist_prev": -1.991808452877581,
+            "rsi14": 27.680179906099198,
+            "sma20": 60.140999999999984
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-12T22:08:05+00:00",
+              "source": "marketbeat",
+              "tone": 0.41815061860864505,
+              "headline": "Rocket Lab (NASDAQ:RKLB) Shares Down 2.5% Following Analyst Downgrade"
+            },
+            {
+              "ts": "2025-11-12T19:26:18+00:00",
+              "source": "tradingview",
+              "tone": 0.5693219227093055,
+              "headline": "Rocket Lab Stock Extends Rally After Record Launch Contracts and Strong Q4 Guidance"
+            },
+            {
+              "ts": "2025-11-12T19:22:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Beats Silicon: Rocket Lab, Planet Labs, And Archer Aviation Outshine Nvidia In 2025"
+            }
+          ]
+        },
+        {
           "symbol": "NEE",
           "action": "BUY",
           "px": 85.88,
           "qty_hint": 0.0,
           "reason": "score>buy|topped_by_rotation",
           "score": 0.558342,
-          "qty": 29.524042,
-          "notional": 2535.53,
+          "qty": 21.535006000000003,
+          "notional": 1849.43,
           "signals": {
             "TS": 0.617948,
             "NS": 0.468934,
@@ -1174,7 +1315,7 @@
           },
           "phase": "mid",
           "size_k": 0.75,
-          "qty_prev": 21.816675,
+          "qty_prev": 1.047975,
           "news_preview": [
             {
               "ts": "2025-11-12T20:11:26+00:00",
@@ -1197,61 +1338,11 @@
           ]
         },
         {
-          "symbol": "ICLN",
-          "action": "BUY",
-          "px": 17.665,
-          "qty_hint": 0.0,
-          "reason": "score>buy|topped_by_rotation",
-          "score": 0.524692,
-          "qty": 48.984351000000004,
-          "notional": 865.31,
-          "signals": {
-            "TS": 0.492477,
-            "NS": 0.573014,
-            "CDS": 0.524692,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 17.483588031480785,
-            "ema_slow": 16.96602249657492,
-            "macd": 0.5175655349058665,
-            "macd_signal": 0.5093923217705262,
-            "macd_hist": 0.008173213135340363,
-            "macd_hist_prev": 0.03315072241696071,
-            "rsi14": 57.05303599003068,
-            "sma20": 17.11925
-          },
-          "phase": "mid",
-          "size_k": 0.68831175,
-          "qty_prev": 11.514285,
-          "news_preview": [
-            {
-              "ts": "2025-11-12T17:59:32+00:00",
-              "source": "benzinga",
-              "tone": 0.7104188685053626,
-              "headline": "As COP30 Talks Climate, Investors Are Acting On It \u2014 Through These ETFs"
-            },
-            {
-              "ts": "2025-11-11T21:57:14+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.36397130791639404,
-              "headline": "Clean Energy\u2019s Second Wind: What iShares Global Clean Energy ETF Tells Us Now"
-            },
-            {
-              "ts": "2025-11-10T16:56:18+00:00",
-              "source": "benzinga",
-              "tone": -0.21932896190420173,
-              "headline": "Utilities ETFs Could Power Up As Polar Vortex Threatens To Freeze The Grid"
-            }
-          ]
-        },
-        {
           "symbol": "RGTI",
           "action": "SELL",
           "px": 28.305,
-          "qty": 0.161404,
-          "notional": 4.57,
+          "qty": 1.5425,
+          "notional": 43.66,
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.627757,
@@ -1296,8 +1387,8 @@
           "symbol": "ASTS",
           "action": "SELL",
           "px": 64.57,
-          "qty": 0.146128,
-          "notional": 9.44,
+          "qty": 1.8725,
+          "notional": 120.91,
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.566872,
@@ -1342,8 +1433,8 @@
           "symbol": "QBTS",
           "action": "SELL",
           "px": 26.385,
-          "qty": 2.324154,
-          "notional": 61.32,
+          "qty": 57.52,
+          "notional": 1517.67,
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.572596,
@@ -1388,8 +1479,8 @@
           "symbol": "RKLB",
           "action": "SELL",
           "px": 49.965,
-          "qty": 0.164741,
-          "notional": 8.23,
+          "qty": 1.544946,
+          "notional": 77.19,
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.615379,
@@ -1429,423 +1520,9 @@
               "headline": "Space Beats Silicon: Rocket Lab, Planet Labs, And Archer Aviation Outshine Nvidia In 2025"
             }
           ]
-        },
-        {
-          "symbol": "ZS",
-          "action": "SELL",
-          "px": 317.09,
-          "qty": 0.102832,
-          "notional": 32.61,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.476943,
-            "NS": 0.266177,
-            "CDS": -0.179695,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 323.0412927418394,
-            "ema_slow": 317.0899555808,
-            "macd": 5.951337161039419,
-            "macd_signal": 7.144291460151939,
-            "macd_hist": -1.19295429911252,
-            "macd_hist_prev": -0.4091360945656479,
-            "rsi": 43.66284160756108,
-            "sma20": 319.9212500000002,
-            "price": 317.09
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-12T16:35:57+00:00",
-              "source": "gurufocus",
-              "tone": -0.49282411786787894,
-              "headline": "Barclays Raises Price Target for Zscaler (ZS) to $350, Maintains Overweight Rating | ZS Stock News"
-            },
-            {
-              "ts": "2025-11-12T15:58:40+00:00",
-              "source": "benzinga",
-              "tone": -0.3689154049914843,
-              "headline": "Barclays Maintains Overweight on Zscaler, Raises Price Target to $350"
-            },
-            {
-              "ts": "2025-11-12T13:31:00+00:00",
-              "source": "yahoo",
-              "tone": 0.7187496284722135,
-              "headline": "GC AI Raises $60 Million Series B to Give Every Company a Legal Advantage"
-            }
-          ]
-        },
-        {
-          "symbol": "PLTR",
-          "action": "SELL",
-          "px": 184.19,
-          "qty": 0.000791,
-          "notional": 0.15,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.458291,
-            "NS": 0.25908,
-            "CDS": -0.171343,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 187.74259257675692,
-            "ema_slow": 185.4971916086087,
-            "macd": 2.245400968148232,
-            "macd_signal": 3.2986689231763227,
-            "macd_hist": -1.0532679550280908,
-            "macd_hist_prev": -0.7752343494271194,
-            "rsi": 46.16092784411221,
-            "sma20": 187.01350000000005,
-            "price": 184.19
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-13T02:31:00+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Palantir (PLTR) Sentiment Pops After CEO\u2019s Sword Interview"
-            },
-            {
-              "ts": "2025-11-13T01:32:58+00:00",
-              "source": "247wallst",
-              "tone": 0.0,
-              "headline": "Palantir (PLTR) Sentiment Pops After CEO\u2019s Sword Interview"
-            },
-            {
-              "ts": "2025-11-13T00:16:34+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Palantir Technologies (NASDAQ:PLTR) Trading Down 3.6% - What's Next?"
-            }
-          ]
-        },
-        {
-          "symbol": "HOOD",
-          "action": "SELL",
-          "px": 132.94,
-          "qty": 0.421875,
-          "notional": 56.08,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.468676,
-            "NS": 0.340815,
-            "CDS": -0.144879,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 135.9037528309596,
-            "ema_slow": 135.7721631457314,
-            "macd": 0.13158968522819237,
-            "macd_signal": 1.6950734788198185,
-            "macd_hist": -1.5634837935916261,
-            "macd_hist_prev": -1.642063642564465,
-            "rsi": 45.14129321691638,
-            "sma20": 136.83450000000005,
-            "price": 132.94
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-12T22:31:30+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Robinhood CEO Says Tokenization Will 'Unlock 24/7 Markets' And Investors Will 'Never Go Back'"
-            },
-            {
-              "ts": "2025-11-12T22:02:40+00:00",
-              "source": "seekingalpha",
-              "tone": 0.5100282482711697,
-              "headline": "Tracking Cathie Wood's ARK Invest 13F Portfolio - Q3 2025 Update"
-            },
-            {
-              "ts": "2025-11-12T19:18:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.0,
-              "headline": "Fund Update: New $26.6M $HOOD stock position opened by COMMONWEALTH OF PENNSYLVANIA PUBLIC SCHOOL EMPLS RETRMT SYS"
-            }
-          ]
-        },
-        {
-          "symbol": "MSFT",
-          "action": "SELL",
-          "px": 511.34,
-          "qty": 0.158203,
-          "notional": 80.9,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.446306,
-            "NS": 0.337139,
-            "CDS": -0.132928,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 511.7580559962619,
-            "ema_slow": 514.6037070583352,
-            "macd": -2.8456510620733297,
-            "macd_signal": -0.8888658552264829,
-            "macd_hist": -1.9567852068468468,
-            "macd_hist_prev": -2.6310678920868593,
-            "rsi": 48.10001924797232,
-            "sma20": 517.1524999999998,
-            "price": 511.34
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-13T03:05:15+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.558315633777124,
-              "headline": "Weitz Investment Management Boosts Stake in Microsoft"
-            },
-            {
-              "ts": "2025-11-13T02:52:47+00:00",
-              "source": "benzinga",
-              "tone": -0.43596979459480434,
-              "headline": "Alexandr Wang's Advice To Kids Sparks Backlash \u2014 Question Raised If Mark Zuckerberg Made A 'Big Mistake' Paying $14.3 Billion For Meta's New AI Chief"
-            },
-            {
-              "ts": "2025-11-12T21:16:21+00:00",
-              "source": "benzinga",
-              "tone": 0.7399824043095887,
-              "headline": "Millennials Prefer Coinbase, Gen Z Likes UberEats, Gen X Is Playing Call Of Duty And Baby Boomers Use DoorDash"
-            }
-          ]
-        },
-        {
-          "symbol": "VTI",
-          "action": "SELL",
-          "px": 335.855,
-          "qty": 0.912372,
-          "notional": 306.42,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.288952,
-            "NS": 0.109827,
-            "CDS": -0.12944,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 333.60521892137155,
-            "ema_slow": 331.9074264082958,
-            "macd": 1.6977925130757399,
-            "macd_signal": 1.8558256910708166,
-            "macd_hist": -0.15803317799507677,
-            "macd_hist_prev": -0.2907866903627008,
-            "rsi": 60.00279085910898,
-            "sma20": 332.87925,
-            "price": 335.855
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-13T00:10:30+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Is VTI stock undervalued by metrics - IPO Watch & Short-Term Swing Trade Alerts"
-            },
-            {
-              "ts": "2025-11-12T23:07:03+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Is VTI stock a buy before earnings results - July 2025 Summary & Proven Capital Preservation Methods"
-            },
-            {
-              "ts": "2025-11-12T22:44:20+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Is VTI stock a buy before earnings results - Weekly Stock Recap & Technical Buy Zone Confirmations"
-            }
-          ]
-        },
-        {
-          "symbol": "NVDA",
-          "action": "SELL",
-          "px": 193.86,
-          "qty": 3.264738,
-          "notional": 632.9,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.368526,
-            "NS": 0.252328,
-            "CDS": -0.120185,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 194.30343203445662,
-            "ema_slow": 191.3888775203826,
-            "macd": 2.9145545140740126,
-            "macd_signal": 3.6733784366431252,
-            "macd_hist": -0.7588239225691127,
-            "macd_hist_prev": -0.6702160985771677,
-            "rsi": 49.803425662394325,
-            "sma20": 192.2820000000001,
-            "price": 193.86
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-13T04:24:45+00:00",
-              "source": "tipranks",
-              "tone": 0.7844855838622231,
-              "headline": "Top BofA Analyst Cranks Up the Optimism on Nvidia Stock"
-            },
-            {
-              "ts": "2025-11-13T02:51:55+00:00",
-              "source": "benzinga",
-              "tone": -0.8010146434214974,
-              "headline": "Nvidia Quashes Talk Of $1 Billion AI Data Center In Mexico After Governor's Announcement Sparks Confusion"
-            },
-            {
-              "ts": "2025-11-12T21:16:16+00:00",
-              "source": "investopedia",
-              "tone": -0.46734083594165976,
-              "headline": "Nvidia's Earnings Are Almost Here. Investors Are Already Worried About the AI Rally."
-            }
-          ]
-        },
-        {
-          "symbol": "VOO",
-          "action": "SELL",
-          "px": 628.26,
-          "qty": 0.073565,
-          "notional": 46.22,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.28131,
-            "NS": 0.183056,
-            "CDS": -0.095564,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 623.7006782526621,
-            "ema_slow": 620.0991165982346,
-            "macd": 3.6015616544275417,
-            "macd_signal": 3.9021987205104365,
-            "macd_hist": -0.30063706608289475,
-            "macd_hist_prev": -0.5518932508873657,
-            "rsi": 60.9408864517251,
-            "sma20": 621.9954999999999,
-            "price": 628.26
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-12T23:11:16+00:00",
-              "source": "nerdwallet",
-              "tone": 0.0,
-              "headline": "VOO Dividend: What Is the Vanguard S&P 500 ETF\u2019s Yield?"
-            },
-            {
-              "ts": "2025-11-12T20:40:47+00:00",
-              "source": "newsercom",
-              "tone": 0.5841465078992216,
-              "headline": "Why VOO stock trades below fair value - Weekly Market Summary & Weekly High Potential Stock Alerts"
-            },
-            {
-              "ts": "2025-11-12T17:48:37+00:00",
-              "source": "benzinga",
-              "tone": 0.17686589774294517,
-              "headline": "Dow Jones Hits Record Highs, AMD Jumps: What's Moving Markets Wednesday?"
-            }
-          ]
-        },
-        {
-          "symbol": "SNOW",
-          "action": "SELL",
-          "px": 269.53,
-          "qty": 0.28125,
-          "notional": 75.81,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.276958,
-            "NS": 0.28344,
-            "CDS": -0.052799,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 265.89151009081183,
-            "ema_slow": 257.71922094646266,
-            "macd": 8.172289144349179,
-            "macd_signal": 8.885315199630714,
-            "macd_hist": -0.7130260552815351,
-            "macd_hist_prev": -0.6079638646712624,
-            "rsi": 60.83737613133106,
-            "sma20": 260.99974999999995,
-            "price": 269.53
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-12T22:56:39+00:00",
-              "source": "newsercom",
-              "tone": 0.6124284125662085,
-              "headline": "Why Tidal Trust II YieldMax SNOW stock could be top winner - Weekly Trend Summary & AI Forecasted Stock Moves"
-            },
-            {
-              "ts": "2025-11-12T19:56:25+00:00",
-              "source": "newsercom",
-              "tone": 0.5752766375044054,
-              "headline": "Can Tidal Trust II YieldMax SNOW stock surprise markets with earnings - Weekly Investment Report & Verified Stock Trade Ideas"
-            },
-            {
-              "ts": "2025-11-12T16:46:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.0,
-              "headline": "Fund Update: New $116.9M $SNOW stock position opened by WILLIAM BLAIR INVESTMENT MANAGEMENT, LLC"
-            }
-          ]
-        },
-        {
-          "symbol": "AMD",
-          "action": "SELL",
-          "px": 258.9,
-          "qty": 0.035446,
-          "notional": 9.18,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.272465,
-            "NS": 0.30021,
-            "CDS": -0.043395,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 246.30290658205251,
-            "ema_slow": 235.24692533607495,
-            "macd": 11.055981245977563,
-            "macd_signal": 14.359112663507545,
-            "macd_hist": -3.3031314175299826,
-            "macd_hist_prev": -4.527048920243443,
-            "rsi": 61.016935417937084,
-            "sma20": 246.73224999999988,
-            "price": 258.9
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-13T02:03:00+00:00",
-              "source": "thestreet",
-              "tone": 0.3743767286523625,
-              "headline": "Stock Market Wrap: Top stocks AMD, Oklo, and McGraw-Hill"
-            },
-            {
-              "ts": "2025-11-13T00:15:56+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "Why AMD Stock Jumped Today"
-            },
-            {
-              "ts": "2025-11-12T23:45:00+00:00",
-              "source": "thewallstreetjournal",
-              "tone": 0.0,
-              "headline": "AMD Is an Increasingly Formidable Competitor to Nvidia"
-            }
-          ]
         }
       ],
-      "cash_left": -2024.25,
+      "cash_left": 1556.78,
       "debug": {
         "buy_sizing": [
           {
@@ -1853,19 +1530,9 @@
             "cds": 0.558342,
             "size_k": 0.75,
             "phase": "mid",
-            "qty": 29.524042,
+            "qty": 21.535006000000003,
             "px": 85.88,
-            "notional": 2535.53,
-            "reason": "score>buy|topped_by_rotation"
-          },
-          {
-            "symbol": "ICLN",
-            "cds": 0.524692,
-            "size_k": 0.68831175,
-            "phase": "mid",
-            "qty": 48.984351000000004,
-            "px": 17.665,
-            "notional": 865.31,
+            "notional": 1849.43,
             "reason": "score>buy|topped_by_rotation"
           }
         ]
