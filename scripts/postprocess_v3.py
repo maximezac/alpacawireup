@@ -33,7 +33,7 @@ ENABLE_ROTATION_UPGRADE = os.environ.get("ENABLE_ROTATION_UPGRADE", "true").lowe
 # How CDS maps to position size:
 # - At buy_threshold → we shrink to CDS_MIN_SIZE_K of normal size.
 # - At CDS_FULL_SIZE or above → full size (no downsize).
-CDS_FULL_SIZE   = float(os.environ.get("CDS_FULL_SIZE", "0.80"))
+CDS_FULL_SIZE   = float(os.environ.get("CDS_FULL_SIZE", "0.55"))
 CDS_MIN_SIZE_K  = float(os.environ.get("CDS_MIN_SIZE_K", "0.35"))
 
 # -------- helpers --------
