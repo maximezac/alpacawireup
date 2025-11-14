@@ -2,9 +2,11 @@
 from __future__ import annotations
 import os, json, math, yaml
 from pathlib import Path
+from dataclasses import dataclass
 import sys
 sys.path.append(str(Path(__file__).resolve().parents[1]))
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, List, Tuple, Literal
+
 from scripts.strategy.momentum_phase import momentum_phase_and_size
 from scripts.strategy.rotation_upgrade import pick_laggards_to_fund, RotationConfig
 
@@ -123,6 +125,67 @@ def _safe_read_positions(pos_path: str) -> Tuple[float, Dict[str, dict]]:
         return 0.0, {}
     return read_positions_csv(pos_path)
 
+# ---------- NEW: guidance-aware sizing helper for BUYs ----------  # <<< NEW
+def guidance_size_for_buy(
+    symbol: str,
+    price: float,
+    signals: Dict[str, Any],
+    ind_full: Dict[str, Any],
+    guidance: Dict[str, Any],
+    phase: str | None,
+) -> Tuple[float, str]:
+    """
+    Returns (size_k_guidance, reason_suffix).
+    size_k_guidance in [0,1]; multiplies existing size_k for BUY trades.
+
+    Intuition:
+      - Prefer early-phase dips near/under buy_on_dip_below.
+      - Be cautious when price is well above dip level.
+      - Be small when near/above trim_above or in late phase.
+    """
+    if not guidance:
+        return 1.0, "guidance:none"
+
+    buy_on_dip = guidance.get("buy_on_dip_below")
+    trim_above = guidance.get("trim_above")
+    sma20      = ind_full.get("sma20")
+    rsi        = ind_full.get("rsi")
+
+    gk = 1.0
+    reasons: List[str] = []
+
+    ph = phase or "mid"
+
+    # Late-phase: we don't want to be aggressive even if CDS says BUY
+    if ph == "late":
+        gk *= 0.5
+        reasons.append("late_phase")
+
+    # If price is above the preferred dip level, shrink size
+    if buy_on_dip is not None:
+        if price > buy_on_dip * 1.01:
+            gk *= 0.7
+            reasons.append("above_dip_level")
+
+    # If price is near/above trim zone, be very conservative
+    if trim_above is not None:
+        if price >= trim_above:
+            gk *= 0.4
+            reasons.append("near_or_above_trim_zone")
+
+    # Additional safety: if price is far above SMA20 and RSI is hot, shrink more
+    if sma20 and price > sma20 * 1.07 and (rsi is not None and rsi > 70):
+        gk *= 0.7
+        reasons.append("extended_vs_sma20_hot_rsi")
+
+    # Clamp and build reason string
+    gk = max(0.0, min(1.0, gk))
+    if not reasons:
+        reasons.append("guidance_ok")
+
+    return gk, "|".join(reasons)
+# -----------------------------------------------------------------  # <<< NEW
+
 def main():
     feed = read_json(INPUT_FINAL)
     defaults, portfolios = load_portfolios_config(PORTFOLIOS_YML)
@@ -168,7 +231,7 @@ def main():
         actions = propose_actions(qtys, feed, cfg.strategy)
         sized, cash_left = size_with_cash(actions, port_val, cash, cfg.sizing)
 
-        # --- Enrich each trade with price, signals, indicators, and a few news items
+        # --- Enrich each trade with price, signals, indicators, guidance, and a few news items
         symbols_map = (feed or {}).get("symbols", {})
         for t in sized:
             sym = t.get("symbol")
@@ -189,17 +252,22 @@ def main():
             }
 
             # indicators (accept either publisher or fetcher keys)
-            ind = n.get("indicators") or {}
+            ind_full = n.get("indicators") or {}  # full set from publish_feed.py  # <<< NEW
             t["indicators"] = {
-                "ema_fast":        ind.get("ema_fast", ind.get("ema12")),
-                "ema_slow":        ind.get("ema_slow", ind.get("ema26")),
-                "macd":            ind.get("macd"),
-                "macd_signal":     ind.get("macd_signal"),
-                "macd_hist":       ind.get("macd_hist"),
-                "macd_hist_prev":  ind.get("macd_hist_prev"),   # <-- needed for slope
-                "rsi14":           ind.get("rsi", ind.get("rsi14")),
-                "sma20":           ind.get("sma20"),
+                "ema_fast":        ind_full.get("ema_fast", ind_full.get("ema12")),
+                "ema_slow":        ind_full.get("ema_slow", ind_full.get("ema26")),
+                "macd":            ind_full.get("macd"),
+                "macd_signal":     ind_full.get("macd_signal"),
+                "macd_hist":       ind_full.get("macd_hist"),
+                "macd_hist_prev":  ind_full.get("macd_hist_prev"),   # <-- needed for slope
+                "rsi14":           ind_full.get("rsi", ind_full.get("rsi14")),
+                "sma20":           ind_full.get("sma20"),
             }
+
+            # guidance from feed (if publish_feed was updated to emit it)  # <<< NEW
+            guidance = n.get("guidance") or {}
+            if guidance:
+                t["guidance"] = guidance
 
             # Momentum + CDS-based sizing: only ever *downsize* buys
             if t.get("action") == "BUY":
@@ -236,6 +304,24 @@ def main():
                     cds_k = CDS_MIN_SIZE_K + frac * (1.0 - CDS_MIN_SIZE_K)
 
                 size_k *= cds_k
+
+                # --- NEW: guidance-aware modifier on top of TS/CDS/phase sizing ---  # <<< NEW
+                px_f = float(t.get("px") or 0.0)
+                if px_f > 0:
+                    gk, g_reason = guidance_size_for_buy(
+                        symbol=sym,
+                        price=px_f,
+                        signals=t["signals"],
+                        ind_full=ind_full,
+                        guidance=guidance,
+                        phase=phase,
+                    )
+                    size_k *= gk
+                    t["size_k_guidance"] = gk
+                    # append reason hint (non-breaking)
+                    base_reason = t.get("reason") or "buy"
+                    t["reason"] = base_reason + f"|guidance:{g_reason}"
+
                 # Never allow size_k > 1.0 (we only shrink, never boost)
                 size_k = min(size_k, 1.0)
                 t["size_k"] = size_k
@@ -401,6 +487,7 @@ def main():
                 "symbol": tr.get("symbol"),
                 "cds": float(sig_dbg.get("CDS") or 0.0),
                 "size_k": float(tr.get("size_k", 1.0)),
+                "size_k_guidance": float(tr.get("size_k_guidance", 1.0)),  # <<< NEW
                 "phase": tr.get("phase"),
                 "qty": float(tr.get("qty") or 0.0),
                 "px": float(tr.get("px") or 0.0),
