@@ -31,6 +31,12 @@ TS_DEFAULT_WT = float(os.getenv("TS_DEFAULT_WT", "0.6"))
 NS_STRONG_ABS = float(os.getenv("NS_STRONG_ABS", "0.7"))  # flip weights if |NS| >= this
 SCORE_STATS_OUT = os.getenv("SCORE_STATS_OUT", "data/score_stats.json")
 
+# extra MAs for trend context
+MA_TREND_FAST = int(os.getenv("MA_TREND_FAST", "50"))
+MA_TREND_SLOW = int(os.getenv("MA_TREND_SLOW", "200"))
+
+
+
 # ---- helpers ----
 def utcnow_iso():
     return datetime.now(timezone.utc).isoformat()
@@ -120,33 +126,87 @@ def clamp_unit(x):
     return max(-1.0, min(1.0, x))
 
 def compute_TS(ind):
-    """Scale indicators into [-1,1] then combine."""
-    # Normalize MACD hist slope and RSI pos & EMA slope lightly
-    rsi_val = ind.get("rsi")
-    ema_fast = ind.get("ema_fast")
-    ema_slow = ind.get("ema_slow")
-    macd_hist = ind.get("macd_hist")
-    sma20 = ind.get("sma20")
+    """Scale indicators into [-1,1] then combine.
+    Philosophy:
+      - TS measures technical health + direction
+      - Adjust for trend (up/down), phase (early/mid/late), and extension (don't chase spikes).
+    """
+    rsi_val        = ind.get("rsi")
+    rsi_prev       = ind.get("rsi_prev")
+    ema_fast       = ind.get("ema_fast")
+    ema_slow       = ind.get("ema_slow")
+    macd_hist      = ind.get("macd_hist")
+    macd_hist_prev = ind.get("macd_hist_prev")
+    sma20          = ind.get("sma20")
+    ma50           = ind.get("ma50")
+    ma200          = ind.get("ma200")
+    price          = ind.get("price")
+    prev_close     = ind.get("prev_close")
 
-    # simple slopes (last - prev)
-    def slope(arr):
-        return 0.0 if (arr is None or len(arr)<2) else (arr[-1] - arr[-2])
+    def diff(curr, prev):
+        if curr is None or prev is None:
+            return 0.0
+        return curr - prev
 
-    ts_rsi = 0.0 if rsi_val is None else clamp_unit((rsi_val-50.0)/50.0)
-    ts_macd = 0.0 if macd_hist is None else clamp_unit(macd_hist/ max(1e-6, abs(macd_hist)+1e-6))  # relative
+    # --- base components (similar to before) ---
+    ts_rsi = 0.0 if rsi_val is None else clamp_unit((rsi_val - 50.0) / 50.0)
+
+    ts_macd = 0.0
+    if macd_hist is not None:
+        # use sign / relative magnitude, but keep bounded
+        ts_macd = clamp_unit(macd_hist / (abs(macd_hist) + 1e-6))
+
     ts_ema = 0.0
     if ema_fast is not None and ema_slow is not None:
-        ts_ema = clamp_unit((ema_fast - ema_slow)/max(1e-6, abs(ema_slow)))
+        ts_ema = clamp_unit((ema_fast - ema_slow) / max(1e-6, abs(ema_slow)))
 
-    # 0.4 * MACD + 0.4 * RSI + 0.2 * EMA diff
-    out = 0.4*ts_macd + 0.4*ts_rsi + 0.2*ts_ema
+    out = 0.4 * ts_macd + 0.4 * ts_rsi + 0.2 * ts_ema
+
     # tiny bonus for price> SMA20 (trend confirmation)
-    if sma20 is not None and ind.get("price") is not None:
-        if ind["price"] > sma20:
+    if sma20 is not None and price is not None:
+        if price > sma20:
             out += 0.03
         else:
             out -= 0.03
+
+    # --- Trend classification (up / down / chop) ---
+    trend = "chop"
+    if price is not None and ma50 is not None and ma200 is not None:
+        if price > ma50 > ma200:
+            trend = "up"
+        elif price < ma50 < ma200:
+            trend = "down"
+
+    if trend == "up":
+        out += 0.08   # reward strong uptrend
+    elif trend == "down":
+        out -= 0.08   # penalize strong downtrend
+
+    # --- Momentum phase (early / mid / late) via RSI + MACD hist slope ---
+    hist_slope = diff(macd_hist, macd_hist_prev)
+    phase = "mid"
+    if rsi_val is not None:
+        if rsi_val < 70 and hist_slope > 0:
+            phase = "early"   # momentum turning up
+            out += 0.04
+        elif rsi_val >= 75 and hist_slope <= 0:
+            phase = "late"    # stretched & rolling over
+            out -= 0.06
+
+    # --- Don't chase extension: way above SMA20 + hot RSI ---
+    if price is not None and sma20 is not None and rsi_val is not None:
+        dist = (price - sma20) / max(1e-6, sma20)  # % above SMA20
+        if dist > 0.07 and rsi_val > 70:
+            out -= 0.08
+
+    # --- One-bar spike dampening ---
+    if price is not None and prev_close is not None and rsi_val is not None:
+        day_change = (price - prev_close) / max(1e-6, prev_close)
+        if day_change > 0.08 and rsi_val > 65:
+            out -= 0.05
+
     return clamp_unit(out)
+
 
 def age_hours(dt_iso: str|None, now: datetime) -> float:
     if not dt_iso: return 9999.0
@@ -237,17 +297,30 @@ def main():
         rsi_arr = rsi(closes, RSI_LEN)
         sma_arr = sma(closes, SMA_LEN)
 
+        # extra MAs for trend classification
+        sma50_arr = sma(closes, MA_TREND_FAST)
+        sma200_arr = sma(closes, MA_TREND_SLOW)
+
+        prev_close = closes[-2] if len(closes) > 1 else None
+        macd_hist_prev = m_hist[-2] if m_hist and len(m_hist) > 1 else (m_hist[-1] if m_hist else None)
+        rsi_prev = rsi_arr[-2] if rsi_arr and len(rsi_arr) > 1 else (rsi_arr[-1] if rsi_arr else None)
+
         ind = {
             "ema_fast": e_fast[-1] if e_fast else None,
             "ema_slow": e_slow[-1] if e_slow else None,
             "macd": m_line[-1] if m_line else None,
             "macd_signal": m_sig[-1] if m_sig else None,
             "macd_hist": m_hist[-1] if m_hist else None,
-            "macd_hist_prev": (m_hist[-2] if m_hist and len(m_hist) > 1 else (m_hist[-1] if m_hist else None)),
+            "macd_hist_prev": macd_hist_prev,
             "rsi": rsi_arr[-1] if rsi_arr else None,
+            "rsi_prev": rsi_prev,
             "sma20": sma_arr[-1] if sma_arr else None,
+            "ma50": sma50_arr[-1] if sma50_arr else None,
+            "ma200": sma200_arr[-1] if sma200_arr else None,
+            "prev_close": prev_close,
             "price": px
         }
+
 
         # news-based score
         news = node.get("news") or []   # fetch_news.py attaches raw items with `tone` and `ts`
@@ -260,7 +333,14 @@ def main():
         wT, wN = dynamic_weights(ns)
         cds = clamp_unit(wT*ts_val + wN*ns + (SECTOR_NUDGE if node.get("sector_bias") else 0.0))
 
-        # decision (v2.2 thresholds kept external if needed; we store only scores)
+        # simple guideline levels anchored on SMA20 if available
+        guidance = {}
+        sma20_last = ind.get("sma20")
+        if sma20_last is not None:
+            guidance["sma20"] = round(sma20_last, 4)
+            guidance["buy_on_dip_below"] = round(sma20_last * 0.99, 4)  # ~1% under SMA20
+            guidance["trim_above"] = round(sma20_last * 1.08, 4)        # ~8% above SMA20
+
         out["symbols"][sym] = {
             "price": px,
             "ts": ts or now_iso,
@@ -272,8 +352,10 @@ def main():
                 "wT": round(wT, 6),
                 "wN": round(wN, 6)
             },
+            "guidance": guidance,
             "news": news  # unchanged list; consumer can slice MAX_ARTICLES later
         }
+
 
         ts_list.append(ts_val); ns_list.append(ns); cds_list.append(cds)
 
