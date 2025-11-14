@@ -1,111 +1,166 @@
 {
-  "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
+  "as_of_utc": "2025-11-14T20:43:54.538206+00:00",
   "portfolio_id": "portfolio_paper_aggressive_trades",
   "trades": {
     "pre": {
-      "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
-      "portfolio_id": "portfolio_paper_aggressive_trades",
-      "cash": 25000.0,
-      "market_value": 0.0,
-      "equity": 25000.0,
-      "holdings": {}
-    },
-    "post": {
-      "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
+      "as_of_utc": "2025-11-14T20:43:54.538206+00:00",
       "portfolio_id": "portfolio_paper_aggressive_trades",
       "cash": 21639.93,
-      "market_value": 3356.71,
-      "equity": 24996.64,
+      "market_value": 3330.79,
+      "equity": 24970.72,
       "holdings": {
         "LLY": {
           "qty": 0.857127,
           "avg_cost": 1021.775755,
-          "mark": 1020.755,
-          "market_value": 874.92
+          "mark": 1029.73,
+          "market_value": 882.61
         },
         "MMM": {
           "qty": 5.032211,
           "avg_cost": 170.195025,
-          "mark": 170.025,
-          "market_value": 855.6
+          "mark": 167.605,
+          "market_value": 843.42
         },
         "PFE": {
           "qty": 31.45163,
           "avg_cost": 25.80578,
-          "mark": 25.78,
-          "market_value": 810.82
+          "mark": 25.19,
+          "market_value": 792.27
         },
         "SNAP": {
           "qty": 3.7e-05,
           "avg_cost": 8.663655,
-          "mark": 8.655,
+          "mark": 8.535,
           "market_value": 0.0
         },
         "XLV": {
           "qty": 5.331144,
           "avg_cost": 153.097945,
-          "mark": 152.945,
-          "market_value": 815.37
+          "mark": 152.405,
+          "market_value": 812.49
+        }
+      }
+    },
+    "post": {
+      "as_of_utc": "2025-11-14T20:43:54.538206+00:00",
+      "portfolio_id": "portfolio_paper_aggressive_trades",
+      "cash": 20093.73,
+      "market_value": 4875.45,
+      "equity": 24969.18,
+      "holdings": {
+        "ABBV": {
+          "qty": 2.802817,
+          "avg_cost": 234.098865,
+          "mark": 233.865,
+          "market_value": 655.48
+        },
+        "ILMN": {
+          "qty": 0.637974,
+          "avg_cost": 121.46134,
+          "mark": 121.34,
+          "market_value": 77.41
+        },
+        "LLY": {
+          "qty": 0.857127,
+          "avg_cost": 1021.775755,
+          "mark": 1029.73,
+          "market_value": 882.61
+        },
+        "LYFT": {
+          "qty": 9.640638,
+          "avg_cost": 23.29327,
+          "mark": 23.27,
+          "market_value": 224.34
+        },
+        "MMM": {
+          "qty": 5.032211,
+          "avg_cost": 170.195025,
+          "mark": 167.605,
+          "market_value": 843.42
+        },
+        "PFE": {
+          "qty": 31.45163,
+          "avg_cost": 25.80578,
+          "mark": 25.19,
+          "market_value": 792.27
+        },
+        "SNAP": {
+          "qty": 5.9e-05,
+          "avg_cost": 8.618864,
+          "mark": 8.535,
+          "market_value": 0.0
+        },
+        "XLE": {
+          "qty": 6.381284,
+          "avg_cost": 92.147055,
+          "mark": 92.055,
+          "market_value": 587.43
+        },
+        "XLV": {
+          "qty": 5.331144,
+          "avg_cost": 153.097945,
+          "mark": 152.405,
+          "market_value": 812.49
         }
       }
     },
     "trades": [
       {
-        "symbol": "LLY",
+        "symbol": "ABBV",
         "action": "BUY",
-        "qty": 0.857127,
-        "px_exec": 1021.775755,
+        "qty": 2.802817,
+        "px_exec": 234.098865,
         "slippage_bps": 10.0,
-        "reason": "score>buy",
+        "reason": "score>buy|guidance:above_dip_level",
         "signals": {
-          "TS": 0.755962,
-          "NS": 0.189698,
-          "CDS": 0.529456,
+          "TS": 0.675874,
+          "NS": 0.403774,
+          "CDS": 0.567034,
           "wT": 0.6,
           "wN": 0.4
         }
       },
       {
-        "symbol": "MMM",
+        "symbol": "XLE",
         "action": "BUY",
-        "qty": 5.032211,
-        "px_exec": 170.195025,
+        "qty": 6.381284,
+        "px_exec": 92.147055,
         "slippage_bps": 10.0,
-        "reason": "score>buy",
+        "reason": "score>buy|guidance:above_dip_level",
         "signals": {
-          "TS": 0.562781,
-          "NS": 0.463628,
-          "CDS": 0.523119,
+          "TS": 0.687091,
+          "NS": 0.264503,
+          "CDS": 0.518056,
           "wT": 0.6,
           "wN": 0.4
         }
       },
       {
-        "symbol": "XLV",
+        "symbol": "ILMN",
         "action": "BUY",
-        "qty": 5.331144,
-        "px_exec": 153.097945,
+        "qty": 0.637974,
+        "px_exec": 121.46134,
         "slippage_bps": 10.0,
-        "reason": "score>buy",
+        "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone",
         "signals": {
-          "TS": 0.764739,
-          "NS": 0.127682,
-          "CDS": 0.509916,
+          "TS": 0.643475,
+          "NS": 0.321895,
+          "CDS": 0.514843,
           "wT": 0.6,
           "wN": 0.4
         }
       },
       {
-        "symbol": "PFE",
+        "symbol": "LYFT",
         "action": "BUY",
-        "qty": 31.45163,
-        "px_exec": 25.80578,
+        "qty": 9.640638,
+        "px_exec": 23.29327,
         "slippage_bps": 10.0,
-        "reason": "score>buy",
+        "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
         "signals": {
-          "TS": 0.585581,
-          "NS": 0.392704,
-          "CDS": 0.50843,
+          "TS": 0.60837,
+          "NS": 0.351386,
+          "CDS": 0.505576,
           "wT": 0.6,
           "wN": 0.4
         }
@@ -113,14 +168,14 @@
       {
         "symbol": "SNAP",
         "action": "BUY",
-        "qty": 3.7e-05,
-        "px_exec": 8.663655,
+        "qty": 2.2e-05,
+        "px_exec": 8.543535,
         "slippage_bps": 10.0,
-        "reason": "score>buy",
+        "reason": "score>buy|guidance:above_dip_level",
         "signals": {
-          "TS": 0.529034,
-          "NS": 0.192737,
-          "CDS": 0.394516,
+          "TS": 0.499173,
+          "NS": 0.180123,
+          "CDS": 0.371553,
           "wT": 0.6,
           "wN": 0.4
         }

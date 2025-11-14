@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-14T19:51:31.118352+00:00",
+  "as_of_utc": "2025-11-14T20:43:54.538206+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,39 +17,39 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 23700.15,
+      "portfolio_value_est": 23567.72,
       "cash_start": 120.0,
       "trades": [
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 62.2,
+          "px": 61.715,
           "qty_hint": 7.49,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.310492,
+          "score": -0.39535,
           "qty": 0.4,
-          "notional": 24.88,
+          "notional": 24.69,
           "signals": {
-            "TS": -0.544831,
-            "NS": 0.041015,
-            "CDS": -0.310492,
+            "TS": -0.558448,
+            "NS": -0.150702,
+            "CDS": -0.39535,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 68.07495052827738,
-            "ema_slow": 69.82321733428131,
-            "macd": -1.748266806003926,
-            "macd_signal": 0.4410698227849836,
-            "macd_hist": -2.1893366287889093,
+            "ema_fast": 68.000335143662,
+            "ema_slow": 69.78729140835539,
+            "macd": -1.7869562646933872,
+            "macd_signal": 0.43333193104709133,
+            "macd_hist": -2.2202881957404785,
             "macd_hist_prev": -2.2783553494054747,
-            "rsi14": 31.272100698110265,
-            "sma20": 72.16100000000007
+            "rsi14": 29.58409486671465,
+            "sma20": 72.13675000000006
           },
           "guidance": {
-            "sma20": 72.161,
-            "buy_on_dip_below": 71.4394,
-            "trim_above": 77.9339
+            "sma20": 72.1368,
+            "buy_on_dip_below": 71.4154,
+            "trim_above": 77.9077
           },
           "phase": "early",
           "size_k_guidance": 0.4,
@@ -57,21 +57,21 @@
           "qty_prev": 1.0,
           "news_preview": [
             {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
               "ts": "2025-11-14T17:03:31+00:00",
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
             },
             {
-              "ts": "2025-11-14T16:46:13+00:00",
-              "source": "newsercom",
-              "tone": 0.6612415840412146,
-              "headline": "Will ASTS stock benefit from green energy trends - Weekly Investment Report & Free Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-14T16:28:08+00:00",
+              "ts": "2025-11-14T16:28:01+00:00",
               "source": "benzinga",
-              "tone": -0.48384351315590585,
+              "tone": -0.7409605828671484,
               "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
             }
           ]
@@ -79,33 +79,33 @@
         {
           "symbol": "HOOD",
           "action": "SELL",
-          "px": 124.755,
+          "px": 123.785,
           "qty_hint": 4.0,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.276417,
+          "score": -0.289336,
           "qty": 0.4,
-          "notional": 49.9,
+          "notional": 49.51,
           "signals": {
-            "TS": -0.522569,
-            "NS": 0.09281,
-            "CDS": -0.276417,
+            "TS": -0.534264,
+            "NS": 0.078056,
+            "CDS": -0.289336,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 132.3141662280835,
-            "ema_slow": 133.97753368859327,
-            "macd": -1.663367460509761,
-            "macd_signal": 0.5878891870913652,
-            "macd_hist": -2.251256647601126,
+            "ema_fast": 132.16493545885274,
+            "ema_slow": 133.90568183674142,
+            "macd": -1.7407463778886836,
+            "macd_signal": 0.5724134036155808,
+            "macd_hist": -2.3131597815042646,
             "macd_hist_prev": -2.1774796449373413,
-            "rsi14": 38.739269150296245,
-            "sma20": 136.08200000000005
+            "rsi14": 37.29203344733514,
+            "sma20": 136.03350000000006
           },
           "guidance": {
-            "sma20": 136.082,
-            "buy_on_dip_below": 134.7212,
-            "trim_above": 146.9686
+            "sma20": 136.0335,
+            "buy_on_dip_below": 134.6732,
+            "trim_above": 146.9162
           },
           "phase": "mid",
           "size_k_guidance": 0.4,
@@ -119,421 +119,59 @@
               "headline": "Why Robinhood (HOOD) Stock Is Up Today"
             },
             {
-              "ts": "2025-11-14T19:01:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T17:38:19+00:00",
-              "source": "benzinga",
-              "tone": 0.618863170894982,
-              "headline": "4 Winners To Consider Selling As Markets Get Volatile"
-            }
-          ]
-        },
-        {
-          "symbol": "RGTI",
-          "action": "SELL",
-          "px": 25.785,
-          "qty_hint": 6.17,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.313013,
-          "qty": 0.4,
-          "notional": 10.31,
-          "signals": {
-            "TS": -0.607791,
-            "NS": 0.129154,
-            "CDS": -0.313013,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 32.453625826820385,
-            "ema_slow": 35.06044791781974,
-            "macd": -2.6068220909993514,
-            "macd_signal": -0.6465781011113279,
-            "macd_hist": -1.9602439898880235,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi14": 24.634934151043026,
-            "sma20": 36.233249999999984
-          },
-          "guidance": {
-            "sma20": 36.2332,
-            "buy_on_dip_below": 35.8709,
-            "trim_above": 39.1319
-          },
-          "phase": "early",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:06:21+00:00",
-              "source": "benzinga",
-              "tone": 0.873711102660322,
-              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
-            },
-            {
-              "ts": "2025-11-14T16:18:15+00:00",
-              "source": "finviz",
-              "tone": 0.0,
-              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
-            },
-            {
-              "ts": "2025-11-14T14:33:32+00:00",
-              "source": "marketbeat",
-              "tone": -0.8114761747317255,
-              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
-            }
-          ]
-        },
-        {
-          "symbol": "ABBV",
-          "action": "BUY",
-          "px": 234.265,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|topped_by_rotation",
-          "score": 0.573452,
-          "qty": 1.241835,
-          "notional": 290.92,
-          "signals": {
-            "TS": 0.680032,
-            "NS": 0.413583,
-            "CDS": 0.573452,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 226.19298702588583,
-            "ema_slow": 225.20551308889708,
-            "macd": 0.9874739369887493,
-            "macd_signal": -0.3267760534089117,
-            "macd_hist": 1.314249990397661,
-            "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 71.14438160427808,
-            "sma20": 225.11474999999982
-          },
-          "guidance": {
-            "sma20": 225.1147,
-            "buy_on_dip_below": 222.8636,
-            "trim_above": 243.1239
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.5249999999999999,
-          "qty_prev": 0.268905,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:35:28+00:00",
-              "source": "benzinga",
-              "tone": 0.6407485192398554,
-              "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-14T17:30:00+00:00",
-              "source": "yahoo",
-              "tone": 0.9591586739162177,
-              "headline": "AbbVie Partners with Award-Winning Filmmaker on Film About the Dynamic and Resilient Lives of Those Living with Blood Cancer"
-            },
-            {
-              "ts": "2025-11-14T17:30:00+00:00",
-              "source": "stocktitan",
-              "tone": 0.0,
-              "headline": "AbbVie (NYSE: ABBV) debuts Second Winds CLL film; YouTube, Documentary+ in Dec 2025"
-            }
-          ]
-        },
-        {
-          "symbol": "ILMN",
-          "action": "BUY",
-          "px": 120.58,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation",
-          "score": 0.542285,
-          "qty": 1.890247,
-          "notional": 227.92,
-          "signals": {
-            "TS": 0.631632,
-            "NS": 0.408263,
-            "CDS": 0.542285,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 117.41100668270167,
-            "ema_slow": 111.0503394057137,
-            "macd": 6.360667276987968,
-            "macd_signal": 5.618689839070128,
-            "macd_hist": 0.7419774379178401,
-            "macd_hist_prev": 1.1136640417950305,
-            "rsi14": 63.772181786197095,
-            "sma20": 111.0195
-          },
-          "guidance": {
-            "sma20": 111.0195,
-            "buy_on_dip_below": 109.9093,
-            "trim_above": 119.9011
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.20473451249999997,
-          "qty_prev": 2e-05,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T14:32:34+00:00",
-              "source": "simplywallst",
-              "tone": 0.6310984941968854,
-              "headline": "Does the Recent 29% Rally Signal a New Opportunity for Illumina Stock?"
-            },
-            {
-              "ts": "2025-11-14T04:38:23+00:00",
-              "source": "yahoo",
-              "tone": 0.7334968084786785,
-              "headline": "1 Momentum  Stock with Promising Prospects and 2 We Avoid"
-            },
-            {
-              "ts": "2025-11-13T19:41:45+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How high can ILMN stock go - July 2025 Recap & AI Powered Market Trend Analysis"
-            }
-          ]
-        },
-        {
-          "symbol": "RGTI",
-          "action": "SELL",
-          "px": 25.785,
-          "qty": 1.5425,
-          "notional": 39.77,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.607791,
-            "NS": 0.129154,
-            "CDS": -0.313013,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 32.453625826820385,
-            "ema_slow": 35.06044791781974,
-            "macd": -2.6068220909993514,
-            "macd_signal": -0.6465781011113279,
-            "macd_hist": -1.9602439898880235,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi": 24.634934151043026,
-            "rsi_prev": 21.93051511273832,
-            "sma20": 36.233249999999984,
-            "ma50": 34.472100000000026,
-            "ma200": 17.522199999999998,
-            "prev_close": 25.2,
-            "price": 25.785
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:06:21+00:00",
-              "source": "benzinga",
-              "tone": 0.873711102660322,
-              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
-            },
-            {
-              "ts": "2025-11-14T16:18:15+00:00",
-              "source": "finviz",
-              "tone": 0.0,
-              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
-            },
-            {
-              "ts": "2025-11-14T14:33:32+00:00",
-              "source": "marketbeat",
-              "tone": -0.8114761747317255,
-              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
-            }
-          ]
-        },
-        {
-          "symbol": "ASTS",
-          "action": "SELL",
-          "px": 62.2,
-          "qty": 1.8725,
-          "notional": 116.47,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.544831,
-            "NS": 0.041015,
-            "CDS": -0.310492,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 68.07495052827738,
-            "ema_slow": 69.82321733428131,
-            "macd": -1.748266806003926,
-            "macd_signal": 0.4410698227849836,
-            "macd_hist": -2.1893366287889093,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi": 31.272100698110265,
-            "rsi_prev": 28.405782482658395,
-            "sma20": 72.16100000000007,
-            "ma50": 64.82380000000003,
-            "ma200": 42.479924999999994,
-            "prev_close": 61.39,
-            "price": 62.2
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:03:31+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
-            },
-            {
-              "ts": "2025-11-14T16:46:13+00:00",
-              "source": "newsercom",
-              "tone": 0.6612415840412146,
-              "headline": "Will ASTS stock benefit from green energy trends - Weekly Investment Report & Free Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-14T16:28:08+00:00",
-              "source": "benzinga",
-              "tone": -0.48384351315590585,
-              "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
-            }
-          ]
-        },
-        {
-          "symbol": "HOOD",
-          "action": "SELL",
-          "px": 124.755,
-          "qty": 1.0,
-          "notional": 124.75,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.522569,
-            "NS": 0.09281,
-            "CDS": -0.276417,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 132.3141662280835,
-            "ema_slow": 133.97753368859327,
-            "macd": -1.663367460509761,
-            "macd_signal": 0.5878891870913652,
-            "macd_hist": -2.251256647601126,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi": 38.739269150296245,
-            "rsi_prev": 33.60519321214082,
-            "sma20": 136.08200000000005,
-            "ma50": 132.83599999999987,
-            "ma200": 85.94850000000001,
-            "prev_close": 121.505,
-            "price": 124.755
-          },
-          "news_preview": [
-            {
               "ts": "2025-11-14T19:01:14+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:01:00+00:00",
-              "source": "financialcontent",
+              "source": "tradingview",
               "tone": 0.0,
               "headline": "Why Robinhood (HOOD) Stock Is Up Today"
             },
             {
               "ts": "2025-11-14T17:38:19+00:00",
               "source": "benzinga",
-              "tone": 0.618863170894982,
+              "tone": 0.6037030781259818,
               "headline": "4 Winners To Consider Selling As Markets Get Volatile"
-            }
-          ]
-        },
-        {
-          "symbol": "RKLB",
-          "action": "SELL",
-          "px": 46.33,
-          "qty": 1.5675,
-          "notional": 72.62,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.595794,
-            "NS": 0.271455,
-            "CDS": -0.248895,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 52.69018114012298,
-            "ema_slow": 55.71805880873601,
-            "macd": -3.02787766861303,
-            "macd_signal": -1.0538140903740267,
-            "macd_hist": -1.9740635782390032,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi": 25.634276153590932,
-            "rsi_prev": 20.561771723486984,
-            "sma20": 58.05649999999997,
-            "ma50": 55.91770000000003,
-            "ma200": 36.513824999999976,
-            "prev_close": 45.245,
-            "price": 46.33
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T19:00:58+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:00:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T15:13:39+00:00",
-              "source": "benzinga",
-              "tone": 0.7558744618647691,
-              "headline": "What's Going On With Rocket Lab Stock Today?"
             }
           ]
         },
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 23.98,
-          "qty": 4.263008,
-          "notional": 102.23,
-          "reason": "rotation_upgrade",
+          "px": 23.61,
+          "qty_hint": 230.08,
+          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "score": -0.26268,
+          "qty": 22.8,
+          "notional": 538.31,
           "signals": {
-            "TS": -0.603489,
-            "NS": 0.286637,
-            "CDS": -0.247439,
+            "TS": -0.618793,
+            "NS": 0.271488,
+            "CDS": -0.26268,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 28.544223712573796,
-            "ema_slow": 30.02098042572448,
-            "macd": -1.4767567131506851,
-            "macd_signal": -0.15615338767172024,
-            "macd_hist": -1.3206033254789649,
+            "ema_fast": 28.48730063565072,
+            "ema_slow": 29.993573018317072,
+            "macd": -1.5062723826663529,
+            "macd_signal": -0.1620565215748538,
+            "macd_hist": -1.3442158610914992,
             "macd_hist_prev": -1.3041737340750612,
-            "rsi": 29.543591634929072,
-            "rsi_prev": 26.377210175241572,
-            "sma20": 30.789499999999983,
-            "ma50": 29.20670000000001,
-            "ma200": 16.296575,
-            "prev_close": 23.37,
-            "price": 23.98
+            "rsi14": 27.656368917330695,
+            "sma20": 30.77099999999998
           },
+          "guidance": {
+            "sma20": 30.771,
+            "buy_on_dip_below": 30.4633,
+            "trim_above": 33.2327
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.4,
+          "size_k": 0.4,
+          "qty_prev": 57.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
               "source": "benzinga",
-              "tone": 0.8737413636830015,
+              "tone": 0.8523482129193393,
               "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
             },
             {
@@ -545,125 +183,621 @@
             {
               "ts": "2025-11-14T16:21:18+00:00",
               "source": "marketbeat",
-              "tone": 0.6655738521555669,
+              "tone": 0.6492776012448278,
               "headline": "D-Wave Quantum (NYSE:QBTS) Shares Gap Down Following Insider Selling"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 25.4,
+          "qty_hint": 6.17,
+          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "score": -0.354895,
+          "qty": 0.4,
+          "notional": 10.16,
+          "signals": {
+            "TS": -0.662044,
+            "NS": 0.105828,
+            "CDS": -0.354895,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 32.39439505758961,
+            "ema_slow": 35.03192939930122,
+            "macd": -2.637534341711607,
+            "macd_signal": -0.6527205512537789,
+            "macd_hist": -1.984813790457828,
+            "macd_hist_prev": -1.9798633977273585,
+            "rsi14": 22.876673373143817,
+            "sma20": 36.213999999999984
+          },
+          "guidance": {
+            "sma20": 36.214,
+            "buy_on_dip_below": 35.8519,
+            "trim_above": 39.1111
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.4,
+          "size_k": 0.4,
+          "qty_prev": 1.0,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T18:06:21+00:00",
+              "source": "benzinga",
+              "tone": 0.8523199773153232,
+              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
+            },
+            {
+              "ts": "2025-11-14T16:18:15+00:00",
+              "source": "finviz",
+              "tone": 0.0,
+              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
+            },
+            {
+              "ts": "2025-11-14T14:33:32+00:00",
+              "source": "marketbeat",
+              "tone": -0.791608771774483,
+              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
+            }
+          ]
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 45.5,
+          "qty_hint": 6.27,
+          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "score": -0.292598,
+          "qty": 0.4,
+          "notional": 18.2,
+          "signals": {
+            "TS": -0.626597,
+            "NS": 0.208402,
+            "CDS": -0.292598,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 52.562488832430674,
+            "ema_slow": 55.656577327254524,
+            "macd": -3.0940884948238505,
+            "macd_signal": -1.0670562556161909,
+            "macd_hist": -2.0270322392076596,
+            "macd_hist_prev": -2.0622276065661755,
+            "rsi14": 21.815151453579446,
+            "sma20": 58.01499999999997
+          },
+          "guidance": {
+            "sma20": 58.015,
+            "buy_on_dip_below": 57.4348,
+            "trim_above": 62.6562
+          },
+          "phase": "early",
+          "size_k_guidance": 0.4,
+          "size_k": 0.4,
+          "qty_prev": 1.0,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
+              "ts": "2025-11-14T19:01:08+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            },
+            {
+              "ts": "2025-11-14T19:00:58+00:00",
+              "source": "yahoofinance",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            }
+          ]
+        },
+        {
+          "symbol": "ABBV",
+          "action": "BUY",
+          "px": 233.865,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|topped_by_rotation",
+          "score": 0.567034,
+          "qty": 1.1998980000000001,
+          "notional": 280.62,
+          "signals": {
+            "TS": 0.675874,
+            "NS": 0.403774,
+            "CDS": 0.567034,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 226.13144856434738,
+            "ema_slow": 225.17588345926742,
+            "macd": 0.9555651050799554,
+            "macd_signal": -0.33315781979067044,
+            "macd_hist": 1.2887229248706258,
+            "macd_hist_prev": 0.8999327183190924,
+            "rsi14": 70.62825177911542,
+            "sma20": 225.0947499999998
+          },
+          "guidance": {
+            "sma20": 225.0947,
+            "buy_on_dip_below": 222.8438,
+            "trim_above": 243.1023
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.7,
+          "size_k": 0.5249999999999999,
+          "qty_prev": 0.269377,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T17:35:28+00:00",
+              "source": "benzinga",
+              "tone": 0.6250490833147406,
+              "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
+            },
+            {
+              "ts": "2025-11-14T17:30:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9356576453328684,
+              "headline": "AbbVie Partners with Award-Winning Filmmaker on Film About the Dynamic and Resilient Lives of Those Living with Blood Cancer"
+            },
+            {
+              "ts": "2025-11-14T17:30:00+00:00",
+              "source": "stocktitan",
+              "tone": 0.0,
+              "headline": "AbbVie (NYSE: ABBV) debuts Second Winds CLL film; YouTube, Documentary+ in Dec 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "LYFT",
+          "action": "BUY",
+          "px": 23.27,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation",
+          "score": 0.505576,
+          "qty": 9.351833,
+          "notional": 217.62,
+          "signals": {
+            "TS": 0.60837,
+            "NS": 0.351386,
+            "CDS": 0.505576,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 22.455702718293317,
+            "ema_slow": 21.540055888234388,
+            "macd": 0.9156468300589289,
+            "macd_signal": 0.5589185995473999,
+            "macd_hist": 0.356728230511529,
+            "macd_hist_prev": 0.4362517658612636,
+            "rsi14": 61.23360801239582,
+            "sma20": 21.317500000000013
+          },
+          "guidance": {
+            "sma20": 21.3175,
+            "buy_on_dip_below": 21.1043,
+            "trim_above": 23.0229
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.17968061999999999,
+          "qty_prev": 3.6e-05,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:04:15+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Key facts: Lyft's stock drops 3.8%; launches U.K. robotaxi contest"
+            },
+            {
+              "ts": "2025-11-14T15:37:24+00:00",
+              "source": "simplywallst",
+              "tone": 0.6296160177599551,
+              "headline": "Lyft (LYFT): Assessing Valuation Following Strong Recent Share Price Gains"
+            },
+            {
+              "ts": "2025-11-14T13:46:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.7788866550639616,
+              "headline": "Jupiter Asset Management Ltd. Sells 653,127 Shares of Lyft, Inc. $LYFT"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 61.715,
+          "qty": 1.8725,
+          "notional": 115.56,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.558448,
+            "NS": -0.150702,
+            "CDS": -0.39535,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 68.000335143662,
+            "ema_slow": 69.78729140835539,
+            "macd": -1.7869562646933872,
+            "macd_signal": 0.43333193104709133,
+            "macd_hist": -2.2202881957404785,
+            "macd_hist_prev": -2.2783553494054747,
+            "rsi": 29.58409486671465,
+            "rsi_prev": 28.405782482658395,
+            "sma20": 72.13675000000006,
+            "ma50": 64.81410000000004,
+            "ma200": 42.47749999999999,
+            "prev_close": 61.39,
+            "price": 61.715
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
+              "ts": "2025-11-14T17:03:31+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
+            },
+            {
+              "ts": "2025-11-14T16:28:01+00:00",
+              "source": "benzinga",
+              "tone": -0.7409605828671484,
+              "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 25.4,
+          "qty": 1.5425,
+          "notional": 39.18,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.662044,
+            "NS": 0.105828,
+            "CDS": -0.354895,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 32.39439505758961,
+            "ema_slow": 35.03192939930122,
+            "macd": -2.637534341711607,
+            "macd_signal": -0.6527205512537789,
+            "macd_hist": -1.984813790457828,
+            "macd_hist_prev": -1.9798633977273585,
+            "rsi": 22.876673373143817,
+            "rsi_prev": 21.93051511273832,
+            "sma20": 36.213999999999984,
+            "ma50": 34.464400000000026,
+            "ma200": 17.520274999999998,
+            "prev_close": 25.2,
+            "price": 25.4
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T18:06:21+00:00",
+              "source": "benzinga",
+              "tone": 0.8523199773153232,
+              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
+            },
+            {
+              "ts": "2025-11-14T16:18:15+00:00",
+              "source": "finviz",
+              "tone": 0.0,
+              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
+            },
+            {
+              "ts": "2025-11-14T14:33:32+00:00",
+              "source": "marketbeat",
+              "tone": -0.791608771774483,
+              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
+            }
+          ]
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 45.5,
+          "qty": 1.5675,
+          "notional": 71.32,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.626597,
+            "NS": 0.208402,
+            "CDS": -0.292598,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 52.562488832430674,
+            "ema_slow": 55.656577327254524,
+            "macd": -3.0940884948238505,
+            "macd_signal": -1.0670562556161909,
+            "macd_hist": -2.0270322392076596,
+            "macd_hist_prev": -2.0622276065661755,
+            "rsi": 21.815151453579446,
+            "rsi_prev": 20.561771723486984,
+            "sma20": 58.01499999999997,
+            "ma50": 55.901100000000035,
+            "ma200": 36.50967499999998,
+            "prev_close": 45.245,
+            "price": 45.5
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
+              "ts": "2025-11-14T19:01:08+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            },
+            {
+              "ts": "2025-11-14T19:00:58+00:00",
+              "source": "yahoofinance",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            }
+          ]
+        },
+        {
+          "symbol": "JPM",
+          "action": "SELL",
+          "px": 303.68,
+          "qty": 0.375,
+          "notional": 113.88,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.533797,
+            "NS": 0.076086,
+            "CDS": -0.289844,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 310.6466004633503,
+            "ema_slow": 308.6063356559571,
+            "macd": 2.040264807393214,
+            "macd_signal": 2.06038780138457,
+            "macd_hist": -0.020122993991355642,
+            "macd_hist_prev": 0.8473940347342799,
+            "rsi": 36.85761373645001,
+            "rsi_prev": 45.83108708198277,
+            "sma20": 307.4040000000001,
+            "ma50": 307.53519999999986,
+            "ma200": 277.168225,
+            "prev_close": 309.37,
+            "price": 303.68
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T19:20:39+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "JPMorgan Stock (JPM) Falls as Trump Seeks Probe into Ties with Jeffrey Epstein"
+            },
+            {
+              "ts": "2025-11-14T18:41:37+00:00",
+              "source": "tipranks",
+              "tone": -0.2327805367034954,
+              "headline": "J.P. Morgan Turns Cautious on CoreWeave Stock (CRWV) after Q3 Earnings"
+            },
+            {
+              "ts": "2025-11-14T18:17:23+00:00",
+              "source": "coincentral",
+              "tone": -0.611420099819314,
+              "headline": "JPMorgan Chase & Co. (JPM) Stock: Bank Strikes Key Data Access Deals With Fintech Aggregators"
+            }
+          ]
+        },
+        {
+          "symbol": "HOOD",
+          "action": "SELL",
+          "px": 123.785,
+          "qty": 0.769807,
+          "notional": 95.29,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.534264,
+            "NS": 0.078056,
+            "CDS": -0.289336,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 132.16493545885274,
+            "ema_slow": 133.90568183674142,
+            "macd": -1.7407463778886836,
+            "macd_signal": 0.5724134036155808,
+            "macd_hist": -2.3131597815042646,
+            "macd_hist_prev": -2.1774796449373413,
+            "rsi": 37.29203344733514,
+            "rsi_prev": 33.60519321214082,
+            "sma20": 136.03350000000006,
+            "ma50": 132.81659999999985,
+            "ma200": 85.94364999999999,
+            "prev_close": 121.505,
+            "price": 123.785
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T19:01:14+00:00",
+              "source": "yahoofinance",
+              "tone": 0.0,
+              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
+            },
+            {
+              "ts": "2025-11-14T19:01:14+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
+            },
+            {
+              "ts": "2025-11-14T17:38:19+00:00",
+              "source": "benzinga",
+              "tone": 0.6037030781259818,
+              "headline": "4 Winners To Consider Selling As Markets Get Volatile"
             }
           ]
         }
       ],
-      "cash_left": 22.1,
+      "cash_left": 577.87,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "ABBV",
-            "cds": 0.573452,
+            "cds": 0.567034,
             "size_k": 0.5249999999999999,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 1.241835,
-            "px": 234.265,
-            "notional": 290.92,
+            "qty": 1.1998980000000001,
+            "px": 233.865,
+            "notional": 280.62,
             "reason": "score>buy|guidance:above_dip_level|topped_by_rotation"
           },
           {
-            "symbol": "ILMN",
-            "cds": 0.542285,
-            "size_k": 0.20473451249999997,
+            "symbol": "LYFT",
+            "cds": 0.505576,
+            "size_k": 0.17968061999999999,
             "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 1.890247,
-            "px": 120.58,
-            "notional": 227.92,
+            "qty": 9.351833,
+            "px": 23.27,
+            "notional": 217.62,
             "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation"
           }
         ],
         "sell_sizing": [
           {
             "symbol": "ASTS",
-            "cds": -0.310492,
+            "cds": -0.39535,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "early",
             "qty": 0.4,
-            "px": 62.2,
-            "notional": 24.88,
+            "px": 61.715,
+            "notional": 24.69,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "HOOD",
-            "cds": -0.276417,
+            "cds": -0.289336,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "mid",
             "qty": 0.4,
-            "px": 124.755,
-            "notional": 49.9,
+            "px": 123.785,
+            "notional": 49.51,
+            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+          },
+          {
+            "symbol": "QBTS",
+            "cds": -0.26268,
+            "size_k": 0.4,
+            "size_k_guidance": 0.4,
+            "phase": "mid",
+            "qty": 22.8,
+            "px": 23.61,
+            "notional": 538.31,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "RGTI",
-            "cds": -0.313013,
+            "cds": -0.354895,
+            "size_k": 0.4,
+            "size_k_guidance": 0.4,
+            "phase": "mid",
+            "qty": 0.4,
+            "px": 25.4,
+            "notional": 10.16,
+            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+          },
+          {
+            "symbol": "RKLB",
+            "cds": -0.292598,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "early",
             "qty": 0.4,
-            "px": 25.785,
-            "notional": 10.31,
+            "px": 45.5,
+            "notional": 18.2,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
-            "symbol": "RGTI",
-            "cds": -0.313013,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 1.5425,
-            "px": 25.785,
-            "notional": 39.77,
-            "reason": "rotation_upgrade"
-          },
-          {
             "symbol": "ASTS",
-            "cds": -0.310492,
+            "cds": -0.39535,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
             "qty": 1.8725,
-            "px": 62.2,
-            "notional": 116.47,
+            "px": 61.715,
+            "notional": 115.56,
             "reason": "rotation_upgrade"
           },
           {
-            "symbol": "HOOD",
-            "cds": -0.276417,
+            "symbol": "RGTI",
+            "cds": -0.354895,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
-            "qty": 1.0,
-            "px": 124.755,
-            "notional": 124.75,
+            "qty": 1.5425,
+            "px": 25.4,
+            "notional": 39.18,
             "reason": "rotation_upgrade"
           },
           {
             "symbol": "RKLB",
-            "cds": -0.248895,
+            "cds": -0.292598,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
             "qty": 1.5675,
-            "px": 46.33,
-            "notional": 72.62,
+            "px": 45.5,
+            "notional": 71.32,
             "reason": "rotation_upgrade"
           },
           {
-            "symbol": "QBTS",
-            "cds": -0.247439,
+            "symbol": "JPM",
+            "cds": -0.289844,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
-            "qty": 4.263008,
-            "px": 23.98,
-            "notional": 102.23,
+            "qty": 0.375,
+            "px": 303.68,
+            "notional": 113.88,
+            "reason": "rotation_upgrade"
+          },
+          {
+            "symbol": "HOOD",
+            "cds": -0.289336,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
+            "phase": null,
+            "qty": 0.769807,
+            "px": 123.785,
+            "notional": 95.29,
             "reason": "rotation_upgrade"
           }
         ]
@@ -685,39 +819,39 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 23700.15,
+      "portfolio_value_est": 23567.72,
       "cash_start": 120.0,
       "trades": [
         {
           "symbol": "ASTS",
           "action": "SELL",
-          "px": 62.2,
+          "px": 61.715,
           "qty_hint": 7.49,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.544831,
+          "score": -0.558448,
           "qty": 0.4,
-          "notional": 24.88,
+          "notional": 24.69,
           "signals": {
-            "TS": -0.544831,
-            "NS": 0.041015,
-            "CDS": -0.310492,
+            "TS": -0.558448,
+            "NS": -0.150702,
+            "CDS": -0.39535,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 68.07495052827738,
-            "ema_slow": 69.82321733428131,
-            "macd": -1.748266806003926,
-            "macd_signal": 0.4410698227849836,
-            "macd_hist": -2.1893366287889093,
+            "ema_fast": 68.000335143662,
+            "ema_slow": 69.78729140835539,
+            "macd": -1.7869562646933872,
+            "macd_signal": 0.43333193104709133,
+            "macd_hist": -2.2202881957404785,
             "macd_hist_prev": -2.2783553494054747,
-            "rsi14": 31.272100698110265,
-            "sma20": 72.16100000000007
+            "rsi14": 29.58409486671465,
+            "sma20": 72.13675000000006
           },
           "guidance": {
-            "sma20": 72.161,
-            "buy_on_dip_below": 71.4394,
-            "trim_above": 77.9339
+            "sma20": 72.1368,
+            "buy_on_dip_below": 71.4154,
+            "trim_above": 77.9077
           },
           "phase": "early",
           "size_k_guidance": 0.4,
@@ -725,21 +859,21 @@
           "qty_prev": 1.0,
           "news_preview": [
             {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
               "ts": "2025-11-14T17:03:31+00:00",
               "source": "marketbeat",
               "tone": 0.0,
               "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
             },
             {
-              "ts": "2025-11-14T16:46:13+00:00",
-              "source": "newsercom",
-              "tone": 0.6612415840412146,
-              "headline": "Will ASTS stock benefit from green energy trends - Weekly Investment Report & Free Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-14T16:28:08+00:00",
+              "ts": "2025-11-14T16:28:01+00:00",
               "source": "benzinga",
-              "tone": -0.48384351315590585,
+              "tone": -0.7409605828671484,
               "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
             }
           ]
@@ -747,33 +881,33 @@
         {
           "symbol": "HOOD",
           "action": "SELL",
-          "px": 124.755,
+          "px": 123.785,
           "qty_hint": 4.0,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.522569,
+          "score": -0.534264,
           "qty": 0.4,
-          "notional": 49.9,
+          "notional": 49.51,
           "signals": {
-            "TS": -0.522569,
-            "NS": 0.09281,
-            "CDS": -0.276417,
+            "TS": -0.534264,
+            "NS": 0.078056,
+            "CDS": -0.289336,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 132.3141662280835,
-            "ema_slow": 133.97753368859327,
-            "macd": -1.663367460509761,
-            "macd_signal": 0.5878891870913652,
-            "macd_hist": -2.251256647601126,
+            "ema_fast": 132.16493545885274,
+            "ema_slow": 133.90568183674142,
+            "macd": -1.7407463778886836,
+            "macd_signal": 0.5724134036155808,
+            "macd_hist": -2.3131597815042646,
             "macd_hist_prev": -2.1774796449373413,
-            "rsi14": 38.739269150296245,
-            "sma20": 136.08200000000005
+            "rsi14": 37.29203344733514,
+            "sma20": 136.03350000000006
           },
           "guidance": {
-            "sma20": 136.082,
-            "buy_on_dip_below": 134.7212,
-            "trim_above": 146.9686
+            "sma20": 136.0335,
+            "buy_on_dip_below": 134.6732,
+            "trim_above": 146.9162
           },
           "phase": "mid",
           "size_k_guidance": 0.4,
@@ -787,15 +921,15 @@
               "headline": "Why Robinhood (HOOD) Stock Is Up Today"
             },
             {
-              "ts": "2025-11-14T19:01:00+00:00",
-              "source": "financialcontent",
+              "ts": "2025-11-14T19:01:14+00:00",
+              "source": "tradingview",
               "tone": 0.0,
               "headline": "Why Robinhood (HOOD) Stock Is Up Today"
             },
             {
               "ts": "2025-11-14T17:38:19+00:00",
               "source": "benzinga",
-              "tone": 0.618863170894982,
+              "tone": 0.6037030781259818,
               "headline": "4 Winners To Consider Selling As Markets Get Volatile"
             }
           ]
@@ -803,88 +937,88 @@
         {
           "symbol": "NVDA",
           "action": "SELL",
-          "px": 189.9,
+          "px": 189.71,
           "qty_hint": 28.5,
           "reason": "score<sell|guidance:guidance_ok",
-          "score": -0.385278,
+          "score": -0.387758,
           "qty": 7,
-          "notional": 1329.3,
+          "notional": 1327.97,
           "signals": {
-            "TS": -0.385278,
-            "NS": 0.062347,
-            "CDS": -0.206228,
+            "TS": -0.387758,
+            "NS": 0.015936,
+            "CDS": -0.226281,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 192.6713329950843,
-            "ema_slow": 190.97551149193424,
-            "macd": 1.6958215031500572,
-            "macd_signal": 3.028312852006445,
-            "macd_hist": -1.3324913488563879,
+            "ema_fast": 192.64210222585353,
+            "ema_slow": 190.96143741786017,
+            "macd": 1.6806648079933666,
+            "macd_signal": 3.025281512975107,
+            "macd_hist": -1.3446167049817404,
             "macd_hist_prev": -1.2477763790462286,
-            "rsi14": 45.36817938866611,
-            "sma20": 192.8752500000001
+            "rsi14": 45.06017933815471,
+            "sma20": 192.8657500000001
           },
           "guidance": {
-            "sma20": 192.8753,
-            "buy_on_dip_below": 190.9465,
-            "trim_above": 208.3053
+            "sma20": 192.8658,
+            "buy_on_dip_below": 190.9371,
+            "trim_above": 208.295
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 1.0,
           "news_preview": [
             {
+              "ts": "2025-11-14T20:34:58+00:00",
+              "source": "yahoofinance",
+              "tone": -0.3178790507297537,
+              "headline": "Stock market today: Dow slips, Nasdaq and S&P 500 rebound amid growing doubts on Fed rate-cut path"
+            },
+            {
+              "ts": "2025-11-14T19:48:00+00:00",
+              "source": "investorsbusinessdaily",
+              "tone": -0.505707026581647,
+              "headline": "Stock Market Today: Dow Climbs Off Lows; Drug Stock Doubles On Merck Deal (Live Coverage)"
+            },
+            {
               "ts": "2025-11-14T19:16:24+00:00",
               "source": "benzinga",
-              "tone": 0.8953130630623275,
+              "tone": 0.873387064267201,
               "headline": "Magnificent Seven Loving Congressman Buys Stocks Again, But This Time Only Three Of The Seven"
-            },
-            {
-              "ts": "2025-11-14T18:57:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.7435454603657694,
-              "headline": "Stock Market Today: Dow Jones Climbs Off Lows; Nvidia Gains, But Amazon Makes This Move (Live Coverage)"
-            },
-            {
-              "ts": "2025-11-14T18:21:45+00:00",
-              "source": "tipranks",
-              "tone": 0.19521860851323392,
-              "headline": "This Billionaire Investor Bets Big on AMD and Nvidia (NVDA) Stocks, Stays Bullish on Banks"
             }
           ]
         },
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 23.98,
+          "px": 23.61,
           "qty_hint": 230.08,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.603489,
+          "score": -0.618793,
           "qty": 22.8,
-          "notional": 546.74,
+          "notional": 538.31,
           "signals": {
-            "TS": -0.603489,
-            "NS": 0.286637,
-            "CDS": -0.247439,
+            "TS": -0.618793,
+            "NS": 0.271488,
+            "CDS": -0.26268,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 28.544223712573796,
-            "ema_slow": 30.02098042572448,
-            "macd": -1.4767567131506851,
-            "macd_signal": -0.15615338767172024,
-            "macd_hist": -1.3206033254789649,
+            "ema_fast": 28.48730063565072,
+            "ema_slow": 29.993573018317072,
+            "macd": -1.5062723826663529,
+            "macd_signal": -0.1620565215748538,
+            "macd_hist": -1.3442158610914992,
             "macd_hist_prev": -1.3041737340750612,
-            "rsi14": 29.543591634929072,
-            "sma20": 30.789499999999983
+            "rsi14": 27.656368917330695,
+            "sma20": 30.77099999999998
           },
           "guidance": {
-            "sma20": 30.7895,
-            "buy_on_dip_below": 30.4816,
-            "trim_above": 33.2527
+            "sma20": 30.771,
+            "buy_on_dip_below": 30.4633,
+            "trim_above": 33.2327
           },
           "phase": "mid",
           "size_k_guidance": 0.4,
@@ -894,7 +1028,7 @@
             {
               "ts": "2025-11-14T18:06:21+00:00",
               "source": "benzinga",
-              "tone": 0.8737413636830015,
+              "tone": 0.8523482129193393,
               "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
             },
             {
@@ -906,7 +1040,7 @@
             {
               "ts": "2025-11-14T16:21:18+00:00",
               "source": "marketbeat",
-              "tone": 0.6655738521555669,
+              "tone": 0.6492776012448278,
               "headline": "D-Wave Quantum (NYSE:QBTS) Shares Gap Down Following Insider Selling"
             }
           ]
@@ -914,35 +1048,35 @@
         {
           "symbol": "RGTI",
           "action": "SELL",
-          "px": 25.785,
+          "px": 25.4,
           "qty_hint": 6.17,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.607791,
+          "score": -0.662044,
           "qty": 0.4,
-          "notional": 10.31,
+          "notional": 10.16,
           "signals": {
-            "TS": -0.607791,
-            "NS": 0.129154,
-            "CDS": -0.313013,
+            "TS": -0.662044,
+            "NS": 0.105828,
+            "CDS": -0.354895,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.453625826820385,
-            "ema_slow": 35.06044791781974,
-            "macd": -2.6068220909993514,
-            "macd_signal": -0.6465781011113279,
-            "macd_hist": -1.9602439898880235,
+            "ema_fast": 32.39439505758961,
+            "ema_slow": 35.03192939930122,
+            "macd": -2.637534341711607,
+            "macd_signal": -0.6527205512537789,
+            "macd_hist": -1.984813790457828,
             "macd_hist_prev": -1.9798633977273585,
-            "rsi14": 24.634934151043026,
-            "sma20": 36.233249999999984
+            "rsi14": 22.876673373143817,
+            "sma20": 36.213999999999984
           },
           "guidance": {
-            "sma20": 36.2332,
-            "buy_on_dip_below": 35.8709,
-            "trim_above": 39.1319
+            "sma20": 36.214,
+            "buy_on_dip_below": 35.8519,
+            "trim_above": 39.1111
           },
-          "phase": "early",
+          "phase": "mid",
           "size_k_guidance": 0.4,
           "size_k": 0.4,
           "qty_prev": 1.0,
@@ -950,7 +1084,7 @@
             {
               "ts": "2025-11-14T18:06:21+00:00",
               "source": "benzinga",
-              "tone": 0.873711102660322,
+              "tone": 0.8523199773153232,
               "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
             },
             {
@@ -962,7 +1096,7 @@
             {
               "ts": "2025-11-14T14:33:32+00:00",
               "source": "marketbeat",
-              "tone": -0.8114761747317255,
+              "tone": -0.791608771774483,
               "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
             }
           ]
@@ -970,33 +1104,33 @@
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 46.33,
+          "px": 45.5,
           "qty_hint": 6.27,
           "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.595794,
+          "score": -0.626597,
           "qty": 0.4,
-          "notional": 18.53,
+          "notional": 18.2,
           "signals": {
-            "TS": -0.595794,
-            "NS": 0.271455,
-            "CDS": -0.248895,
+            "TS": -0.626597,
+            "NS": 0.208402,
+            "CDS": -0.292598,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 52.69018114012298,
-            "ema_slow": 55.71805880873601,
-            "macd": -3.02787766861303,
-            "macd_signal": -1.0538140903740267,
-            "macd_hist": -1.9740635782390032,
+            "ema_fast": 52.562488832430674,
+            "ema_slow": 55.656577327254524,
+            "macd": -3.0940884948238505,
+            "macd_signal": -1.0670562556161909,
+            "macd_hist": -2.0270322392076596,
             "macd_hist_prev": -2.0622276065661755,
-            "rsi14": 25.634276153590932,
-            "sma20": 58.05649999999997
+            "rsi14": 21.815151453579446,
+            "sma20": 58.01499999999997
           },
           "guidance": {
-            "sma20": 58.0565,
-            "buy_on_dip_below": 57.4759,
-            "trim_above": 62.701
+            "sma20": 58.015,
+            "buy_on_dip_below": 57.4348,
+            "trim_above": 62.6562
           },
           "phase": "early",
           "size_k_guidance": 0.4,
@@ -1004,55 +1138,55 @@
           "qty_prev": 1.0,
           "news_preview": [
             {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
+              "ts": "2025-11-14T19:01:08+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            },
+            {
               "ts": "2025-11-14T19:00:58+00:00",
               "source": "yahoofinance",
               "tone": 0.0,
               "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:00:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T15:13:39+00:00",
-              "source": "benzinga",
-              "tone": 0.7558744618647691,
-              "headline": "What's Going On With Rocket Lab Stock Today?"
             }
           ]
         },
         {
           "symbol": "VTI",
           "action": "SELL",
-          "px": 330.89,
+          "px": 330.03,
           "qty_hint": 9.48,
           "reason": "score<sell|guidance:mid_zone_partial_trim",
-          "score": -0.397542,
+          "score": -0.421619,
           "qty": 1.4,
-          "notional": 463.25,
+          "notional": 462.04,
           "signals": {
-            "TS": -0.397542,
-            "NS": 0.046795,
-            "CDS": -0.219807,
+            "TS": -0.421619,
+            "NS": 0.10062,
+            "CDS": -0.212724,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 332.6986478667809,
-            "ema_slow": 331.69094861718423,
-            "macd": 1.0076992495966692,
-            "macd_signal": 1.5928631851804038,
-            "macd_hist": -0.5851639355837346,
+            "ema_fast": 332.56634017447317,
+            "ema_slow": 331.6272449134805,
+            "macd": 0.9390952609926444,
+            "macd_signal": 1.5791423874595987,
+            "macd_hist": -0.6400471264669543,
             "macd_hist_prev": -0.4666857421670241,
-            "rsi14": 43.98124789998728,
-            "sma20": 333.26575
+            "rsi14": 40.976735677875816,
+            "sma20": 333.22275
           },
           "guidance": {
-            "sma20": 333.2658,
-            "buy_on_dip_below": 329.9331,
-            "trim_above": 359.927
+            "sma20": 333.2228,
+            "buy_on_dip_below": 329.8905,
+            "trim_above": 359.8806
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
@@ -1062,7 +1196,7 @@
             {
               "ts": "2025-11-14T16:46:28+00:00",
               "source": "benzinga",
-              "tone": -0.8117044705828045,
+              "tone": -0.7918383407956058,
               "headline": "Benzinga Market Summary: S&P Rebounds Following Premarket Weakness, Oil Climbs On Supply Concerns From Russia And Iran Disruptions, Memory Chip Stocks Rise On Reports Of Samsung Raising Prices"
             },
             {
@@ -1072,49 +1206,55 @@
               "headline": "VTI ETF Daily Report\u201411/14/2025"
             },
             {
-              "ts": "2025-11-14T13:32:50+00:00",
+              "ts": "2025-11-14T14:30:57+00:00",
               "source": "seekingalpha",
-              "tone": 0.794394374263609,
-              "headline": "S&P 500: Bears Emphasize Record P/E, But Overlook Record Profit Margins"
+              "tone": 0.5223686689244652,
+              "headline": "S&P 500: A Chart Bears Love To Misread"
             }
           ]
         },
         {
           "symbol": "XLV",
           "action": "BUY",
-          "px": 152.625,
+          "px": 152.405,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|topped_by_rotation",
-          "score": 0.824132,
-          "qty": 2.925561,
-          "notional": 446.51,
+          "reason": "score>buy|guidance:above_dip_level",
+          "score": 0.800385,
+          "qty": 0.144685,
+          "notional": 22.05,
           "signals": {
-            "TS": 0.824132,
-            "NS": 0.036177,
-            "CDS": 0.50895,
+            "TS": 0.800385,
+            "NS": -0.087636,
+            "CDS": 0.445177,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 148.7966972225167,
-            "ema_slow": 146.281225873109,
-            "macd": 2.5154713494077043,
-            "macd_signal": 1.8611853009697183,
-            "macd_hist": 0.654286048437986,
+            "ema_fast": 148.76285106867056,
+            "ema_slow": 146.26492957681273,
+            "macd": 2.4979214918578236,
+            "macd_signal": 1.8576753294597421,
+            "macd_hist": 0.6402461623980815,
             "macd_hist_prev": 0.6293044402472412,
-            "rsi14": 88.83672837908316,
-            "sma20": 146.77925000000005
+            "rsi14": 85.8713117021099,
+            "sma20": 146.76825000000005
           },
           "guidance": {
-            "sma20": 146.7793,
-            "buy_on_dip_below": 145.3115,
-            "trim_above": 158.5216
+            "sma20": 146.7683,
+            "buy_on_dip_below": 145.3006,
+            "trim_above": 158.5097
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
           "size_k": 0.18374999999999997,
-          "qty_prev": 0.144464,
+          "qty_prev": 0.7874,
           "news_preview": [
+            {
+              "ts": "2025-11-14T20:17:19+00:00",
+              "source": "benzinga",
+              "tone": -0.27060124385511813,
+              "headline": "Fear Of An AI Bubble? This Sector Is Quietly Surging While Tech Sinks"
+            },
             {
               "ts": "2025-11-14T17:31:55+00:00",
               "source": "benzinga",
@@ -1122,484 +1262,106 @@
               "headline": "Tech Rebounds After Selloff, Bitcoin Craters To $97,000: What's Moving Markets Friday?"
             },
             {
-              "ts": "2025-11-14T13:10:11+00:00",
-              "source": "benzinga",
-              "tone": -0.3229724955780969,
-              "headline": "Leading And Lagging Sectors For November 14, 2025"
-            },
-            {
-              "ts": "2025-11-14T11:24:59+00:00",
+              "ts": "2025-11-14T16:54:21+00:00",
               "source": "newsercom",
-              "tone": 0.5193977376444154,
-              "headline": "Will XLV stock recover faster than industry - Weekly Gains Report & Real-Time Volume Analysis"
-            }
-          ]
-        },
-        {
-          "symbol": "XLE",
-          "action": "BUY",
-          "px": 91.935,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|topped_by_rotation",
-          "score": 0.682952,
-          "qty": 4.61703,
-          "notional": 424.46,
-          "signals": {
-            "TS": 0.682952,
-            "NS": 0.270843,
-            "CDS": 0.518108,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 89.69600402607675,
-            "ema_slow": 88.89396284146434,
-            "macd": 0.8020411846124063,
-            "macd_signal": 0.3705676813563565,
-            "macd_hist": 0.4314735032560498,
-            "macd_hist_prev": 0.3755346746759586,
-            "rsi14": 71.39355933963101,
-            "sma20": 88.63900000000001
-          },
-          "guidance": {
-            "sma20": 88.639,
-            "buy_on_dip_below": 87.7526,
-            "trim_above": 95.7301
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.18374999999999997,
-          "qty_prev": 1.8e-05,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:14:24+00:00",
-              "source": "cnbc",
-              "tone": 0.6386163095213927,
-              "headline": "Buy energy stocks for a prospective breakout, says Carter Worth"
-            },
-            {
-              "ts": "2025-11-14T16:01:38+00:00",
-              "source": "newsercom",
-              "tone": 0.6506050768290084,
-              "headline": "Is XLE stock a safe buy pre earnings - Weekly Investment Recap & Verified Stock Trade Ideas"
-            },
-            {
-              "ts": "2025-11-14T13:10:11+00:00",
-              "source": "benzinga",
-              "tone": -0.3229830916047722,
-              "headline": "Leading And Lagging Sectors For November 14, 2025"
-            }
-          ]
-        },
-        {
-          "symbol": "RGTI",
-          "action": "SELL",
-          "px": 25.785,
-          "qty": 1.5425,
-          "notional": 39.77,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.607791,
-            "NS": 0.129154,
-            "CDS": -0.313013,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 32.453625826820385,
-            "ema_slow": 35.06044791781974,
-            "macd": -2.6068220909993514,
-            "macd_signal": -0.6465781011113279,
-            "macd_hist": -1.9602439898880235,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi": 24.634934151043026,
-            "rsi_prev": 21.93051511273832,
-            "sma20": 36.233249999999984,
-            "ma50": 34.472100000000026,
-            "ma200": 17.522199999999998,
-            "prev_close": 25.2,
-            "price": 25.785
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:06:21+00:00",
-              "source": "benzinga",
-              "tone": 0.873711102660322,
-              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
-            },
-            {
-              "ts": "2025-11-14T16:18:15+00:00",
-              "source": "finviz",
-              "tone": 0.0,
-              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
-            },
-            {
-              "ts": "2025-11-14T14:33:32+00:00",
-              "source": "marketbeat",
-              "tone": -0.8114761747317255,
-              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
-            }
-          ]
-        },
-        {
-          "symbol": "ASTS",
-          "action": "SELL",
-          "px": 62.2,
-          "qty": 1.8725,
-          "notional": 116.47,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.544831,
-            "NS": 0.041015,
-            "CDS": -0.310492,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 68.07495052827738,
-            "ema_slow": 69.82321733428131,
-            "macd": -1.748266806003926,
-            "macd_signal": 0.4410698227849836,
-            "macd_hist": -2.1893366287889093,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi": 31.272100698110265,
-            "rsi_prev": 28.405782482658395,
-            "sma20": 72.16100000000007,
-            "ma50": 64.82380000000003,
-            "ma200": 42.479924999999994,
-            "prev_close": 61.39,
-            "price": 62.2
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:03:31+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
-            },
-            {
-              "ts": "2025-11-14T16:46:13+00:00",
-              "source": "newsercom",
-              "tone": 0.6612415840412146,
-              "headline": "Will ASTS stock benefit from green energy trends - Weekly Investment Report & Free Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-14T16:28:08+00:00",
-              "source": "benzinga",
-              "tone": -0.48384351315590585,
-              "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
-            }
-          ]
-        },
-        {
-          "symbol": "HOOD",
-          "action": "SELL",
-          "px": 124.755,
-          "qty": 1.0,
-          "notional": 124.75,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.522569,
-            "NS": 0.09281,
-            "CDS": -0.276417,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 132.3141662280835,
-            "ema_slow": 133.97753368859327,
-            "macd": -1.663367460509761,
-            "macd_signal": 0.5878891870913652,
-            "macd_hist": -2.251256647601126,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi": 38.739269150296245,
-            "rsi_prev": 33.60519321214082,
-            "sma20": 136.08200000000005,
-            "ma50": 132.83599999999987,
-            "ma200": 85.94850000000001,
-            "prev_close": 121.505,
-            "price": 124.755
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T19:01:14+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:01:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T17:38:19+00:00",
-              "source": "benzinga",
-              "tone": 0.618863170894982,
-              "headline": "4 Winners To Consider Selling As Markets Get Volatile"
-            }
-          ]
-        },
-        {
-          "symbol": "RKLB",
-          "action": "SELL",
-          "px": 46.33,
-          "qty": 1.5675,
-          "notional": 72.62,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.595794,
-            "NS": 0.271455,
-            "CDS": -0.248895,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 52.69018114012298,
-            "ema_slow": 55.71805880873601,
-            "macd": -3.02787766861303,
-            "macd_signal": -1.0538140903740267,
-            "macd_hist": -1.9740635782390032,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi": 25.634276153590932,
-            "rsi_prev": 20.561771723486984,
-            "sma20": 58.05649999999997,
-            "ma50": 55.91770000000003,
-            "ma200": 36.513824999999976,
-            "prev_close": 45.245,
-            "price": 46.33
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T19:00:58+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:00:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T15:13:39+00:00",
-              "source": "benzinga",
-              "tone": 0.7558744618647691,
-              "headline": "What's Going On With Rocket Lab Stock Today?"
-            }
-          ]
-        },
-        {
-          "symbol": "QBTS",
-          "action": "SELL",
-          "px": 23.98,
-          "qty": 20.655124,
-          "notional": 495.31,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.603489,
-            "NS": 0.286637,
-            "CDS": -0.247439,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 28.544223712573796,
-            "ema_slow": 30.02098042572448,
-            "macd": -1.4767567131506851,
-            "macd_signal": -0.15615338767172024,
-            "macd_hist": -1.3206033254789649,
-            "macd_hist_prev": -1.3041737340750612,
-            "rsi": 29.543591634929072,
-            "rsi_prev": 26.377210175241572,
-            "sma20": 30.789499999999983,
-            "ma50": 29.20670000000001,
-            "ma200": 16.296575,
-            "prev_close": 23.37,
-            "price": 23.98
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:06:21+00:00",
-              "source": "benzinga",
-              "tone": 0.8737413636830015,
-              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
-            },
-            {
-              "ts": "2025-11-14T17:37:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.0,
-              "headline": "D-Wave Quantum Inc. Stock (QBTS) Opinions on Q3 Earnings Report"
-            },
-            {
-              "ts": "2025-11-14T16:21:18+00:00",
-              "source": "marketbeat",
-              "tone": 0.6655738521555669,
-              "headline": "D-Wave Quantum (NYSE:QBTS) Shares Gap Down Following Insider Selling"
+              "tone": -0.646385296183801,
+              "headline": "Will XLV stock recover faster than industry - Stop Loss & Daily Stock Trend Reports"
             }
           ]
         }
       ],
-      "cash_left": 2420.87,
+      "cash_left": 2408.83,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "XLV",
-            "cds": 0.50895,
+            "cds": 0.445177,
             "size_k": 0.18374999999999997,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 2.925561,
-            "px": 152.625,
-            "notional": 446.51,
-            "reason": "score>buy|guidance:above_dip_level|topped_by_rotation"
-          },
-          {
-            "symbol": "XLE",
-            "cds": 0.518108,
-            "size_k": 0.18374999999999997,
-            "size_k_guidance": 0.7,
-            "phase": "mid",
-            "qty": 4.61703,
-            "px": 91.935,
-            "notional": 424.46,
-            "reason": "score>buy|guidance:above_dip_level|topped_by_rotation"
+            "qty": 0.144685,
+            "px": 152.405,
+            "notional": 22.05,
+            "reason": "score>buy|guidance:above_dip_level"
           }
         ],
         "sell_sizing": [
           {
             "symbol": "ASTS",
-            "cds": -0.310492,
+            "cds": -0.39535,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "early",
             "qty": 0.4,
-            "px": 62.2,
-            "notional": 24.88,
+            "px": 61.715,
+            "notional": 24.69,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "HOOD",
-            "cds": -0.276417,
+            "cds": -0.289336,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "mid",
             "qty": 0.4,
-            "px": 124.755,
-            "notional": 49.9,
+            "px": 123.785,
+            "notional": 49.51,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "NVDA",
-            "cds": -0.206228,
+            "cds": -0.226281,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": "mid",
             "qty": 7.0,
-            "px": 189.9,
-            "notional": 1329.3,
+            "px": 189.71,
+            "notional": 1327.97,
             "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "QBTS",
-            "cds": -0.247439,
+            "cds": -0.26268,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "mid",
             "qty": 22.8,
-            "px": 23.98,
-            "notional": 546.74,
+            "px": 23.61,
+            "notional": 538.31,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "RGTI",
-            "cds": -0.313013,
+            "cds": -0.354895,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
-            "phase": "early",
+            "phase": "mid",
             "qty": 0.4,
-            "px": 25.785,
-            "notional": 10.31,
+            "px": 25.4,
+            "notional": 10.16,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "RKLB",
-            "cds": -0.248895,
+            "cds": -0.292598,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "early",
             "qty": 0.4,
-            "px": 46.33,
-            "notional": 18.53,
+            "px": 45.5,
+            "notional": 18.2,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
             "symbol": "VTI",
-            "cds": -0.219807,
+            "cds": -0.212724,
             "size_k": 0.7,
             "size_k_guidance": 0.7,
             "phase": "mid",
             "qty": 1.4,
-            "px": 330.89,
-            "notional": 463.25,
+            "px": 330.03,
+            "notional": 462.04,
             "reason": "score<sell|guidance:mid_zone_partial_trim"
-          },
-          {
-            "symbol": "RGTI",
-            "cds": -0.313013,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 1.5425,
-            "px": 25.785,
-            "notional": 39.77,
-            "reason": "rotation_upgrade"
-          },
-          {
-            "symbol": "ASTS",
-            "cds": -0.310492,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 1.8725,
-            "px": 62.2,
-            "notional": 116.47,
-            "reason": "rotation_upgrade"
-          },
-          {
-            "symbol": "HOOD",
-            "cds": -0.276417,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 1.0,
-            "px": 124.755,
-            "notional": 124.75,
-            "reason": "rotation_upgrade"
-          },
-          {
-            "symbol": "RKLB",
-            "cds": -0.248895,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 1.5675,
-            "px": 46.33,
-            "notional": 72.62,
-            "reason": "rotation_upgrade"
-          },
-          {
-            "symbol": "QBTS",
-            "cds": -0.247439,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 20.655124,
-            "px": 23.98,
-            "notional": 495.31,
-            "reason": "rotation_upgrade"
           }
         ]
       }
@@ -1621,55 +1383,55 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 3330.04,
-      "cash_start": 21639.93,
+      "portfolio_value_est": 4875.45,
+      "cash_start": 20093.73,
       "trades": [
         {
           "symbol": "ABBV",
           "action": "BUY",
-          "px": 234.265,
+          "px": 233.865,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.573452,
-          "qty": 2.797935,
-          "notional": 655.46,
+          "score": 0.567034,
+          "qty": 2.80266,
+          "notional": 655.44,
           "signals": {
-            "TS": 0.680032,
-            "NS": 0.413583,
-            "CDS": 0.573452,
+            "TS": 0.675874,
+            "NS": 0.403774,
+            "CDS": 0.567034,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 226.19298702588583,
-            "ema_slow": 225.20551308889708,
-            "macd": 0.9874739369887493,
-            "macd_signal": -0.3267760534089117,
-            "macd_hist": 1.314249990397661,
+            "ema_fast": 226.13144856434738,
+            "ema_slow": 225.17588345926742,
+            "macd": 0.9555651050799554,
+            "macd_signal": -0.33315781979067044,
+            "macd_hist": 1.2887229248706258,
             "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 71.14438160427808,
-            "sma20": 225.11474999999982
+            "rsi14": 70.62825177911542,
+            "sma20": 225.0947499999998
           },
           "guidance": {
-            "sma20": 225.1147,
-            "buy_on_dip_below": 222.8636,
-            "trim_above": 243.1239
+            "sma20": 225.0947,
+            "buy_on_dip_below": 222.8438,
+            "trim_above": 243.1023
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
           "size_k": 0.5249999999999999,
-          "qty_prev": 5.3294,
+          "qty_prev": 5.3384,
           "news_preview": [
             {
               "ts": "2025-11-14T17:35:28+00:00",
               "source": "benzinga",
-              "tone": 0.6407485192398554,
+              "tone": 0.6250490833147406,
               "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
             },
             {
               "ts": "2025-11-14T17:30:00+00:00",
               "source": "yahoo",
-              "tone": 0.9591586739162177,
+              "tone": 0.9356576453328684,
               "headline": "AbbVie Partners with Award-Winning Filmmaker on Film About the Dynamic and Resilient Lives of Those Living with Blood Cancer"
             },
             {
@@ -1681,51 +1443,107 @@
           ]
         },
         {
-          "symbol": "ILMN",
+          "symbol": "XLE",
           "action": "BUY",
-          "px": 120.58,
+          "px": 92.055,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
-          "score": 0.542285,
-          "qty": 2.119842,
-          "notional": 255.61,
+          "reason": "score>buy|guidance:above_dip_level",
+          "score": 0.518056,
+          "qty": 6.380908,
+          "notional": 587.39,
           "signals": {
-            "TS": 0.631632,
-            "NS": 0.408263,
-            "CDS": 0.542285,
+            "TS": 0.687091,
+            "NS": 0.264503,
+            "CDS": 0.518056,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 117.41100668270167,
-            "ema_slow": 111.0503394057137,
-            "macd": 6.360667276987968,
-            "macd_signal": 5.618689839070128,
-            "macd_hist": 0.7419774379178401,
-            "macd_hist_prev": 1.1136640417950305,
-            "rsi14": 63.772181786197095,
-            "sma20": 111.0195
+            "ema_fast": 89.71446556453829,
+            "ema_slow": 88.90285173035323,
+            "macd": 0.811613834185053,
+            "macd_signal": 0.3724822112708858,
+            "macd_hist": 0.43913162291416713,
+            "macd_hist_prev": 0.3755346746759586,
+            "rsi14": 71.90822230203503,
+            "sma20": 88.64500000000001
           },
           "guidance": {
-            "sma20": 111.0195,
-            "buy_on_dip_below": 109.9093,
-            "trim_above": 119.9011
+            "sma20": 88.645,
+            "buy_on_dip_below": 87.7586,
+            "trim_above": 95.7366
           },
           "phase": "mid",
-          "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.20473451249999997,
-          "qty_prev": 10.3541,
+          "size_k_guidance": 0.7,
+          "size_k": 0.4704955499999998,
+          "qty_prev": 13.5621,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T18:14:24+00:00",
+              "source": "cnbc",
+              "tone": 0.6229849730728839,
+              "headline": "Buy energy stocks for a prospective breakout, says Carter Worth"
+            },
+            {
+              "ts": "2025-11-14T16:01:38+00:00",
+              "source": "newsercom",
+              "tone": 0.6346802926752374,
+              "headline": "Is XLE stock a safe buy pre earnings - Weekly Investment Recap & Verified Stock Trade Ideas"
+            },
+            {
+              "ts": "2025-11-14T13:10:11+00:00",
+              "source": "benzinga",
+              "tone": -0.31507747016917775,
+              "headline": "Leading And Lagging Sectors For November 14, 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "ILMN",
+          "action": "BUY",
+          "px": 121.34,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone",
+          "score": 0.514843,
+          "qty": 0.63793,
+          "notional": 77.41,
+          "signals": {
+            "TS": 0.643475,
+            "NS": 0.321895,
+            "CDS": 0.514843,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 117.52792975962474,
+            "ema_slow": 111.10663570201001,
+            "macd": 6.42129405761473,
+            "macd_signal": 5.63081519519548,
+            "macd_hist": 0.79047886241925,
+            "macd_hist_prev": 1.1136640417950305,
+            "rsi14": 65.23958315976535,
+            "sma20": 111.0575
+          },
+          "guidance": {
+            "sma20": 111.0575,
+            "buy_on_dip_below": 109.9469,
+            "trim_above": 119.9421
+          },
+          "phase": "late",
+          "size_k_guidance": 0.13999999999999999,
+          "size_k": 0.0620017825,
+          "qty_prev": 10.2889,
           "news_preview": [
             {
               "ts": "2025-11-14T14:32:34+00:00",
               "source": "simplywallst",
-              "tone": 0.6310984941968854,
+              "tone": 0.6156374856273049,
               "headline": "Does the Recent 29% Rally Signal a New Opportunity for Illumina Stock?"
             },
             {
               "ts": "2025-11-14T04:38:23+00:00",
               "source": "yahoo",
-              "tone": 0.7334968084786785,
+              "tone": 0.7155271852123252,
               "headline": "1 Momentum  Stock with Promising Prospects and 2 We Avoid"
             },
             {
@@ -1739,228 +1557,172 @@
         {
           "symbol": "LYFT",
           "action": "BUY",
-          "px": 23.23,
+          "px": 23.27,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
-          "score": 0.535054,
-          "qty": 10.738236,
-          "notional": 249.45,
+          "score": 0.505576,
+          "qty": 9.640027,
+          "notional": 224.32,
           "signals": {
-            "TS": 0.604573,
-            "NS": 0.430774,
-            "CDS": 0.535054,
+            "TS": 0.60837,
+            "NS": 0.351386,
+            "CDS": 0.505576,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 22.449548872139474,
-            "ema_slow": 21.537092925271427,
-            "macd": 0.9124559468680467,
-            "macd_signal": 0.5582804229092234,
-            "macd_hist": 0.35417552395882324,
+            "ema_fast": 22.455702718293317,
+            "ema_slow": 21.540055888234388,
+            "macd": 0.9156468300589289,
+            "macd_signal": 0.5589185995473999,
+            "macd_hist": 0.356728230511529,
             "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 60.76265541041268,
-            "sma20": 21.315500000000014
+            "rsi14": 61.23360801239582,
+            "sma20": 21.317500000000013
           },
           "guidance": {
-            "sma20": 21.3155,
-            "buy_on_dip_below": 21.1023,
-            "trim_above": 23.0207
+            "sma20": 21.3175,
+            "buy_on_dip_below": 21.1043,
+            "trim_above": 23.0229
           },
           "phase": "mid",
           "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.19979935499999996,
-          "qty_prev": 53.7451,
+          "size_k": 0.17968061999999999,
+          "qty_prev": 53.6509,
           "news_preview": [
+            {
+              "ts": "2025-11-14T20:04:15+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Key facts: Lyft's stock drops 3.8%; launches U.K. robotaxi contest"
+            },
             {
               "ts": "2025-11-14T15:37:24+00:00",
               "source": "simplywallst",
-              "tone": 0.6454258283473925,
+              "tone": 0.6296160177599551,
               "headline": "Lyft (LYFT): Assessing Valuation Following Strong Recent Share Price Gains"
             },
             {
               "ts": "2025-11-14T13:46:21+00:00",
               "source": "marketbeat",
-              "tone": 0.7984446876011494,
+              "tone": 0.7788866550639616,
               "headline": "Jupiter Asset Management Ltd. Sells 653,127 Shares of Lyft, Inc. $LYFT"
-            },
-            {
-              "ts": "2025-11-14T12:34:45+00:00",
-              "source": "fundaoculturaldopar",
-              "tone": 0.5564546353302222,
-              "headline": "Is LYFT stock a defensive play in 2025 - Dip Buying & Fast Entry Momentum Trade Alerts"
             }
           ]
         },
         {
-          "symbol": "XLE",
+          "symbol": "SNAP",
           "action": "BUY",
-          "px": 91.935,
+          "px": 8.535,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.518108,
-          "qty": 6.390629,
-          "notional": 587.52,
+          "score": 0.371553,
+          "qty": 2.2e-05,
+          "notional": 0.0,
           "signals": {
-            "TS": 0.682952,
-            "NS": 0.270843,
-            "CDS": 0.518108,
+            "TS": 0.499173,
+            "NS": 0.180123,
+            "CDS": 0.371553,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 89.69600402607675,
-            "ema_slow": 88.89396284146434,
-            "macd": 0.8020411846124063,
-            "macd_signal": 0.3705676813563565,
-            "macd_hist": 0.4314735032560498,
-            "macd_hist_prev": 0.3755346746759586,
-            "rsi14": 71.39355933963101,
-            "sma20": 88.63900000000001
+            "ema_fast": 8.323256493008829,
+            "ema_slow": 8.126489990043591,
+            "macd": 0.19676650296523768,
+            "macd_signal": 0.08741351689452712,
+            "macd_hist": 0.10935298607071056,
+            "macd_hist_prev": 0.13087321393196105,
+            "rsi14": 58.041793871302694,
+            "sma20": 8.021
           },
           "guidance": {
-            "sma20": 88.639,
-            "buy_on_dip_below": 87.7526,
-            "trim_above": 95.7301
+            "sma20": 8.021,
+            "buy_on_dip_below": 7.9408,
+            "trim_above": 8.6627
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
-          "size_k": 0.4705842749999999,
-          "qty_prev": 13.5802,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:14:24+00:00",
-              "source": "cnbc",
-              "tone": 0.6386163095213927,
-              "headline": "Buy energy stocks for a prospective breakout, says Carter Worth"
-            },
-            {
-              "ts": "2025-11-14T16:01:38+00:00",
-              "source": "newsercom",
-              "tone": 0.6506050768290084,
-              "headline": "Is XLE stock a safe buy pre earnings - Weekly Investment Recap & Verified Stock Trade Ideas"
-            },
-            {
-              "ts": "2025-11-14T13:10:11+00:00",
-              "source": "benzinga",
-              "tone": -0.3229830916047722,
-              "headline": "Leading And Lagging Sectors For November 14, 2025"
-            }
-          ]
-        },
-        {
-          "symbol": "XLV",
-          "action": "BUY",
-          "px": 152.625,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.50895,
-          "qty": 4.5e-05,
-          "notional": 0.01,
-          "signals": {
-            "TS": 0.824132,
-            "NS": 0.036177,
-            "CDS": 0.50895,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 148.7966972225167,
-            "ema_slow": 146.281225873109,
-            "macd": 2.5154713494077043,
-            "macd_signal": 1.8611853009697183,
-            "macd_hist": 0.654286048437986,
-            "macd_hist_prev": 0.6293044402472412,
-            "rsi14": 88.83672837908316,
-            "sma20": 146.77925000000005
-          },
-          "guidance": {
-            "sma20": 146.7793,
-            "buy_on_dip_below": 145.3115,
-            "trim_above": 158.5216
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.4549584374999999,
+          "size_k": 0.22052480625000004,
           "qty_prev": 0.0001,
           "news_preview": [
             {
-              "ts": "2025-11-14T17:31:55+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Tech Rebounds After Selloff, Bitcoin Craters To $97,000: What's Moving Markets Friday?"
+              "ts": "2025-11-14T12:34:45+00:00",
+              "source": "simplywallst",
+              "tone": 0.46675105883314827,
+              "headline": "Snap (SNAP): Exploring the Latest Valuation After a Recent Share Price Rally"
             },
             {
-              "ts": "2025-11-14T13:10:11+00:00",
-              "source": "benzinga",
-              "tone": -0.3229724955780969,
-              "headline": "Leading And Lagging Sectors For November 14, 2025"
+              "ts": "2025-11-14T03:25:03+00:00",
+              "source": "marketbeat",
+              "tone": 0.4958346078575895,
+              "headline": "Insider Selling: Snap (NYSE:SNAP) CTO Sells 1,000,000 Shares of Stock"
             },
             {
-              "ts": "2025-11-14T11:24:59+00:00",
-              "source": "newsercom",
-              "tone": 0.5193977376444154,
-              "headline": "Will XLV stock recover faster than industry - Weekly Gains Report & Real-Time Volume Analysis"
+              "ts": "2025-11-13T21:03:00+00:00",
+              "source": "stockstotrade",
+              "tone": -0.29419858223397427,
+              "headline": "Snap Inc. Faces Legal Turmoil: Impact on Stock\u200b"
             }
           ]
         }
       ],
-      "cash_left": 14897.88,
+      "cash_left": 13555.32,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "ABBV",
-            "cds": 0.573452,
+            "cds": 0.567034,
             "size_k": 0.5249999999999999,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 2.797935,
-            "px": 234.265,
-            "notional": 655.46,
+            "qty": 2.80266,
+            "px": 233.865,
+            "notional": 655.44,
+            "reason": "score>buy|guidance:above_dip_level"
+          },
+          {
+            "symbol": "XLE",
+            "cds": 0.518056,
+            "size_k": 0.4704955499999998,
+            "size_k_guidance": 0.7,
+            "phase": "mid",
+            "qty": 6.380908,
+            "px": 92.055,
+            "notional": 587.39,
             "reason": "score>buy|guidance:above_dip_level"
           },
           {
             "symbol": "ILMN",
-            "cds": 0.542285,
-            "size_k": 0.20473451249999997,
-            "size_k_guidance": 0.27999999999999997,
-            "phase": "mid",
-            "qty": 2.119842,
-            "px": 120.58,
-            "notional": 255.61,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
+            "cds": 0.514843,
+            "size_k": 0.0620017825,
+            "size_k_guidance": 0.13999999999999999,
+            "phase": "late",
+            "qty": 0.63793,
+            "px": 121.34,
+            "notional": 77.41,
+            "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone"
           },
           {
             "symbol": "LYFT",
-            "cds": 0.535054,
-            "size_k": 0.19979935499999996,
+            "cds": 0.505576,
+            "size_k": 0.17968061999999999,
             "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 10.738236,
-            "px": 23.23,
-            "notional": 249.45,
+            "qty": 9.640027,
+            "px": 23.27,
+            "notional": 224.32,
             "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
-            "symbol": "XLE",
-            "cds": 0.518108,
-            "size_k": 0.4705842749999999,
+            "symbol": "SNAP",
+            "cds": 0.371553,
+            "size_k": 0.22052480625000004,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 6.390629,
-            "px": 91.935,
-            "notional": 587.52,
-            "reason": "score>buy|guidance:above_dip_level"
-          },
-          {
-            "symbol": "XLV",
-            "cds": 0.50895,
-            "size_k": 0.4549584374999999,
-            "size_k_guidance": 0.7,
-            "phase": "mid",
-            "qty": 4.5e-05,
-            "px": 152.625,
-            "notional": 0.01,
+            "qty": 2.2e-05,
+            "px": 8.535,
+            "notional": 0.0,
             "reason": "score>buy|guidance:above_dip_level"
           }
         ],
@@ -1983,523 +1745,49 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 20614.55,
-      "cash_start": 3147.62,
+      "portfolio_value_est": 21781.72,
+      "cash_start": 1890.56,
       "trades": [
-        {
-          "symbol": "ASTS",
-          "action": "SELL",
-          "px": 62.2,
-          "qty_hint": 4.6175,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.310492,
-          "qty": 0.4,
-          "notional": 24.88,
-          "signals": {
-            "TS": -0.544831,
-            "NS": 0.041015,
-            "CDS": -0.310492,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 68.07495052827738,
-            "ema_slow": 69.82321733428131,
-            "macd": -1.748266806003926,
-            "macd_signal": 0.4410698227849836,
-            "macd_hist": -2.1893366287889093,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi14": 31.272100698110265,
-            "sma20": 72.16100000000007
-          },
-          "guidance": {
-            "sma20": 72.161,
-            "buy_on_dip_below": 71.4394,
-            "trim_above": 77.9339
-          },
-          "phase": "early",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:03:31+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
-            },
-            {
-              "ts": "2025-11-14T16:46:13+00:00",
-              "source": "newsercom",
-              "tone": 0.6612415840412146,
-              "headline": "Will ASTS stock benefit from green energy trends - Weekly Investment Report & Free Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-14T16:28:08+00:00",
-              "source": "benzinga",
-              "tone": -0.48384351315590585,
-              "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
-            }
-          ]
-        },
-        {
-          "symbol": "HOOD",
-          "action": "SELL",
-          "px": 124.755,
-          "qty_hint": 4.0,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
-          "score": -0.276417,
-          "qty": 0.4,
-          "notional": 49.9,
-          "signals": {
-            "TS": -0.522569,
-            "NS": 0.09281,
-            "CDS": -0.276417,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 132.3141662280835,
-            "ema_slow": 133.97753368859327,
-            "macd": -1.663367460509761,
-            "macd_signal": 0.5878891870913652,
-            "macd_hist": -2.251256647601126,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi14": 38.739269150296245,
-            "sma20": 136.08200000000005
-          },
-          "guidance": {
-            "sma20": 136.082,
-            "buy_on_dip_below": 134.7212,
-            "trim_above": 146.9686
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T19:01:14+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:01:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T17:38:19+00:00",
-              "source": "benzinga",
-              "tone": 0.618863170894982,
-              "headline": "4 Winners To Consider Selling As Markets Get Volatile"
-            }
-          ]
-        },
-        {
-          "symbol": "ABBV",
-          "action": "BUY",
-          "px": 234.265,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|topped_by_rotation",
-          "score": 0.573452,
-          "qty": 6.2871,
-          "notional": 1472.85,
-          "signals": {
-            "TS": 0.680032,
-            "NS": 0.413583,
-            "CDS": 0.573452,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 226.19298702588583,
-            "ema_slow": 225.20551308889708,
-            "macd": 0.9874739369887493,
-            "macd_signal": -0.3267760534089117,
-            "macd_hist": 1.314249990397661,
-            "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 71.14438160427808,
-            "sma20": 225.11474999999982
-          },
-          "guidance": {
-            "sma20": 225.1147,
-            "buy_on_dip_below": 222.8636,
-            "trim_above": 243.1239
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.5249999999999999,
-          "qty_prev": 5.325232,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:35:28+00:00",
-              "source": "benzinga",
-              "tone": 0.6407485192398554,
-              "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-14T17:30:00+00:00",
-              "source": "yahoo",
-              "tone": 0.9591586739162177,
-              "headline": "AbbVie Partners with Award-Winning Filmmaker on Film About the Dynamic and Resilient Lives of Those Living with Blood Cancer"
-            },
-            {
-              "ts": "2025-11-14T17:30:00+00:00",
-              "source": "stocktitan",
-              "tone": 0.0,
-              "headline": "AbbVie (NYSE: ABBV) debuts Second Winds CLL film; YouTube, Documentary+ in Dec 2025"
-            }
-          ]
-        },
-        {
-          "symbol": "ILMN",
-          "action": "BUY",
-          "px": 120.58,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation",
-          "score": 0.542285,
-          "qty": 3.178503,
-          "notional": 383.26,
-          "signals": {
-            "TS": 0.631632,
-            "NS": 0.408263,
-            "CDS": 0.542285,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 117.41100668270167,
-            "ema_slow": 111.0503394057137,
-            "macd": 6.360667276987968,
-            "macd_signal": 5.618689839070128,
-            "macd_hist": 0.7419774379178401,
-            "macd_hist_prev": 1.1136640417950305,
-            "rsi14": 63.772181786197095,
-            "sma20": 111.0195
-          },
-          "guidance": {
-            "sma20": 111.0195,
-            "buy_on_dip_below": 109.9093,
-            "trim_above": 119.9011
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.20473451249999997,
-          "qty_prev": 1.309769,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T14:32:34+00:00",
-              "source": "simplywallst",
-              "tone": 0.6310984941968854,
-              "headline": "Does the Recent 29% Rally Signal a New Opportunity for Illumina Stock?"
-            },
-            {
-              "ts": "2025-11-14T04:38:23+00:00",
-              "source": "yahoo",
-              "tone": 0.7334968084786785,
-              "headline": "1 Momentum  Stock with Promising Prospects and 2 We Avoid"
-            },
-            {
-              "ts": "2025-11-13T19:41:45+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "How high can ILMN stock go - July 2025 Recap & AI Powered Market Trend Analysis"
-            }
-          ]
-        },
-        {
-          "symbol": "LYFT",
-          "action": "BUY",
-          "px": 23.23,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation",
-          "score": 0.535054,
-          "qty": 9.700063,
-          "notional": 225.33,
-          "signals": {
-            "TS": 0.604573,
-            "NS": 0.430774,
-            "CDS": 0.535054,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 22.449548872139474,
-            "ema_slow": 21.537092925271427,
-            "macd": 0.9124559468680467,
-            "macd_signal": 0.5582804229092234,
-            "macd_hist": 0.35417552395882324,
-            "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 60.76265541041268,
-            "sma20": 21.315500000000014
-          },
-          "guidance": {
-            "sma20": 21.3155,
-            "buy_on_dip_below": 21.1023,
-            "trim_above": 23.0207
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.19979935499999996,
-          "qty_prev": 2e-05,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T15:37:24+00:00",
-              "source": "simplywallst",
-              "tone": 0.6454258283473925,
-              "headline": "Lyft (LYFT): Assessing Valuation Following Strong Recent Share Price Gains"
-            },
-            {
-              "ts": "2025-11-14T13:46:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.7984446876011494,
-              "headline": "Jupiter Asset Management Ltd. Sells 653,127 Shares of Lyft, Inc. $LYFT"
-            },
-            {
-              "ts": "2025-11-14T12:34:45+00:00",
-              "source": "fundaoculturaldopar",
-              "tone": 0.5564546353302222,
-              "headline": "Is LYFT stock a defensive play in 2025 - Dip Buying & Fast Entry Momentum Trade Alerts"
-            }
-          ]
-        },
-        {
-          "symbol": "RGTI",
-          "action": "SELL",
-          "px": 25.785,
-          "qty": 0.906875,
-          "notional": 23.38,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.607791,
-            "NS": 0.129154,
-            "CDS": -0.313013,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 32.453625826820385,
-            "ema_slow": 35.06044791781974,
-            "macd": -2.6068220909993514,
-            "macd_signal": -0.6465781011113279,
-            "macd_hist": -1.9602439898880235,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi": 24.634934151043026,
-            "rsi_prev": 21.93051511273832,
-            "sma20": 36.233249999999984,
-            "ma50": 34.472100000000026,
-            "ma200": 17.522199999999998,
-            "prev_close": 25.2,
-            "price": 25.785
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:06:21+00:00",
-              "source": "benzinga",
-              "tone": 0.873711102660322,
-              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
-            },
-            {
-              "ts": "2025-11-14T16:18:15+00:00",
-              "source": "finviz",
-              "tone": 0.0,
-              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
-            },
-            {
-              "ts": "2025-11-14T14:33:32+00:00",
-              "source": "marketbeat",
-              "tone": -0.8114761747317255,
-              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
-            }
-          ]
-        },
-        {
-          "symbol": "ASTS",
-          "action": "SELL",
-          "px": 62.2,
-          "qty": 1.154375,
-          "notional": 71.8,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.544831,
-            "NS": 0.041015,
-            "CDS": -0.310492,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 68.07495052827738,
-            "ema_slow": 69.82321733428131,
-            "macd": -1.748266806003926,
-            "macd_signal": 0.4410698227849836,
-            "macd_hist": -2.1893366287889093,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi": 31.272100698110265,
-            "rsi_prev": 28.405782482658395,
-            "sma20": 72.16100000000007,
-            "ma50": 64.82380000000003,
-            "ma200": 42.479924999999994,
-            "prev_close": 61.39,
-            "price": 62.2
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:03:31+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
-            },
-            {
-              "ts": "2025-11-14T16:46:13+00:00",
-              "source": "newsercom",
-              "tone": 0.6612415840412146,
-              "headline": "Will ASTS stock benefit from green energy trends - Weekly Investment Report & Free Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-14T16:28:08+00:00",
-              "source": "benzinga",
-              "tone": -0.48384351315590585,
-              "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
-            }
-          ]
-        },
-        {
-          "symbol": "HOOD",
-          "action": "SELL",
-          "px": 124.755,
-          "qty": 1.0,
-          "notional": 124.75,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.522569,
-            "NS": 0.09281,
-            "CDS": -0.276417,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 132.3141662280835,
-            "ema_slow": 133.97753368859327,
-            "macd": -1.663367460509761,
-            "macd_signal": 0.5878891870913652,
-            "macd_hist": -2.251256647601126,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi": 38.739269150296245,
-            "rsi_prev": 33.60519321214082,
-            "sma20": 136.08200000000005,
-            "ma50": 132.83599999999987,
-            "ma200": 85.94850000000001,
-            "prev_close": 121.505,
-            "price": 124.755
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T19:01:14+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:01:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Robinhood (HOOD) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T17:38:19+00:00",
-              "source": "benzinga",
-              "tone": 0.618863170894982,
-              "headline": "4 Winners To Consider Selling As Markets Get Volatile"
-            }
-          ]
-        },
-        {
-          "symbol": "RKLB",
-          "action": "SELL",
-          "px": 46.33,
-          "qty": 1.053902,
-          "notional": 48.83,
-          "reason": "rotation_upgrade",
-          "signals": {
-            "TS": -0.595794,
-            "NS": 0.271455,
-            "CDS": -0.248895,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 52.69018114012298,
-            "ema_slow": 55.71805880873601,
-            "macd": -3.02787766861303,
-            "macd_signal": -1.0538140903740267,
-            "macd_hist": -1.9740635782390032,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi": 25.634276153590932,
-            "rsi_prev": 20.561771723486984,
-            "sma20": 58.05649999999997,
-            "ma50": 55.91770000000003,
-            "ma200": 36.513824999999976,
-            "prev_close": 45.245,
-            "price": 46.33
-          },
-          "news_preview": [
-            {
-              "ts": "2025-11-14T19:00:58+00:00",
-              "source": "yahoofinance",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T19:00:00+00:00",
-              "source": "financialcontent",
-              "tone": 0.0,
-              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
-            },
-            {
-              "ts": "2025-11-14T15:13:39+00:00",
-              "source": "benzinga",
-              "tone": 0.7558744618647691,
-              "headline": "What's Going On With Rocket Lab Stock Today?"
-            }
-          ]
-        },
         {
           "symbol": "QBTS",
           "action": "SELL",
-          "px": 23.98,
-          "qty": 16.981978,
-          "notional": 407.23,
-          "reason": "rotation_upgrade",
+          "px": 23.61,
+          "qty_hint": 79.46202,
+          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "score": -0.26268,
+          "qty": 7.6,
+          "notional": 179.44,
           "signals": {
-            "TS": -0.603489,
-            "NS": 0.286637,
-            "CDS": -0.247439,
+            "TS": -0.618793,
+            "NS": 0.271488,
+            "CDS": -0.26268,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 28.544223712573796,
-            "ema_slow": 30.02098042572448,
-            "macd": -1.4767567131506851,
-            "macd_signal": -0.15615338767172024,
-            "macd_hist": -1.3206033254789649,
+            "ema_fast": 28.48730063565072,
+            "ema_slow": 29.993573018317072,
+            "macd": -1.5062723826663529,
+            "macd_signal": -0.1620565215748538,
+            "macd_hist": -1.3442158610914992,
             "macd_hist_prev": -1.3041737340750612,
-            "rsi": 29.543591634929072,
-            "rsi_prev": 26.377210175241572,
-            "sma20": 30.789499999999983,
-            "ma50": 29.20670000000001,
-            "ma200": 16.296575,
-            "prev_close": 23.37,
-            "price": 23.98
+            "rsi14": 27.656368917330695,
+            "sma20": 30.77099999999998
           },
+          "guidance": {
+            "sma20": 30.771,
+            "buy_on_dip_below": 30.4633,
+            "trim_above": 33.2327
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.4,
+          "size_k": 0.4,
+          "qty_prev": 19.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
               "source": "benzinga",
-              "tone": 0.8737413636830015,
+              "tone": 0.8523482129193393,
               "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
             },
             {
@@ -2511,125 +1799,337 @@
             {
               "ts": "2025-11-14T16:21:18+00:00",
               "source": "marketbeat",
-              "tone": 0.6655738521555669,
+              "tone": 0.6492776012448278,
               "headline": "D-Wave Quantum (NYSE:QBTS) Shares Gap Down Following Insider Selling"
+            }
+          ]
+        },
+        {
+          "symbol": "ABBV",
+          "action": "BUY",
+          "px": 233.865,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|topped_by_rotation",
+          "score": 0.567034,
+          "qty": 4.889746000000001,
+          "notional": 1143.54,
+          "signals": {
+            "TS": 0.675874,
+            "NS": 0.403774,
+            "CDS": 0.567034,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 226.13144856434738,
+            "ema_slow": 225.17588345926742,
+            "macd": 0.9555651050799554,
+            "macd_signal": -0.33315781979067044,
+            "macd_hist": 1.2887229248706258,
+            "macd_hist_prev": 0.8999327183190924,
+            "rsi14": 70.62825177911542,
+            "sma20": 225.0947499999998
+          },
+          "guidance": {
+            "sma20": 225.0947,
+            "buy_on_dip_below": 222.8438,
+            "trim_above": 243.1023
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.7,
+          "size_k": 0.5249999999999999,
+          "qty_prev": 4.2441,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T17:35:28+00:00",
+              "source": "benzinga",
+              "tone": 0.6250490833147406,
+              "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
+            },
+            {
+              "ts": "2025-11-14T17:30:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9356576453328684,
+              "headline": "AbbVie Partners with Award-Winning Filmmaker on Film About the Dynamic and Resilient Lives of Those Living with Blood Cancer"
+            },
+            {
+              "ts": "2025-11-14T17:30:00+00:00",
+              "source": "stocktitan",
+              "tone": 0.0,
+              "headline": "AbbVie (NYSE: ABBV) debuts Second Winds CLL film; YouTube, Documentary+ in Dec 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "ASTS",
+          "action": "SELL",
+          "px": 61.715,
+          "qty": 0.765781,
+          "notional": 47.26,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.558448,
+            "NS": -0.150702,
+            "CDS": -0.39535,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 68.000335143662,
+            "ema_slow": 69.78729140835539,
+            "macd": -1.7869562646933872,
+            "macd_signal": 0.43333193104709133,
+            "macd_hist": -2.2202881957404785,
+            "macd_hist_prev": -2.2783553494054747,
+            "rsi": 29.58409486671465,
+            "rsi_prev": 28.405782482658395,
+            "sma20": 72.13675000000006,
+            "ma50": 64.81410000000004,
+            "ma200": 42.47749999999999,
+            "prev_close": 61.39,
+            "price": 61.715
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
+              "ts": "2025-11-14T17:03:31+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Here's What We Learned From AST SpaceMobile's Q3 Earnings Report"
+            },
+            {
+              "ts": "2025-11-14T16:28:01+00:00",
+              "source": "benzinga",
+              "tone": -0.7409605828671484,
+              "headline": "Tech Stocks Tumble As Rate Cut Odds Fall; $870M Outflows From Bitcoin ETFs"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 25.4,
+          "qty": 0.680156,
+          "notional": 17.28,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.662044,
+            "NS": 0.105828,
+            "CDS": -0.354895,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 32.39439505758961,
+            "ema_slow": 35.03192939930122,
+            "macd": -2.637534341711607,
+            "macd_signal": -0.6527205512537789,
+            "macd_hist": -1.984813790457828,
+            "macd_hist_prev": -1.9798633977273585,
+            "rsi": 22.876673373143817,
+            "rsi_prev": 21.93051511273832,
+            "sma20": 36.213999999999984,
+            "ma50": 34.464400000000026,
+            "ma200": 17.520274999999998,
+            "prev_close": 25.2,
+            "price": 25.4
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T18:06:21+00:00",
+              "source": "benzinga",
+              "tone": 0.8523199773153232,
+              "headline": "Shkreli's Shorts Up 600% As Quantum Stocks Tank"
+            },
+            {
+              "ts": "2025-11-14T16:18:15+00:00",
+              "source": "finviz",
+              "tone": 0.0,
+              "headline": "Jim Cramer on Rigetti: \"You Sell Half of It\""
+            },
+            {
+              "ts": "2025-11-14T14:33:32+00:00",
+              "source": "marketbeat",
+              "tone": -0.791608771774483,
+              "headline": "Rigetti\u2019s Q3 Miss Reveals Quantum Funding and Timing Pressures"
+            }
+          ]
+        },
+        {
+          "symbol": "RKLB",
+          "action": "SELL",
+          "px": 45.5,
+          "qty": 0.690427,
+          "notional": 31.41,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.626597,
+            "NS": 0.208402,
+            "CDS": -0.292598,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 52.562488832430674,
+            "ema_slow": 55.656577327254524,
+            "macd": -3.0940884948238505,
+            "macd_signal": -1.0670562556161909,
+            "macd_hist": -2.0270322392076596,
+            "macd_hist_prev": -2.0622276065661755,
+            "rsi": 21.815151453579446,
+            "rsi_prev": 20.561771723486984,
+            "sma20": 58.01499999999997,
+            "ma50": 55.901100000000035,
+            "ma200": 36.50967499999998,
+            "prev_close": 45.245,
+            "price": 45.5
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:11:26+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Space Stock Earnings Tracker: Firefly, Rocket Lab, AST and More"
+            },
+            {
+              "ts": "2025-11-14T19:01:08+00:00",
+              "source": "theglobeandmail",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            },
+            {
+              "ts": "2025-11-14T19:00:58+00:00",
+              "source": "yahoofinance",
+              "tone": 0.0,
+              "headline": "Why Rocket Lab (RKLB) Stock Is Up Today"
+            }
+          ]
+        },
+        {
+          "symbol": "JPM",
+          "action": "SELL",
+          "px": 303.68,
+          "qty": 0.181255,
+          "notional": 55.04,
+          "reason": "rotation_upgrade",
+          "signals": {
+            "TS": -0.533797,
+            "NS": 0.076086,
+            "CDS": -0.289844,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 310.6466004633503,
+            "ema_slow": 308.6063356559571,
+            "macd": 2.040264807393214,
+            "macd_signal": 2.06038780138457,
+            "macd_hist": -0.020122993991355642,
+            "macd_hist_prev": 0.8473940347342799,
+            "rsi": 36.85761373645001,
+            "rsi_prev": 45.83108708198277,
+            "sma20": 307.4040000000001,
+            "ma50": 307.53519999999986,
+            "ma200": 277.168225,
+            "prev_close": 309.37,
+            "price": 303.68
+          },
+          "news_preview": [
+            {
+              "ts": "2025-11-14T19:20:39+00:00",
+              "source": "tipranks",
+              "tone": 0.0,
+              "headline": "JPMorgan Stock (JPM) Falls as Trump Seeks Probe into Ties with Jeffrey Epstein"
+            },
+            {
+              "ts": "2025-11-14T18:41:37+00:00",
+              "source": "tipranks",
+              "tone": -0.2327805367034954,
+              "headline": "J.P. Morgan Turns Cautious on CoreWeave Stock (CRWV) after Q3 Earnings"
+            },
+            {
+              "ts": "2025-11-14T18:17:23+00:00",
+              "source": "coincentral",
+              "tone": -0.611420099819314,
+              "headline": "JPMorgan Chase & Co. (JPM) Stock: Bank Strikes Key Data Access Deals With Fintech Aggregators"
             }
           ]
         }
       ],
-      "cash_left": -1330.67,
+      "cash_left": -813.11,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "ABBV",
-            "cds": 0.573452,
+            "cds": 0.567034,
             "size_k": 0.5249999999999999,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 6.2871,
-            "px": 234.265,
-            "notional": 1472.85,
+            "qty": 4.889746000000001,
+            "px": 233.865,
+            "notional": 1143.54,
             "reason": "score>buy|guidance:above_dip_level|topped_by_rotation"
-          },
-          {
-            "symbol": "ILMN",
-            "cds": 0.542285,
-            "size_k": 0.20473451249999997,
-            "size_k_guidance": 0.27999999999999997,
-            "phase": "mid",
-            "qty": 3.178503,
-            "px": 120.58,
-            "notional": 383.26,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation"
-          },
-          {
-            "symbol": "LYFT",
-            "cds": 0.535054,
-            "size_k": 0.19979935499999996,
-            "size_k_guidance": 0.27999999999999997,
-            "phase": "mid",
-            "qty": 9.700063,
-            "px": 23.23,
-            "notional": 225.33,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|topped_by_rotation"
           }
         ],
         "sell_sizing": [
           {
-            "symbol": "ASTS",
-            "cds": -0.310492,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "early",
-            "qty": 0.4,
-            "px": 62.2,
-            "notional": 24.88,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
-          },
-          {
-            "symbol": "HOOD",
-            "cds": -0.276417,
+            "symbol": "QBTS",
+            "cds": -0.26268,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "mid",
-            "qty": 0.4,
-            "px": 124.755,
-            "notional": 49.9,
+            "qty": 7.6,
+            "px": 23.61,
+            "notional": 179.44,
             "reason": "score<sell|guidance:oversold_avoid_full_sell"
           },
           {
-            "symbol": "RGTI",
-            "cds": -0.313013,
-            "size_k": 1.0,
-            "size_k_guidance": 1.0,
-            "phase": null,
-            "qty": 0.906875,
-            "px": 25.785,
-            "notional": 23.38,
-            "reason": "rotation_upgrade"
-          },
-          {
             "symbol": "ASTS",
-            "cds": -0.310492,
+            "cds": -0.39535,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
-            "qty": 1.154375,
-            "px": 62.2,
-            "notional": 71.8,
+            "qty": 0.765781,
+            "px": 61.715,
+            "notional": 47.26,
             "reason": "rotation_upgrade"
           },
           {
-            "symbol": "HOOD",
-            "cds": -0.276417,
+            "symbol": "RGTI",
+            "cds": -0.354895,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
-            "qty": 1.0,
-            "px": 124.755,
-            "notional": 124.75,
+            "qty": 0.680156,
+            "px": 25.4,
+            "notional": 17.28,
             "reason": "rotation_upgrade"
           },
           {
             "symbol": "RKLB",
-            "cds": -0.248895,
+            "cds": -0.292598,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
-            "qty": 1.053902,
-            "px": 46.33,
-            "notional": 48.83,
+            "qty": 0.690427,
+            "px": 45.5,
+            "notional": 31.41,
             "reason": "rotation_upgrade"
           },
           {
-            "symbol": "QBTS",
-            "cds": -0.247439,
+            "symbol": "JPM",
+            "cds": -0.289844,
             "size_k": 1.0,
             "size_k_guidance": 1.0,
             "phase": null,
-            "qty": 16.981978,
-            "px": 23.98,
-            "notional": 407.23,
+            "qty": 0.181255,
+            "px": 303.68,
+            "notional": 55.04,
             "reason": "rotation_upgrade"
           }
         ]
@@ -2651,55 +2151,55 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 2472.79,
-      "cash_start": 22507.57,
+      "portfolio_value_est": 3530.69,
+      "cash_start": 21449.79,
       "trades": [
         {
           "symbol": "ABBV",
           "action": "BUY",
-          "px": 234.265,
+          "px": 233.865,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.573452,
-          "qty": 1.679475,
-          "notional": 393.44,
+          "score": 0.567034,
+          "qty": 1.682362,
+          "notional": 393.45,
           "signals": {
-            "TS": 0.680032,
-            "NS": 0.413583,
-            "CDS": 0.573452,
+            "TS": 0.675874,
+            "NS": 0.403774,
+            "CDS": 0.567034,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 226.19298702588583,
-            "ema_slow": 225.20551308889708,
-            "macd": 0.9874739369887493,
-            "macd_signal": -0.3267760534089117,
-            "macd_hist": 1.314249990397661,
+            "ema_fast": 226.13144856434738,
+            "ema_slow": 225.17588345926742,
+            "macd": 0.9555651050799554,
+            "macd_signal": -0.33315781979067044,
+            "macd_hist": 1.2887229248706258,
             "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 71.14438160427808,
-            "sma20": 225.11474999999982
+            "rsi14": 70.62825177911542,
+            "sma20": 225.0947499999998
           },
           "guidance": {
-            "sma20": 225.1147,
-            "buy_on_dip_below": 222.8636,
-            "trim_above": 243.1239
+            "sma20": 225.0947,
+            "buy_on_dip_below": 222.8438,
+            "trim_above": 243.1023
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
           "size_k": 0.5249999999999999,
-          "qty_prev": 3.199,
+          "qty_prev": 3.2045,
           "news_preview": [
             {
               "ts": "2025-11-14T17:35:28+00:00",
               "source": "benzinga",
-              "tone": 0.6407485192398554,
+              "tone": 0.6250490833147406,
               "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
             },
             {
               "ts": "2025-11-14T17:30:00+00:00",
               "source": "yahoo",
-              "tone": 0.9591586739162177,
+              "tone": 0.9356576453328684,
               "headline": "AbbVie Partners with Award-Winning Filmmaker on Film About the Dynamic and Resilient Lives of Those Living with Blood Cancer"
             },
             {
@@ -2711,51 +2211,107 @@
           ]
         },
         {
-          "symbol": "ILMN",
+          "symbol": "XLE",
           "action": "BUY",
-          "px": 120.58,
+          "px": 92.055,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
-          "score": 0.542285,
-          "qty": 1.272445,
-          "notional": 153.43,
+          "reason": "score>buy|guidance:above_dip_level",
+          "score": 0.518056,
+          "qty": 3.830257,
+          "notional": 352.59,
           "signals": {
-            "TS": 0.631632,
-            "NS": 0.408263,
-            "CDS": 0.542285,
+            "TS": 0.687091,
+            "NS": 0.264503,
+            "CDS": 0.518056,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 117.41100668270167,
-            "ema_slow": 111.0503394057137,
-            "macd": 6.360667276987968,
-            "macd_signal": 5.618689839070128,
-            "macd_hist": 0.7419774379178401,
-            "macd_hist_prev": 1.1136640417950305,
-            "rsi14": 63.772181786197095,
-            "sma20": 111.0195
+            "ema_fast": 89.71446556453829,
+            "ema_slow": 88.90285173035323,
+            "macd": 0.811613834185053,
+            "macd_signal": 0.3724822112708858,
+            "macd_hist": 0.43913162291416713,
+            "macd_hist_prev": 0.3755346746759586,
+            "rsi14": 71.90822230203503,
+            "sma20": 88.64500000000001
           },
           "guidance": {
-            "sma20": 111.0195,
-            "buy_on_dip_below": 109.9093,
-            "trim_above": 119.9011
+            "sma20": 88.645,
+            "buy_on_dip_below": 87.7586,
+            "trim_above": 95.7366
           },
           "phase": "mid",
-          "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.20473451249999997,
-          "qty_prev": 6.2151,
+          "size_k_guidance": 0.7,
+          "size_k": 0.4704955499999998,
+          "qty_prev": 8.1409,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T18:14:24+00:00",
+              "source": "cnbc",
+              "tone": 0.6229849730728839,
+              "headline": "Buy energy stocks for a prospective breakout, says Carter Worth"
+            },
+            {
+              "ts": "2025-11-14T16:01:38+00:00",
+              "source": "newsercom",
+              "tone": 0.6346802926752374,
+              "headline": "Is XLE stock a safe buy pre earnings - Weekly Investment Recap & Verified Stock Trade Ideas"
+            },
+            {
+              "ts": "2025-11-14T13:10:11+00:00",
+              "source": "benzinga",
+              "tone": -0.31507747016917775,
+              "headline": "Leading And Lagging Sectors For November 14, 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "ILMN",
+          "action": "BUY",
+          "px": 121.34,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone",
+          "score": 0.514843,
+          "qty": 0.382935,
+          "notional": 46.47,
+          "signals": {
+            "TS": 0.643475,
+            "NS": 0.321895,
+            "CDS": 0.514843,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 117.52792975962474,
+            "ema_slow": 111.10663570201001,
+            "macd": 6.42129405761473,
+            "macd_signal": 5.63081519519548,
+            "macd_hist": 0.79047886241925,
+            "macd_hist_prev": 1.1136640417950305,
+            "rsi14": 65.23958315976535,
+            "sma20": 111.0575
+          },
+          "guidance": {
+            "sma20": 111.0575,
+            "buy_on_dip_below": 109.9469,
+            "trim_above": 119.9421
+          },
+          "phase": "late",
+          "size_k_guidance": 0.13999999999999999,
+          "size_k": 0.0620017825,
+          "qty_prev": 6.1762,
           "news_preview": [
             {
               "ts": "2025-11-14T14:32:34+00:00",
               "source": "simplywallst",
-              "tone": 0.6310984941968854,
+              "tone": 0.6156374856273049,
               "headline": "Does the Recent 29% Rally Signal a New Opportunity for Illumina Stock?"
             },
             {
               "ts": "2025-11-14T04:38:23+00:00",
               "source": "yahoo",
-              "tone": 0.7334968084786785,
+              "tone": 0.7155271852123252,
               "headline": "1 Momentum  Stock with Promising Prospects and 2 We Avoid"
             },
             {
@@ -2769,228 +2325,239 @@
         {
           "symbol": "LYFT",
           "action": "BUY",
-          "px": 23.23,
+          "px": 23.27,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
-          "score": 0.535054,
-          "qty": 6.445627,
-          "notional": 149.73,
+          "score": 0.505576,
+          "qty": 5.78665,
+          "notional": 134.66,
           "signals": {
-            "TS": 0.604573,
-            "NS": 0.430774,
-            "CDS": 0.535054,
+            "TS": 0.60837,
+            "NS": 0.351386,
+            "CDS": 0.505576,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 22.449548872139474,
-            "ema_slow": 21.537092925271427,
-            "macd": 0.9124559468680467,
-            "macd_signal": 0.5582804229092234,
-            "macd_hist": 0.35417552395882324,
+            "ema_fast": 22.455702718293317,
+            "ema_slow": 21.540055888234388,
+            "macd": 0.9156468300589289,
+            "macd_signal": 0.5589185995473999,
+            "macd_hist": 0.356728230511529,
             "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 60.76265541041268,
-            "sma20": 21.315500000000014
+            "rsi14": 61.23360801239582,
+            "sma20": 21.317500000000013
           },
           "guidance": {
-            "sma20": 21.3155,
-            "buy_on_dip_below": 21.1023,
-            "trim_above": 23.0207
+            "sma20": 21.3175,
+            "buy_on_dip_below": 21.1043,
+            "trim_above": 23.0229
           },
           "phase": "mid",
           "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.19979935499999996,
-          "qty_prev": 32.2605,
+          "size_k": 0.17968061999999999,
+          "qty_prev": 32.2052,
           "news_preview": [
+            {
+              "ts": "2025-11-14T20:04:15+00:00",
+              "source": "tradingview",
+              "tone": 0.0,
+              "headline": "Key facts: Lyft's stock drops 3.8%; launches U.K. robotaxi contest"
+            },
             {
               "ts": "2025-11-14T15:37:24+00:00",
               "source": "simplywallst",
-              "tone": 0.6454258283473925,
+              "tone": 0.6296160177599551,
               "headline": "Lyft (LYFT): Assessing Valuation Following Strong Recent Share Price Gains"
             },
             {
               "ts": "2025-11-14T13:46:21+00:00",
               "source": "marketbeat",
-              "tone": 0.7984446876011494,
+              "tone": 0.7788866550639616,
               "headline": "Jupiter Asset Management Ltd. Sells 653,127 Shares of Lyft, Inc. $LYFT"
+            }
+          ]
+        },
+        {
+          "symbol": "DDOG",
+          "action": "BUY",
+          "px": 185.74,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
+          "score": 0.495527,
+          "qty": 0.697286,
+          "notional": 129.51,
+          "signals": {
+            "TS": 0.609562,
+            "NS": 0.324475,
+            "CDS": 0.495527,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 180.4340811866356,
+            "ema_slow": 170.0086689316925,
+            "macd": 10.425412254943097,
+            "macd_signal": 8.467994998794417,
+            "macd_hist": 1.9574172561486805,
+            "macd_hist_prev": 2.7405655441296712,
+            "rsi14": 60.91215401769923,
+            "sma20": 169.36824999999988
+          },
+          "guidance": {
+            "sma20": 169.3682,
+            "buy_on_dip_below": 167.6746,
+            "trim_above": 182.9177
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.17282217749999995,
+          "qty_prev": 4.0347,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T14:25:50+00:00",
+              "source": "newsercom",
+              "tone": 0.0,
+              "headline": "Is Tradr 2X Long DDOG Daily stock bottoming after sell off - July 2025 Final Week & High Yield Stock Recommendations"
             },
+            {
+              "ts": "2025-11-14T14:16:04+00:00",
+              "source": "yahoo",
+              "tone": 0.8745695129601764,
+              "headline": "Does Datadog's (DDOG) Profit Dip Amid Strong Sales Signal a Shift in Its Growth Priorities?"
+            },
+            {
+              "ts": "2025-11-14T13:26:51+00:00",
+              "source": "marketbeat",
+              "tone": 0.6113215263787662,
+              "headline": "KBC Group NV Acquires 5,076 Shares of Datadog, Inc. $DDOG"
+            }
+          ]
+        },
+        {
+          "symbol": "SNAP",
+          "action": "BUY",
+          "px": 8.535,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level",
+          "score": 0.371553,
+          "qty": 2.2e-05,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.499173,
+            "NS": 0.180123,
+            "CDS": 0.371553,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 8.323256493008829,
+            "ema_slow": 8.126489990043591,
+            "macd": 0.19676650296523768,
+            "macd_signal": 0.08741351689452712,
+            "macd_hist": 0.10935298607071056,
+            "macd_hist_prev": 0.13087321393196105,
+            "rsi14": 58.041793871302694,
+            "sma20": 8.021
+          },
+          "guidance": {
+            "sma20": 8.021,
+            "buy_on_dip_below": 7.9408,
+            "trim_above": 8.6627
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.7,
+          "size_k": 0.22052480625000004,
+          "qty_prev": 0.0001,
+          "news_preview": [
             {
               "ts": "2025-11-14T12:34:45+00:00",
-              "source": "fundaoculturaldopar",
-              "tone": 0.5564546353302222,
-              "headline": "Is LYFT stock a defensive play in 2025 - Dip Buying & Fast Entry Momentum Trade Alerts"
-            }
-          ]
-        },
-        {
-          "symbol": "XLE",
-          "action": "BUY",
-          "px": 91.935,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.518108,
-          "qty": 3.835968,
-          "notional": 352.66,
-          "signals": {
-            "TS": 0.682952,
-            "NS": 0.270843,
-            "CDS": 0.518108,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 89.69600402607675,
-            "ema_slow": 88.89396284146434,
-            "macd": 0.8020411846124063,
-            "macd_signal": 0.3705676813563565,
-            "macd_hist": 0.4314735032560498,
-            "macd_hist_prev": 0.3755346746759586,
-            "rsi14": 71.39355933963101,
-            "sma20": 88.63900000000001
-          },
-          "guidance": {
-            "sma20": 88.639,
-            "buy_on_dip_below": 87.7526,
-            "trim_above": 95.7301
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.4705842749999999,
-          "qty_prev": 8.1515,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:14:24+00:00",
-              "source": "cnbc",
-              "tone": 0.6386163095213927,
-              "headline": "Buy energy stocks for a prospective breakout, says Carter Worth"
-            },
-            {
-              "ts": "2025-11-14T16:01:38+00:00",
-              "source": "newsercom",
-              "tone": 0.6506050768290084,
-              "headline": "Is XLE stock a safe buy pre earnings - Weekly Investment Recap & Verified Stock Trade Ideas"
-            },
-            {
-              "ts": "2025-11-14T13:10:11+00:00",
-              "source": "benzinga",
-              "tone": -0.3229830916047722,
-              "headline": "Leading And Lagging Sectors For November 14, 2025"
-            }
-          ]
-        },
-        {
-          "symbol": "VRTX",
-          "action": "BUY",
-          "px": 439.23,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.515771,
-          "qty": 0.796107,
-          "notional": 349.67,
-          "signals": {
-            "TS": 0.616943,
-            "NS": 0.364012,
-            "CDS": 0.515771,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 426.5194870286842,
-            "ema_slow": 420.41807326344144,
-            "macd": 6.101413765242739,
-            "macd_signal": 4.922181478863708,
-            "macd_hist": 1.1792322863790314,
-            "macd_hist_prev": 0.6679921384774428,
-            "rsi14": 73.00508873511441,
-            "sma20": 423.57250000000005
-          },
-          "guidance": {
-            "sma20": 423.5725,
-            "buy_on_dip_below": 419.3368,
-            "trim_above": 457.4583
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.46659676874999995,
-          "qty_prev": 1.7062,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T17:35:28+00:00",
-              "source": "benzinga",
-              "tone": 0.6402614187890507,
-              "headline": "10 Health Care Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-14T11:45:22+00:00",
-              "source": "newsercom",
-              "tone": 0.5952352503978642,
-              "headline": "How rising interest rates impact VRTX stock - Weekly Market Report & Growth Focused Stock Pick Reports"
-            },
-            {
-              "ts": "2025-11-14T09:52:51+00:00",
               "source": "simplywallst",
-              "tone": 0.0,
-              "headline": "How Vertex\u2019s Kidney Drug Breakthrough and FDA Recognition Will Impact VRTX Investors"
+              "tone": 0.46675105883314827,
+              "headline": "Snap (SNAP): Exploring the Latest Valuation After a Recent Share Price Rally"
+            },
+            {
+              "ts": "2025-11-14T03:25:03+00:00",
+              "source": "marketbeat",
+              "tone": 0.4958346078575895,
+              "headline": "Insider Selling: Snap (NYSE:SNAP) CTO Sells 1,000,000 Shares of Stock"
+            },
+            {
+              "ts": "2025-11-13T21:03:00+00:00",
+              "source": "stockstotrade",
+              "tone": -0.29419858223397427,
+              "headline": "Snap Inc. Faces Legal Turmoil: Impact on Stock\u200b"
             }
           ]
         }
       ],
-      "cash_left": 17361.57,
+      "cash_left": 16646.05,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "ABBV",
-            "cds": 0.573452,
+            "cds": 0.567034,
             "size_k": 0.5249999999999999,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 1.679475,
-            "px": 234.265,
-            "notional": 393.44,
+            "qty": 1.682362,
+            "px": 233.865,
+            "notional": 393.45,
+            "reason": "score>buy|guidance:above_dip_level"
+          },
+          {
+            "symbol": "XLE",
+            "cds": 0.518056,
+            "size_k": 0.4704955499999998,
+            "size_k_guidance": 0.7,
+            "phase": "mid",
+            "qty": 3.830257,
+            "px": 92.055,
+            "notional": 352.59,
             "reason": "score>buy|guidance:above_dip_level"
           },
           {
             "symbol": "ILMN",
-            "cds": 0.542285,
-            "size_k": 0.20473451249999997,
-            "size_k_guidance": 0.27999999999999997,
-            "phase": "mid",
-            "qty": 1.272445,
-            "px": 120.58,
-            "notional": 153.43,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
+            "cds": 0.514843,
+            "size_k": 0.0620017825,
+            "size_k_guidance": 0.13999999999999999,
+            "phase": "late",
+            "qty": 0.382935,
+            "px": 121.34,
+            "notional": 46.47,
+            "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone"
           },
           {
             "symbol": "LYFT",
-            "cds": 0.535054,
-            "size_k": 0.19979935499999996,
+            "cds": 0.505576,
+            "size_k": 0.17968061999999999,
             "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 6.445627,
-            "px": 23.23,
-            "notional": 149.73,
+            "qty": 5.78665,
+            "px": 23.27,
+            "notional": 134.66,
             "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
-            "symbol": "XLE",
-            "cds": 0.518108,
-            "size_k": 0.4705842749999999,
-            "size_k_guidance": 0.7,
+            "symbol": "DDOG",
+            "cds": 0.495527,
+            "size_k": 0.17282217749999995,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 3.835968,
-            "px": 91.935,
-            "notional": 352.66,
-            "reason": "score>buy|guidance:above_dip_level"
+            "qty": 0.697286,
+            "px": 185.74,
+            "notional": 129.51,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
-            "symbol": "VRTX",
-            "cds": 0.515771,
-            "size_k": 0.46659676874999995,
+            "symbol": "SNAP",
+            "cds": 0.371553,
+            "size_k": 0.22052480625000004,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 0.796107,
-            "px": 439.23,
-            "notional": 349.67,
+            "qty": 2.2e-05,
+            "px": 8.535,
+            "notional": 0.0,
             "reason": "score>buy|guidance:above_dip_level"
           }
         ],
@@ -3019,39 +2586,45 @@
         {
           "symbol": "XLV",
           "action": "BUY",
-          "px": 152.625,
+          "px": 152.405,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.824132,
-          "qty": 3.009825,
-          "notional": 459.37,
+          "score": 0.800385,
+          "qty": 3.01418,
+          "notional": 459.38,
           "signals": {
-            "TS": 0.824132,
-            "NS": 0.036177,
-            "CDS": 0.50895,
+            "TS": 0.800385,
+            "NS": -0.087636,
+            "CDS": 0.445177,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 148.7966972225167,
-            "ema_slow": 146.281225873109,
-            "macd": 2.5154713494077043,
-            "macd_signal": 1.8611853009697183,
-            "macd_hist": 0.654286048437986,
+            "ema_fast": 148.76285106867056,
+            "ema_slow": 146.26492957681273,
+            "macd": 2.4979214918578236,
+            "macd_signal": 1.8576753294597421,
+            "macd_hist": 0.6402461623980815,
             "macd_hist_prev": 0.6293044402472412,
-            "rsi14": 88.83672837908316,
-            "sma20": 146.77925000000005
+            "rsi14": 85.8713117021099,
+            "sma20": 146.76825000000005
           },
           "guidance": {
-            "sma20": 146.7793,
-            "buy_on_dip_below": 145.3115,
-            "trim_above": 158.5216
+            "sma20": 146.7683,
+            "buy_on_dip_below": 145.3006,
+            "trim_above": 158.5097
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
           "size_k": 0.18374999999999997,
-          "qty_prev": 16.38,
+          "qty_prev": 16.4037,
           "news_preview": [
+            {
+              "ts": "2025-11-14T20:17:19+00:00",
+              "source": "benzinga",
+              "tone": -0.27060124385511813,
+              "headline": "Fear Of An AI Bubble? This Sector Is Quietly Surging While Tech Sinks"
+            },
             {
               "ts": "2025-11-14T17:31:55+00:00",
               "source": "benzinga",
@@ -3059,110 +2632,48 @@
               "headline": "Tech Rebounds After Selloff, Bitcoin Craters To $97,000: What's Moving Markets Friday?"
             },
             {
-              "ts": "2025-11-14T13:10:11+00:00",
-              "source": "benzinga",
-              "tone": -0.3229724955780969,
-              "headline": "Leading And Lagging Sectors For November 14, 2025"
-            },
-            {
-              "ts": "2025-11-14T11:24:59+00:00",
+              "ts": "2025-11-14T16:54:21+00:00",
               "source": "newsercom",
-              "tone": 0.5193977376444154,
-              "headline": "Will XLV stock recover faster than industry - Weekly Gains Report & Real-Time Volume Analysis"
-            }
-          ]
-        },
-        {
-          "symbol": "LLY",
-          "action": "BUY",
-          "px": 1029.35,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi",
-          "score": 0.70233,
-          "qty": 0.041652,
-          "notional": 42.87,
-          "signals": {
-            "TS": 0.70233,
-            "NS": 0.173455,
-            "CDS": 0.49078,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 953.839912639005,
-            "ema_slow": 897.8973453250085,
-            "macd": 55.942567313996506,
-            "macd_signal": 41.36233628345994,
-            "macd_hist": 14.580231030536567,
-            "macd_hist_prev": 15.012394369261877,
-            "rsi14": 89.98364118315398,
-            "sma20": 892.5834999999992
-          },
-          "guidance": {
-            "sma20": 892.5835,
-            "buy_on_dip_below": 883.6577,
-            "trim_above": 963.9902
-          },
-          "phase": "late",
-          "size_k_guidance": 0.09799999999999999,
-          "size_k": 0.01715,
-          "qty_prev": 2.4287,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:03:33+00:00",
-              "source": "marketbeat",
-              "tone": -0.2004953559979189,
-              "headline": "Eli Lilly Strikes Deal With Trump: Why Shares Are Up 10% Since"
-            },
-            {
-              "ts": "2025-11-14T17:56:00+00:00",
-              "source": "investorsbusinessdaily",
-              "tone": 0.0,
-              "headline": "Eli Lilly Leads Three Stocks Near Buy Points"
-            },
-            {
-              "ts": "2025-11-14T14:12:27+00:00",
-              "source": "benzinga",
-              "tone": 0.30214827397107374,
-              "headline": "Ozempic Maker Novo Nordisk Faces Board Shakeup"
+              "tone": -0.646385296183801,
+              "headline": "Will XLV stock recover faster than industry - Stop Loss & Daily Stock Trend Reports"
             }
           ]
         },
         {
           "symbol": "BIIB",
           "action": "BUY",
-          "px": 167.24,
+          "px": 168.51,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi",
-          "score": 0.697464,
-          "qty": 0.769105,
-          "notional": 128.63,
+          "score": 0.706806,
+          "qty": 0.763307,
+          "notional": 128.62,
           "signals": {
-            "TS": 0.697464,
-            "NS": 0.173871,
-            "CDS": 0.488027,
+            "TS": 0.706806,
+            "NS": 0.170423,
+            "CDS": 0.492253,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 158.0277566131135,
-            "ema_slow": 153.48275501584453,
-            "macd": 4.545001597268964,
-            "macd_signal": 3.138796744004701,
-            "macd_hist": 1.406204853264263,
+            "ema_fast": 158.2231412284981,
+            "ema_slow": 153.5768290899186,
+            "macd": 4.646312138579503,
+            "macd_signal": 3.159058852266809,
+            "macd_hist": 1.4872532863126944,
             "macd_hist_prev": 1.1833823222424953,
-            "rsi14": 82.69271651086333,
-            "sma20": 153.41025000000005
+            "rsi14": 83.84443820900538,
+            "sma20": 153.47375000000002
           },
           "guidance": {
-            "sma20": 153.4103,
-            "buy_on_dip_below": 151.8761,
-            "trim_above": 165.6831
+            "sma20": 153.4738,
+            "buy_on_dip_below": 151.939,
+            "trim_above": 165.7517
           },
           "phase": "mid",
           "size_k_guidance": 0.19599999999999998,
           "size_k": 0.05144999999999999,
-          "qty_prev": 14.9486,
+          "qty_prev": 14.8359,
           "news_preview": [
             {
               "ts": "2025-11-14T16:29:19+00:00",
@@ -3179,41 +2690,97 @@
             {
               "ts": "2025-11-14T08:11:43+00:00",
               "source": "benzinga",
-              "tone": 0.711055517456547,
+              "tone": 0.6936370607399511,
               "headline": "Reported Earlier, Eisai And Biogen Announce United Kingdom Approval Of LEQEMBI Lecanemab IV Maintenance Dosing For Early Alzheimer's Disease"
+            }
+          ]
+        },
+        {
+          "symbol": "LLY",
+          "action": "BUY",
+          "px": 1029.73,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi",
+          "score": 0.70258,
+          "qty": 0.041637,
+          "notional": 42.87,
+          "signals": {
+            "TS": 0.70258,
+            "NS": 0.171047,
+            "CDS": 0.489967,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "ema_fast": 953.8983741774666,
+            "ema_slow": 897.9254934731566,
+            "macd": 55.97288070431,
+            "macd_signal": 41.368398961522644,
+            "macd_hist": 14.604481742787357,
+            "macd_hist_prev": 15.012394369261877,
+            "rsi14": 90.014166057161,
+            "sma20": 892.6024999999993
+          },
+          "guidance": {
+            "sma20": 892.6025,
+            "buy_on_dip_below": 883.6765,
+            "trim_above": 964.0107
+          },
+          "phase": "late",
+          "size_k_guidance": 0.09799999999999999,
+          "size_k": 0.01715,
+          "qty_prev": 2.4278,
+          "news_preview": [
+            {
+              "ts": "2025-11-14T20:17:19+00:00",
+              "source": "benzinga",
+              "tone": -0.27072330328296984,
+              "headline": "Fear Of An AI Bubble? This Sector Is Quietly Surging While Tech Sinks"
+            },
+            {
+              "ts": "2025-11-14T19:47:00+00:00",
+              "source": "quiverquantitative",
+              "tone": 0.686629262842576,
+              "headline": "Fund Update: 49,186 ELI LILLY (LLY) shares added to Haverford Trust Co portfolio"
+            },
+            {
+              "ts": "2025-11-14T18:03:33+00:00",
+              "source": "marketbeat",
+              "tone": -0.19558399302752702,
+              "headline": "Eli Lilly Strikes Deal With Trump: Why Shares Are Up 10% Since"
             }
           ]
         },
         {
           "symbol": "XOP",
           "action": "BUY",
-          "px": 133.69,
+          "px": 133.93,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:above_dip_level",
-          "score": 0.692818,
+          "score": 0.697827,
           "qty": 1.8e-05,
           "notional": 0.0,
           "signals": {
-            "TS": 0.692818,
-            "NS": 0.068146,
-            "CDS": 0.442949,
+            "TS": 0.697827,
+            "NS": 0.071192,
+            "CDS": 0.447173,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 130.24051125987964,
-            "ema_slow": 129.27174562537613,
-            "macd": 0.9687656345035123,
-            "macd_signal": 0.04813210670876639,
-            "macd_hist": 0.9206335277947459,
+            "ema_fast": 130.2774343368027,
+            "ema_slow": 129.2895234031539,
+            "macd": 0.9879109336488057,
+            "macd_signal": 0.051961166537825065,
+            "macd_hist": 0.9359497671109807,
             "macd_hist_prev": 0.8770724887823603,
-            "rsi14": 67.66489757336163,
-            "sma20": 128.18075000000002
+            "rsi14": 68.2874244801555,
+            "sma20": 128.19275
           },
           "guidance": {
-            "sma20": 128.1808,
-            "buy_on_dip_below": 126.8989,
-            "trim_above": 138.4352
+            "sma20": 128.1927,
+            "buy_on_dip_below": 126.9108,
+            "trim_above": 138.4482
           },
           "phase": "mid",
           "size_k_guidance": 0.7,
@@ -3235,64 +2802,64 @@
             {
               "ts": "2025-11-13T07:27:39+00:00",
               "source": "newsercom",
-              "tone": 0.3300982792467492,
+              "tone": 0.32201902451284853,
               "headline": "Is XOP stock a buy before earnings results - July 2025 Reactions & Daily Profit Focused Stock Screening"
             }
           ]
         },
         {
-          "symbol": "LYFT",
+          "symbol": "XLE",
           "action": "BUY",
-          "px": 23.23,
+          "px": 92.055,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
-          "score": 0.604573,
-          "qty": 7e-06,
+          "reason": "score>buy|guidance:above_dip_level",
+          "score": 0.687091,
+          "qty": 1.8e-05,
           "notional": 0.0,
           "signals": {
-            "TS": 0.604573,
-            "NS": 0.430774,
-            "CDS": 0.535054,
+            "TS": 0.687091,
+            "NS": 0.264503,
+            "CDS": 0.518056,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 22.449548872139474,
-            "ema_slow": 21.537092925271427,
-            "macd": 0.9124559468680467,
-            "macd_signal": 0.5582804229092234,
-            "macd_hist": 0.35417552395882324,
-            "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 60.76265541041268,
-            "sma20": 21.315500000000014
+            "ema_fast": 89.71446556453829,
+            "ema_slow": 88.90285173035323,
+            "macd": 0.811613834185053,
+            "macd_signal": 0.3724822112708858,
+            "macd_hist": 0.43913162291416713,
+            "macd_hist_prev": 0.3755346746759586,
+            "rsi14": 71.90822230203503,
+            "sma20": 88.64500000000001
           },
           "guidance": {
-            "sma20": 21.3155,
-            "buy_on_dip_below": 21.1023,
-            "trim_above": 23.0207
+            "sma20": 88.645,
+            "buy_on_dip_below": 87.7586,
+            "trim_above": 95.7366
           },
           "phase": "mid",
-          "size_k_guidance": 0.27999999999999997,
-          "size_k": 0.07349999999999998,
+          "size_k_guidance": 0.7,
+          "size_k": 0.18374999999999997,
           "qty_prev": 0.0001,
           "news_preview": [
             {
-              "ts": "2025-11-14T15:37:24+00:00",
-              "source": "simplywallst",
-              "tone": 0.6454258283473925,
-              "headline": "Lyft (LYFT): Assessing Valuation Following Strong Recent Share Price Gains"
+              "ts": "2025-11-14T18:14:24+00:00",
+              "source": "cnbc",
+              "tone": 0.6229849730728839,
+              "headline": "Buy energy stocks for a prospective breakout, says Carter Worth"
             },
             {
-              "ts": "2025-11-14T13:46:21+00:00",
-              "source": "marketbeat",
-              "tone": 0.7984446876011494,
-              "headline": "Jupiter Asset Management Ltd. Sells 653,127 Shares of Lyft, Inc. $LYFT"
+              "ts": "2025-11-14T16:01:38+00:00",
+              "source": "newsercom",
+              "tone": 0.6346802926752374,
+              "headline": "Is XLE stock a safe buy pre earnings - Weekly Investment Recap & Verified Stock Trade Ideas"
             },
             {
-              "ts": "2025-11-14T12:34:45+00:00",
-              "source": "fundaoculturaldopar",
-              "tone": 0.5564546353302222,
-              "headline": "Is LYFT stock a defensive play in 2025 - Dip Buying & Fast Entry Momentum Trade Alerts"
+              "ts": "2025-11-14T13:10:11+00:00",
+              "source": "benzinga",
+              "tone": -0.31507747016917775,
+              "headline": "Leading And Lagging Sectors For November 14, 2025"
             }
           ]
         }
@@ -3302,58 +2869,58 @@
         "buy_sizing": [
           {
             "symbol": "XLV",
-            "cds": 0.50895,
+            "cds": 0.445177,
             "size_k": 0.18374999999999997,
             "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 3.009825,
-            "px": 152.625,
-            "notional": 459.37,
+            "qty": 3.01418,
+            "px": 152.405,
+            "notional": 459.38,
             "reason": "score>buy|guidance:above_dip_level"
           },
           {
+            "symbol": "BIIB",
+            "cds": 0.492253,
+            "size_k": 0.05144999999999999,
+            "size_k_guidance": 0.19599999999999998,
+            "phase": "mid",
+            "qty": 0.763307,
+            "px": 168.51,
+            "notional": 128.62,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi"
+          },
+          {
             "symbol": "LLY",
-            "cds": 0.49078,
+            "cds": 0.489967,
             "size_k": 0.01715,
             "size_k_guidance": 0.09799999999999999,
             "phase": "late",
-            "qty": 0.041652,
-            "px": 1029.35,
+            "qty": 0.041637,
+            "px": 1029.73,
             "notional": 42.87,
             "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi"
           },
           {
-            "symbol": "BIIB",
-            "cds": 0.488027,
-            "size_k": 0.05144999999999999,
-            "size_k_guidance": 0.19599999999999998,
-            "phase": "mid",
-            "qty": 0.769105,
-            "px": 167.24,
-            "notional": 128.63,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi"
-          },
-          {
             "symbol": "XOP",
-            "cds": 0.442949,
+            "cds": 0.447173,
             "size_k": 0.18374999999999997,
             "size_k_guidance": 0.7,
             "phase": "mid",
             "qty": 1.8e-05,
-            "px": 133.69,
+            "px": 133.93,
             "notional": 0.0,
             "reason": "score>buy|guidance:above_dip_level"
           },
           {
-            "symbol": "LYFT",
-            "cds": 0.535054,
-            "size_k": 0.07349999999999998,
-            "size_k_guidance": 0.27999999999999997,
+            "symbol": "XLE",
+            "cds": 0.518056,
+            "size_k": 0.18374999999999997,
+            "size_k_guidance": 0.7,
             "phase": "mid",
-            "qty": 7e-06,
-            "px": 23.23,
+            "qty": 1.8e-05,
+            "px": 92.055,
             "notional": 0.0,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
+            "reason": "score>buy|guidance:above_dip_level"
           }
         ],
         "sell_sizing": []
@@ -3381,56 +2948,56 @@
         {
           "symbol": "QQQM",
           "action": "BUY",
-          "px": 251.5,
+          "px": 250.7,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok",
-          "score": 0.787517,
-          "qty": 2.609355,
+          "score": 0.642605,
+          "qty": 2.617676,
           "notional": 656.25,
           "signals": {
-            "TS": -0.411601,
-            "NS": 0.787517,
-            "CDS": 0.30787,
-            "wT": 0.4,
-            "wN": 0.6
+            "TS": -0.432534,
+            "NS": 0.642605,
+            "CDS": -0.002478,
+            "wT": 0.6,
+            "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 254.00983416600008,
-            "ema_slow": 252.87752658651488,
-            "macd": 1.1323075794852002,
-            "macd_signal": 2.1175280096515205,
-            "macd_hist": -0.9852204301663203,
+            "ema_fast": 253.88675724292312,
+            "ema_slow": 252.81826732725563,
+            "macd": 1.0684899156674987,
+            "macd_signal": 2.10476447688798,
+            "macd_hist": -1.0362745612204813,
             "macd_hist_prev": -0.8853941799018132,
-            "rsi14": 42.18785389130955,
-            "sma20": 255.01925000000023
+            "rsi14": 39.577529258762404,
+            "sma20": 254.97925000000023
           },
           "guidance": {
-            "sma20": 255.0193,
-            "buy_on_dip_below": 252.4691,
-            "trim_above": 275.4208
+            "sma20": 254.9793,
+            "buy_on_dip_below": 252.4295,
+            "trim_above": 275.3776
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 0.26249999999999996,
-          "qty_prev": 9.9404,
+          "qty_prev": 9.9721,
           "news_preview": [
+            {
+              "ts": "2025-11-14T14:30:57+00:00",
+              "source": "seekingalpha",
+              "tone": 0.522479765747387,
+              "headline": "S&P 500: A Chart Bears Love To Misread"
+            },
             {
               "ts": "2025-11-14T13:32:50+00:00",
               "source": "seekingalpha",
-              "tone": 0.7945705533331415,
+              "tone": 0.7751167193894973,
               "headline": "S&P 500: Bears Emphasize Record P/E, But Overlook Record Profit Margins"
             },
             {
               "ts": "2025-11-11T04:30:00+00:00",
               "source": "seekingalpha",
-              "tone": 0.05242053949392928,
+              "tone": 0.07305300496470638,
               "headline": "ValuEngine Weekly Market Summary And Commentary"
-            },
-            {
-              "ts": "2025-11-08T10:40:01+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Discipline and Rules-Based Execution in QQQM Response"
             }
           ]
         },
@@ -3440,13 +3007,13 @@
           "px": 17.045,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok",
-          "score": 0.592028,
+          "score": 0.577493,
           "qty": 38.501032,
           "notional": 656.25,
           "signals": {
             "TS": -0.392253,
-            "NS": 0.592028,
-            "CDS": 0.00146,
+            "NS": 0.577493,
+            "CDS": -0.004355,
             "wT": 0.6,
             "wN": 0.4
           },
@@ -3473,113 +3040,46 @@
             {
               "ts": "2025-11-14T16:58:42+00:00",
               "source": "benzinga",
-              "tone": 0.5397204973402326,
+              "tone": 0.5264984405580231,
               "headline": "Elon Musk Says Solar Will Rule The World \u2014 And These ETFs Are Proving Him Right"
             },
             {
               "ts": "2025-11-14T09:05:07+00:00",
               "source": "seekingalpha",
-              "tone": 0.7242112561149668,
+              "tone": 0.7064695506873595,
               "headline": "One Of The Best High-Yield Setups I've Ever Seen"
             },
             {
               "ts": "2025-11-12T17:59:32+00:00",
               "source": "benzinga",
-              "tone": 0.32074438117257376,
+              "tone": 0.31288679475575537,
               "headline": "As COP30 Talks Climate, Investors Are Acting On It \u2014 Through These ETFs"
-            }
-          ]
-        },
-        {
-          "symbol": "BE",
-          "action": "BUY",
-          "px": 112.78,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok",
-          "score": 0.563212,
-          "qty": 5.818837,
-          "notional": 656.25,
-          "signals": {
-            "TS": -0.406216,
-            "NS": 0.563212,
-            "CDS": -0.018445,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "ema_fast": 122.90031462315972,
-            "ema_slow": 116.01465239795425,
-            "macd": 6.885662225205465,
-            "macd_signal": 10.74482518625937,
-            "macd_hist": -3.8591629610539044,
-            "macd_hist_prev": -3.2426686889428584,
-            "rsi14": 41.48919654414873,
-            "sma20": 121.46000000000008
-          },
-          "guidance": {
-            "sma20": 121.46,
-            "buy_on_dip_below": 120.2454,
-            "trim_above": 131.1768
-          },
-          "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.26249999999999996,
-          "qty_prev": 22.167,
-          "news_preview": [
-            {
-              "ts": "2025-11-14T18:18:42+00:00",
-              "source": "marketbeat",
-              "tone": 0.8778873768721392,
-              "headline": "Bloom Energy (NYSE:BE) Shares Gap Down - Here's Why"
-            },
-            {
-              "ts": "2025-11-14T17:44:54+00:00",
-              "source": "benzinga",
-              "tone": 0.8585777478913775,
-              "headline": "Bloom Energy Stock Jumps Friday: What Investors Need To Know"
-            },
-            {
-              "ts": "2025-11-14T10:58:00+00:00",
-              "source": "marketbeat",
-              "tone": 0.7533255438967724,
-              "headline": "Mitsubishi UFJ Asset Management Co. Ltd. Sells 4,903 Shares of Bloom Energy Corporation $BE"
             }
           ]
         }
       ],
-      "cash_left": 15531.24,
+      "cash_left": 18687.49,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "QQQM",
-            "cds": 0.30787,
+            "cds": -0.002478,
             "size_k": 0.26249999999999996,
             "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 2.609355,
-            "px": 251.5,
+            "qty": 2.617676,
+            "px": 250.7,
             "notional": 656.25,
             "reason": "score>buy|guidance:guidance_ok"
           },
           {
             "symbol": "ICLN",
-            "cds": 0.00146,
+            "cds": -0.004355,
             "size_k": 0.26249999999999996,
             "size_k_guidance": 1.0,
             "phase": "mid",
             "qty": 38.501032,
             "px": 17.045,
-            "notional": 656.25,
-            "reason": "score>buy|guidance:guidance_ok"
-          },
-          {
-            "symbol": "BE",
-            "cds": -0.018445,
-            "size_k": 0.26249999999999996,
-            "size_k_guidance": 1.0,
-            "phase": "mid",
-            "qty": 5.818837,
-            "px": 112.78,
             "notional": 656.25,
             "reason": "score>buy|guidance:guidance_ok"
           }
