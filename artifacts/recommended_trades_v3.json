@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-14T18:01:48.263797+00:00",
+  "as_of_utc": "2025-11-14T19:04:04.681524+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -945,10 +945,10 @@
           "action": "SELL",
           "px": 189.18,
           "qty_hint": 28.5,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.394824,
-          "qty": 2.8,
-          "notional": 529.7,
+          "qty": 7,
+          "notional": 1324.26,
           "signals": {
             "TS": -0.394824,
             "NS": 0.045141,
@@ -972,9 +972,8 @@
             "trim_above": 208.2664
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 7.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T17:56:34+00:00",
@@ -1477,7 +1476,7 @@
           ]
         }
       ],
-      "cash_left": 1622.97,
+      "cash_left": 2417.53,
       "debug": {
         "buy_sizing": [
           {
@@ -1518,13 +1517,13 @@
           {
             "symbol": "NVDA",
             "cds": -0.218838,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 2.8,
+            "qty": 7.0,
             "px": 189.18,
-            "notional": 529.7,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 1324.26,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "QBTS",
