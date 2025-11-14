@@ -125,6 +125,72 @@ def _safe_read_positions(pos_path: str) -> Tuple[float, Dict[str, dict]]:
         return 0.0, {}
     return read_positions_csv(pos_path)
 
+# ---------- NEW: guidance-aware sizing helper for SELLs ----------
+
+def guidance_size_for_sell(
+    symbol: str,
+    price: float,
+    signals: Dict[str, Any],
+    ind_full: Dict[str, Any],
+    guidance: Dict[str, Any],
+    phase: str | None,
+) -> Tuple[float, str]:
+    """
+    Returns (size_k_guidance, reason_suffix) for SELL trades.
+    size_k_guidance in (0,1]; multiplies existing qty for SELLs.
+
+    Intuition:
+      - Avoid full sells when price is crushed / oversold (below dip, far under SMA20, low RSI).
+      - Be comfortable selling near/above trim zone, especially in late phase / hot RSI.
+      - Middle zone → partial trims instead of full exits.
+    """
+    if not guidance:
+        return 1.0, "guidance:none"
+
+    buy_on_dip = guidance.get("buy_on_dip_below")
+    trim_above = guidance.get("trim_above")
+    sma20      = ind_full.get("sma20")
+    rsi        = ind_full.get("rsi") or ind_full.get("rsi14")
+
+    gk = 1.0
+    reasons: List[str] = []
+    ph = phase or "mid"
+
+    # 1) Extremely oversold → shrink sells a lot (avoid puking at the bottom)
+    oversold = False
+    if buy_on_dip is not None and price <= buy_on_dip:
+        oversold = True
+    if sma20 and price <= sma20 * 0.97:
+        oversold = True
+    if rsi is not None and rsi < 35:
+        oversold = True
+
+    if oversold:
+        gk *= 0.4
+        reasons.append("oversold_avoid_full_sell")
+
+    # 2) Middle zone (between dip and trim) → partial trims
+    if buy_on_dip and trim_above and buy_on_dip < price < trim_above and not oversold:
+        gk *= 0.7
+        reasons.append("mid_zone_partial_trim")
+
+    # 3) Near/above trim zone + late phase / hot RSI → allow full sell
+    if trim_above and price >= trim_above:
+        # we don't boost above 1.0, just confirm it's okay to keep gk where it is
+        reasons.append("at_or_above_trim_zone")
+        if ph == "late" or (rsi is not None and rsi > 70):
+            reasons.append("late_or_hot_confirm_sell")
+
+    # For SELLs, never drop to zero; at least 10% of planned size if any sell is triggered.
+    gk = max(0.1, min(1.0, gk))
+    if not reasons:
+        reasons.append("guidance_ok")
+
+    return gk, "|".join(reasons)
+
+# -----------------------------------------------------------------
+
+
 # ---------- NEW: guidance-aware sizing helper for BUYs ----------  # <<< NEW
 def guidance_size_for_buy(
     symbol: str,
@@ -341,6 +407,54 @@ def main():
                         # Recompute notional to keep outputs consistent
                         if t.get("px") is not None:
                             t["notional"] = round(new_q * float(t["px"]), 2)
+            
+            elif t.get("action") == "SELL" and t.get("reason") != "rotation_upgrade":
+                # Guidance-aware downsize for SELLs (we don't boost, only shrink / partial)
+                size_k = 1.0
+                phase = None
+
+                # Optional: compute phase for sells too, so we recognize late-phase tops vs early bounces
+                if enable_momentum_phase:
+                    ind_for_phase = {
+                        "rsi": t["indicators"]["rsi14"],
+                        "macd_hist": t["indicators"]["macd_hist"],
+                        "macd_hist_prev": t["indicators"]["macd_hist_prev"],
+                    }
+                    phase, _ = momentum_phase_and_size(ind_for_phase)
+                    t["phase"] = phase
+
+                px_f = float(t.get("px") or 0.0)
+                if px_f > 0:
+                    gk, g_reason = guidance_size_for_sell(
+                        symbol=sym,
+                        price=px_f,
+                        signals=t["signals"],
+                        ind_full=ind_full,
+                        guidance=guidance,
+                        phase=phase,
+                    )
+                    size_k *= gk
+                    t["size_k_guidance"] = gk
+                    base_reason = t.get("reason") or "sell"
+                    t["reason"] = base_reason + f"|guidance:{g_reason}"
+
+                # Never allow size_k > 1.0 (we only shrink)
+                size_k = min(size_k, 1.0)
+                t["size_k"] = size_k
+
+                # Apply downsizing to SELL qty (partial trims instead of full exit)
+                q = float(t.get("qty") or 0.0)
+                if q > 0 and size_k < 1.0:
+                    if cfg.sizing.fractional_buys:
+                        new_q = round(q * size_k, 6)
+                    else:
+                        new_q = int(q * size_k)
+
+                    if new_q < q:
+                        t["qty_prev"] = q
+                        t["qty"] = new_q
+                        if t.get("px") is not None:
+                            t["notional"] = round(new_q * float(t["px"]), 2)
 
             # short news preview
             t["news_preview"] = _news_preview(n.get("news"), max_items=3)
@@ -479,21 +593,33 @@ def main():
 
         # --- Debug info: how buys were sized ---
         buy_debug = []
+        sell_debug = []
         for tr in sized:
-            if tr.get("action") != "BUY":
-                continue
             sig_dbg = tr.get("signals") or {}
-            buy_debug.append({
-                "symbol": tr.get("symbol"),
-                "cds": float(sig_dbg.get("CDS") or 0.0),
-                "size_k": float(tr.get("size_k", 1.0)),
-                "size_k_guidance": float(tr.get("size_k_guidance", 1.0)),  # <<< NEW
-                "phase": tr.get("phase"),
-                "qty": float(tr.get("qty") or 0.0),
-                "px": float(tr.get("px") or 0.0),
-                "notional": float(tr.get("notional") or 0.0),
-                "reason": tr.get("reason"),
-            })
+            if tr.get("action") == "BUY":
+                buy_debug.append({
+                    "symbol": tr.get("symbol"),
+                    "cds": float(sig_dbg.get("CDS") or 0.0),
+                    "size_k": float(tr.get("size_k", 1.0)),
+                    "size_k_guidance": float(tr.get("size_k_guidance", 1.0)),
+                    "phase": tr.get("phase"),
+                    "qty": float(tr.get("qty") or 0.0),
+                    "px": float(tr.get("px") or 0.0),
+                    "notional": float(tr.get("notional") or 0.0),
+                    "reason": tr.get("reason"),
+                })
+            elif tr.get("action") == "SELL":
+                sell_debug.append({
+                    "symbol": tr.get("symbol"),
+                    "cds": float(sig_dbg.get("CDS") or 0.0),
+                    "size_k": float(tr.get("size_k", 1.0)),
+                    "size_k_guidance": float(tr.get("size_k_guidance", 1.0)),
+                    "phase": tr.get("phase"),
+                    "qty": float(tr.get("qty") or 0.0),
+                    "px": float(tr.get("px") or 0.0),
+                    "notional": float(tr.get("notional") or 0.0),
+                    "reason": tr.get("reason"),
+                })
 
         out["portfolios"][pid] = {
             "meta": {
@@ -514,6 +640,7 @@ def main():
             "cash_left": round(float(cash_left_sim), 2),  # <- simulated, reflects rotation and downsizing
             "debug": {
                 "buy_sizing": buy_debug,
+                "sell_sizing": sell_debug,
             },
         }
 
