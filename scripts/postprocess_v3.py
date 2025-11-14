@@ -140,9 +140,9 @@ def guidance_size_for_sell(
     size_k_guidance in (0,1]; multiplies existing qty for SELLs.
 
     Intuition:
-      - Avoid full sells when price is crushed / oversold (below dip, far under SMA20, low RSI).
-      - Be comfortable selling near/above trim zone, especially in late phase / hot RSI.
-      - Middle zone → partial trims instead of full exits.
+      - Avoid full sells when price is *truly* oversold (2 of 3: below dip, well under SMA20, low RSI).
+      - Mid zone => partial trim.
+      - Near/above trim zone => ok to sell full size.
     """
     if not guidance:
         return 1.0, "guidance:none"
@@ -156,37 +156,47 @@ def guidance_size_for_sell(
     reasons: List[str] = []
     ph = phase or "mid"
 
-    # 1) Extremely oversold → shrink sells a lot (avoid puking at the bottom)
-    oversold = False
+    # --- 1) Oversold score: need 2 out of 3 signals ---
+    score = 0
     if buy_on_dip is not None and price <= buy_on_dip:
-        oversold = True
-    if sma20 and price <= sma20 * 0.97:
-        oversold = True
+        score += 1
+    if sma20 and price <= sma20 * 0.95:      # tighter than 0.97
+        score += 1
     if rsi is not None and rsi < 35:
-        oversold = True
+        score += 1
 
+    oversold = score >= 2
+
+    # --- 2) Zones relative to guidance levels ---
+    rich_zone = bool(trim_above and price >= trim_above)
+    mid_zone  = bool(
+        buy_on_dip and trim_above and buy_on_dip < price < trim_above
+    )
+
+    # Oversold: shrink sells a lot (avoid puking at the bottom)
     if oversold:
         gk *= 0.4
         reasons.append("oversold_avoid_full_sell")
 
-    # 2) Middle zone (between dip and trim) → partial trims
-    if buy_on_dip and trim_above and buy_on_dip < price < trim_above and not oversold:
+    # Mid zone: partial trims if not oversold
+    elif mid_zone:
         gk *= 0.7
         reasons.append("mid_zone_partial_trim")
 
-    # 3) Near/above trim zone + late phase / hot RSI → allow full sell
-    if trim_above and price >= trim_above:
-        # we don't boost above 1.0, just confirm it's okay to keep gk where it is
+    # Rich / trim zone: we’re happy with full planned size
+    elif rich_zone:
         reasons.append("at_or_above_trim_zone")
+        # optional: if late phase / hot RSI, just note it
         if ph == "late" or (rsi is not None and rsi > 70):
             reasons.append("late_or_hot_confirm_sell")
 
-    # For SELLs, never drop to zero; at least 10% of planned size if any sell is triggered.
+    # Floor/ceiling
     gk = max(0.1, min(1.0, gk))
     if not reasons:
         reasons.append("guidance_ok")
 
     return gk, "|".join(reasons)
+
 
 # -----------------------------------------------------------------
 
