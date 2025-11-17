@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-17T04:31:27.618975+00:00",
+  "as_of_utc": "2025-11-17T04:39:09.170025+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -25,10 +25,10 @@
           "action": "SELL",
           "px": 61.715,
           "qty_hint": 7.49,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.39535,
-          "qty": 0.4,
-          "notional": 24.69,
+          "qty": 1,
+          "notional": 61.72,
           "signals": {
             "TS": -0.558448,
             "NS": -0.150702,
@@ -37,24 +37,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 68.000335143662,
-            "ema_slow": 69.78729140835539,
-            "macd": -1.7869562646933872,
-            "macd_signal": 0.43333193104709133,
-            "macd_hist": -2.2202881957404785,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi14": 29.58409486671465,
-            "sma20": 72.13675000000006
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 72.1368,
             "buy_on_dip_below": 71.4154,
             "trim_above": 77.9077
           },
-          "phase": "early",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T20:11:26+00:00",
@@ -81,10 +80,10 @@
           "action": "SELL",
           "px": 123.785,
           "qty_hint": 4.0,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.289336,
-          "qty": 0.4,
-          "notional": 49.51,
+          "qty": 1,
+          "notional": 123.78,
           "signals": {
             "TS": -0.534264,
             "NS": 0.078056,
@@ -93,14 +92,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 132.16493545885274,
-            "ema_slow": 133.90568183674142,
-            "macd": -1.7407463778886836,
-            "macd_signal": 0.5724134036155808,
-            "macd_hist": -2.3131597815042646,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi14": 37.29203344733514,
-            "sma20": 136.03350000000006
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 136.0335,
@@ -108,9 +107,8 @@
             "trim_above": 146.9162
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T19:01:14+00:00",
@@ -137,10 +135,10 @@
           "action": "SELL",
           "px": 23.61,
           "qty_hint": 230.08,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.26268,
-          "qty": 22.8,
-          "notional": 538.31,
+          "qty": 57,
+          "notional": 1345.77,
           "signals": {
             "TS": -0.618793,
             "NS": 0.271488,
@@ -149,14 +147,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 28.48730063565072,
-            "ema_slow": 29.993573018317072,
-            "macd": -1.5062723826663529,
-            "macd_signal": -0.1620565215748538,
-            "macd_hist": -1.3442158610914992,
-            "macd_hist_prev": -1.3041737340750612,
-            "rsi14": 27.656368917330695,
-            "sma20": 30.77099999999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 30.771,
@@ -164,9 +162,8 @@
             "trim_above": 33.2327
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 57.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
@@ -193,10 +190,10 @@
           "action": "SELL",
           "px": 25.4,
           "qty_hint": 6.17,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.354895,
-          "qty": 0.4,
-          "notional": 10.16,
+          "qty": 1,
+          "notional": 25.4,
           "signals": {
             "TS": -0.662044,
             "NS": 0.105828,
@@ -205,14 +202,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.39439505758961,
-            "ema_slow": 35.03192939930122,
-            "macd": -2.637534341711607,
-            "macd_signal": -0.6527205512537789,
-            "macd_hist": -1.984813790457828,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi14": 22.876673373143817,
-            "sma20": 36.213999999999984
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 36.214,
@@ -220,9 +217,8 @@
             "trim_above": 39.1111
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
@@ -249,10 +245,10 @@
           "action": "SELL",
           "px": 45.5,
           "qty_hint": 6.27,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.292598,
-          "qty": 0.4,
-          "notional": 18.2,
+          "qty": 1,
+          "notional": 45.5,
           "signals": {
             "TS": -0.626597,
             "NS": 0.208402,
@@ -261,24 +257,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 52.562488832430674,
-            "ema_slow": 55.656577327254524,
-            "macd": -3.0940884948238505,
-            "macd_signal": -1.0670562556161909,
-            "macd_hist": -2.0270322392076596,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi14": 21.815151453579446,
-            "sma20": 58.01499999999997
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 58.015,
             "buy_on_dip_below": 57.4348,
             "trim_above": 62.6562
           },
-          "phase": "early",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T20:11:26+00:00",
@@ -317,14 +312,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 226.13144856434738,
-            "ema_slow": 225.17588345926742,
-            "macd": 0.9555651050799554,
-            "macd_signal": -0.33315781979067044,
-            "macd_hist": 1.2887229248706258,
-            "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 70.62825177911542,
-            "sma20": 225.0947499999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 225.0947,
@@ -373,14 +368,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 22.455702718293317,
-            "ema_slow": 21.540055888234388,
-            "macd": 0.9156468300589289,
-            "macd_signal": 0.5589185995473999,
-            "macd_hist": 0.356728230511529,
-            "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 61.23360801239582,
-            "sma20": 21.317500000000013
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 21.3175,
@@ -421,25 +416,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.558448,
+            "TS_daily": -0.558448,
+            "TS_intraday": null,
             "NS": -0.150702,
             "CDS": -0.39535,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 68.000335143662,
-            "ema_slow": 69.78729140835539,
-            "macd": -1.7869562646933872,
-            "macd_signal": 0.43333193104709133,
-            "macd_hist": -2.2202881957404785,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi": 29.58409486671465,
-            "rsi_prev": 28.405782482658395,
-            "sma20": 72.13675000000006,
-            "ma50": 64.81410000000004,
-            "ma200": 42.47749999999999,
-            "prev_close": 61.39,
-            "price": 61.715
+            "daily": {
+              "ema_fast": 68.000335143662,
+              "ema_slow": 69.78729140835539,
+              "macd": -1.7869562646933872,
+              "macd_signal": 0.43333193104709133,
+              "macd_hist": -2.2202881957404785,
+              "macd_hist_prev": -2.2783553494054747,
+              "rsi": 29.58409486671465,
+              "rsi_prev": 28.405782482658395,
+              "sma20": 72.13675000000006,
+              "ma50": 64.81410000000004,
+              "ma200": 42.47749999999999,
+              "prev_close": 61.715,
+              "price": 61.715
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 61.715
+            }
           },
           "news_preview": [
             {
@@ -471,25 +478,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.662044,
+            "TS_daily": -0.662044,
+            "TS_intraday": null,
             "NS": 0.105828,
             "CDS": -0.354895,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.39439505758961,
-            "ema_slow": 35.03192939930122,
-            "macd": -2.637534341711607,
-            "macd_signal": -0.6527205512537789,
-            "macd_hist": -1.984813790457828,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi": 22.876673373143817,
-            "rsi_prev": 21.93051511273832,
-            "sma20": 36.213999999999984,
-            "ma50": 34.464400000000026,
-            "ma200": 17.520274999999998,
-            "prev_close": 25.2,
-            "price": 25.4
+            "daily": {
+              "ema_fast": 32.39439505758961,
+              "ema_slow": 35.03192939930122,
+              "macd": -2.637534341711607,
+              "macd_signal": -0.6527205512537789,
+              "macd_hist": -1.984813790457828,
+              "macd_hist_prev": -1.9798633977273585,
+              "rsi": 22.876673373143817,
+              "rsi_prev": 21.93051511273832,
+              "sma20": 36.213999999999984,
+              "ma50": 34.464400000000026,
+              "ma200": 17.520274999999998,
+              "prev_close": 25.4,
+              "price": 25.4
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 25.4
+            }
           },
           "news_preview": [
             {
@@ -521,25 +540,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.626597,
+            "TS_daily": -0.626597,
+            "TS_intraday": null,
             "NS": 0.208402,
             "CDS": -0.292598,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 52.562488832430674,
-            "ema_slow": 55.656577327254524,
-            "macd": -3.0940884948238505,
-            "macd_signal": -1.0670562556161909,
-            "macd_hist": -2.0270322392076596,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi": 21.815151453579446,
-            "rsi_prev": 20.561771723486984,
-            "sma20": 58.01499999999997,
-            "ma50": 55.901100000000035,
-            "ma200": 36.50967499999998,
-            "prev_close": 45.245,
-            "price": 45.5
+            "daily": {
+              "ema_fast": 52.562488832430674,
+              "ema_slow": 55.656577327254524,
+              "macd": -3.0940884948238505,
+              "macd_signal": -1.0670562556161909,
+              "macd_hist": -2.0270322392076596,
+              "macd_hist_prev": -2.0622276065661755,
+              "rsi": 21.815151453579446,
+              "rsi_prev": 20.561771723486984,
+              "sma20": 58.01499999999997,
+              "ma50": 55.901100000000035,
+              "ma200": 36.50967499999998,
+              "prev_close": 45.5,
+              "price": 45.5
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 45.5
+            }
           },
           "news_preview": [
             {
@@ -571,25 +602,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.533797,
+            "TS_daily": -0.533797,
+            "TS_intraday": null,
             "NS": 0.076086,
             "CDS": -0.289844,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 310.6466004633503,
-            "ema_slow": 308.6063356559571,
-            "macd": 2.040264807393214,
-            "macd_signal": 2.06038780138457,
-            "macd_hist": -0.020122993991355642,
-            "macd_hist_prev": 0.8473940347342799,
-            "rsi": 36.85761373645001,
-            "rsi_prev": 45.83108708198277,
-            "sma20": 307.4040000000001,
-            "ma50": 307.53519999999986,
-            "ma200": 277.168225,
-            "prev_close": 309.37,
-            "price": 303.68
+            "daily": {
+              "ema_fast": 310.6466004633503,
+              "ema_slow": 308.6063356559571,
+              "macd": 2.040264807393214,
+              "macd_signal": 2.06038780138457,
+              "macd_hist": -0.020122993991355642,
+              "macd_hist_prev": 0.8473940347342799,
+              "rsi": 36.85761373645001,
+              "rsi_prev": 45.83108708198277,
+              "sma20": 307.4040000000001,
+              "ma50": 307.53519999999986,
+              "ma200": 277.168225,
+              "prev_close": 303.68,
+              "price": 303.68
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 303.68
+            }
           },
           "news_preview": [
             {
@@ -621,25 +664,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.534264,
+            "TS_daily": -0.534264,
+            "TS_intraday": null,
             "NS": 0.078056,
             "CDS": -0.289336,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 132.16493545885274,
-            "ema_slow": 133.90568183674142,
-            "macd": -1.7407463778886836,
-            "macd_signal": 0.5724134036155808,
-            "macd_hist": -2.3131597815042646,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi": 37.29203344733514,
-            "rsi_prev": 33.60519321214082,
-            "sma20": 136.03350000000006,
-            "ma50": 132.81659999999985,
-            "ma200": 85.94364999999999,
-            "prev_close": 121.505,
-            "price": 123.785
+            "daily": {
+              "ema_fast": 132.16493545885274,
+              "ema_slow": 133.90568183674142,
+              "macd": -1.7407463778886836,
+              "macd_signal": 0.5724134036155808,
+              "macd_hist": -2.3131597815042646,
+              "macd_hist_prev": -2.1774796449373413,
+              "rsi": 37.29203344733514,
+              "rsi_prev": 33.60519321214082,
+              "sma20": 136.03350000000006,
+              "ma50": 132.81659999999985,
+              "ma200": 85.94364999999999,
+              "prev_close": 123.785,
+              "price": 123.785
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 123.785
+            }
           },
           "news_preview": [
             {
@@ -663,7 +718,7 @@
           ]
         }
       ],
-      "cash_left": 577.87,
+      "cash_left": 1539.17,
       "debug": {
         "buy_sizing": [
           {
@@ -693,57 +748,57 @@
           {
             "symbol": "ASTS",
             "cds": -0.39535,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "early",
-            "qty": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.0,
             "px": 61.715,
-            "notional": 24.69,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 61.72,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "HOOD",
             "cds": -0.289336,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 0.4,
+            "qty": 1.0,
             "px": 123.785,
-            "notional": 49.51,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 123.78,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "QBTS",
             "cds": -0.26268,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 22.8,
+            "qty": 57.0,
             "px": 23.61,
-            "notional": 538.31,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 1345.77,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "RGTI",
             "cds": -0.354895,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 0.4,
+            "qty": 1.0,
             "px": 25.4,
-            "notional": 10.16,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 25.4,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "RKLB",
             "cds": -0.292598,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "early",
-            "qty": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.0,
             "px": 45.5,
-            "notional": 18.2,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 45.5,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "ASTS",
@@ -827,10 +882,10 @@
           "action": "SELL",
           "px": 61.715,
           "qty_hint": 7.49,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.558448,
-          "qty": 0.4,
-          "notional": 24.69,
+          "qty": 1,
+          "notional": 61.72,
           "signals": {
             "TS": -0.558448,
             "NS": -0.150702,
@@ -839,24 +894,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 68.000335143662,
-            "ema_slow": 69.78729140835539,
-            "macd": -1.7869562646933872,
-            "macd_signal": 0.43333193104709133,
-            "macd_hist": -2.2202881957404785,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi14": 29.58409486671465,
-            "sma20": 72.13675000000006
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 72.1368,
             "buy_on_dip_below": 71.4154,
             "trim_above": 77.9077
           },
-          "phase": "early",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T20:11:26+00:00",
@@ -883,10 +937,10 @@
           "action": "SELL",
           "px": 123.785,
           "qty_hint": 4.0,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.534264,
-          "qty": 0.4,
-          "notional": 49.51,
+          "qty": 1,
+          "notional": 123.78,
           "signals": {
             "TS": -0.534264,
             "NS": 0.078056,
@@ -895,14 +949,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 132.16493545885274,
-            "ema_slow": 133.90568183674142,
-            "macd": -1.7407463778886836,
-            "macd_signal": 0.5724134036155808,
-            "macd_hist": -2.3131597815042646,
-            "macd_hist_prev": -2.1774796449373413,
-            "rsi14": 37.29203344733514,
-            "sma20": 136.03350000000006
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 136.0335,
@@ -910,9 +964,8 @@
             "trim_above": 146.9162
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T19:01:14+00:00",
@@ -951,14 +1004,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 192.64210222585353,
-            "ema_slow": 190.96143741786017,
-            "macd": 1.6806648079933666,
-            "macd_signal": 3.025281512975107,
-            "macd_hist": -1.3446167049817404,
-            "macd_hist_prev": -1.2477763790462286,
-            "rsi14": 45.06017933815471,
-            "sma20": 192.8657500000001
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 192.8658,
@@ -994,10 +1047,10 @@
           "action": "SELL",
           "px": 23.61,
           "qty_hint": 230.08,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.618793,
-          "qty": 22.8,
-          "notional": 538.31,
+          "qty": 57,
+          "notional": 1345.77,
           "signals": {
             "TS": -0.618793,
             "NS": 0.271488,
@@ -1006,14 +1059,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 28.48730063565072,
-            "ema_slow": 29.993573018317072,
-            "macd": -1.5062723826663529,
-            "macd_signal": -0.1620565215748538,
-            "macd_hist": -1.3442158610914992,
-            "macd_hist_prev": -1.3041737340750612,
-            "rsi14": 27.656368917330695,
-            "sma20": 30.77099999999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 30.771,
@@ -1021,9 +1074,8 @@
             "trim_above": 33.2327
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 57.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
@@ -1050,10 +1102,10 @@
           "action": "SELL",
           "px": 25.4,
           "qty_hint": 6.17,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.662044,
-          "qty": 0.4,
-          "notional": 10.16,
+          "qty": 1,
+          "notional": 25.4,
           "signals": {
             "TS": -0.662044,
             "NS": 0.105828,
@@ -1062,14 +1114,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.39439505758961,
-            "ema_slow": 35.03192939930122,
-            "macd": -2.637534341711607,
-            "macd_signal": -0.6527205512537789,
-            "macd_hist": -1.984813790457828,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi14": 22.876673373143817,
-            "sma20": 36.213999999999984
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 36.214,
@@ -1077,9 +1129,8 @@
             "trim_above": 39.1111
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
@@ -1106,10 +1157,10 @@
           "action": "SELL",
           "px": 45.5,
           "qty_hint": 6.27,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.626597,
-          "qty": 0.4,
-          "notional": 18.2,
+          "qty": 1,
+          "notional": 45.5,
           "signals": {
             "TS": -0.626597,
             "NS": 0.208402,
@@ -1118,24 +1169,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 52.562488832430674,
-            "ema_slow": 55.656577327254524,
-            "macd": -3.0940884948238505,
-            "macd_signal": -1.0670562556161909,
-            "macd_hist": -2.0270322392076596,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi14": 21.815151453579446,
-            "sma20": 58.01499999999997
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 58.015,
             "buy_on_dip_below": 57.4348,
             "trim_above": 62.6562
           },
-          "phase": "early",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T20:11:26+00:00",
@@ -1174,14 +1224,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 332.56634017447317,
-            "ema_slow": 331.6272449134805,
-            "macd": 0.9390952609926444,
-            "macd_signal": 1.5791423874595987,
-            "macd_hist": -0.6400471264669543,
-            "macd_hist_prev": -0.4666857421670241,
-            "rsi14": 40.976735677875816,
-            "sma20": 333.22275
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 333.2228,
@@ -1230,14 +1280,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 148.76285106867056,
-            "ema_slow": 146.26492957681273,
-            "macd": 2.4979214918578236,
-            "macd_signal": 1.8576753294597421,
-            "macd_hist": 0.6402461623980815,
-            "macd_hist_prev": 0.6293044402472412,
-            "rsi14": 85.8713117021099,
-            "sma20": 146.76825000000005
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 146.7683,
@@ -1270,7 +1320,7 @@
           ]
         }
       ],
-      "cash_left": 2408.83,
+      "cash_left": 3370.13,
       "debug": {
         "buy_sizing": [
           {
@@ -1289,24 +1339,24 @@
           {
             "symbol": "ASTS",
             "cds": -0.39535,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "early",
-            "qty": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.0,
             "px": 61.715,
-            "notional": 24.69,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 61.72,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "HOOD",
             "cds": -0.289336,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 0.4,
+            "qty": 1.0,
             "px": 123.785,
-            "notional": 49.51,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 123.78,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "NVDA",
@@ -1322,35 +1372,35 @@
           {
             "symbol": "QBTS",
             "cds": -0.26268,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 22.8,
+            "qty": 57.0,
             "px": 23.61,
-            "notional": 538.31,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 1345.77,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "RGTI",
             "cds": -0.354895,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 0.4,
+            "qty": 1.0,
             "px": 25.4,
-            "notional": 10.16,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 25.4,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "RKLB",
             "cds": -0.292598,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "early",
-            "qty": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.0,
             "px": 45.5,
-            "notional": 18.2,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 45.5,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "VTI",
@@ -1403,14 +1453,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 226.13144856434738,
-            "ema_slow": 225.17588345926742,
-            "macd": 0.9555651050799554,
-            "macd_signal": -0.33315781979067044,
-            "macd_hist": 1.2887229248706258,
-            "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 70.62825177911542,
-            "sma20": 225.0947499999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 225.0947,
@@ -1459,14 +1509,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 89.71446556453829,
-            "ema_slow": 88.90285173035323,
-            "macd": 0.811613834185053,
-            "macd_signal": 0.3724822112708858,
-            "macd_hist": 0.43913162291416713,
-            "macd_hist_prev": 0.3755346746759586,
-            "rsi14": 71.90822230203503,
-            "sma20": 88.64500000000001
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 88.645,
@@ -1503,10 +1553,10 @@
           "action": "BUY",
           "px": 121.34,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone",
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
           "score": 0.514843,
-          "qty": 0.63793,
-          "notional": 77.41,
+          "qty": 1.91379,
+          "notional": 232.22,
           "signals": {
             "TS": 0.643475,
             "NS": 0.321895,
@@ -1515,23 +1565,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 117.52792975962474,
-            "ema_slow": 111.10663570201001,
-            "macd": 6.42129405761473,
-            "macd_signal": 5.63081519519548,
-            "macd_hist": 0.79047886241925,
-            "macd_hist_prev": 1.1136640417950305,
-            "rsi14": 65.23958315976535,
-            "sma20": 111.0575
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 111.0575,
             "buy_on_dip_below": 109.9469,
             "trim_above": 119.9421
           },
-          "phase": "late",
-          "size_k_guidance": 0.13999999999999999,
-          "size_k": 0.0620017825,
+          "phase": "mid",
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.1860053475,
           "qty_prev": 10.2889,
           "news_preview": [
             {
@@ -1571,14 +1621,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 22.455702718293317,
-            "ema_slow": 21.540055888234388,
-            "macd": 0.9156468300589289,
-            "macd_signal": 0.5589185995473999,
-            "macd_hist": 0.356728230511529,
-            "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 61.23360801239582,
-            "sma20": 21.317500000000013
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 21.3175,
@@ -1627,14 +1677,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 8.323256493008829,
-            "ema_slow": 8.126489990043591,
-            "macd": 0.19676650296523768,
-            "macd_signal": 0.08741351689452712,
-            "macd_hist": 0.10935298607071056,
-            "macd_hist_prev": 0.13087321393196105,
-            "rsi14": 58.041793871302694,
-            "sma20": 8.021
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 8.021,
@@ -1667,7 +1717,7 @@
           ]
         }
       ],
-      "cash_left": 13555.32,
+      "cash_left": 13400.51,
       "debug": {
         "buy_sizing": [
           {
@@ -1695,13 +1745,13 @@
           {
             "symbol": "ILMN",
             "cds": 0.514843,
-            "size_k": 0.0620017825,
-            "size_k_guidance": 0.13999999999999999,
-            "phase": "late",
-            "qty": 0.63793,
+            "size_k": 0.1860053475,
+            "size_k_guidance": 0.27999999999999997,
+            "phase": "mid",
+            "qty": 1.91379,
             "px": 121.34,
-            "notional": 77.41,
-            "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone"
+            "notional": 232.22,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
             "symbol": "LYFT",
@@ -1753,10 +1803,10 @@
           "action": "SELL",
           "px": 23.61,
           "qty_hint": 79.46202,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:guidance_ok",
           "score": -0.26268,
-          "qty": 7.6,
-          "notional": 179.44,
+          "qty": 19,
+          "notional": 448.59,
           "signals": {
             "TS": -0.618793,
             "NS": 0.271488,
@@ -1765,14 +1815,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 28.48730063565072,
-            "ema_slow": 29.993573018317072,
-            "macd": -1.5062723826663529,
-            "macd_signal": -0.1620565215748538,
-            "macd_hist": -1.3442158610914992,
-            "macd_hist_prev": -1.3041737340750612,
-            "rsi14": 27.656368917330695,
-            "sma20": 30.77099999999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 30.771,
@@ -1780,9 +1830,8 @@
             "trim_above": 33.2327
           },
           "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 19.0,
+          "size_k_guidance": 1.0,
+          "size_k": 1.0,
           "news_preview": [
             {
               "ts": "2025-11-14T18:06:21+00:00",
@@ -1821,14 +1870,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 226.13144856434738,
-            "ema_slow": 225.17588345926742,
-            "macd": 0.9555651050799554,
-            "macd_signal": -0.33315781979067044,
-            "macd_hist": 1.2887229248706258,
-            "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 70.62825177911542,
-            "sma20": 225.0947499999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 225.0947,
@@ -1869,25 +1918,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.558448,
+            "TS_daily": -0.558448,
+            "TS_intraday": null,
             "NS": -0.150702,
             "CDS": -0.39535,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 68.000335143662,
-            "ema_slow": 69.78729140835539,
-            "macd": -1.7869562646933872,
-            "macd_signal": 0.43333193104709133,
-            "macd_hist": -2.2202881957404785,
-            "macd_hist_prev": -2.2783553494054747,
-            "rsi": 29.58409486671465,
-            "rsi_prev": 28.405782482658395,
-            "sma20": 72.13675000000006,
-            "ma50": 64.81410000000004,
-            "ma200": 42.47749999999999,
-            "prev_close": 61.39,
-            "price": 61.715
+            "daily": {
+              "ema_fast": 68.000335143662,
+              "ema_slow": 69.78729140835539,
+              "macd": -1.7869562646933872,
+              "macd_signal": 0.43333193104709133,
+              "macd_hist": -2.2202881957404785,
+              "macd_hist_prev": -2.2783553494054747,
+              "rsi": 29.58409486671465,
+              "rsi_prev": 28.405782482658395,
+              "sma20": 72.13675000000006,
+              "ma50": 64.81410000000004,
+              "ma200": 42.47749999999999,
+              "prev_close": 61.715,
+              "price": 61.715
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 61.715
+            }
           },
           "news_preview": [
             {
@@ -1919,25 +1980,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.662044,
+            "TS_daily": -0.662044,
+            "TS_intraday": null,
             "NS": 0.105828,
             "CDS": -0.354895,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 32.39439505758961,
-            "ema_slow": 35.03192939930122,
-            "macd": -2.637534341711607,
-            "macd_signal": -0.6527205512537789,
-            "macd_hist": -1.984813790457828,
-            "macd_hist_prev": -1.9798633977273585,
-            "rsi": 22.876673373143817,
-            "rsi_prev": 21.93051511273832,
-            "sma20": 36.213999999999984,
-            "ma50": 34.464400000000026,
-            "ma200": 17.520274999999998,
-            "prev_close": 25.2,
-            "price": 25.4
+            "daily": {
+              "ema_fast": 32.39439505758961,
+              "ema_slow": 35.03192939930122,
+              "macd": -2.637534341711607,
+              "macd_signal": -0.6527205512537789,
+              "macd_hist": -1.984813790457828,
+              "macd_hist_prev": -1.9798633977273585,
+              "rsi": 22.876673373143817,
+              "rsi_prev": 21.93051511273832,
+              "sma20": 36.213999999999984,
+              "ma50": 34.464400000000026,
+              "ma200": 17.520274999999998,
+              "prev_close": 25.4,
+              "price": 25.4
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 25.4
+            }
           },
           "news_preview": [
             {
@@ -1969,25 +2042,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.626597,
+            "TS_daily": -0.626597,
+            "TS_intraday": null,
             "NS": 0.208402,
             "CDS": -0.292598,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 52.562488832430674,
-            "ema_slow": 55.656577327254524,
-            "macd": -3.0940884948238505,
-            "macd_signal": -1.0670562556161909,
-            "macd_hist": -2.0270322392076596,
-            "macd_hist_prev": -2.0622276065661755,
-            "rsi": 21.815151453579446,
-            "rsi_prev": 20.561771723486984,
-            "sma20": 58.01499999999997,
-            "ma50": 55.901100000000035,
-            "ma200": 36.50967499999998,
-            "prev_close": 45.245,
-            "price": 45.5
+            "daily": {
+              "ema_fast": 52.562488832430674,
+              "ema_slow": 55.656577327254524,
+              "macd": -3.0940884948238505,
+              "macd_signal": -1.0670562556161909,
+              "macd_hist": -2.0270322392076596,
+              "macd_hist_prev": -2.0622276065661755,
+              "rsi": 21.815151453579446,
+              "rsi_prev": 20.561771723486984,
+              "sma20": 58.01499999999997,
+              "ma50": 55.901100000000035,
+              "ma200": 36.50967499999998,
+              "prev_close": 45.5,
+              "price": 45.5
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 45.5
+            }
           },
           "news_preview": [
             {
@@ -2019,25 +2104,37 @@
           "reason": "rotation_upgrade",
           "signals": {
             "TS": -0.533797,
+            "TS_daily": -0.533797,
+            "TS_intraday": null,
             "NS": 0.076086,
             "CDS": -0.289844,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 310.6466004633503,
-            "ema_slow": 308.6063356559571,
-            "macd": 2.040264807393214,
-            "macd_signal": 2.06038780138457,
-            "macd_hist": -0.020122993991355642,
-            "macd_hist_prev": 0.8473940347342799,
-            "rsi": 36.85761373645001,
-            "rsi_prev": 45.83108708198277,
-            "sma20": 307.4040000000001,
-            "ma50": 307.53519999999986,
-            "ma200": 277.168225,
-            "prev_close": 309.37,
-            "price": 303.68
+            "daily": {
+              "ema_fast": 310.6466004633503,
+              "ema_slow": 308.6063356559571,
+              "macd": 2.040264807393214,
+              "macd_signal": 2.06038780138457,
+              "macd_hist": -0.020122993991355642,
+              "macd_hist_prev": 0.8473940347342799,
+              "rsi": 36.85761373645001,
+              "rsi_prev": 45.83108708198277,
+              "sma20": 307.4040000000001,
+              "ma50": 307.53519999999986,
+              "ma200": 277.168225,
+              "prev_close": 303.68,
+              "price": 303.68
+            },
+            "intraday": {
+              "rsi": null,
+              "macd_hist": null,
+              "macd_hist_prev": null,
+              "ema50": null,
+              "ema200": null,
+              "price": 303.68
+            }
           },
           "news_preview": [
             {
@@ -2061,7 +2158,7 @@
           ]
         }
       ],
-      "cash_left": -813.11,
+      "cash_left": -543.96,
       "debug": {
         "buy_sizing": [
           {
@@ -2080,13 +2177,13 @@
           {
             "symbol": "QBTS",
             "cds": -0.26268,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
+            "size_k": 1.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 7.6,
+            "qty": 19.0,
             "px": 23.61,
-            "notional": 179.44,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "notional": 448.59,
+            "reason": "score<sell|guidance:guidance_ok"
           },
           {
             "symbol": "ASTS",
@@ -2171,14 +2268,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 226.13144856434738,
-            "ema_slow": 225.17588345926742,
-            "macd": 0.9555651050799554,
-            "macd_signal": -0.33315781979067044,
-            "macd_hist": 1.2887229248706258,
-            "macd_hist_prev": 0.8999327183190924,
-            "rsi14": 70.62825177911542,
-            "sma20": 225.0947499999998
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 225.0947,
@@ -2227,14 +2324,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 89.71446556453829,
-            "ema_slow": 88.90285173035323,
-            "macd": 0.811613834185053,
-            "macd_signal": 0.3724822112708858,
-            "macd_hist": 0.43913162291416713,
-            "macd_hist_prev": 0.3755346746759586,
-            "rsi14": 71.90822230203503,
-            "sma20": 88.64500000000001
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 88.645,
@@ -2271,10 +2368,10 @@
           "action": "BUY",
           "px": 121.34,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone",
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
           "score": 0.514843,
-          "qty": 0.382935,
-          "notional": 46.47,
+          "qty": 1.148806,
+          "notional": 139.4,
           "signals": {
             "TS": 0.643475,
             "NS": 0.321895,
@@ -2283,23 +2380,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 117.52792975962474,
-            "ema_slow": 111.10663570201001,
-            "macd": 6.42129405761473,
-            "macd_signal": 5.63081519519548,
-            "macd_hist": 0.79047886241925,
-            "macd_hist_prev": 1.1136640417950305,
-            "rsi14": 65.23958315976535,
-            "sma20": 111.0575
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 111.0575,
             "buy_on_dip_below": 109.9469,
             "trim_above": 119.9421
           },
-          "phase": "late",
-          "size_k_guidance": 0.13999999999999999,
-          "size_k": 0.0620017825,
+          "phase": "mid",
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.1860053475,
           "qty_prev": 6.1762,
           "news_preview": [
             {
@@ -2339,14 +2436,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 22.455702718293317,
-            "ema_slow": 21.540055888234388,
-            "macd": 0.9156468300589289,
-            "macd_signal": 0.5589185995473999,
-            "macd_hist": 0.356728230511529,
-            "macd_hist_prev": 0.4362517658612636,
-            "rsi14": 61.23360801239582,
-            "sma20": 21.317500000000013
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 21.3175,
@@ -2395,14 +2492,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 180.4340811866356,
-            "ema_slow": 170.0086689316925,
-            "macd": 10.425412254943097,
-            "macd_signal": 8.467994998794417,
-            "macd_hist": 1.9574172561486805,
-            "macd_hist_prev": 2.7405655441296712,
-            "rsi14": 60.91215401769923,
-            "sma20": 169.36824999999988
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 169.3682,
@@ -2451,14 +2548,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 8.323256493008829,
-            "ema_slow": 8.126489990043591,
-            "macd": 0.19676650296523768,
-            "macd_signal": 0.08741351689452712,
-            "macd_hist": 0.10935298607071056,
-            "macd_hist_prev": 0.13087321393196105,
-            "rsi14": 58.041793871302694,
-            "sma20": 8.021
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 8.021,
@@ -2491,7 +2588,7 @@
           ]
         }
       ],
-      "cash_left": 16646.05,
+      "cash_left": 16553.11,
       "debug": {
         "buy_sizing": [
           {
@@ -2519,13 +2616,13 @@
           {
             "symbol": "ILMN",
             "cds": 0.514843,
-            "size_k": 0.0620017825,
-            "size_k_guidance": 0.13999999999999999,
-            "phase": "late",
-            "qty": 0.382935,
+            "size_k": 0.1860053475,
+            "size_k_guidance": 0.27999999999999997,
+            "phase": "mid",
+            "qty": 1.148806,
             "px": 121.34,
-            "notional": 46.47,
-            "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone"
+            "notional": 139.4,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
             "symbol": "LYFT",
@@ -2600,14 +2697,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 148.76285106867056,
-            "ema_slow": 146.26492957681273,
-            "macd": 2.4979214918578236,
-            "macd_signal": 1.8576753294597421,
-            "macd_hist": 0.6402461623980815,
-            "macd_hist_prev": 0.6293044402472412,
-            "rsi14": 85.8713117021099,
-            "sma20": 146.76825000000005
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 146.7683,
@@ -2644,10 +2741,10 @@
           "action": "BUY",
           "px": 168.51,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi",
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
           "score": 0.706806,
-          "qty": 0.763307,
-          "notional": 128.62,
+          "qty": 1.090439,
+          "notional": 183.75,
           "signals": {
             "TS": 0.706806,
             "NS": 0.170423,
@@ -2656,14 +2753,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 158.2231412284981,
-            "ema_slow": 153.5768290899186,
-            "macd": 4.646312138579503,
-            "macd_signal": 3.159058852266809,
-            "macd_hist": 1.4872532863126944,
-            "macd_hist_prev": 1.1833823222424953,
-            "rsi14": 83.84443820900538,
-            "sma20": 153.47375000000002
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 153.4738,
@@ -2671,8 +2768,8 @@
             "trim_above": 165.7517
           },
           "phase": "mid",
-          "size_k_guidance": 0.19599999999999998,
-          "size_k": 0.05144999999999999,
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.07349999999999998,
           "qty_prev": 14.8359,
           "news_preview": [
             {
@@ -2700,10 +2797,10 @@
           "action": "BUY",
           "px": 1029.73,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi",
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone",
           "score": 0.70258,
-          "qty": 0.041637,
-          "notional": 42.87,
+          "qty": 0.178443,
+          "notional": 183.75,
           "signals": {
             "TS": 0.70258,
             "NS": 0.171047,
@@ -2712,23 +2809,23 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 953.8983741774666,
-            "ema_slow": 897.9254934731566,
-            "macd": 55.97288070431,
-            "macd_signal": 41.368398961522644,
-            "macd_hist": 14.604481742787357,
-            "macd_hist_prev": 15.012394369261877,
-            "rsi14": 90.014166057161,
-            "sma20": 892.6024999999993
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 892.6025,
             "buy_on_dip_below": 883.6765,
             "trim_above": 964.0107
           },
-          "phase": "late",
-          "size_k_guidance": 0.09799999999999999,
-          "size_k": 0.01715,
+          "phase": "mid",
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.07349999999999998,
           "qty_prev": 2.4278,
           "news_preview": [
             {
@@ -2768,14 +2865,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 130.2774343368027,
-            "ema_slow": 129.2895234031539,
-            "macd": 0.9879109336488057,
-            "macd_signal": 0.051961166537825065,
-            "macd_hist": 0.9359497671109807,
-            "macd_hist_prev": 0.8770724887823603,
-            "rsi14": 68.2874244801555,
-            "sma20": 128.19275
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 128.1927,
@@ -2824,14 +2921,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 89.71446556453829,
-            "ema_slow": 88.90285173035323,
-            "macd": 0.811613834185053,
-            "macd_signal": 0.3724822112708858,
-            "macd_hist": 0.43913162291416713,
-            "macd_hist_prev": 0.3755346746759586,
-            "rsi14": 71.90822230203503,
-            "sma20": 88.64500000000001
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 88.645,
@@ -2864,7 +2961,7 @@
           ]
         }
       ],
-      "cash_left": 16869.12,
+      "cash_left": 16673.12,
       "debug": {
         "buy_sizing": [
           {
@@ -2881,24 +2978,24 @@
           {
             "symbol": "BIIB",
             "cds": 0.492253,
-            "size_k": 0.05144999999999999,
-            "size_k_guidance": 0.19599999999999998,
+            "size_k": 0.07349999999999998,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 0.763307,
+            "qty": 1.090439,
             "px": 168.51,
-            "notional": 128.62,
-            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi"
+            "notional": 183.75,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
             "symbol": "LLY",
             "cds": 0.489967,
-            "size_k": 0.01715,
-            "size_k_guidance": 0.09799999999999999,
-            "phase": "late",
-            "qty": 0.041637,
+            "size_k": 0.07349999999999998,
+            "size_k_guidance": 0.27999999999999997,
+            "phase": "mid",
+            "qty": 0.178443,
             "px": 1029.73,
-            "notional": 42.87,
-            "reason": "score>buy|guidance:late_phase|above_dip_level|near_or_above_trim_zone|extended_vs_sma20_hot_rsi"
+            "notional": 183.75,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone"
           },
           {
             "symbol": "XOP",
@@ -2962,14 +3059,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 253.88675724292312,
-            "ema_slow": 252.81826732725563,
-            "macd": 1.0684899156674987,
-            "macd_signal": 2.10476447688798,
-            "macd_hist": -1.0362745612204813,
-            "macd_hist_prev": -0.8853941799018132,
-            "rsi14": 39.577529258762404,
-            "sma20": 254.97925000000023
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 254.9793,
@@ -3018,14 +3115,14 @@
             "wN": 0.4
           },
           "indicators": {
-            "ema_fast": 17.334935809521745,
-            "ema_slow": 16.964600936726345,
-            "macd": 0.3703348727954001,
-            "macd_signal": 0.4687952105226719,
-            "macd_hist": -0.09846033772727181,
-            "macd_hist_prev": -0.06392789536597099,
-            "rsi14": 44.172174186141156,
-            "sma20": 17.148000000000003
+            "ema_fast": null,
+            "ema_slow": null,
+            "macd": null,
+            "macd_signal": null,
+            "macd_hist": null,
+            "macd_hist_prev": null,
+            "rsi14": null,
+            "sma20": null
           },
           "guidance": {
             "sma20": 17.148,
