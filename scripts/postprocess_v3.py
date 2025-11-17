@@ -19,10 +19,9 @@ from engine import (
 # -------- IO paths --------
 INPUT_FINAL    = os.environ.get("INPUT_FINAL", "data/prices_final.json")
 PORTFOLIOS_YML = os.environ.get("PORTFOLIOS_YML", "config/portfolios.yml")
-# Default OUT_TRADES aligns with v3 executor (artifacts/*)
 OUT_TRADES     = os.environ.get("OUT_TRADES", "artifacts/recommended_trades_v3.json")
 OUT_WATCHLIST  = os.environ.get("OUT_WATCHLIST", "data/watchlist_summary.json")
-OUT_TRADES_HUMAN = os.environ.get("OUT_TRADES_HUMAN", "artifacts/recommended_trades_read.md")  # <-- NEW
+OUT_TRADES_HUMAN = os.environ.get("OUT_TRADES_HUMAN", "artifacts/recommended_trades_read.md")
 
 # -------- Watchlist knobs (optional) --------
 TS_WATCH  = float(os.environ.get("TS_WATCH", "0.50"))
@@ -34,8 +33,6 @@ ENABLE_MOMENTUM_PHASE   = os.environ.get("ENABLE_MOMENTUM_PHASE", "true").lower(
 ENABLE_ROTATION_UPGRADE = os.environ.get("ENABLE_ROTATION_UPGRADE", "true").lower() == "true"
 
 # How CDS maps to position size:
-# - At buy_threshold → we shrink to CDS_MIN_SIZE_K of normal size.
-# - At CDS_FULL_SIZE or above → full size (no downsize).
 CDS_FULL_SIZE   = float(os.environ.get("CDS_FULL_SIZE", "0.55"))
 CDS_MIN_SIZE_K  = float(os.environ.get("CDS_MIN_SIZE_K", "0.35"))
 
@@ -44,7 +41,7 @@ CDS_MIN_SIZE_K  = float(os.environ.get("CDS_MIN_SIZE_K", "0.35"))
 def write_text(path: str, content: str) -> None:
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    with open(p, "w", encoding="utf-8") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(content)
 
 def _fmt_money(x) -> str:
@@ -64,7 +61,6 @@ def _fmt_float(x, digits=2) -> str:
     except (TypeError, ValueError):
         return "n/a"
 
-# -------- helpers --------
 def _latest_px(node: dict) -> float:
     """Single source of truth for price (live-only shape; legacy-safe)."""
     if not node:
@@ -88,13 +84,99 @@ def _news_preview(news_list, max_items=3):
         })
     return prev
 
+# ---------- NEW: indicators flattening helpers ----------
+
+def _extract_indicators_views(node: dict) -> Tuple[dict, dict, dict]:
+    """
+    Returns (ind_daily, ind_intraday, ind_flat).
+
+    - Works with both legacy flat indicators and the new
+      {"daily": {...}, "intraday": {...}} shape from publish_feed.py.
+    - ind_flat exposes:
+        rsi / rsi14
+        sma20
+        ema_fast/ema_slow
+        macd_hist/macd_hist_prev
+        ema50_5m / ema200_5m
+    """
+    raw = node.get("indicators") or {}
+
+    if isinstance(raw, dict) and ("daily" in raw or "intraday" in raw):
+        ind_daily = raw.get("daily") or {}
+        ind_intr  = raw.get("intraday") or {}
+    else:
+        # legacy flat shape
+        ind_daily = raw
+        ind_intr  = {}
+
+    # pick best-available RSI (prefer intraday if present)
+    rsi_val = (
+        ind_intr.get("rsi")
+        or ind_intr.get("rsi14")
+        or ind_daily.get("rsi")
+        or ind_daily.get("rsi14")
+    )
+
+    # pick MACD hist & prev (prefer intraday if present)
+    macd_hist = ind_intr.get("macd_hist", ind_daily.get("macd_hist"))
+    macd_hist_prev = ind_intr.get("macd_hist_prev", ind_daily.get("macd_hist_prev"))
+
+    flat = {
+        "rsi": rsi_val,
+        "rsi14": rsi_val,
+        "sma20": ind_daily.get("sma20"),
+        "ema_fast": ind_daily.get("ema_fast", ind_daily.get("ema12")),
+        "ema_slow": ind_daily.get("ema_slow", ind_daily.get("ema26")),
+        "macd_hist": macd_hist,
+        "macd_hist_prev": macd_hist_prev,
+        # intraday EMAs for EMA gating
+        "ema50_5m": ind_intr.get("ema50"),
+        "ema200_5m": ind_intr.get("ema200"),
+    }
+    return ind_daily, ind_intr, flat
+
+# ---------- EMA gating helpers (for BUYs; SELLs unchanged for now) ----------
+
+def ema_size_for_buy(price: float, ema50: float | None, ema200: float | None) -> Tuple[float, str]:
+    """
+    Returns (k_ema, reason_suffix) to multiply BUY size_k.
+
+    Rules:
+      - If price is clearly below EMA200 → block new buys (k=0).
+      - If price is below EMA50 but above EMA200 → reduce size (k ~ 0.6).
+      - Otherwise → k=1.0.
+    """
+    if price is None or price <= 0:
+        return 1.0, "ema:none"
+
+    if ema50 is None and ema200 is None:
+        return 1.0, "ema:none"
+
+    reasons: List[str] = []
+    k = 1.0
+
+    if ema200 is not None and price < ema200 * 0.99:
+        k = 0.0
+        reasons.append("below_ema200_block_buy")
+        return k, "|".join(reasons)
+
+    if ema50 is not None and price < ema50 * 0.995:
+        k *= 0.6
+        reasons.append("below_ema50_reduce_buy")
+
+    if not reasons:
+        reasons.append("ema_ok")
+
+    return k, "|".join(reasons)
+
+# -------- watchlist --------
+
 def build_watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: int):
     """
-    Global watchlist with a bit more color:
-    - TS/NS/CDS
-    - RSI / SMA20
-    - guidance dip/trim levels if present
-    - a short human note
+    Global watchlist:
+    - Uses TS/NS/CDS
+    - Shows RSI / SMA20 and guidance levels
+    - Works with both legacy and new indicators shape.
     """
     out = []
     for sym, node in (feed.get("symbols") or {}).items():
@@ -106,9 +188,9 @@ def build_watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: i
         if ts < ts_thr and ns < ns_thr:
             continue
 
-        ind = node.get("indicators") or {}
-        rsi = ind.get("rsi") or ind.get("rsi14")
-        sma20 = ind.get("sma20")
+        ind_daily, ind_intr, ind_flat = _extract_indicators_views(node)
+        rsi = ind_flat.get("rsi")
+        sma20 = ind_flat.get("sma20")
         price = _latest_px(node)
         guidance = node.get("guidance") or {}
         buy_on_dip = guidance.get("buy_on_dip_below")
@@ -156,6 +238,8 @@ def build_watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: i
     out.sort(key=lambda r: (abs(r["CDS"]), r["TS"]), reverse=True)
     return out[:top_n]
 
+# -------- portfolio config helpers --------
+
 def load_portfolios_config(path: str) -> Tuple[dict, dict]:
     p = Path(path)
     if not p.exists():
@@ -196,14 +280,12 @@ def mk_portfolio_config(pid: str, defaults: dict, node: dict) -> PortfolioConfig
     )
 
 def _safe_read_positions(pos_path: str) -> Tuple[float, Dict[str, dict]]:
-    """Don't explode if positions.csv isn't there yet."""
     p = Path(pos_path)
     if not p.exists():
-        # Allow portfolio to exist with zero cash/positions; executor will skip trading until it exists.
         return 0.0, {}
     return read_positions_csv(pos_path)
 
-# ---------- NEW: guidance-aware sizing helper for SELLs ----------
+# ---------- guidance-aware sizing helpers (unchanged) ----------
 
 def guidance_size_for_sell(
     symbol: str,
@@ -213,15 +295,6 @@ def guidance_size_for_sell(
     guidance: Dict[str, Any],
     phase: str | None,
 ) -> Tuple[float, str]:
-    """
-    Returns (size_k_guidance, reason_suffix) for SELL trades.
-    size_k_guidance in (0,1]; multiplies existing qty for SELLs.
-
-    Intuition:
-      - Avoid full sells when price is *truly* oversold (2 of 3: below dip, well under SMA20, low RSI).
-      - Mid zone => partial trim.
-      - Near/above trim zone => ok to sell full size.
-    """
     if not guidance:
         return 1.0, "guidance:none"
 
@@ -234,7 +307,6 @@ def guidance_size_for_sell(
     reasons: List[str] = []
     ph = phase or "mid"
 
-    # --- 1) Oversold score: need 2 out of 3 signals ---
     score = 0
     if buy_on_dip is not None and price <= buy_on_dip:
         score += 1
@@ -245,7 +317,6 @@ def guidance_size_for_sell(
 
     oversold = score >= 2
 
-    # --- 2) Zones relative to guidance levels ---
     rich_zone = bool(trim_above and price >= trim_above)
     mid_zone  = bool(
         buy_on_dip and trim_above and buy_on_dip < price < trim_above
@@ -268,8 +339,6 @@ def guidance_size_for_sell(
 
     return gk, "|".join(reasons)
 
-# ---------- NEW: guidance-aware sizing helper for BUYs ----------
-
 def guidance_size_for_buy(
     symbol: str,
     price: float,
@@ -278,15 +347,6 @@ def guidance_size_for_buy(
     guidance: Dict[str, Any],
     phase: str | None,
 ) -> Tuple[float, str]:
-    """
-    Returns (size_k_guidance, reason_suffix).
-    size_k_guidance in [0,1]; multiplies existing size_k for BUY trades.
-
-    Intuition:
-      - Prefer early-phase dips near/under buy_on_dip_below.
-      - Be cautious when price is well above dip level.
-      - Be small when near/above trim_above or in late phase.
-    """
     if not guidance:
         return 1.0, "guidance:none"
 
@@ -324,10 +384,9 @@ def guidance_size_for_buy(
 
     return gk, "|".join(reasons)
 
-# ---------- NEW: human-readable trade explainer ----------
+# ---------- human-readable trade explainer (unchanged) ----------
 
 def describe_trade(tr: Dict[str, Any]) -> str:
-    """Return a multi-line human explanation for one trade."""
     side   = tr.get("action")
     sym    = tr.get("symbol")
     qty    = tr.get("qty")
@@ -355,12 +414,10 @@ def describe_trade(tr: Dict[str, Any]) -> str:
     sma20 = ind.get("sma20")
     price = float(px or 0.0) if px is not None else 0.0
 
-    # --- header line ---
     header = f"- {side} {qty} {sym} @ {_fmt_money(px)}"
     if notional is not None:
         header += f" (~{_fmt_money(notional)})"
 
-    # --- metrics line ---
     metrics_bits: List[str] = []
     if cds is not None:
         metrics_bits.append(f"CDS={_fmt_float(cds, 3)}")
@@ -383,7 +440,6 @@ def describe_trade(tr: Dict[str, Any]) -> str:
     if metrics_bits:
         metrics_line = "  - " + " | ".join(metrics_bits)
 
-    # --- why line ---
     why_bits: List[str] = []
 
     if side == "BUY" and cds is not None:
@@ -430,6 +486,10 @@ def describe_trade(tr: Dict[str, Any]) -> str:
         why_bits.append("Price is near/above the trim zone, so trimming/taking profits is justified.")
     if side == "BUY" and "above_dip_level" in reason:
         why_bits.append("Price is above the ideal dip level, so size is reduced to avoid chasing.")
+    if "below_ema200_block_buy" in reason:
+        why_bits.append("Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken).")
+    if "below_ema50_reduce_buy" in reason:
+        why_bits.append("Buy size was reduced because price is under the 50-period EMA on 5m (testing near-term support).")
 
     if phase == "early":
         why_bits.append("Momentum phase: early in a potential move.")
@@ -464,7 +524,7 @@ def main():
     human_lines: List[str] = []
     human_lines.append(f"# Trade plan as of {feed.get('as_of_utc')}\n")
 
-    # Optional global watchlist
+    # Global watchlist
     wl = build_watchlist(feed, TS_WATCH, NS_WATCH, WATCH_TOP)
     write_json(OUT_WATCHLIST, {
         "as_of_utc": feed.get("as_of_utc"),
@@ -472,7 +532,6 @@ def main():
         "items": wl
     })
 
-    # Also render watchlist into the human-readable markdown
     if wl:
         human_lines.append("## Global Watchlist\n")
         human_lines.append("| Symbol | Price | CDS | TS | NS | RSI | SMA20 | Notes |")
@@ -485,45 +544,38 @@ def main():
             )
         human_lines.append("")
 
-    # Portfolios
+    symbols_map = (feed or {}).get("symbols", {})
+
     total_trades = 0
     for pid, node in portfolios.items():
         cfg = mk_portfolio_config(pid, defaults, node)
 
-        # Per-portfolio feature toggles (YAML overrides env)
         enable_momentum_phase   = bool(node.get("enable_momentum_phase", defaults.get("enable_momentum_phase", ENABLE_MOMENTUM_PHASE)))
         enable_rotation_upgrade = bool(node.get("enable_rotation_upgrade", defaults.get("enable_rotation_upgrade", ENABLE_ROTATION_UPGRADE)))
 
-        # Optional rotation params from YAML
-        rot_params = (defaults.get("rotation", {}) | node.get("rotation", {})) if isinstance(defaults.get("rotation", {}), dict) else (node.get("rotation", {}) or {})
+        rot_params = (defaults.get("rotation", {}) or {}) | (node.get("rotation", {}) or {})
 
-        # Resolve positions path (config path + positions_csv)
         if not cfg.path:
-            # If omitted, default to data/portfolios/<pid>
             base = Path("data/portfolios") / pid
         else:
             base = Path(cfg.path)
         pos_path = str(base / cfg.positions_csv)
 
         cash, pos = _safe_read_positions(pos_path)
-        port_val  = total_value(pos, feed)  # should use live price under the hood
+        port_val  = total_value(pos, feed)
 
-        # actions → sizing
-        qtys = {k: v["qty"] for k, v in pos.items()}  # propose_actions expects {sym: qty}
+        qtys = {k: v["qty"] for k, v in pos.items()}
         actions = propose_actions(qtys, feed, cfg.strategy)
         sized, cash_left = size_with_cash(actions, port_val, cash, cfg.sizing)
 
-        # --- Enrich each trade with price, signals, indicators, guidance, and a few news items
-        symbols_map = (feed or {}).get("symbols", {})
+        # --- Enrich each trade with price, signals, indicators (incl intraday), guidance, and news
         for t in sized:
             sym = t.get("symbol")
-            n = symbols_map.get(sym, {})  # node for the symbol in feed
+            n = symbols_map.get(sym, {})
 
-            # price
             if "px" not in t or t["px"] is None:
                 t["px"] = n.get("price")
 
-            # signals (TS/NS/CDS and weights)
             sig = n.get("signals") or {}
             t["signals"] = {
                 "TS":  sig.get("TS"),
@@ -533,20 +585,9 @@ def main():
                 "wN":  sig.get("wN"),
             }
 
-            # indicators (accept either publisher or fetcher keys)
-            ind_full = n.get("indicators") or {}
-            t["indicators"] = {
-                "ema_fast":        ind_full.get("ema_fast", ind_full.get("ema12")),
-                "ema_slow":        ind_full.get("ema_slow", ind_full.get("ema26")),
-                "macd":            ind_full.get("macd"),
-                "macd_signal":     ind_full.get("macd_signal"),
-                "macd_hist":       ind_full.get("macd_hist"),
-                "macd_hist_prev":  ind_full.get("macd_hist_prev"),
-                "rsi14":           ind_full.get("rsi", ind_full.get("rsi14")),
-                "sma20":           ind_full.get("sma20"),
-            }
+            ind_daily, ind_intr, ind_flat = _extract_indicators_views(n)
+            t["indicators"] = ind_flat
 
-            # guidance from feed (if publish_feed was updated to emit it)
             guidance = n.get("guidance") or {}
             if guidance:
                 t["guidance"] = guidance
@@ -557,9 +598,9 @@ def main():
 
                 if enable_momentum_phase:
                     ind_for_phase = {
-                        "rsi": t["indicators"]["rsi14"],
-                        "macd_hist": t["indicators"]["macd_hist"],
-                        "macd_hist_prev": t["indicators"]["macd_hist_prev"],
+                        "rsi": ind_flat.get("rsi"),
+                        "macd_hist": ind_flat.get("macd_hist"),
+                        "macd_hist_prev": ind_flat.get("macd_hist_prev"),
                     }
                     phase, mp_k = momentum_phase_and_size(ind_for_phase)
                     t["phase"] = phase
@@ -582,12 +623,14 @@ def main():
                 size_k *= cds_k
 
                 px_f = float(t.get("px") or 0.0)
+
+                # Guidance sizing
                 if px_f > 0:
                     gk, g_reason = guidance_size_for_buy(
                         symbol=sym,
                         price=px_f,
                         signals=t["signals"],
-                        ind_full=ind_full,
+                        ind_full=ind_flat,
                         guidance=guidance,
                         phase=phase,
                     )
@@ -595,6 +638,15 @@ def main():
                     t["size_k_guidance"] = gk
                     base_reason = t.get("reason") or "buy"
                     t["reason"] = base_reason + f"|guidance:{g_reason}"
+
+                # EMA gating (5m) on BUYs
+                ema50_5m = ind_flat.get("ema50_5m")
+                ema200_5m = ind_flat.get("ema200_5m")
+                if px_f > 0 and (ema50_5m is not None or ema200_5m is not None):
+                    ema_k, ema_reason = ema_size_for_buy(px_f, ema50_5m, ema200_5m)
+                    size_k *= ema_k
+                    base_reason = t.get("reason") or "buy"
+                    t["reason"] = base_reason + f"|ema:{ema_reason}"
 
                 size_k = min(size_k, 1.0)
                 t["size_k"] = size_k
@@ -617,9 +669,9 @@ def main():
 
                 if enable_momentum_phase:
                     ind_for_phase = {
-                        "rsi": t["indicators"]["rsi14"],
-                        "macd_hist": t["indicators"]["macd_hist"],
-                        "macd_hist_prev": t["indicators"]["macd_hist_prev"],
+                        "rsi": ind_flat.get("rsi"),
+                        "macd_hist": ind_flat.get("macd_hist"),
+                        "macd_hist_prev": ind_flat.get("macd_hist_prev"),
                     }
                     phase, _ = momentum_phase_and_size(ind_for_phase)
                     t["phase"] = phase
@@ -630,7 +682,7 @@ def main():
                         symbol=sym,
                         price=px_f,
                         signals=t["signals"],
-                        ind_full=ind_full,
+                        ind_full=ind_flat,
                         guidance=guidance,
                         phase=phase,
                     )
@@ -656,7 +708,7 @@ def main():
 
             t["news_preview"] = _news_preview(n.get("news"), max_items=3)
 
-        # ---- Rotation upgrade: free cash from weak holds to fund strong buys ----
+        # ---- Rotation upgrade (unchanged) ----
         if enable_rotation_upgrade and sized:
             rot_cfg = RotationConfig(
                 trigger_cds=float(rot_params.get("trigger_cds", 0.50)),
@@ -826,7 +878,7 @@ def main():
             },
         }
 
-        # ---- Human-readable section for this portfolio ----
+        # ---- Human-readable section ----
         human_lines.append(f"## {cfg.title} ({pid})\n")
         human_lines.append(
             f"Portfolio value ≈ {_fmt_money(port_val)} | "
