@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-publish_feed.py  (LIVE-ONLY MODE)
+publish_feed.py  (LIVE-ONLY MODE, v2.3 TS upgrade)
 
 - Reads base prices (historical bars + metadata) from INPUT_PATH
 - Ensures each symbol has a fresh `price` and `ts`
 - Recomputes indicators and TS/NS/CDS on every run
+- Prefers intraday (5Min) indicators for TS when available
 - Writes unified feed with NO top-level `now` and NO per-symbol `now`
 - Logs TS/NS/CDS distribution percentiles and writes to data/score_stats.json
 """
@@ -17,7 +18,7 @@ from pathlib import Path
 INPUT_PATH  = os.getenv("INPUT_PATH",  "data/prices.json")
 OUTPUT_PATH = os.getenv("OUTPUT_PATH", "data/prices_final.json")
 
-# indicator windows (match what you used before)
+# indicator windows (daily context; TS itself uses its own intraday inputs)
 EMA_FAST = int(os.getenv("EMA_FAST", "12"))
 EMA_SLOW = int(os.getenv("EMA_SLOW", "26"))
 RSI_LEN  = int(os.getenv("RSI_LEN",  "14"))
@@ -31,10 +32,9 @@ TS_DEFAULT_WT = float(os.getenv("TS_DEFAULT_WT", "0.6"))
 NS_STRONG_ABS = float(os.getenv("NS_STRONG_ABS", "0.7"))  # flip weights if |NS| >= this
 SCORE_STATS_OUT = os.getenv("SCORE_STATS_OUT", "data/score_stats.json")
 
-# extra MAs for trend context
+# extra MAs for trend context (daily, not used directly in TS anymore)
 MA_TREND_FAST = int(os.getenv("MA_TREND_FAST", "50"))
 MA_TREND_SLOW = int(os.getenv("MA_TREND_SLOW", "200"))
-
 
 
 # ---- helpers ----
@@ -53,13 +53,22 @@ def write_json(p, obj):
 def last_price_and_ts(node):
     """
     Pull best-available latest price & timestamp from the base file.
-    Expected shapes seen historically:
-      node["bars"] = [{"t": "...", "c": number}, ...]  # daily or intraday
-      node["price"] and node["ts"] may exist already
+
     Preference order:
-      - most-recent bar close
+      - most-recent intraday bar close (bars_5m)
+      - most-recent daily bar close (bars)
       - existing "price" with "ts"
     """
+    # Prefer intraday (5m) if present
+    bars_5m = node.get("bars_5m") or []
+    if bars_5m:
+        b = bars_5m[-1]
+        px = float(b.get("c", 0.0) or 0.0)
+        ts = b.get("t")
+        if px > 0 and ts:
+            return px, ts
+
+    # Fall back to daily bars
     bars = node.get("bars") or []
     if bars:
         b = bars[-1]
@@ -67,12 +76,13 @@ def last_price_and_ts(node):
         ts = b.get("t")
         if px > 0 and ts:
             return px, ts
-    # fallback to existing
+
+    # Fallback to existing
     px = float(node.get("price") or 0.0)
     ts = node.get("ts")
     return px, ts
 
-# --- Indicators (simple, deterministic) ---
+# --- Indicators (simple, deterministic) --- (daily context)
 def ema(values, n):
     if not values: return []
     k = 2.0/(n+1.0)
@@ -125,11 +135,18 @@ def clamp_unit(x):
     # clamp to [-1,1]
     return max(-1.0, min(1.0, x))
 
-def compute_TS(ind):
-    """Scale indicators into [-1,1] then combine.
-    Philosophy:
-      - TS measures technical health + direction
-      - Adjust for trend (up/down), phase (early/mid/late), and extension (don't chase spikes).
+# --- TS logic ---
+
+def compute_TS_daily(ind):
+    """
+    Original daily TS logic (kept as a fallback if intraday data is missing).
+
+    Uses:
+      - ema_fast, ema_slow
+      - macd_hist, macd_hist_prev
+      - rsi, rsi_prev
+      - sma20, ma50, ma200
+      - price, prev_close
     """
     rsi_val        = ind.get("rsi")
     rsi_prev       = ind.get("rsi_prev")
@@ -148,12 +165,10 @@ def compute_TS(ind):
             return 0.0
         return curr - prev
 
-    # --- base components (similar to before) ---
     ts_rsi = 0.0 if rsi_val is None else clamp_unit((rsi_val - 50.0) / 50.0)
 
     ts_macd = 0.0
     if macd_hist is not None:
-        # use sign / relative magnitude, but keep bounded
         ts_macd = clamp_unit(macd_hist / (abs(macd_hist) + 1e-6))
 
     ts_ema = 0.0
@@ -162,14 +177,14 @@ def compute_TS(ind):
 
     out = 0.4 * ts_macd + 0.4 * ts_rsi + 0.2 * ts_ema
 
-    # tiny bonus for price> SMA20 (trend confirmation)
+    # tiny bonus/penalty vs SMA20
     if sma20 is not None and price is not None:
         if price > sma20:
             out += 0.03
         else:
             out -= 0.03
 
-    # --- Trend classification (up / down / chop) ---
+    # Trend classification (up / down / chop)
     trend = "chop"
     if price is not None and ma50 is not None and ma200 is not None:
         if price > ma50 > ma200:
@@ -178,28 +193,25 @@ def compute_TS(ind):
             trend = "down"
 
     if trend == "up":
-        out += 0.08   # reward strong uptrend
+        out += 0.08
     elif trend == "down":
-        out -= 0.08   # penalize strong downtrend
+        out -= 0.08
 
-    # --- Momentum phase (early / mid / late) via RSI + MACD hist slope ---
+    # Momentum phase via RSI + MACD hist slope
     hist_slope = diff(macd_hist, macd_hist_prev)
-    phase = "mid"
     if rsi_val is not None:
         if rsi_val < 70 and hist_slope > 0:
-            phase = "early"   # momentum turning up
             out += 0.04
         elif rsi_val >= 75 and hist_slope <= 0:
-            phase = "late"    # stretched & rolling over
             out -= 0.06
 
-    # --- Don't chase extension: way above SMA20 + hot RSI ---
+    # Don't chase extension: way above SMA20 + hot RSI
     if price is not None and sma20 is not None and rsi_val is not None:
-        dist = (price - sma20) / max(1e-6, sma20)  # % above SMA20
+        dist = (price - sma20) / max(1e-6, sma20)
         if dist > 0.07 and rsi_val > 70:
             out -= 0.08
 
-    # --- One-bar spike dampening ---
+    # One-bar spike dampening
     if price is not None and prev_close is not None and rsi_val is not None:
         day_change = (price - prev_close) / max(1e-6, prev_close)
         if day_change > 0.08 and rsi_val > 65:
@@ -207,6 +219,58 @@ def compute_TS(ind):
 
     return clamp_unit(out)
 
+def compute_TS_intraday(ind):
+    """
+    Intraday TS (v2.3):
+
+      TS = 0.40 * MACD_hist_slope
+         + 0.35 * RSI_position
+         + 0.25 * EMA_trend_strength
+
+    Expected `ind` keys:
+      - rsi         (intraday RSI)
+      - macd_hist   (last intraday MACD histogram)
+      - macd_hist_prev (previous intraday MACD histogram)
+      - ema50       (intraday EMA50)
+      - ema200      (intraday EMA200)
+      - price       (latest price, ideally 5m close)
+    """
+    rsi_val        = ind.get("rsi")
+    macd_hist      = ind.get("macd_hist")
+    macd_hist_prev = ind.get("macd_hist_prev")
+    ema50          = ind.get("ema50")
+    ema200         = ind.get("ema200")
+    price          = ind.get("price")
+
+    # RSI component: scaled so 50 is neutral, 0/100 ~ +/-1
+    if rsi_val is None:
+        ts_rsi = 0.0
+    else:
+        ts_rsi = clamp_unit((rsi_val - 50.0) / 50.0)
+
+    # MACD slope component
+    ts_macd_slope = 0.0
+    if macd_hist is not None and macd_hist_prev is not None:
+        slope = macd_hist - macd_hist_prev
+        denom = abs(macd_hist_prev) + 1e-3
+        ts_macd_slope = clamp_unit(slope / denom)
+
+    # EMA trend strength: distance from EMA50 and EMA200
+    ts_ema_trend = 0.0
+    if price is not None and ema50 is not None and ema200 is not None and price != 0:
+        dist50 = (price - ema50) / price  # fraction above/below EMA50
+        dist200 = (price - ema200) / price
+        # normalize: ~10% distance maps near +/-1
+        n50 = clamp_unit(dist50 / 0.10)
+        n200 = clamp_unit(dist200 / 0.10)
+        ts_ema_trend = clamp_unit(0.5 * n50 + 0.5 * n200)
+
+    ts = (
+        0.40 * ts_macd_slope +
+        0.35 * ts_rsi +
+        0.25 * ts_ema_trend
+    )
+    return clamp_unit(ts)
 
 def age_hours(dt_iso: str|None, now: datetime) -> float:
     if not dt_iso: return 9999.0
@@ -236,7 +300,6 @@ def compute_NS(news_list, now_utc):
         den += w
     if den <= 0: return 0.0
     val = num/den
-    # optional tiny sector nudge (if you store sector_tone on node)
     return clamp_unit(val)
 
 def dynamic_weights(ns):
@@ -275,6 +338,8 @@ def main():
         "as_of_utc": now_iso,
         "timeframe": base.get("timeframe", "1Day"),
         "indicators_window": base.get("indicators_window", 200),
+        # pass through intraday metadata if present (from fetch_prices.py)
+        "intraday": base.get("intraday") or {},
         "symbols": {}
     }
 
@@ -285,35 +350,32 @@ def main():
         if px <= 0:  # skip unpriced
             continue
 
-        # pull price history (close array) for indicators
-        closes = [float(b.get("c", 0.0) or 0.0) for b in (node.get("bars") or []) if b.get("c") is not None]
-        if not closes or closes[-1] != px:
-            closes = (closes or []) + [px]
+        # ----- DAILY CONTEXT (for guidance / context, not the main TS anymore) -----
+        daily_bars = node.get("bars") or []
+        closes_daily = [float(b.get("c", 0.0) or 0.0) for b in daily_bars if b.get("c") is not None]
 
-        # indicators
-        e_fast = ema(closes, EMA_FAST)
-        e_slow = ema(closes, EMA_SLOW)
-        m_line, m_sig, m_hist = macd(closes, EMA_FAST, EMA_SLOW, 9)
-        rsi_arr = rsi(closes, RSI_LEN)
-        sma_arr = sma(closes, SMA_LEN)
+        e_fast = ema(closes_daily, EMA_FAST) if closes_daily else []
+        e_slow = ema(closes_daily, EMA_SLOW) if closes_daily else []
+        m_line, m_sig, m_hist = macd(closes_daily, EMA_FAST, EMA_SLOW, 9) if closes_daily else ([], [], [])
+        rsi_arr = rsi(closes_daily, RSI_LEN) if closes_daily else []
+        sma_arr = sma(closes_daily, SMA_LEN) if closes_daily else []
 
-        # extra MAs for trend classification
-        sma50_arr = sma(closes, MA_TREND_FAST)
-        sma200_arr = sma(closes, MA_TREND_SLOW)
+        sma50_arr = sma(closes_daily, MA_TREND_FAST) if closes_daily else []
+        sma200_arr = sma(closes_daily, MA_TREND_SLOW) if closes_daily else []
 
-        prev_close = closes[-2] if len(closes) > 1 else None
-        macd_hist_prev = m_hist[-2] if m_hist and len(m_hist) > 1 else (m_hist[-1] if m_hist else None)
-        rsi_prev = rsi_arr[-2] if rsi_arr and len(rsi_arr) > 1 else (rsi_arr[-1] if rsi_arr else None)
+        prev_close = closes_daily[-1] if closes_daily else None  # previous daily close (context)
+        macd_hist_prev_daily = m_hist[-2] if m_hist and len(m_hist) > 1 else (m_hist[-1] if m_hist else None)
+        rsi_prev_daily = rsi_arr[-2] if rsi_arr and len(rsi_arr) > 1 else (rsi_arr[-1] if rsi_arr else None)
 
-        ind = {
+        ind_daily = {
             "ema_fast": e_fast[-1] if e_fast else None,
             "ema_slow": e_slow[-1] if e_slow else None,
             "macd": m_line[-1] if m_line else None,
             "macd_signal": m_sig[-1] if m_sig else None,
             "macd_hist": m_hist[-1] if m_hist else None,
-            "macd_hist_prev": macd_hist_prev,
+            "macd_hist_prev": macd_hist_prev_daily,
             "rsi": rsi_arr[-1] if rsi_arr else None,
-            "rsi_prev": rsi_prev,
+            "rsi_prev": rsi_prev_daily,
             "sma20": sma_arr[-1] if sma_arr else None,
             "ma50": sma50_arr[-1] if sma50_arr else None,
             "ma200": sma200_arr[-1] if sma200_arr else None,
@@ -321,32 +383,75 @@ def main():
             "price": px
         }
 
+        # ----- INTRADAY INPUTS (preferred for TS) -----
+        intr = node.get("indicators_5m") or {}
+        rsi_5m        = intr.get("rsi14_5m")
+        macd_hist_5m  = intr.get("macd_hist_5m")
+        macd_hist_prev_5m = intr.get("macd_hist_prev_5m")
+        ema50_5m      = intr.get("ema50_5m")
+        ema200_5m     = intr.get("ema200_5m")
+
+        ind_intraday_for_ts = {
+            "rsi": rsi_5m,
+            "macd_hist": macd_hist_5m,
+            "macd_hist_prev": macd_hist_prev_5m,
+            "ema50": ema50_5m,
+            "ema200": ema200_5m,
+            "price": px,
+        }
+
+        has_intraday_ts = all([
+            rsi_5m is not None,
+            macd_hist_5m is not None,
+            macd_hist_prev_5m is not None,
+            ema50_5m is not None,
+            ema200_5m is not None,
+        ])
 
         # news-based score
         news = node.get("news") or []   # fetch_news.py attaches raw items with `tone` and `ts`
         ns = compute_NS(news, now_dt)
 
-        # technical score
-        ts_val = compute_TS(ind)
+        # technical score (TS)
+        ts_daily = compute_TS_daily(ind_daily)
+        ts_intraday = compute_TS_intraday(ind_intraday_for_ts) if has_intraday_ts else None
+
+        # Primary TS we expose to downstream logic:
+        ts_val = ts_intraday if ts_intraday is not None else ts_daily
 
         # composite
         wT, wN = dynamic_weights(ns)
         cds = clamp_unit(wT*ts_val + wN*ns + (SECTOR_NUDGE if node.get("sector_bias") else 0.0))
 
-        # simple guideline levels anchored on SMA20 if available
+        # simple guideline levels anchored on daily SMA20 if available
         guidance = {}
-        sma20_last = ind.get("sma20")
+        sma20_last = ind_daily.get("sma20")
         if sma20_last is not None:
             guidance["sma20"] = round(sma20_last, 4)
             guidance["buy_on_dip_below"] = round(sma20_last * 0.99, 4)  # ~1% under SMA20
             guidance["trim_above"] = round(sma20_last * 1.08, 4)        # ~8% above SMA20
 
+        # We include both daily + intraday TS in indicators for transparency
+        indicators_out = {
+            "daily": ind_daily,
+            "intraday": {
+                "rsi": rsi_5m,
+                "macd_hist": macd_hist_5m,
+                "macd_hist_prev": macd_hist_prev_5m,
+                "ema50": ema50_5m,
+                "ema200": ema200_5m,
+                "price": px,
+            }
+        }
+
         out["symbols"][sym] = {
             "price": px,
             "ts": ts or now_iso,
-            "indicators": ind,
+            "indicators": indicators_out,
             "signals": {
                 "TS": round(ts_val, 6),
+                "TS_daily": round(ts_daily, 6),
+                "TS_intraday": round(ts_intraday, 6) if ts_intraday is not None else None,
                 "NS": round(ns, 6),
                 "CDS": round(cds, 6),
                 "wT": round(wT, 6),
@@ -355,7 +460,6 @@ def main():
             "guidance": guidance,
             "news": news  # unchanged list; consumer can slice MAX_ARTICLES later
         }
-
 
         ts_list.append(ts_val); ns_list.append(ns); cds_list.append(cds)
 
