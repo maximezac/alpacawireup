@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-17T14:45:54.995302+00:00",
+  "as_of_utc": "2025-11-17T15:27:01.530333+00:00",
   "criteria": {
     "TS_WATCH": 0.5,
     "NS_WATCH": 0.5,
@@ -12,8 +12,8 @@
       "TS": 0.313015,
       "NS": 0.643195,
       "CDS": 0.445087,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 57.77261504237397,
+      "sma20": 76.32899999999998,
       "buy_on_dip_below": 75.5657,
       "trim_above": 82.4353,
       "note": "dip< $75.57; trim> $82.44"
@@ -24,11 +24,11 @@
       "TS": 0.545256,
       "NS": 0.265544,
       "CDS": 0.433371,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 75.70836536469558,
+      "sma20": 356.16475,
       "buy_on_dip_below": 352.6031,
       "trim_above": 384.6579,
-      "note": "dip< $352.60; trim> $384.66"
+      "note": "RSI hot; dip< $352.60; trim> $384.66"
     },
     {
       "symbol": "RBLX",
@@ -36,11 +36,11 @@
       "TS": 0.518093,
       "NS": 0.086278,
       "CDS": 0.345367,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 64.04401217706481,
+      "sma20": 114.07299999999998,
       "buy_on_dip_below": 112.9323,
       "trim_above": 123.1988,
-      "note": "dip< $112.93; trim> $123.20"
+      "note": "RSI strong; below 20d trend; dip< $112.93; trim> $123.20"
     },
     {
       "symbol": "HON",
@@ -48,8 +48,8 @@
       "TS": 0.130246,
       "NS": 0.521912,
       "CDS": 0.286912,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 50.35624882548426,
+      "sma20": 203.66975000000005,
       "buy_on_dip_below": 201.6331,
       "trim_above": 219.9633,
       "note": "dip< $201.63; trim> $219.96"
@@ -60,11 +60,11 @@
       "TS": -0.172485,
       "NS": 0.617652,
       "CDS": 0.14357,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 29.31725649372885,
+      "sma20": 237.5002500000001,
       "buy_on_dip_below": 235.1252,
       "trim_above": 256.5003,
-      "note": "dip< $235.13; trim> $256.50"
+      "note": "RSI oversold; dip< $235.13; trim> $256.50"
     },
     {
       "symbol": "BIIB",
@@ -72,11 +72,11 @@
       "TS": -0.197831,
       "NS": 0.631573,
       "CDS": 0.133931,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 36.4679067992484,
+      "sma20": 154.42900000000003,
       "buy_on_dip_below": 152.8847,
       "trim_above": 166.7833,
-      "note": "dip< $152.88; trim> $166.78"
+      "note": "RSI weak; extended above 20d; dip< $152.88; trim> $166.78"
     },
     {
       "symbol": "IBM",
@@ -84,11 +84,11 @@
       "TS": -0.549318,
       "NS": 0.555533,
       "CDS": -0.107378,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 27.66220967629846,
+      "sma20": 304.80975000000007,
       "buy_on_dip_below": 301.7617,
       "trim_above": 329.1945,
-      "note": "dip< $301.76; trim> $329.19"
+      "note": "RSI oversold; dip< $301.76; trim> $329.19"
     },
     {
       "symbol": "ABNB",
@@ -96,11 +96,11 @@
       "TS": -0.192894,
       "NS": 0.520753,
       "CDS": 0.092565,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 31.507745749211963,
+      "sma20": 124.44850000000004,
       "buy_on_dip_below": 123.204,
       "trim_above": 134.4044,
-      "note": "dip< $123.20; trim> $134.40"
+      "note": "RSI weak; dip< $123.20; trim> $134.40"
     },
     {
       "symbol": "ENPH",
@@ -108,11 +108,11 @@
       "TS": -0.245714,
       "NS": 0.559784,
       "CDS": 0.076485,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 34.26178892939228,
+      "sma20": 32.14025,
       "buy_on_dip_below": 31.8188,
       "trim_above": 34.7115,
-      "note": "dip< $31.82; trim> $34.71"
+      "note": "RSI weak; below 20d trend; dip< $31.82; trim> $34.71"
     },
     {
       "symbol": "SMCI",
@@ -120,11 +120,11 @@
       "TS": -0.266121,
       "NS": 0.519103,
       "CDS": 0.047969,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 31.742363847933504,
+      "sma20": 45.33025000000002,
       "buy_on_dip_below": 44.8769,
       "trim_above": 48.9567,
-      "note": "dip< $44.88; trim> $48.96"
+      "note": "RSI weak; below 20d trend; dip< $44.88; trim> $48.96"
     },
     {
       "symbol": "SEDG",
@@ -132,11 +132,11 @@
       "TS": -0.428207,
       "NS": 0.550439,
       "CDS": -0.036749,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 26.42124780458208,
+      "sma20": 38.09499999999998,
       "buy_on_dip_below": 37.714,
       "trim_above": 41.1426,
-      "note": "dip< $37.71; trim> $41.14"
+      "note": "RSI oversold; below 20d trend; dip< $37.71; trim> $41.14"
     },
     {
       "symbol": "WFC",
@@ -144,11 +144,11 @@
       "TS": -0.318528,
       "NS": 0.546311,
       "CDS": 0.027407,
-      "rsi14": null,
-      "sma20": null,
+      "rsi14": 33.725658590599025,
+      "sma20": 85.93999999999998,
       "buy_on_dip_below": 85.0806,
       "trim_above": 92.8152,
-      "note": "dip< $85.08; trim> $92.82"
+      "note": "RSI weak; dip< $85.08; trim> $92.82"
     }
   ]
 }
