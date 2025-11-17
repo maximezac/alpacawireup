@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-17T18:23:44.111106+00:00",
+  "as_of_utc": "2025-11-17T20:51:12.566151+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,12 +17,82 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 23104.55,
+      "portfolio_value_est": 22883.97,
       "cash_start": 120.0,
-      "trades": [],
-      "cash_left": 120.0,
+      "trades": [
+        {
+          "symbol": "TSM",
+          "action": "BUY",
+          "px": 281.5,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.395589,
+          "qty": 0.159276,
+          "notional": 44.84,
+          "signals": {
+            "TS": 0.417348,
+            "NS": 0.362951,
+            "CDS": 0.395589,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.00100931469166,
+            "rsi14": 54.00100931469166,
+            "sma20": 293.6032499999999,
+            "ema_fast": 289.48932033179824,
+            "ema_slow": 290.1440038719579,
+            "macd_hist": 0.1187450058866405,
+            "macd_hist_prev": 0.05055575746517982,
+            "ema50_5m": 281.77626490107986,
+            "ema200_5m": 283.62417793650985
+          },
+          "guidance": {
+            "sma20": 293.6032,
+            "buy_on_dip_below": 290.6672,
+            "trim_above": 317.0915
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.37362318750000006,
+          "qty_prev": 0.4263,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T17:15:02+00:00",
+              "source": "benzinga",
+              "tone": -0.3707689712429932,
+              "headline": "Micron, Nvidia, Apple Among Q3's 'Hot List' As Hedge Funds Load Up On Tech All Over Again"
+            },
+            {
+              "ts": "2025-11-17T15:02:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.6300380389767978,
+              "headline": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Shares Sold by Tortoise Investment Management LLC"
+            },
+            {
+              "ts": "2025-11-17T15:00:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $1000 In Taiwan Semiconductor Stock 20 Years Ago, You Would Have This Much Today"
+            }
+          ]
+        }
+      ],
+      "cash_left": -44.84,
       "debug": {
-        "buy_sizing": [],
+        "buy_sizing": [
+          {
+            "symbol": "TSM",
+            "cds": 0.395589,
+            "size_k": 0.37362318750000006,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.159276,
+            "px": 281.5,
+            "notional": 44.84,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          }
+        ],
         "sell_sizing": []
       }
     },
@@ -42,97 +112,40 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 23104.55,
+      "portfolio_value_est": 22883.97,
       "cash_start": 120.0,
       "trades": [
         {
-          "symbol": "CTM",
+          "symbol": "ASTS",
           "action": "SELL",
-          "px": 1.085,
-          "qty_hint": 33.0,
+          "px": 56.49,
+          "qty_hint": 7.49,
           "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
-          "score": -0.236997,
-          "qty": 3.2,
-          "notional": 3.47,
-          "signals": {
-            "TS": -0.236997,
-            "NS": 0.101174,
-            "CDS": -0.101728,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 27.69869892777082,
-            "rsi14": 27.69869892777082,
-            "sma20": 1.1119150000000004,
-            "ema_fast": 1.1431173615743373,
-            "ema_slow": 1.1201381386133828,
-            "macd_hist": -1.5884450352563265e-05,
-            "macd_hist_prev": -5.914941171302965e-05,
-            "ema50_5m": 1.115466255275552,
-            "ema200_5m": 1.1389267036606738
-          },
-          "guidance": {
-            "sma20": 1.1119,
-            "buy_on_dip_below": 1.1008,
-            "trim_above": 1.2009
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 8.0,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T13:07:35+00:00",
-              "source": "newsercom",
-              "tone": -0.465063974264764,
-              "headline": "Why CTM stock signals breakout potential - July 2025 Snapshot & Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-17T12:55:40+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Why CTM stock signals breakout potential - Dip Buying & AI Enhanced Trading Alerts"
-            },
-            {
-              "ts": "2025-11-17T11:36:27+00:00",
-              "source": "newsercom",
-              "tone": -0.13967100426264287,
-              "headline": "Why CTM stock remains top rated - July 2025 Weekly Recap & Stock Portfolio Risk Control"
-            }
-          ]
-        },
-        {
-          "symbol": "HOOD",
-          "action": "SELL",
-          "px": 115.96,
-          "qty_hint": 4.0,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
-          "score": -0.237814,
+          "score": -0.231207,
           "qty": 0.4,
-          "notional": 46.38,
+          "notional": 22.6,
           "signals": {
-            "TS": -0.237814,
-            "NS": 0.217228,
-            "CDS": -0.055797,
+            "TS": -0.231207,
+            "NS": 0.12383,
+            "CDS": -0.089192,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 35.43806518525098,
-            "rsi14": 35.43806518525098,
-            "sma20": 134.97500000000008,
-            "ema_fast": 129.5026376959523,
-            "ema_slow": 132.4872088275458,
-            "macd_hist": -0.08996466159708583,
-            "macd_hist_prev": -0.08129410044142993,
-            "ema50_5m": 118.3641360966642,
-            "ema200_5m": 122.25161895973518
+            "rsi": 38.72706121777437,
+            "rsi14": 38.72706121777437,
+            "sma20": 70.80475000000007,
+            "ema_fast": 66.18395222215187,
+            "ema_slow": 68.77830163094039,
+            "macd_hist": 0.03908762508702823,
+            "macd_hist_prev": 0.04397529110623444,
+            "ema50_5m": 57.5200561655083,
+            "ema200_5m": 60.37803639438313
           },
           "guidance": {
-            "sma20": 134.975,
-            "buy_on_dip_below": 133.6253,
-            "trim_above": 145.773
+            "sma20": 70.8048,
+            "buy_on_dip_below": 70.0967,
+            "trim_above": 76.4691
           },
           "phase": "mid",
           "size_k_guidance": 0.4,
@@ -140,118 +153,39 @@
           "qty_prev": 1.0,
           "news_preview": [
             {
-              "ts": "2025-11-17T17:35:25+00:00",
+              "ts": "2025-11-17T13:03:44+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "PAX Financial Group LLC Buys New Position in AST SpaceMobile, Inc. $ASTS"
+            },
+            {
+              "ts": "2025-11-17T11:26:34+00:00",
+              "source": "marketbeat",
+              "tone": 0.5849686666382355,
+              "headline": "AST SpaceMobile, Inc. $ASTS Shares Sold by PNC Financial Services Group Inc."
+            },
+            {
+              "ts": "2025-11-16T20:57:09+00:00",
               "source": "benzinga",
-              "tone": 0.0,
-              "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
-            },
-            {
-              "ts": "2025-11-17T15:06:54+00:00",
-              "source": "foxbusiness",
-              "tone": 0.0,
-              "headline": "Prediction markets have taken this stock: Jack Hough on Robinhood"
-            },
-            {
-              "ts": "2025-11-17T15:03:00+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Check Out What Whales Are Doing With HOOD"
-            }
-          ]
-        },
-        {
-          "symbol": "RKLB",
-          "action": "SELL",
-          "px": 43.1,
-          "qty_hint": 6.27,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
-          "score": -0.266609,
-          "qty": 0.4,
-          "notional": 17.24,
-          "signals": {
-            "TS": -0.266609,
-            "NS": 0.028544,
-            "CDS": -0.148548,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 37.10840838808252,
-            "rsi14": 37.10840838808252,
-            "sma20": 56.80224999999998,
-            "ema_fast": 51.107372207322996,
-            "ema_slow": 54.726803289400074,
-            "macd_hist": 0.009016547482139065,
-            "macd_hist_prev": 0.01128950966594297,
-            "ema50_5m": 43.88046796731371,
-            "ema200_5m": 45.84983036106834
-          },
-          "guidance": {
-            "sma20": 56.8022,
-            "buy_on_dip_below": 56.2342,
-            "trim_above": 61.3464
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.4,
-          "size_k": 0.4,
-          "qty_prev": 1.0,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T17:45:00+00:00",
-              "source": "thestreetpro",
-              "tone": -0.11924740545325327,
-              "headline": "Rocket Lab Price Target Appears Out of Reach After Market Downturn"
-            },
-            {
-              "ts": "2025-11-17T17:06:45+00:00",
-              "source": "benzinga",
-              "tone": 0.0,
-              "headline": "Rocket Lab (RKLB) Stock Continues To Fall: What's Happening?"
-            },
-            {
-              "ts": "2025-11-17T14:06:00+00:00",
-              "source": "quiverquantitative",
-              "tone": 0.0,
-              "headline": "Rocket Lab USA Stock (RKLB) Opinions on Q3 2025 Earnings Report"
+              "tone": -0.547485819351598,
+              "headline": "Consumer Tech News (Nov 10-14): China Lifts Rare Earth Export Ban to U.S., Microsoft and Google Invest Billions in AI Data Centers & More"
             }
           ]
         }
       ],
-      "cash_left": 187.1,
+      "cash_left": 142.6,
       "debug": {
         "buy_sizing": [],
         "sell_sizing": [
           {
-            "symbol": "CTM",
-            "cds": -0.101728,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "mid",
-            "qty": 3.2,
-            "px": 1.085,
-            "notional": 3.47,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
-          },
-          {
-            "symbol": "HOOD",
-            "cds": -0.055797,
+            "symbol": "ASTS",
+            "cds": -0.089192,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "mid",
             "qty": 0.4,
-            "px": 115.96,
-            "notional": 46.38,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
-          },
-          {
-            "symbol": "RKLB",
-            "cds": -0.148548,
-            "size_k": 0.4,
-            "size_k_guidance": 0.4,
-            "phase": "mid",
-            "qty": 0.4,
-            "px": 43.1,
-            "notional": 17.24,
+            "px": 56.49,
+            "notional": 22.6,
             "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
           }
         ]
@@ -274,12 +208,286 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 7176.21,
-      "cash_start": 17736.37,
-      "trades": [],
-      "cash_left": 17736.37,
+      "portfolio_value_est": 8756.74,
+      "cash_start": 16102.99,
+      "trades": [
+        {
+          "symbol": "TSM",
+          "action": "BUY",
+          "px": 281.5,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.395589,
+          "qty": 1.649771,
+          "notional": 464.41,
+          "signals": {
+            "TS": 0.417348,
+            "NS": 0.362951,
+            "CDS": 0.395589,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.00100931469166,
+            "rsi14": 54.00100931469166,
+            "sma20": 293.6032499999999,
+            "ema_fast": 289.48932033179824,
+            "ema_slow": 290.1440038719579,
+            "macd_hist": 0.1187450058866405,
+            "macd_hist_prev": 0.05055575746517982,
+            "ema50_5m": 281.77626490107986,
+            "ema200_5m": 283.62417793650985
+          },
+          "guidance": {
+            "sma20": 293.6032,
+            "buy_on_dip_below": 290.6672,
+            "trim_above": 317.0915
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.37362318750000006,
+          "qty_prev": 4.4156,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T17:15:02+00:00",
+              "source": "benzinga",
+              "tone": -0.3707689712429932,
+              "headline": "Micron, Nvidia, Apple Among Q3's 'Hot List' As Hedge Funds Load Up On Tech All Over Again"
+            },
+            {
+              "ts": "2025-11-17T15:02:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.6300380389767978,
+              "headline": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Shares Sold by Tortoise Investment Management LLC"
+            },
+            {
+              "ts": "2025-11-17T15:00:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $1000 In Taiwan Semiconductor Stock 20 Years Ago, You Would Have This Much Today"
+            }
+          ]
+        },
+        {
+          "symbol": "VRTX",
+          "action": "BUY",
+          "px": 434.065,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|ema:ema_ok",
+          "score": 0.392649,
+          "qty": 0.73457,
+          "notional": 318.85,
+          "signals": {
+            "TS": 0.36863,
+            "NS": 0.428678,
+            "CDS": 0.392649,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 46.70119908913052,
+            "rsi14": 46.70119908913052,
+            "sma20": 424.2152500000001,
+            "ema_fast": 427.38873754498127,
+            "ema_slow": 421.2753233891557,
+            "macd_hist": 0.11651676835586566,
+            "macd_hist_prev": 0.04966657833825483,
+            "ema50_5m": 435.29311106644354,
+            "ema200_5m": 435.7114726924761
+          },
+          "guidance": {
+            "sma20": 424.2153,
+            "buy_on_dip_below": 419.9731,
+            "trim_above": 458.1525
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.7,
+          "size_k": 0.25651985625000007,
+          "qty_prev": 2.8636,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T20:00:51+00:00",
+              "source": "benzinga",
+              "tone": 0.5842979926293282,
+              "headline": "Is Vertex Pharmaceuticals Inc Gaining or Losing Market Support?"
+            },
+            {
+              "ts": "2025-11-17T12:48:47+00:00",
+              "source": "finviz",
+              "tone": 0.0,
+              "headline": "1 Incredible Reason to Buy Vertex Pharmaceuticals Stock in November"
+            },
+            {
+              "ts": "2025-11-17T12:15:00+00:00",
+              "source": "yahoo",
+              "tone": 0.5522595614619851,
+              "headline": "1 Incredible Reason to Buy Vertex Pharmaceuticals Stock in November"
+            }
+          ]
+        },
+        {
+          "symbol": "MRNA",
+          "action": "BUY",
+          "px": 24.75,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.386492,
+          "qty": 17.650379,
+          "notional": 436.85,
+          "signals": {
+            "TS": 0.426454,
+            "NS": 0.326548,
+            "CDS": 0.386492,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.611658248327906,
+            "rsi14": 54.611658248327906,
+            "sma20": 25.638750000000005,
+            "ema_fast": 25.28762773472412,
+            "ema_slow": 25.657884224462922,
+            "macd_hist": 0.0246321771824419,
+            "macd_hist_prev": 0.010849314053983983,
+            "ema50_5m": 24.732884440872297,
+            "ema200_5m": 24.882498323736634
+          },
+          "guidance": {
+            "sma20": 25.6388,
+            "buy_on_dip_below": 25.3824,
+            "trim_above": 27.6899
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.35144925000000005,
+          "qty_prev": 50.2217,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T13:27:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Moderna, Inc. $MRNA Stock Position Lifted by Letko Brosseau & Associates Inc."
+            },
+            {
+              "ts": "2025-11-17T12:21:11+00:00",
+              "source": "newsercom",
+              "tone": 0.5866814550099173,
+              "headline": "Will Tidal Trust II YieldMax MRNA stock enhance shareholder value - July 2025 Drop Watch & Consistent Growth Stock Picks"
+            },
+            {
+              "ts": "2025-11-17T12:06:28+00:00",
+              "source": "marketbeat",
+              "tone": 0.7504600946694573,
+              "headline": "SG Americas Securities LLC Purchases 487,734 Shares of Moderna, Inc. $MRNA"
+            }
+          ]
+        },
+        {
+          "symbol": "NOC",
+          "action": "BUY",
+          "px": 560.2,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.378142,
+          "qty": 0.734636,
+          "notional": 411.54,
+          "signals": {
+            "TS": 0.401286,
+            "NS": 0.343425,
+            "CDS": 0.378142,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 71.39687837965921,
+            "rsi14": 71.39687837965921,
+            "sma20": 578.6957499999996,
+            "ema_fast": 568.183136434386,
+            "ema_slow": 578.8926504909238,
+            "macd_hist": 0.19421476492508233,
+            "macd_hist_prev": 0.1200895274848909,
+            "ema50_5m": 558.3564899719895,
+            "ema200_5m": 559.0645304177646
+          },
+          "guidance": {
+            "sma20": 578.6957,
+            "buy_on_dip_below": 572.9088,
+            "trim_above": 624.9914
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.33109612499999996,
+          "qty_prev": 2.2188,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T13:46:15+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Itau Unibanco Holding S.A. Grows Stake in Northrop Grumman Corporation $NOC"
+            },
+            {
+              "ts": "2025-11-17T12:32:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.5981885092807975,
+              "headline": "Sanders Capital LLC Sells 38,485 Shares of Northrop Grumman Corporation $NOC"
+            },
+            {
+              "ts": "2025-11-17T12:32:07+00:00",
+              "source": "marketbeat",
+              "tone": 0.5981781296509177,
+              "headline": "Northrop Grumman Corporation $NOC Shares Sold by Intech Investment Management LLC"
+            }
+          ]
+        }
+      ],
+      "cash_left": 9499.4,
       "debug": {
-        "buy_sizing": [],
+        "buy_sizing": [
+          {
+            "symbol": "TSM",
+            "cds": 0.395589,
+            "size_k": 0.37362318750000006,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.649771,
+            "px": 281.5,
+            "notional": 464.41,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "VRTX",
+            "cds": 0.392649,
+            "size_k": 0.25651985625000007,
+            "size_k_guidance": 0.7,
+            "phase": "mid",
+            "qty": 0.73457,
+            "px": 434.065,
+            "notional": 318.85,
+            "reason": "score>buy|guidance:above_dip_level|ema:ema_ok"
+          },
+          {
+            "symbol": "MRNA",
+            "cds": 0.386492,
+            "size_k": 0.35144925000000005,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 17.650379,
+            "px": 24.75,
+            "notional": 436.85,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "NOC",
+            "cds": 0.378142,
+            "size_k": 0.33109612499999996,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.734636,
+            "px": 560.2,
+            "notional": 411.54,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          }
+        ],
         "sell_sizing": []
       }
     },
@@ -299,12 +507,150 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 22396.7,
-      "cash_start": 955.17,
-      "trades": [],
-      "cash_left": 955.17,
+      "portfolio_value_est": 22547.25,
+      "cash_start": 597.94,
+      "trades": [
+        {
+          "symbol": "TSM",
+          "action": "BUY",
+          "px": 281.5,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.395589,
+          "qty": 0.793613,
+          "notional": 223.4,
+          "signals": {
+            "TS": 0.417348,
+            "NS": 0.362951,
+            "CDS": 0.395589,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.00100931469166,
+            "rsi14": 54.00100931469166,
+            "sma20": 293.6032499999999,
+            "ema_fast": 289.48932033179824,
+            "ema_slow": 290.1440038719579,
+            "macd_hist": 0.1187450058866405,
+            "macd_hist_prev": 0.05055575746517982,
+            "ema50_5m": 281.77626490107986,
+            "ema200_5m": 283.62417793650985
+          },
+          "guidance": {
+            "sma20": 293.6032,
+            "buy_on_dip_below": 290.6672,
+            "trim_above": 317.0915
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.37362318750000006,
+          "qty_prev": 2.1241,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T17:15:02+00:00",
+              "source": "benzinga",
+              "tone": -0.3707689712429932,
+              "headline": "Micron, Nvidia, Apple Among Q3's 'Hot List' As Hedge Funds Load Up On Tech All Over Again"
+            },
+            {
+              "ts": "2025-11-17T15:02:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.6300380389767978,
+              "headline": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Shares Sold by Tortoise Investment Management LLC"
+            },
+            {
+              "ts": "2025-11-17T15:00:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $1000 In Taiwan Semiconductor Stock 20 Years Ago, You Would Have This Much Today"
+            }
+          ]
+        },
+        {
+          "symbol": "MRNA",
+          "action": "BUY",
+          "px": 24.75,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.386492,
+          "qty": 7e-05,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.426454,
+            "NS": 0.326548,
+            "CDS": 0.386492,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.611658248327906,
+            "rsi14": 54.611658248327906,
+            "sma20": 25.638750000000005,
+            "ema_fast": 25.28762773472412,
+            "ema_slow": 25.657884224462922,
+            "macd_hist": 0.0246321771824419,
+            "macd_hist_prev": 0.010849314053983983,
+            "ema50_5m": 24.732884440872297,
+            "ema200_5m": 24.882498323736634
+          },
+          "guidance": {
+            "sma20": 25.6388,
+            "buy_on_dip_below": 25.3824,
+            "trim_above": 27.6899
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.35144925000000005,
+          "qty_prev": 0.0002,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T13:27:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Moderna, Inc. $MRNA Stock Position Lifted by Letko Brosseau & Associates Inc."
+            },
+            {
+              "ts": "2025-11-17T12:21:11+00:00",
+              "source": "newsercom",
+              "tone": 0.5866814550099173,
+              "headline": "Will Tidal Trust II YieldMax MRNA stock enhance shareholder value - July 2025 Drop Watch & Consistent Growth Stock Picks"
+            },
+            {
+              "ts": "2025-11-17T12:06:28+00:00",
+              "source": "marketbeat",
+              "tone": 0.7504600946694573,
+              "headline": "SG Americas Securities LLC Purchases 487,734 Shares of Moderna, Inc. $MRNA"
+            }
+          ]
+        }
+      ],
+      "cash_left": -223.4,
       "debug": {
-        "buy_sizing": [],
+        "buy_sizing": [
+          {
+            "symbol": "TSM",
+            "cds": 0.395589,
+            "size_k": 0.37362318750000006,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.793613,
+            "px": 281.5,
+            "notional": 223.4,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "MRNA",
+            "cds": 0.386492,
+            "size_k": 0.35144925000000005,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 7e-05,
+            "px": 24.75,
+            "notional": 0.0,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          }
+        ],
         "sell_sizing": []
       }
     },
@@ -324,12 +670,354 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 5241.96,
-      "cash_start": 19694.84,
-      "trades": [],
-      "cash_left": 19694.84,
+      "portfolio_value_est": 6175.85,
+      "cash_start": 18713.67,
+      "trades": [
+        {
+          "symbol": "TSM",
+          "action": "BUY",
+          "px": 281.5,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.395589,
+          "qty": 0.991036,
+          "notional": 278.98,
+          "signals": {
+            "TS": 0.417348,
+            "NS": 0.362951,
+            "CDS": 0.395589,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.00100931469166,
+            "rsi14": 54.00100931469166,
+            "sma20": 293.6032499999999,
+            "ema_fast": 289.48932033179824,
+            "ema_slow": 290.1440038719579,
+            "macd_hist": 0.1187450058866405,
+            "macd_hist_prev": 0.05055575746517982,
+            "ema50_5m": 281.77626490107986,
+            "ema200_5m": 283.62417793650985
+          },
+          "guidance": {
+            "sma20": 293.6032,
+            "buy_on_dip_below": 290.6672,
+            "trim_above": 317.0915
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.37362318750000006,
+          "qty_prev": 2.6525,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T17:15:02+00:00",
+              "source": "benzinga",
+              "tone": -0.3707689712429932,
+              "headline": "Micron, Nvidia, Apple Among Q3's 'Hot List' As Hedge Funds Load Up On Tech All Over Again"
+            },
+            {
+              "ts": "2025-11-17T15:02:21+00:00",
+              "source": "marketbeat",
+              "tone": 0.6300380389767978,
+              "headline": "Taiwan Semiconductor Manufacturing Company Ltd. $TSM Shares Sold by Tortoise Investment Management LLC"
+            },
+            {
+              "ts": "2025-11-17T15:00:48+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "If You Invested $1000 In Taiwan Semiconductor Stock 20 Years Ago, You Would Have This Much Today"
+            }
+          ]
+        },
+        {
+          "symbol": "VRTX",
+          "action": "BUY",
+          "px": 434.065,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|ema:ema_ok",
+          "score": 0.392649,
+          "qty": 0.441265,
+          "notional": 191.54,
+          "signals": {
+            "TS": 0.36863,
+            "NS": 0.428678,
+            "CDS": 0.392649,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 46.70119908913052,
+            "rsi14": 46.70119908913052,
+            "sma20": 424.2152500000001,
+            "ema_fast": 427.38873754498127,
+            "ema_slow": 421.2753233891557,
+            "macd_hist": 0.11651676835586566,
+            "macd_hist_prev": 0.04966657833825483,
+            "ema50_5m": 435.29311106644354,
+            "ema200_5m": 435.7114726924761
+          },
+          "guidance": {
+            "sma20": 424.2153,
+            "buy_on_dip_below": 419.9731,
+            "trim_above": 458.1525
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.7,
+          "size_k": 0.25651985625000007,
+          "qty_prev": 1.7202,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T20:00:51+00:00",
+              "source": "benzinga",
+              "tone": 0.5842979926293282,
+              "headline": "Is Vertex Pharmaceuticals Inc Gaining or Losing Market Support?"
+            },
+            {
+              "ts": "2025-11-17T12:48:47+00:00",
+              "source": "finviz",
+              "tone": 0.0,
+              "headline": "1 Incredible Reason to Buy Vertex Pharmaceuticals Stock in November"
+            },
+            {
+              "ts": "2025-11-17T12:15:00+00:00",
+              "source": "yahoo",
+              "tone": 0.5522595614619851,
+              "headline": "1 Incredible Reason to Buy Vertex Pharmaceuticals Stock in November"
+            }
+          ]
+        },
+        {
+          "symbol": "MRNA",
+          "action": "BUY",
+          "px": 24.75,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.386492,
+          "qty": 10.602908,
+          "notional": 262.42,
+          "signals": {
+            "TS": 0.426454,
+            "NS": 0.326548,
+            "CDS": 0.386492,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 54.611658248327906,
+            "rsi14": 54.611658248327906,
+            "sma20": 25.638750000000005,
+            "ema_fast": 25.28762773472412,
+            "ema_slow": 25.657884224462922,
+            "macd_hist": 0.0246321771824419,
+            "macd_hist_prev": 0.010849314053983983,
+            "ema50_5m": 24.732884440872297,
+            "ema200_5m": 24.882498323736634
+          },
+          "guidance": {
+            "sma20": 25.6388,
+            "buy_on_dip_below": 25.3824,
+            "trim_above": 27.6899
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.35144925000000005,
+          "qty_prev": 30.1691,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T13:27:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Moderna, Inc. $MRNA Stock Position Lifted by Letko Brosseau & Associates Inc."
+            },
+            {
+              "ts": "2025-11-17T12:21:11+00:00",
+              "source": "newsercom",
+              "tone": 0.5866814550099173,
+              "headline": "Will Tidal Trust II YieldMax MRNA stock enhance shareholder value - July 2025 Drop Watch & Consistent Growth Stock Picks"
+            },
+            {
+              "ts": "2025-11-17T12:06:28+00:00",
+              "source": "marketbeat",
+              "tone": 0.7504600946694573,
+              "headline": "SG Americas Securities LLC Purchases 487,734 Shares of Moderna, Inc. $MRNA"
+            }
+          ]
+        },
+        {
+          "symbol": "NOC",
+          "action": "BUY",
+          "px": 560.2,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.378142,
+          "qty": 0.441318,
+          "notional": 247.23,
+          "signals": {
+            "TS": 0.401286,
+            "NS": 0.343425,
+            "CDS": 0.378142,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 71.39687837965921,
+            "rsi14": 71.39687837965921,
+            "sma20": 578.6957499999996,
+            "ema_fast": 568.183136434386,
+            "ema_slow": 578.8926504909238,
+            "macd_hist": 0.19421476492508233,
+            "macd_hist_prev": 0.1200895274848909,
+            "ema50_5m": 558.3564899719895,
+            "ema200_5m": 559.0645304177646
+          },
+          "guidance": {
+            "sma20": 578.6957,
+            "buy_on_dip_below": 572.9088,
+            "trim_above": 624.9914
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.33109612499999996,
+          "qty_prev": 1.3329,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T13:46:15+00:00",
+              "source": "marketbeat",
+              "tone": 0.0,
+              "headline": "Itau Unibanco Holding S.A. Grows Stake in Northrop Grumman Corporation $NOC"
+            },
+            {
+              "ts": "2025-11-17T12:32:10+00:00",
+              "source": "marketbeat",
+              "tone": 0.5981885092807975,
+              "headline": "Sanders Capital LLC Sells 38,485 Shares of Northrop Grumman Corporation $NOC"
+            },
+            {
+              "ts": "2025-11-17T12:32:07+00:00",
+              "source": "marketbeat",
+              "tone": 0.5981781296509177,
+              "headline": "Northrop Grumman Corporation $NOC Shares Sold by Intech Investment Management LLC"
+            }
+          ]
+        },
+        {
+          "symbol": "FSLR",
+          "action": "BUY",
+          "px": 253.56,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:above_dip_level|ema:below_ema200_block_buy",
+          "score": 0.368057,
+          "qty": 0.0,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.309108,
+            "NS": 0.456481,
+            "CDS": 0.368057,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 56.83638859432985,
+            "rsi14": 56.83638859432985,
+            "sma20": 253.10325000000017,
+            "ema_fast": 258.3456974816008,
+            "ema_slow": 250.01471714459424,
+            "macd_hist": 0.2182742592189878,
+            "macd_hist_prev": 0.12876766924505867,
+            "ema50_5m": 253.53013435807688,
+            "ema200_5m": 256.56048966998816
+          },
+          "guidance": {
+            "sma20": 253.1033,
+            "buy_on_dip_below": 250.5722,
+            "trim_above": 273.3515
+          },
+          "phase": "mid",
+          "size_k_guidance": 0.7,
+          "size_k": 0.0,
+          "qty_prev": 2.9448,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T18:32:26+00:00",
+              "source": "benzinga",
+              "tone": 0.5426138271644627,
+              "headline": "Lithium Protests At COP30 Put Tesla, Albemarle Investors On Alert"
+            },
+            {
+              "ts": "2025-11-17T13:01:00+00:00",
+              "source": "yahoo",
+              "tone": 0.8499247098635081,
+              "headline": "How Is First Solar's Investment Strategy Powering Its Long-Term Growth?"
+            },
+            {
+              "ts": "2025-11-17T13:01:00+00:00",
+              "source": "tradingview",
+              "tone": 0.5803115849578784,
+              "headline": "How Is First Solar's Investment Strategy Powering Its Long-Term Growth?"
+            }
+          ]
+        }
+      ],
+      "cash_left": 14000.09,
       "debug": {
-        "buy_sizing": [],
+        "buy_sizing": [
+          {
+            "symbol": "TSM",
+            "cds": 0.395589,
+            "size_k": 0.37362318750000006,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.991036,
+            "px": 281.5,
+            "notional": 278.98,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "VRTX",
+            "cds": 0.392649,
+            "size_k": 0.25651985625000007,
+            "size_k_guidance": 0.7,
+            "phase": "mid",
+            "qty": 0.441265,
+            "px": 434.065,
+            "notional": 191.54,
+            "reason": "score>buy|guidance:above_dip_level|ema:ema_ok"
+          },
+          {
+            "symbol": "MRNA",
+            "cds": 0.386492,
+            "size_k": 0.35144925000000005,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 10.602908,
+            "px": 24.75,
+            "notional": 262.42,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "NOC",
+            "cds": 0.378142,
+            "size_k": 0.33109612499999996,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.441318,
+            "px": 560.2,
+            "notional": 247.23,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "FSLR",
+            "cds": 0.368057,
+            "size_k": 0.0,
+            "size_k_guidance": 0.7,
+            "phase": "mid",
+            "qty": 0.0,
+            "px": 253.56,
+            "notional": 0.0,
+            "reason": "score>buy|guidance:above_dip_level|ema:below_ema200_block_buy"
+          }
+        ],
         "sell_sizing": []
       }
     },
@@ -380,44 +1068,44 @@
         {
           "symbol": "CIBR",
           "action": "BUY",
-          "px": 74.41,
+          "px": 73.59,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.596507,
-          "qty": 11.75916,
-          "notional": 875.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy",
+          "score": 0.566684,
+          "qty": 0.0,
+          "notional": 0.0,
           "signals": {
-            "TS": -0.046291,
-            "NS": 0.596507,
-            "CDS": 0.210828,
+            "TS": -0.032389,
+            "NS": 0.566684,
+            "CDS": 0.20724,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 39.67243675774225,
-            "rsi14": 39.67243675774225,
-            "sma20": 76.30299999999997,
-            "ema_fast": 75.61516537416821,
-            "ema_slow": 75.93099055872614,
-            "macd_hist": -0.0417865444788568,
-            "macd_hist_prev": -0.046710873944030104,
-            "ema50_5m": 74.68401044804635,
-            "ema200_5m": 75.04571874189986
+            "rsi": 25.236833055397312,
+            "rsi14": 25.236833055397312,
+            "sma20": 76.26199999999997,
+            "ema_fast": 75.48901152801437,
+            "ema_slow": 75.87024981798541,
+            "macd_hist": -0.00519583734191531,
+            "macd_hist_prev": -0.009944945886424111,
+            "ema50_5m": 74.2381656136574,
+            "ema200_5m": 74.86168059518674
           },
           "guidance": {
-            "sma20": 76.303,
-            "buy_on_dip_below": 75.54,
-            "trim_above": 82.4072
+            "sma20": 76.262,
+            "buy_on_dip_below": 75.4994,
+            "trim_above": 82.363
           },
           "phase": "early",
           "size_k_guidance": 1.0,
-          "size_k": 0.35,
-          "qty_prev": 33.5976,
+          "size_k": 0.0,
+          "qty_prev": 33.972,
           "news_preview": [
             {
               "ts": "2025-11-17T12:37:12+00:00",
               "source": "benzinga",
-              "tone": 0.7986738847020819,
+              "tone": 0.758743656416632,
               "headline": "Nokia Secures Multi-Year Pact To Power Telecom Italia's 5G Expansion"
             },
             {
@@ -435,155 +1123,87 @@
           ]
         },
         {
-          "symbol": "SEDG",
+          "symbol": "BE",
           "action": "BUY",
-          "px": 33.335,
+          "px": 105.3,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy",
-          "score": 0.584679,
+          "score": 0.563379,
           "qty": 0.0,
           "notional": 0.0,
           "signals": {
-            "TS": -0.41242,
-            "NS": 0.584679,
-            "CDS": -0.013581,
+            "TS": -0.028795,
+            "NS": 0.563379,
+            "CDS": 0.208074,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 29.28897904025827,
-            "rsi14": 29.28897904025827,
-            "sma20": 38.008249999999975,
-            "ema_fast": 38.08930140172135,
-            "ema_slow": 37.79642459472402,
-            "macd_hist": 0.011064093601108604,
-            "macd_hist_prev": 0.015055705428688892,
-            "ema50_5m": 34.48170173244401,
-            "ema200_5m": 36.828461400785514
+            "rsi": 43.436056863960516,
+            "rsi14": 43.436056863960516,
+            "sma20": 121.22500000000007,
+            "ema_fast": 120.06369817225941,
+            "ema_slow": 115.1530732028159,
+            "macd_hist": 0.1838190403995016,
+            "macd_hist_prev": 0.14616178445588823,
+            "ema50_5m": 107.04183708684045,
+            "ema200_5m": 110.73573126485422
           },
           "guidance": {
-            "sma20": 38.0082,
-            "buy_on_dip_below": 37.6282,
-            "trim_above": 41.0489
+            "sma20": 121.225,
+            "buy_on_dip_below": 120.0128,
+            "trim_above": 130.923
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 0.0,
-          "qty_prev": 74.9963,
+          "qty_prev": 23.7417,
           "news_preview": [
             {
-              "ts": "2025-11-17T13:29:08+00:00",
-              "source": "marketbeat",
-              "tone": 0.8042499957943159,
-              "headline": "Mivtachim The Workers Social Insurance Fund Ltd. Under Special Management Grows Stake in SolarEdge Technologies, Inc. $SEDG"
+              "ts": "2025-11-17T16:59:57+00:00",
+              "source": "parameterio",
+              "tone": 0.6465361579695504,
+              "headline": "Bloom Energy (BE) Stock Surges on Strong Q3 Results and Analyst Upgrades"
             },
             {
-              "ts": "2025-11-15T18:09:06+00:00",
-              "source": "marketbeat",
-              "tone": 0.2755085683136889,
-              "headline": "UBS Group Boosts SolarEdge Technologies (NASDAQ:SEDG) Price Target to $40.00"
-            },
-            {
-              "ts": "2025-11-15T14:42:16+00:00",
-              "source": "theglobeandmail",
-              "tone": 0.0,
-              "headline": "UBS Keeps Their Hold Rating on SolarEdge Technologies (SEDG)"
-            }
-          ]
-        },
-        {
-          "symbol": "BIIB",
-          "action": "BUY",
-          "px": 166.71,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|ema:ema_ok",
-          "score": 0.552134,
-          "qty": 2.755533,
-          "notional": 459.37,
-          "signals": {
-            "TS": -0.212038,
-            "NS": 0.552134,
-            "CDS": 0.093631,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 46.612682363068906,
-            "rsi14": 46.612682363068906,
-            "sma20": 154.43075000000002,
-            "ema_fast": 159.40774671997178,
-            "ema_slow": 154.48587023825806,
-            "macd_hist": -0.046302395714331326,
-            "macd_hist_prev": -0.030769860080758826,
-            "ema50_5m": 167.02628803516993,
-            "ema200_5m": 165.42863882536506
-          },
-          "guidance": {
-            "sma20": 154.4308,
-            "buy_on_dip_below": 152.8864,
-            "trim_above": 166.7852
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.18374999999999997,
-          "qty_prev": 14.9961,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T13:52:05+00:00",
-              "source": "barchartcom",
-              "tone": 0.0,
-              "headline": "Biogen Stock: Is Wall Street Bullish or Bearish?"
-            },
-            {
-              "ts": "2025-11-17T12:38:39+00:00",
+              "ts": "2025-11-17T15:37:07+00:00",
               "source": "benzinga",
-              "tone": 0.7991128973815644,
-              "headline": "Biogen And Stoke Therapeutics Highlight Urgent Need For New Medicines Targeting Underlying Genetic Cause Of Dravet Syndrome To Improve Long Term Outcomes"
+              "tone": 0.8076929829842737,
+              "headline": "Plug Power Wins 55 MW Green Hydrogen Contract In UK"
             },
             {
-              "ts": "2025-11-17T12:30:00+00:00",
-              "source": "yahoo",
-              "tone": 0.8852404238788412,
-              "headline": "Stoke Therapeutics and Biogen Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
+              "ts": "2025-11-17T11:16:22+00:00",
+              "source": "marketbeat",
+              "tone": 0.5465832760252007,
+              "headline": "SBI Securities Co. Ltd. Cuts Stock Holdings in Bloom Energy Corporation $BE"
             }
           ]
         }
       ],
-      "cash_left": 16165.63,
+      "cash_left": 20000.0,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "CIBR",
-            "cds": 0.210828,
-            "size_k": 0.35,
-            "size_k_guidance": 1.0,
-            "phase": "early",
-            "qty": 11.75916,
-            "px": 74.41,
-            "notional": 875.0,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
-          },
-          {
-            "symbol": "SEDG",
-            "cds": -0.013581,
+            "cds": 0.20724,
             "size_k": 0.0,
             "size_k_guidance": 1.0,
-            "phase": "mid",
+            "phase": "early",
             "qty": 0.0,
-            "px": 33.335,
+            "px": 73.59,
             "notional": 0.0,
             "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy"
           },
           {
-            "symbol": "BIIB",
-            "cds": 0.093631,
-            "size_k": 0.18374999999999997,
-            "size_k_guidance": 0.7,
+            "symbol": "BE",
+            "cds": 0.208074,
+            "size_k": 0.0,
+            "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 2.755533,
-            "px": 166.71,
-            "notional": 459.37,
-            "reason": "score>buy|guidance:above_dip_level|ema:ema_ok"
+            "qty": 0.0,
+            "px": 105.3,
+            "notional": 0.0,
+            "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy"
           }
         ],
         "sell_sizing": []
