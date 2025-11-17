@@ -169,6 +169,40 @@ def ema_size_for_buy(price: float, ema50: float | None, ema200: float | None) ->
 
     return k, "|".join(reasons)
 
+def ema_size_for_sell(price: float, ema50: float | None, ema200: float | None) -> Tuple[float, str]:
+    """
+    Returns (k_ema, reason_suffix) to multiply SELL size_k.
+
+    Intent:
+      - If price is well ABOVE EMA50 in an uptrend → reduce trims (don’t fight a strong trend).
+      - If price is below EMA200 → it's OK to sell; we just tag it as trend-broken.
+      - Otherwise → neutral (k=1.0).
+    """
+    if price is None or price <= 0:
+        return 1.0, "ema:none"
+
+    if ema50 is None and ema200 is None:
+        return 1.0, "ema:none"
+
+    reasons: List[str] = []
+    k = 1.0
+
+    # Trend clearly broken → OK to sell normal size (no reduction, just a tag)
+    if ema200 is not None and price < ema200 * 0.99:
+        reasons.append("ema_below200_sell_ok")
+        return k, "|".join(reasons)
+
+    # Still strong uptrend → shrink the trim size
+    if ema50 is not None and price > ema50 * 1.01:
+        k *= 0.6
+        reasons.append("ema_above50_reduce_sell")
+
+    if not reasons:
+        reasons.append("ema_ok")
+
+    return k, "|".join(reasons)
+
+
 # -------- watchlist --------
 
 def build_watchlist(feed: Dict[str, Any], ts_thr: float, ns_thr: float, top_n: int):
@@ -490,6 +524,11 @@ def describe_trade(tr: Dict[str, Any]) -> str:
         why_bits.append("Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken).")
     if "below_ema50_reduce_buy" in reason:
         why_bits.append("Buy size was reduced because price is under the 50-period EMA on 5m (testing near-term support).")
+    if "ema_below200_sell_ok" in reason:
+        why_bits.append("Selling aligns with a broken 5m trend (price below EMA200).")
+    if "ema_above50_reduce_sell" in reason:
+        why_bits.append("Sell size reduced because price is above the 5m EMA50 (uptrend still strong).")
+
 
     if phase == "early":
         why_bits.append("Momentum phase: early in a potential move.")
@@ -666,7 +705,7 @@ def main():
             elif t.get("action") == "SELL" and t.get("reason") != "rotation_upgrade":
                 size_k = 1.0
                 phase = None
-
+            
                 if enable_momentum_phase:
                     ind_for_phase = {
                         "rsi": ind_flat.get("rsi"),
@@ -675,9 +714,10 @@ def main():
                     }
                     phase, _ = momentum_phase_and_size(ind_for_phase)
                     t["phase"] = phase
-
+            
                 px_f = float(t.get("px") or 0.0)
                 if px_f > 0:
+                    # 1) Guidance sizing (dip/trim/SMA20/RSI)
                     gk, g_reason = guidance_size_for_sell(
                         symbol=sym,
                         price=px_f,
@@ -690,10 +730,19 @@ def main():
                     t["size_k_guidance"] = gk
                     base_reason = t.get("reason") or "sell"
                     t["reason"] = base_reason + f"|guidance:{g_reason}"
-
+            
+                    # 2) EMA-based sizing (5m)
+                    ema50_5m = ind_flat.get("ema50_5m")
+                    ema200_5m = ind_flat.get("ema200_5m")
+                    if ema50_5m is not None or ema200_5m is not None:
+                        ema_k, ema_reason = ema_size_for_sell(px_f, ema50_5m, ema200_5m)
+                        size_k *= ema_k
+                        base_reason = t.get("reason") or "sell"
+                        t["reason"] = base_reason + f"|ema:{ema_reason}"
+            
                 size_k = min(size_k, 1.0)
                 t["size_k"] = size_k
-
+            
                 q = float(t.get("qty") or 0.0)
                 if q > 0 and size_k < 1.0:
                     if cfg.sizing.fractional_buys:
