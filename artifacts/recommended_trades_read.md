@@ -1,115 +1,103 @@
-# Trade plan as of 2025-11-17T15:35:01.491864+00:00
+# Trade plan as of 2025-11-17T15:40:49.844902+00:00
 
 ## Global Watchlist
 
 | Symbol | Price | CDS | TS | NS | RSI | SMA20 | Notes |
 |--------|-------|-----|----|----|-----|-------|-------|
-| CIBR | $74.93 | 0.445 | 0.313 | 0.643 | 57.8 | $76.33 | dip< $75.57; trim> $82.44 |
-| AVGO | $348.19 | 0.433 | 0.545 | 0.266 | 75.7 | $356.16 | RSI hot; dip< $352.60; trim> $384.66 |
-| RBLX | $103.20 | 0.345 | 0.518 | 0.086 | 64.0 | $114.07 | RSI strong; below 20d trend; dip< $112.93; trim> $123.20 |
-| HON | $199.00 | 0.287 | 0.130 | 0.522 | 50.4 | $203.67 | dip< $201.63; trim> $219.96 |
-| XLY | $230.48 | 0.144 | -0.172 | 0.618 | 29.3 | $237.50 | RSI oversold; dip< $235.13; trim> $256.50 |
-| BIIB | $166.68 | 0.134 | -0.198 | 0.632 | 36.5 | $154.43 | RSI weak; extended above 20d; dip< $152.88; trim> $166.78 |
-| IBM | $303.38 | -0.107 | -0.549 | 0.556 | 27.7 | $304.81 | RSI oversold; dip< $301.76; trim> $329.19 |
-| ABNB | $120.51 | 0.093 | -0.193 | 0.521 | 31.5 | $124.45 | RSI weak; dip< $123.20; trim> $134.40 |
-| ENPH | $28.41 | 0.076 | -0.246 | 0.560 | 34.3 | $32.14 | RSI weak; below 20d trend; dip< $31.82; trim> $34.71 |
-| SMCI | $35.49 | 0.048 | -0.266 | 0.519 | 31.7 | $45.33 | RSI weak; below 20d trend; dip< $44.88; trim> $48.96 |
-| SEDG | $35.07 | -0.037 | -0.428 | 0.550 | 26.4 | $38.09 | RSI oversold; below 20d trend; dip< $37.71; trim> $41.14 |
-| WFC | $84.47 | 0.027 | -0.319 | 0.546 | 33.7 | $85.94 | RSI weak; dip< $85.08; trim> $92.82 |
+| BIIB | $167.18 | 0.467 | 0.367 | 0.617 | 51.8 | $154.45 | extended above 20d; dip< $152.91; trim> $166.81 |
+| XLY | $230.47 | 0.443 | 0.335 | 0.606 | 43.2 | $237.50 | dip< $235.12; trim> $256.50 |
+| CIBR | $74.74 | 0.282 | 0.048 | 0.631 | 48.5 | $76.32 | dip< $75.56; trim> $82.43 |
+| BE | $108.39 | 0.132 | -0.165 | 0.578 | 35.8 | $121.38 | RSI weak; below 20d trend; dip< $120.17; trim> $131.09 |
+| LYFT | $22.44 | 0.103 | -0.201 | 0.559 | 31.2 | $21.42 | RSI weak; dip< $21.21; trim> $23.14 |
+| SMCI | $34.65 | 0.100 | -0.177 | 0.515 | 33.2 | $45.29 | RSI weak; below 20d trend; dip< $44.84; trim> $48.91 |
+| ABNB | $120.42 | 0.099 | -0.175 | 0.510 | 35.3 | $124.44 | RSI weak; dip< $123.20; trim> $134.40 |
+| SEDG | $34.13 | -0.046 | -0.435 | 0.538 | 28.7 | $38.05 | RSI oversold; below 20d trend; dip< $37.67; trim> $41.09 |
 
 ## Max Personal (portfolio_max_personal)
 
-Portfolio value ≈ $23,482 | Cash: $120.00 → -$59.31
+Portfolio value ≈ $23,276 | Cash: $120.00 → -$18.43
 
 ### BUYS
 
-- BUY 0.791581 CIBR @ $74.93 (~$59.31)
-  - CDS=0.445 | TS=0.313 | NS=0.643 | RSI=57.8 | SMA20=$76.33 | phase=mid | size_k=0.49
-  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~49% of the original plan.
+- BUY 0.110245 BIIB @ $167.18 (~$18.43)
+  - CDS=0.467 | TS=0.367 | NS=0.617 | RSI=51.8 | SMA20=$154.45 | phase=mid | size_k=0.15 | guidance_k=0.28
+  - Why: CDS is moderately positive; buy with some caution. Price $167.18 is well above the 20-day SMA ($154.45), showing an extended push. Price is near/above the trim zone, so trimming/taking profits is justified. Price is above the ideal dip level, so size is reduced to avoid chasing. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~15% of the original plan.
 
 ## Max TS Only (portfolio_max_TS_only)
 
-Portfolio value ≈ $23,482 | Cash: $120.00 → $284.66
+Portfolio value ≈ $23,276 | Cash: $120.00 → $217.71
 
 ### SELLS
 
-- SELL 0.7 XOP @ $132.71 (~$92.90)
-  - CDS=-0.035 | TS=-0.281 | NS=0.334 | RSI=30.9 | SMA20=$128.57 | phase=mid | size_k=0.70 | guidance_k=0.70
-  - Why: RSI is weak, indicating soft momentum. Price is between dip and trim levels; treating this as a partial trim. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~70% of the original plan.
+- SELL 0.4 HOOD @ $117.00 (~$46.80)
+  - CDS=-0.013 | TS=-0.219 | NS=0.296 | RSI=30.8 | SMA20=$135.03 | phase=early | size_k=0.40 | guidance_k=0.40
+  - Why: RSI is weak, indicating soft momentum. Price $117.00 is well below the 20-day SMA ($135.03), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: early in a potential move. Final position size is scaled down to ~40% of the original plan.
 
-- SELL 0.4 HOOD @ $118.60 (~$47.44)
-  - CDS=-0.065 | TS=-0.392 | NS=0.424 | RSI=16.3 | SMA20=$135.11 | phase=mid | size_k=0.40 | guidance_k=0.40
-  - Why: RSI is oversold, so price may be washed-out short term. Price $118.60 is well below the 20-day SMA ($135.11), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
+- SELL 0.4 ASTS @ $58.39 (~$23.36)
+  - CDS=-0.129 | TS=-0.308 | NS=0.141 | RSI=24.4 | SMA20=$70.90 | phase=early | size_k=0.40 | guidance_k=0.40
+  - Why: RSI is oversold, so price may be washed-out short term. Price $58.39 is well below the 20-day SMA ($70.90), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: early in a potential move. Final position size is scaled down to ~40% of the original plan.
 
-- SELL 0.4 RKLB @ $44.98 (~$17.99)
-  - CDS=-0.111 | TS=-0.250 | NS=0.097 | RSI=29.1 | SMA20=$56.90 | phase=mid | size_k=0.40 | guidance_k=0.40
-  - Why: RSI is oversold, so price may be washed-out short term. Price $44.98 is well below the 20-day SMA ($56.90), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
+- SELL 0.4 RKLB @ $43.52 (~$17.41)
+  - CDS=-0.118 | TS=-0.263 | NS=0.101 | RSI=29.5 | SMA20=$56.82 | phase=early | size_k=0.40 | guidance_k=0.40
+  - Why: RSI is oversold, so price may be washed-out short term. Price $43.52 is well below the 20-day SMA ($56.82), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: early in a potential move. Final position size is scaled down to ~40% of the original plan.
 
-- SELL 5.6 CTM @ $1.13 (~$6.33)
-  - CDS=-0.118 | TS=-0.269 | NS=0.109 | RSI=41.3 | SMA20=$1.11 | phase=mid | size_k=0.70 | guidance_k=0.70
-  - Why: Price is between dip and trim levels; treating this as a partial trim. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~70% of the original plan.
+- SELL 0.4 RGTI @ $25.37 (~$10.15)
+  - CDS=-0.163 | TS=-0.443 | NS=0.258 | RSI=44.2 | SMA20=$35.32 | phase=mid | size_k=0.40 | guidance_k=0.40
+  - Why: Price $25.37 is well below the 20-day SMA ($35.32), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
 
 ## Paper Aggressive (portfolio_paper_aggressive_trades)
 
-Portfolio value ≈ $7,212 | Cash: $17,736 → $10,964
+Portfolio value ≈ $7,182 | Cash: $17,736 → $11,617
 
 ### BUYS
 
-- BUY 8.228535 CIBR @ $74.93 (~$616.56)
-  - CDS=0.445 | TS=0.313 | NS=0.643 | RSI=57.8 | SMA20=$76.33 | phase=mid | size_k=0.49
-  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~49% of the original plan.
+- BUY 2.979893 RTX @ $175.90 (~$524.15)
+  - CDS=0.415 | TS=0.484 | NS=0.311 | RSI=61.2 | SMA20=$176.98 | phase=mid | size_k=0.42
+  - Why: CDS is moderately positive; buy with some caution. RSI is strong, suggesting positive momentum. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~42% of the original plan.
 
-- BUY 6.35134 UBER @ $92.12 (~$585.12)
-  - CDS=0.435 | TS=0.492 | NS=0.349 | RSI=63.0 | SMA20=$94.14 | phase=mid | size_k=0.47
-  - Why: CDS is moderately positive; buy with some caution. RSI is strong, suggesting positive momentum. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~47% of the original plan.
+- BUY 1.274898 ADBE @ $329.80 (~$420.46)
+  - CDS=0.381 | TS=0.346 | NS=0.433 | RSI=44.4 | SMA20=$340.54 | phase=mid | size_k=0.34
+  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~34% of the original plan.
 
-- BUY 1.668477 AVGO @ $348.19 (~$580.95)
-  - CDS=0.433 | TS=0.545 | NS=0.266 | RSI=75.7 | SMA20=$356.16 | phase=mid | size_k=0.47
-  - Why: CDS is moderately positive; buy with some caution. RSI is overbought, meaning the move is hot/extended. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~47% of the original plan.
+- BUY 1.144594 BIIB @ $167.18 (~$191.35)
+  - CDS=0.467 | TS=0.367 | NS=0.617 | RSI=51.8 | SMA20=$154.45 | phase=mid | size_k=0.15 | guidance_k=0.28
+  - Why: CDS is moderately positive; buy with some caution. Price $167.18 is well above the 20-day SMA ($154.45), showing an extended push. Price is near/above the trim zone, so trimming/taking profits is justified. Price is above the ideal dip level, so size is reduced to avoid chasing. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~15% of the original plan.
 
-- BUY 0.0 ETSY @ $57.62 (~$0.00)
-  - CDS=0.430 | TS=0.478 | NS=0.359 | RSI=64.6 | SMA20=$64.46 | phase=mid | size_k=0.00
-  - Why: CDS is moderately positive; buy with some caution. RSI is strong, suggesting positive momentum. Price $57.62 is well below the 20-day SMA ($64.46), showing near-term pressure. Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~0% of the original plan.
+- BUY 0.0 XLY @ $230.47 (~$0.00)
+  - CDS=0.443 | TS=0.335 | NS=0.606 | RSI=43.2 | SMA20=$237.50 | phase=mid | size_k=0.00
+  - Why: CDS is moderately positive; buy with some caution. Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~0% of the original plan.
 
 ## AutoTrade my portfolio (portfolio_max_autotrader)
 
-Portfolio value ≈ $22,650 | Cash: $955.17 → -$472.12
+Portfolio value ≈ $22,502 | Cash: $955.17 → -$146.70
 
 ### BUYS
 
-- BUY 6.300765 CIBR @ $74.93 (~$472.12)
-  - CDS=0.445 | TS=0.313 | NS=0.643 | RSI=57.8 | SMA20=$76.33 | phase=mid | size_k=0.49
-  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~49% of the original plan.
+- BUY 0.877506 BIIB @ $167.18 (~$146.70)
+  - CDS=0.467 | TS=0.367 | NS=0.617 | RSI=51.8 | SMA20=$154.45 | phase=mid | size_k=0.15 | guidance_k=0.28
+  - Why: CDS is moderately positive; buy with some caution. Price $167.18 is well above the 20-day SMA ($154.45), showing an extended push. Price is near/above the trim zone, so trimming/taking profits is justified. Price is above the ideal dip level, so size is reduced to avoid chasing. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~15% of the original plan.
 
 ## Paper Reasonable (portfolio_paper_reasonable)
 
-Portfolio value ≈ $5,266 | Cash: $19,695 → $14,541
+Portfolio value ≈ $5,238 | Cash: $19,695 → $16,021
 
 ### BUYS
 
-- BUY 4.939582 CIBR @ $74.93 (~$370.12)
-  - CDS=0.445 | TS=0.313 | NS=0.643 | RSI=57.8 | SMA20=$76.33 | phase=mid | size_k=0.49
-  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~49% of the original plan.
-
-- BUY 3.812709 UBER @ $92.12 (~$351.25)
-  - CDS=0.435 | TS=0.492 | NS=0.349 | RSI=63.0 | SMA20=$94.14 | phase=mid | size_k=0.47
-  - Why: CDS is moderately positive; buy with some caution. RSI is strong, suggesting positive momentum. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~47% of the original plan.
-
-- BUY 1.001571 AVGO @ $348.19 (~$348.74)
-  - CDS=0.433 | TS=0.545 | NS=0.266 | RSI=75.7 | SMA20=$356.16 | phase=mid | size_k=0.47
-  - Why: CDS is moderately positive; buy with some caution. RSI is overbought, meaning the move is hot/extended. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~47% of the original plan.
-
-- BUY 0.664216 MSFT @ $511.11 (~$339.49)
-  - CDS=0.428 | TS=0.464 | NS=0.375 | RSI=57.3 | SMA20=$516.29 | phase=mid | size_k=0.45
-  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~45% of the original plan.
-
-- BUY 0.0 ETSY @ $57.62 (~$0.00)
-  - CDS=0.430 | TS=0.478 | NS=0.359 | RSI=64.6 | SMA20=$64.46 | phase=mid | size_k=0.00
-  - Why: CDS is moderately positive; buy with some caution. RSI is strong, suggesting positive momentum. Price $57.62 is well below the 20-day SMA ($64.46), showing near-term pressure. Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~0% of the original plan.
-
-- BUY 0.000127 DKNG @ $29.72 (~$0.00)
-  - CDS=0.416 | TS=0.487 | NS=0.310 | RSI=61.0 | SMA20=$30.93 | phase=mid | size_k=0.42
+- BUY 1.789021 RTX @ $175.90 (~$314.68)
+  - CDS=0.415 | TS=0.484 | NS=0.311 | RSI=61.2 | SMA20=$176.98 | phase=mid | size_k=0.42
   - Why: CDS is moderately positive; buy with some caution. RSI is strong, suggesting positive momentum. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~42% of the original plan.
+
+- BUY 0.765404 ADBE @ $329.80 (~$252.43)
+  - CDS=0.381 | TS=0.346 | NS=0.433 | RSI=44.4 | SMA20=$340.54 | phase=mid | size_k=0.34
+  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~34% of the original plan.
+
+- BUY 0.68718 BIIB @ $167.18 (~$114.88)
+  - CDS=0.467 | TS=0.367 | NS=0.617 | RSI=51.8 | SMA20=$154.45 | phase=mid | size_k=0.15 | guidance_k=0.28
+  - Why: CDS is moderately positive; buy with some caution. Price $167.18 is well above the 20-day SMA ($154.45), showing an extended push. Price is near/above the trim zone, so trimming/taking profits is justified. Price is above the ideal dip level, so size is reduced to avoid chasing. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~15% of the original plan.
+
+- BUY 0.0 XLY @ $230.47 (~$0.00)
+  - CDS=0.443 | TS=0.335 | NS=0.606 | RSI=43.2 | SMA20=$237.50 | phase=mid | size_k=0.00
+  - Why: CDS is moderately positive; buy with some caution. Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~0% of the original plan.
 
 ## paper TS Only (portfolio_paper_TS_only)
 
@@ -117,21 +105,21 @@ Portfolio value ≈ $0.00 | Cash: $25,000 → $25,000
 
 ## paper NS Only (portfolio_paper_NS_higher_weight)
 
-Portfolio value ≈ $0.00 | Cash: $25,000 → $16,568
+Portfolio value ≈ $0.00 | Cash: $25,000 → $16,660
 
 ### BUYS
 
-- BUY 8.758181 CIBR @ $74.93 (~$656.25)
-  - CDS=0.445 | TS=0.313 | NS=0.643 | RSI=57.8 | SMA20=$76.33 | phase=mid | size_k=0.26
-  - Why: CDS is moderately positive; buy with some caution. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~26% of the original plan.
+- BUY 8.780441 CIBR @ $74.74 (~$656.25)
+  - CDS=0.282 | TS=0.048 | NS=0.631 | RSI=48.5 | SMA20=$76.32 | phase=mid | size_k=0.26
+  - Why: CDS only slightly above buy threshold; treat as a small probe. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~26% of the original plan.
 
-- BUY 1.653673 BIIB @ $166.68 (~$275.63)
-  - CDS=0.134 | TS=-0.198 | NS=0.632 | RSI=36.5 | SMA20=$154.43 | phase=mid | size_k=0.11 | guidance_k=0.70
-  - Why: CDS only slightly above buy threshold; treat as a small probe. RSI is weak, indicating soft momentum. Price $166.68 is well above the 20-day SMA ($154.43), showing an extended push. Price is above the ideal dip level, so size is reduced to avoid chasing. Buy size was reduced because price is under the 50-period EMA on 5m (testing near-term support). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~11% of the original plan.
+- BUY 1.099112 BIIB @ $167.18 (~$183.75)
+  - CDS=0.467 | TS=0.367 | NS=0.617 | RSI=51.8 | SMA20=$154.45 | phase=mid | size_k=0.07 | guidance_k=0.28
+  - Why: CDS is moderately positive; buy with some caution. Price $167.18 is well above the 20-day SMA ($154.45), showing an extended push. Price is near/above the trim zone, so trimming/taking profits is justified. Price is above the ideal dip level, so size is reduced to avoid chasing. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~7% of the original plan.
 
-- BUY 0.0 XLY @ $230.48 (~$0.00)
-  - CDS=0.144 | TS=-0.172 | NS=0.618 | RSI=29.3 | SMA20=$237.50 | phase=mid | size_k=0.00
-  - Why: CDS only slightly above buy threshold; treat as a small probe. RSI is oversold, so price may be washed-out short term. Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~0% of the original plan.
+- BUY 0.0 XLY @ $230.47 (~$0.00)
+  - CDS=0.443 | TS=0.335 | NS=0.606 | RSI=43.2 | SMA20=$237.50 | phase=mid | size_k=0.00
+  - Why: CDS is moderately positive; buy with some caution. Buy was blocked or heavily reduced because price is below the 200-period EMA (5m trend broken). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~0% of the original plan.
 
 ## max NS Only (portfolio_max_NS_higher_weight)
 

@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-17T15:35:01.491864+00:00",
+  "as_of_utc": "2025-11-17T15:40:49.844902+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -17,80 +17,80 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
       },
-      "portfolio_value_est": 23482.35,
+      "portfolio_value_est": 23275.71,
       "cash_start": 120.0,
       "trades": [
         {
-          "symbol": "CIBR",
+          "symbol": "BIIB",
           "action": "BUY",
-          "px": 74.93,
+          "px": 167.18,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.445087,
-          "qty": 0.791581,
-          "notional": 59.31,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok",
+          "score": 0.467344,
+          "qty": 0.110245,
+          "notional": 18.43,
           "signals": {
-            "TS": 0.313015,
-            "NS": 0.643195,
-            "CDS": 0.445087,
+            "TS": 0.367374,
+            "NS": 0.6173,
+            "CDS": 0.467344,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 57.77261504237397,
-            "rsi14": 57.77261504237397,
-            "sma20": 76.32899999999998,
-            "ema_fast": 75.69516537416821,
-            "ema_slow": 75.96950907724467,
-            "macd_hist": -0.008593219647490127,
-            "macd_hist_prev": -0.026302064254777036,
-            "ema50_5m": 74.760509443424,
-            "ema200_5m": 75.1500636503271
+            "rsi": 51.7581054567085,
+            "rsi14": 51.7581054567085,
+            "sma20": 154.45425,
+            "ema_fast": 159.48005441227946,
+            "ema_slow": 154.52068505307287,
+            "macd_hist": -0.0242723882387762,
+            "macd_hist_prev": -0.16068856138355486,
+            "ema50_5m": 167.04586213756414,
+            "ema200_5m": 164.96178983638367
           },
           "guidance": {
-            "sma20": 76.329,
-            "buy_on_dip_below": 75.5657,
-            "trim_above": 82.4353
+            "sma20": 154.4543,
+            "buy_on_dip_below": 152.9097,
+            "trim_above": 166.8106
           },
           "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.49427456249999996,
-          "qty_prev": 1.6015,
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.15358727999999994,
+          "qty_prev": 0.7178,
           "news_preview": [
             {
-              "ts": "2025-11-17T12:37:12+00:00",
+              "ts": "2025-11-17T12:38:39+00:00",
               "source": "benzinga",
-              "tone": 0.8611855694775901,
-              "headline": "Nokia Secures Multi-Year Pact To Power Telecom Italia's 5G Expansion"
+              "tone": 0.845567525150858,
+              "headline": "Biogen And Stoke Therapeutics Highlight Urgent Need For New Medicines Targeting Underlying Genetic Cause Of Dravet Syndrome To Improve Long Term Outcomes"
             },
             {
-              "ts": "2025-11-16T09:56:01+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Price-Driven Insight from (CIBR) for Rule-Based Strategy"
+              "ts": "2025-11-17T12:30:00+00:00",
+              "source": "yahoo",
+              "tone": 0.936701879630001,
+              "headline": "Stoke Therapeutics and Biogen Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             },
             {
-              "ts": "2025-11-15T23:26:23+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Learn to Evaluate (CIBR) using the Charts (CIBR:CA)"
+              "ts": "2025-11-17T12:30:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9367018770388928,
+              "headline": "Biogen and Stoke Therapeutics Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             }
           ]
         }
       ],
-      "cash_left": -59.31,
+      "cash_left": -18.43,
       "debug": {
         "buy_sizing": [
           {
-            "symbol": "CIBR",
-            "cds": 0.445087,
-            "size_k": 0.49427456249999996,
-            "size_k_guidance": 1.0,
+            "symbol": "BIIB",
+            "cds": 0.467344,
+            "size_k": 0.15358727999999994,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 0.791581,
-            "px": 74.93,
-            "notional": 59.31,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+            "qty": 0.110245,
+            "px": 167.18,
+            "notional": 18.43,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok"
           }
         ],
         "sell_sizing": []
@@ -112,97 +112,154 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_TS_only/positions.csv"
       },
-      "portfolio_value_est": 23482.35,
+      "portfolio_value_est": 23275.71,
       "cash_start": 120.0,
       "trades": [
         {
-          "symbol": "CTM",
+          "symbol": "ASTS",
           "action": "SELL",
-          "px": 1.13,
-          "qty_hint": 33.0,
-          "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_below200_sell_ok",
-          "score": -0.269359,
-          "qty": 5.6,
-          "notional": 6.33,
+          "px": 58.39,
+          "qty_hint": 7.49,
+          "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
+          "score": -0.308106,
+          "qty": 0.4,
+          "notional": 23.36,
           "signals": {
-            "TS": -0.269359,
-            "NS": 0.109095,
-            "CDS": -0.117978,
+            "TS": -0.308106,
+            "NS": 0.14051,
+            "CDS": -0.128659,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 41.3077435833429,
-            "rsi14": 41.3077435833429,
-            "sma20": 1.1141650000000003,
-            "ema_fast": 1.150040438497414,
-            "ema_slow": 1.123471471946716,
-            "macd_hist": -0.0015624109672726168,
-            "macd_hist_prev": -0.0008077147761848349,
-            "ema50_5m": 1.144775541430174,
-            "ema200_5m": 1.1527576076823793
+            "rsi": 24.43354686388446,
+            "rsi14": 24.43354686388446,
+            "sma20": 70.89975000000007,
+            "ema_fast": 66.47625991445956,
+            "ema_slow": 68.91904237168114,
+            "macd_hist": -0.196512322827043,
+            "macd_hist_prev": -0.20909541349242589,
+            "ema50_5m": 61.14818516060402,
+            "ema200_5m": 62.78331217450225
           },
           "guidance": {
-            "sma20": 1.1142,
-            "buy_on_dip_below": 1.103,
-            "trim_above": 1.2033
+            "sma20": 70.8998,
+            "buy_on_dip_below": 70.1908,
+            "trim_above": 76.5717
           },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.7,
-          "qty_prev": 8.0,
+          "phase": "early",
+          "size_k_guidance": 0.4,
+          "size_k": 0.4,
+          "qty_prev": 1.0,
           "news_preview": [
             {
-              "ts": "2025-11-17T13:07:35+00:00",
-              "source": "newsercom",
-              "tone": -0.5014730999493798,
-              "headline": "Why CTM stock signals breakout potential - July 2025 Snapshot & Risk Controlled Daily Trade Plans"
-            },
-            {
-              "ts": "2025-11-17T12:55:40+00:00",
-              "source": "newsercom",
+              "ts": "2025-11-17T13:03:44+00:00",
+              "source": "marketbeat",
               "tone": 0.0,
-              "headline": "Why CTM stock signals breakout potential - Dip Buying & AI Enhanced Trading Alerts"
+              "headline": "PAX Financial Group LLC Buys New Position in AST SpaceMobile, Inc. $ASTS"
             },
             {
-              "ts": "2025-11-17T11:36:27+00:00",
-              "source": "newsercom",
-              "tone": -0.15060562672203703,
-              "headline": "Why CTM stock remains top rated - July 2025 Weekly Recap & Stock Portfolio Risk Control"
+              "ts": "2025-11-17T11:26:34+00:00",
+              "source": "marketbeat",
+              "tone": 0.6515535957758684,
+              "headline": "AST SpaceMobile, Inc. $ASTS Shares Sold by PNC Financial Services Group Inc."
+            },
+            {
+              "ts": "2025-11-16T20:57:09+00:00",
+              "source": "benzinga",
+              "tone": -0.6098042135931047,
+              "headline": "Consumer Tech News (Nov 10-14): China Lifts Rare Earth Export Ban to U.S., Microsoft and Google Invest Billions in AI Data Centers & More"
             }
           ]
         },
         {
           "symbol": "HOOD",
           "action": "SELL",
-          "px": 118.6,
+          "px": 117.0,
           "qty_hint": 4.0,
           "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
-          "score": -0.391505,
+          "score": -0.218666,
           "qty": 0.4,
-          "notional": 47.44,
+          "notional": 46.8,
           "signals": {
-            "TS": -0.391505,
-            "NS": 0.423589,
-            "CDS": -0.065467,
+            "TS": -0.218666,
+            "NS": 0.296,
+            "CDS": -0.012799,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 16.316695187241464,
-            "rsi14": 16.316695187241464,
-            "sma20": 135.10700000000006,
-            "ema_fast": 129.90879154210614,
-            "ema_slow": 132.68276438310136,
-            "macd_hist": -0.5888070261118024,
-            "macd_hist_prev": -0.5356902421839277,
-            "ema50_5m": 123.44633576909078,
-            "ema200_5m": 124.77239254001506
+            "rsi": 30.811386008971112,
+            "rsi14": 30.811386008971112,
+            "sma20": 135.02700000000007,
+            "ema_fast": 129.6626376959523,
+            "ema_slow": 132.56424586458283,
+            "macd_hist": -0.1618607979060669,
+            "macd_hist_prev": -0.1804790448989131,
+            "ema50_5m": 121.62163010547604,
+            "ema200_5m": 124.11413017815003
           },
           "guidance": {
-            "sma20": 135.107,
-            "buy_on_dip_below": 133.7559,
-            "trim_above": 145.9156
+            "sma20": 135.027,
+            "buy_on_dip_below": 133.6767,
+            "trim_above": 145.8292
+          },
+          "phase": "early",
+          "size_k_guidance": 0.4,
+          "size_k": 0.4,
+          "qty_prev": 1.0,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T15:03:00+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "Check Out What Whales Are Doing With HOOD"
+            },
+            {
+              "ts": "2025-11-17T13:55:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Robinhood Reports Y/Y Rise in October Equity, Options & Crypto DARTs"
+            },
+            {
+              "ts": "2025-11-17T13:44:00+00:00",
+              "source": "nasdaq",
+              "tone": 0.0,
+              "headline": "Prediction Markets a Key Driver in Reshaping Robinhood's Revenue Mix"
+            }
+          ]
+        },
+        {
+          "symbol": "RGTI",
+          "action": "SELL",
+          "px": 25.37,
+          "qty_hint": 6.17,
+          "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
+          "score": -0.442772,
+          "qty": 0.4,
+          "notional": 10.15,
+          "signals": {
+            "TS": -0.442772,
+            "NS": 0.257893,
+            "CDS": -0.162506,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 44.2434704354923,
+            "rsi14": 44.2434704354923,
+            "sma20": 35.321499999999986,
+            "ema_fast": 31.322831320919025,
+            "ema_slow": 34.32103208156967,
+            "macd_hist": 0.0013164034913784733,
+            "macd_hist_prev": 0.014027389376618439,
+            "ema50_5m": 25.618607670517818,
+            "ema200_5m": 26.42306927003722
+          },
+          "guidance": {
+            "sma20": 35.3215,
+            "buy_on_dip_below": 34.9683,
+            "trim_above": 38.1472
           },
           "phase": "mid",
           "size_k_guidance": 0.4,
@@ -210,58 +267,58 @@
           "qty_prev": 1.0,
           "news_preview": [
             {
-              "ts": "2025-11-17T11:55:00+00:00",
-              "source": "yahoo",
-              "tone": 0.9428280001495966,
-              "headline": "Coinbase vs. Robinhood Stock: One Will Upgrade the Stock Market Best"
-            },
-            {
-              "ts": "2025-11-17T11:25:44+00:00",
+              "ts": "2025-11-17T14:57:43+00:00",
               "source": "marketbeat",
-              "tone": 0.6636150171641888,
-              "headline": "3,606 Shares in Robinhood Markets, Inc. $HOOD Bought by Los Angeles Capital Management LLC"
+              "tone": 0.7007154370197343,
+              "headline": "Thoroughbred Financial Services LLC Purchases 21,988 Shares of Rigetti Computing, Inc. $RGTI"
             },
             {
-              "ts": "2025-11-17T11:15:00+00:00",
-              "source": "yahoo",
-              "tone": 0.25044800901157827,
-              "headline": "2 Growth Stocks to Buy Now and Hold for the Long Term"
+              "ts": "2025-11-17T10:30:00+00:00",
+              "source": "themotleyfool",
+              "tone": 0.0,
+              "headline": "Should You Buy Rigetti Computing Stock on the Dip?"
+            },
+            {
+              "ts": "2025-11-17T08:30:00+00:00",
+              "source": "seekingalpha",
+              "tone": 0.7752124287081228,
+              "headline": "Quantum Corp.: Q2 Earnings Show Progress (Rating Upgrade)"
             }
           ]
         },
         {
           "symbol": "RKLB",
           "action": "SELL",
-          "px": 44.98,
+          "px": 43.52,
           "qty_hint": 6.27,
           "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
-          "score": -0.250379,
+          "score": -0.262892,
           "qty": 0.4,
-          "notional": 17.99,
+          "notional": 17.41,
           "signals": {
-            "TS": -0.250379,
-            "NS": 0.097326,
-            "CDS": -0.111297,
+            "TS": -0.262892,
+            "NS": 0.10053,
+            "CDS": -0.117524,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 29.054311552286322,
-            "rsi14": 29.054311552286322,
-            "sma20": 56.89624999999999,
-            "ema_fast": 51.396602976553766,
-            "ema_slow": 54.866062548659336,
-            "macd_hist": -0.09336028462859583,
-            "macd_hist_prev": -0.08909240925680628,
-            "ema50_5m": 45.94308760957695,
-            "ema200_5m": 47.06872202931264
+            "rsi": 29.46582947110778,
+            "rsi14": 29.46582947110778,
+            "sma20": 56.82324999999999,
+            "ema_fast": 51.17198759193838,
+            "ema_slow": 54.75791440051119,
+            "macd_hist": -0.09061481301364527,
+            "macd_hist_prev": -0.09653597993782032,
+            "ema50_5m": 45.270315360573925,
+            "ema200_5m": 46.76356203233129
           },
           "guidance": {
-            "sma20": 56.8962,
-            "buy_on_dip_below": 56.3273,
-            "trim_above": 61.4479
+            "sma20": 56.8232,
+            "buy_on_dip_below": 56.255,
+            "trim_above": 61.3691
           },
-          "phase": "mid",
+          "phase": "early",
           "size_k_guidance": 0.4,
           "size_k": 0.4,
           "qty_prev": 1.0,
@@ -281,116 +338,59 @@
             {
               "ts": "2025-11-17T10:06:15+00:00",
               "source": "newsercom",
-              "tone": 0.6353789527652959,
+              "tone": 0.6234298157102143,
               "headline": "Why RKLB stock could see breakout soon - July 2025 Volume & Consistent Growth Equity Picks"
-            }
-          ]
-        },
-        {
-          "symbol": "XOP",
-          "action": "SELL",
-          "px": 132.71,
-          "qty_hint": 7.0,
-          "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_ok",
-          "score": -0.281035,
-          "qty": 0.7,
-          "notional": 92.9,
-          "signals": {
-            "TS": -0.281035,
-            "NS": 0.334448,
-            "CDS": -0.034842,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 30.877845851879243,
-            "rsi14": 30.877845851879243,
-            "sma20": 128.56775000000002,
-            "ema_fast": 130.66208940924727,
-            "ema_slow": 129.54837895054345,
-            "macd_hist": -0.13698014700505706,
-            "macd_hist_prev": -0.10175755918388185,
-            "ema50_5m": 133.54365854002043,
-            "ema200_5m": 132.94550069595527
-          },
-          "guidance": {
-            "sma20": 128.5678,
-            "buy_on_dip_below": 127.2821,
-            "trim_above": 138.8532
-          },
-          "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.7,
-          "qty_prev": 1.0,
-          "news_preview": [
-            {
-              "ts": "2025-11-16T23:58:33+00:00",
-              "source": "newsercom",
-              "tone": 0.5143884508653103,
-              "headline": "Is XOP stock a buy before earnings results - July 2025 Gainers & Growth Focused Entry Reports"
-            },
-            {
-              "ts": "2025-11-16T18:32:23+00:00",
-              "source": "newsercom",
-              "tone": 0.45931047254845186,
-              "headline": "Is XOP stock a buy before earnings results - 2025 Price Action Summary & Weekly Consistent Profit Watchlists"
-            },
-            {
-              "ts": "2025-11-16T18:30:27+00:00",
-              "source": "newsercom",
-              "tone": 0.0,
-              "headline": "Is XOP stock a buy before earnings results - July 2025 Big Picture & Technical Pattern Recognition Alerts"
             }
           ]
         }
       ],
-      "cash_left": 284.66,
+      "cash_left": 217.71,
       "debug": {
         "buy_sizing": [],
         "sell_sizing": [
           {
-            "symbol": "CTM",
-            "cds": -0.117978,
-            "size_k": 0.7,
-            "size_k_guidance": 0.7,
-            "phase": "mid",
-            "qty": 5.6,
-            "px": 1.13,
-            "notional": 6.33,
-            "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_below200_sell_ok"
+            "symbol": "ASTS",
+            "cds": -0.128659,
+            "size_k": 0.4,
+            "size_k_guidance": 0.4,
+            "phase": "early",
+            "qty": 0.4,
+            "px": 58.39,
+            "notional": 23.36,
+            "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
           },
           {
             "symbol": "HOOD",
-            "cds": -0.065467,
+            "cds": -0.012799,
+            "size_k": 0.4,
+            "size_k_guidance": 0.4,
+            "phase": "early",
+            "qty": 0.4,
+            "px": 117.0,
+            "notional": 46.8,
+            "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
+          },
+          {
+            "symbol": "RGTI",
+            "cds": -0.162506,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
             "phase": "mid",
             "qty": 0.4,
-            "px": 118.6,
-            "notional": 47.44,
+            "px": 25.37,
+            "notional": 10.15,
             "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
           },
           {
             "symbol": "RKLB",
-            "cds": -0.111297,
+            "cds": -0.117524,
             "size_k": 0.4,
             "size_k_guidance": 0.4,
-            "phase": "mid",
+            "phase": "early",
             "qty": 0.4,
-            "px": 44.98,
-            "notional": 17.99,
+            "px": 43.52,
+            "notional": 17.41,
             "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
-          },
-          {
-            "symbol": "XOP",
-            "cds": -0.034842,
-            "size_k": 0.7,
-            "size_k_guidance": 0.7,
-            "phase": "mid",
-            "qty": 0.7,
-            "px": 132.71,
-            "notional": 92.9,
-            "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_ok"
           }
         ]
       }
@@ -412,284 +412,284 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_aggressive_trades/positions.csv"
       },
-      "portfolio_value_est": 7211.8,
+      "portfolio_value_est": 7181.52,
       "cash_start": 17736.37,
       "trades": [
         {
-          "symbol": "CIBR",
+          "symbol": "BIIB",
           "action": "BUY",
-          "px": 74.93,
+          "px": 167.18,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.445087,
-          "qty": 8.228535,
-          "notional": 616.56,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok",
+          "score": 0.467344,
+          "qty": 1.144594,
+          "notional": 191.35,
           "signals": {
-            "TS": 0.313015,
-            "NS": 0.643195,
-            "CDS": 0.445087,
+            "TS": 0.367374,
+            "NS": 0.6173,
+            "CDS": 0.467344,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 57.77261504237397,
-            "rsi14": 57.77261504237397,
-            "sma20": 76.32899999999998,
-            "ema_fast": 75.69516537416821,
-            "ema_slow": 75.96950907724467,
-            "macd_hist": -0.008593219647490127,
-            "macd_hist_prev": -0.026302064254777036,
-            "ema50_5m": 74.760509443424,
-            "ema200_5m": 75.1500636503271
+            "rsi": 51.7581054567085,
+            "rsi14": 51.7581054567085,
+            "sma20": 154.45425,
+            "ema_fast": 159.48005441227946,
+            "ema_slow": 154.52068505307287,
+            "macd_hist": -0.0242723882387762,
+            "macd_hist_prev": -0.16068856138355486,
+            "ema50_5m": 167.04586213756414,
+            "ema200_5m": 164.96178983638367
           },
           "guidance": {
-            "sma20": 76.329,
-            "buy_on_dip_below": 75.5657,
-            "trim_above": 82.4353
+            "sma20": 154.4543,
+            "buy_on_dip_below": 152.9097,
+            "trim_above": 166.8106
           },
           "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.49427456249999996,
-          "qty_prev": 16.6477,
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.15358727999999994,
+          "qty_prev": 7.4524,
           "news_preview": [
             {
-              "ts": "2025-11-17T12:37:12+00:00",
+              "ts": "2025-11-17T12:38:39+00:00",
               "source": "benzinga",
-              "tone": 0.8611855694775901,
-              "headline": "Nokia Secures Multi-Year Pact To Power Telecom Italia's 5G Expansion"
+              "tone": 0.845567525150858,
+              "headline": "Biogen And Stoke Therapeutics Highlight Urgent Need For New Medicines Targeting Underlying Genetic Cause Of Dravet Syndrome To Improve Long Term Outcomes"
             },
             {
-              "ts": "2025-11-16T09:56:01+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Price-Driven Insight from (CIBR) for Rule-Based Strategy"
-            },
-            {
-              "ts": "2025-11-15T23:26:23+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Learn to Evaluate (CIBR) using the Charts (CIBR:CA)"
-            }
-          ]
-        },
-        {
-          "symbol": "UBER",
-          "action": "BUY",
-          "px": 92.125,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.434745,
-          "qty": 6.35134,
-          "notional": 585.12,
-          "signals": {
-            "TS": 0.49224,
-            "NS": 0.348501,
-            "CDS": 0.434745,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 62.95199523792088,
-            "rsi14": 62.95199523792088,
-            "sma20": 94.13799999999996,
-            "ema_fast": 93.23968044990231,
-            "ema_slow": 94.06935175988323,
-            "macd_hist": 0.04886614300132097,
-            "macd_hist_prev": 0.018846230499255184,
-            "ema50_5m": 91.80535007714128,
-            "ema200_5m": 92.32846312648326
-          },
-          "guidance": {
-            "sma20": 94.138,
-            "buy_on_dip_below": 93.1966,
-            "trim_above": 101.669
-          },
-          "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.4690659374999999,
-          "qty_prev": 13.5404,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T13:29:07+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Sierra Capital LLC Acquires New Position in Uber Technologies, Inc. $UBER"
-            },
-            {
-              "ts": "2025-11-17T13:29:06+00:00",
-              "source": "marketbeat",
-              "tone": 0.20126954597909477,
-              "headline": "Nomura Asset Management Co. Ltd. Cuts Stake in Uber Technologies, Inc. $UBER"
-            },
-            {
-              "ts": "2025-11-17T12:42:56+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Uber Technologies, Inc. $UBER Stock Holdings Reduced by Raiffeisen Bank International AG"
-            }
-          ]
-        },
-        {
-          "symbol": "AVGO",
-          "action": "BUY",
-          "px": 348.19,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.433371,
-          "qty": 1.668477,
-          "notional": 580.95,
-          "signals": {
-            "TS": 0.545256,
-            "NS": 0.265544,
-            "CDS": 0.433371,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 75.70836536469558,
-            "rsi14": 75.70836536469558,
-            "sma20": 356.16475,
-            "ema_fast": 351.74370376816296,
-            "ema_slow": 351.40323799778844,
-            "macd_hist": 0.5276903313747289,
-            "macd_hist_prev": 0.28984986254975525,
-            "ema50_5m": 342.6955171919651,
-            "ema200_5m": 343.0437505795846
-          },
-          "guidance": {
-            "sma20": 356.1648,
-            "buy_on_dip_below": 352.6031,
-            "trim_above": 384.6579
-          },
-          "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.4657168125,
-          "qty_prev": 3.5826,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T13:26:00+00:00",
-              "source": "yahoofinance",
-              "tone": 0.8272878830699513,
-              "headline": "CRDO vs. AVGO: Which Data Center Connectivity Stock Is the Smart Pick?"
-            },
-            {
-              "ts": "2025-11-17T12:11:00+00:00",
+              "ts": "2025-11-17T12:30:00+00:00",
               "source": "yahoo",
-              "tone": -0.6443435656337743,
-              "headline": "Netflix Stock Split Kicks in Today. What It Means as Streaming War Heats Up."
+              "tone": 0.936701879630001,
+              "headline": "Stoke Therapeutics and Biogen Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             },
             {
-              "ts": "2025-11-17T10:45:00+00:00",
+              "ts": "2025-11-17T12:30:00+00:00",
               "source": "yahoo",
-              "tone": 0.0,
-              "headline": "Is This the Right Time to Buy Into the AI Hardware Boom?"
+              "tone": 0.9367018770388928,
+              "headline": "Biogen and Stoke Therapeutics Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             }
           ]
         },
         {
-          "symbol": "ETSY",
+          "symbol": "XLY",
           "action": "BUY",
-          "px": 57.62,
+          "px": 230.475,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy",
-          "score": 0.430485,
+          "score": 0.443346,
           "qty": 0.0,
           "notional": 0.0,
           "signals": {
-            "TS": 0.477983,
-            "NS": 0.359238,
-            "CDS": 0.430485,
+            "TS": 0.334608,
+            "NS": 0.606453,
+            "CDS": 0.443346,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 64.6457855811415,
-            "rsi14": 64.6457855811415,
-            "sma20": 64.46374999999999,
-            "ema_fast": 60.949042128629664,
-            "ema_slow": 63.50117965017569,
-            "macd_hist": 0.04514553016232202,
-            "macd_hist_prev": 0.02224861692359518,
-            "ema50_5m": 57.24973650384633,
-            "ema200_5m": 58.8424320036754
+            "rsi": 43.22835878565763,
+            "rsi14": 43.22835878565763,
+            "sma20": 237.50000000000014,
+            "ema_fast": 235.41810959845077,
+            "ema_slow": 236.38814107463966,
+            "macd_hist": 0.0016004022623964387,
+            "macd_hist_prev": -0.013583174690411537,
+            "ema50_5m": 231.1858922345506,
+            "ema200_5m": 233.0812198947223
           },
           "guidance": {
-            "sma20": 64.4637,
-            "buy_on_dip_below": 63.8191,
-            "trim_above": 69.6208
+            "sma20": 237.5,
+            "buy_on_dip_below": 235.125,
+            "trim_above": 256.5
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 0.0,
-          "qty_prev": 21.6485,
+          "qty_prev": 5.4058,
           "news_preview": [
             {
-              "ts": "2025-11-17T10:48:17+00:00",
-              "source": "marketbeat",
-              "tone": 0.7616504459484971,
-              "headline": "Envestnet Asset Management Inc. Has $2.99 Million Position in Etsy, Inc. $ETSY"
+              "ts": "2025-11-17T09:26:00+00:00",
+              "source": "seekingalpha",
+              "tone": 0.6500885528359513,
+              "headline": "Either It's A Pit Stop Or A Full Sector Rotation Is Underway"
             },
             {
-              "ts": "2025-11-17T10:25:11+00:00",
-              "source": "marketbeat",
-              "tone": 0.6498310161069806,
-              "headline": "Banco Bilbao Vizcaya Argentaria S.A. Purchases 16,025 Shares of Etsy, Inc. $ETSY"
+              "ts": "2025-11-14T23:05:11+00:00",
+              "source": "newsstocktradersdailycom",
+              "tone": 0.0,
+              "headline": "(XLY) Investment Analysis (XLY:CA)"
             },
             {
-              "ts": "2025-11-16T20:01:13+00:00",
-              "source": "newsercom",
-              "tone": 0.4739342193106956,
-              "headline": "How Etsy Inc. (3E2) stock performs during market turbulence - Market Growth Report & Reliable Trade Execution Plans"
+              "ts": "2025-11-14T13:10:11+00:00",
+              "source": "benzinga",
+              "tone": -0.05467205538844027,
+              "headline": "Leading And Lagging Sectors For November 14, 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "RTX",
+          "action": "BUY",
+          "px": 175.895,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.414902,
+          "qty": 2.979893,
+          "notional": 524.15,
+          "signals": {
+            "TS": 0.484073,
+            "NS": 0.311146,
+            "CDS": 0.414902,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 61.1631337998654,
+            "rsi14": 61.1631337998654,
+            "sma20": 176.98299999999992,
+            "ema_fast": 175.9588616267548,
+            "ema_slow": 173.3315993380654,
+            "macd_hist": 0.04038154982650133,
+            "macd_hist_prev": 0.013312074503862875,
+            "ema50_5m": 175.2572715285466,
+            "ema200_5m": 175.6981203323337
+          },
+          "guidance": {
+            "sma20": 176.983,
+            "buy_on_dip_below": 175.2132,
+            "trim_above": 191.1416
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.42069862499999994,
+          "qty_prev": 7.0832,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T14:00:00+00:00",
+              "source": "stocktitan",
+              "tone": -0.5009116230488918,
+              "headline": "RTX (NYSE: RTX) turboprop D328eco to cut fuel use 14% and add 25% capacity"
+            },
+            {
+              "ts": "2025-11-17T13:13:53+00:00",
+              "source": "benzinga",
+              "tone": 0.8555020843660497,
+              "headline": "Qatar Airways Bets On RTX Data Platform To Boost Fleet Reliability"
+            },
+            {
+              "ts": "2025-11-17T13:13:53+00:00",
+              "source": "benzinga",
+              "tone": 0.0,
+              "headline": "What's Going On With RTX Stock Monday? - RTX (NYSE:RTX)"
+            }
+          ]
+        },
+        {
+          "symbol": "ADBE",
+          "action": "BUY",
+          "px": 329.8,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.380761,
+          "qty": 1.274898,
+          "notional": 420.46,
+          "signals": {
+            "TS": 0.345954,
+            "NS": 0.432973,
+            "CDS": 0.380761,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 44.379812909290656,
+            "rsi14": 44.379812909290656,
+            "sma20": 340.53849999999954,
+            "ema_fast": 334.2489648695139,
+            "ema_slow": 338.75091347270296,
+            "macd_hist": 0.010957707023371066,
+            "macd_hist_prev": -0.0168247994966928,
+            "ema50_5m": 330.94314314475656,
+            "ema200_5m": 332.5366231305142
+          },
+          "guidance": {
+            "sma20": 340.5385,
+            "buy_on_dip_below": 337.1331,
+            "trim_above": 367.7816
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.33747993750000005,
+          "qty_prev": 3.7777,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T15:26:40+00:00",
+              "source": "forbes",
+              "tone": 0.0,
+              "headline": "Adobe Vs Oracle: Which Stock To Break Out?"
+            },
+            {
+              "ts": "2025-11-17T15:25:23+00:00",
+              "source": "marketbeat",
+              "tone": 0.707928578860242,
+              "headline": "Y.D. More Investments Ltd Sells 2,142 Shares of Adobe Inc. $ADBE"
+            },
+            {
+              "ts": "2025-11-17T15:06:11+00:00",
+              "source": "insidermonkey",
+              "tone": 0.6923012378026921,
+              "headline": "Aristotle Atlantic\u2019s Large Cap Growth Sold Adobe (ADBE) Due to Concerns of Increased Competition"
             }
           ]
         }
       ],
-      "cash_left": 10964.11,
+      "cash_left": 11616.83,
       "debug": {
         "buy_sizing": [
           {
-            "symbol": "CIBR",
-            "cds": 0.445087,
-            "size_k": 0.49427456249999996,
-            "size_k_guidance": 1.0,
+            "symbol": "BIIB",
+            "cds": 0.467344,
+            "size_k": 0.15358727999999994,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 8.228535,
-            "px": 74.93,
-            "notional": 616.56,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+            "qty": 1.144594,
+            "px": 167.18,
+            "notional": 191.35,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok"
           },
           {
-            "symbol": "UBER",
-            "cds": 0.434745,
-            "size_k": 0.4690659374999999,
-            "size_k_guidance": 1.0,
-            "phase": "mid",
-            "qty": 6.35134,
-            "px": 92.125,
-            "notional": 585.12,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
-          },
-          {
-            "symbol": "AVGO",
-            "cds": 0.433371,
-            "size_k": 0.4657168125,
-            "size_k_guidance": 1.0,
-            "phase": "mid",
-            "qty": 1.668477,
-            "px": 348.19,
-            "notional": 580.95,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
-          },
-          {
-            "symbol": "ETSY",
-            "cds": 0.430485,
+            "symbol": "XLY",
+            "cds": 0.443346,
             "size_k": 0.0,
             "size_k_guidance": 1.0,
             "phase": "mid",
             "qty": 0.0,
-            "px": 57.62,
+            "px": 230.475,
             "notional": 0.0,
             "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy"
+          },
+          {
+            "symbol": "RTX",
+            "cds": 0.414902,
+            "size_k": 0.42069862499999994,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 2.979893,
+            "px": 175.895,
+            "notional": 524.15,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "ADBE",
+            "cds": 0.380761,
+            "size_k": 0.33747993750000005,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.274898,
+            "px": 329.8,
+            "notional": 420.46,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
           }
         ],
         "sell_sizing": []
@@ -711,80 +711,80 @@
         ],
         "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
       },
-      "portfolio_value_est": 22650.14,
+      "portfolio_value_est": 22502.43,
       "cash_start": 955.17,
       "trades": [
         {
-          "symbol": "CIBR",
+          "symbol": "BIIB",
           "action": "BUY",
-          "px": 74.93,
+          "px": 167.18,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.445087,
-          "qty": 6.300765,
-          "notional": 472.12,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok",
+          "score": 0.467344,
+          "qty": 0.877506,
+          "notional": 146.7,
           "signals": {
-            "TS": 0.313015,
-            "NS": 0.643195,
-            "CDS": 0.445087,
+            "TS": 0.367374,
+            "NS": 0.6173,
+            "CDS": 0.467344,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 57.77261504237397,
-            "rsi14": 57.77261504237397,
-            "sma20": 76.32899999999998,
-            "ema_fast": 75.69516537416821,
-            "ema_slow": 75.96950907724467,
-            "macd_hist": -0.008593219647490127,
-            "macd_hist_prev": -0.026302064254777036,
-            "ema50_5m": 74.760509443424,
-            "ema200_5m": 75.1500636503271
+            "rsi": 51.7581054567085,
+            "rsi14": 51.7581054567085,
+            "sma20": 154.45425,
+            "ema_fast": 159.48005441227946,
+            "ema_slow": 154.52068505307287,
+            "macd_hist": -0.0242723882387762,
+            "macd_hist_prev": -0.16068856138355486,
+            "ema50_5m": 167.04586213756414,
+            "ema200_5m": 164.96178983638367
           },
           "guidance": {
-            "sma20": 76.329,
-            "buy_on_dip_below": 75.5657,
-            "trim_above": 82.4353
+            "sma20": 154.4543,
+            "buy_on_dip_below": 152.9097,
+            "trim_above": 166.8106
           },
           "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.49427456249999996,
-          "qty_prev": 12.7475,
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.15358727999999994,
+          "qty_prev": 5.7134,
           "news_preview": [
             {
-              "ts": "2025-11-17T12:37:12+00:00",
+              "ts": "2025-11-17T12:38:39+00:00",
               "source": "benzinga",
-              "tone": 0.8611855694775901,
-              "headline": "Nokia Secures Multi-Year Pact To Power Telecom Italia's 5G Expansion"
+              "tone": 0.845567525150858,
+              "headline": "Biogen And Stoke Therapeutics Highlight Urgent Need For New Medicines Targeting Underlying Genetic Cause Of Dravet Syndrome To Improve Long Term Outcomes"
             },
             {
-              "ts": "2025-11-16T09:56:01+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Price-Driven Insight from (CIBR) for Rule-Based Strategy"
+              "ts": "2025-11-17T12:30:00+00:00",
+              "source": "yahoo",
+              "tone": 0.936701879630001,
+              "headline": "Stoke Therapeutics and Biogen Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             },
             {
-              "ts": "2025-11-15T23:26:23+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Learn to Evaluate (CIBR) using the Charts (CIBR:CA)"
+              "ts": "2025-11-17T12:30:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9367018770388928,
+              "headline": "Biogen and Stoke Therapeutics Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             }
           ]
         }
       ],
-      "cash_left": -472.12,
+      "cash_left": -146.7,
       "debug": {
         "buy_sizing": [
           {
-            "symbol": "CIBR",
-            "cds": 0.445087,
-            "size_k": 0.49427456249999996,
-            "size_k_guidance": 1.0,
+            "symbol": "BIIB",
+            "cds": 0.467344,
+            "size_k": 0.15358727999999994,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 6.300765,
-            "px": 74.93,
-            "notional": 472.12,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+            "qty": 0.877506,
+            "px": 167.18,
+            "notional": 146.7,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok"
           }
         ],
         "sell_sizing": []
@@ -806,419 +806,283 @@
         ],
         "positions_path": "data/portfolios/portfolio_paper_reasonable/positions.csv"
       },
-      "portfolio_value_est": 5265.94,
+      "portfolio_value_est": 5238.48,
       "cash_start": 19694.84,
       "trades": [
         {
-          "symbol": "CIBR",
+          "symbol": "BIIB",
           "action": "BUY",
-          "px": 74.93,
+          "px": 167.18,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.445087,
-          "qty": 4.939582,
-          "notional": 370.12,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok",
+          "score": 0.467344,
+          "qty": 0.68718,
+          "notional": 114.88,
           "signals": {
-            "TS": 0.313015,
-            "NS": 0.643195,
-            "CDS": 0.445087,
+            "TS": 0.367374,
+            "NS": 0.6173,
+            "CDS": 0.467344,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 57.77261504237397,
-            "rsi14": 57.77261504237397,
-            "sma20": 76.32899999999998,
-            "ema_fast": 75.69516537416821,
-            "ema_slow": 75.96950907724467,
-            "macd_hist": -0.008593219647490127,
-            "macd_hist_prev": -0.026302064254777036,
-            "ema50_5m": 74.760509443424,
-            "ema200_5m": 75.1500636503271
+            "rsi": 51.7581054567085,
+            "rsi14": 51.7581054567085,
+            "sma20": 154.45425,
+            "ema_fast": 159.48005441227946,
+            "ema_slow": 154.52068505307287,
+            "macd_hist": -0.0242723882387762,
+            "macd_hist_prev": -0.16068856138355486,
+            "ema50_5m": 167.04586213756414,
+            "ema200_5m": 164.96178983638367
           },
           "guidance": {
-            "sma20": 76.329,
-            "buy_on_dip_below": 75.5657,
-            "trim_above": 82.4353
+            "sma20": 154.4543,
+            "buy_on_dip_below": 152.9097,
+            "trim_above": 166.8106
           },
           "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.49427456249999996,
-          "qty_prev": 9.9936,
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.15358727999999994,
+          "qty_prev": 4.4742,
           "news_preview": [
             {
-              "ts": "2025-11-17T12:37:12+00:00",
+              "ts": "2025-11-17T12:38:39+00:00",
               "source": "benzinga",
-              "tone": 0.8611855694775901,
-              "headline": "Nokia Secures Multi-Year Pact To Power Telecom Italia's 5G Expansion"
+              "tone": 0.845567525150858,
+              "headline": "Biogen And Stoke Therapeutics Highlight Urgent Need For New Medicines Targeting Underlying Genetic Cause Of Dravet Syndrome To Improve Long Term Outcomes"
             },
             {
-              "ts": "2025-11-16T09:56:01+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Price-Driven Insight from (CIBR) for Rule-Based Strategy"
-            },
-            {
-              "ts": "2025-11-15T23:26:23+00:00",
-              "source": "newsstocktradersdailycom",
-              "tone": 0.0,
-              "headline": "Learn to Evaluate (CIBR) using the Charts (CIBR:CA)"
-            }
-          ]
-        },
-        {
-          "symbol": "UBER",
-          "action": "BUY",
-          "px": 92.125,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.434745,
-          "qty": 3.812709,
-          "notional": 351.25,
-          "signals": {
-            "TS": 0.49224,
-            "NS": 0.348501,
-            "CDS": 0.434745,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 62.95199523792088,
-            "rsi14": 62.95199523792088,
-            "sma20": 94.13799999999996,
-            "ema_fast": 93.23968044990231,
-            "ema_slow": 94.06935175988323,
-            "macd_hist": 0.04886614300132097,
-            "macd_hist_prev": 0.018846230499255184,
-            "ema50_5m": 91.80535007714128,
-            "ema200_5m": 92.32846312648326
-          },
-          "guidance": {
-            "sma20": 94.138,
-            "buy_on_dip_below": 93.1966,
-            "trim_above": 101.669
-          },
-          "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.4690659374999999,
-          "qty_prev": 8.1283,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T13:29:07+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Sierra Capital LLC Acquires New Position in Uber Technologies, Inc. $UBER"
-            },
-            {
-              "ts": "2025-11-17T13:29:06+00:00",
-              "source": "marketbeat",
-              "tone": 0.20126954597909477,
-              "headline": "Nomura Asset Management Co. Ltd. Cuts Stake in Uber Technologies, Inc. $UBER"
-            },
-            {
-              "ts": "2025-11-17T12:42:56+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Uber Technologies, Inc. $UBER Stock Holdings Reduced by Raiffeisen Bank International AG"
-            }
-          ]
-        },
-        {
-          "symbol": "AVGO",
-          "action": "BUY",
-          "px": 348.19,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.433371,
-          "qty": 1.001571,
-          "notional": 348.74,
-          "signals": {
-            "TS": 0.545256,
-            "NS": 0.265544,
-            "CDS": 0.433371,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 75.70836536469558,
-            "rsi14": 75.70836536469558,
-            "sma20": 356.16475,
-            "ema_fast": 351.74370376816296,
-            "ema_slow": 351.40323799778844,
-            "macd_hist": 0.5276903313747289,
-            "macd_hist_prev": 0.28984986254975525,
-            "ema50_5m": 342.6955171919651,
-            "ema200_5m": 343.0437505795846
-          },
-          "guidance": {
-            "sma20": 356.1648,
-            "buy_on_dip_below": 352.6031,
-            "trim_above": 384.6579
-          },
-          "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.4657168125,
-          "qty_prev": 2.1506,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T13:26:00+00:00",
-              "source": "yahoofinance",
-              "tone": 0.8272878830699513,
-              "headline": "CRDO vs. AVGO: Which Data Center Connectivity Stock Is the Smart Pick?"
-            },
-            {
-              "ts": "2025-11-17T12:11:00+00:00",
+              "ts": "2025-11-17T12:30:00+00:00",
               "source": "yahoo",
-              "tone": -0.6443435656337743,
-              "headline": "Netflix Stock Split Kicks in Today. What It Means as Streaming War Heats Up."
+              "tone": 0.936701879630001,
+              "headline": "Stoke Therapeutics and Biogen Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             },
             {
-              "ts": "2025-11-17T10:45:00+00:00",
+              "ts": "2025-11-17T12:30:00+00:00",
               "source": "yahoo",
-              "tone": 0.0,
-              "headline": "Is This the Right Time to Buy Into the AI Hardware Boom?"
+              "tone": 0.9367018770388928,
+              "headline": "Biogen and Stoke Therapeutics Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             }
           ]
         },
         {
-          "symbol": "ETSY",
+          "symbol": "XLY",
           "action": "BUY",
-          "px": 57.62,
+          "px": 230.475,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy",
-          "score": 0.430485,
+          "score": 0.443346,
           "qty": 0.0,
           "notional": 0.0,
           "signals": {
-            "TS": 0.477983,
-            "NS": 0.359238,
-            "CDS": 0.430485,
+            "TS": 0.334608,
+            "NS": 0.606453,
+            "CDS": 0.443346,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 64.6457855811415,
-            "rsi14": 64.6457855811415,
-            "sma20": 64.46374999999999,
-            "ema_fast": 60.949042128629664,
-            "ema_slow": 63.50117965017569,
-            "macd_hist": 0.04514553016232202,
-            "macd_hist_prev": 0.02224861692359518,
-            "ema50_5m": 57.24973650384633,
-            "ema200_5m": 58.8424320036754
+            "rsi": 43.22835878565763,
+            "rsi14": 43.22835878565763,
+            "sma20": 237.50000000000014,
+            "ema_fast": 235.41810959845077,
+            "ema_slow": 236.38814107463966,
+            "macd_hist": 0.0016004022623964387,
+            "macd_hist_prev": -0.013583174690411537,
+            "ema50_5m": 231.1858922345506,
+            "ema200_5m": 233.0812198947223
           },
           "guidance": {
-            "sma20": 64.4637,
-            "buy_on_dip_below": 63.8191,
-            "trim_above": 69.6208
+            "sma20": 237.5,
+            "buy_on_dip_below": 235.125,
+            "trim_above": 256.5
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 0.0,
-          "qty_prev": 12.9959,
+          "qty_prev": 3.2455,
           "news_preview": [
             {
-              "ts": "2025-11-17T10:48:17+00:00",
-              "source": "marketbeat",
-              "tone": 0.7616504459484971,
-              "headline": "Envestnet Asset Management Inc. Has $2.99 Million Position in Etsy, Inc. $ETSY"
+              "ts": "2025-11-17T09:26:00+00:00",
+              "source": "seekingalpha",
+              "tone": 0.6500885528359513,
+              "headline": "Either It's A Pit Stop Or A Full Sector Rotation Is Underway"
             },
             {
-              "ts": "2025-11-17T10:25:11+00:00",
-              "source": "marketbeat",
-              "tone": 0.6498310161069806,
-              "headline": "Banco Bilbao Vizcaya Argentaria S.A. Purchases 16,025 Shares of Etsy, Inc. $ETSY"
+              "ts": "2025-11-14T23:05:11+00:00",
+              "source": "newsstocktradersdailycom",
+              "tone": 0.0,
+              "headline": "(XLY) Investment Analysis (XLY:CA)"
             },
             {
-              "ts": "2025-11-16T20:01:13+00:00",
-              "source": "newsercom",
-              "tone": 0.4739342193106956,
-              "headline": "How Etsy Inc. (3E2) stock performs during market turbulence - Market Growth Report & Reliable Trade Execution Plans"
-            }
-          ]
-        },
-        {
-          "symbol": "MSFT",
-          "action": "BUY",
-          "px": 511.11,
-          "qty_hint": 0.0,
-          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.428301,
-          "qty": 0.664216,
-          "notional": 339.49,
-          "signals": {
-            "TS": 0.463864,
-            "NS": 0.374956,
-            "CDS": 0.428301,
-            "wT": 0.6,
-            "wN": 0.4
-          },
-          "indicators": {
-            "rsi": 57.27288389430945,
-            "rsi14": 57.27288389430945,
-            "sma20": 516.2874999999999,
-            "ema_fast": 510.5331873149861,
-            "ema_slow": 513.3298629666042,
-            "macd_hist": 0.019982404257510827,
-            "macd_hist_prev": -0.06600292925423468,
-            "ema50_5m": 509.4029990550251,
-            "ema200_5m": 507.5202852599813
-          },
-          "guidance": {
-            "sma20": 516.2875,
-            "buy_on_dip_below": 511.1246,
-            "trim_above": 557.5905
-          },
-          "phase": "mid",
-          "size_k_guidance": 1.0,
-          "size_k": 0.4533586874999999,
-          "qty_prev": 1.4651,
-          "news_preview": [
-            {
-              "ts": "2025-11-17T14:38:08+00:00",
-              "source": "marketbeat",
-              "tone": 0.7093917859981769,
-              "headline": "VIRGINIA RETIREMENT SYSTEMS ET Al Buys Shares of 1,640,300 Microsoft Corporation $MSFT"
-            },
-            {
-              "ts": "2025-11-17T14:38:07+00:00",
-              "source": "marketbeat",
-              "tone": 0.8979022548958603,
-              "headline": "Woodard & Co. Asset Management Group Inc. ADV Sells 2,380 Shares of Microsoft Corporation $MSFT"
-            },
-            {
-              "ts": "2025-11-17T14:30:20+00:00",
+              "ts": "2025-11-14T13:10:11+00:00",
               "source": "benzinga",
-              "tone": 0.8954791964920024,
-              "headline": "Magnificent Seven Will Become Low-Profit Tech Utilities, Analyst Warns"
+              "tone": -0.05467205538844027,
+              "headline": "Leading And Lagging Sectors For November 14, 2025"
             }
           ]
         },
         {
-          "symbol": "DKNG",
+          "symbol": "RTX",
           "action": "BUY",
-          "px": 29.72,
+          "px": 175.895,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.416087,
-          "qty": 0.000127,
-          "notional": 0.0,
+          "score": 0.414902,
+          "qty": 1.789021,
+          "notional": 314.68,
           "signals": {
-            "TS": 0.486574,
-            "NS": 0.310357,
-            "CDS": 0.416087,
+            "TS": 0.484073,
+            "NS": 0.311146,
+            "CDS": 0.414902,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 60.951116864059756,
-            "rsi14": 60.951116864059756,
-            "sma20": 30.92875,
-            "ema_fast": 30.296097763281463,
-            "ema_slow": 31.951804008113445,
-            "macd_hist": 0.007110792558520401,
-            "macd_hist_prev": -0.004350467648088621,
-            "ema50_5m": 29.413099475855628,
-            "ema200_5m": 29.79113296384769
+            "rsi": 61.1631337998654,
+            "rsi14": 61.1631337998654,
+            "sma20": 176.98299999999992,
+            "ema_fast": 175.9588616267548,
+            "ema_slow": 173.3315993380654,
+            "macd_hist": 0.04038154982650133,
+            "macd_hist_prev": 0.013312074503862875,
+            "ema50_5m": 175.2572715285466,
+            "ema200_5m": 175.6981203323337
           },
           "guidance": {
-            "sma20": 30.9288,
-            "buy_on_dip_below": 30.6195,
-            "trim_above": 33.4031
+            "sma20": 176.983,
+            "buy_on_dip_below": 175.2132,
+            "trim_above": 191.1416
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
-          "size_k": 0.4235870625,
-          "qty_prev": 0.0003,
+          "size_k": 0.42069862499999994,
+          "qty_prev": 4.2525,
           "news_preview": [
             {
-              "ts": "2025-11-17T11:52:26+00:00",
-              "source": "marketbeat",
-              "tone": 0.6698433037160786,
-              "headline": "DraftKings Inc. $DKNG Shares Bought by Geode Capital Management LLC"
+              "ts": "2025-11-17T14:00:00+00:00",
+              "source": "stocktitan",
+              "tone": -0.5009116230488918,
+              "headline": "RTX (NYSE: RTX) turboprop D328eco to cut fuel use 14% and add 25% capacity"
             },
             {
-              "ts": "2025-11-17T11:22:00+00:00",
-              "source": "marketbeat",
-              "tone": 0.0,
-              "headline": "Foundations Investment Advisors LLC Increases Holdings in DraftKings Inc. $DKNG"
+              "ts": "2025-11-17T13:13:53+00:00",
+              "source": "benzinga",
+              "tone": 0.8555020843660497,
+              "headline": "Qatar Airways Bets On RTX Data Platform To Boost Fleet Reliability"
             },
             {
-              "ts": "2025-11-17T10:42:25+00:00",
-              "source": "marketbeat",
+              "ts": "2025-11-17T13:13:53+00:00",
+              "source": "benzinga",
               "tone": 0.0,
-              "headline": "Casino Stocks To Watch Now - November 13th"
+              "headline": "What's Going On With RTX Stock Monday? - RTX (NYSE:RTX)"
+            }
+          ]
+        },
+        {
+          "symbol": "ADBE",
+          "action": "BUY",
+          "px": 329.8,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.380761,
+          "qty": 0.765404,
+          "notional": 252.43,
+          "signals": {
+            "TS": 0.345954,
+            "NS": 0.432973,
+            "CDS": 0.380761,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 44.379812909290656,
+            "rsi14": 44.379812909290656,
+            "sma20": 340.53849999999954,
+            "ema_fast": 334.2489648695139,
+            "ema_slow": 338.75091347270296,
+            "macd_hist": 0.010957707023371066,
+            "macd_hist_prev": -0.0168247994966928,
+            "ema50_5m": 330.94314314475656,
+            "ema200_5m": 332.5366231305142
+          },
+          "guidance": {
+            "sma20": 340.5385,
+            "buy_on_dip_below": 337.1331,
+            "trim_above": 367.7816
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.33747993750000005,
+          "qty_prev": 2.268,
+          "news_preview": [
+            {
+              "ts": "2025-11-17T15:26:40+00:00",
+              "source": "forbes",
+              "tone": 0.0,
+              "headline": "Adobe Vs Oracle: Which Stock To Break Out?"
+            },
+            {
+              "ts": "2025-11-17T15:25:23+00:00",
+              "source": "marketbeat",
+              "tone": 0.707928578860242,
+              "headline": "Y.D. More Investments Ltd Sells 2,142 Shares of Adobe Inc. $ADBE"
+            },
+            {
+              "ts": "2025-11-17T15:06:11+00:00",
+              "source": "insidermonkey",
+              "tone": 0.6923012378026921,
+              "headline": "Aristotle Atlantic\u2019s Large Cap Growth Sold Adobe (ADBE) Due to Concerns of Increased Competition"
             }
           ]
         }
       ],
-      "cash_left": 14541.12,
+      "cash_left": 16020.87,
       "debug": {
         "buy_sizing": [
           {
-            "symbol": "CIBR",
-            "cds": 0.445087,
-            "size_k": 0.49427456249999996,
-            "size_k_guidance": 1.0,
+            "symbol": "BIIB",
+            "cds": 0.467344,
+            "size_k": 0.15358727999999994,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 4.939582,
-            "px": 74.93,
-            "notional": 370.12,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+            "qty": 0.68718,
+            "px": 167.18,
+            "notional": 114.88,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok"
           },
           {
-            "symbol": "UBER",
-            "cds": 0.434745,
-            "size_k": 0.4690659374999999,
-            "size_k_guidance": 1.0,
-            "phase": "mid",
-            "qty": 3.812709,
-            "px": 92.125,
-            "notional": 351.25,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
-          },
-          {
-            "symbol": "AVGO",
-            "cds": 0.433371,
-            "size_k": 0.4657168125,
-            "size_k_guidance": 1.0,
-            "phase": "mid",
-            "qty": 1.001571,
-            "px": 348.19,
-            "notional": 348.74,
-            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
-          },
-          {
-            "symbol": "ETSY",
-            "cds": 0.430485,
+            "symbol": "XLY",
+            "cds": 0.443346,
             "size_k": 0.0,
             "size_k_guidance": 1.0,
             "phase": "mid",
             "qty": 0.0,
-            "px": 57.62,
+            "px": 230.475,
             "notional": 0.0,
             "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy"
           },
           {
-            "symbol": "MSFT",
-            "cds": 0.428301,
-            "size_k": 0.4533586874999999,
+            "symbol": "RTX",
+            "cds": 0.414902,
+            "size_k": 0.42069862499999994,
             "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 0.664216,
-            "px": 511.11,
-            "notional": 339.49,
+            "qty": 1.789021,
+            "px": 175.895,
+            "notional": 314.68,
             "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
           },
           {
-            "symbol": "DKNG",
-            "cds": 0.416087,
-            "size_k": 0.4235870625,
+            "symbol": "ADBE",
+            "cds": 0.380761,
+            "size_k": 0.33747993750000005,
             "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 0.000127,
-            "px": 29.72,
-            "notional": 0.0,
+            "qty": 0.765404,
+            "px": 329.8,
+            "notional": 252.43,
             "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
           }
         ],
@@ -1272,44 +1136,44 @@
         {
           "symbol": "CIBR",
           "action": "BUY",
-          "px": 74.93,
+          "px": 74.74,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
-          "score": 0.643195,
-          "qty": 8.758181,
+          "score": 0.631049,
+          "qty": 8.780441,
           "notional": 656.25,
           "signals": {
-            "TS": 0.313015,
-            "NS": 0.643195,
-            "CDS": 0.445087,
+            "TS": 0.048478,
+            "NS": 0.631049,
+            "CDS": 0.281507,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 57.77261504237397,
-            "rsi14": 57.77261504237397,
-            "sma20": 76.32899999999998,
-            "ema_fast": 75.69516537416821,
-            "ema_slow": 75.96950907724467,
-            "macd_hist": -0.008593219647490127,
-            "macd_hist_prev": -0.026302064254777036,
-            "ema50_5m": 74.760509443424,
-            "ema200_5m": 75.1500636503271
+            "rsi": 48.48349742714564,
+            "rsi14": 48.48349742714564,
+            "sma20": 76.31949999999998,
+            "ema_fast": 75.66593460493745,
+            "ema_slow": 75.95543500317059,
+            "macd_hist": -0.0159774996571477,
+            "macd_hist_prev": -0.019327475757132728,
+            "ema50_5m": 74.76612984065311,
+            "ema200_5m": 75.12202292219924
           },
           "guidance": {
-            "sma20": 76.329,
-            "buy_on_dip_below": 75.5657,
-            "trim_above": 82.4353
+            "sma20": 76.3195,
+            "buy_on_dip_below": 75.5563,
+            "trim_above": 82.4251
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 0.26249999999999996,
-          "qty_prev": 33.3645,
+          "qty_prev": 33.4493,
           "news_preview": [
             {
               "ts": "2025-11-17T12:37:12+00:00",
               "source": "benzinga",
-              "tone": 0.8611855694775901,
+              "tone": 0.8451043197383475,
               "headline": "Nokia Secures Multi-Year Pact To Power Telecom Italia's 5G Expansion"
             },
             {
@@ -1329,56 +1193,56 @@
         {
           "symbol": "BIIB",
           "action": "BUY",
-          "px": 166.675,
+          "px": 167.18,
           "qty_hint": 0.0,
-          "reason": "score>buy|guidance:above_dip_level|ema:below_ema50_reduce_buy",
-          "score": 0.631573,
-          "qty": 1.653673,
-          "notional": 275.63,
+          "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok",
+          "score": 0.6173,
+          "qty": 1.099112,
+          "notional": 183.75,
           "signals": {
-            "TS": -0.197831,
-            "NS": 0.631573,
-            "CDS": 0.133931,
+            "TS": 0.367374,
+            "NS": 0.6173,
+            "CDS": 0.467344,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 36.4679067992484,
-            "rsi14": 36.4679067992484,
-            "sma20": 154.42900000000003,
-            "ema_fast": 159.40236210458716,
-            "ema_slow": 154.48327764566545,
-            "macd_hist": -0.1846991893508484,
-            "macd_hist_prev": -0.14481978133188586,
-            "ema50_5m": 167.56252018816681,
-            "ema200_5m": 164.94906283783345
+            "rsi": 51.7581054567085,
+            "rsi14": 51.7581054567085,
+            "sma20": 154.45425,
+            "ema_fast": 159.48005441227946,
+            "ema_slow": 154.52068505307287,
+            "macd_hist": -0.0242723882387762,
+            "macd_hist_prev": -0.16068856138355486,
+            "ema50_5m": 167.04586213756414,
+            "ema200_5m": 164.96178983638367
           },
           "guidance": {
-            "sma20": 154.429,
-            "buy_on_dip_below": 152.8847,
-            "trim_above": 166.7833
+            "sma20": 154.4543,
+            "buy_on_dip_below": 152.9097,
+            "trim_above": 166.8106
           },
           "phase": "mid",
-          "size_k_guidance": 0.7,
-          "size_k": 0.11024999999999997,
-          "qty_prev": 14.9993,
+          "size_k_guidance": 0.27999999999999997,
+          "size_k": 0.07349999999999998,
+          "qty_prev": 14.9539,
           "news_preview": [
             {
               "ts": "2025-11-17T12:38:39+00:00",
               "source": "benzinga",
-              "tone": 0.8616478661658796,
+              "tone": 0.845567525150858,
               "headline": "Biogen And Stoke Therapeutics Highlight Urgent Need For New Medicines Targeting Underlying Genetic Cause Of Dravet Syndrome To Improve Long Term Outcomes"
             },
             {
               "ts": "2025-11-17T12:30:00+00:00",
               "source": "yahoo",
-              "tone": 0.9545153431587892,
+              "tone": 0.936701879630001,
               "headline": "Stoke Therapeutics and Biogen Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             },
             {
               "ts": "2025-11-17T12:30:00+00:00",
               "source": "yahoo",
-              "tone": 0.9545153407890723,
+              "tone": 0.9367018770388928,
               "headline": "Biogen and Stoke Therapeutics Announce Publication of Two-Year Natural History Data Demonstrating the Severity of Dravet Syndrome, Including Frequent Seizures and Significant Cognitive and Behavioral Impairments"
             }
           ]
@@ -1386,44 +1250,44 @@
         {
           "symbol": "XLY",
           "action": "BUY",
-          "px": 230.48,
+          "px": 230.475,
           "qty_hint": 0.0,
           "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy",
-          "score": 0.617652,
+          "score": 0.606453,
           "qty": 0.0,
           "notional": 0.0,
           "signals": {
-            "TS": -0.172485,
-            "NS": 0.617652,
-            "CDS": 0.14357,
+            "TS": 0.334608,
+            "NS": 0.606453,
+            "CDS": 0.443346,
             "wT": 0.6,
             "wN": 0.4
           },
           "indicators": {
-            "rsi": 29.31725649372885,
-            "rsi14": 29.31725649372885,
-            "sma20": 237.5002500000001,
-            "ema_fast": 235.41887882921998,
-            "ema_slow": 236.38851144501004,
-            "macd_hist": -0.10135047721647522,
-            "macd_hist_prev": -0.09978121117334932,
-            "ema50_5m": 231.54542754091324,
-            "ema200_5m": 233.37459327378716
+            "rsi": 43.22835878565763,
+            "rsi14": 43.22835878565763,
+            "sma20": 237.50000000000014,
+            "ema_fast": 235.41810959845077,
+            "ema_slow": 236.38814107463966,
+            "macd_hist": 0.0016004022623964387,
+            "macd_hist_prev": -0.013583174690411537,
+            "ema50_5m": 231.1858922345506,
+            "ema200_5m": 233.0812198947223
           },
           "guidance": {
-            "sma20": 237.5003,
-            "buy_on_dip_below": 235.1252,
-            "trim_above": 256.5003
+            "sma20": 237.5,
+            "buy_on_dip_below": 235.125,
+            "trim_above": 256.5
           },
           "phase": "mid",
           "size_k_guidance": 1.0,
           "size_k": 0.0,
-          "qty_prev": 10.8469,
+          "qty_prev": 10.8472,
           "news_preview": [
             {
               "ts": "2025-11-17T09:26:00+00:00",
               "source": "seekingalpha",
-              "tone": 0.6625982308908008,
+              "tone": 0.6500885528359513,
               "headline": "Either It's A Pit Stop Or A Full Sector Rotation Is Underway"
             },
             {
@@ -1435,45 +1299,45 @@
             {
               "ts": "2025-11-14T13:10:11+00:00",
               "source": "benzinga",
-              "tone": -0.0796058737067026,
+              "tone": -0.05467205538844027,
               "headline": "Leading And Lagging Sectors For November 14, 2025"
             }
           ]
         }
       ],
-      "cash_left": 16568.12,
+      "cash_left": 16660.0,
       "debug": {
         "buy_sizing": [
           {
             "symbol": "CIBR",
-            "cds": 0.445087,
+            "cds": 0.281507,
             "size_k": 0.26249999999999996,
             "size_k_guidance": 1.0,
             "phase": "mid",
-            "qty": 8.758181,
-            "px": 74.93,
+            "qty": 8.780441,
+            "px": 74.74,
             "notional": 656.25,
             "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
           },
           {
             "symbol": "BIIB",
-            "cds": 0.133931,
-            "size_k": 0.11024999999999997,
-            "size_k_guidance": 0.7,
+            "cds": 0.467344,
+            "size_k": 0.07349999999999998,
+            "size_k_guidance": 0.27999999999999997,
             "phase": "mid",
-            "qty": 1.653673,
-            "px": 166.675,
-            "notional": 275.63,
-            "reason": "score>buy|guidance:above_dip_level|ema:below_ema50_reduce_buy"
+            "qty": 1.099112,
+            "px": 167.18,
+            "notional": 183.75,
+            "reason": "score>buy|guidance:above_dip_level|near_or_above_trim_zone|ema:ema_ok"
           },
           {
             "symbol": "XLY",
-            "cds": 0.14357,
+            "cds": 0.443346,
             "size_k": 0.0,
             "size_k_guidance": 1.0,
             "phase": "mid",
             "qty": 0.0,
-            "px": 230.48,
+            "px": 230.475,
             "notional": 0.0,
             "reason": "score>buy|guidance:guidance_ok|ema:below_ema200_block_buy"
           }
