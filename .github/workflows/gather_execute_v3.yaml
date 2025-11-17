@@ -13,7 +13,10 @@ on:
         default: "false"
   schedule:
 
-    - cron: "30 20 * * 1-5"
+  - cron: "30 14 * * 1-5"  # 8:30 AM Mon–Fri (CT, assuming UTC-6)
+  - cron: "0 18 * * 1-5"   # 12:00 PM Mon–Fri
+  - cron: "40 20 * * 1-5"  # 2:40 PM Mon–Fri
+
 
 permissions:
   contents: write
