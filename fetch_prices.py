@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
-fetch_prices.py — robust daily price + indicators fetcher for Alpaca
---------------------------------------------------------------------
+fetch_prices.py — robust daily + intraday price + indicators fetcher for Alpaca
+-------------------------------------------------------------------------------
 - Reads tickers from data/symbols.txt (one per line, '#' for comments).
-- Fetches up to N days of 1Day bars from Alpaca (v2).
-- Computes indicators (EMA12/26, MACD, MACD signal/hist, RSI14, SMA20).
+- Fetches up to N days of 1Day bars from Alpaca (v2) for daily indicators.
+- Fetches intraday bars (default 5Min) for higher-resolution indicators.
+- Computes indicators:
+    Daily:   EMA12/26, MACD, MACD signal/hist, RSI14, SMA20
+    Intraday: EMA50, EMA200, MACD, MACD signal/hist, MACD hist prev, RSI14
 - Optionally loads sectors from data/sectors.json if present.
 - Writes a feed file at data/prices.json in the format expected by publish_feed.py.
 
@@ -13,16 +16,21 @@ Env (required):
 - ALPACA_SECRET_KEY
 
 Env (optional):
-- ALPACA_DATA_FEED     : default "iex"  (use "sip" only if your sub supports it)
-- SYMBOLS_PATH         : default "data/symbols.txt"
-- SECTORS_PATH         : default "data/sectors.json"
-- OUTPUT_PATH          : default "data/prices.json"
-- DAYS_BACK            : default "200"
-- MAX_SYMBOLS          : default "0"  (0 = unlimited; >0 = soft cap before fetch)
-- SYMBOLS_BATCH        : default "75" (placeholder for future multi-symbol endpoints)
-- REQUEST_TIMEOUT_SEC  : default "15"
-- REQUEST_SLEEP_SEC    : default "0.25"
-- COVERAGE_STRICT      : default "1"  (fail if any requested symbols are missing)
+- ALPACA_DATA_FEED        : default "iex"  (use "sip" only if your sub supports it)
+- SYMBOLS_PATH            : default "data/symbols.txt"
+- SECTORS_PATH            : default "data/sectors.json"
+- OUTPUT_PATH             : default "data/prices.json"
+- DAYS_BACK               : default "200"     (daily indicators window)
+- MAX_SYMBOLS             : default "0"       (0 = unlimited; >0 = soft cap before fetch)
+- SYMBOLS_BATCH           : default "75"      (placeholder for future multi-symbol endpoints)
+- REQUEST_TIMEOUT_SEC     : default "15"
+- REQUEST_SLEEP_SEC       : default "0.25"
+- COVERAGE_STRICT         : default "1"       (fail if any requested symbols are missing)
+
+Intraday (optional):
+- INTRADAY_TIMEFRAME      : default "5Min"
+- INTRADAY_DAYS_BACK      : default "10"      (how many calendar days of intraday to request)
+- INTRADAY_BARS_MAX       : default "500"     (cap bars_5m list length per symbol in output)
 
 Notes:
 - If ALPACA_DATA_FEED="sip" causes a 403, we automatically retry with "iex".
@@ -52,6 +60,11 @@ SYMBOLS_BATCH     = int(os.getenv("SYMBOLS_BATCH", "75"))         # future use (
 REQUEST_TIMEOUT   = int(os.getenv("REQUEST_TIMEOUT_SEC", "15"))
 REQUEST_SLEEP     = float(os.getenv("REQUEST_SLEEP_SEC", "0.25"))
 COVERAGE_STRICT   = (os.getenv("COVERAGE_STRICT", "1") == "1")
+
+# Intraday config
+INTRADAY_TIMEFRAME   = os.getenv("INTRADAY_TIMEFRAME", "5Min").strip()
+INTRADAY_DAYS_BACK   = int(os.getenv("INTRADAY_DAYS_BACK", "10"))
+INTRADAY_BARS_MAX    = int(os.getenv("INTRADAY_BARS_MAX", "500"))
 
 API_URL_BASE = "https://data.alpaca.markets/v2/stocks"
 
@@ -155,10 +168,19 @@ def macd(values: List[float], fast: int = 12, slow: int = 26, signal: int = 9):
         return [], [], []
     ema_fast = ema(values, fast)
     ema_slow = ema(values, slow)
-    macd_line = [ (f - s) for f, s in zip(ema_fast, ema_slow) ]
+    macd_line = [(f - s) for f, s in zip(ema_fast, ema_slow)]
     signal_line = ema(macd_line, signal)
-    hist = [ (m - s) for m, s in zip(macd_line, signal_line) ]
+    hist = [(m - s) for m, s in zip(macd_line, signal_line)]
     return macd_line, signal_line, hist
+
+def last_valid(arr: List[Any]) -> float | None:
+    for v in reversed(arr):
+        if v is None:
+            continue
+        if isinstance(v, float) and (math.isnan(v) or math.isinf(v)):
+            continue
+        return float(v)
+    return None
 
 # =========================
 # Fetching
@@ -189,7 +211,32 @@ def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
     r.raise_for_status()
     return r.json()
 
+def fetch_intraday_bars(symbol: str, feed: str) -> Dict[str, Any]:
+    """Fetch intraday history (e.g., 5Min) for one symbol."""
+    # We only need enough history to compute EMA200 on this timeframe.
+    # A few calendar days is sufficient (INTRADAY_DAYS_BACK is tunable).
+    now_utc = datetime.now(timezone.utc)
+    start_utc = now_utc - timedelta(days=INTRADAY_DAYS_BACK)
+    start_iso = start_utc.replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+    url = f"{API_URL_BASE}/{symbol}/bars"
+    params = {
+        "timeframe": INTRADAY_TIMEFRAME,
+        "start": start_iso,
+        "limit": 5000,  # safe upper limit; Alpaca will cap if needed
+        "adjustment": "raw",
+        "feed": feed,
+    }
+
+    r = requests.get(url, headers=HEADERS, params=params, timeout=REQUEST_TIMEOUT)
+    if r.status_code == 403 and feed == "sip":
+        print(f"[WARN] {symbol} (intraday): 403 on SIP — retrying with IEX")
+        return fetch_intraday_bars(symbol, "iex")
+    r.raise_for_status()
+    return r.json()
+
 def compute_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]:
+    """Daily indicators"""
     closes = [b.get("c") for b in bars if b.get("c") is not None]
     if not closes:
         return {}
@@ -199,12 +246,6 @@ def compute_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]
     macd_line, macd_signal, macd_hist = macd(closes, 12, 26, 9)
     rsi14_series = rsi(closes, 14)
 
-    def last_valid(arr):
-        for v in reversed(arr):
-            if v is not None and not (isinstance(v, float) and (math.isnan(v) or math.isinf(v))):
-                return float(v)
-        return None
-
     return {
         "sma20": last_valid(sma20_series),
         "ema12": last_valid(ema12_series),
@@ -213,6 +254,48 @@ def compute_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]
         "macd_signal": last_valid(macd_signal),
         "macd_hist": last_valid(macd_hist),
         "rsi14": last_valid(rsi14_series),
+    }
+
+def compute_intraday_indicators_from_bars(bars: List[Dict[str, Any]]) -> Dict[str, float]:
+    """Intraday indicators (e.g., 5Min EMA50/200, MACD, RSI, MACD hist prev)."""
+    closes = [b.get("c") for b in bars if b.get("c") is not None]
+    if not closes:
+        return {}
+
+    ema50_series = ema(closes, 50)
+    ema200_series = ema(closes, 200)
+    macd_line, macd_signal, macd_hist = macd(closes, 12, 26, 9)
+    rsi14_series = rsi(closes, 14)
+
+    ema50_last = last_valid(ema50_series)
+    ema200_last = last_valid(ema200_series)
+    macd_last = last_valid(macd_line)
+    macd_signal_last = last_valid(macd_signal)
+    macd_hist_last = last_valid(macd_hist)
+
+    # Find previous valid MACD hist value for slope/phase
+    macd_hist_prev = None
+    seen_last = False
+    for v in reversed(macd_hist):
+        if v is None or (isinstance(v, float) and (math.isnan(v) or math.isinf(v))):
+            continue
+        if not seen_last:
+            # first valid from the end is "last"
+            seen_last = True
+            continue
+        macd_hist_prev = float(v)
+        break
+
+    rsi14_last = last_valid(rsi14_series)
+
+    return {
+        "ema50_5m": ema50_last,
+        "ema200_5m": ema200_last,
+        "macd_5m": macd_last,
+        "macd_signal_5m": macd_signal_last,
+        "macd_hist_5m": macd_hist_last,
+        "macd_hist_prev_5m": macd_hist_prev,
+        "rsi14_5m": rsi14_last,
     }
 
 def fetch_latest_quote(symbol: str) -> dict:
@@ -253,6 +336,10 @@ def main():
         "as_of_utc": now_utc_iso(),
         "timeframe": "1Day",
         "indicators_window": DAYS_BACK,
+        "intraday": {
+            "timeframe": INTRADAY_TIMEFRAME,
+            "days_back": INTRADAY_DAYS_BACK,
+        },
         "symbols": {}
     }
 
@@ -263,10 +350,13 @@ def main():
     # (Per-symbol fetch; SYMBOLS_BATCH kept for future multi-symbol endpoints)
     for i, sym in enumerate(symbols, 1):
         try:
+            # -----------------------
+            # Daily bars + indicators
+            # -----------------------
             resp = fetch_bars(sym, DATA_FEED)
             bars = resp.get("bars", [])
             if not bars:
-                print(f"[WARN] {sym}: no bars returned")
+                print(f"[WARN] {sym}: no daily bars returned")
                 missing_no_bars.append(sym)
                 time.sleep(REQUEST_SLEEP)
                 continue
@@ -283,24 +373,64 @@ def main():
                 })
 
             last = normalized_bars[-1]
-            indicators = compute_indicators_from_bars(normalized_bars)
+            indicators_daily = compute_indicators_from_bars(normalized_bars)
 
             price = last.get("c")
             if price in (None, 0, 0.0):
                 zero_priced.append(sym)
 
-            feed_root["symbols"][sym] = {
+            symbol_payload: Dict[str, Any] = {
                 "symbol": sym,
                 "price": price,
                 "ts": last.get("t"),
-                "bars": normalized_bars[-200:],
+                "bars": normalized_bars[-200:],  # keep up to 200 daily bars
                 "sector": sectors.get(sym, ""),
-                "indicators": indicators,
-                "news": []
+                "indicators": indicators_daily,
+                "news": [],
             }
 
-            print(f"[OK] {i:>3}/{len(symbols)} {sym}: {len(normalized_bars)} bars, "
-                  f"RSI={indicators.get('rsi14')}, MACD_HIST={indicators.get('macd_hist')}")
+            # -----------------------
+            # Intraday bars + indicators (5Min by default)
+            # -----------------------
+            try:
+                intraday_resp = fetch_intraday_bars(sym, DATA_FEED)
+                intraday_bars = intraday_resp.get("bars", []) or []
+                if intraday_bars:
+                    normalized_5m = []
+                    for b in intraday_bars:
+                        normalized_5m.append({
+                            "t": b.get("t"),
+                            "o": b.get("o"),
+                            "h": b.get("h"),
+                            "l": b.get("l"),
+                            "c": b.get("c"),
+                            "v": b.get("v"),
+                        })
+                    # Cap length so feed doesn't explode
+                    if INTRADAY_BARS_MAX > 0:
+                        normalized_5m = normalized_5m[-INTRADAY_BARS_MAX:]
+
+                    intraday_indicators = compute_intraday_indicators_from_bars(normalized_5m)
+
+                    symbol_payload["bars_5m"] = normalized_5m
+                    symbol_payload["indicators_5m"] = intraday_indicators
+                else:
+                    print(f"[WARN] {sym}: no intraday bars returned ({INTRADAY_TIMEFRAME})")
+            except requests.HTTPError as http_err:
+                try:
+                    text = http_err.response.text
+                except Exception:
+                    text = ""
+                print(f"[WARN] {sym}: intraday HTTPError {http_err} {text[:200]}")
+            except Exception as e:
+                print(f"[WARN] {sym}: intraday fetch failed: {e}")
+
+            feed_root["symbols"][sym] = symbol_payload
+
+            rsi_dbg = indicators_daily.get("rsi14")
+            macd_dbg = indicators_daily.get("macd_hist")
+            print(f"[OK] {i:>3}/{len(symbols)} {sym}: {len(normalized_bars)} daily bars, "
+                  f"RSI={rsi_dbg}, MACD_HIST={macd_dbg}")
 
         except requests.HTTPError as http_err:
             try:
@@ -335,6 +465,8 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(feed_root, f, indent=2)
     print(f"[DONE] Wrote {len(feed_root['symbols'])} symbols to {OUTPUT_PATH}")
+    print(f"[INFO] Intraday timeframe: {INTRADAY_TIMEFRAME}, days_back={INTRADAY_DAYS_BACK}, "
+          f"bars_max={INTRADAY_BARS_MAX}")
 
 if __name__ == "__main__":
     main()
