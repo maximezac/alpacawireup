@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2025-11-17T15:27:01.530333+00:00",
+  "as_of_utc": "2025-11-17T15:35:01.491864+00:00",
   "portfolios": {
     "portfolio_max_personal": {
       "meta": {
@@ -120,7 +120,7 @@
           "action": "SELL",
           "px": 1.13,
           "qty_hint": 33.0,
-          "reason": "score<sell|guidance:mid_zone_partial_trim",
+          "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_below200_sell_ok",
           "score": -0.269359,
           "qty": 5.6,
           "notional": 6.33,
@@ -177,7 +177,7 @@
           "action": "SELL",
           "px": 118.6,
           "qty_hint": 4.0,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
           "score": -0.391505,
           "qty": 0.4,
           "notional": 47.44,
@@ -234,7 +234,7 @@
           "action": "SELL",
           "px": 44.98,
           "qty_hint": 6.27,
-          "reason": "score<sell|guidance:oversold_avoid_full_sell",
+          "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok",
           "score": -0.250379,
           "qty": 0.4,
           "notional": 17.99,
@@ -291,7 +291,7 @@
           "action": "SELL",
           "px": 132.71,
           "qty_hint": 7.0,
-          "reason": "score<sell|guidance:mid_zone_partial_trim",
+          "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_ok",
           "score": -0.281035,
           "qty": 0.7,
           "notional": 92.9,
@@ -357,7 +357,7 @@
             "qty": 5.6,
             "px": 1.13,
             "notional": 6.33,
-            "reason": "score<sell|guidance:mid_zone_partial_trim"
+            "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_below200_sell_ok"
           },
           {
             "symbol": "HOOD",
@@ -368,7 +368,7 @@
             "qty": 0.4,
             "px": 118.6,
             "notional": 47.44,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
           },
           {
             "symbol": "RKLB",
@@ -379,7 +379,7 @@
             "qty": 0.4,
             "px": 44.98,
             "notional": 17.99,
-            "reason": "score<sell|guidance:oversold_avoid_full_sell"
+            "reason": "score<sell|guidance:oversold_avoid_full_sell|ema:ema_below200_sell_ok"
           },
           {
             "symbol": "XOP",
@@ -390,7 +390,7 @@
             "qty": 0.7,
             "px": 132.71,
             "notional": 92.9,
-            "reason": "score<sell|guidance:mid_zone_partial_trim"
+            "reason": "score<sell|guidance:mid_zone_partial_trim|ema:ema_ok"
           }
         ]
       }

@@ -1,4 +1,4 @@
-# Trade plan as of 2025-11-17T15:27:01.530333+00:00
+# Trade plan as of 2025-11-17T15:35:01.491864+00:00
 
 ## Global Watchlist
 
@@ -39,15 +39,15 @@ Portfolio value ≈ $23,482 | Cash: $120.00 → $284.66
 
 - SELL 0.4 HOOD @ $118.60 (~$47.44)
   - CDS=-0.065 | TS=-0.392 | NS=0.424 | RSI=16.3 | SMA20=$135.11 | phase=mid | size_k=0.40 | guidance_k=0.40
-  - Why: RSI is oversold, so price may be washed-out short term. Price $118.60 is well below the 20-day SMA ($135.11), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
+  - Why: RSI is oversold, so price may be washed-out short term. Price $118.60 is well below the 20-day SMA ($135.11), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
 
 - SELL 0.4 RKLB @ $44.98 (~$17.99)
   - CDS=-0.111 | TS=-0.250 | NS=0.097 | RSI=29.1 | SMA20=$56.90 | phase=mid | size_k=0.40 | guidance_k=0.40
-  - Why: RSI is oversold, so price may be washed-out short term. Price $44.98 is well below the 20-day SMA ($56.90), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
+  - Why: RSI is oversold, so price may be washed-out short term. Price $44.98 is well below the 20-day SMA ($56.90), showing near-term pressure. Guidance marked this as oversold, so we only do a partial sell instead of a full exit. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~40% of the original plan.
 
 - SELL 5.6 CTM @ $1.13 (~$6.33)
   - CDS=-0.118 | TS=-0.269 | NS=0.109 | RSI=41.3 | SMA20=$1.11 | phase=mid | size_k=0.70 | guidance_k=0.70
-  - Why: Price is between dip and trim levels; treating this as a partial trim. Momentum phase: mid, in the body of the move. Final position size is scaled down to ~70% of the original plan.
+  - Why: Price is between dip and trim levels; treating this as a partial trim. Selling aligns with a broken 5m trend (price below EMA200). Momentum phase: mid, in the body of the move. Final position size is scaled down to ~70% of the original plan.
 
 ## Paper Aggressive (portfolio_paper_aggressive_trades)
 
