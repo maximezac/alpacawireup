@@ -1,8 +1,7 @@
 name: Gather Data (ideas only, no trades)
 
 on:
-  schedule:
-    - cron: "0 9 * * 1-5"
+  workflow_dispatch:
 
 permissions:
   contents: write
