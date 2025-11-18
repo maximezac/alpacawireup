@@ -1,17 +1,6 @@
 name: Gather Data (ideas only, no trades)
 
 on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "data/symbols.txt"
-      - "fetch_prices.py"
-      - "publish_feed.py"
-      - "fetch_news.py"
-      - "scripts/**"
-      - ".github/workflows/**"
-      - "requirements.txt"
-      - "artifacts/**"
   schedule:
     - cron: "0 9 * * 1-5"
 
