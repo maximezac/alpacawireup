@@ -2,7 +2,7 @@
 """
 scripts/fetch_news.py
 
-Reads INPUT_PATH (default data/prices.json), fetches recent news from:
+Reads INPUT_PATH (default data/prices.json), fetches recent or historical news from:
 - Alpaca v1beta1/news,
 - (optional) NewsAPI,
 - (optional) Finnhub,
@@ -18,12 +18,20 @@ Env (required):
 Env (optional):
 - INPUT_PATH:  default "data/prices.json"
 - OUTPUT_PATH: default same as INPUT_PATH
-- NEWS_LOOKBACK_DAYS: default "7"
-- NEWS_START_ISO: optional explicit ISO start (overrides lookback start if set)
-- NEWS_END_ISO:   optional explicit ISO end (defaults to now if not set)
-- NEWS_LIMIT_PER_SYMBOL: default "25"
-- NEWS_SOURCES: comma list to keep (e.g. "benzinga,mtnewswires,google_rss,finnhub,reddit")
-  * NOTE: Items include `source` (publisher token) and `via` (transport like "google_rss").
+
+Time window (pick ONE style):
+- NEWS_LOOKBACK_DAYS: default "7" (rolling window, used if nothing else set)
+- NEWS_BACKFILL: "1" to enable backfill window based on BACKFILL_START / BACKFILL_END
+    - BACKFILL_START: e.g. "2021-01-01"
+    - BACKFILL_END:   e.g. "2025-11-18"
+- NEWS_START_ISO: explicit ISO start datetime (overrides lookback if set)
+- NEWS_END_ISO:   explicit ISO end datetime   (defaults to now if not set)
+
+Other knobs:
+- NEWS_LIMIT_PER_SYMBOL: default "25"  (limit per source API call, e.g. Alpaca)
+- NEWS_MAX_ARTICLES_TOTAL: default "50" (cap kept stories per symbol in the final file)
+- NEWS_SOURCES: comma list to keep (e.g. "benzinga,mtnewswires,googlerss,finnhub,reddit")
+  * Items include `source` (publisher token) and `via` (transport like "google_rss").
     Filtering allows either to match.
 - NEWS_SOURCE_WEIGHTS_JSON: path to a JSON dict overriding source weights
 - USE_FINBERT: "1" to enable optional FinBERT fallback on low-confidence
@@ -57,6 +65,12 @@ OUTPUT_PATH   = os.environ.get("OUTPUT_PATH", INPUT_PATH)
 LOOKBACK_DAYS = int(os.environ.get("NEWS_LOOKBACK_DAYS", "7"))
 NEWS_LIMIT    = int(os.environ.get("NEWS_LIMIT_PER_SYMBOL", "25"))
 NEWS_SOURCES  = os.environ.get("NEWS_SOURCES", "").strip()
+
+# Backfill / volume knobs
+NEWS_MAX_ARTICLES_TOTAL = int(os.environ.get("NEWS_MAX_ARTICLES_TOTAL", "50"))
+NEWS_BACKFILL = os.environ.get("NEWS_BACKFILL", "0") == "1"
+BACKFILL_START = os.environ.get("BACKFILL_START")  # e.g. "2021-01-01"
+BACKFILL_END   = os.environ.get("BACKFILL_END")    # e.g. "2025-11-18"
 
 # Optional explicit time window (for backfill / replay)
 NEWS_START_ISO = os.environ.get("NEWS_START_ISO")
@@ -112,7 +126,7 @@ NEWS_SOURCE_WEIGHTS_DEFAULT = {
     "wsj": 0.98,
     "investorsbusinessdaily": 0.90,
 
-    # transports
+    # transports: neutral-ish carriers
     "googlerss": 0.70,
     "reddit": 0.35,
     "finnhub": 1.00,
@@ -298,11 +312,13 @@ def get_news_from_newsapi(symbol: str, api_key: str) -> list[dict]:
         })
     return out
 
-def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
-    # For now, still uses LOOKBACK_DAYS as before
-    now = datetime.utcnow().date()
-    start = (now - timedelta(days=LOOKBACK_DAYS)).isoformat()
-    end = now.isoformat()
+def get_news_from_finnhub(symbol: str, api_key: str, start_date, end_date) -> list[dict]:
+    """
+    Finnhub company news expects date range [from,to] as YYYY-MM-DD.
+    We align it with the same window used for Alpaca (start_date/end_date).
+    """
+    start = start_date.isoformat()
+    end   = end_date.isoformat()
     url = f"https://finnhub.io/api/v1/company-news?symbol={symbol}&from={start}&to={end}&token={api_key}"
     r = requests.get(url, timeout=15)
     if r.status_code != 200:
@@ -390,26 +406,47 @@ def main():
     with open(INPUT_PATH, "r", encoding="utf-8") as f:
         prices = json.load(f)
 
-    # Determine time window
-    if NEWS_START_ISO or NEWS_END_ISO:
-        # Explicit window mode (backfill / custom)
+    # Determine time window for all sources
+    # Priority:
+    # 1) NEWS_BACKFILL + BACKFILL_START/BACKFILL_END
+    # 2) Explicit NEWS_START_ISO / NEWS_END_ISO
+    # 3) Rolling LOOKBACK_DAYS window from now
+    if NEWS_BACKFILL and BACKFILL_START and BACKFILL_END:
+        try:
+            start_dt = datetime.fromisoformat(BACKFILL_START)
+            end_dt   = datetime.fromisoformat(BACKFILL_END)
+            if start_dt.tzinfo is None:
+                start_dt = start_dt.replace(tzinfo=timezone.utc)
+            if end_dt.tzinfo is None:
+                end_dt = end_dt.replace(tzinfo=timezone.utc)
+        except Exception as e:
+            print(f"[WARN] invalid BACKFILL_START/BACKFILL_END, falling back to LOOKBACK_DAYS: {e}", file=sys.stderr)
+            now = datetime.now(timezone.utc)
+            start_dt = now - timedelta(days=LOOKBACK_DAYS)
+            end_dt   = now
+        mode = "backfill"
+    elif NEWS_START_ISO or NEWS_END_ISO:
         end_dt = _parse_iso_dt(NEWS_END_ISO) or datetime.now(timezone.utc)
         if NEWS_START_ISO:
             start_dt = _parse_iso_dt(NEWS_START_ISO)
         else:
             start_dt = end_dt - timedelta(days=LOOKBACK_DAYS)
-        start = start_dt
-        end = end_dt
+        if start_dt is None:
+            start_dt = end_dt - timedelta(days=LOOKBACK_DAYS)
+        mode = "explicit"
     else:
-        # Default: last LOOKBACK_DAYS from "now"
         now = datetime.now(timezone.utc)
-        start = now - timedelta(days=LOOKBACK_DAYS)
-        end = now
+        start_dt = now - timedelta(days=LOOKBACK_DAYS)
+        end_dt   = now
+        mode = "rolling"
 
+    start = start_dt
+    end   = end_dt
     start_iso = start.isoformat()
     end_iso   = end.isoformat()
 
-    print(f"[INFO] Fetching news window {start_iso} → {end_iso} (LOOKBACK_DAYS={LOOKBACK_DAYS})")
+    print(f"[INFO] Fetching news window {start_iso} → {end_iso} "
+          f"(mode={mode}, LOOKBACK_DAYS={LOOKBACK_DAYS})")
 
     symbols = prices.get("symbols", {})
     if not symbols:
@@ -436,7 +473,7 @@ def main():
             if NEWSAPI_KEY:
                 bucket += get_news_from_newsapi(sym, NEWSAPI_KEY)
             if FINNHUB_KEY:
-                bucket += get_news_from_finnhub(sym, FINNHUB_KEY)
+                bucket += get_news_from_finnhub(sym, FINNHUB_KEY, start.date(), end.date())
             if (not source_filter) or ("googlerss" in source_filter) or ("google_rss" in [s.replace("_","") for s in source_filter]):
                 bucket += get_news_from_google(sym)
             if (not source_filter) or ("reddit" in source_filter):
@@ -483,8 +520,8 @@ def main():
 
             deduped.sort(key=lambda x: _safe_parse(x.get("ts") or ""), reverse=True)
 
-            MAX_ARTICLES_TOTAL = 50
-            news_items = deduped[:MAX_ARTICLES_TOTAL]
+            # Cap per-symbol by configured max
+            news_items = deduped[:NEWS_MAX_ARTICLES_TOTAL]
 
             kept_total += len(news_items)
             print(f"   [•] {sym}: kept {len(news_items)} (raw={len(bucket)})")
