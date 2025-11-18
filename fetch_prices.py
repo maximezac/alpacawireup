@@ -61,6 +61,8 @@ SYMBOLS_BATCH     = int(os.getenv("SYMBOLS_BATCH", "75"))         # future use (
 REQUEST_TIMEOUT   = int(os.getenv("REQUEST_TIMEOUT_SEC", "15"))
 REQUEST_SLEEP     = float(os.getenv("REQUEST_SLEEP_SEC", "0.25"))
 COVERAGE_STRICT   = (os.getenv("COVERAGE_STRICT", "1") == "1")
+DAILY_BARS_MAX   = int(os.getenv("DAILY_BARS_MAX", "200"))  # 0 = no cap
+
 
 # Intraday config
 INTRADAY_TIMEFRAME_RAW = os.getenv("INTRADAY_TIMEFRAME", "5Min").strip()
@@ -390,15 +392,22 @@ def main():
             if price in (None, 0, 0.0):
                 zero_priced.append(sym)
 
+            # Decide how many daily bars to store (we already limited indicator window to DAYS_BACK)
+            if DAILY_BARS_MAX > 0:
+                bars_to_store = normalized_bars[-DAILY_BARS_MAX:]
+            else:
+                bars_to_store = normalized_bars  # no cap
+            
             symbol_payload: Dict[str, Any] = {
                 "symbol": sym,
                 "price": price,
                 "ts": last.get("t"),
-                "bars": normalized_bars[-200:],  # keep up to 200 daily bars
+                "bars": bars_to_store,
                 "sector": sectors.get(sym, ""),
                 "indicators": indicators_daily,
                 "news": [],
-            }
+}
+
 
             # -----------------------
             # Intraday bars + indicators (5Min by default)
