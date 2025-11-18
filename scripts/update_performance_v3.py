@@ -12,10 +12,21 @@ from engine import (
     read_positions_csv, write_positions_csv
 )
 
-# -------- Config / paths (v3 defaults) --------
+# -------- Global mode switches --------
+BACKTEST_MODE = os.getenv("BACKTEST_MODE", "0") == "1"
+EXPERIMENT_ID = os.getenv("EXPERIMENT_ID", "baseline_v1")
+SNAPSHOT_AS_OF = os.getenv("SNAPSHOT_AS_OF")  # e.g. "2023-06-15" for backtest step date
+
+# -------- Base config / paths (v3 defaults) --------
 PRICES_FINAL   = os.getenv("PRICES_FINAL", "data/prices_final.json")
 RECS_PATH      = os.getenv("TRADES_RECS", "artifacts/recommended_trades_v3.json")  # v3 trade plan
 LEDGER_PATH    = os.getenv("TRADES_LEDGER", "data/trades_ledger.csv")
+
+# Backtest overrides (optional)
+if BACKTEST_MODE:
+    PRICES_FINAL = os.getenv("BACKTEST_PRICES_FINAL", PRICES_FINAL)
+    RECS_PATH    = os.getenv("BACKTEST_TRADES_PATH", RECS_PATH)
+    LEDGER_PATH  = os.getenv("BACKTEST_TRADES_LEDGER", LEDGER_PATH)
 
 # Selection filters
 EXECUTE_SCOPE  = (os.getenv("EXECUTE_SCOPE", "paper") or "paper").lower()  # paper | real | both
@@ -28,18 +39,14 @@ LIQ_SC_BPS     = float(os.getenv("LIQ_IMPACT_BPS_SMALLCAP", "5"))
 SMALLCAPS      = set(s.strip().upper() for s in os.getenv("SMALLCAPS", "").split(",") if s.strip())
 
 # -------- Artifact controls (declutter by default) --------
-ARTIFACT_VERSIONED  = os.getenv("ARTIFACT_VERSIONED", "false").lower() == "true"
-ARTIFACT_RETENTION  = int(os.getenv("ARTIFACT_RETENTION", "3"))  # keep last N snapshots when versioning is on
-
 APPLY_TRADES = os.getenv("APPLY_TRADES", "1").strip() == "1"
 DISABLE_VERSIONED = os.getenv("V3_DISABLE_VERSIONED_ARTIFACTS", "0").strip() == "1"
 
-# Prefer a single switch
-ARTIFACT_VERSIONED = (os.getenv("ARTIFACT_VERSIONED", "false").lower() == "true")
-DISABLE_VERSIONED  = (os.getenv("V3_DISABLE_VERSIONED_ARTIFACTS", "0").strip() == "1")
-VERSIONING_ENABLED = ARTIFACT_VERSIONED and not DISABLE_VERSIONED
+ARTIFACT_VERSIONED   = (os.getenv("ARTIFACT_VERSIONED", "false").lower() == "true")
+DISABLE_VERSIONED    = (os.getenv("V3_DISABLE_VERSIONED_ARTIFACTS", "0").strip() == "1")
+VERSIONING_ENABLED   = ARTIFACT_VERSIONED and not DISABLE_VERSIONED
 
-
+# -------- Time helpers --------
 def _utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -47,6 +54,7 @@ def _utc_stamp() -> str:
     # e.g., 20251107_203755.325986Z0000
     return datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S.%fZ0000")
 
+# -------- Artifact helpers --------
 def write_artifact(base_dir: Path, stem: str, obj: dict) -> None:
     """
     Always write rolling file <stem>.json into base_dir.
@@ -59,16 +67,15 @@ def write_artifact(base_dir: Path, stem: str, obj: dict) -> None:
     rolling = base_dir / f"{stem}.json"
     write_json(str(rolling), obj)
 
-    if not ARTIFACT_VERSIONED:
+    if not VERSIONING_ENABLED:
         return
 
-    # Versioned snapshot into hidden subfolder
+    ARTIFACT_RETENTION = int(os.getenv("ARTIFACT_RETENTION", "3"))
     hist_dir = base_dir / ".history"
     hist_dir.mkdir(parents=True, exist_ok=True)
     snap = hist_dir / f"{stem}_{_utc_stamp()}.json"
     write_json(str(snap), obj)
 
-    # Prune old snapshots
     snaps = sorted(hist_dir.glob(f"{stem}_*.json"))
     if ARTIFACT_RETENTION >= 0 and len(snaps) > ARTIFACT_RETENTION:
         for old in snaps[:-ARTIFACT_RETENTION]:
@@ -94,7 +101,7 @@ def latest_px(node: dict) -> float:
         v = (node.get("now") or {}).get("price")  # legacy fallback
     try:
         return float(v or 0.0)
-    except:
+    except Exception:
         return 0.0
 
 def exec_price(mark_px: float, bps: float, side: str) -> float:
@@ -127,7 +134,7 @@ def load_last_applied(path: str | Path) -> str | None:
     if p.exists():
         try:
             return (json.loads(p.read_text()) or {}).get("last_as_of_utc")
-        except:
+        except Exception:
             return None
     return None
 
@@ -165,12 +172,17 @@ def write_portfolio_value(folder: Path, snap: dict) -> None:
     if safe_asof:
         write_json(str(folder / f"portfolio_value_{safe_asof}.json"), snap)
 
-def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, trades: list) -> None:
+def write_applied_trades(folder: Path, portfolio_id: str, prices: dict, payload: dict) -> None:
+    """
+    payload should contain pre/post snapshots + trades list.
+    """
     asof = (prices or {}).get("as_of_utc", "")
-    obj = {"as_of_utc": asof, "portfolio_id": portfolio_id, "trades": trades}
+    obj = {"as_of_utc": asof, "portfolio_id": portfolio_id}
+    obj.update(payload)
     write_json(str(folder / "trades_applied.json"), obj)
     if not VERSIONING_ENABLED:
         return
+    # You could add versioned trades_applied here in future if desired.
 
 def ensure_portfolio_ledger(folder: Path) -> Path:
     """Create per-portfolio ledger with header if missing."""
@@ -189,6 +201,8 @@ def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path
         "positions_path": str(positions_csv),
         "cash": round(cash, 2),
         "run_id": os.getenv("GITHUB_RUN_ID", ""),
+        "backtest_mode": BACKTEST_MODE,
+        "experiment_id": EXPERIMENT_ID if BACKTEST_MODE else "",
     }
     if snap:
         base.update({
@@ -199,6 +213,12 @@ def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path
     write_artifact(folder, "last_execution_summary", base)
 
 def write_last_applied(path: str | Path, asof: str):
+    """
+    Only used in live mode to avoid re-applying the same snapshot.
+    In BACKTEST_MODE we deliberately do NOT write this.
+    """
+    if BACKTEST_MODE:
+        return
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps({"last_as_of_utc": asof}, indent=2))
@@ -215,7 +235,20 @@ def mark_to_market(cash: float, pos: Dict[str, dict], prices: Dict[str, Any]) ->
     equity = cash + mv
     return equity, mv
 
-def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[str, dict], prices: Dict[str, Any]) -> None:
+def append_history_row(
+    folder: Path,
+    portfolio_id: str,
+    cash: float,
+    pos: Dict[str, dict],
+    prices: Dict[str, Any],
+    date_override: str | None = None,
+) -> None:
+    """
+    Writes/updates a history row for (date, portfolio).
+
+    In live mode: date defaults to today's date.
+    In BACKTEST_MODE: pass SNAPSHOT_AS_OF so history date = simulated trade date.
+    """
     folder.mkdir(parents=True, exist_ok=True)
     hist_path = folder / "history.csv"
     header = [
@@ -233,16 +266,17 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
 
     col = {h: i for i, h in enumerate(rows[0])}
 
+    equity, mv = mark_to_market(cash, pos, prices)
+
     # previous equity for this portfolio
     prev_equity = None
     for r in rows[1:]:
         try:
             if r[col["portfolio"]] == portfolio_id:
                 prev_equity = float(r[col["equity"]])
-        except:
+        except Exception:
             pass
 
-    equity, mv = mark_to_market(cash, pos, prices)
     daily_pnl = (equity - prev_equity) if prev_equity is not None else 0.0
     daily_ret = (equity / prev_equity - 1.0) if (prev_equity is not None and prev_equity != 0) else 0.0
 
@@ -252,7 +286,7 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
         try:
             if r[col["portfolio"]] == portfolio_id:
                 first_equity = float(r[col["equity"]]); break
-        except:
+        except Exception:
             pass
     cum_ret = (equity / first_equity - 1.0) if (first_equity is not None and first_equity != 0) else 0.0
 
@@ -267,8 +301,11 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
     }
     signals_snap = {s: (syms.get(s) or {}).get("signals", {}) for s in sorted(pos.keys())}
 
+    # Use override date (backtest) or "today" (live)
+    row_date = date_override or datetime.now(timezone.utc).date().isoformat()
+
     row = [
-        datetime.now(timezone.utc).date().isoformat(),
+        row_date,
         os.getenv("GITHUB_RUN_ID", utc_now_iso()),
         portfolio_id,
         round(cash, 2),
@@ -286,10 +323,9 @@ def append_history_row(folder: Path, portfolio_id: str, cash: float, pos: Dict[s
     if len(rows) == 1:
         rows.append(row)
     else:
-        today = row[0]
         replaced = False
         for i in range(1, len(rows)):
-            if rows[i][0] == today and rows[i][2] == portfolio_id:
+            if rows[i][0] == row_date and rows[i][2] == portfolio_id:
                 rows[i] = row
                 replaced = True
                 break
@@ -330,7 +366,7 @@ def apply_trades_to_portfolio(
         if t.get("px") is not None:
             try:
                 mark = float(t["px"])
-            except:
+            except Exception:
                 pass
 
         bps = choose_slippage_bps(scope, sym)
@@ -409,8 +445,16 @@ def apply_trades_to_portfolio(
     # Update summary with equity/mv
     write_execution_summary(folder, portfolio_id, positions_csv, cash, snap=post_snap)
 
+    # Persist positions & history
     write_positions_csv(str(positions_csv), cash, pos)
-    append_history_row(folder, portfolio_id, cash, pos, prices)
+    append_history_row(
+        folder,
+        portfolio_id,
+        cash,
+        pos,
+        prices,
+        date_override=SNAPSHOT_AS_OF if BACKTEST_MODE else None,
+    )
 
 def _scope_matches(exec_scope: str, port_scope: str) -> bool:
     exec_scope = exec_scope.lower()
@@ -446,10 +490,14 @@ def main():
         positions_csv = Path(positions_path)
         folder = positions_csv.parent
 
-                # idempotency per as_of_utc
-        last_applied = load_last_applied(folder / "last_applied.json")
+        # idempotency per as_of_utc (LIVE ONLY)
+        last_applied = None
+        if not BACKTEST_MODE:
+            last_applied = load_last_applied(folder / "last_applied.json")
+
         # Only skip if we're actually applying trades; gather runs should still proceed.
-        if APPLY_TRADES and last_applied == asof:
+        if not BACKTEST_MODE and APPLY_TRADES and last_applied == asof:
+            # already applied this snapshot to this portfolio in live mode
             continue
 
         # If positions file missing, don't block execution for this snapshot later.
@@ -458,17 +506,20 @@ def main():
             print(f"[skip] {pid}: positions file missing at {positions_csv}")
             continue
 
-        # ------------------------
-        # Build & possibly apply
-        # ------------------------
         trades = block.get("trades") or []
 
         if not trades:
             # No trades: still maintain history/snapshots.
             cash, pos = read_positions_csv(str(positions_csv))
-            append_history_row(folder, pid, cash, pos, prices)
-            # Mark last_applied ONLY when we truly applied trades (APPLY_TRADES==True).
-            if APPLY_TRADES:
+            append_history_row(
+                folder,
+                pid,
+                cash,
+                pos,
+                prices,
+                date_override=SNAPSHOT_AS_OF if BACKTEST_MODE else None,
+            )
+            if APPLY_TRADES and not BACKTEST_MODE:
                 write_last_applied(folder / "last_applied.json", asof)
             snap = portfolio_snapshot(pid, cash, pos, prices)
             write_portfolio_value(folder, snap)
@@ -486,7 +537,8 @@ def main():
                 trades,
                 LEDGER_PATH
             )
-            write_last_applied(folder / "last_applied.json", asof)
+            if not BACKTEST_MODE:
+                write_last_applied(folder / "last_applied.json", asof)
             executed.append(pid)
         else:
             # DRY-RUN / GATHER: do NOT apply trades (no ledger/positions changes).
@@ -494,10 +546,17 @@ def main():
             snap = portfolio_snapshot(pid, cash, pos, prices)
             write_portfolio_value(folder, snap)
             write_execution_summary(folder, pid, positions_csv, cash, snap=snap)
-            append_history_row(folder, pid, cash, pos, prices) 
+            append_history_row(
+                folder,
+                pid,
+                cash,
+                pos,
+                prices,
+                date_override=SNAPSHOT_AS_OF if BACKTEST_MODE else None,
+            )
             # Intentionally NOT writing last_applied here.
 
-    print(f"[OK] update_performance_v3 complete. executed: {executed}")
+    print(f"[OK] update_performance_v3 complete. executed: {executed}, backtest_mode={BACKTEST_MODE}")
 
 if __name__ == "__main__":
     main()
