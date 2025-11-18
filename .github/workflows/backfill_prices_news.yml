@@ -15,12 +15,12 @@ env:
   BACKFILL_DAYS_BACK: "1500"       # ~6 yrs; your fetch_prices.py respects this as DAYS_BACK
 
   # News backfill knobs
-  WINDOW_DAYS: "7"                 # 7-day windows, sliding from BACKFILL_START → BACKFILL_END
+  WINDOW_DAYS: "30"                 # 7-day windows, sliding from BACKFILL_START → BACKFILL_END
   NEWS_MAX_ARTICLES_TOTAL: "0"     # 0 = no per-symbol cap (let fetch_news keep everything)
-  NEWS_LOOKBACK_DAYS: "7"          # for Finnhub / NewsAPI; matches window
+  NEWS_LOOKBACK_DAYS: "30"          # for Finnhub / NewsAPI; matches window
 
   # Symbols config
-  SYMBOLS_PATH: data/symbols.txt
+  SYMBOLS_PATH: data/symbols_backtest.txt
 
 jobs:
   backfill:
@@ -105,7 +105,7 @@ jobs:
           OUTPUT_PATH:  ${{ env.OUTPUT_BASE }}
           NEWS_LOOKBACK_DAYS: ${{ env.NEWS_LOOKBACK_DAYS }}
           NEWS_MAX_ARTICLES_TOTAL: ${{ env.NEWS_MAX_ARTICLES_TOTAL }}
-          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit,yahoo,marketbeat,seekingalpha"
+          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
           NEWS_BACKFILL: "1"
           BACKFILL_START: ${{ env.BACKFILL_START }}
           BACKFILL_END:   ${{ env.BACKFILL_END }}
@@ -114,6 +114,10 @@ jobs:
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
           FINNHUB_KEY:       ${{ secrets.FINNHUB_KEY }}
+          USE_FINBERT: "1"
+          FINBERT_TRIGGER: "0.20"
+          FINBERT_FRACTION: "0.30"
+
         run: |
           set -euo pipefail
 
