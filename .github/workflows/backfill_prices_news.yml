@@ -67,7 +67,7 @@ jobs:
           OUTPUT_PATH:       ${{ env.INPUT_BASE }}
           DAYS_BACK:         ${{ env.BACKFILL_DAYS_BACK }}
           # You can set MAX_SYMBOLS here to throttle if needed, e.g. "200"
-          # MAX_SYMBOLS:      "0"
+          MAX_SYMBOLS:      "2000"
           # Intraday knobs (optional; your fetch_prices handles these)
           INTRADAY_TIMEFRAME:   "5Min"
           INTRADAY_DAYS_BACK:   "180"
