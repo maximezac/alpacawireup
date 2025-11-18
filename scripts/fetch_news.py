@@ -19,6 +19,8 @@ Env (optional):
 - INPUT_PATH:  default "data/prices.json"
 - OUTPUT_PATH: default same as INPUT_PATH
 - NEWS_LOOKBACK_DAYS: default "7"
+- NEWS_START_ISO: optional explicit ISO start (overrides lookback start if set)
+- NEWS_END_ISO:   optional explicit ISO end (defaults to now if not set)
 - NEWS_LIMIT_PER_SYMBOL: default "25"
 - NEWS_SOURCES: comma list to keep (e.g. "benzinga,mtnewswires,google_rss,finnhub,reddit")
   * NOTE: Items include `source` (publisher token) and `via` (transport like "google_rss").
@@ -50,11 +52,15 @@ API_NEWS = "https://data.alpaca.markets/v1beta1/news"
 ALPACA_KEY_ID     = os.environ.get("ALPACA_KEY_ID")
 ALPACA_SECRET_KEY = os.environ.get("ALPACA_SECRET_KEY")
 
-INPUT_PATH   = os.environ.get("INPUT_PATH", "data/prices.json")
-OUTPUT_PATH  = os.environ.get("OUTPUT_PATH", INPUT_PATH)
+INPUT_PATH    = os.environ.get("INPUT_PATH", "data/prices.json")
+OUTPUT_PATH   = os.environ.get("OUTPUT_PATH", INPUT_PATH)
 LOOKBACK_DAYS = int(os.environ.get("NEWS_LOOKBACK_DAYS", "7"))
 NEWS_LIMIT    = int(os.environ.get("NEWS_LIMIT_PER_SYMBOL", "25"))
 NEWS_SOURCES  = os.environ.get("NEWS_SOURCES", "").strip()
+
+# Optional explicit time window (for backfill / replay)
+NEWS_START_ISO = os.environ.get("NEWS_START_ISO")
+NEWS_END_ISO   = os.environ.get("NEWS_END_ISO")
 
 USE_FINBERT       = os.environ.get("USE_FINBERT", "0") == "1"
 FINBERT_TRIGGER   = float(os.environ.get("FINBERT_TRIGGER", "0.30"))
@@ -106,11 +112,10 @@ NEWS_SOURCE_WEIGHTS_DEFAULT = {
     "wsj": 0.98,
     "investorsbusinessdaily": 0.90,
 
-    # transports: treat as neutral carriers; weight applies only if we
-    # couldn't identify a better publisher
+    # transports
     "googlerss": 0.70,
     "reddit": 0.35,
-    "finnhub": 1.00,   # API carrier, but content often from publishers
+    "finnhub": 1.00,
     "newsapi": 0.30,
 }
 
@@ -130,7 +135,6 @@ NEWS_SOURCE_WEIGHTS = load_source_weights()
 
 # ---------- VADER + domain fixes ----------
 analyzer = SentimentIntensityAnalyzer()
-# Extend lexicon with finance/efficiency cues
 analyzer.lexicon.update({
     "efficiency": 1.6, "time-to-market": 1.8, "latency": -0.5,
     "downtime": -1.8, "cost-cutting": 0.8, "costs": -0.2,
@@ -141,7 +145,6 @@ analyzer.lexicon.update({
     "merger": 0.6, "acquisition": 0.5, "acquire": 0.5,
     "raised guidance": 1.4, "lowered guidance": -1.4,
 })
-# Idioms (multiword)
 vs.SENTIMENT_LADEN_IDIOMS.update({
     "cut time": 2.2, "reduce latency": 2.2, "lower costs": 2.0,
     "from hours to seconds": 3.0, "from minutes to seconds": 2.6,
@@ -155,7 +158,6 @@ _SPEEDUP_RE = re.compile(
     re.I,
 )
 
-# Very small LM overlay
 LM_POS = {
     "accretive","advantage","benefit","boost","bullish","contract","efficiency",
     "exceed","growth","improve","innovation","lead","opportunity","profitable",
@@ -174,10 +176,8 @@ def lm_overlay_score(text: str) -> float:
     total = pos + neg
     if total == 0:
         return 0.0
-    # Map dominance to a small adjustment in [-0.25, +0.25]
     return max(-0.25, min(0.25, 0.25 * (pos - neg) / total))
 
-# Optional FinBERT
 _finbert = None
 def finbert_score(text: str) -> float:
     global _finbert
@@ -217,28 +217,23 @@ def score_tone(headline: str, summary: str, ts_iso: str | None, src_token: str, 
     comp = analyzer.polarity_scores(text).get("compound", 0.0)
     comp *= 1.5
 
-    # Efficiency/speedup floor if we detect "from X to Y"
     if _SPEEDUP_RE.search(text):
         comp = max(comp, 0.35)
 
-    # LM overlay
     comp += lm_overlay_score(text)
     comp = max(-1.0, min(1.0, comp))
 
-    # 2) time-decay (fresh news matters more). 48h time constant.
     dt = _parse_iso_dt(ts_iso)
     if dt is not None:
         age_hours = max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0)
         decay = math.exp(-age_hours / 48.0)
         comp *= decay
 
-    # Optional FinBERT on low-confidence
     if USE_FINBERT and abs(comp) < FINBERT_TRIGGER:
         fb = finbert_score(headline + " " + summary)
         comp = (1 - FINBERT_FRACTION) * comp + FINBERT_FRACTION * fb
         comp = max(-1.0, min(1.0, comp))
 
-    # Weight: prefer publisher `source`, fall back to `via`
     w = NEWS_SOURCE_WEIGHTS.get(src_token, NEWS_SOURCE_WEIGHTS.get(via_token or "", 1.0))
     return max(-1.0, min(1.0, comp * float(w)))
 
@@ -269,17 +264,17 @@ def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
         ts       = to_utc_iso(it.get("created_at") or it.get("updated_at") or it.get("published_at"))
         publisher_raw = it.get("source") or it.get("author") or "unknown"
         source   = norm_source(publisher_raw)
-        via      = None  # direct from Alpaca
+        via      = None
         url      = it.get("url") or it.get("link")
 
         out.append({
             "headline": headline,
             "summary": summary,
             "ts": ts,
-            "source": source,     # publisher token (normalized)
-            "via": via,           # None for direct
+            "source": source,
+            "via": via,
             "url": url,
-            "relevance": 1.0,     # you can tune later
+            "relevance": 1.0,
         })
     return out
 
@@ -296,7 +291,7 @@ def get_news_from_newsapi(symbol: str, api_key: str) -> list[dict]:
             "headline": a.get("title"),
             "summary":  a.get("description") or "",
             "ts": to_utc_iso(a.get("publishedAt")),
-            "source": publisher,   # publisher token if available
+            "source": publisher,
             "via": "newsapi",
             "url": a.get("url"),
             "relevance": 1.0,
@@ -304,6 +299,7 @@ def get_news_from_newsapi(symbol: str, api_key: str) -> list[dict]:
     return out
 
 def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
+    # For now, still uses LOOKBACK_DAYS as before
     now = datetime.utcnow().date()
     start = (now - timedelta(days=LOOKBACK_DAYS)).isoformat()
     end = now.isoformat()
@@ -314,7 +310,6 @@ def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
     items = r.json() or []
     out = []
     for it in items:
-        # Finnhub provides "source" as publisher sometimes
         publisher = norm_source(it.get("source") or "finnhub")
         out.append({
             "headline": it.get("headline"),
@@ -327,13 +322,10 @@ def get_news_from_finnhub(symbol: str, api_key: str) -> list[dict]:
         })
     return out
 
-# Google RSS: set source = publisher, via = "google_rss"
 _PUBLISHER_SPLIT_RE = re.compile(r"\s+-\s+")
 def _split_publisher_from_title(title: str) -> tuple[str, str | None]:
-    # "Headline - Publisher" -> ("Headline", "Publisher")
     parts = _PUBLISHER_SPLIT_RE.split(title.strip())
     if len(parts) >= 2:
-        # sometimes publisher has " – " variant; handled by regex
         headline = " - ".join(parts[:-1]).strip()
         publisher = parts[-1].strip()
         return headline, publisher
@@ -349,7 +341,6 @@ def get_news_from_google(symbol: str) -> list[dict]:
         headline, publisher = _split_publisher_from_title(title_raw)
         publisher_token = norm_source(publisher) if publisher else "googlerss"
 
-        # timestamp
         if getattr(entry, "published_parsed", None):
             ts = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc).isoformat()
         else:
@@ -359,7 +350,7 @@ def get_news_from_google(symbol: str) -> list[dict]:
             "headline": headline,
             "summary": getattr(entry, "summary", "") or "",
             "ts": ts,
-            "source": publisher_token,  # publisher, not "google"
+            "source": publisher_token,
             "via": "googlerss",
             "url": entry.link,
             "relevance": 1.0,
@@ -384,7 +375,7 @@ def get_news_from_reddit(symbol: str) -> list[dict]:
                 "headline": title,
                 "summary": body,
                 "ts": tiso,
-                "source": "reddit",     # publisher = reddit userland; keep as reddit
+                "source": "reddit",
                 "via": "reddit",
                 "url": f"https://reddit.com{d.get('permalink','')}",
                 "relevance": 0.8 if d.get("score", 0) > 50 else 0.4,
@@ -399,10 +390,26 @@ def main():
     with open(INPUT_PATH, "r", encoding="utf-8") as f:
         prices = json.load(f)
 
-    now = datetime.now(timezone.utc)
-    start = now - timedelta(days=LOOKBACK_DAYS)
+    # Determine time window
+    if NEWS_START_ISO or NEWS_END_ISO:
+        # Explicit window mode (backfill / custom)
+        end_dt = _parse_iso_dt(NEWS_END_ISO) or datetime.now(timezone.utc)
+        if NEWS_START_ISO:
+            start_dt = _parse_iso_dt(NEWS_START_ISO)
+        else:
+            start_dt = end_dt - timedelta(days=LOOKBACK_DAYS)
+        start = start_dt
+        end = end_dt
+    else:
+        # Default: last LOOKBACK_DAYS from "now"
+        now = datetime.now(timezone.utc)
+        start = now - timedelta(days=LOOKBACK_DAYS)
+        end = now
+
     start_iso = start.isoformat()
-    end_iso   = now.isoformat()
+    end_iso   = end.isoformat()
+
+    print(f"[INFO] Fetching news window {start_iso} → {end_iso} (LOOKBACK_DAYS={LOOKBACK_DAYS})")
 
     symbols = prices.get("symbols", {})
     if not symbols:
@@ -411,7 +418,6 @@ def main():
             json.dump(prices, f, indent=2)
         return
 
-    # Prepare source filter
     source_filter = []
     if NEWS_SOURCES:
         source_filter = [norm_source(s) for s in NEWS_SOURCES.split(",") if s.strip()]
@@ -431,8 +437,6 @@ def main():
                 bucket += get_news_from_newsapi(sym, NEWSAPI_KEY)
             if FINNHUB_KEY:
                 bucket += get_news_from_finnhub(sym, FINNHUB_KEY)
-            # These are controlled via NEWS_SOURCES presence (transport).
-            # If user included "google_rss" or "reddit", fetch them; else skip
             if (not source_filter) or ("googlerss" in source_filter) or ("google_rss" in [s.replace("_","") for s in source_filter]):
                 bucket += get_news_from_google(sym)
             if (not source_filter) or ("reddit" in source_filter):
@@ -454,7 +458,7 @@ def main():
             seen = set()
             deduped = []
             for a in bucket:
-                key = ( (a.get("headline","").strip().lower()), norm_source(a.get("source")) )
+                key = ((a.get("headline", "").strip().lower()), norm_source(a.get("source")))
                 if key in seen:
                     continue
                 seen.add(key)
@@ -464,7 +468,7 @@ def main():
             for a in deduped:
                 src = norm_source(a.get("source"))
                 via = norm_source(a.get("via"))
-                a["tone"] = score_tone(a.get("headline",""), a.get("summary",""), a.get("ts"), src, via)
+                a["tone"] = score_tone(a.get("headline", ""), a.get("summary", ""), a.get("ts"), src, via)
 
             # Sort newest first
             from dateutil import parser
@@ -479,7 +483,6 @@ def main():
 
             deduped.sort(key=lambda x: _safe_parse(x.get("ts") or ""), reverse=True)
 
-            # Cap
             MAX_ARTICLES_TOTAL = 50
             news_items = deduped[:MAX_ARTICLES_TOTAL]
 
