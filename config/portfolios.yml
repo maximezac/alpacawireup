@@ -41,8 +41,9 @@ portfolios:
   port_backfill_5each:
     title: "Backtest Portfolio"
     path: data/portfolios/port_backfill_5each
+    positions_csv: positions.csv
     trade_scope: paper
-    tags: [ideas, paper, "backtest"]
+    tags: [ideas, paper, backtest]
 
 
 
