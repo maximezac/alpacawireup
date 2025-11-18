@@ -1,0 +1,185 @@
+name: Backtest Strategy v3
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Backtest start date (YYYY-MM-DD)"
+        required: true
+        type: string
+      end_date:
+        description: "Backtest end date (YYYY-MM-DD)"
+        required: true
+        type: string
+      step_days:
+        description: "Step size in days between snapshots"
+        required: false
+        default: "5"
+        type: string
+      experiment_id:
+        description: "Experiment label (for summaries)"
+        required: false
+        default: "exp_v1"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+
+    env:
+      # Use the multi-year backfilled file for all backtests
+      BACKTEST_PRICES_FINAL: data/prices_backfill.json
+      PRICES_FINAL:          data/prices_backfill.json
+
+      # Where postprocess_v3 writes its recommended trades
+      TRADES_RECS:           artifacts/recommended_trades_v3.json
+      BACKTEST_TRADES_PATH:  artifacts/recommended_trades_v3.json
+
+      # Backtest-specific global ledger
+      TRADES_LEDGER:         data/trades_ledger_backtest.csv
+      BACKTEST_TRADES_LEDGER: data/trades_ledger_backtest.csv
+
+      # Engine configs (adjust to match your existing gather workflow)
+      CONFIG_PORTFOLIOS: config/portfolios_backtest.yml
+      CONFIG_STRATEGIES: config/strategies.yml
+      OUTPUT_DIR:        artifacts
+
+      # Only execute paper portfolios by default
+      EXECUTE_SCOPE: paper
+      EXECUTE_TAGS:  "backtest"       # e.g. "backtest" if you tag certain portfolios
+
+      # Enable trade application + versioned artifacts
+      APPLY_TRADES: "1"
+      ARTIFACT_VERSIONED: "true"
+      V3_DISABLE_VERSIONED_ARTIFACTS: "0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 \
+                      python-dateutil==2.9.0.post0 feedparser==6.0.11 \
+                      vaderSentiment==3.3.2 pyyaml==6.0.2
+          pip install -r requirements.txt || echo "requirements.txt already satisfied."
+
+      - name: Export PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> "$GITHUB_ENV"
+
+      # ------------------------------------------------------------------
+      # 1) Download the backfilled prices + news from previous workflow
+      #    (artifact name must match your Backfill workflow: "prices-backfill")
+      # ------------------------------------------------------------------
+      - name: Download backfilled prices artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: prices-backfill
+          path: data
+
+      - name: Sanity check backfill file
+        run: |
+          python - << 'PY'
+          import json, pathlib
+          p = pathlib.Path("data/prices_backfill.json")
+          print("Backfill exists:", p.exists(), "size MB:", p.stat().st_size / (1024*1024))
+          obj = json.loads(p.read_text())
+          print("as_of_utc:", obj.get("as_of_utc"))
+          syms = obj.get("symbols", {})
+          print("symbols:", len(syms))
+          samp = next(iter(syms.keys()), None)
+          if samp:
+              bars = syms[samp].get("bars", [])
+              news = syms[samp].get("news", [])
+              print("sample:", samp, "bars:", len(bars), "news:", len(news))
+          PY
+
+      # ------------------------------------------------------------------
+      # 2) Backtest loop: step from start_date → end_date
+      #    For each date:
+      #      - BACKTEST_MODE=1, SNAPSHOT_AS_OF=<date>
+      #      - postprocess_v3 builds trades for that date
+      #      - update_performance_v3 applies trades + appends to history
+      # ------------------------------------------------------------------
+      - name: Run backtest loop
+        env:
+          BACKTEST_MODE: "1"
+          EXPERIMENT_ID: ${{ inputs.experiment_id }}
+          EXECUTE_SCOPE: paper
+        run: |
+          set -euo pipefail
+
+          start="${{ inputs.start_date }}"
+          end="${{ inputs.end_date }}"
+          step="${{ inputs.step_days }}"
+
+          echo "[INFO] Backtest from $start → $end (step=$step days, experiment_id=${EXPERIMENT_ID})"
+
+          # helper: add days to a date
+          add_days() {
+            local date="$1"
+            local days="$2"
+            date -u -d "$date + $days day" +%F
+          }
+
+          # compare dates (1 if a>b, 0 otherwise)
+          date_gt() {
+            local a="$1"
+            local b="$2"
+            if [[ "$(date -u -d "$a" +%s)" -gt "$(date -u -d "$b" +%s)" ]]; then
+              return 0
+            else
+              return 1
+            fi
+          }
+
+          current="$start"
+          i=0
+          while true; do
+            if date_gt "$current" "$end"; then
+              echo "[INFO] current $current past end $end, stopping."
+              break
+            fi
+
+            echo ""
+            echo "=== Backtest step $i — SNAPSHOT_AS_OF=$current ==="
+            export SNAPSHOT_AS_OF="$current"
+
+            # 1) Build signals + recommended trades for this snapshot
+            python scripts/postprocess_v3.py
+
+            # 2) Apply trades and update per-portfolio history/ledgers
+            python scripts/update_performance_v3.py
+
+            # advance by step days
+            current="$(add_days "$current" "$step")"
+            i=$((i+1))
+          done
+
+          echo "[INFO] Backtest loop complete."
+
+      # ------------------------------------------------------------------
+      # 3) Upload all portfolio histories & ledgers as artifacts
+      # ------------------------------------------------------------------
+      - name: Upload backtest results
+        uses: actions/upload-artifact@v4
+        with:
+          name: backtest-results-${{ inputs.experiment_id }}
+          path: |
+            data/portfolios/**/history.csv
+            data/portfolios/**/trades_ledger.csv
+            data/trades_ledger_backtest.csv
+            data/portfolios/**/last_execution_summary.json
+            data/portfolios/**/portfolio_value*.json
+          retention-days: 90
