@@ -46,6 +46,7 @@ jobs:
           OUTPUT_PATH:       ${{ env.BACKFILL_OUTPUT }}
           # ~6 years of daily bars (tune as you like)
           DAYS_BACK:         "1500"
+          DAILY_BARS_MAX:    "1500"   # or "0" for "no cap"
           # Intraday config (5m window for 6 months; tune or set 0 to disable)
           INTRADAY_TIMEFRAME:    "5Min"
           INTRADAY_DAYS_BACK_5M: "180"
