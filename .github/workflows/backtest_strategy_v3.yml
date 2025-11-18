@@ -49,7 +49,7 @@ jobs:
 
       # Only execute paper portfolios by default
       EXECUTE_SCOPE: paper
-      EXECUTE_TAGS:  "backtest"       # e.g. "backtest" if you tag certain portfolios
+      EXECUTE_TAGS:  backtest       # e.g. "backtest" if you tag certain portfolios
 
       # Enable trade application + versioned artifacts
       APPLY_TRADES: "1"
