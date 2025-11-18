@@ -207,3 +207,11 @@ jobs:
             data/prices_backfill.json
             data/prices_backfill.tar.gz
           retention-days: 90
+
+      - name: Cache backfill dataset
+        uses: actions/cache@v4
+        with:
+          path: data/prices_backfill.tar.gz
+          # BACKFILL_VERSION lets you bump this when you intentionally rebuild history
+          key: backfill-v1-${{ hashFiles('data/symbols_backtest.txt') }}
+
