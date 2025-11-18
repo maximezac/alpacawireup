@@ -15,11 +15,11 @@ env:
   BACKFILL_DAYS_BACK: "1500"       # ~6 yrs; your fetch_prices.py respects this as DAYS_BACK
 
   # News backfill knobs
-  WINDOW_DAYS: "30"                 # 7-day windows, sliding from BACKFILL_START → BACKFILL_END
+  WINDOW_DAYS: "30"                # 30-day windows, sliding from BACKFILL_START → BACKFILL_END
   NEWS_MAX_ARTICLES_TOTAL: "0"     # 0 = no per-symbol cap (let fetch_news keep everything)
-  NEWS_LOOKBACK_DAYS: "30"          # for Finnhub / NewsAPI; matches window
+  NEWS_LOOKBACK_DAYS: "30"         # for Finnhub / NewsAPI; matches window
 
-  # Symbols config
+  # Symbols config (trimmed backtest set)
   SYMBOLS_PATH: data/symbols_backtest.txt
 
 jobs:
@@ -66,8 +66,10 @@ jobs:
           SYMBOLS_PATH:      ${{ env.SYMBOLS_PATH }}
           OUTPUT_PATH:       ${{ env.INPUT_BASE }}
           DAYS_BACK:         ${{ env.BACKFILL_DAYS_BACK }}
-          # You can set MAX_SYMBOLS here to throttle if needed, e.g. "200"
-          MAX_SYMBOLS:      "2000"
+          # Keep ALL daily bars fetched (up to DAYS_BACK); 0 = no cap in fetch_prices.py
+          DAILY_BARS_MAX:    "0"
+          # You can set MAX_SYMBOLS here to throttle if needed
+          MAX_SYMBOLS:       "2000"
           # Intraday knobs (optional; your fetch_prices handles these)
           INTRADAY_TIMEFRAME:   "5Min"
           INTRADAY_DAYS_BACK:   "180"
@@ -95,7 +97,7 @@ jobs:
           PY
 
       # ------------------------------------------------------------
-      # 2) NEWS BACKFILL LOOP (7-day windows from BACKFILL_START → BACKFILL_END)
+      # 2) NEWS BACKFILL LOOP (30-day windows from BACKFILL_START → BACKFILL_END)
       #    Each iteration reads + writes the SAME prices_backfill.json file
       #    and appends/merges news per symbol.
       # ------------------------------------------------------------
@@ -117,7 +119,6 @@ jobs:
           USE_FINBERT: "1"
           FINBERT_TRIGGER: "0.20"
           FINBERT_FRACTION: "0.30"
-
         run: |
           set -euo pipefail
 
@@ -141,7 +142,6 @@ jobs:
             window_end=$(add_days "$current" "$window")
 
             # Clamp to BACKFILL_END
-            # If window_end > end, set window_end=end
             if [[ "$(date -u -d "$window_end" +%s)" -gt "$(date -u -d "$end" +%s)" ]]; then
               window_end="$end"
             fi
@@ -172,7 +172,7 @@ jobs:
       - name: Sanity check backfilled news
         run: |
           python - << 'PY'
-          import json, pathlib, itertools
+          import json, pathlib
           p = pathlib.Path("data/prices_backfill.json")
           obj = json.loads(p.read_text())
           syms = obj.get("symbols", {})
@@ -181,7 +181,6 @@ jobs:
           if sample in syms:
               n = len(syms[sample].get("news", []))
               print(f"{sample} news items:", n)
-          # global news count
           total_news = 0
           for node in syms.values():
               total_news += len(node.get("news", []))
@@ -189,14 +188,14 @@ jobs:
           PY
 
       # ------------------------------------------------------------
-      # 4) (Optional) Compress the backfill file before uploading
+      # 4) Compress backfill file before uploading
       # ------------------------------------------------------------
       - name: Compress backfill JSON
         run: |
           cd data
           tar -czf prices_backfill.tar.gz prices_backfill.json
           ls -lh prices_backfill*
-      
+
       # ------------------------------------------------------------
       # 5) Upload as artifact (this is where your data is "saved")
       # ------------------------------------------------------------
@@ -207,19 +206,4 @@ jobs:
           path: |
             data/prices_backfill.json
             data/prices_backfill.tar.gz
-          # Max 90 days on GitHub. For longer-term storage, use S3/etc.
           retention-days: 90
-
-      # ------------------------------------------------------------
-      # 6) (Optional, future) Push to S3 / other durable storage
-      #    Uncomment + configure if you want long-term permanent storage.
-      # ------------------------------------------------------------
-      # - name: Upload to S3 (optional)
-      #   if: false  # flip to `true` and configure when ready
-      #   env:
-      #     AWS_ACCESS_KEY_ID:     ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     AWS_DEFAULT_REGION:    "us-east-1"
-      #   run: |
-      #     pip install awscli
-      #     aws s3 cp data/prices_backfill.tar.gz s3://your-bucket/alpacawireup/prices_backfill.tar.gz
