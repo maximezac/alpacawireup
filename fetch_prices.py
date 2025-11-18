@@ -6,7 +6,7 @@ fetch_prices.py — robust daily + intraday price + indicators fetcher for Alpac
 - Fetches up to N days of 1Day bars from Alpaca (v2) for daily indicators.
 - Fetches intraday bars (default 5Min) for higher-resolution indicators.
 - Computes indicators:
-    Daily:   EMA12/26, MACD, MACD signal/hist, RSI14, SMA20
+    Daily:    EMA12/26, MACD, MACD signal/hist, RSI14, SMA20
     Intraday: EMA50, EMA200, MACD, MACD signal/hist, MACD hist prev, RSI14
 - Optionally loads sectors from data/sectors.json if present.
 - Writes a feed file at data/prices.json in the format expected by publish_feed.py.
@@ -28,8 +28,9 @@ Env (optional):
 - COVERAGE_STRICT         : default "1"       (fail if any requested symbols are missing)
 
 Intraday (optional):
-- INTRADAY_TIMEFRAME      : default "5Min"
+- INTRADAY_TIMEFRAME      : default "5Min"    (set empty or "none" to disable)
 - INTRADAY_DAYS_BACK      : default "10"      (how many calendar days of intraday to request)
+  * alias: INTRADAY_DAYS_BACK_5M is also accepted, if INTRADAY_DAYS_BACK is not set
 - INTRADAY_BARS_MAX       : default "500"     (cap bars_5m list length per symbol in output)
 
 Notes:
@@ -62,9 +63,21 @@ REQUEST_SLEEP     = float(os.getenv("REQUEST_SLEEP_SEC", "0.25"))
 COVERAGE_STRICT   = (os.getenv("COVERAGE_STRICT", "1") == "1")
 
 # Intraday config
-INTRADAY_TIMEFRAME   = os.getenv("INTRADAY_TIMEFRAME", "5Min").strip()
-INTRADAY_DAYS_BACK   = int(os.getenv("INTRADAY_DAYS_BACK", "10"))
-INTRADAY_BARS_MAX    = int(os.getenv("INTRADAY_BARS_MAX", "500"))
+INTRADAY_TIMEFRAME_RAW = os.getenv("INTRADAY_TIMEFRAME", "5Min").strip()
+# Allow either INTRADAY_DAYS_BACK or INTRADAY_DAYS_BACK_5M
+_intraday_back_env = (
+    os.getenv("INTRADAY_DAYS_BACK")
+    or os.getenv("INTRADAY_DAYS_BACK_5M")
+    or "10"
+)
+INTRADAY_DAYS_BACK = int(_intraday_back_env)
+INTRADAY_BARS_MAX  = int(os.getenv("INTRADAY_BARS_MAX", "500"))
+
+# Normalize timeframe and decide if intraday is enabled
+INTRADAY_TIMEFRAME = INTRADAY_TIMEFRAME_RAW
+if INTRADAY_TIMEFRAME.lower() in ("", "none", "off", "disable"):
+    INTRADAY_TIMEFRAME = ""
+INTRADAY_ENABLED = bool(INTRADAY_TIMEFRAME) and INTRADAY_DAYS_BACK > 0
 
 API_URL_BASE = "https://data.alpaca.markets/v2/stocks"
 
@@ -213,8 +226,6 @@ def fetch_bars(symbol: str, feed: str) -> Dict[str, Any]:
 
 def fetch_intraday_bars(symbol: str, feed: str) -> Dict[str, Any]:
     """Fetch intraday history (e.g., 5Min) for one symbol."""
-    # We only need enough history to compute EMA200 on this timeframe.
-    # A few calendar days is sufficient (INTRADAY_DAYS_BACK is tunable).
     now_utc = datetime.now(timezone.utc)
     start_utc = now_utc - timedelta(days=INTRADAY_DAYS_BACK)
     start_iso = start_utc.replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -337,8 +348,8 @@ def main():
         "timeframe": "1Day",
         "indicators_window": DAYS_BACK,
         "intraday": {
-            "timeframe": INTRADAY_TIMEFRAME,
-            "days_back": INTRADAY_DAYS_BACK,
+            "timeframe": INTRADAY_TIMEFRAME if INTRADAY_ENABLED else "",
+            "days_back": INTRADAY_DAYS_BACK if INTRADAY_ENABLED else 0,
         },
         "symbols": {}
     }
@@ -392,38 +403,39 @@ def main():
             # -----------------------
             # Intraday bars + indicators (5Min by default)
             # -----------------------
-            try:
-                intraday_resp = fetch_intraday_bars(sym, DATA_FEED)
-                intraday_bars = intraday_resp.get("bars", []) or []
-                if intraday_bars:
-                    normalized_5m = []
-                    for b in intraday_bars:
-                        normalized_5m.append({
-                            "t": b.get("t"),
-                            "o": b.get("o"),
-                            "h": b.get("h"),
-                            "l": b.get("l"),
-                            "c": b.get("c"),
-                            "v": b.get("v"),
-                        })
-                    # Cap length so feed doesn't explode
-                    if INTRADAY_BARS_MAX > 0:
-                        normalized_5m = normalized_5m[-INTRADAY_BARS_MAX:]
-
-                    intraday_indicators = compute_intraday_indicators_from_bars(normalized_5m)
-
-                    symbol_payload["bars_5m"] = normalized_5m
-                    symbol_payload["indicators_5m"] = intraday_indicators
-                else:
-                    print(f"[WARN] {sym}: no intraday bars returned ({INTRADAY_TIMEFRAME})")
-            except requests.HTTPError as http_err:
+            if INTRADAY_ENABLED:
                 try:
-                    text = http_err.response.text
-                except Exception:
-                    text = ""
-                print(f"[WARN] {sym}: intraday HTTPError {http_err} {text[:200]}")
-            except Exception as e:
-                print(f"[WARN] {sym}: intraday fetch failed: {e}")
+                    intraday_resp = fetch_intraday_bars(sym, DATA_FEED)
+                    intraday_bars = intraday_resp.get("bars", []) or []
+                    if intraday_bars:
+                        normalized_5m = []
+                        for b in intraday_bars:
+                            normalized_5m.append({
+                                "t": b.get("t"),
+                                "o": b.get("o"),
+                                "h": b.get("h"),
+                                "l": b.get("l"),
+                                "c": b.get("c"),
+                                "v": b.get("v"),
+                            })
+                        # Cap length so feed doesn't explode
+                        if INTRADAY_BARS_MAX > 0:
+                            normalized_5m = normalized_5m[-INTRADAY_BARS_MAX:]
+
+                        intraday_indicators = compute_intraday_indicators_from_bars(normalized_5m)
+
+                        symbol_payload["bars_5m"] = normalized_5m
+                        symbol_payload["indicators_5m"] = intraday_indicators
+                    else:
+                        print(f"[WARN] {sym}: no intraday bars returned ({INTRADAY_TIMEFRAME})")
+                except requests.HTTPError as http_err:
+                    try:
+                        text = http_err.response.text
+                    except Exception:
+                        text = ""
+                    print(f"[WARN] {sym}: intraday HTTPError {http_err} {text[:200]}")
+                except Exception as e:
+                    print(f"[WARN] {sym}: intraday fetch failed: {e}")
 
             feed_root["symbols"][sym] = symbol_payload
 
@@ -465,8 +477,11 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(feed_root, f, indent=2)
     print(f"[DONE] Wrote {len(feed_root['symbols'])} symbols to {OUTPUT_PATH}")
-    print(f"[INFO] Intraday timeframe: {INTRADAY_TIMEFRAME}, days_back={INTRADAY_DAYS_BACK}, "
-          f"bars_max={INTRADAY_BARS_MAX}")
+    print(
+        f"[INFO] Intraday enabled={INTRADAY_ENABLED}, "
+        f"timeframe='{INTRADAY_TIMEFRAME}', days_back={INTRADAY_DAYS_BACK}, "
+        f"bars_max={INTRADAY_BARS_MAX}"
+    )
 
 if __name__ == "__main__":
     main()
