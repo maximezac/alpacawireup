@@ -82,11 +82,26 @@ jobs:
       # 1) Download the backfilled prices + news from previous workflow
       #    (artifact name must match your Backfill workflow: "prices-backfill")
       # ------------------------------------------------------------------
-      - name: Download backfilled prices artifact
-        uses: actions/download-artifact@v4
+      - name: Restore backfill from cache
+        id: cache-backfill
+        uses: actions/cache@v4
         with:
-          name: prices-backfill
-          path: data
+          path: data/prices_backfill.tar.gz
+          key: backfill-v1-${{ hashFiles('data/symbols_backtest.txt') }}
+
+      - name: Extract backfill JSON
+        if: steps.cache-backfill.outputs.cache-hit == 'true'
+        run: |
+          mkdir -p data
+          tar -xzf data/prices_backfill.tar.gz -C data
+          ls -lh data/prices_backfill.*
+
+      - name: Fail if backfill cache is missing
+        if: steps.cache-backfill.outputs.cache-hit != 'true'
+        run: |
+          echo "ERROR: Backfill cache not found."
+          echo "Run the 'Backfill History (prices + news)' workflow once to generate it." >&2
+          exit 1
 
       - name: Sanity check backfill file
         run: |
