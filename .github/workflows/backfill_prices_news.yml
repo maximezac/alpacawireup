@@ -1,0 +1,221 @@
+name: Backfill History (prices + news)
+
+on:
+  workflow_dispatch:   # manual only so you control when big jobs run
+
+permissions:
+  contents: read
+
+env:
+  # Base IO paths
+  INPUT_BASE: data/prices_backfill.json
+  OUTPUT_BASE: data/prices_backfill.json
+
+  # Backfill price depth (daily)
+  BACKFILL_DAYS_BACK: "1500"       # ~6 yrs; your fetch_prices.py respects this as DAYS_BACK
+
+  # News backfill knobs
+  WINDOW_DAYS: "7"                 # 7-day windows, sliding from BACKFILL_START → BACKFILL_END
+  NEWS_MAX_ARTICLES_TOTAL: "0"     # 0 = no per-symbol cap (let fetch_news keep everything)
+  NEWS_LOOKBACK_DAYS: "7"          # for Finnhub / NewsAPI; matches window
+
+  # Symbols config
+  SYMBOLS_PATH: data/symbols.txt
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 \
+                      python-dateutil==2.9.0.post0 feedparser==6.0.11 \
+                      vaderSentiment==3.3.2 pyyaml==6.0.2
+          pip install -r requirements.txt || echo "requirements.txt already satisfied."
+
+      - name: Export PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> "$GITHUB_ENV"
+
+      - name: Set backfill date range (start fixed, end = today UTC)
+        run: |
+          # Adjust BACKFILL_START if you ever want longer history
+          echo "BACKFILL_START=2021-01-01" >> "$GITHUB_ENV"
+          echo "BACKFILL_END=$(date -u +%F)" >> "$GITHUB_ENV"
+          echo "Using BACKFILL_START=$BACKFILL_START, BACKFILL_END=$BACKFILL_END"
+
+      # ------------------------------------------------------------
+      # 1) PRICE BACKFILL (daily + intraday) → data/prices_backfill.json
+      # ------------------------------------------------------------
+      - name: Backfill prices (multi-year)
+        env:
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_DATA_FEED:  iex
+          SYMBOLS_PATH:      ${{ env.SYMBOLS_PATH }}
+          OUTPUT_PATH:       ${{ env.INPUT_BASE }}
+          DAYS_BACK:         ${{ env.BACKFILL_DAYS_BACK }}
+          # You can set MAX_SYMBOLS here to throttle if needed, e.g. "200"
+          # MAX_SYMBOLS:      "0"
+          # Intraday knobs (optional; your fetch_prices handles these)
+          INTRADAY_TIMEFRAME:   "5Min"
+          INTRADAY_DAYS_BACK:   "180"
+          INTRADAY_BARS_MAX:    "500"
+        run: |
+          mkdir -p data
+          python fetch_prices.py
+          echo "Quick sanity:"
+          python - << 'PY'
+          import json, pathlib
+          p = pathlib.Path("data/prices_backfill.json")
+          print("Exists:", p.exists(), "Size MB:", p.stat().st_size / (1024*1024))
+          obj = json.loads(p.read_text())
+          print("as_of_utc:", obj.get("as_of_utc"))
+          syms = obj.get("symbols", {})
+          print("symbols:", len(syms))
+          samp = next(iter(syms.keys()), None)
+          if samp:
+              bars = syms[samp].get("bars", [])
+              print("sample symbol:", samp)
+              print("  daily bars:", len(bars))
+              if bars:
+                  print("  first bar:", bars[0].get("t"))
+                  print("  last  bar:", bars[-1].get("t"))
+          PY
+
+      # ------------------------------------------------------------
+      # 2) NEWS BACKFILL LOOP (7-day windows from BACKFILL_START → BACKFILL_END)
+      #    Each iteration reads + writes the SAME prices_backfill.json file
+      #    and appends/merges news per symbol.
+      # ------------------------------------------------------------
+      - name: Backfill news history (window loop)
+        env:
+          INPUT_PATH:   ${{ env.INPUT_BASE }}
+          OUTPUT_PATH:  ${{ env.OUTPUT_BASE }}
+          NEWS_LOOKBACK_DAYS: ${{ env.NEWS_LOOKBACK_DAYS }}
+          NEWS_MAX_ARTICLES_TOTAL: ${{ env.NEWS_MAX_ARTICLES_TOTAL }}
+          NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit,yahoo,marketbeat,seekingalpha"
+          NEWS_BACKFILL: "1"
+          BACKFILL_START: ${{ env.BACKFILL_START }}
+          BACKFILL_END:   ${{ env.BACKFILL_END }}
+          WINDOW_DAYS:    ${{ env.WINDOW_DAYS }}
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
+          FINNHUB_KEY:       ${{ secrets.FINNHUB_KEY }}
+        run: |
+          set -euo pipefail
+
+          # Helper: add days to ISO date (UTC)
+          add_days() {
+            local date="$1"
+            local days="$2"
+            date -u -d "$date + $days day" +%F
+          }
+
+          start="$BACKFILL_START"
+          end="$BACKFILL_END"
+          window="$WINDOW_DAYS"
+
+          echo "[INFO] News backfill from $start → $end (window=$window days)"
+
+          current="$start"
+          i=0
+          while true; do
+            # window_end is min(current + window, end)
+            window_end=$(add_days "$current" "$window")
+
+            # Clamp to BACKFILL_END
+            # If window_end > end, set window_end=end
+            if [[ "$(date -u -d "$window_end" +%s)" -gt "$(date -u -d "$end" +%s)" ]]; then
+              window_end="$end"
+            fi
+
+            echo ""
+            echo "=== Window $i: $current → $window_end ==="
+
+            export NEWS_START_ISO="${current}T00:00:00Z"
+            export NEWS_END_ISO="${window_end}T00:00:00Z"
+
+            python scripts/fetch_news.py
+
+            # Break when we reach the final endpoint
+            if [[ "$window_end" == "$end" ]]; then
+              break
+            fi
+
+            # Advance current by window days
+            current=$(add_days "$current" "$window")
+            i=$((i+1))
+          done
+
+          echo "[INFO] Finished news backfill loop."
+
+      # ------------------------------------------------------------
+      # 3) Sanity check: count total news items for a sample symbol
+      # ------------------------------------------------------------
+      - name: Sanity check backfilled news
+        run: |
+          python - << 'PY'
+          import json, pathlib, itertools
+          p = pathlib.Path("data/prices_backfill.json")
+          obj = json.loads(p.read_text())
+          syms = obj.get("symbols", {})
+          print("Total symbols:", len(syms))
+          sample = "AAPL"
+          if sample in syms:
+              n = len(syms[sample].get("news", []))
+              print(f"{sample} news items:", n)
+          # global news count
+          total_news = 0
+          for node in syms.values():
+              total_news += len(node.get("news", []))
+          print("Total news items across all symbols:", total_news)
+          PY
+
+      # ------------------------------------------------------------
+      # 4) (Optional) Compress the backfill file before uploading
+      # ------------------------------------------------------------
+      - name: Compress backfill JSON
+        run: |
+          cd data
+          tar -czf prices_backfill.tar.gz prices_backfill.json
+          ls -lh prices_backfill*
+      
+      # ------------------------------------------------------------
+      # 5) Upload as artifact (this is where your data is "saved")
+      # ------------------------------------------------------------
+      - name: Upload backfill artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: prices-backfill
+          path: |
+            data/prices_backfill.json
+            data/prices_backfill.tar.gz
+          # Max 90 days on GitHub. For longer-term storage, use S3/etc.
+          retention-days: 90
+
+      # ------------------------------------------------------------
+      # 6) (Optional, future) Push to S3 / other durable storage
+      #    Uncomment + configure if you want long-term permanent storage.
+      # ------------------------------------------------------------
+      # - name: Upload to S3 (optional)
+      #   if: false  # flip to `true` and configure when ready
+      #   env:
+      #     AWS_ACCESS_KEY_ID:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     AWS_DEFAULT_REGION:    "us-east-1"
+      #   run: |
+      #     pip install awscli
+      #     aws s3 cp data/prices_backfill.tar.gz s3://your-bucket/alpacawireup/prices_backfill.tar.gz
