@@ -1,0 +1,161 @@
+name: Backfill News History
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Start date (YYYY-MM-DD, inclusive)"
+        required: true
+        default: "2021-01-01"
+      end_date:
+        description: "End date (YYYY-MM-DD, exclusive)"
+        required: true
+        default: "2025-11-18"
+      window_days:
+        description: "Days per fetch window"
+        required: true
+        default: "60"
+
+permissions:
+  contents: write
+
+env:
+  # Backfill operates on your backfill prices file
+  INPUT_PATH:  data/prices_backfill.json
+  OUTPUT_PATH: data/prices_backfill.json
+
+  # News sources + knobs
+  NEWS_SOURCES: "benzinga,mtnewswires,googlerss,finnhub,reddit"
+  NEWS_LIMIT_PER_SYMBOL: "50"      # per Alpaca request
+  NEWS_MAX_ARTICLES_TOTAL: "0"     # 0 = NO CAP per symbol (good for backtest)
+  NEWS_LOOKBACK_DAYS: "7"          # only used when no explicit NEWS_START/END
+  NEWS_BACKFILL: "1"
+
+jobs:
+  backfill-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests feedparser python-dateutil vaderSentiment
+          # Optional: if you actually use FinBERT:
+          pip install transformers torch --quiet || echo "FinBERT optional deps failed, skipping."
+          # Your repo requirements
+          pip install -r requirements.txt || echo "requirements.txt already satisfied."
+
+      - name: Export PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> "$GITHUB_ENV"
+
+      - name: Backfill news in windows
+        env:
+          ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
+          FINNHUB_KEY:       ${{ secrets.FINNHUB_KEY }}
+
+          START_DATE:  ${{ github.event.inputs.start_date }}
+          END_DATE:    ${{ github.event.inputs.end_date }}
+          WINDOW_DAYS: ${{ github.event.inputs.window_days }}
+        run: |
+          python - << 'PY'
+          import os, subprocess
+          from datetime import datetime, timedelta, timezone
+
+          input_path  = os.environ["INPUT_PATH"]
+          output_path = os.environ["OUTPUT_PATH"]
+
+          start_date_str = os.environ["START_DATE"]
+          end_date_str   = os.environ["END_DATE"]
+          window_days    = int(os.environ.get("WINDOW_DAYS", "60"))
+
+          # Parse as UTC midnights
+          start_dt = datetime.fromisoformat(start_date_str).replace(tzinfo=timezone.utc)
+          end_dt   = datetime.fromisoformat(end_date_str).replace(tzinfo=timezone.utc)
+
+          cur = start_dt
+          idx = 0
+          while cur < end_dt:
+              next_dt = min(cur + timedelta(days=window_days), end_dt)
+              start_iso = cur.isoformat()
+              end_iso   = next_dt.isoformat()
+
+              print(f"[WINDOW {idx}] {start_iso} -> {end_iso}")
+
+              env = os.environ.copy()
+              env["INPUT_PATH"]  = input_path
+              env["OUTPUT_PATH"] = output_path
+
+              # Explicit window for this slice
+              env["NEWS_START_ISO"] = start_iso
+              env["NEWS_END_ISO"]   = end_iso
+
+              # Make sure backfill knobs are in place
+              env.setdefault("NEWS_BACKFILL", "1")
+              env.setdefault("NEWS_MAX_ARTICLES_TOTAL", "0")
+
+              # Run the news fetcher; it will:
+              #  - read OUTPUT_PATH
+              #  - add/merge news for this window
+              #  - write back to OUTPUT_PATH
+              subprocess.run(
+                  ["python", "scripts/fetch_news.py"],
+                  check=True,
+                  env=env,
+              )
+
+              cur = next_dt
+              idx += 1
+
+          print(f"[DONE] Completed {idx} windows.")
+          PY
+
+      - name: Quick stats (one sample symbol)
+        run: |
+          python - << 'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/prices_backfill.json")
+          if not path.exists():
+              print("[WARN] data/prices_backfill.json not found")
+              raise SystemExit(0)
+
+          data = json.loads(path.read_text())
+          syms = sorted((data.get("symbols") or {}).keys())
+          if not syms:
+              print("[WARN] no symbols in backfill file")
+              raise SystemExit(0)
+
+          sample = syms[0]
+          node = data["symbols"][sample]
+          n_news = len(node.get("news") or [])
+          print(f"Sample symbol: {sample}")
+          print(f"News items: {n_news}")
+          if n_news:
+              first = node["news"][-1]
+              last  = node["news"][0]
+              print("Oldest ts:", first.get("ts"))
+              print("Newest ts:", last.get("ts"))
+          PY
+
+      - name: Commit & push backfill (optional)
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin ${{ github.ref_name }} || true
+          git add data/prices_backfill.json || true
+          git commit -m "Backfill news history" || echo "No changes to commit."
+          git push || echo "Push failed (maybe no changes)."
