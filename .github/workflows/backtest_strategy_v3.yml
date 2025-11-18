@@ -43,7 +43,7 @@ jobs:
       BACKTEST_TRADES_LEDGER: data/trades_ledger_backtest.csv
 
       # Engine configs (adjust to match your existing gather workflow)
-      CONFIG_PORTFOLIOS: config/portfolios_backtest.yml
+      CONFIG_PORTFOLIOS: config/portfolios.yml
       CONFIG_STRATEGIES: config/strategies.yml
       OUTPUT_DIR:        artifacts
 
