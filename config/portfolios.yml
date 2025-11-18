@@ -19,7 +19,6 @@ defaults:
     sell_step_frac: 0.25
     protect_profitable: true
 
-
 portfolios:
   portfolio_max_personal:
     title: "Max Personal"
@@ -31,23 +30,6 @@ portfolios:
     trade_scope: real
     tags: [ideas, personal]
 
-  portfolio_max_TS_only:
-    title: "Max TS Only"
-    path: data/portfolios/portfolio_max_TS_only
-    decision_source: TS_ONLY
-    buy_threshold: 0.55
-    sell_threshold: -0.20
-    trade_scope: none
-    tags: [ideas,paper]
-
-  portfolio_paper_aggressive_trades:
-    title: "Paper Aggressive"
-    path: data/portfolios/portfolio_paper_aggressive_trades
-    per_line_frac: 0.05
-    max_deploy_frac: 0.20
-    trade_scope: paper
-    tags: [ideas, paper, aggressive]
-
   portfolio_max_autotrader:
     title: "AutoTrade my portfolio"
     path: data/portfolios/portfolio_max_autotrader
@@ -56,39 +38,12 @@ portfolios:
     trade_scope: paper
     tags: [ideas, paper]
 
-  portfolio_paper_reasonable:
-    title: "Paper Reasonable"
-    path: data/portfolios/portfolio_paper_reasonable
-    per_line_frac: 0.03
-    max_deploy_frac: 0.15
+  port_backfill_5each:
+    title: "Backtest Portfolio"
+    path: data/portfolios/port_backfill_5each
     trade_scope: paper
-    tags: [ideas, paper]
+    tags: [ideas, paper, "backtest"]
 
-  portfolio_paper_TS_only:
-    title: "paper TS Only"
-    path: data/portfolios/portfolio_paper_TS_only
-    decision_source: TS_ONLY
-    buy_threshold: 0.55
-    sell_threshold: -0.20
-    trade_scope: none
-    tags: [ideas,paper]
 
-  portfolio_paper_NS_higher_weight:
-    title: "paper NS Only"
-    path: data/portfolios/portfolio_paper_NS_higher_weight
-    decision_source: NS_ONLY
-    buy_threshold: 0.55
-    sell_threshold: -0.20
-    trade_scope: none
-    tags: [ideas,paper]
-
-  portfolio_max_NS_higher_weight:
-    title: "max NS Only"
-    path: data/portfolios/portfolio_max_NS_higher_weight
-    decision_source: NS_ONLY
-    buy_threshold: 0.55
-    sell_threshold: -0.20
-    trade_scope: none
-    tags: [ideas,paper]
 
     
