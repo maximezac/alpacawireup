@@ -184,6 +184,20 @@ jobs:
 
           echo "[INFO] Backtest loop complete."
 
+      - name: Analyze experiment (vs SPY, per-symbol, per-sector)
+        env:
+          EXPERIMENT_ID:    ${{ inputs.experiment_id }}
+          BENCHMARK_SYMBOL: SPY
+          PORTFOLIO_ID:     port_backfill_5each
+          CONFIG_PORTFOLIOS: ${{ env.CONFIG_PORTFOLIOS }}
+          CONFIG_STRATEGIES: ${{ env.CONFIG_STRATEGIES }}
+        run: |
+          python scripts/analyze_backtest_experiment.py \
+            data/prices_backfill.json \
+            data/portfolios/port_backfill_5each/history.csv \
+            data/portfolios/port_backfill_5each/trades_ledger.csv
+
+
       # ------------------------------------------------------------------
       # 3) Upload all portfolio histories & ledgers as artifacts
       # ------------------------------------------------------------------
@@ -193,8 +207,12 @@ jobs:
           name: backtest-results-${{ inputs.experiment_id }}
           path: |
             data/portfolios/**/history.csv
+            data/portfolios/**/history_with_*.csv
             data/portfolios/**/trades_ledger.csv
             data/trades_ledger_backtest.csv
             data/portfolios/**/last_execution_summary.json
             data/portfolios/**/portfolio_value*.json
+            artifacts/experiment_summary_${{ inputs.experiment_id }}*.json
+            artifacts/experiment_summary_${{ inputs.experiment_id }}*_per_*.csv
           retention-days: 90
+
