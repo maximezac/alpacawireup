@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
 # Reuse core signal engine pieces so backtest == live logic
-from engine.signals import (
+from sigengine.signals import (
     compute_indicators_daily_from_bars,
     compute_TS_daily,
     compute_NS,
