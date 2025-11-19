@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """
-publish_feed.py (LIVE MODE)
+publish_feed.py (LIVE MODE or BACKTEST MODE)
 
-- Reads base prices (historical bars + metadata) from INPUT_PATH
-- Uses engine.signals to compute indicators + TS/NS/CDS
-- Writes unified feed with per-symbol `indicators`, `signals`, `guidance`, `news`
-- Writes score distribution stats to SCORE_STATS_OUT
+- For LIVE:
+    Uses actual current UTC timestamp and standard half-life.
+- For BACKTEST:
+    Uses SNAPSHOT_AS_OF from workflow and uses backtest half-life.
+
+- Reads INPUT_PATH (prices.json or snapshot)
+- Uses engine.signals.compute_symbol_view() for unified TS/NS/CDS logic
+- Writes unified feed to OUTPUT_PATH
+- Writes score distribution summary to SCORE_STATS_OUT
 """
 
 from __future__ import annotations
@@ -13,9 +18,8 @@ import os, json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from engine import read_json, write_json   # you already have these helpers
+from engine import read_json, write_json
 from engine.signals import (
-    utcnow_iso,
     compute_symbol_view,
     percentiles,
 )
@@ -25,16 +29,42 @@ INPUT_PATH  = os.getenv("INPUT_PATH",  "data/prices.json")
 OUTPUT_PATH = os.getenv("OUTPUT_PATH", "data/prices_final.json")
 SCORE_STATS_OUT = os.getenv("SCORE_STATS_OUT", "data/score_stats.json")
 
+BACKTEST_MODE = os.getenv("BACKTEST_MODE", "0") == "1"
+SNAPSHOT_AS_OF = os.getenv("SNAPSHOT_AS_OF")   # YYYY-MM-DD
+
+
+def resolve_as_of():
+    """
+    Determine the timestamp used for score computation:
+      - LIVE: use real now()
+      - BACKTEST: use SNAPSHOT_AS_OF + "23:59:00Z"
+    """
+    if BACKTEST_MODE:
+        if not SNAPSHOT_AS_OF:
+            raise RuntimeError("BACKTEST_MODE=1 but SNAPSHOT_AS_OF is missing!")
+
+        # Interpret snapshot as end-of-day UTC
+        dt = datetime.fromisoformat(SNAPSHOT_AS_OF).replace(
+            hour=23, minute=59, second=0, tzinfo=timezone.utc
+        )
+        iso = dt.isoformat()
+        return dt, iso
+
+    # Live mode
+    dt = datetime.now(timezone.utc)
+    iso = dt.isoformat()
+    return dt, iso
+
 
 def main():
     base = read_json(INPUT_PATH)
     syms = base.get("symbols") or {}
 
-    now_dt = datetime.now(timezone.utc)
-    now_iso = utcnow_iso()
+    # Determine correct reference timestamp (live or backtest)
+    as_of_dt, as_of_iso = resolve_as_of()
 
     out = {
-        "as_of_utc": now_iso,
+        "as_of_utc": as_of_iso,
         "timeframe": base.get("timeframe", "1Day"),
         "indicators_window": base.get("indicators_window", 200),
         "intraday": base.get("intraday") or {},
@@ -46,7 +76,7 @@ def main():
     cds_list = []
 
     for sym, node in syms.items():
-        res = compute_symbol_view(sym, node, now_dt, now_iso)
+        res = compute_symbol_view(sym, node, as_of_dt, as_of_iso)
         if not res:
             continue
         sym_out, ts_val, ns_val, cds_val = res
@@ -58,9 +88,9 @@ def main():
     # write feed
     write_json(OUTPUT_PATH, out)
 
-    # stats
+    # score distributions
     stats = {
-        "as_of_utc": now_iso,
+        "as_of_utc": as_of_iso,
         "counts": {"symbols": len(out["symbols"])},
         "TS": percentiles(ts_list),
         "NS": percentiles(ns_list),
@@ -68,6 +98,7 @@ def main():
     }
     write_json(SCORE_STATS_OUT, stats)
 
+    # console logs
     def fmt(d):
         if not d:
             return "n/a"
