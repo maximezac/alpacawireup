@@ -166,30 +166,31 @@ jobs:
               echo "[INFO] current $current past end $end, stopping."
               break
             fi
-
+          
             echo ""
             echo "=== Backtest step $i — SNAPSHOT_AS_OF=$current ==="
-
-            # This is what update_performance_v3.py and history/ledger date fields read:
+          
+            # make SNAPSHOT_AS_OF visible to Python
             export SNAPSHOT_AS_OF="$current"
-
-            # 1) Build a feed snapshot as-of this date (TS/NS/CDS, guidance, etc.)
+          
+            # 1) Build a daily snapshot feed as of this date
             python scripts/build_snapshot_feed_from_backfill.py \
               --as-of "$current" \
               --input  data/prices_backfill.json \
               --output data/prices_final_snapshot.json
-
-            # 2) Generate trade plan using the snapshot feed
+          
+            # 2) Run postprocess using the snapshot as INPUT_FINAL
             INPUT_FINAL=data/prices_final_snapshot.json \
               python scripts/postprocess_v3.py
-
-            # 3) Apply trades + append to history/ledgers, using snapshot date
+          
+            # 3) Apply trades + write history/ledgers in BACKTEST_MODE
             python scripts/update_performance_v3.py
-
-            # advance by step days
+          
+            # advance
             current="$(add_days "$current" "$step")"
             i=$((i+1))
           done
+
 
           echo "[INFO] Backtest loop complete."
 
