@@ -84,6 +84,18 @@ def write_artifact(base_dir: Path, stem: str, obj: dict) -> None:
             except Exception:
                 pass
 
+def ledger_timestamp(prices: dict) -> str:
+    # In backtest, align with the snapshot's as_of_utc or SNAPSHOT_AS_OF
+    if BACKTEST_MODE:
+        asof = (prices or {}).get("as_of_utc")
+        if asof:
+            return asof
+        if SNAPSHOT_AS_OF:
+            dt = datetime.fromisoformat(SNAPSHOT_AS_OF).replace(tzinfo=timezone.utc)
+            return dt.isoformat().replace("+00:00", "Z")
+    # Live/default
+    return utc_now_iso()
+
 # -------- Utils --------
 def utc_now_iso() -> str:
     return _utc_now_iso()
@@ -351,6 +363,7 @@ def apply_trades_to_portfolio(
     write_portfolio_value(folder, pre_snap)
     portfolio_ledger_path = ensure_portfolio_ledger(folder)
     applied_trades: List[dict] = []  # capture what we actually execute (after sizing)
+    ts_for_ledger = ledger_timestamp(prices)
 
     for t in trades:
         sym = str(t.get("symbol", "")).upper()
@@ -398,8 +411,9 @@ def apply_trades_to_portfolio(
         else:
             continue
 
+                sig_snapshot = (t.get("signals") or node.get("signals") or {})
         row = {
-            "datetime_utc": utc_now_iso(),
+            "datetime_utc": ts_for_ledger,
             "portfolio_id": portfolio_id,
             "symbol": sym,
             "action": side,
@@ -411,7 +425,7 @@ def apply_trades_to_portfolio(
             "gross_amount": round((qty * px_exec) * (1 if side == "SELL" else -1), 2),
             "post_trade_cash": round(cash, 2),
             "post_trade_position": round(pos.get(sym, {}).get("qty", 0.0), 6),
-            "signal_snapshot": json.dumps((node.get("signals") or {}), separators=(",", ":")),
+            "signal_snapshot": json.dumps(sig_snapshot, separators=(",", ":")),
             "rationale": t.get("reason", ""),
             "run_id": os.getenv("GITHUB_RUN_ID", ""),
         }

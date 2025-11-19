@@ -1,0 +1,94 @@
+{
+  "experiment_id": "exp_v2",
+  "portfolio_id": "port_backfill_5each",
+  "benchmark_symbol": "SPY",
+  "date_range": {
+    "start": "2023-05-01",
+    "end": "2023-05-31",
+    "steps": 7
+  },
+  "topline": {
+    "initial_equity": 69595.48,
+    "final_equity": 74800.1,
+    "total_return": 0.07478387964275846,
+    "max_drawdown": 0.0,
+    "benchmark_total_return": 0.005534700163634554,
+    "excess_return_vs_benchmark": 0.0692491794791239
+  },
+  "experiment_config": {
+    "portfolios_defaults": {
+      "buy_threshold": 0.35,
+      "sell_threshold": -0.25,
+      "allow_new_symbols": true,
+      "decision_source": "CDS",
+      "ns_weight_boost": 1.0,
+      "per_line_frac": 0.1,
+      "max_deploy_frac": 0.3,
+      "trim_fraction": 0.25,
+      "fractional_buys": true,
+      "tags": [
+        "ideas"
+      ],
+      "trade_scope": "none",
+      "enable_momentum_phase": true,
+      "enable_rotation_upgrade": true,
+      "rotation": {
+        "trigger_cds": 0.5,
+        "min_gap": 0.25,
+        "max_turnover_frac": 0.1,
+        "sell_step_frac": 0.25,
+        "protect_profitable": true
+      }
+    },
+    "strategies": null,
+    "env": {
+      "BACKTEST_MODE": null,
+      "WINDOW_DAYS": null,
+      "NEWS_LOOKBACK_DAYS": null,
+      "NEWS_MAX_ARTICLES_TOTAL": null,
+      "ALPACA_DATA_FEED": null
+    }
+  },
+  "timeline": [
+    {
+      "date": "2023-05-01",
+      "equity": 69595.48,
+      "cumulative_return": 0.0,
+      "benchmark_cum_return": 0.0
+    },
+    {
+      "date": "2023-05-06",
+      "equity": 69628.96,
+      "cumulative_return": 0.000481
+    },
+    {
+      "date": "2023-05-11",
+      "equity": 70208.29,
+      "cumulative_return": 0.008805,
+      "benchmark_cum_return": -0.008374241986716768
+    },
+    {
+      "date": "2023-05-16",
+      "equity": 70282.04,
+      "cumulative_return": 0.009865,
+      "benchmark_cum_return": -0.012705746462604695
+    },
+    {
+      "date": "2023-05-21",
+      "equity": 72273.48,
+      "cumulative_return": 0.038479
+    },
+    {
+      "date": "2023-05-26",
+      "equity": 74745.76,
+      "cumulative_return": 0.074003,
+      "benchmark_cum_return": 0.010588122052170412
+    },
+    {
+      "date": "2023-05-31",
+      "equity": 74800.1,
+      "cumulative_return": 0.074784,
+      "benchmark_cum_return": 0.005534700163634554
+    }
+  ]
+}

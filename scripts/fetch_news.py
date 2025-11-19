@@ -75,6 +75,21 @@ BACKFILL_END   = os.environ.get("BACKFILL_END")    # e.g. "2025-11-18"
 NEWS_START_ISO = os.environ.get("NEWS_START_ISO")
 NEWS_END_ISO   = os.environ.get("NEWS_END_ISO")
 
+# If running in BACKFILL mode, be conservative with caps and respect BACKFILL_START/END
+if NEWS_BACKFILL:
+    # Default to no cap when backfilling so historical windows accumulate fully
+    # Only override the cap if the environment did not explicitly set it.
+    if "NEWS_MAX_ARTICLES_TOTAL" not in os.environ:
+        NEWS_MAX_ARTICLES_TOTAL = 0
+    # Allow BACKFILL_START / BACKFILL_END to drive explicit window if NEWS_START_ISO/END not set
+    if not NEWS_START_ISO and BACKFILL_START:
+        # assume date only YYYY-MM-DD -> start of day
+        NEWS_START_ISO = BACKFILL_START + "T00:00:00+00:00"
+    if not NEWS_END_ISO and BACKFILL_END:
+        NEWS_END_ISO = BACKFILL_END + "T23:59:59+00:00"
+
+
+
 USE_FINBERT       = os.environ.get("USE_FINBERT", "0") == "1"
 FINBERT_TRIGGER   = float(os.environ.get("FINBERT_TRIGGER", "0.30"))
 FINBERT_FRACTION  = float(os.environ.get("FINBERT_FRACTION", "0.40"))
