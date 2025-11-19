@@ -146,30 +146,44 @@ def age_hours(dt_iso: str | None, now: datetime) -> float:
         return 9999.0
 
 
-def compute_NS(news_list, now_utc: datetime) -> float:
+def compute_NS(news_list, ref_dt: datetime, half_life_hours: float) -> float:
     """
     news_list entries should have:
       {"headline":..., "source":..., "ts": "... ISO ...", "tone": float in [-1,1]}
+
+    ref_dt: the reference time for decay
+      - LIVE: "now" (UTC)
+      - BACKTEST: snapshot date-time (e.g. end of day)
+    half_life_hours: decay half-life in hours
+      - LIVE: DECAY_HALF_LIFE_HOURS (e.g. 12)
+      - BACKTEST: something larger, e.g. 24*60 (~60 days)
     """
     if not news_list:
         return 0.0
-    hl = DECAY_HALF_LIFE_HOURS
-    lam = math.log(2.0) / max(1e-6, hl)
+
+    hl = max(1e-6, half_life_hours)
+    lam = math.log(2.0) / hl
+
     num = 0.0
     den = 0.0
+
     for n in news_list:
         tone = n.get("tone")
         if tone is None:
             continue
         t_iso = n.get("ts")
-        h = age_hours(t_iso, now_utc)
+        h = age_hours(t_iso, ref_dt)
         w = math.exp(-lam * h)
+
         num += float(tone) * w
         den += w
+
     if den <= 0:
         return 0.0
+
     val = num / den
     return clamp_unit(val)
+
 
 
 def dynamic_weights(ns: float) -> Tuple[float, float]:
