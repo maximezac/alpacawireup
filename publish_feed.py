@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from engine import read_json, write_json
-from engine.signals import (
+from sigengine.signals import (
     compute_symbol_view,
     percentiles,
 )
