@@ -30,9 +30,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # Use the multi-year backfilled file for all backtests
-      BACKTEST_PRICES_FINAL: data/prices_backfill.json
-      PRICES_FINAL:          data/prices_backfill.json
+      # Backtest reads from the per-step snapshot feed
+      BACKTEST_PRICES_FINAL: data/prices_final_snapshot.json
+      PRICES_FINAL:          data/prices_final_snapshot.json
 
       # Where postprocess_v3 writes its recommended trades
       TRADES_RECS:           artifacts/recommended_trades_v3.json
@@ -169,12 +169,21 @@ jobs:
 
             echo ""
             echo "=== Backtest step $i — SNAPSHOT_AS_OF=$current ==="
+
+            # This is what update_performance_v3.py and history/ledger date fields read:
             export SNAPSHOT_AS_OF="$current"
 
-            # 1) Build signals + recommended trades for this snapshot
-            python scripts/postprocess_v3.py
+            # 1) Build a feed snapshot as-of this date (TS/NS/CDS, guidance, etc.)
+            python scripts/build_snapshot_feed_from_backfill.py \
+              --as-of "$current" \
+              --input  data/prices_backfill.json \
+              --output data/prices_final_snapshot.json
 
-            # 2) Apply trades and update per-portfolio history/ledgers
+            # 2) Generate trade plan using the snapshot feed
+            INPUT_FINAL=data/prices_final_snapshot.json \
+              python scripts/postprocess_v3.py
+
+            # 3) Apply trades + append to history/ledgers, using snapshot date
             python scripts/update_performance_v3.py
 
             # advance by step days
