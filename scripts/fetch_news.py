@@ -50,8 +50,10 @@ import math
 
 import requests
 import feedparser
+import time
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from vaderSentiment import vaderSentiment as vs
+
 
 API_NEWS = "https://data.alpaca.markets/v1beta1/news"
 
@@ -272,39 +274,97 @@ HEADERS_ALPACA = {
 }
 
 def fetch_news_for_symbol(symbol: str, start_iso: str, end_iso: str):
-    params = {
-        "symbols": symbol,
-        "start": start_iso,
-        "end": end_iso,
-        "limit": NEWS_LIMIT,
-        "sort": "desc",
-    }
-    r = requests.get(API_NEWS, headers=HEADERS_ALPACA, params=params, timeout=20)
-    if r.status_code != 200:
-        raise requests.HTTPError(f"{r.status_code} {r.text}")
-    data = r.json() or {}
-    items = data.get("news") or data.get("data") or []
+    """
+    Fetch news for a symbol between start_iso and end_iso from Alpaca, with simple pagination
+    by moving the `end` timestamp backward when the provider returns the maximum number of
+    items (NEWS_LIMIT). This allows requesting older items within the same window even
+    when the provider caps per-call results (e.g. max 50).
+    """
+    max_per_call = 50
+    per_call_limit = min(NEWS_LIMIT, max_per_call)
 
     out = []
-    for it in items:
-        headline = it.get("headline") or it.get("title") or ""
-        summary  = it.get("summary") or it.get("description") or ""
-        ts       = to_utc_iso(it.get("created_at") or it.get("updated_at") or it.get("published_at"))
-        publisher_raw = it.get("source") or it.get("author") or "unknown"
-        source   = norm_source(publisher_raw)
-        via      = None
-        url      = it.get("url") or it.get("link")
+    cur_end_iso = end_iso
+    try:
+        start_dt = _parse_iso_dt(start_iso)
+    except Exception:
+        start_dt = None
 
-        out.append({
-            "headline": headline,
-            "summary": summary,
-            "ts": ts,
-            "source": source,
-            "via": via,
-            "url": url,
-            "relevance": 1.0,
-        })
+    while True:
+        params = {
+            "symbols": symbol,
+            "start": start_iso,
+            "end": cur_end_iso,
+            "limit": per_call_limit,
+            "sort": "desc",
+        }
+        r = requests.get(API_NEWS, headers=HEADERS_ALPACA, params=params, timeout=20)
+        if r.status_code != 200:
+            # If provider rejects a too-large limit, retry with max_per_call
+            if r.status_code == 400 and per_call_limit > max_per_call:
+                per_call_limit = max_per_call
+                params["limit"] = per_call_limit
+                r = requests.get(API_NEWS, headers=HEADERS_ALPACA, params=params, timeout=20)
+                if r.status_code != 200:
+                    raise requests.HTTPError(f"{r.status_code} {r.text}")
+            else:
+                raise requests.HTTPError(f"{r.status_code} {r.text}")
+
+        data = r.json() or {}
+        items = data.get("news") or data.get("data") or []
+        if not items:
+            break
+
+        earliest_ts_in_batch = None
+        for it in items:
+            headline = it.get("headline") or it.get("title") or ""
+            summary  = it.get("summary") or it.get("description") or ""
+            ts_raw   = it.get("created_at") or it.get("updated_at") or it.get("published_at")
+            ts       = to_utc_iso(ts_raw)
+            publisher_raw = it.get("source") or it.get("author") or "unknown"
+            source   = norm_source(publisher_raw)
+            via      = None
+            url      = it.get("url") or it.get("link")
+
+            out.append({
+                "headline": headline,
+                "summary": summary,
+                "ts": ts,
+                "source": source,
+                "via": via,
+                "url": url,
+                "relevance": 1.0,
+            })
+
+            # track earliest ts
+            if ts:
+                try:
+                    dt = _parse_iso_dt(ts)
+                    if earliest_ts_in_batch is None or dt < earliest_ts_in_batch:
+                        earliest_ts_in_batch = dt
+                except Exception:
+                    pass
+
+        # if fewer than the per_call_limit returned, we exhausted available items
+        if len(items) < per_call_limit:
+            break
+
+        if earliest_ts_in_batch is None:
+            break
+
+        # Page by moving end to earliest_ts_in_batch - 1 second
+        next_end = earliest_ts_in_batch - timedelta(seconds=1)
+        if start_dt and next_end <= start_dt:
+            break
+        cur_end_iso = next_end.replace(microsecond=0).isoformat()
+        if cur_end_iso.endswith("+00:00"):
+            cur_end_iso = cur_end_iso.replace("+00:00", "Z")
+
+        # polite pause to avoid rate limits
+        time.sleep(0.2)
+
     return out
+
 
 def get_news_from_newsapi(symbol: str, api_key: str) -> list[dict]:
     url = "https://newsapi.org/v2/everything"

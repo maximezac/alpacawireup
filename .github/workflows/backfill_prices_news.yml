@@ -147,7 +147,7 @@ jobs:
           BACKFILL_END:   ${{ env.BACKFILL_END }}
           WINDOW_DAYS:    ${{ env.WINDOW_DAYS }}
           # Increase per-call limit to attempt getting as many Alpaca items as provider allows
-          NEWS_LIMIT_PER_SYMBOL: "500"
+          NEWS_LIMIT_PER_SYMBOL: "50"
           ALPACA_KEY_ID:     ${{ secrets.ALPACA_KEY_ID }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           NEWSAPI_KEY:       ${{ secrets.NEWSAPI_KEY }}
