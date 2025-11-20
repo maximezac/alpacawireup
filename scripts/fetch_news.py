@@ -253,7 +253,7 @@ def score_tone(headline: str, summary: str, ts_iso: str | None, src_token: str, 
     comp += lm_overlay_score(text)
     comp = max(-1.0, min(1.0, comp))
 
-        dt = _parse_iso_dt(ts_iso)
+    dt = _parse_iso_dt(ts_iso)
     if dt is not None:
         # In live mode we apply an age-based decay at scoring time to slightly reduce
         # the influence of older articles. For backfill mode, skip this decay so we
@@ -264,7 +264,6 @@ def score_tone(headline: str, summary: str, ts_iso: str | None, src_token: str, 
             decay = math.exp(-age_hours / 48.0)
             comp *= decay
 
-
     if USE_FINBERT and abs(comp) < FINBERT_TRIGGER:
         fb = finbert_score(headline + " " + summary)
         comp = (1 - FINBERT_FRACTION) * comp + FINBERT_FRACTION * fb
@@ -272,6 +271,7 @@ def score_tone(headline: str, summary: str, ts_iso: str | None, src_token: str, 
 
     w = NEWS_SOURCE_WEIGHTS.get(src_token, NEWS_SOURCE_WEIGHTS.get(via_token or "", 1.0))
     return max(-1.0, min(1.0, comp * float(w)))
+
 
 # ---------- Fetchers ----------
 HEADERS_ALPACA = {
