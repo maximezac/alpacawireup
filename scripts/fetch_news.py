@@ -253,11 +253,17 @@ def score_tone(headline: str, summary: str, ts_iso: str | None, src_token: str, 
     comp += lm_overlay_score(text)
     comp = max(-1.0, min(1.0, comp))
 
-    dt = _parse_iso_dt(ts_iso)
+        dt = _parse_iso_dt(ts_iso)
     if dt is not None:
-        age_hours = max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0)
-        decay = math.exp(-age_hours / 48.0)
-        comp *= decay
+        # In live mode we apply an age-based decay at scoring time to slightly reduce
+        # the influence of older articles. For backfill mode, skip this decay so we
+        # store the raw tone and let the backtest snapshot builder apply decay
+        # relative to the snapshot date via compute_NS.
+        if not NEWS_BACKFILL:
+            age_hours = max(0.0, (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0)
+            decay = math.exp(-age_hours / 48.0)
+            comp *= decay
+
 
     if USE_FINBERT and abs(comp) < FINBERT_TRIGGER:
         fb = finbert_score(headline + " " + summary)

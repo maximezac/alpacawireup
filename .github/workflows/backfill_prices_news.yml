@@ -140,7 +140,6 @@ jobs:
           INPUT_PATH:   ${{ env.INPUT_BASE }}
           OUTPUT_PATH:  ${{ env.OUTPUT_BASE }}
           NEWS_LOOKBACK_DAYS: ${{ env.NEWS_LOOKBACK_DAYS }}
-          NEWS_MAX_ARTICLES_TOTAL: ${{ env.NEWS_MAX_ARTICLES_TOTAL }}
           NEWS_SOURCES: "benzinga,mtnewswires,google_rss,finnhub,reddit"
           NEWS_BACKFILL: "1"
           BACKFILL_START: ${{ env.BACKFILL_START }}
@@ -155,6 +154,13 @@ jobs:
           USE_FINBERT: "1"
           FINBERT_TRIGGER: "0.20"
           FINBERT_FRACTION: "0.30"
+          # inside the Backfill news history (window loop) step -> env:
+          NEWS_MAX_ARTICLES_TOTAL: "0"       # keep all deduped items (no truncation)
+          # Backtest NS control (optional)
+          BACKTEST_NS_MAX_AGE_DAYS: "14"     # only keep news within this many days when building snapshots
+          BACKTEST_DECAY_HALF_LIFE_HOURS: "72"
+          BACKTEST_HALF_LIFE_HOURS: "72"
+          BACKTEST_MODE: "1"
         run: |
           set -euo pipefail
           # Helper: add days to ISO date (UTC)

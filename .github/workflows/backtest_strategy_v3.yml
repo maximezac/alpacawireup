@@ -55,6 +55,7 @@ jobs:
       APPLY_TRADES: "1"
       ARTIFACT_VERSIONED: "true"
       V3_DISABLE_VERSIONED_ARTIFACTS: "0"
+      BACKTEST_NS_MAX_AGE_DAYS : 14
 
     steps:
       - name: Checkout
@@ -132,6 +133,7 @@ jobs:
           BACKTEST_MODE: "1"
           EXPERIMENT_ID: ${{ inputs.experiment_id }}
           EXECUTE_SCOPE: paper
+          BACKTEST_NS_MAX_AGE_DAYS : 14
         run: |
           set -euo pipefail
 

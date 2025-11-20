@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import argparse, json, math, os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
@@ -108,7 +108,7 @@ def build_snapshot(as_of: str, input_path: str, output_path: str) -> None:
         # 2) Recompute DAILY indicators using shared engine helper
         ind_daily = compute_indicators_daily_from_bars(bars_trim, px)
 
-        # 3) Trim news to <= as_of_dt
+                # 3) Trim news to <= as_of_dt
         news_all = node.get("news") or []
         news_trim: List[Dict[str, Any]] = []
         for n in news_all:
@@ -121,6 +121,26 @@ def build_snapshot(as_of: str, input_path: str, output_path: str) -> None:
                 continue
             if t <= as_of_dt:
                 news_trim.append(n)
+
+        # Optional: truncate very old news to avoid long-tail dilution
+        max_age_days_env = os.getenv("BACKTEST_NS_MAX_AGE_DAYS")
+        if max_age_days_env:
+            try:
+                max_age_days = float(max_age_days_env)
+                cutoff_dt = as_of_dt - timedelta(days=max_age_days)
+                nt = []
+                for n in news_trim:
+                    try:
+                        t = datetime.fromisoformat(n.get("ts").replace("Z", "+00:00"))
+                    except Exception:
+                        continue
+                    if t >= cutoff_dt:
+                        nt.append(n)
+                news_trim = nt
+            except Exception:
+                # if parse fails, keep original news_trim
+                pass
+
 
         # 4) Recompute NS / TS / CDS with backtest half-life
         ns = compute_NS(news_trim, as_of_dt, BACKTEST_DECAY_HALF_LIFE_HOURS)
