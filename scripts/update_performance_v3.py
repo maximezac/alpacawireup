@@ -411,7 +411,7 @@ def apply_trades_to_portfolio(
         else:
             continue
 
-                sig_snapshot = (t.get("signals") or node.get("signals") or {})
+        sig_snapshot = (t.get("signals") or node.get("signals") or {})
         row = {
             "datetime_utc": ts_for_ledger,
             "portfolio_id": portfolio_id,
