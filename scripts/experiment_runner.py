@@ -147,7 +147,12 @@ def main():
                 tmp_cfg = None
 
             # postprocess (use temp portfolios config if present)
-            post_env = {"INPUT_FINAL": str(ROOT / "data" / "prices_final.json")}
+            # Write per-run recommended trades into the per-run artifacts folder so it is isolated
+            per_run_trades = str(ROOT / 'artifacts' / run_id / 'recommended_trades_v3.json')
+            per_run_trades_human = str(ROOT / 'artifacts' / run_id / 'recommended_trades_read.md')
+            post_env = {"INPUT_FINAL": str(ROOT / "data" / "prices_final.json"),
+                        "OUT_TRADES": per_run_trades,
+                        "OUT_TRADES_HUMAN": per_run_trades_human}
             if tmp_cfg:
                 post_env['PORTFOLIOS_YML'] = str(tmp_cfg)
             run_cmd(post_env, PY, str(ROOT / "scripts" / "postprocess_v3.py"))
@@ -157,7 +162,8 @@ def main():
             perf_env = {"BACKTEST_MODE": "1",
                    "SNAPSHOT_AS_OF": as_of,
                    "BACKTEST_PRICES_FINAL": str(ROOT / "data" / "prices_final.json"),
-                   "BACKTEST_TRADES_PATH": str(ROOT / "artifacts" / "recommended_trades_v3.json"),
+                   # point update_performance at the per-run trades file we just wrote
+                   "BACKTEST_TRADES_PATH": per_run_trades,
                    "BACKTEST_TRADES_LEDGER": str(ROOT / "data" / "trades_ledger_backtest.csv"),
                    "APPLY_TRADES": apply_flag}
             # ensure update_performance reads the same portfolios config so positions paths are consistent

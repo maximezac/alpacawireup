@@ -149,22 +149,73 @@ for pid in selected:
     dates = df_hist['date']
     days = (dates.iloc[-1] - dates.iloc[0]).days if len(dates)>1 else 1
 
-    total_return = float(eq.iloc[-1] / eq.iloc[0] - 1.0)
-    cagr = annualize_return(float(eq.iloc[0]), float(eq.iloc[-1]), days)
-    daily_returns = eq.pct_change().fillna(0)
-    vol = daily_returns.std(ddof=0) * math.sqrt(252)
-    sharpe = sharpe_ratio(daily_returns, RISK_FREE)
-    sortino = sortino_ratio(daily_returns, RISK_FREE)
+        # --- safer returns & annualization ---
+    daily_returns = eq.pct_change().dropna()
+    n_returns = len(daily_returns)
+
+    total_return = None
+    if len(eq) > 1 and eq.iloc[0] > 0:
+        total_return = float(eq.iloc[-1] / eq.iloc[0] - 1.0)
+
+    # Guarded CAGR: require at least 7 days and some returns
+    cagr = None
+    if days >= 7 and n_returns >= 5 and total_return is not None:
+        cagr = annualize_return(float(eq.iloc[0]), float(eq.iloc[-1]), days)
+
+    # Volatility / Sharpe / Sortino: require reasonable sample size
+    vol = None
+    sharpe = None
+    sortino = None
+    if n_returns >= 10:
+        ann_vol = float(daily_returns.std(ddof=0) * math.sqrt(252))
+        vol = ann_vol
+        if ann_vol > 1e-12:
+            sharpe = sharpe_ratio(daily_returns, RISK_FREE)
+        else:
+            sharpe = None
+        sortino = sortino_ratio(daily_returns, RISK_FREE)
+    else:
+        # still compute a best-effort vol if some returns exist
+        if n_returns > 0:
+            vol = float(daily_returns.std(ddof=0) * math.sqrt(252))
+
     mdd = max_drawdown(eq)
 
-    # benchmark returns aligned
+    # benchmark returns aligned more robustly
     bench_close = build_close_series(BENCHMARK) if BENCHMARK in syms else pd.Series(dtype=float)
-    bench_daily = bench_close.pct_change().reindex(df_hist['date']).fillna(0)
-    beta = beta_vs_benchmark(daily_returns, bench_daily)
+    beta = None
+    bench_cagr = None
+    bench_annual_vol = None
+    tracking_error = None
+    info_ratio = None
+    alpha = None
+    if not bench_close.empty:
+        # align benchmark prices to portfolio history dates with forward-fill
+        bench_prices = bench_close.reindex(df_hist['date']).ffill()
+        bench_prices = bench_prices.dropna()
+        if len(bench_prices) >= 2:
+            # bench returns
+            bench_returns = bench_prices.pct_change().dropna()
+            if len(bench_returns) >= 2:
+                bench_annual_vol = float(bench_returns.std(ddof=0) * math.sqrt(252))
+                bench_cagr = annualize_return(float(bench_prices.iloc[0]), float(bench_prices.iloc[-1]), (bench_prices.index[-1] - bench_prices.index[0]).days)
+            # align returns for beta / tracking_error
+            common = pd.concat([daily_returns, bench_returns], axis=1, join='inner').dropna()
+            if not common.empty and common.shape[0] >= 2:
+                # common.iloc[:,0] = portfolio returns, common.iloc[:,1] = bench returns
+                cov = common.iloc[:,0].cov(common.iloc[:,1])
+                var = common.iloc[:,1].var()
+                if var > 0:
+                    beta = float(cov / var)
+                excess = common.iloc[:,0] - common.iloc[:,1]
+                tracking_error = float(excess.std(ddof=0) * math.sqrt(252)) if len(excess) >= 2 else None
+                info_ratio = float((excess.mean() * 252) / tracking_error) if tracking_error and tracking_error > 1e-12 else None
+                # alpha as ann_ret - beta*bench_ann_ret (if cagr present)
+                if cagr is not None and bench_cagr is not None and beta is not None:
+                    alpha = float(cagr - beta * bench_cagr)
 
-        # trades analysis: replay ledger to compute per-trade realized pnl and turnover
+    # trades analysis: replay ledger to compute per-trade realized pnl and turnover
     trades_list = []
-    # initialize accumulators even if ledger missing to avoid NameError later
     pos = {}
     total_turnover = 0.0
     realized_pnls = []
@@ -212,9 +263,13 @@ for pid in selected:
     else:
         df_ldr = pd.DataFrame()
 
-    avg_gain = float(np.mean([p for p in realized_pnls if p>0])) if realized_pnls else 0.0
+    avg_gain = float(np.mean([p for p in realized_pnls if p>0])) if [p for p in realized_pnls if p>0] else None
     win_rate = float(wins / sell_trades) if sell_trades>0 else None
     avg_turnover = total_turnover / ((days/365.25) if days>0 else 1)
+    turnover_fraction = None
+    mean_equity = float(eq.mean()) if len(eq)>0 and not math.isnan(float(eq.mean())) else None
+    if mean_equity and mean_equity>0:
+        turnover_fraction = avg_turnover / mean_equity
 
 
     # sector attribution using per_symbol computed earlier (best-effort)
@@ -223,22 +278,56 @@ for pid in selected:
     per_symbol_path = ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}_per_symbol.csv"
 
     # Build portfolio summary
+    data_quality = []
+    if n_returns < 10:
+        data_quality.append('short_history')
+    if len(trades_list) < 3:
+        data_quality.append('few_trades')
+
     p_summary = {
         'portfolio_id': pid,
-        'initial_equity': float(eq.iloc[0]),
-        'final_equity': float(eq.iloc[-1]),
-        'total_return': total_return,
-        'cagr': cagr,
-        'max_drawdown': mdd,
-        'volatility_annual': vol,
-        'sharpe': sharpe,
-        'sortino': sortino,
-        'beta': beta,
-        'turnover_annual': avg_turnover,
+        'initial_equity': float(eq.iloc[0]) if len(eq)>0 else None,
+        'final_equity': float(eq.iloc[-1]) if len(eq)>0 else None,
+        'period_days': int(days),
+        'total_return': float(total_return) if total_return is not None else None,
+        'cagr': float(cagr) if cagr is not None else None,
+        'max_drawdown': float(mdd) if mdd is not None else None,
+        'volatility_annual': float(vol) if vol is not None else None,
+        'sharpe': float(sharpe) if sharpe is not None else None,
+        'sharpe_se': float(math.sqrt((1.0 + 0.5 * ((p_summary['sharpe'] if 'sharpe' in locals() and p_summary.get('sharpe') else 0.0)**2)) / max(n_returns,1))) if 'p_summary' not in locals() else None,
+        'sortino': float(sortino) if sortino is not None else None,
+        'beta': float(beta) if beta is not None else None,
+        'bench_cagr': float(bench_cagr) if bench_cagr is not None else None,
+        'bench_annual_vol': float(bench_annual_vol) if bench_annual_vol is not None else None,
+        'tracking_error': float(tracking_error) if tracking_error is not None else None,
+        'info_ratio': float(info_ratio) if info_ratio is not None else None,
+        'alpha': float(alpha) if alpha is not None else None,
+        'turnover_annual_dollars': float(avg_turnover) if avg_turnover is not None else None,
+        'turnover_fraction_of_mean_equity': float(turnover_fraction) if turnover_fraction is not None else None,
         'win_rate': win_rate,
-        'avg_gain_per_trade': avg_gain,
-        'n_trades': len(trades_list)
+        'avg_gain_per_trade': float(avg_gain) if avg_gain is not None else None,
+        'n_trades': len(trades_list),
+        'data_quality': data_quality
     }
+
+    # Verify portfolio_value snapshot consistency (best-effort)
+    try:
+        pv_path = BASE_ARTIFACT_DIR / pid / 'portfolio_value.json'
+        if not pv_path.exists():
+            # try data/portfolios path
+            pv_path = Path(portfolios[pid].get('path', f"data/portfolios/{pid}")) / 'portfolio_value.json'
+        if pv_path.exists():
+            pv = json.loads(pv_path.read_text(encoding='utf-8'))
+            pv_equity = pv.get('equity')
+            if pv_equity is not None and p_summary['final_equity'] is not None:
+                diff = abs(float(p_summary['final_equity']) - float(pv_equity))
+                if diff > max(1e-6, 0.01 * (abs(float(p_summary['final_equity'])) if p_summary['final_equity'] else 1.0)):
+                    p_summary.setdefault('data_quality', []).append('portfolio_value_mismatch')
+                    print(f"[WARN] equity mismatch for {pid}: history {p_summary['final_equity']} vs portfolio_value {pv_equity}")
+    except Exception as e:
+        print(f"[WARN] failed to verify portfolio_value for {pid}: {e}")
+
+
 
     # write per-portfolio artifacts
     port_art = BASE_ARTIFACT_DIR / pid
@@ -391,4 +480,81 @@ for p in all_portfolio_summaries:
 md_path = ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}.md"
 md_path.write_text('\n'.join(md_lines), encoding='utf-8')
 
+# ---- Generate a manifest and a short summary intended for downstream summarizers (GPT, reviewers) ----
+try:
+    import time
+    manifest = {
+        "experiment_id": EXPERIMENT_ID,
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "base_artifact_dir": str(BASE_ARTIFACT_DIR),
+        "files": {}
+    }
+
+    def _gather(pattern_root, rel_prefix=None):
+        out = []
+        p_root = Path(pattern_root)
+        if p_root.exists():
+            for p in sorted([x for x in p_root.rglob('*') if x.is_file()]):
+                rel = p.relative_to(Path.cwd())
+                out.append(str(rel))
+        return out
+
+    # Per-portfolio summaries
+    per_portfolio = {}
+    for pid in sorted([d.name for d in BASE_ARTIFACT_DIR.iterdir() if d.is_dir()]):
+        basep = BASE_ARTIFACT_DIR / pid
+        files = [str(x.relative_to(Path.cwd())) for x in sorted(basep.glob('*')) if x.is_file()]
+        per_portfolio[pid] = files
+
+    manifest['files']['per_portfolio'] = per_portfolio
+
+    # recommended trades + human-readable
+    recs = []
+    for p in Path('artifacts').glob('recommended_trades*'):
+        if p.is_file():
+            recs.append(str(p.relative_to(Path.cwd())))
+    manifest['files']['recommended_trades'] = recs
+
+    # perf timeseries and charts
+    perf_files = _gather('data', 'data') + _gather('artifacts/perf_charts', 'artifacts/perf_charts')
+    manifest['files']['perf'] = perf_files
+
+    # compare outputs
+    comp_files = _gather('artifacts', 'artifacts')
+    manifest['files']['others'] = comp_files
+
+    # write manifest to artifacts root and to base artifact dir
+    MANIFEST_PATH = ARTIFACT_DIR / f"experiment_manifest_{EXPERIMENT_ID}.json"
+    BASE_MANIFEST_PATH = BASE_ARTIFACT_DIR / 'manifest.json'
+    MANIFEST_PATH.write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+    BASE_MANIFEST_PATH.write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+
+    # short, human-friendly summary advising which files to upload to a summarizer
+    summary_lines = []
+    summary_lines.append(f"Experiment: {EXPERIMENT_ID}")
+    summary_lines.append(f"Generated: {manifest['generated_at']}")
+    summary_lines.append("")
+    summary_lines.append("Recommended files to upload to an LLM (in this order):")
+    summary_lines.append("1) artifacts/recommended_trades_read.md — human-readable trade plan for all portfolios.")
+    summary_lines.append("2) artifacts/recommended_trades_v3.json — machine-readable trade plan (per-portfolio).")
+    summary_lines.append("3) artifacts/experiment_summary_<EXPERIMENT_ID>_per_portfolio.csv — consolidated metrics (CAGR, Sharpe, etc.).")
+    summary_lines.append("4) artifacts/<EXPERIMENT_ID>/portfolios/<PORT>/history.csv — per-portfolio equity history (time series).")
+    summary_lines.append("5) data/perf_timeseries.csv — consolidated time series across portfolios (if present).")
+    summary_lines.append("6) artifacts/perf_charts/* — charts (png) for quick visual context.")
+    summary_lines.append("")
+    summary_lines.append("Manifest file created at: " + str(MANIFEST_PATH))
+    summary_lines.append("")
+    summary_lines.append("Notes:")
+    summary_lines.append("- For best LLM summaries, upload the human-readable plan first, then per-portfolio summaries and histories.")
+    summary_lines.append("- If you want a single zip for the model, include: recommended_trades_read.md, experiment_summary_*_per_portfolio.csv, data/perf_timeseries.csv, and the per-portfolio history CSVs.")
+
+    summary_path = ARTIFACT_DIR / f"summary_for_gpt_{EXPERIMENT_ID}.txt"
+    summary_path.write_text('\n'.join(summary_lines), encoding='utf-8')
+    (BASE_ARTIFACT_DIR / 'summary_for_gpt.txt').write_text('\n'.join(summary_lines), encoding='utf-8')
+
+    print(f"[OK] Wrote manifest and summary_for_gpt to {ARTIFACT_DIR} and {BASE_ARTIFACT_DIR}")
+except Exception as e:
+    print(f"[WARN] failed to write manifest/summary: {e}")
+
 print(f"[OK] Analysis complete. Artifacts in {ARTIFACT_DIR}")
+
