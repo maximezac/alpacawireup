@@ -18,7 +18,7 @@ This script:
 This runner is intended to be called from CI (GitHub Actions) or locally.
 """
 from __future__ import annotations
-import argparse, os, subprocess, sys, json, yaml
+import argparse, os, subprocess, sys, json, yaml, shutil
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -169,10 +169,25 @@ def main():
             current = current + timedelta(days=step)
             i += 1
 
-            # After variant loop, call analyzer for this variant across all backtest portfolios
+        # After finishing all snapshots for this variant, copy per-variant portfolio outputs into the experiment artifact folder once
+        variant_art_root = out_dir / run_id / 'portfolios'
+        variant_art_root.mkdir(parents=True, exist_ok=True)
+        for pid in selected_portfolios:
+            variant_port_name = pid + '_' + name
+            src = ROOT / 'data' / 'portfolios' / variant_port_name
+            dst = variant_art_root / variant_port_name
+            try:
+                if src.exists():
+                    shutil.copytree(src, dst, dirs_exist_ok=True)
+                    print(f"[INFO] copied {src} -> {dst}")
+            except Exception as e:
+                print(f"[WARN] failed to copy {src} -> {dst}: {e}")
+
+        # After variant loop, call analyzer for this variant across all backtest portfolios
+        cfg_for_analyzer = str(tmp_cfg) if tmp_cfg else str(ROOT / "config" / "portfolios.yml")
         analyzer_env = {
             "EXPERIMENT_ID": run_id,
-            "CONFIG_PORTFOLIOS": str(ROOT / "config" / "portfolios.yml"),
+            "CONFIG_PORTFOLIOS": cfg_for_analyzer,
             "BENCHMARK_SYMBOL": os.environ.get("BENCHMARK_SYMBOL", "SPY"),
         }
         run_cmd(analyzer_env, PY, str(ROOT / "scripts" / "analyze_backtest_experiment.py"), str(ROOT / "data" / "prices_backfill.json"))

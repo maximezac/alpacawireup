@@ -308,7 +308,15 @@ from scripts.plot_helpers import plot_equity_curve, plot_drawdown, plot_benchmar
 
 md_lines = []
 md_lines.append(f"# Experiment summary: {EXPERIMENT_ID}\n")
-md_lines.append(f"Date range: {dates[0]} → {dates[-1]}\n")
+# Date range: attempt to use last processed history 'dates' if available; fall back to n/a
+if 'dates' in locals() and len(dates) > 0:
+    try:
+        md_lines.append(f"Date range: {dates.iloc[0].strftime('%Y-%m-%d')} → {dates.iloc[-1].strftime('%Y-%m-%d')}\n")
+    except Exception:
+        md_lines.append(f"Date range: {dates[0]} → {dates[-1]}\n")
+else:
+    md_lines.append("Date range: n/a\n")
+
 
 
 for p in all_portfolio_summaries:
