@@ -160,7 +160,7 @@ def build_snapshot(as_of: str, input_path: str, output_path: str) -> None:
             guidance["buy_on_dip_below"] = round(sma20_last * 0.99, 4)
             guidance["trim_above"] = round(sma20_last * 1.08, 4)
 
-                out["symbols"][sym] = {
+            out["symbols"][sym] = {
             "price": px,
             "ts": ts,
             "bars": bars_trim,
