@@ -1,5 +1,4 @@
 name: Backtest Strategy v3
-
 on:
   workflow_dispatch:
     inputs:
@@ -37,43 +36,34 @@ on:
         default: "90"
         type: string
 
-
-
 permissions:
   contents: read
 
 jobs:
   backtest:
     runs-on: ubuntu-latest
-
     env:
       # Backtest reads from the per-step snapshot feed
       BACKTEST_PRICES_FINAL: data/prices_final_snapshot.json
-      PRICES_FINAL:          data/prices_final_snapshot.json
-
+      PRICES_FINAL:           data/prices_final_snapshot.json
       # Where postprocess_v3 writes its recommended trades
-      TRADES_RECS:           artifacts/recommended_trades_v3.json
-      BACKTEST_TRADES_PATH:  artifacts/recommended_trades_v3.json
-
+      TRADES_RECS:            artifacts/recommended_trades_v3.json
+      BACKTEST_TRADES_PATH:   artifacts/recommended_trades_v3.json
       # Backtest-specific global ledger
-      TRADES_LEDGER:         data/trades_ledger_backtest.csv
+      TRADES_LEDGER:          data/trades_ledger_backtest.csv
       BACKTEST_TRADES_LEDGER: data/trades_ledger_backtest.csv
-
       # Engine configs (adjust to match your existing gather workflow)
       CONFIG_PORTFOLIOS: config/portfolios.yml
       CONFIG_STRATEGIES: config/strategies.yml
-      OUTPUT_DIR:        artifacts
-
+      OUTPUT_DIR:         artifacts
       # Only execute paper portfolios by default
       EXECUTE_SCOPE: paper
-      EXECUTE_TAGS:  backtest       # e.g. "backtest" if you tag certain portfolios
-
-            # Enable trade application + versioned artifacts
+      EXECUTE_TAGS: backtest        # e.g. "backtest" if you tag certain portfolios
+      # Enable trade application + versioned artifacts
       APPLY_TRADES: "${{ inputs.apply_trades }}"
       ARTIFACT_VERSIONED: "true"
       V3_DISABLE_VERSIONED_ARTIFACTS: "0"
       BACKTEST_NS_MAX_AGE_DAYS : 90
-
 
     steps:
       - name: Checkout
@@ -90,8 +80,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pandas==2.2.2 numpy==1.26.4 requests==2.32.3 \
-                      python-dateutil==2.9.0.post0 feedparser==6.0.11 \
-                      vaderSentiment==3.3.2 pyyaml==6.0.2 matplotlib==3.8.1
+            python-dateutil==2.9.0.post0 feedparser==6.0.11 \
+            vaderSentiment==3.3.2 pyyaml==6.0.2 matplotlib==3.8.1
           pip install -r requirements.txt || echo "requirements.txt already satisfied."
 
       - name: Export PYTHONPATH
@@ -99,7 +89,6 @@ jobs:
 
       # ------------------------------------------------------------------
       # 1) Download the backfilled prices + news from previous workflow
-      #    (artifact name must match your Backfill workflow: "prices-backfill")
       # ------------------------------------------------------------------
       - name: Restore backfill from cache
         id: cache-backfill
@@ -134,17 +123,13 @@ jobs:
           print("symbols:", len(syms))
           samp = next(iter(syms.keys()), None)
           if samp:
-              bars = syms[samp].get("bars", [])
-              news = syms[samp].get("news", [])
-              print("sample:", samp, "bars:", len(bars), "news:", len(news))
+            bars = syms[samp].get("bars", [])
+            news = syms[samp].get("news", [])
+            print("sample:", samp, "bars:", len(bars), "news:", len(news))
           PY
 
       # ------------------------------------------------------------------
-      # 2) Backtest loop: step from start_date → end_date
-      #    For each date:
-      #      - BACKTEST_MODE=1, SNAPSHOT_AS_OF=<date>
-      #      - postprocess_v3 builds trades for that date
-      #      - update_performance_v3 applies trades + appends to history
+      # 2) Backtest loop: run experiment runner
       # ------------------------------------------------------------------
       - name: Run experiment runner
         env:
@@ -157,23 +142,58 @@ jobs:
         run: |
           python scripts/experiment_runner.py --start ${{ inputs.start_date }} --end ${{ inputs.end_date }} --step ${{ inputs.step_days }} --experiment ${{ inputs.experiment_id }}
 
-
-
-            # ------------------------------------------------------------------
-      # 3) Upload all portfolio histories, per-variant artifacts & ledgers as artifacts
       # ------------------------------------------------------------------
-      - name: Upload backtest results
+      # 3) Upload all portfolio histories, per-variant artifacts & ledgers as artifacts
+      #    - Debug listing to show exactly what's included
+      #    - Zip per-experiment artifacts (recommended)
+      #    - Upload artifacts/**, .tmp/**, data/portfolios/** and the listing file
+      # ------------------------------------------------------------------
+      - name: Ensure helper script is executable
+        run: |
+          if [ -f scripts/ci/list_artifacts_for_upload.sh ]; then
+            chmod +x scripts/ci/list_artifacts_for_upload.sh
+          fi
+
+      - name: List artifact files to upload (debug)
+        run: |
+          echo "=== workspace top-level ==="
+          ls -la || true
+          echo "=== Checking candidate upload paths ==="
+          bash scripts/ci/list_artifacts_for_upload.sh artifacts/upload_included_files.txt
+          echo "=== File list preview ==="
+          sed -n '1,200p' artifacts/upload_included_files.txt
+
+      - name: Zip artifacts folder (optional, recommended)
+        run: |
+          set -euo pipefail
+          EXP_ID="${{ inputs.experiment_id || 'exp_unknown' }}"
+          mkdir -p artifacts
+          if [ -d "artifacts/${EXP_ID}" ]; then
+            zip -r "artifacts/${EXP_ID}.zip" "artifacts/${EXP_ID}" || true
+            echo "Created artifacts/${EXP_ID}.zip"
+          else
+            zip -r "artifacts/${EXP_ID}.zip" artifacts || true
+            echo "Created artifacts/${EXP_ID}.zip (fallback to whole artifacts/)"
+          fi
+        shell: bash
+
+      - name: Show what will be uploaded (debug)
+        run: |
+          echo "=== artifacts dir listing ==="
+          ls -la artifacts || true
+          echo "=== artifact zip (if exists) ==="
+          ls -la artifacts/*.zip || true
+          echo "=== included files listing preview ==="
+          [ -f artifacts/upload_included_files.txt ] && sed -n '1,400p' artifacts/upload_included_files.txt || true
+        shell: bash
+
+      - name: Upload experiment artifacts (full tree + debug listing)
         uses: actions/upload-artifact@v4
         with:
           name: backtest-results-${{ inputs.experiment_id }}
           path: |
-            data/portfolios/**/history.csv
-            data/portfolios/**/history_with_*.csv
-            data/portfolios/**/trades_ledger.csv
-            data/trades_ledger_backtest.csv
-            data/portfolios/**/last_execution_summary.json
-            data/portfolios/**/portfolio_value*.json
-            artifacts/experiment_summary_${{ inputs.experiment_id }}*.json
-            artifacts/experiment_summary_${{ inputs.experiment_id }}*_per_*.csv
+            artifacts/**
+            .tmp/**
+            data/portfolios/**
+            artifacts/upload_included_files.txt
           retention-days: 90
-
