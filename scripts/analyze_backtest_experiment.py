@@ -149,9 +149,12 @@ for pid in selected:
     dates = df_hist['date']
     days = (dates.iloc[-1] - dates.iloc[0]).days if len(dates)>1 else 1
 
-        # --- safer returns & annualization ---
+            # --- safer returns & annualization ---
     daily_returns = eq.pct_change().dropna()
     n_returns = len(daily_returns)
+    # filter out exact-zero returns (no-change snapshots) to avoid vol suppression
+    non_zero_returns = daily_returns[ daily_returns.abs() > 1e-12 ]
+    n_nonzero = len(non_zero_returns)
 
     total_return = None
     if len(eq) > 1 and eq.iloc[0] > 0:
@@ -162,22 +165,31 @@ for pid in selected:
     if days >= 7 and n_returns >= 5 and total_return is not None:
         cagr = annualize_return(float(eq.iloc[0]), float(eq.iloc[-1]), days)
 
-    # Volatility / Sharpe / Sortino: require reasonable sample size
+    # Volatility / Sharpe / Sortino: require reasonable non-zero sample size
     vol = None
     sharpe = None
     sortino = None
-    if n_returns >= 10:
-        ann_vol = float(daily_returns.std(ddof=0) * math.sqrt(252))
+    sharpe_se = None
+    # prefer non_zero_returns for volatility estimate when available
+    if n_nonzero >= 60:
+        ann_vol = float(non_zero_returns.std(ddof=0) * math.sqrt(252))
         vol = ann_vol
         if ann_vol > 1e-12:
-            sharpe = sharpe_ratio(daily_returns, RISK_FREE)
+            sharpe = sharpe_ratio(non_zero_returns, RISK_FREE)
         else:
             sharpe = None
-        sortino = sortino_ratio(daily_returns, RISK_FREE)
+        sortino = sortino_ratio(non_zero_returns, RISK_FREE)
+        # sharpe standard error (Lo 2002)
+        if sharpe is not None:
+            try:
+                sharpe_se = math.sqrt((1.0 + 0.5 * (float(sharpe)**2)) / float(max(n_nonzero,1)))
+            except Exception:
+                sharpe_se = None
     else:
-        # still compute a best-effort vol if some returns exist
+        # fallback: if some returns exist but few non-zero, compute best-effort vol on all returns
         if n_returns > 0:
             vol = float(daily_returns.std(ddof=0) * math.sqrt(252))
+            # don't compute Sharpe for small non-zero sample; mark as short_history
 
     mdd = max_drawdown(eq)
 
@@ -200,7 +212,7 @@ for pid in selected:
                 bench_annual_vol = float(bench_returns.std(ddof=0) * math.sqrt(252))
                 bench_cagr = annualize_return(float(bench_prices.iloc[0]), float(bench_prices.iloc[-1]), (bench_prices.index[-1] - bench_prices.index[0]).days)
             # align returns for beta / tracking_error
-            common = pd.concat([daily_returns, bench_returns], axis=1, join='inner').dropna()
+            common = pd.concat([non_zero_returns if len(non_zero_returns)>0 else daily_returns, bench_returns], axis=1, join='inner').dropna()
             if not common.empty and common.shape[0] >= 2:
                 # common.iloc[:,0] = portfolio returns, common.iloc[:,1] = bench returns
                 cov = common.iloc[:,0].cov(common.iloc[:,1])
@@ -213,6 +225,7 @@ for pid in selected:
                 # alpha as ann_ret - beta*bench_ann_ret (if cagr present)
                 if cagr is not None and bench_cagr is not None and beta is not None:
                     alpha = float(cagr - beta * bench_cagr)
+
 
     # trades analysis: replay ledger to compute per-trade realized pnl and turnover
     trades_list = []
