@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import os, sys, json, math
+import os, sys, json, math, csv
 from pathlib import Path
 from datetime import datetime
 import pandas as pd
 import numpy as np
 import yaml
+
 
 # ----------------------------------------------------------------------
 # Enhanced analyzer for backtest experiments
@@ -324,7 +325,8 @@ else:
 
 for p in all_portfolio_summaries:
     pid = p['portfolio_id']
-    port_art = ARTIFACT_DIR / pid
+    port_art = BASE_ARTIFACT_DIR / pid
+
     hist_file = port_art / 'history.csv'
     if not hist_file.exists():
         continue
