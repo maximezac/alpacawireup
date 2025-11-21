@@ -237,7 +237,7 @@ for pid in selected:
     }
 
     # write per-portfolio artifacts
-        port_art = BASE_ARTIFACT_DIR / pid
+    port_art = BASE_ARTIFACT_DIR / pid
     port_art.mkdir(parents=True, exist_ok=True)
     (port_art / 'experiment_summary.json').write_text(json.dumps(p_summary, indent=2))
     # history and trades export
