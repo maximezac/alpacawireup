@@ -161,18 +161,20 @@ for pid in selected:
     bench_daily = bench_close.pct_change().reindex(df_hist['date']).fillna(0)
     beta = beta_vs_benchmark(daily_returns, bench_daily)
 
-    # trades analysis: replay ledger to compute per-trade realized pnl and turnover
+        # trades analysis: replay ledger to compute per-trade realized pnl and turnover
     trades_list = []
+    # initialize accumulators even if ledger missing to avoid NameError later
+    pos = {}
+    total_turnover = 0.0
+    realized_pnls = []
+    wins = 0
+    losses = 0
+    sell_trades = 0
+
     if ledger_csv.exists():
         df_ldr = pd.read_csv(ledger_csv, parse_dates=['datetime_utc'])
         df_ldr = df_ldr[df_ldr['portfolio_id'] == pid].sort_values('datetime_utc')
         # replay per symbol
-        pos = {}
-        total_turnover = 0.0
-        realized_pnls = []
-        wins = 0
-        losses = 0
-        sell_trades = 0
         for _, r in df_ldr.iterrows():
             sym = str(r['symbol']).upper()
             action = str(r['action']).upper()
@@ -212,6 +214,7 @@ for pid in selected:
     avg_gain = float(np.mean([p for p in realized_pnls if p>0])) if realized_pnls else 0.0
     win_rate = float(wins / sell_trades) if sell_trades>0 else None
     avg_turnover = total_turnover / ((days/365.25) if days>0 else 1)
+
 
     # sector attribution using per_symbol computed earlier (best-effort)
     # Build per-symbol realized/unrealized results (reuse previous logic if available)

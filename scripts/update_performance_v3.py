@@ -521,7 +521,15 @@ def main():
             print(f"[skip] {pid}: positions file missing at {positions_csv}")
             continue
 
+        # Ensure per-portfolio ledger exists (header) even in dry-run so artifacts are complete
+        try:
+            ensure_portfolio_ledger(folder)
+        except Exception:
+            # best-effort: do not fail the whole run if ledger creation fails
+            print(f"[WARN] could not ensure ledger for {folder}")
+
         trades = block.get("trades") or []
+
 
         if not trades:
             # No trades: still maintain history/snapshots.
