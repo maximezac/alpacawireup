@@ -21,6 +21,23 @@ on:
         required: false
         default: "exp_v1"
         type: string
+      apply_trades:
+        description: "Apply trades (1) or dry-run (0)"
+        required: false
+        default: "0"
+        type: string
+      backtest_half_life_hours:
+        description: "Backtest half-life hours (overrides default)"
+        required: false
+        default: "336"
+        type: string
+      backtest_ns_max_age_days:
+        description: "Backtest news max age days (overrides default)"
+        required: false
+        default: "90"
+        type: string
+
+
 
 permissions:
   contents: read
@@ -51,11 +68,12 @@ jobs:
       EXECUTE_SCOPE: paper
       EXECUTE_TAGS:  backtest       # e.g. "backtest" if you tag certain portfolios
 
-      # Enable trade application + versioned artifacts
-      APPLY_TRADES: "1"
+            # Enable trade application + versioned artifacts
+      APPLY_TRADES: "${{ inputs.apply_trades }}"
       ARTIFACT_VERSIONED: "true"
       V3_DISABLE_VERSIONED_ARTIFACTS: "0"
-      BACKTEST_NS_MAX_AGE_DAYS : 14
+      BACKTEST_NS_MAX_AGE_DAYS : 90
+
 
     steps:
       - name: Checkout
@@ -128,90 +146,21 @@ jobs:
       #      - postprocess_v3 builds trades for that date
       #      - update_performance_v3 applies trades + appends to history
       # ------------------------------------------------------------------
-      - name: Run backtest loop
+      - name: Run experiment runner
         env:
           BACKTEST_MODE: "1"
           EXPERIMENT_ID: ${{ inputs.experiment_id }}
+          APPLY_TRADES: ${{ inputs.apply_trades }}
           EXECUTE_SCOPE: paper
-          BACKTEST_NS_MAX_AGE_DAYS : 14
+          BACKTEST_NS_MAX_AGE_DAYS: ${{ inputs.backtest_ns_max_age_days }}
+          BACKTEST_HALF_LIFE_HOURS: ${{ inputs.backtest_half_life_hours }}
         run: |
-          set -euo pipefail
-
-          start="${{ inputs.start_date }}"
-          end="${{ inputs.end_date }}"
-          step="${{ inputs.step_days }}"
-
-          echo "[INFO] Backtest from $start → $end (step=$step days, experiment_id=${EXPERIMENT_ID})"
-
-          # helper: add days to a date
-          add_days() {
-            local date="$1"
-            local days="$2"
-            date -u -d "$date + $days day" +%F
-          }
-
-          # compare dates (1 if a>b, 0 otherwise)
-          date_gt() {
-            local a="$1"
-            local b="$2"
-            if [[ "$(date -u -d "$a" +%s)" -gt "$(date -u -d "$b" +%s)" ]]; then
-              return 0
-            else
-              return 1
-            fi
-          }
-
-          current="$start"
-          i=0
-          while true; do
-            if date_gt "$current" "$end"; then
-              echo "[INFO] current $current past end $end, stopping."
-              break
-            fi
-          
-            echo ""
-            echo "=== Backtest step $i — SNAPSHOT_AS_OF=$current ==="
-          
-            # make SNAPSHOT_AS_OF visible to Python
-            export SNAPSHOT_AS_OF="$current"
-          
-            # 1) Build a daily snapshot feed as of this date
-            python scripts/build_snapshot_feed_from_backfill.py \
-              --as-of "$current" \
-              --input  data/prices_backfill.json \
-              --output data/prices_final_snapshot.json
-          
-            # 2) Run postprocess using the snapshot as INPUT_FINAL
-            INPUT_FINAL=data/prices_final_snapshot.json \
-              python scripts/postprocess_v3.py
-          
-            # 3) Apply trades + write history/ledgers in BACKTEST_MODE
-            python scripts/update_performance_v3.py
-          
-            # advance
-            current="$(add_days "$current" "$step")"
-            i=$((i+1))
-          done
+          python scripts/experiment_runner.py --start ${{ inputs.start_date }} --end ${{ inputs.end_date }} --step ${{ inputs.step_days }} --experiment ${{ inputs.experiment_id }}
 
 
-          echo "[INFO] Backtest loop complete."
 
-      - name: Analyze experiment (vs SPY, per-symbol, per-sector)
-        env:
-          EXPERIMENT_ID:    ${{ inputs.experiment_id }}
-          BENCHMARK_SYMBOL: SPY
-          PORTFOLIO_ID:     port_backfill_5each
-          CONFIG_PORTFOLIOS: ${{ env.CONFIG_PORTFOLIOS }}
-          CONFIG_STRATEGIES: ${{ env.CONFIG_STRATEGIES }}
-        run: |
-          python scripts/analyze_backtest_experiment.py \
-            data/prices_backfill.json \
-            data/portfolios/port_backfill_5each/history.csv \
-            data/portfolios/port_backfill_5each/trades_ledger.csv
-
-
-      # ------------------------------------------------------------------
-      # 3) Upload all portfolio histories & ledgers as artifacts
+            # ------------------------------------------------------------------
+      # 3) Upload all portfolio histories, per-variant artifacts & ledgers as artifacts
       # ------------------------------------------------------------------
       - name: Upload backtest results
         uses: actions/upload-artifact@v4

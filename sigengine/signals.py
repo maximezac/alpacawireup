@@ -24,7 +24,7 @@ RSI_LEN  = int(os.getenv("RSI_LEN",  "14"))
 SMA_LEN  = int(os.getenv("SMA_LEN",  "20"))
 
 DECAY_HALF_LIFE_HOURS    = float(os.getenv("DECAY_HALF_LIFE_HOURS", "12"))
-BACKTEST_HALF_LIFE_HOURS = float(os.getenv("BACKTEST_HALF_LIFE_HOURS", "720"))  # ~30 days
+BACKTEST_HALF_LIFE_HOURS = float(os.getenv("BACKTEST_HALF_LIFE_HOURS", "336"))  # 14 days (default for backtest)
 
 SECTOR_NUDGE  = float(os.getenv("SECTOR_NUDGE", "0.05"))
 NS_DEFAULT_WT = float(os.getenv("NS_DEFAULT_WT", "0.4"))

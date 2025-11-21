@@ -1,81 +1,159 @@
-# Index / Market ETFs
-SPY
-QQQ
-VTI
-VOO
-IWM
-DIA
-
 # Mega-cap Tech
 AAPL
 MSFT
-AMZN
+GOOG
 GOOGL
+AMZN
 META
+NVDA
 TSLA
 NFLX
-
-# AI / Chips / Semis
-NVDA
-AMD
 AVGO
-TSM
-MU
-CRUS
-ASML
+CRM
+ORCL
+ADBE
 
-# Your Core + Narrative Growth
-PLTR
+# Large-cap Tech / Cloud / SaaS
+AMD
+INTC
+CSCO
+IBM
+TXN
+MU
+AMAT
+ASML
+LRCX
+KLAC
+NXPI
+ON
+MRVL
+QCOM
+NOW
 SNOW
-TTWO
-DE
-SOFI
-FSLR
-ZS
+DDOG
 NET
 MDB
-SHOP
-CRWD
-
-# Fintech / Payments
-SQ
-PYPL
-NU
-
-# Cloud / SaaS / Infrastructure
-ADBE
-CRM
-PANW
 OKTA
-DDOG
-ESTC
+CRWD
+ZS
+TEAM
+MNDY
+PATH
 
-# Solar / Clean Energy / Energy Mix
-ENPH
-SEDG
-RUN
-NEE
+# AI / Future Compute / Infra
+SMCI
+PLTR
+U
+GLBE
+ROKU
+AFRM
+COIN
 
-# Industrial + EV Supply Chain
-CAT
-GE
-HON
-LMT
-RTX
-
-# Dividend / BDC / Yield
-ARCC
-MAIN
-HD
-JNJ
-PG
-
-# Speculative / High-Volatility Names
+# Quantum Computing & Related
+IONQ
+RGTI
 QBTS
 QUBT
-RGTI
-RKLB
-ASTS
-DNA
-NVTS
-IONQ
+
+# Fintech & Financials
+SQ
+PYPL
+SOFI
+UPST
+HOOD
+V
+MA
+JPM
+GS
+BAC
+C
+
+# Semicap & Manufacturing
+TSM
+AMAT
+MPWR
+ADI
+
+# Consumer Discretionary
+UBER
+SHOP
+NKE
+LULU
+TGT
+WMT
+HD
+LOW
+COST
+
+# Gaming / Entertainment
+TTWO
+EA
+RBLX
+
+# Healthcare / Biotech (stable only)
+UNH
+JNJ
+ABBV
+MRK
+PFE
+REGN
+ISRG
+
+# Industrials / Energy / Materials
+CAT
+DE
+GE
+RTX
+BA
+LMT
+HON
+XOM
+CVX
+SLB
+COP
+
+# Real Estate & Utilities (minimal weight)
+PLD
+AMT
+NEE
+
+# ETFs for regime detection
+SPY
+QQQ
+IWM
+SMH
+XLK
+XLF
+XLY
+XLE
+XLI
+XLV
+ARKK   # helps model speculative cycles
+SOXX
+
+# Communications / Media
+T
+VZ
+TMUS
+DIS
+CMCSA
+
+# International Large Cap (low weight)
+BABA
+TSM
+NIO
+
+# Staples
+PG
+KO
+PEP
+COST
+
+# Extra Growth / Momentum Names
+ABNB
+ROKU
+LYFT
+AI     # C3.ai
+BTU    # high-beta energy test
+FSLR   # solar momentum
+ENPH   # solar volatility

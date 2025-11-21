@@ -1,0 +1,27 @@
+[
+  {
+    "name": "baseline",
+    "backtest_half_life_hours": 336,
+    "backtest_ns_max_age_days": 90,
+    "step_days": 5
+  },
+  {
+    "name": "recency_strong",
+    "backtest_half_life_hours": 72,
+    "backtest_ns_max_age_days": 14,
+    "step_days": 5
+  },
+  {
+    "name": "more_trades",
+    "backtest_half_life_hours": 336,
+    "backtest_ns_max_age_days": 90,
+    "step_days": 1
+  },
+  {
+    "name": "ts_only",
+    "decision_source": "TS_ONLY",
+    "backtest_half_life_hours": 336,
+    "backtest_ns_max_age_days": 90,
+    "step_days": 5
+  }
+]

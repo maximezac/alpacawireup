@@ -38,12 +38,33 @@ portfolios:
     trade_scope: paper
     tags: [ideas, paper]
 
-  port_backfill_5each:
+    port_backfill_5each:
     title: "Backtest Portfolio"
     path: data/portfolios/port_backfill_5each
     positions_csv: positions.csv
     trade_scope: paper
     tags: [ideas, paper, backtest]
+
+  port_backfill_5each_conservative:
+    title: "Backtest Portfolio - Conservative"
+    path: data/portfolios/port_backfill_5each_conservative
+    positions_csv: positions.csv
+    trade_scope: paper
+    per_line_frac: 0.02
+    max_deploy_frac: 0.20
+    ns_weight_boost: 0.8
+    tags: [ideas, paper, backtest, variant:conservative]
+
+  port_backfill_5each_aggressive:
+    title: "Backtest Portfolio - Aggressive"
+    path: data/portfolios/port_backfill_5each_aggressive
+    positions_csv: positions.csv
+    trade_scope: paper
+    per_line_frac: 0.12
+    max_deploy_frac: 0.50
+    ns_weight_boost: 1.2
+    tags: [ideas, paper, backtest, variant:aggressive]
+
 
 
 

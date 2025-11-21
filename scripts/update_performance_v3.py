@@ -126,20 +126,21 @@ def ensure_ledger(path: str):
     p.parent.mkdir(parents=True, exist_ok=True)
     if not p.exists():
         p.write_text(
-            "datetime_utc,portfolio_id,symbol,action,qty,price_exec,slippage_bps,liquidity_impact_bps,fees,"
-            "gross_amount,post_trade_cash,post_trade_position,signal_snapshot,rationale,run_id\n"
+            "datetime_utc,portfolio_id,symbol,action,qty,px_theoretical,price_exec,slippage_bps,liquidity_impact_bps,fees,gross_amount,net_amount,post_trade_cash,post_trade_position,signal_snapshot,rationale,run_id\n"
         )
 
-def append_ledger(path: str, row: dict):
+
+def append_ledger(path: str | Path, row: dict):
     header = [
-        "datetime_utc","portfolio_id","symbol","action","qty","price_exec","slippage_bps",
-        "liquidity_impact_bps","fees","gross_amount","post_trade_cash","post_trade_position",
+        "datetime_utc","portfolio_id","symbol","action","qty","px_theoretical","price_exec","slippage_bps",
+        "liquidity_impact_bps","fees","gross_amount","net_amount","post_trade_cash","post_trade_position",
         "signal_snapshot","rationale","run_id"
     ]
-    ensure_ledger(path)
+    ensure_ledger(str(path))
     with open(path, "a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow([row.get(k, "") for k in header])
+
 
 def load_last_applied(path: str | Path) -> str | None:
     p = Path(path)
@@ -201,10 +202,10 @@ def ensure_portfolio_ledger(folder: Path) -> Path:
     p = folder / "trades_ledger.csv"
     if not p.exists():
         p.write_text(
-            "datetime_utc,portfolio_id,symbol,action,qty,price_exec,slippage_bps,liquidity_impact_bps,fees,"
-            "gross_amount,post_trade_cash,post_trade_position,signal_snapshot,rationale,run_id\n"
+            "datetime_utc,portfolio_id,symbol,action,qty,px_theoretical,price_exec,slippage_bps,liquidity_impact_bps,fees,gross_amount,net_amount,post_trade_cash,post_trade_position,signal_snapshot,rationale,run_id\n"
         )
     return p
+
 
 def write_execution_summary(folder: Path, portfolio_id: str, positions_csv: Path, cash: float, snap: dict | None = None) -> None:
     base = {
@@ -411,7 +412,7 @@ def apply_trades_to_portfolio(
         else:
             continue
 
-                sig_snapshot = (t.get("signals") or node.get("signals") or {})
+        sig_snapshot = (t.get("signals") or node.get("signals") or {})
         row = {
             "datetime_utc": ts_for_ledger,
             "portfolio_id": portfolio_id,

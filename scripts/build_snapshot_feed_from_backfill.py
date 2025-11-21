@@ -16,12 +16,18 @@ from sigengine.signals import (
 )
 
 # Backtest-specific decay half-life (in hours).
-# Default ~60 days = 24 * 60 = 1440 hours.
+# Default kept for compatibility; prefer BACKTEST_HALF_LIFE_HOURS env (set in sigengine/signals.py)
 BACKTEST_DECAY_HALF_LIFE_HOURS = float(
     os.getenv("BACKTEST_DECAY_HALF_LIFE_HOURS", "1440.0")
 )
+# Preferred canonical env name for backtests (hours)
+BACKTEST_HALF_LIFE_HOURS = float(os.getenv("BACKTEST_HALF_LIFE_HOURS", os.getenv("BACKTEST_DECAY_HALF_LIFE_HOURS", "1440")))
+# Default maximum age of news to include in snapshots (days)
+BACKTEST_NS_MAX_AGE_DAYS = int(os.getenv("BACKTEST_NS_MAX_AGE_DAYS", "90"))
 
 SECTOR_NUDGE = float(os.getenv("SECTOR_NUDGE", "0.05"))
+
+
 
 
 # ---------- basic JSON helpers ----------
@@ -122,28 +128,22 @@ def build_snapshot(as_of: str, input_path: str, output_path: str) -> None:
             if t <= as_of_dt:
                 news_trim.append(n)
 
-        # Optional: truncate very old news to avoid long-tail dilution
-        max_age_days_env = os.getenv("BACKTEST_NS_MAX_AGE_DAYS")
-        if max_age_days_env:
-            try:
-                max_age_days = float(max_age_days_env)
-                cutoff_dt = as_of_dt - timedelta(days=max_age_days)
-                nt = []
-                for n in news_trim:
-                    try:
-                        t = datetime.fromisoformat(n.get("ts").replace("Z", "+00:00"))
-                    except Exception:
-                        continue
-                    if t >= cutoff_dt:
-                        nt.append(n)
-                news_trim = nt
-            except Exception:
-                # if parse fails, keep original news_trim
-                pass
+                # Optional: truncate very old news to avoid long-tail dilution
+        try:
+            max_age_days = float(os.getenv("BACKTEST_NS_MAX_AGE_DAYS", str(BACKTEST_NS_MAX_AGE_DAYS)))
+            cutoff_dt = as_of_dt - timedelta(days=max_age_days)
+            news_trim = [n for n in news_trim if n.get("ts") and datetime.fromisoformat(n.get("ts").replace("Z", "+00:00")) >= cutoff_dt]
+        except Exception:
+            # if parse fails, keep original news_trim
+            pass
 
 
-        # 4) Recompute NS / TS / CDS with backtest half-life
-        ns = compute_NS(news_trim, as_of_dt, BACKTEST_DECAY_HALF_LIFE_HOURS)
+
+                # 4) Recompute NS / TS / CDS with backtest half-life
+        # Use BACKTEST_HALF_LIFE_HOURS if provided to align with sigengine.signals
+        half_life = BACKTEST_HALF_LIFE_HOURS
+        ns = compute_NS(news_trim, as_of_dt, half_life)
+
         ts_val = compute_TS_daily(ind_daily)
         wT, wN = dynamic_weights(ns)
         cds = clamp_unit(
