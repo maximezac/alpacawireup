@@ -252,6 +252,56 @@ if all_portfolio_summaries:
     dfp = pd.DataFrame(all_portfolio_summaries)
     dfp.to_csv(BASE_ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}_per_portfolio.csv", index=False)
 
+# Aggregate per-symbol across selected portfolios (aggregate realized/sell/buy/market_value)
+per_symbol_agg = {}
+for pid in selected:
+    node = portfolios.get(pid, {})
+    port_path = Path(node.get('path', f"data/portfolios/{pid}"))
+    ledger_path = port_path / 'trades_ledger.csv'
+    if not ledger_path.exists():
+        continue
+    with ledger_path.open('r', encoding='utf-8') as f:
+        rdr = csv.DictReader(f)
+        for r in rdr:
+            s = r.get('symbol','').upper()
+            if not s:
+                continue
+            rec = per_symbol_agg.setdefault(s, {'symbol':s,'buy_volume':0.0,'sell_volume':0.0,'realized_pnl':0.0,'trades':0,'first_trade':None,'last_trade':None})
+            qty = float(r.get('qty') or 0.0)
+            gross = float(r.get('gross_amount') or 0.0)
+            # gross_amount was defined as proceeds for sells, negative for buys in our ledger convention earlier
+            # interpret buy vs sell
+            if r.get('action','').upper()=='BUY':
+                rec['buy_volume'] += abs(gross)
+            else:
+                rec['sell_volume'] += abs(gross)
+            # try to extract realized pnl from signal or trades_applied if present
+            # if 'net_amount' present, no direct realized pnl; we will approximate later
+            rec['trades'] += 1
+            dt = r.get('datetime_utc')
+            try:
+                dti = datetime.fromisoformat(dt.replace('Z','+00:00'))
+                if rec['first_trade'] is None or dti < rec['first_trade']:
+                    rec['first_trade'] = dti
+                if rec['last_trade'] is None or dti > rec['last_trade']:
+                    rec['last_trade'] = dti
+            except Exception:
+                pass
+
+# try to attach mark & unrealized using prices map
+for s, rec in per_symbol_agg.items():
+    node = syms.get(s,{})
+    bars = node.get('bars',[]) or []
+    if bars:
+        last_close = float(bars[-1].get('c') or 0.0)
+    else:
+        last_close = 0.0
+    rec['mark'] = last_close
+
+# write per-symbol CSV
+if per_symbol_agg:
+    df_sym = pd.DataFrame(list(per_symbol_agg.values()))
+    df_sym.to_csv(BASE_ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}_per_symbol.csv", index=False)
 
 # Generate charts and markdown summaries per portfolio and global
 from scripts.plot_helpers import plot_equity_curve, plot_drawdown, plot_benchmark_compare
@@ -259,6 +309,7 @@ from scripts.plot_helpers import plot_equity_curve, plot_drawdown, plot_benchmar
 md_lines = []
 md_lines.append(f"# Experiment summary: {EXPERIMENT_ID}\n")
 md_lines.append(f"Date range: {dates[0]} → {dates[-1]}\n")
+
 
 for p in all_portfolio_summaries:
     pid = p['portfolio_id']
