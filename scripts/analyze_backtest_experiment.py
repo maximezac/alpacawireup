@@ -165,19 +165,32 @@ for pid in selected:
     if days >= 7 and n_returns >= 5 and total_return is not None:
         cagr = annualize_return(float(eq.iloc[0]), float(eq.iloc[-1]), days)
 
-    # Volatility / Sharpe / Sortino: require reasonable non-zero sample size
+        # Volatility / Sharpe / Sortino: require reasonable non-zero sample size
     vol = None
     sharpe = None
     sortino = None
     sharpe_se = None
-    # prefer non_zero_returns for volatility estimate when available
-    if n_nonzero >= 60:
-        ann_vol = float(non_zero_returns.std(ddof=0) * math.sqrt(252))
+
+    # compute average days per sample to determine periods_per_year
+    periods_per_year = 252.0
+    if n_returns > 0:
+        total_days = (df_hist['date'].iloc[-1] - df_hist['date'].iloc[0]).days
+        avg_days = float(total_days) / float(n_returns) if n_returns > 0 else 1.0
+        if avg_days > 0:
+            periods_per_year = 365.25 / avg_days
+
+    # prefer non_zero_returns for volatility and Sharpe when available
+    if n_nonzero >= int(os.getenv('SHARPE_MIN_NONZERO','60')):
+        ann_vol = float(non_zero_returns.std(ddof=0) * math.sqrt(periods_per_year))
         vol = ann_vol
         if ann_vol > 1e-12:
-            sharpe = sharpe_ratio(non_zero_returns, RISK_FREE)
-        else:
-            sharpe = None
+            # annualize returns using periods_per_year
+            try:
+                ann_ret = (1.0 + non_zero_returns).prod()**(periods_per_year / float(len(non_zero_returns))) - 1.0
+            except Exception:
+                ann_ret = None
+            if ann_ret is not None:
+                sharpe = (ann_ret - RISK_FREE) / ann_vol if ann_vol > 0 else None
         sortino = sortino_ratio(non_zero_returns, RISK_FREE)
         # sharpe standard error (Lo 2002)
         if sharpe is not None:
@@ -188,8 +201,10 @@ for pid in selected:
     else:
         # fallback: if some returns exist but few non-zero, compute best-effort vol on all returns
         if n_returns > 0:
-            vol = float(daily_returns.std(ddof=0) * math.sqrt(252))
-            # don't compute Sharpe for small non-zero sample; mark as short_history
+            ann_vol = float(daily_returns.std(ddof=0) * math.sqrt(periods_per_year))
+            vol = ann_vol
+            # do not compute sharpe when nonzero sample too small; leave as None
+
 
     mdd = max_drawdown(eq)
 
@@ -357,6 +372,23 @@ for pid in selected:
 if all_portfolio_summaries:
     dfp = pd.DataFrame(all_portfolio_summaries)
     dfp.to_csv(BASE_ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}_per_portfolio.csv", index=False)
+    # Also write a focused data-quality report for quick inspection and LLM ingestion
+    dq_report = []
+    for r in all_portfolio_summaries:
+        dq_report.append({
+            'portfolio': r.get('portfolio_id'),
+            'initial_equity': r.get('initial_equity'),
+            'final_equity': r.get('final_equity'),
+            'period_days': r.get('period_days'),
+            'total_return': r.get('total_return'),
+            'cagr': r.get('cagr'),
+            'sharpe': r.get('sharpe'),
+            'sharpe_se': r.get('sharpe_se'),
+            'data_quality': ';'.join(r.get('data_quality') or [])
+        })
+    dq_df = pd.DataFrame(dq_report)
+    dq_df.to_csv(BASE_ARTIFACT_DIR / f"data_quality_report_{EXPERIMENT_ID}.csv", index=False)
+
 
 # Aggregate per-symbol across selected portfolios (aggregate realized/sell/buy/market_value)
 per_symbol_agg = {}

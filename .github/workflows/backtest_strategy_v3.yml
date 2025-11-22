@@ -59,10 +59,12 @@ jobs:
       # Only execute paper portfolios by default
       EXECUTE_SCOPE: paper
       EXECUTE_TAGS: backtest        # e.g. "backtest" if you tag certain portfolios
-      # Enable trade application + versioned artifacts
+      # Disable versioned per-snapshot artifacts for backtesting to avoid bloat
+      # This prevents update_performance_v3 from writing portfolio_value_<ts>.json snapshots
+      ARTIFACT_VERSIONED: "false"
+      V3_DISABLE_VERSIONED_ARTIFACTS: "1"
+      # Keep APPLY_TRADES configurable
       APPLY_TRADES: "${{ inputs.apply_trades }}"
-      ARTIFACT_VERSIONED: "true"
-      V3_DISABLE_VERSIONED_ARTIFACTS: "0"
       BACKTEST_NS_MAX_AGE_DAYS : 90
 
     steps:
@@ -153,6 +155,13 @@ jobs:
           if [ -f scripts/ci/list_artifacts_for_upload.sh ]; then
             chmod +x scripts/ci/list_artifacts_for_upload.sh
           fi
+
+      - name: Remove versioned portfolio_value snapshots (prevent upload)
+        run: |
+          echo "Removing versioned portfolio_value_*.json files to avoid uploading per-snapshot snapshots"
+          find data/portfolios -type f -name 'portfolio_value_*.json' -print -delete || true
+          find artifacts -type f -name 'portfolio_value_*.json' -print -delete || true
+        shell: bash
 
       - name: List artifact files to upload (debug)
         run: |
