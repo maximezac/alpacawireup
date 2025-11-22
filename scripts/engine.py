@@ -40,10 +40,49 @@ def read_json(path: str) -> Dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def _sanitize_for_json(obj):
+    """Recursively convert non-JSON-native values (NaN/Inf, numpy types) to None or native types."""
+    try:
+        import numpy as _np
+    except Exception:
+        _np = None
+
+    if obj is None:
+        return None
+    if isinstance(obj, float):
+        try:
+            if math.isnan(obj) or math.isinf(obj):
+                return None
+        except Exception:
+            return None
+        return obj
+    if _np is not None and isinstance(obj, _np.generic):
+        try:
+            val = obj.item()
+            return _sanitize_for_json(val)
+        except Exception:
+            return None
+    if isinstance(obj, dict):
+        return {str(k): _sanitize_for_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize_for_json(v) for v in obj]
+    if isinstance(obj, tuple):
+        return [_sanitize_for_json(v) for v in obj]
+    if isinstance(obj, (int, str, bool)):
+        return obj
+    # fallback: try to convert to str
+    try:
+        return str(obj)
+    except Exception:
+        return None
+
+
 def write_json(path: str, obj: Any) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
+    safe = _sanitize_for_json(obj)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(obj, f, indent=2)
+        json.dump(safe, f, indent=2)
+
 
 # engine.py
 
@@ -58,16 +97,7 @@ def _latest_px(node: dict) -> float:
     except:
         return 0.0
 
-def total_value(positions: dict, feed: dict) -> float:
-    syms = (feed or {}).get("symbols") or {}
-    val = 0.0
-    for sym, qty in positions.items():
-        node = syms.get(sym)
-        if not node:
-            continue
-        px = _latest_px(node)
-        val += float(qty) * px
-    return val
+
 
 
 def read_positions_csv(path: str) -> tuple[float, Dict[str, dict]]:

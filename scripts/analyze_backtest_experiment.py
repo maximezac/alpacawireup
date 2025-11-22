@@ -307,7 +307,7 @@ for pid in selected:
         'max_drawdown': float(mdd) if mdd is not None else None,
         'volatility_annual': float(vol) if vol is not None else None,
         'sharpe': float(sharpe) if sharpe is not None else None,
-        'sharpe_se': float(math.sqrt((1.0 + 0.5 * ((p_summary['sharpe'] if 'sharpe' in locals() and p_summary.get('sharpe') else 0.0)**2)) / max(n_returns,1))) if 'p_summary' not in locals() else None,
+        'sharpe_se': float(sharpe_se) if sharpe_se is not None else None,
         'sortino': float(sortino) if sortino is not None else None,
         'beta': float(beta) if beta is not None else None,
         'bench_cagr': float(bench_cagr) if bench_cagr is not None else None,
@@ -409,8 +409,7 @@ if per_symbol_agg:
     df_sym = pd.DataFrame(list(per_symbol_agg.values()))
     df_sym.to_csv(BASE_ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}_per_symbol.csv", index=False)
 
-# Generate charts and markdown summaries per portfolio and global
-from scripts.plot_helpers import plot_equity_curve, plot_drawdown, plot_benchmark_compare
+# Generate CSV/markdown summaries per portfolio and global (no PNG plots)
 
 md_lines = []
 md_lines.append(f"# Experiment summary: {EXPERIMENT_ID}\n")
@@ -423,8 +422,6 @@ if 'dates' in locals() and len(dates) > 0:
 else:
     md_lines.append("Date range: n/a\n")
 
-
-
 for p in all_portfolio_summaries:
     pid = p['portfolio_id']
     port_art = BASE_ARTIFACT_DIR / pid
@@ -434,51 +431,49 @@ for p in all_portfolio_summaries:
         continue
     dfh = pd.read_csv(hist_file, parse_dates=['date'])
     dfh = dfh.sort_values('date')
-    dates_str = [d.strftime('%Y-%m-%d') for d in dfh['date']]
-    equities = list(dfh['equity'])
-
-    eq_png = port_art / 'equity_curve.png'
-    dd_png = port_art / 'drawdown.png'
-    bench_png = port_art / 'benchmark_compare.png'
 
     # drawdown series
     roll_max = dfh['equity'].cummax()
-    drawdown = (dfh['equity'] / roll_max - 1.0).tolist()
+    dfh['drawdown'] = (dfh['equity'] / roll_max - 1.0)
 
-    # bench series aligned
+    # bench series aligned to dates (forward-fill)
     bench_close = build_close_series(BENCHMARK) if BENCHMARK in syms else pd.Series(dtype=float)
-    bench_aligned = None
     if not bench_close.empty:
-        bench_aligned = bench_close.reindex(dfh['date']).ffill().pct_change().fillna(0)
-        bench_cum = (1+bench_aligned).cumprod().fillna(method='ffill') * (dfh['equity'].iloc[0])
-        bench_series_vals = list(bench_cum)
+        bench_prices = bench_close.reindex(dfh['date']).ffill()
+        bench_prices = bench_prices.dropna()
+        if len(bench_prices) >= 2:
+            bench_returns = bench_prices.pct_change().dropna()
+            # scale benchmark cumulative to portfolio start equity for comparison
+            bench_cum = (1 + bench_returns).cumprod().reindex(dfh['date'], method='ffill') * dfh['equity'].iloc[0]
+            dfh['bench_cum'] = bench_cum.values
+        else:
+            dfh['bench_cum'] = [None] * len(dfh)
     else:
-        bench_series_vals = [None]*len(dates_str)
+        dfh['bench_cum'] = [None] * len(dfh)
 
-    # plot
-    plot_equity_curve(dates_str, equities, str(eq_png))
-    plot_drawdown(dates_str, drawdown, str(dd_png))
-    if bench_series_vals[0] is not None:
-        plot_benchmark_compare(dates_str, equities, bench_series_vals, str(bench_png))
+    # write enriched history CSV (date,equity,drawdown,bench_cum)
+    out_hist = port_art / 'history_enriched.csv'
+    dfh[['date','equity','drawdown','bench_cum']].to_csv(out_hist, index=False)
 
-    # per-portfolio markdown
+    # per-portfolio markdown summary
     pm = []
     pm.append(f"# Portfolio {pid} — Experiment {EXPERIMENT_ID}\n")
     pm.append(f"- Initial equity: {p.get('initial_equity')}\n")
     pm.append(f"- Final equity: {p.get('final_equity')}\n")
+    pm.append(f"- Period days: {p.get('period_days')}\n")
     pm.append(f"- Total return: {p.get('total_return')}\n")
     pm.append(f"- CAGR: {p.get('cagr')}\n")
-    pm.append(f"- Sharpe: {p.get('sharpe')}\n")
+    pm.append(f"- Sharpe: {p.get('sharpe')} (SE={p.get('sharpe_se')})\n")
     pm.append(f"- Sortino: {p.get('sortino')}\n")
     pm.append(f"- Max drawdown: {p.get('max_drawdown')}\n")
     pm.append(f"- Volatility (annual): {p.get('volatility_annual')}\n")
     pm.append(f"- Beta: {p.get('beta')}\n")
     pm.append('\n')
-    pm.append('## Charts\n')
-    pm.append(f'![Equity curve]({eq_png.name})\n')
-    pm.append(f'![Drawdown]({dd_png.name})\n')
-    if bench_series_vals[0] is not None:
-        pm.append(f'![Benchmark compare]({bench_png.name})\n')
+    pm.append('## Notes\n')
+    dq = p.get('data_quality') or []
+    if dq:
+        pm.append('Data quality flags: ' + ', '.join(dq) + '\n')
+    pm.append('\n')
 
     (port_art / 'summary.md').write_text('\n'.join(pm), encoding='utf-8')
 
@@ -488,6 +483,7 @@ for p in all_portfolio_summaries:
     md_lines.append(f"- total_return: {p.get('total_return')}\n")
     md_lines.append(f"- sharpe: {p.get('sharpe')}\n")
     md_lines.append('\n')
+
 
 # Write global markdown
 md_path = ARTIFACT_DIR / f"experiment_summary_{EXPERIMENT_ID}.md"
