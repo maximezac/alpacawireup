@@ -1,0 +1,489 @@
+{
+  "as_of_utc": "2025-11-12T20:43:57.730396+00:00",
+  "portfolio_id": "portfolio_max_personal",
+  "meta": {
+    "title": "Max Personal",
+    "trade_scope": "real",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.03,
+    "max_deploy_frac": null,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "personal"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 64.72,
+      "qty_hint": 7.49,
+      "reason": "score<sell",
+      "score": -0.322809,
+      "qty": 1,
+      "notional": 64.72,
+      "signals": {
+        "TS": -0.565035,
+        "NS": 0.04053,
+        "CDS": -0.322809,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 70.57585906587758,
+        "ema_slow": 71.16763121466121,
+        "macd": -0.5917721487836332,
+        "macd_signal": 1.5603868549555742,
+        "macd_hist": -2.1521590037392073,
+        "macd_hist_prev": -2.141307603505533,
+        "rsi14": 33.32846349242017,
+        "sma20": 74.64400000000006
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T15:18:16+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "B. Riley Estimates AST SpaceMobile FY2027 Earnings"
+        },
+        {
+          "ts": "2025-11-12T15:18:14+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Analysts Issue Forecasts for AST SpaceMobile FY2028 Earnings"
+        },
+        {
+          "ts": "2025-11-12T14:27:56+00:00",
+          "source": "marketbeat",
+          "tone": 0.7259979909888902,
+          "headline": "FY2025 EPS Estimate for AST SpaceMobile Boosted by Analyst"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 26.22,
+      "qty_hint": 230.08,
+      "reason": "score<sell",
+      "score": -0.293991,
+      "qty": 57,
+      "notional": 1494.54,
+      "signals": {
+        "TS": -0.575604,
+        "NS": 0.128429,
+        "CDS": -0.293991,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 30.440349330276298,
+        "ema_slow": 31.062777249657366,
+        "macd": -0.6224279193810673,
+        "macd_signal": 0.4974085407687744,
+        "macd_hist": -1.1198364601498416,
+        "macd_hist_prev": -1.0198815132914738,
+        "rsi14": 32.300428004167614,
+        "sma20": 32.35524999999998
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T20:04:41+00:00",
+          "source": "fxleaders",
+          "tone": -0.49387926012950006,
+          "headline": "D-Wave Unravels After Weak Earnings, QBTS Stock Breaks Below Support"
+        },
+        {
+          "ts": "2025-11-12T19:12:14+00:00",
+          "source": "zacksinvestmentresearch",
+          "tone": -0.7266718216867512,
+          "headline": "QBTS Momentum Builds Post Q3 But Valuation Risk Stays: Buy or Wait?"
+        },
+        {
+          "ts": "2025-11-12T19:01:43+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum Options Trading: A Deep Dive into Market Sentiment"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 28.28,
+      "qty_hint": 6.17,
+      "reason": "score<sell",
+      "score": -0.338504,
+      "qty": 1,
+      "notional": 28.28,
+      "signals": {
+        "TS": -0.628058,
+        "NS": 0.095826,
+        "CDS": -0.338504,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 35.201548596010426,
+        "ema_slow": 36.648830472453945,
+        "macd": -1.447281876443519,
+        "macd_signal": 0.3380500722159184,
+        "macd_hist": -1.7853319486594372,
+        "macd_hist_prev": -1.642707992527809,
+        "rsi14": 26.23002925495733,
+        "sma20": 38.398749999999986
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T20:24:46+00:00",
+          "source": "fxleaders",
+          "tone": 0.6955073978566594,
+          "headline": "Rigetti\u2019s Speculative Run Ends As RGTI Stock Break Last Support \u2013 Where Next?"
+        },
+        {
+          "ts": "2025-11-12T17:13:12+00:00",
+          "source": "tipranks",
+          "tone": 0.5875713962036387,
+          "headline": "Why Rigetti Computing Shares Are Slipping"
+        },
+        {
+          "ts": "2025-11-12T16:40:52+00:00",
+          "source": "marketbeat",
+          "tone": -0.3102516561059492,
+          "headline": "Rigetti Computing (NASDAQ:RGTI) Price Target Lowered to $35.00 at B. Riley"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 50.23,
+      "qty_hint": 6.27,
+      "reason": "score<sell",
+      "score": -0.295524,
+      "qty": 1,
+      "notional": 50.23,
+      "signals": {
+        "TS": -0.611509,
+        "NS": 0.178454,
+        "CDS": -0.295524,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 55.45127016201538,
+        "ema_slow": 57.386661372270204,
+        "macd": -1.9353912102548207,
+        "macd_signal": -0.040513297666723624,
+        "macd_hist": -1.8948779125880972,
+        "macd_hist_prev": -1.991808452877581,
+        "rsi14": 28.154449589555156,
+        "sma20": 60.15424999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T19:26:18+00:00",
+          "source": "tradingview",
+          "tone": 0.681526982846956,
+          "headline": "Rocket Lab Stock Extends Rally After Record Launch Contracts and Strong Q4 Guidance"
+        },
+        {
+          "ts": "2025-11-12T19:22:48+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "Space Beats Silicon: Rocket Lab, Planet Labs, And Archer Aviation Outshine Nvidia In 2025"
+        },
+        {
+          "ts": "2025-11-12T19:00:44+00:00",
+          "source": "benzinga",
+          "tone": 0.166752904529509,
+          "headline": "How Is The Market Feeling About Rocket Lab Corp?"
+        }
+      ]
+    },
+    {
+      "symbol": "EFA",
+      "action": "BUY",
+      "px": 96.595,
+      "qty_hint": 0.0,
+      "reason": "score>buy|topped_by_rotation",
+      "score": 0.591562,
+      "qty": 5.727704,
+      "notional": 553.27,
+      "signals": {
+        "TS": 0.616572,
+        "NS": 0.554046,
+        "CDS": 0.591562,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 95.04323631788805,
+        "ema_slow": 94.58762073268147,
+        "macd": 0.45561558520657286,
+        "macd_signal": 0.35027084300215755,
+        "macd_hist": 0.10534474220441531,
+        "macd_hist_prev": 0.010132417847921515,
+        "rsi14": 73.20152983192047,
+        "sma20": 94.86124999999996
+      },
+      "phase": "mid",
+      "size_k": 0.75,
+      "qty_prev": 0.931725,
+      "news_preview": [
+        {
+          "ts": "2025-11-12T12:16:00+00:00",
+          "source": "seekingalpha",
+          "tone": 0.7548380271948566,
+          "headline": "2026 Macroeconomic Outlook: Treading A Finer Line"
+        },
+        {
+          "ts": "2025-11-12T09:30:00+00:00",
+          "source": "seekingalpha",
+          "tone": 0.47071722230872,
+          "headline": "Even As Global Uncertainty Surges, Economic Sentiment Remains Positive"
+        },
+        {
+          "ts": "2025-11-12T08:18:46+00:00",
+          "source": "newsercom",
+          "tone": 0.5406737637844086,
+          "headline": "Will EFA stock announce a stock split - July 2025 Trade Ideas & Safe Capital Growth Stock Tips"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 28.28,
+      "qty": 1.5425,
+      "notional": 43.62,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.628058,
+        "NS": 0.095826,
+        "CDS": -0.338504,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 35.201548596010426,
+        "ema_slow": 36.648830472453945,
+        "macd": -1.447281876443519,
+        "macd_signal": 0.3380500722159184,
+        "macd_hist": -1.7853319486594372,
+        "macd_hist_prev": -1.642707992527809,
+        "rsi": 26.23002925495733,
+        "sma20": 38.398749999999986,
+        "price": 28.28
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T20:24:46+00:00",
+          "source": "fxleaders",
+          "tone": 0.6955073978566594,
+          "headline": "Rigetti\u2019s Speculative Run Ends As RGTI Stock Break Last Support \u2013 Where Next?"
+        },
+        {
+          "ts": "2025-11-12T17:13:12+00:00",
+          "source": "tipranks",
+          "tone": 0.5875713962036387,
+          "headline": "Why Rigetti Computing Shares Are Slipping"
+        },
+        {
+          "ts": "2025-11-12T16:40:52+00:00",
+          "source": "marketbeat",
+          "tone": -0.3102516561059492,
+          "headline": "Rigetti Computing (NASDAQ:RGTI) Price Target Lowered to $35.00 at B. Riley"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 64.72,
+      "qty": 1.8725,
+      "notional": 121.19,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.565035,
+        "NS": 0.04053,
+        "CDS": -0.322809,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 70.57585906587758,
+        "ema_slow": 71.16763121466121,
+        "macd": -0.5917721487836332,
+        "macd_signal": 1.5603868549555742,
+        "macd_hist": -2.1521590037392073,
+        "macd_hist_prev": -2.141307603505533,
+        "rsi": 33.32846349242017,
+        "sma20": 74.64400000000006,
+        "price": 64.72
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T15:18:16+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "B. Riley Estimates AST SpaceMobile FY2027 Earnings"
+        },
+        {
+          "ts": "2025-11-12T15:18:14+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Analysts Issue Forecasts for AST SpaceMobile FY2028 Earnings"
+        },
+        {
+          "ts": "2025-11-12T14:27:56+00:00",
+          "source": "marketbeat",
+          "tone": 0.7259979909888902,
+          "headline": "FY2025 EPS Estimate for AST SpaceMobile Boosted by Analyst"
+        }
+      ]
+    },
+    {
+      "symbol": "ZS",
+      "action": "SELL",
+      "px": 317.99,
+      "qty": 0.325,
+      "notional": 103.35,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.470204,
+        "NS": -0.044186,
+        "CDS": -0.299797,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 323.179754280301,
+        "ema_slow": 317.15662224746666,
+        "macd": 6.023132032834326,
+        "macd_signal": 7.158650434510919,
+        "macd_hist": -1.1355184016765936,
+        "macd_hist_prev": -0.4091360945656479,
+        "rsi": 44.49970761712429,
+        "sma20": 319.9662500000002,
+        "price": 317.99
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T16:35:57+00:00",
+          "source": "gurufocus",
+          "tone": -0.589965590178722,
+          "headline": "Barclays Raises Price Target for Zscaler (ZS) to $350, Maintains Overweight Rating | ZS Stock News"
+        },
+        {
+          "ts": "2025-11-12T15:58:40+00:00",
+          "source": "benzinga",
+          "tone": -0.4416329921702539,
+          "headline": "Barclays Maintains Overweight on Zscaler, Raises Price Target to $350"
+        },
+        {
+          "ts": "2025-11-12T10:17:34+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.5631722979700053,
+          "headline": "1 Growth Stock Set to Flourishand 2 Facing Headwinds"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 50.23,
+      "qty": 1.5675,
+      "notional": 78.74,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.611509,
+        "NS": 0.178454,
+        "CDS": -0.295524,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 55.45127016201538,
+        "ema_slow": 57.386661372270204,
+        "macd": -1.9353912102548207,
+        "macd_signal": -0.040513297666723624,
+        "macd_hist": -1.8948779125880972,
+        "macd_hist_prev": -1.991808452877581,
+        "rsi": 28.154449589555156,
+        "sma20": 60.15424999999999,
+        "price": 50.23
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T19:26:18+00:00",
+          "source": "tradingview",
+          "tone": 0.681526982846956,
+          "headline": "Rocket Lab Stock Extends Rally After Record Launch Contracts and Strong Q4 Guidance"
+        },
+        {
+          "ts": "2025-11-12T19:22:48+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "Space Beats Silicon: Rocket Lab, Planet Labs, And Archer Aviation Outshine Nvidia In 2025"
+        },
+        {
+          "ts": "2025-11-12T19:00:44+00:00",
+          "source": "benzinga",
+          "tone": 0.166752904529509,
+          "headline": "How Is The Market Feeling About Rocket Lab Corp?"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 26.22,
+      "qty": 4.438414,
+      "notional": 116.38,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.575604,
+        "NS": 0.128429,
+        "CDS": -0.293991,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 30.440349330276298,
+        "ema_slow": 31.062777249657366,
+        "macd": -0.6224279193810673,
+        "macd_signal": 0.4974085407687744,
+        "macd_hist": -1.1198364601498416,
+        "macd_hist_prev": -1.0198815132914738,
+        "rsi": 32.300428004167614,
+        "sma20": 32.35524999999998,
+        "price": 26.22
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-12T20:04:41+00:00",
+          "source": "fxleaders",
+          "tone": -0.49387926012950006,
+          "headline": "D-Wave Unravels After Weak Earnings, QBTS Stock Breaks Below Support"
+        },
+        {
+          "ts": "2025-11-12T19:12:14+00:00",
+          "source": "zacksinvestmentresearch",
+          "tone": -0.7266718216867512,
+          "headline": "QBTS Momentum Builds Post Q3 But Valuation Risk Stays: Buy or Wait?"
+        },
+        {
+          "ts": "2025-11-12T19:01:43+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum Options Trading: A Deep Dive into Market Sentiment"
+        }
+      ]
+    }
+  ]
+}

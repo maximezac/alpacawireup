@@ -1,0 +1,162 @@
+{
+  "as_of_utc": "2025-11-11T17:15:32.941800+00:00",
+  "portfolio_id": "portfolio_max_personal",
+  "meta": {
+    "title": "Max Personal",
+    "trade_scope": "real",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.03,
+    "max_deploy_frac": null,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "personal"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 11.835,
+      "qty_hint": 75.39,
+      "reason": "score<sell",
+      "score": -0.297977,
+      "qty": 18,
+      "notional": 213.03,
+      "signals": {
+        "TS": -0.646341,
+        "NS": 0.224568,
+        "CDS": -0.297977,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.15474204773345,
+        "ema_slow": 15.75878020111043,
+        "macd": -1.6040381533769796,
+        "macd_signal": -1.247144731728029,
+        "macd_hist": -0.35689342164895055,
+        "macd_hist_prev": -0.3382479117439412,
+        "rsi14": 25.50191481355263,
+        "sma20": 15.480999999999995
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T14:45:00+00:00",
+          "source": "quiverquantitative",
+          "tone": 0.0,
+          "headline": "$QUBT stock is down 3% today. Here's what we see in our data."
+        },
+        {
+          "ts": "2025-11-11T13:08:00+00:00",
+          "source": "investorsbusinessdaily",
+          "tone": 0.6526659854635465,
+          "headline": "Quantum Computing Stocks: Rigetti Earnings Beat, Revenue Light"
+        },
+        {
+          "ts": "2025-11-11T12:04:20+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "POET Technologies And Quantum Computing Inc. Collaborate To Develop 3.2 Tbps Optical Engines For Quantum Computing"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 30.72,
+      "qty_hint": 10.17,
+      "reason": "score<sell",
+      "score": -0.330786,
+      "qty": 2,
+      "notional": 61.44,
+      "signals": {
+        "TS": -0.591035,
+        "NS": 0.059586,
+        "CDS": -0.330786,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 36.353858130949384,
+        "ema_slow": 37.267225886182835,
+        "macd": -0.9133677552334518,
+        "macd_signal": 0.7733743843668128,
+        "macd_hist": -1.6867421396002646,
+        "macd_hist_prev": -1.6078679034041599,
+        "rsi14": 30.483354824942893,
+        "sma20": 39.76724999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T17:07:54+00:00",
+          "source": "seekingalpha",
+          "tone": -0.2244636661718785,
+          "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+        },
+        {
+          "ts": "2025-11-11T16:58:53+00:00",
+          "source": "benzinga",
+          "tone": 0.6384825754470328,
+          "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+        },
+        {
+          "ts": "2025-11-11T16:04:16+00:00",
+          "source": "schaeffersinvestmentresearch",
+          "tone": -0.4740513030995904,
+          "headline": "Quantum Computing Stock Slides on Revenue Miss"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 69.81,
+      "qty_hint": 8.49,
+      "reason": "score<sell",
+      "score": -0.296146,
+      "qty": 2,
+      "notional": 139.62,
+      "signals": {
+        "TS": -0.482519,
+        "NS": -0.016586,
+        "CDS": -0.296146,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 71.9467145603728,
+        "ema_slow": 71.83084966493848,
+        "macd": 0.11586489543431355,
+        "macd_signal": 2.130175091144159,
+        "macd_hist": -2.0143101957098453,
+        "macd_hist_prev": -2.2910621614009723,
+        "rsi14": 43.39471929923673,
+        "sma20": 76.29150000000007
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T16:11:58+00:00",
+          "source": "tradingview",
+          "tone": 0.5413566228056436,
+          "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
+        },
+        {
+          "ts": "2025-11-11T15:10:02+00:00",
+          "source": "sharewisecom",
+          "tone": -0.5607221966182713,
+          "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
+        },
+        {
+          "ts": "2025-11-11T14:00:07+00:00",
+          "source": "seekingalpha",
+          "tone": 0.0,
+          "headline": "4 stocks to watch on Tuesday: NVDA, META, NBIS, ASTS (SP500:)"
+        }
+      ]
+    }
+  ]
+}

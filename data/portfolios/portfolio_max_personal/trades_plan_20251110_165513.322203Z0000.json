@@ -1,0 +1,162 @@
+{
+  "as_of_utc": "2025-11-10T16:55:13.322203+00:00",
+  "portfolio_id": "portfolio_max_personal",
+  "meta": {
+    "title": "Max Personal",
+    "trade_scope": "real",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.03,
+    "max_deploy_frac": null,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "personal"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 28.66,
+      "qty_hint": 230.08,
+      "reason": "score<sell",
+      "score": -0.275738,
+      "qty": 57,
+      "notional": 1633.62,
+      "signals": {
+        "TS": -0.51779,
+        "NS": 0.087341,
+        "CDS": -0.275738,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 31.501390641206,
+        "ema_slow": 31.594363547236075,
+        "macd": -0.09297290603007369,
+        "macd_signal": 1.021169920773404,
+        "macd_hist": -1.1141428268034776,
+        "macd_hist_prev": -1.1108111370639642,
+        "rsi14": 39.09973361784686,
+        "sma20": 33.951499999999974
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T16:02:43+00:00",
+          "source": "investingcom",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum stock price target raised to $35 from $20 at Benchmark"
+        },
+        {
+          "ts": "2025-11-10T15:47:30+00:00",
+          "source": "gurufocus",
+          "tone": 0.0,
+          "headline": "QBTS: Benchmark Raises Price Target, Maintains Buy Rating | QBTS Stock News"
+        },
+        {
+          "ts": "2025-11-10T15:36:18+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum To Unveil Next-Gen Hybrid Tech To Power AI And Supercomputing Boom"
+        }
+      ]
+    },
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 12.68,
+      "qty_hint": 75.39,
+      "reason": "score<sell",
+      "score": -0.368823,
+      "qty": 18,
+      "notional": 228.24,
+      "signals": {
+        "TS": -0.612312,
+        "NS": -0.003588,
+        "CDS": -0.368823,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.575744098370297,
+        "ema_slow": 16.072312168712767,
+        "macd": -1.4965680703424695,
+        "macd_signal": -1.1580010335189126,
+        "macd_hist": -0.33856703682355693,
+        "macd_hist_prev": -0.3499130243682316,
+        "rsi14": 29.538673742730467,
+        "sma20": 15.976499999999996
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T08:38:14+00:00",
+          "source": "newsercom",
+          "tone": 0.33748771917394804,
+          "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
+        },
+        {
+          "ts": "2025-11-10T06:36:58+00:00",
+          "source": "newsercom",
+          "tone": -0.5649944460655115,
+          "headline": "Will QUBT stock return to pre crisis levels - Earnings Miss & Real-Time Chart Breakout Alerts"
+        },
+        {
+          "ts": "2025-11-10T06:09:09+00:00",
+          "source": "newsercom",
+          "tone": -0.5595636780517733,
+          "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 32.92,
+      "qty_hint": 10.17,
+      "reason": "score<sell",
+      "score": -0.290446,
+      "qty": 2,
+      "notional": 65.84,
+      "signals": {
+        "TS": -0.554187,
+        "NS": 0.105165,
+        "CDS": -0.290446,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 37.361272896017105,
+        "ema_slow": 37.78285566943622,
+        "macd": -0.421582773419118,
+        "macd_signal": 1.1933051386487856,
+        "macd_hist": -1.6148879120679036,
+        "macd_hist_prev": -1.6001341807275768,
+        "rsi14": 34.755546560123605,
+        "sma20": 41.032499999999985
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.2551810918581027,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
+        },
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.25518107924524597,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
+        },
+        {
+          "ts": "2025-11-10T12:18:52+00:00",
+          "source": "tradingview",
+          "tone": 0.0,
+          "headline": "Rigetti Stock Soars 2,000% in a Year -- All Eyes on Q3 Earnings Tonight"
+        }
+      ]
+    }
+  ]
+}

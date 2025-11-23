@@ -1,0 +1,123 @@
+# Portfolio definitions for v3 engine. Each portfolio can:
+# - reference a CSV of positions (with __CASH__), or a static list
+# - define sizing / caps / trim policy
+# - pick a strategy preset from strategies.yaml
+# - optionally restrict execution scope in update_performance_v3.py
+
+defaults:
+  sizing:
+    # universal sane defaults (can be overridden per portfolio)
+    # caps are fractions of equity (+cash)
+    max_deploy_frac: 0.35
+    per_line_frac:  0.10
+    sell_trim_fraction: 0.25
+  exec:
+    slippage_bps: 10
+    liq_impact_smallcap_bps: 5
+    smallcaps: ["QBTS","QUBT","RGTI","ASTS","RKLB","SOFI"]
+
+portfolios:
+
+  # ===== PERSONAL VARIANTS =====
+  portfolio_max_personal:
+    enabled: true
+    type: personal
+    desc: "Primary personal portfolio Max"
+    positions_csv: positions.csv
+    strategy: default
+    trade_scope: real
+    sizing:
+      per_line_frac: 0.07
+      trim_fraction: 0.30
+
+  portfolio_max_autotrader:
+    enabled: true
+    type: paper
+    desc: "Paper personal portfolio Max"
+    positions_csv: positions.csv
+    strategy: default
+    trade_scope: paper
+    sizing:
+      per_line_frac: 0.10
+      trim_fraction: 0.35
+
+  portfolio_max_TS_only:
+    enabled: true
+    type: personal
+    desc: "Personal—TS-only signal focus"
+    positions_csv: positions.csv
+    strategy: ts_only
+    trade_scope: personal
+    sizing:
+      per_line_frac: 0.02
+
+  portfolio_max_NS_higher_weight:
+    enabled: false
+    type: personal
+    desc: "Personal—NS heavier"
+    positions_csv: data/portfolio_personal.csv
+    strategy: ns_heavy
+    sizing:
+      per_line_frac: 0.02
+
+  portfolio_nicky_personal:
+    enabled: false
+    type: personal
+    desc: "Personal—Nicky"
+    positions_csv: data/portfolio_nicky.csv
+    strategy: conservative
+    sizing:
+      per_line_frac: 0.015
+
+  portfolio_vince_personal:
+    enabled: false
+    type: personal
+    desc: "Personal—Vince"
+    positions_csv: data/portfolio_vince.csv
+    strategy: default
+    sizing:
+      per_line_frac: 0.02
+
+  # ===== PAPER VARIANTS =====
+  portfolio_paper_aggressive_trades:
+    enabled: true
+    type: paper
+    desc: "Paper—aggressive"
+    positions_csv: positions.csv
+    strategy: aggressive
+    trade_scope: paper
+    sizing:
+      max_deploy_frac: 0.20
+      per_line_frac:  0.05
+      trim_fraction: 0.25
+
+  portfolio_paper_reasonable:
+    enabled: true
+    type: paper
+    desc: "Paper—reasonable (baseline)"
+    positions_csv: positions.csv
+    strategy: default
+    trade_scope: paper
+    sizing:
+      max_deploy_frac: 0.15
+      per_line_frac:  0.04
+
+  portfolio_paper_TS_only:
+    enabled: false
+    type: paper
+    desc: "Paper—TS only"
+    positions_csv: data/portfolio_paper.csv
+    strategy: ts_only
+    sizing:
+      max_deploy_frac: 0.15
+      per_line_frac:  0.04
+
+  portfolio_paper_NS_higher_weight:
+    enabled: false
+    type: paper
+    desc: "Paper—NS heavier"
+    positions_csv: data/portfolio_paper.csv
+    strategy: ns_heavy
+    sizing:
+      max_deploy_frac: 0.15
+      per_line_frac:  0.04

@@ -139,53 +139,6 @@ def main():
                     tags = node.get('tags', []) or []
                     if f'variant:{name}' not in tags:
                         tags.append(f'variant:{name}')
-
-                    # Apply simple variant-level overrides if present in the variant dict
-                    # Supported override keys: per_line_frac, trim_fraction, fractional_buys, decision_source,
-                    # ns_weight_boost, max_deploy_frac, rotation (dict)
-                    for k in ('per_line_frac','trim_fraction','fractional_buys','decision_source','ns_weight_boost','max_deploy_frac','rotation'):
-                        if k in v:
-                            node[k] = v[k]
-
-                    # Profile presets (shorthand for grouped portfolio tweaks)
-                    profile = v.get('profile')
-                    if profile == 'low_churn':
-                        rot = node.get('rotation', {}) or {}
-                        rot.update({
-                            'trigger_cds': 0.60,
-                            'min_gap': 0.40,
-                            'max_turnover_frac': 0.05,
-                            'sell_step_frac': 0.15,
-                            'protect_profitable': True,
-                        })
-                        node['rotation'] = rot
-                        # prefer slightly smaller daily per-line sizing for low churn
-                        try:
-                            node['per_line_frac'] = float(node.get('per_line_frac', base_cfg.get('defaults', {}).get('per_line_frac', 0.10))) * 0.9
-                        except Exception:
-                            node['per_line_frac'] = 0.09
-                        tags.append('profile:low_churn')
-
-                    if profile == 'freq_safe':
-                        # Reduce per-line sizing and daily deploy to be safe for higher-frequency cadence
-                        try:
-                            node['per_line_frac'] = float(node.get('per_line_frac', base_cfg.get('defaults', {}).get('per_line_frac', 0.10))) * 0.5
-                        except Exception:
-                            node['per_line_frac'] = 0.05
-                        try:
-                            node['max_deploy_frac'] = float(node.get('max_deploy_frac', base_cfg.get('defaults', {}).get('max_deploy_frac', 0.30))) * 0.7
-                        except Exception:
-                            node['max_deploy_frac'] = 0.21
-                        node['fractional_buys'] = True
-                        tags.append('profile:freq_safe')
-
-                    # Decision source override (explicit TS_ONLY or NS_ONLY)
-                    if 'decision_source' in node:
-                        # leave as-is
-                        pass
-                    elif 'decision_source' in v:
-                        node['decision_source'] = v['decision_source']
-
                     node['tags'] = tags
                     cfg_copy['portfolios'][pid] = node
                 tmp_cfg.write_text(yaml.safe_dump(cfg_copy), encoding='utf-8')

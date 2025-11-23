@@ -1,0 +1,115 @@
+{
+  "as_of_utc": "2025-11-10T18:18:36.114344+00:00",
+  "portfolio_id": "portfolio_max_personal",
+  "meta": {
+    "title": "Max Personal",
+    "trade_scope": "real",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.03,
+    "max_deploy_frac": null,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "personal"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 12.87,
+      "qty_hint": 75.39,
+      "reason": "score<sell",
+      "score": -0.404359,
+      "qty": 18,
+      "notional": 231.66,
+      "signals": {
+        "TS": -0.604071,
+        "NS": -0.10479,
+        "CDS": -0.404359,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.604974867601067,
+        "ema_slow": 16.08638624278684,
+        "macd": -1.4814113751857736,
+        "macd_signal": -1.1549696944875734,
+        "macd_hist": -0.32644168069820023,
+        "macd_hist_prev": -0.3499130243682316,
+        "rsi14": 30.54321590319074,
+        "sma20": 15.985999999999995
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T08:38:14+00:00",
+          "source": "newsercom",
+          "tone": 0.3278116508115755,
+          "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
+        },
+        {
+          "ts": "2025-11-10T06:36:58+00:00",
+          "source": "newsercom",
+          "tone": -0.5487955622063322,
+          "headline": "Will QUBT stock return to pre crisis levels - Earnings Miss & Real-Time Chart Breakout Alerts"
+        },
+        {
+          "ts": "2025-11-10T06:09:09+00:00",
+          "source": "newsercom",
+          "tone": -0.5435204971513642,
+          "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 33.865,
+      "qty_hint": 10.17,
+      "reason": "score<sell",
+      "score": -0.285526,
+      "qty": 2,
+      "notional": 67.73,
+      "signals": {
+        "TS": -0.537366,
+        "NS": 0.092234,
+        "CDS": -0.285526,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 37.50665751140172,
+        "ema_slow": 37.852855669436224,
+        "macd": -0.34619815803450393,
+        "macd_signal": 1.2083820617257084,
+        "macd_hist": -1.5545802197602123,
+        "macd_hist_prev": -1.6001341807275768,
+        "rsi14": 36.807925672196674,
+        "sma20": 41.07974999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.24786693000229196,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
+        },
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.24786691810955655,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
+        },
+        {
+          "ts": "2025-11-10T13:03:16+00:00",
+          "source": "asktraderscom",
+          "tone": 0.0,
+          "headline": "Rigetti Computing (RGTI) 40% off Highs Ahead of Earnings"
+        }
+      ]
+    }
+  ]
+}

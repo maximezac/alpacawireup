@@ -1,0 +1,209 @@
+{
+  "as_of_utc": "2025-11-07T23:01:45.680657+00:00",
+  "portfolio_id": "portfolio_max_personal",
+  "meta": {
+    "title": "Max Personal",
+    "trade_scope": "real",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.03,
+    "max_deploy_frac": null,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "personal"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 12.86,
+      "qty_hint": 75.39,
+      "reason": "score<sell",
+      "score": -0.404722,
+      "qty": 18,
+      "notional": 231.48,
+      "signals": {
+        "TS": -0.603998,
+        "NS": -0.105808,
+        "CDS": -0.404722,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.920424843528536,
+        "ema_slow": 16.34369736539872,
+        "macd": -1.4232725218701852,
+        "macd_signal": -1.073359602532031,
+        "macd_hist": -0.34991291933815405,
+        "macd_hist_prev": -0.34146423958122163,
+        "rsi14": 30.427151809304206,
+        "sma20": 16.413999999999994
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T15:37:27+00:00",
+          "source": "newsercom",
+          "tone": -0.5292383992515479,
+          "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
+        },
+        {
+          "ts": "2025-11-07T15:05:58+00:00",
+          "source": "stockstotrade",
+          "tone": 0.0,
+          "headline": "Quantum Computing Inc. (QUBT) Stock Price | Live Quotes & Charts | NSC"
+        },
+        {
+          "ts": "2025-11-07T14:50:36+00:00",
+          "source": "newsercom",
+          "tone": -0.59247737544057,
+          "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 51.635,
+      "qty_hint": 6.27,
+      "reason": "score<sell",
+      "score": -0.336428,
+      "qty": 1,
+      "notional": 51.63,
+      "signals": {
+        "TS": -0.590189,
+        "NS": 0.044213,
+        "CDS": -0.336428,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 58.32388470769932,
+        "ema_slow": 59.022596555821025,
+        "macd": -0.6987118481217038,
+        "macd_signal": 1.4529003581810125,
+        "macd_hist": -2.1516122063027163,
+        "macd_hist_prev": -2.0643621263987457,
+        "rsi14": 30.272258092627183,
+        "sma20": 62.62025
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T17:08:14+00:00",
+          "source": "moneymorning",
+          "tone": 0.5112197315578401,
+          "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
+        },
+        {
+          "ts": "2025-11-07T15:56:56+00:00",
+          "source": "msn",
+          "tone": 0.0,
+          "headline": "Rocket Lab USA Q3 preview: What to Expect"
+        },
+        {
+          "ts": "2025-11-07T11:01:04+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Strs Ohio Has $1.10 Million Stake in Rocket Lab Corporation $RKLB"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 33.765,
+      "qty_hint": 10.17,
+      "reason": "score<sell",
+      "score": -0.310336,
+      "qty": 2,
+      "notional": 67.53,
+      "signals": {
+        "TS": -0.53846,
+        "NS": 0.031849,
+        "CDS": -0.310336,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 38.1687770589293,
+        "ema_slow": 38.17188429707849,
+        "macd": -0.003107238149191005,
+        "macd_signal": 1.5970268606549347,
+        "macd_hist": -1.6001340988041257,
+        "macd_hist_prev": -1.5520316292842873,
+        "rsi14": 36.44451111785996,
+        "sma20": 42.13399999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T17:39:00+00:00",
+          "source": "tradingview",
+          "tone": 0.0,
+          "headline": "Rigetti Pre-Q3 Earnings Analysis: Buy, Sell or Hold the Stock?"
+        },
+        {
+          "ts": "2025-11-07T14:12:47+00:00",
+          "source": "sherwoodnews",
+          "tone": 0.0,
+          "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
+        },
+        {
+          "ts": "2025-11-07T14:01:30+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "Insights into Rigetti Computing's Upcoming Earnings"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 69.21,
+      "qty_hint": 8.49,
+      "reason": "score<sell",
+      "score": -0.262526,
+      "qty": 2,
+      "notional": 138.42,
+      "signals": {
+        "TS": -0.497663,
+        "NS": 0.090178,
+        "CDS": -0.262526,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 72.99251868349589,
+        "ema_slow": 72.25431907132457,
+        "macd": 0.7381996121713144,
+        "macd_signal": 3.206518147862554,
+        "macd_hist": -2.46831853569124,
+        "macd_hist_prev": -2.6412130255934985,
+        "rsi14": 41.286732200437456,
+        "sma20": 78.61100000000008
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T15:05:12+00:00",
+          "source": "parameterio",
+          "tone": 0.0,
+          "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
+        },
+        {
+          "ts": "2025-11-07T14:01:47+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+        },
+        {
+          "ts": "2025-11-07T10:26:33+00:00",
+          "source": "benzinga",
+          "tone": 0.3318505977896922,
+          "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
+        }
+      ]
+    }
+  ]
+}

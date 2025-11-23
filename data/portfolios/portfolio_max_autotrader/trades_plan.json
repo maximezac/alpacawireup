@@ -1,0 +1,492 @@
+{
+  "as_of_utc": "2025-11-13T20:45:05.824330+00:00",
+  "portfolio_id": "portfolio_max_autotrader",
+  "meta": {
+    "title": "AutoTrade my portfolio",
+    "trade_scope": "paper",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.1,
+    "max_deploy_frac": 0.3,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "paper"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 61.885,
+      "qty_hint": 4.6175,
+      "reason": "score<sell",
+      "score": -0.421861,
+      "qty": 1,
+      "notional": 61.88,
+      "signals": {
+        "TS": -0.60117,
+        "NS": -0.152898,
+        "CDS": -0.421861,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 69.2192771977544,
+        "ema_slow": 70.46974093684885,
+        "macd": -1.2504637390944566,
+        "macd_signal": 0.9963020788820399,
+        "macd_hist": -2.2467658179764967,
+        "macd_hist_prev": -2.1617316023722726,
+        "rsi14": 29.047391932652616,
+        "sma20": 73.25575000000006
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T16:53:23+00:00",
+          "source": "marketbeat",
+          "tone": -0.311647066179981,
+          "headline": "Q4 EPS Estimates for AST SpaceMobile Lowered by Roth Capital"
+        },
+        {
+          "ts": "2025-11-13T16:53:20+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Q4 Earnings Forecast for AST SpaceMobile Issued By B. Riley"
+        },
+        {
+          "ts": "2025-11-13T16:01:04+00:00",
+          "source": "marketbeat",
+          "tone": -0.3060369500761259,
+          "headline": "FY2025 EPS Estimates for AST SpaceMobile Lowered by Analyst"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 23.53,
+      "qty_hint": 115.56,
+      "reason": "score<sell",
+      "score": -0.372233,
+      "qty": 28,
+      "notional": 658.84,
+      "signals": {
+        "TS": -0.624127,
+        "NS": 0.005609,
+        "CDS": -0.372233,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 29.398697954020783,
+        "ema_slow": 30.5161106469095,
+        "macd": -1.117412692888717,
+        "macd_signal": 0.17655024543424178,
+        "macd_hist": -1.2939629383229587,
+        "macd_hist_prev": -1.1093065330163174,
+        "rsi14": 26.649463659977243,
+        "sma20": 31.513249999999978
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T17:49:34+00:00",
+          "source": "finviz",
+          "tone": -0.6588126091472366,
+          "headline": "D-Wave (QBTS) Falls 8.9% on Dismal Q3"
+        },
+        {
+          "ts": "2025-11-13T17:24:56+00:00",
+          "source": "ts2tech",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum (QBTS) Stock Plunges as Short Sellers Circle and Institutions Buy \u2013 All the Key News on 13 November 2025"
+        },
+        {
+          "ts": "2025-11-13T13:13:51+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.0,
+          "headline": "Could Investing $10,000 in D-Wave Quantum Make You a Millionaire?"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 45.535,
+      "qty_hint": 4.21561,
+      "reason": "score<sell",
+      "score": -0.308749,
+      "qty": 1,
+      "notional": 45.53,
+      "signals": {
+        "TS": -0.672068,
+        "NS": 0.236229,
+        "CDS": -0.308749,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 53.89119309566982,
+        "ema_slow": 56.490584876626244,
+        "macd": -2.5993917809564238,
+        "macd_signal": -0.555671241231427,
+        "macd_hist": -2.0437205397249967,
+        "macd_hist_prev": -1.9117896292100074,
+        "rsi14": 20.891873117223724,
+        "sma20": 59.06824999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T18:02:22+00:00",
+          "source": "newsercom",
+          "tone": 0.6617209652190149,
+          "headline": "Why RKLB stock could see breakout soon - Analyst Downgrade & Safe Capital Growth Plans"
+        },
+        {
+          "ts": "2025-11-13T17:35:27+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "10 Industrials Stocks With Whale Alerts In Today's Session"
+        },
+        {
+          "ts": "2025-11-13T17:32:31+00:00",
+          "source": "newsercom",
+          "tone": 0.6548979196164009,
+          "headline": "Why RKLB stock could see breakout soon - July 2025 Breakouts & Safe Swing Trade Setups"
+        }
+      ]
+    },
+    {
+      "symbol": "LLY",
+      "action": "BUY",
+      "px": 1020.755,
+      "qty_hint": 0.0,
+      "reason": "score>buy|topped_by_rotation",
+      "score": 0.529456,
+      "qty": 2.033918,
+      "notional": 2076.13,
+      "signals": {
+        "TS": 0.755962,
+        "NS": 0.189698,
+        "CDS": 0.529456,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 939.8100366153277,
+        "ema_slow": 887.2363206604609,
+        "macd": 52.57371595486677,
+        "macd_signal": 37.6860839304781,
+        "macd_hist": 14.887632024388672,
+        "macd_hist_prev": 14.57376830770852,
+        "rsi14": 89.26385202905031,
+        "sma20": 881.1852499999993
+      },
+      "phase": "mid",
+      "size_k": 0.699924,
+      "qty_prev": 1.615215,
+      "news_preview": [
+        {
+          "ts": "2025-11-13T20:11:39+00:00",
+          "source": "gurufocus",
+          "tone": -0.1589729214234075,
+          "headline": "Eli Lilly (LLY) Clarifies No Ties with Mangoceuticals"
+        },
+        {
+          "ts": "2025-11-13T19:05:33+00:00",
+          "source": "benzinga",
+          "tone": -0.386203832375888,
+          "headline": "Reuters Reports: Novo Nordisk, Eli Lilly Spokespeople Say The Companies Have No Affiliation With Telehealth Platform Mangoceuticals, In Response To Its Press Release On Weight-Loss Partnerships"
+        },
+        {
+          "ts": "2025-11-13T17:34:11+00:00",
+          "source": "finviz",
+          "tone": 0.0,
+          "headline": "Jim Cramer Discusses Key Point For Eli Lilly (LLY)'s Drugs"
+        }
+      ]
+    },
+    {
+      "symbol": "MMM",
+      "action": "BUY",
+      "px": 170.025,
+      "qty_hint": 0.0,
+      "reason": "score>buy|topped_by_rotation",
+      "score": 0.523119,
+      "qty": 5.70221,
+      "notional": 969.52,
+      "signals": {
+        "TS": 0.562781,
+        "NS": 0.463628,
+        "CDS": 0.523119,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 166.53254727541687,
+        "ema_slow": 163.59286809192386,
+        "macd": 2.9396791834930127,
+        "macd_signal": 2.6102275690094077,
+        "macd_hist": 0.32945161448360505,
+        "macd_hist_prev": 0.2913936662809249,
+        "rsi14": 66.14848480556199,
+        "sma20": 165.363
+      },
+      "phase": "mid",
+      "size_k": 0.6844775624999999,
+      "qty_prev": 3.188502,
+      "news_preview": [
+        {
+          "ts": "2025-11-13T18:09:18+00:00",
+          "source": "newsercom",
+          "tone": 0.3651138940856576,
+          "headline": "How 3M Company (MMM) stock behaves under inflation pressure - 2025 Major Catalysts & Smart Money Movement Alerts"
+        },
+        {
+          "ts": "2025-11-13T17:31:16+00:00",
+          "source": "newsercom",
+          "tone": 0.6547177132551524,
+          "headline": "How MMM stock compares with market leaders - 2025 Short Interest & Reliable Price Action Trade Plans"
+        },
+        {
+          "ts": "2025-11-13T14:03:00+00:00",
+          "source": "yahoo",
+          "tone": 0.8700618624730293,
+          "headline": "4 Stocks to Add to Your Portfolio as Dow Hits All-Time Closing High"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 61.885,
+      "qty": 1.154375,
+      "notional": 71.44,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.60117,
+        "NS": -0.152898,
+        "CDS": -0.421861,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 69.2192771977544,
+        "ema_slow": 70.46974093684885,
+        "macd": -1.2504637390944566,
+        "macd_signal": 0.9963020788820399,
+        "macd_hist": -2.2467658179764967,
+        "macd_hist_prev": -2.1617316023722726,
+        "rsi": 29.047391932652616,
+        "sma20": 73.25575000000006,
+        "price": 61.885
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T16:53:23+00:00",
+          "source": "marketbeat",
+          "tone": -0.311647066179981,
+          "headline": "Q4 EPS Estimates for AST SpaceMobile Lowered by Roth Capital"
+        },
+        {
+          "ts": "2025-11-13T16:53:20+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Q4 Earnings Forecast for AST SpaceMobile Issued By B. Riley"
+        },
+        {
+          "ts": "2025-11-13T16:01:04+00:00",
+          "source": "marketbeat",
+          "tone": -0.3060369500761259,
+          "headline": "FY2025 EPS Estimates for AST SpaceMobile Lowered by Analyst"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 25.44,
+      "qty": 0.906875,
+      "notional": 23.07,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.66411,
+        "NS": 0.020478,
+        "CDS": -0.390275,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 33.70302632680171,
+        "ema_slow": 35.820261335964666,
+        "macd": -2.117235009162954,
+        "macd_signal": -0.15268775990082056,
+        "macd_hist": -1.9645472492621334,
+        "macd_hist_prev": -1.7837365453999783,
+        "rsi": 22.21393932736349,
+        "sma20": 37.27399999999999,
+        "price": 25.44
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T20:10:00+00:00",
+          "source": "barchartcom",
+          "tone": 0.0,
+          "headline": "As Momentum Slows for Rigetti Computing, Should You Sell RGTI Stock Here?"
+        },
+        {
+          "ts": "2025-11-13T18:38:25+00:00",
+          "source": "parameterio",
+          "tone": -0.4650215210840705,
+          "headline": "Rigetti Computing (RGTI) Stock Slides 9% Following Q3 Earnings Miss"
+        },
+        {
+          "ts": "2025-11-13T18:33:16+00:00",
+          "source": "moneymorningcom",
+          "tone": 0.6688627029413193,
+          "headline": "With Rigetti Down 23% This Week, Is Now a Good Time to Buy RGTI Stock?"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 23.53,
+      "qty": 28.89,
+      "notional": 679.78,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.624127,
+        "NS": 0.005609,
+        "CDS": -0.372233,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 29.398697954020783,
+        "ema_slow": 30.5161106469095,
+        "macd": -1.117412692888717,
+        "macd_signal": 0.17655024543424178,
+        "macd_hist": -1.2939629383229587,
+        "macd_hist_prev": -1.1093065330163174,
+        "rsi": 26.649463659977243,
+        "sma20": 31.513249999999978,
+        "price": 23.53
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T17:49:34+00:00",
+          "source": "finviz",
+          "tone": -0.6588126091472366,
+          "headline": "D-Wave (QBTS) Falls 8.9% on Dismal Q3"
+        },
+        {
+          "ts": "2025-11-13T17:24:56+00:00",
+          "source": "ts2tech",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum (QBTS) Stock Plunges as Short Sellers Circle and Institutions Buy \u2013 All the Key News on 13 November 2025"
+        },
+        {
+          "ts": "2025-11-13T13:13:51+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.0,
+          "headline": "Could Investing $10,000 in D-Wave Quantum Make You a Millionaire?"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 45.535,
+      "qty": 1.053902,
+      "notional": 47.99,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.672068,
+        "NS": 0.236229,
+        "CDS": -0.308749,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 53.89119309566982,
+        "ema_slow": 56.490584876626244,
+        "macd": -2.5993917809564238,
+        "macd_signal": -0.555671241231427,
+        "macd_hist": -2.0437205397249967,
+        "macd_hist_prev": -1.9117896292100074,
+        "rsi": 20.891873117223724,
+        "sma20": 59.06824999999999,
+        "price": 45.535
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T18:02:22+00:00",
+          "source": "newsercom",
+          "tone": 0.6617209652190149,
+          "headline": "Why RKLB stock could see breakout soon - Analyst Downgrade & Safe Capital Growth Plans"
+        },
+        {
+          "ts": "2025-11-13T17:35:27+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "10 Industrials Stocks With Whale Alerts In Today's Session"
+        },
+        {
+          "ts": "2025-11-13T17:32:31+00:00",
+          "source": "newsercom",
+          "tone": 0.6548979196164009,
+          "headline": "Why RKLB stock could see breakout soon - July 2025 Breakouts & Safe Swing Trade Setups"
+        }
+      ]
+    },
+    {
+      "symbol": "VOO",
+      "action": "SELL",
+      "px": 618.56,
+      "qty": 0.052551,
+      "notional": 32.51,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.486477,
+        "NS": 0.030957,
+        "CDS": -0.279503,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 622.9098046753295,
+        "ema_slow": 619.9851085812976,
+        "macd": 2.9246960940319013,
+        "macd_signal": 3.7066974074891705,
+        "macd_hist": -0.7820013134572692,
+        "macd_hist_prev": -0.3006367509926484,
+        "rsi": 42.822400475056384,
+        "sma20": 622.55925,
+        "price": 618.56
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-13T17:37:18+00:00",
+          "source": "benzinga",
+          "tone": -0.6662215437586266,
+          "headline": "Wall Street Falls On US Government Reopening Day, Bitcoin Slides To $100,000: What's Moving Markets Thursday?"
+        },
+        {
+          "ts": "2025-11-13T13:03:38+00:00",
+          "source": "seekingalpha",
+          "tone": 0.2011764458467752,
+          "headline": "The 50-Year Mortgage Is A Good Thing For Current Homeowners"
+        },
+        {
+          "ts": "2025-11-13T12:51:42+00:00",
+          "source": "seekingalpha",
+          "tone": 0.22615609255287875,
+          "headline": "Federal Reserve Cuts Less Certain And May Not Bolster Labor Market Anyway"
+        }
+      ]
+    }
+  ]
+}

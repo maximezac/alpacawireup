@@ -1,0 +1,343 @@
+{
+  "as_of_utc": "2025-11-07T20:37:55.325986+00:00",
+  "portfolio_id": "portfolio_max_personal",
+  "meta": {
+    "title": "Max Personal",
+    "trade_scope": "real",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.03,
+    "max_deploy_frac": null,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "personal"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "VTI",
+      "action": "SELL",
+      "px": 328.85,
+      "qty_hint": 11.48,
+      "reason": "score<sell",
+      "score": -0.28094,
+      "qty": 2,
+      "notional": 657.7,
+      "signals": {
+        "TS": -0.531135,
+        "NS": 0.094351,
+        "CDS": -0.28094,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 332.1593202111365,
+        "ema_slow": 330.8802624301768,
+        "macd": 1.279057780959704,
+        "macd_signal": 2.0689288276107485,
+        "macd_hist": -0.7898710466510446,
+        "rsi14": 37.261478971057585,
+        "sma20": 331.5985
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T19:53:32+00:00",
+          "source": "benzinga",
+          "tone": -0.8886302613497677,
+          "headline": "Benzinga Market Summary: S&P Falls Amid Weak Consumer Sentiment And Government Shutdown Worries, Tech Stocks Fall On Valuation Worries"
+        },
+        {
+          "ts": "2025-11-07T16:06:02+00:00",
+          "source": "newsercom",
+          "tone": 0.6386609623499842,
+          "headline": "What is the fair value estimate for VTI stock in 2025 - Oil Prices & Precise Buy Zone Identification"
+        },
+        {
+          "ts": "2025-11-07T15:53:54+00:00",
+          "source": "newsercom",
+          "tone": 0.635975969485962,
+          "headline": "Will VTI stock top growth indexes - July 2025 Technicals & Fast Exit and Entry Trade Guides"
+        }
+      ]
+    },
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 12.58,
+      "qty_hint": 75.39,
+      "reason": "score<sell",
+      "score": -0.362442,
+      "qty": 18,
+      "notional": 226.44,
+      "signals": {
+        "TS": -0.61378,
+        "NS": 0.014566,
+        "CDS": -0.362442,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.877347920451614,
+        "ema_slow": 16.322956624657984,
+        "macd": -1.4456087042063697,
+        "macd_signal": -1.077826838999268,
+        "macd_hist": -0.36778186520710165,
+        "rsi14": 29.241406024008015,
+        "sma20": 16.399999999999995
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T20:24:25+00:00",
+          "source": "aolcom",
+          "tone": 0.698746234925182,
+          "headline": "Trump Wants in on Quantum Computing. Will RGTI, QBTS, IONQ, or QUBT Win?"
+        },
+        {
+          "ts": "2025-11-07T15:37:27+00:00",
+          "source": "newsercom",
+          "tone": -0.5558538525157952,
+          "headline": "Why QUBT stock is considered a top pick - Market Risk Analysis & Low Volatility Stock Suggestions"
+        },
+        {
+          "ts": "2025-11-07T14:50:36+00:00",
+          "source": "newsercom",
+          "tone": -0.6222731221733272,
+          "headline": "Will QUBT stock return to pre crisis levels - 2025 Market Overview & Real-Time Buy Signal Notifications"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 68.56,
+      "qty_hint": 10.49,
+      "reason": "score<sell",
+      "score": -0.282706,
+      "qty": 2,
+      "notional": 137.12,
+      "signals": {
+        "TS": -0.509249,
+        "NS": 0.057108,
+        "CDS": -0.282706,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 72.8925186834959,
+        "ema_slow": 72.20617092317643,
+        "macd": 0.6863477603194639,
+        "macd_signal": 3.196147777492184,
+        "macd_hist": -2.50980001717272,
+        "rsi14": 39.856277208008805,
+        "sma20": 78.57850000000006
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T15:05:12+00:00",
+          "source": "parameterio",
+          "tone": 0.0,
+          "headline": "AST SpaceMobile (ASTS) Stock: European Satellite Venture With Vodafone Targets 2026 Launch"
+        },
+        {
+          "ts": "2025-11-07T14:01:47+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "A Look Ahead: AST SpaceMobile's Earnings Forecast"
+        },
+        {
+          "ts": "2025-11-07T10:26:33+00:00",
+          "source": "benzinga",
+          "tone": 0.3485571538295052,
+          "headline": "AST SpaceMobile, Vodafone Pick Germany To Drive Next-Gen European Mobile Coverage"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 50.78,
+      "qty_hint": 7.27,
+      "reason": "score<sell",
+      "score": -0.347036,
+      "qty": 1,
+      "notional": 50.78,
+      "signals": {
+        "TS": -0.614198,
+        "NS": 0.053707,
+        "CDS": -0.347036,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 58.19234624616086,
+        "ema_slow": 58.95926322248769,
+        "macd": -0.7669169763268329,
+        "macd_signal": 1.4392593325399865,
+        "macd_hist": -2.2061763088668194,
+        "rsi14": 27.300389945937326,
+        "sma20": 62.5775
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T17:08:14+00:00",
+          "source": "moneymorning",
+          "tone": 0.5369276546860928,
+          "headline": "Rocket Lab (RKLB) is Poised to Release Q3 Earnings: Here\u2019s What to Expect Next?"
+        },
+        {
+          "ts": "2025-11-07T15:31:30+00:00",
+          "source": "msn",
+          "tone": 0.0,
+          "headline": "Rocket Lab USA Q3 preview: What to Expect"
+        },
+        {
+          "ts": "2025-11-07T11:01:04+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Strs Ohio Has $1.10 Million Stake in Rocket Lab Corporation $RKLB"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 32.89,
+      "qty_hint": 12.17,
+      "reason": "score<sell",
+      "score": -0.316942,
+      "qty": 3,
+      "notional": 98.67,
+      "signals": {
+        "TS": -0.55101,
+        "NS": 0.03416,
+        "CDS": -0.316942,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 38.03416167431392,
+        "ema_slow": 38.10706948226368,
+        "macd": -0.07290780794976115,
+        "macd_signal": 1.5830667466948207,
+        "macd_hist": -1.6559745546445819,
+        "rsi14": 34.92153472112447,
+        "sma20": 42.09024999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T17:39:00+00:00",
+          "source": "tradingview",
+          "tone": 0.0,
+          "headline": "Rigetti Pre-Q3 Earnings Analysis: Buy, Sell or Hold the Stock?"
+        },
+        {
+          "ts": "2025-11-07T14:12:47+00:00",
+          "source": "sherwoodnews",
+          "tone": 0.0,
+          "headline": "Quantum computing companies are stacking up piles of cash, capitalizing on their booming stock prices"
+        },
+        {
+          "ts": "2025-11-07T14:01:30+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "Insights into Rigetti Computing's Upcoming Earnings"
+        }
+      ]
+    },
+    {
+      "symbol": "JPM",
+      "action": "BUY",
+      "px": 313.3,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.495868,
+      "qty": 1.8808,
+      "notional": 589.25,
+      "signals": {
+        "TS": 0.585709,
+        "NS": 0.361107,
+        "CDS": 0.495868,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 308.67713293682095,
+        "ema_slow": 306.6271214201291,
+        "macd": 2.0500115166918818,
+        "macd_signal": 0.7279183934651675,
+        "macd_hist": 1.3220931232267144,
+        "rsi14": 69.2965138672226,
+        "sma20": 304.6690000000001
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T18:26:00+00:00",
+          "source": "nasdaq",
+          "tone": 0.0,
+          "headline": "Noteworthy Friday Option Activity: LULU, JPM, SMCI"
+        },
+        {
+          "ts": "2025-11-07T17:35:22+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "10 Financials Stocks With Whale Alerts In Today's Session"
+        },
+        {
+          "ts": "2025-11-07T14:30:02+00:00",
+          "source": "yahoofinanceaustralia",
+          "tone": 0.617946987325592,
+          "headline": "Is It Worth Investing in JPMorgan Chase & Co. (JPM) Based on Wall Street's Bullish Views?"
+        }
+      ]
+    },
+    {
+      "symbol": "TWLO",
+      "action": "BUY",
+      "px": 126.54,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.47379,
+      "qty": 3.246,
+      "notional": 410.75,
+      "signals": {
+        "TS": 0.517713,
+        "NS": 0.407905,
+        "CDS": 0.47379,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 123.17608740959264,
+        "ema_slow": 117.28399745312913,
+        "macd": 5.892089956463508,
+        "macd_signal": 4.445031541851757,
+        "macd_hist": 1.4470584146117504,
+        "rsi14": 59.70819297058222,
+        "sma20": 116.56350000000005
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-07T13:13:21+00:00",
+          "source": "marketbeat",
+          "tone": 0.6110105321676507,
+          "headline": "Soltis Investment Advisors LLC Purchases 7,621 Shares of Twilio Inc. $TWLO"
+        },
+        {
+          "ts": "2025-11-07T11:57:31+00:00",
+          "source": "newsercom",
+          "tone": 0.5858875045121604,
+          "headline": "Best data tools to analyze TWLO stock - Weekly Trade Recap & High Return Trade Opportunity Guides"
+        },
+        {
+          "ts": "2025-11-07T11:45:51+00:00",
+          "source": "yahoo",
+          "tone": 0.8335984922151508,
+          "headline": "Shareholders Can Be Confident That Twilio's (NYSE:TWLO) Earnings Are High Quality"
+        }
+      ]
+    }
+  ]
+}

@@ -19,11 +19,9 @@ from engine import (
 # -------- IO paths --------
 INPUT_FINAL    = os.environ.get("INPUT_FINAL", "data/prices_final.json")
 PORTFOLIOS_YML = os.environ.get("PORTFOLIOS_YML", "config/portfolios.yml")
-STRATEGIES_YML = os.environ.get("STRATEGIES_YML", "artifacts/strategies.yaml")
 OUT_TRADES     = os.environ.get("OUT_TRADES", "artifacts/recommended_trades_v3.json")
 OUT_WATCHLIST  = os.environ.get("OUT_WATCHLIST", "data/watchlist_summary.json")
 OUT_TRADES_HUMAN = os.environ.get("OUT_TRADES_HUMAN", "artifacts/recommended_trades_read.md")
-
 
 # -------- Watchlist knobs (optional) --------
 TS_WATCH  = float(os.environ.get("TS_WATCH", "0.50"))
@@ -557,25 +555,10 @@ def main():
     feed = read_json(INPUT_FINAL)
     defaults, portfolios = load_portfolios_config(PORTFOLIOS_YML)
 
-    # Load strategy presets (optional). Preset file format: {'strategies': {name: {...}}}
-    strategies_map: Dict[str, dict] = {}
-    try:
-        p = Path(STRATEGIES_YML)
-        if p.exists():
-            with open(p, 'r', encoding='utf-8') as fh:
-                sdoc = yaml.safe_load(fh) or {}
-                strategies_map = (sdoc.get('strategies') or {})
-                # normalize keys (allow either 'ts_only' or 'TS_ONLY')
-                strategies_map = {k.lower(): v for k, v in strategies_map.items()}
-    except Exception:
-        strategies_map = {}
-
-
     out: Dict[str, Any] = {
         "as_of_utc": feed.get("as_of_utc"),
         "portfolios": {}
     }
-
 
     human_lines: List[str] = []
     human_lines.append(f"# Trade plan as of {feed.get('as_of_utc')}\n")
@@ -604,31 +587,12 @@ def main():
 
     total_trades = 0
     for pid, node in portfolios.items():
-        # If the portfolio specifies a strategy name (string) and we have presets,
-        # merge the preset into the portfolio node so mk_portfolio_config will pick up values.
-        node_effective = dict(node or {})
-        strat_name = node_effective.get('strategy')
-        if isinstance(strat_name, str):
-            strat_key = strat_name.lower()
-            if strat_key in strategies_map:
-                # preset fields should be lower-precedence than the explicit node values
-                preset = dict(strategies_map.get(strat_key) or {})
-                # merge: preset values first, then node overrides
-                merged = {**preset, **node_effective}
-                node_effective = merged
-            # If preset name indicates a TS-only preset and decision_source not already set, force TS_ONLY
-            if strat_key == 'ts_only' and 'decision_source' not in node_effective:
-                node_effective['decision_source'] = 'TS_ONLY'
+        cfg = mk_portfolio_config(pid, defaults, node)
 
+        enable_momentum_phase   = bool(node.get("enable_momentum_phase", defaults.get("enable_momentum_phase", ENABLE_MOMENTUM_PHASE)))
+        enable_rotation_upgrade = bool(node.get("enable_rotation_upgrade", defaults.get("enable_rotation_upgrade", ENABLE_ROTATION_UPGRADE)))
 
-        cfg = mk_portfolio_config(pid, defaults, node_effective)
-
-        enable_momentum_phase   = bool(node_effective.get("enable_momentum_phase", defaults.get("enable_momentum_phase", ENABLE_MOMENTUM_PHASE)))
-        enable_rotation_upgrade = bool(node_effective.get("enable_rotation_upgrade", defaults.get("enable_rotation_upgrade", ENABLE_ROTATION_UPGRADE)))
-
-        rot_params = (defaults.get("rotation", {}) or {}) | (node_effective.get("rotation", {}) or {})
-
-
+        rot_params = (defaults.get("rotation", {}) or {}) | (node.get("rotation", {}) or {})
 
         if not cfg.path:
             base = Path("data/portfolios") / pid

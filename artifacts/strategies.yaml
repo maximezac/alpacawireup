@@ -1,0 +1,44 @@
+# Strategy presets used by postprocess_v3.py (Engine)
+# You can tweak weights/thresholds per portfolio by selecting a strategy below.
+
+strategies:
+  default:
+    desc: "v2.2 Adaptive Hybrid"
+    buy_threshold: 0.35
+    sell_threshold: -0.25
+    # TS/NS weights (these guide selection/sizing only; your feed already carries wT/wN)
+    wT: 0.60
+    wN: 0.40
+    allow_new_symbols: true
+
+  ts_only:
+    desc: "High-TS only (bias technicals)"
+    buy_threshold: 0.45
+    sell_threshold: -0.20
+    wT: 0.85
+    wN: 0.15
+    allow_new_symbols: true
+
+  ns_heavy:
+    desc: "High-NS (news-heavy) approach"
+    buy_threshold: 0.35
+    sell_threshold: -0.20
+    wT: 0.40
+    wN: 0.60
+    allow_new_symbols: true
+
+  conservative:
+    desc: "Higher bars, less turnover"
+    buy_threshold: 0.40
+    sell_threshold: -0.30
+    wT: 0.60
+    wN: 0.40
+    allow_new_symbols: false
+
+  aggressive:
+    desc: "Lower bars, more turnover, broader adds"
+    buy_threshold: 0.30
+    sell_threshold: -0.15
+    wT: 0.60
+    wN: 0.40
+    allow_new_symbols: true

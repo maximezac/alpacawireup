@@ -3,88 +3,25 @@
     "name": "baseline",
     "backtest_half_life_hours": 336,
     "backtest_ns_max_age_days": 90,
-    "step_days": 5,
-    "profile": "default",
-    "decision_source": "TS_ONLY"
+    "step_days": 5
   },
   {
-    "name": "baseline_cds",
+    "name": "recency_strong",
+    "backtest_half_life_hours": 72,
+    "backtest_ns_max_age_days": 14,
+    "step_days": 5
+  },
+  {
+    "name": "more_trades",
     "backtest_half_life_hours": 336,
     "backtest_ns_max_age_days": 90,
-    "step_days": 5,
-    "profile": "default",
-    "decision_source": "CDS"
+    "step_days": 1
   },
   {
-    "name": "cadence_d1_ts",
+    "name": "ts_only",
+    "decision_source": "TS_ONLY",
     "backtest_half_life_hours": 336,
     "backtest_ns_max_age_days": 90,
-    "step_days": 1,
-    "profile": "default",
-    "decision_source": "TS_ONLY"
-  },
-  {
-    "name": "cadence_d2_ts",
-    "backtest_half_life_hours": 336,
-    "backtest_ns_max_age_days": 90,
-    "step_days": 2,
-    "profile": "default",
-    "decision_source": "TS_ONLY"
-  },
-  {
-    "name": "cadence_d3_ts",
-    "backtest_half_life_hours": 336,
-    "backtest_ns_max_age_days": 90,
-    "step_days": 3,
-    "profile": "default",
-    "decision_source": "TS_ONLY"
-  },
-  {
-    "name": "low_churn_d1_ts",
-    "backtest_half_life_hours": 336,
-    "backtest_ns_max_age_days": 90,
-    "step_days": 1,
-    "profile": "low_churn",
-    "decision_source": "TS_ONLY"
-  },
-  {
-    "name": "low_churn_d1_cds",
-    "backtest_half_life_hours": 336,
-    "backtest_ns_max_age_days": 90,
-    "step_days": 1,
-    "profile": "low_churn",
-    "decision_source": "CDS"
-  },
-  {
-    "name": "midrecency_d5_cds_ns",
-    "backtest_half_life_hours": 168,
-    "backtest_ns_max_age_days": 30,
-    "step_days": 5,
-    "profile": "default",
-    "decision_source": "CDS"
-  },
-  {
-    "name": "midrecency_d3_cds_ns",
-    "backtest_half_life_hours": 168,
-    "backtest_ns_max_age_days": 30,
-    "step_days": 3,
-    "profile": "default",
-    "decision_source": "CDS"
-  },
-  {
-    "name": "freqsafe_d1_ts",
-    "backtest_half_life_hours": 336,
-    "backtest_ns_max_age_days": 90,
-    "step_days": 1,
-    "profile": "freq_safe",
-    "decision_source": "TS_ONLY"
-  },
-  {
-    "name": "freqsafe_d2_ts",
-    "backtest_half_life_hours": 336,
-    "backtest_ns_max_age_days": 90,
-    "step_days": 2,
-    "profile": "freq_safe",
-    "decision_source": "TS_ONLY"
+    "step_days": 5
   }
 ]

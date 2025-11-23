@@ -1,0 +1,563 @@
+{
+  "as_of_utc": "2025-11-19T15:33:39.791927+00:00",
+  "portfolios": {
+    "portfolio_max_personal": {
+      "meta": {
+        "title": "Max Personal",
+        "trade_scope": "real",
+        "decision_source": "CDS",
+        "ns_weight_boost": 1.0,
+        "per_line_frac": 0.03,
+        "max_deploy_frac": null,
+        "trim_fraction": 0.25,
+        "fractional_buys": true,
+        "tags": [
+          "ideas",
+          "personal"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_personal/positions.csv"
+      },
+      "portfolio_value_est": 23372.21,
+      "cash_start": 120.0,
+      "trades": [
+        {
+          "symbol": "PANW",
+          "action": "BUY",
+          "px": 201.97,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.414247,
+          "qty": 0.248989,
+          "notional": 50.29,
+          "signals": {
+            "TS": 0.387213,
+            "NS": 0.454799,
+            "CDS": 0.414247,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 56.68157878198121,
+            "rsi14": 56.68157878198121,
+            "sma20": 213.04649999999998,
+            "ema_fast": 207.9761357252474,
+            "ema_slow": 209.7912466871025,
+            "macd_hist": 0.10644893931389726,
+            "macd_hist_prev": 0.056624970891024085,
+            "ema50_5m": 201.596398250516,
+            "ema200_5m": 203.21734152691434
+          },
+          "guidance": {
+            "sma20": 213.0465,
+            "buy_on_dip_below": 210.916,
+            "trim_above": 230.0902
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.41910206249999993,
+          "qty_prev": 0.5941,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9683271675091795,
+              "headline": "Xerox Launches Unified Cybersecurity Solution for SMBs Powered by Palo Alto Networks and Cyber Insurance from The Hartford"
+            },
+            {
+              "ts": "2025-11-19T13:27:32+00:00",
+              "source": "yahoo",
+              "tone": 0.8005426486087397,
+              "headline": "Earnings live: Target stock sinks, TJX and Lowe's rise as the focus turns to Nvidia earnings"
+            },
+            {
+              "ts": "2025-11-19T13:20:17+00:00",
+              "source": "benzinga",
+              "tone": 0.8595586021060679,
+              "headline": "Palo Alto Networks Announces Plan With IBM To Offer New Quantum-Safe Readiness Solution To Protect Enterprise Data"
+            }
+          ]
+        },
+        {
+          "symbol": "RTX",
+          "action": "BUY",
+          "px": 174.4,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.412333,
+          "qty": 4.1e-05,
+          "notional": 0.01,
+          "signals": {
+            "TS": 0.368032,
+            "NS": 0.478783,
+            "CDS": 0.412333,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 46.69521505199575,
+            "rsi14": 46.69521505199575,
+            "sma20": 176.87474999999992,
+            "ema_fast": 175.53117857937426,
+            "ema_slow": 173.49050888330606,
+            "macd_hist": 0.017442978186808233,
+            "macd_hist_prev": 0.0038264992806077702,
+            "ema50_5m": 174.77523189699838,
+            "ema200_5m": 175.25731850654302
+          },
+          "guidance": {
+            "sma20": 176.8747,
+            "buy_on_dip_below": 175.106,
+            "trim_above": 191.0247
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.41443668749999996,
+          "qty_prev": 0.0001,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T13:23:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.6796951851081959,
+              "headline": "RTX Corporation $RTX Shares Bought by Vanguard Group Inc."
+            },
+            {
+              "ts": "2025-11-19T13:05:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9499324627894439,
+              "headline": "Trump Signs F-35 Deal With Saudis: Defense ETFs to Gain, Beyond Lockheed"
+            },
+            {
+              "ts": "2025-11-19T13:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.0,
+              "headline": "RTX's Pratt & Whitney Canada PT6A aerial application engine surpasses 1 million flight hours in 2025"
+            }
+          ]
+        }
+      ],
+      "cash_left": -50.31,
+      "debug": {
+        "buy_sizing": [
+          {
+            "symbol": "PANW",
+            "cds": 0.414247,
+            "size_k": 0.41910206249999993,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.248989,
+            "px": 201.97,
+            "notional": 50.29,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "RTX",
+            "cds": 0.412333,
+            "size_k": 0.41443668749999996,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 4.1e-05,
+            "px": 174.4,
+            "notional": 0.01,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          }
+        ],
+        "sell_sizing": []
+      }
+    },
+    "portfolio_max_autotrader": {
+      "meta": {
+        "title": "AutoTrade my portfolio",
+        "trade_scope": "paper",
+        "decision_source": "CDS",
+        "ns_weight_boost": 1.0,
+        "per_line_frac": 0.1,
+        "max_deploy_frac": 0.3,
+        "trim_fraction": 0.25,
+        "fractional_buys": true,
+        "tags": [
+          "ideas",
+          "paper"
+        ],
+        "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
+      },
+      "portfolio_value_est": 22751.55,
+      "cash_start": 597.94,
+      "trades": [
+        {
+          "symbol": "PANW",
+          "action": "BUY",
+          "px": 201.97,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.414247,
+          "qty": 1.240752,
+          "notional": 250.59,
+          "signals": {
+            "TS": 0.387213,
+            "NS": 0.454799,
+            "CDS": 0.414247,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 56.68157878198121,
+            "rsi14": 56.68157878198121,
+            "sma20": 213.04649999999998,
+            "ema_fast": 207.9761357252474,
+            "ema_slow": 209.7912466871025,
+            "macd_hist": 0.10644893931389726,
+            "macd_hist_prev": 0.056624970891024085,
+            "ema50_5m": 201.596398250516,
+            "ema200_5m": 203.21734152691434
+          },
+          "guidance": {
+            "sma20": 213.0465,
+            "buy_on_dip_below": 210.916,
+            "trim_above": 230.0902
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.41910206249999993,
+          "qty_prev": 2.9605,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9683271675091795,
+              "headline": "Xerox Launches Unified Cybersecurity Solution for SMBs Powered by Palo Alto Networks and Cyber Insurance from The Hartford"
+            },
+            {
+              "ts": "2025-11-19T13:27:32+00:00",
+              "source": "yahoo",
+              "tone": 0.8005426486087397,
+              "headline": "Earnings live: Target stock sinks, TJX and Lowe's rise as the focus turns to Nvidia earnings"
+            },
+            {
+              "ts": "2025-11-19T13:20:17+00:00",
+              "source": "benzinga",
+              "tone": 0.8595586021060679,
+              "headline": "Palo Alto Networks Announces Plan With IBM To Offer New Quantum-Safe Readiness Solution To Protect Enterprise Data"
+            }
+          ]
+        },
+        {
+          "symbol": "DKNG",
+          "action": "BUY",
+          "px": 29.59,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.388123,
+          "qty": 0.000107,
+          "notional": 0.0,
+          "signals": {
+            "TS": 0.499673,
+            "NS": 0.220799,
+            "CDS": 0.388123,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 61.27590976352344,
+            "rsi14": 61.27590976352344,
+            "sma20": 30.41774999999999,
+            "ema_fast": 29.96952743816192,
+            "ema_slow": 31.54359934055797,
+            "macd_hist": 0.01637422998642646,
+            "macd_hist_prev": 0.005627727471052389,
+            "ema50_5m": 29.345832408928665,
+            "ema200_5m": 29.34318229765919
+          },
+          "guidance": {
+            "sma20": 30.4177,
+            "buy_on_dip_below": 30.1136,
+            "trim_above": 32.8512
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.3554248125,
+          "qty_prev": 0.0003,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T13:50:23+00:00",
+              "source": "marketbeat",
+              "tone": 0.5979136678293685,
+              "headline": "DraftKings (NASDAQ:DKNG) Earns Equal Weight Rating from Analysts at Wells Fargo & Company"
+            },
+            {
+              "ts": "2025-11-19T12:09:22+00:00",
+              "source": "gurufocus",
+              "tone": 0.0,
+              "headline": "DraftKings (DKNG) Reiterates 'Buy' Rating with Price Target Main"
+            },
+            {
+              "ts": "2025-11-19T12:03:13+00:00",
+              "source": "marketbeat",
+              "tone": 0.8370731980118508,
+              "headline": "Meridian Wealth Management LLC Decreases Stock Position in DraftKings Inc. $DKNG"
+            }
+          ]
+        }
+      ],
+      "cash_left": -250.6,
+      "debug": {
+        "buy_sizing": [
+          {
+            "symbol": "PANW",
+            "cds": 0.414247,
+            "size_k": 0.41910206249999993,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 1.240752,
+            "px": 201.97,
+            "notional": 250.59,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "DKNG",
+            "cds": 0.388123,
+            "size_k": 0.3554248125,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 0.000107,
+            "px": 29.59,
+            "notional": 0.0,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          }
+        ],
+        "sell_sizing": []
+      }
+    },
+    "port_backfill_5each": {
+      "meta": {
+        "title": "Backtest Portfolio",
+        "trade_scope": "paper",
+        "decision_source": "CDS",
+        "ns_weight_boost": 1.0,
+        "per_line_frac": 0.1,
+        "max_deploy_frac": 0.3,
+        "trim_fraction": 0.25,
+        "fractional_buys": true,
+        "tags": [
+          "ideas",
+          "paper",
+          "backtest"
+        ],
+        "positions_path": "data/portfolios/port_backfill_5each/positions.csv"
+      },
+      "portfolio_value_est": 69375.93,
+      "cash_start": 20000.0,
+      "trades": [
+        {
+          "symbol": "PANW",
+          "action": "BUY",
+          "px": 201.97,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.414247,
+          "qty": 18.546146,
+          "notional": 3745.77,
+          "signals": {
+            "TS": 0.387213,
+            "NS": 0.454799,
+            "CDS": 0.414247,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 56.68157878198121,
+            "rsi14": 56.68157878198121,
+            "sma20": 213.04649999999998,
+            "ema_fast": 207.9761357252474,
+            "ema_slow": 209.7912466871025,
+            "macd_hist": 0.10644893931389726,
+            "macd_hist_prev": 0.056624970891024085,
+            "ema50_5m": 201.596398250516,
+            "ema200_5m": 203.21734152691434
+          },
+          "guidance": {
+            "sma20": 213.0465,
+            "buy_on_dip_below": 210.916,
+            "trim_above": 230.0902
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.41910206249999993,
+          "qty_prev": 44.2521,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T14:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9683271675091795,
+              "headline": "Xerox Launches Unified Cybersecurity Solution for SMBs Powered by Palo Alto Networks and Cyber Insurance from The Hartford"
+            },
+            {
+              "ts": "2025-11-19T13:27:32+00:00",
+              "source": "yahoo",
+              "tone": 0.8005426486087397,
+              "headline": "Earnings live: Target stock sinks, TJX and Lowe's rise as the focus turns to Nvidia earnings"
+            },
+            {
+              "ts": "2025-11-19T13:20:17+00:00",
+              "source": "benzinga",
+              "tone": 0.8595586021060679,
+              "headline": "Palo Alto Networks Announces Plan With IBM To Offer New Quantum-Safe Readiness Solution To Protect Enterprise Data"
+            }
+          ]
+        },
+        {
+          "symbol": "RTX",
+          "action": "BUY",
+          "px": 174.4,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.412333,
+          "qty": 21.238927,
+          "notional": 3704.07,
+          "signals": {
+            "TS": 0.368032,
+            "NS": 0.478783,
+            "CDS": 0.412333,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 46.69521505199575,
+            "rsi14": 46.69521505199575,
+            "sma20": 176.87474999999992,
+            "ema_fast": 175.53117857937426,
+            "ema_slow": 173.49050888330606,
+            "macd_hist": 0.017442978186808233,
+            "macd_hist_prev": 0.0038264992806077702,
+            "ema50_5m": 174.77523189699838,
+            "ema200_5m": 175.25731850654302
+          },
+          "guidance": {
+            "sma20": 176.8747,
+            "buy_on_dip_below": 175.106,
+            "trim_above": 191.0247
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.41443668749999996,
+          "qty_prev": 51.2477,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T13:23:04+00:00",
+              "source": "marketbeat",
+              "tone": 0.6796951851081959,
+              "headline": "RTX Corporation $RTX Shares Bought by Vanguard Group Inc."
+            },
+            {
+              "ts": "2025-11-19T13:05:00+00:00",
+              "source": "yahoo",
+              "tone": 0.9499324627894439,
+              "headline": "Trump Signs F-35 Deal With Saudis: Defense ETFs to Gain, Beyond Lockheed"
+            },
+            {
+              "ts": "2025-11-19T13:00:00+00:00",
+              "source": "yahoo",
+              "tone": 0.0,
+              "headline": "RTX's Pratt & Whitney Canada PT6A aerial application engine surpasses 1 million flight hours in 2025"
+            }
+          ]
+        },
+        {
+          "symbol": "DKNG",
+          "action": "BUY",
+          "px": 29.59,
+          "qty_hint": 0.0,
+          "reason": "score>buy|guidance:guidance_ok|ema:ema_ok",
+          "score": 0.388123,
+          "qty": 25.522416,
+          "notional": 755.21,
+          "signals": {
+            "TS": 0.499673,
+            "NS": 0.220799,
+            "CDS": 0.388123,
+            "wT": 0.6,
+            "wN": 0.4
+          },
+          "indicators": {
+            "rsi": 61.27590976352344,
+            "rsi14": 61.27590976352344,
+            "sma20": 30.41774999999999,
+            "ema_fast": 29.96952743816192,
+            "ema_slow": 31.54359934055797,
+            "macd_hist": 0.01637422998642646,
+            "macd_hist_prev": 0.005627727471052389,
+            "ema50_5m": 29.345832408928665,
+            "ema200_5m": 29.34318229765919
+          },
+          "guidance": {
+            "sma20": 30.4177,
+            "buy_on_dip_below": 30.1136,
+            "trim_above": 32.8512
+          },
+          "phase": "mid",
+          "size_k_guidance": 1.0,
+          "size_k": 0.3554248125,
+          "qty_prev": 71.8082,
+          "news_preview": [
+            {
+              "ts": "2025-11-19T13:50:23+00:00",
+              "source": "marketbeat",
+              "tone": 0.5979136678293685,
+              "headline": "DraftKings (NASDAQ:DKNG) Earns Equal Weight Rating from Analysts at Wells Fargo & Company"
+            },
+            {
+              "ts": "2025-11-19T12:09:22+00:00",
+              "source": "gurufocus",
+              "tone": 0.0,
+              "headline": "DraftKings (DKNG) Reiterates 'Buy' Rating with Price Target Main"
+            },
+            {
+              "ts": "2025-11-19T12:03:13+00:00",
+              "source": "marketbeat",
+              "tone": 0.8370731980118508,
+              "headline": "Meridian Wealth Management LLC Decreases Stock Position in DraftKings Inc. $DKNG"
+            }
+          ]
+        }
+      ],
+      "cash_left": -8205.04,
+      "debug": {
+        "buy_sizing": [
+          {
+            "symbol": "PANW",
+            "cds": 0.414247,
+            "size_k": 0.41910206249999993,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 18.546146,
+            "px": 201.97,
+            "notional": 3745.77,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "RTX",
+            "cds": 0.412333,
+            "size_k": 0.41443668749999996,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 21.238927,
+            "px": 174.4,
+            "notional": 3704.07,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          },
+          {
+            "symbol": "DKNG",
+            "cds": 0.388123,
+            "size_k": 0.3554248125,
+            "size_k_guidance": 1.0,
+            "phase": "mid",
+            "qty": 25.522416,
+            "px": 29.59,
+            "notional": 755.21,
+            "reason": "score>buy|guidance:guidance_ok|ema:ema_ok"
+          }
+        ],
+        "sell_sizing": []
+      }
+    }
+  }
+}

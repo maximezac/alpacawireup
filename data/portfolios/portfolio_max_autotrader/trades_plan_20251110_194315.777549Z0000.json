@@ -1,0 +1,441 @@
+{
+  "as_of_utc": "2025-11-10T19:43:15.777549+00:00",
+  "portfolio_id": "portfolio_max_autotrader",
+  "meta": {
+    "title": "AutoTrade my portfolio",
+    "trade_scope": "paper",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.15,
+    "max_deploy_frac": 0.35,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "paper"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 29.56,
+      "qty_hint": 96.455726,
+      "reason": "score<sell",
+      "score": -0.254307,
+      "qty": 24,
+      "notional": 709.44,
+      "signals": {
+        "TS": -0.498704,
+        "NS": 0.112289,
+        "CDS": -0.254307,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 31.63985217966754,
+        "ema_slow": 31.66103021390274,
+        "macd": -0.021178034235202148,
+        "macd_signal": 1.0355288951323782,
+        "macd_hist": -1.0567069293675804,
+        "macd_hist_prev": -1.1108111370639642,
+        "rsi14": 41.428677554992845,
+        "sma20": 33.996499999999976
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T17:45:18+00:00",
+          "source": "marketbeat",
+          "tone": 0.8642114870548274,
+          "headline": "An Earnings Win With a Stock Slump: What's Happening With D-Wave?"
+        },
+        {
+          "ts": "2025-11-10T17:12:28+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.1661362498483053,
+          "headline": "D-Wave (NYSE: QBTS) Advantage2TM Quantum Computer Now Available for U.S. Government Applications at Davidson Technologies"
+        },
+        {
+          "ts": "2025-11-10T16:02:43+00:00",
+          "source": "investingcom",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum stock price target raised to $35 from $20 at Benchmark"
+        }
+      ]
+    },
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 12.895,
+      "qty_hint": 6.930156,
+      "reason": "score<sell",
+      "score": -0.279924,
+      "qty": 1,
+      "notional": 12.89,
+      "signals": {
+        "TS": -0.601737,
+        "NS": 0.202795,
+        "CDS": -0.279924,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.60882102144722,
+        "ema_slow": 16.088238094638694,
+        "macd": -1.479417073191474,
+        "macd_signal": -1.1545708340887133,
+        "macd_hist": -0.32484623910276067,
+        "macd_hist_prev": -0.3499130243682316,
+        "rsi14": 30.83168897685333,
+        "sma20": 15.987249999999994
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T12:44:35+00:00",
+          "source": "newsercom",
+          "tone": 0.605508243144187,
+          "headline": "Can Tradr 2X Long QUBT Daily stock deliver double digit returns - Quarterly Growth Report & Verified Swing Trading Watchlist"
+        },
+        {
+          "ts": "2025-11-10T08:38:14+00:00",
+          "source": "newsercom",
+          "tone": 0.31834532968659285,
+          "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
+        },
+        {
+          "ts": "2025-11-10T06:09:09+00:00",
+          "source": "newsercom",
+          "tone": -0.527825080858788,
+          "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
+        }
+      ]
+    },
+    {
+      "symbol": "DDOG",
+      "action": "BUY",
+      "px": 201.02,
+      "qty_hint": 0.0,
+      "reason": "score>buy|topped_by_rotation",
+      "score": 0.597107,
+      "qty": 10.276389,
+      "notional": 2065.76,
+      "signals": {
+        "TS": 0.7283,
+        "NS": 0.400317,
+        "CDS": 0.597107,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 172.25231224238314,
+        "ema_slow": 163.0098489976713,
+        "macd": 9.242463244711843,
+        "macd_signal": 5.373009879265924,
+        "macd_hist": 3.869453365445919,
+        "macd_hist_prev": 2.64714010379062,
+        "rsi14": 85.8700516612365,
+        "sma20": 162.65999999999988
+      },
+      "phase": "mid",
+      "size_k": 0.75,
+      "qty_prev": 5.88,
+      "news_preview": [
+        {
+          "ts": "2025-11-10T15:03:42+00:00",
+          "source": "yahoo",
+          "tone": 0.9081846188855303,
+          "headline": "Should You Buy Gitlab Stock Amid Takeover Speculation?"
+        },
+        {
+          "ts": "2025-11-10T14:54:00+00:00",
+          "source": "yahoo",
+          "tone": 0.0,
+          "headline": "5 AI-Powered Internet Software Giants to Power Your Portfolio in 2026"
+        },
+        {
+          "ts": "2025-11-10T14:27:45+00:00",
+          "source": "marketbeat",
+          "tone": 0.807226638989851,
+          "headline": "Robert W. Baird Issues Positive Forecast for Datadog (NASDAQ:DDOG) Stock Price"
+        }
+      ]
+    },
+    {
+      "symbol": "TTWO",
+      "action": "SELL",
+      "px": 233.23,
+      "qty": 0.160663,
+      "notional": 37.47,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.668911,
+        "NS": 0.070588,
+        "CDS": -0.373111,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 248.28519570533064,
+        "ema_slow": 251.16256127093635,
+        "macd": -2.8773655656057144,
+        "macd_signal": -0.17288905624955575,
+        "macd_hist": -2.7044765093561587,
+        "macd_hist_prev": -2.0778922283099854,
+        "rsi": 20.422477157661987,
+        "sma20": 253.7675000000001,
+        "price": 233.23
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T15:40:27+00:00",
+          "source": "tipranks",
+          "tone": -0.735448779315595,
+          "headline": "Take-Two Stock (TTWO) Jumps as Red Dead Redemption 2 Hits a New Milestone"
+        },
+        {
+          "ts": "2025-11-10T14:35:01+00:00",
+          "source": "yahoo",
+          "tone": 0.5681776969313438,
+          "headline": "After Plunging 7.9% in 4 Weeks, Here's Why the Trend Might Reverse for Take-Two (TTWO)"
+        },
+        {
+          "ts": "2025-11-10T14:35:00+00:00",
+          "source": "nasdaq",
+          "tone": 0.0,
+          "headline": "After Plunging 7.9% in 4 Weeks, Here's Why the Trend Might Reverse for Take-Two (TTWO)"
+        }
+      ]
+    },
+    {
+      "symbol": "QUBT",
+      "action": "SELL",
+      "px": 12.895,
+      "qty": 1.732539,
+      "notional": 22.34,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.601737,
+        "NS": 0.202795,
+        "CDS": -0.279924,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 14.60882102144722,
+        "ema_slow": 16.088238094638694,
+        "macd": -1.479417073191474,
+        "macd_signal": -1.1545708340887133,
+        "macd_hist": -0.32484623910276067,
+        "macd_hist_prev": -0.3499130243682316,
+        "rsi": 30.83168897685333,
+        "sma20": 15.987249999999994,
+        "price": 12.895
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T12:44:35+00:00",
+          "source": "newsercom",
+          "tone": 0.605508243144187,
+          "headline": "Can Tradr 2X Long QUBT Daily stock deliver double digit returns - Quarterly Growth Report & Verified Swing Trading Watchlist"
+        },
+        {
+          "ts": "2025-11-10T08:38:14+00:00",
+          "source": "newsercom",
+          "tone": 0.31834532968659285,
+          "headline": "Why QUBT stock is considered a top pick - 2025 Technical Overview & Stock Timing and Entry Methods"
+        },
+        {
+          "ts": "2025-11-10T06:09:09+00:00",
+          "source": "newsercom",
+          "tone": -0.527825080858788,
+          "headline": "Will QUBT stock return to pre crisis levels - July 2025 Market Mood & Weekly Breakout Stock Alerts"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 33.74,
+      "qty": 0.435328,
+      "notional": 14.69,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.540745,
+        "NS": 0.143376,
+        "CDS": -0.267096,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 37.48742674217095,
+        "ema_slow": 37.843596410176964,
+        "macd": -0.3561696680060109,
+        "macd_signal": 1.206387759731407,
+        "macd_hist": -1.562557427737418,
+        "macd_hist_prev": -1.6001341807275768,
+        "rsi": 36.39218868987137,
+        "sma20": 41.07349999999999,
+        "price": 33.74
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T18:11:15+00:00",
+          "source": "tipranks",
+          "tone": 0.6123759537233624,
+          "headline": "Rigetti Computing options imply 10.0% move in share price post-earnings"
+        },
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.24070828658849838,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
+        },
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.240708275164606,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More - Rigetti Computing (NASDAQ:RGTI)"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 29.56,
+      "qty": 24.113931,
+      "notional": 712.81,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.498704,
+        "NS": 0.112289,
+        "CDS": -0.254307,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 31.63985217966754,
+        "ema_slow": 31.66103021390274,
+        "macd": -0.021178034235202148,
+        "macd_signal": 1.0355288951323782,
+        "macd_hist": -1.0567069293675804,
+        "macd_hist_prev": -1.1108111370639642,
+        "rsi": 41.428677554992845,
+        "sma20": 33.996499999999976,
+        "price": 29.56
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T17:45:18+00:00",
+          "source": "marketbeat",
+          "tone": 0.8642114870548274,
+          "headline": "An Earnings Win With a Stock Slump: What's Happening With D-Wave?"
+        },
+        {
+          "ts": "2025-11-10T17:12:28+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.1661362498483053,
+          "headline": "D-Wave (NYSE: QBTS) Advantage2TM Quantum Computer Now Available for U.S. Government Applications at Davidson Technologies"
+        },
+        {
+          "ts": "2025-11-10T16:02:43+00:00",
+          "source": "investingcom",
+          "tone": 0.0,
+          "headline": "D-Wave Quantum stock price target raised to $35 from $20 at Benchmark"
+        }
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "action": "SELL",
+      "px": 51.85,
+      "qty": 0.988125,
+      "notional": 51.23,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.585261,
+        "NS": 0.259538,
+        "CDS": -0.247341,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 57.32790244497635,
+        "ema_slow": 58.49129291711778,
+        "macd": -1.1633904721414297,
+        "macd_signal": 0.9296424336857146,
+        "macd_hist": -2.0930329058271444,
+        "macd_hist_prev": -2.1516123029303853,
+        "rsi": 31.08959760352343,
+        "sma20": 61.94324999999999,
+        "price": 51.85
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T16:07:19+00:00",
+          "source": "yahoofinancecanada",
+          "tone": 0.6496512965902574,
+          "headline": "Assessing Rocket Lab After 249% Rally and Satellite Launch Success in 2025"
+        },
+        {
+          "ts": "2025-11-10T15:27:33+00:00",
+          "source": "benzinga",
+          "tone": 0.3657725254430355,
+          "headline": "Rocket Lab (RKLB) Stock Climbs Ahead Of Q3 Earnings Report"
+        },
+        {
+          "ts": "2025-11-10T15:03:57+00:00",
+          "source": "benzinga",
+          "tone": 0.0,
+          "headline": "Looking At Rocket Lab's Recent Unusual Options Activity"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 69.765,
+      "qty": 0.648169,
+      "notional": 45.22,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.487769,
+        "NS": 0.168436,
+        "CDS": -0.225287,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 72.49597734757344,
+        "ema_slow": 72.06992482012012,
+        "macd": 0.4260525274533222,
+        "macd_signal": 2.650425336245208,
+        "macd_hist": -2.2243728087918857,
+        "macd_hist_prev": -2.46831866067703,
+        "rsi": 42.63100879623058,
+        "sma20": 77.57675000000008,
+        "price": 69.765
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-10T15:42:40+00:00",
+          "source": "benzinga",
+          "tone": 0.5702587680152348,
+          "headline": "AST SpaceMobile (ASTS) Stock Holds Steady As Investors Await Q3 Results"
+        },
+        {
+          "ts": "2025-11-10T15:38:24+00:00",
+          "source": "simplywallst",
+          "tone": 0.40687243316242944,
+          "headline": "Assessing AST SpaceMobile After Its 220% 2025 Rally and Satellite Launch Progress"
+        },
+        {
+          "ts": "2025-11-10T13:38:37+00:00",
+          "source": "benzinga",
+          "tone": 0.24084526623742214,
+          "headline": "Top Stocks With Earnings This Week: Plug, Oklo, Circle And More"
+        }
+      ]
+    }
+  ]
+}

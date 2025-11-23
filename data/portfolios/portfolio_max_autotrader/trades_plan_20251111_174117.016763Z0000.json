@@ -1,0 +1,399 @@
+{
+  "as_of_utc": "2025-11-11T17:41:17.016763+00:00",
+  "portfolio_id": "portfolio_max_autotrader",
+  "meta": {
+    "title": "AutoTrade my portfolio",
+    "trade_scope": "paper",
+    "decision_source": "CDS",
+    "ns_weight_boost": 1.0,
+    "per_line_frac": 0.15,
+    "max_deploy_frac": 0.35,
+    "trim_fraction": 0.25,
+    "fractional_buys": true,
+    "tags": [
+      "ideas",
+      "paper"
+    ],
+    "positions_path": "data/portfolios/portfolio_max_autotrader/positions.csv"
+  },
+  "trades": [
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 69.58,
+      "qty_hint": 7.49,
+      "reason": "score<sell",
+      "score": -0.308227,
+      "qty": 1,
+      "notional": 69.58,
+      "signals": {
+        "TS": -0.487346,
+        "NS": -0.039549,
+        "CDS": -0.308227,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 71.91132994498818,
+        "ema_slow": 71.81381262790144,
+        "macd": 0.09751731708674072,
+        "macd_signal": 2.1265055754746442,
+        "macd_hist": -2.0289882583879035,
+        "macd_hist_prev": -2.2910621614009723,
+        "rsi14": 42.79783762684566,
+        "sma20": 76.28000000000006
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T16:11:58+00:00",
+          "source": "tradingview",
+          "tone": 0.5365367086044479,
+          "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
+        },
+        {
+          "ts": "2025-11-11T15:10:02+00:00",
+          "source": "sharewisecom",
+          "tone": -0.5557298629927303,
+          "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
+        },
+        {
+          "ts": "2025-11-11T14:00:07+00:00",
+          "source": "seekingalpha",
+          "tone": 0.0,
+          "headline": "4 stocks to watch on Tuesday: NVDA, META, NBIS, ASTS (SP500:)"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 30.7,
+      "qty_hint": 6.17,
+      "reason": "score<sell",
+      "score": -0.333803,
+      "qty": 1,
+      "notional": 30.7,
+      "signals": {
+        "TS": -0.591314,
+        "NS": 0.052464,
+        "CDS": -0.333803,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 36.35078120787246,
+        "ema_slow": 37.26574440470135,
+        "macd": -0.9149631968288929,
+        "macd_signal": 0.7730552960477246,
+        "macd_hist": -1.6880184928766175,
+        "macd_hist_prev": -1.6078679034041599,
+        "rsi14": 30.44955385418463,
+        "sma20": 39.76624999999999
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T17:38:58+00:00",
+          "source": "simplywallst",
+          "tone": 0.552737589712469,
+          "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+        },
+        {
+          "ts": "2025-11-11T17:07:54+00:00",
+          "source": "seekingalpha",
+          "tone": -0.22246625921335106,
+          "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+        },
+        {
+          "ts": "2025-11-11T16:58:53+00:00",
+          "source": "benzinga",
+          "tone": 0.6328009936193953,
+          "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+        }
+      ]
+    },
+    {
+      "symbol": "ESTC",
+      "action": "BUY",
+      "px": 93.96,
+      "qty_hint": 0.0,
+      "reason": "score>buy|topped_by_rotation",
+      "score": 0.705814,
+      "qty": 27.843541,
+      "notional": 2616.18,
+      "signals": {
+        "TS": 0.609821,
+        "NS": 0.76981,
+        "CDS": 0.705814,
+        "wT": 0.4,
+        "wN": 0.6
+      },
+      "indicators": {
+        "ema_fast": 89.42118218031437,
+        "ema_slow": 87.6936815185221,
+        "macd": 1.727500661792277,
+        "macd_signal": 1.1005730310523314,
+        "macd_hist": 0.6269276307399456,
+        "macd_hist_prev": 0.45972541336394523,
+        "rsi14": 71.98521664714656,
+        "sma20": 87.20400000000004
+      },
+      "phase": "mid",
+      "size_k": 0.75,
+      "qty_prev": 0.957825,
+      "news_preview": [
+        {
+          "ts": "2025-11-11T10:38:38+00:00",
+          "source": "seekingalpha",
+          "tone": 0.7775875317194374,
+          "headline": "Elastic: Is The Company Likely To Stretch In The Right Direction?"
+        },
+        {
+          "ts": "2025-11-07T18:44:57+00:00",
+          "source": "yahoo",
+          "tone": 0.1384371851966358,
+          "headline": "1 Cash-Producing Stock with Solid Fundamentals and 2 Facing Headwinds"
+        },
+        {
+          "ts": "2025-11-07T00:00:03+00:00",
+          "source": "yahoo",
+          "tone": -0.035127951552556935,
+          "headline": "Inseego (INSG) Lags Q3 Earnings Estimates"
+        }
+      ]
+    },
+    {
+      "symbol": "DOCN",
+      "action": "BUY",
+      "px": 50.48,
+      "qty_hint": 0.0,
+      "reason": "score>buy",
+      "score": 0.483246,
+      "qty": 7.5e-05,
+      "notional": 0.0,
+      "signals": {
+        "TS": 0.629169,
+        "NS": 0.264363,
+        "CDS": 0.483246,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 45.20599786576947,
+        "ema_slow": 42.25973042912336,
+        "macd": 2.94626743664611,
+        "macd_signal": 1.8741293639427177,
+        "macd_hist": 1.0721380727033925,
+        "macd_hist_prev": 1.0388846775983602,
+        "rsi14": 73.15316958176787,
+        "sma20": 42.49875000000001
+      },
+      "phase": "mid",
+      "size_k": 0.75,
+      "qty_prev": 0.0001,
+      "news_preview": [
+        {
+          "ts": "2025-11-11T16:14:13+00:00",
+          "source": "marketbeat",
+          "tone": 0.0,
+          "headline": "Oppenheimer Begins Coverage on DigitalOcean (NYSE:DOCN)"
+        },
+        {
+          "ts": "2025-11-11T12:57:59+00:00",
+          "source": "newsercom",
+          "tone": 0.6347930322647454,
+          "headline": "Signal strength of DOCN stock in tech scanners - Portfolio Value Report & Daily Technical Stock Forecast Reports"
+        },
+        {
+          "ts": "2025-11-11T10:22:06+00:00",
+          "source": "theglobeandmail",
+          "tone": 0.6013474317786803,
+          "headline": "2026 Is Coming: 1 Magnificent Artificial Intelligence (AI) Stock to Buy as Part of Your New Year's Resolution"
+        }
+      ]
+    },
+    {
+      "symbol": "RGTI",
+      "action": "SELL",
+      "px": 30.7,
+      "qty": 1.5425,
+      "notional": 47.35,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.591314,
+        "NS": 0.052464,
+        "CDS": -0.333803,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 36.35078120787246,
+        "ema_slow": 37.26574440470135,
+        "macd": -0.9149631968288929,
+        "macd_signal": 0.7730552960477246,
+        "macd_hist": -1.6880184928766175,
+        "macd_hist_prev": -1.6078679034041599,
+        "rsi": 30.44955385418463,
+        "sma20": 39.76624999999999,
+        "price": 30.7
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T17:38:58+00:00",
+          "source": "simplywallst",
+          "tone": 0.552737589712469,
+          "headline": "Rigetti Computing (RGTI): Assessing Valuation After Recent Share Price Volatility"
+        },
+        {
+          "ts": "2025-11-11T17:07:54+00:00",
+          "source": "seekingalpha",
+          "tone": -0.22246625921335106,
+          "headline": "Rigetti Computing: Rating Downgrade Driven By Overheated Valuation (NASDAQ:RGTI)"
+        },
+        {
+          "ts": "2025-11-11T16:58:53+00:00",
+          "source": "benzinga",
+          "tone": 0.6328009936193953,
+          "headline": "What's Going On With Rigetti Computing Stock Tuesday?"
+        }
+      ]
+    },
+    {
+      "symbol": "ASTS",
+      "action": "SELL",
+      "px": 69.58,
+      "qty": 1.8725,
+      "notional": 130.29,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.487346,
+        "NS": -0.039549,
+        "CDS": -0.308227,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 71.91132994498818,
+        "ema_slow": 71.81381262790144,
+        "macd": 0.09751731708674072,
+        "macd_signal": 2.1265055754746442,
+        "macd_hist": -2.0289882583879035,
+        "macd_hist_prev": -2.2910621614009723,
+        "rsi": 42.79783762684566,
+        "sma20": 76.28000000000006,
+        "price": 69.58
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T16:11:58+00:00",
+          "source": "tradingview",
+          "tone": 0.5365367086044479,
+          "headline": "AST SpaceMobile (ASTS) Shares Fall on Weaker-Than-Expected Earnings"
+        },
+        {
+          "ts": "2025-11-11T15:10:02+00:00",
+          "source": "sharewisecom",
+          "tone": -0.5557298629927303,
+          "headline": "ASTS Reports Wider-Than-Expected Q3 Loss Despite Top-Line Expansion"
+        },
+        {
+          "ts": "2025-11-11T14:00:07+00:00",
+          "source": "seekingalpha",
+          "tone": 0.0,
+          "headline": "4 stocks to watch on Tuesday: NVDA, META, NBIS, ASTS (SP500:)"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "action": "SELL",
+      "px": 192.61,
+      "qty": 7.125,
+      "notional": 1372.35,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.382277,
+        "NS": -0.012105,
+        "CDS": -0.234208,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 194.2832868099523,
+        "ema_slow": 191.14267033283073,
+        "macd": 3.1406164771215686,
+        "macd_signal": 3.852632614047099,
+        "macd_hist": -0.7120161369255302,
+        "macd_hist_prev": -0.4683998323375178,
+        "rsi": 48.054552398440336,
+        "sma20": 191.5497500000001,
+        "price": 192.61
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T17:19:07+00:00",
+          "source": "yahoofinance",
+          "tone": 0.6666305949312036,
+          "headline": "Stock market today: S&P 500, Nasdaq slip as Nvidia slides after SoftBank share sale"
+        },
+        {
+          "ts": "2025-11-11T17:04:05+00:00",
+          "source": "benzinga",
+          "tone": -0.4815333936400788,
+          "headline": "Burry's Big Short 2.0: From Palantir Hype To Big Tech's 'Frauds Of The Modern Era'"
+        },
+        {
+          "ts": "2025-11-11T16:59:00+00:00",
+          "source": "barrons",
+          "tone": 0.0,
+          "headline": "Stock Market Today: Dow Rises, S&P 500, Nasdaq Fall; Nvidia, Tesla, CoreWeave, AMD, More Movers"
+        }
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "action": "SELL",
+      "px": 28.98,
+      "qty": 33.685036,
+      "notional": 976.19,
+      "reason": "rotation_upgrade",
+      "signals": {
+        "TS": -0.513631,
+        "NS": 0.205318,
+        "CDS": -0.226052,
+        "wT": 0.6,
+        "wN": 0.4
+      },
+      "indicators": {
+        "ema_fast": 31.2046086490678,
+        "ema_slow": 31.448717997250043,
+        "macd": -0.24410934818224206,
+        "macd_signal": 0.7770484952789696,
+        "macd_hist": -1.0211578434612116,
+        "macd_hist_prev": -1.0694704442760046,
+        "rsi": 39.740103306304555,
+        "sma20": 33.28424999999998,
+        "price": 28.98
+      },
+      "news_preview": [
+        {
+          "ts": "2025-11-11T11:44:40+00:00",
+          "source": "newsercom",
+          "tone": 0.6186566656039153,
+          "headline": "Why QBTS stock stays undervalued - 2025 Volatility Report & Free Technical Confirmation Trade Alerts"
+        },
+        {
+          "ts": "2025-11-11T11:01:38+00:00",
+          "source": "newsercom",
+          "tone": 0.0,
+          "headline": "Published on: 2025-11-11 05:01:38"
+        },
+        {
+          "ts": "2025-11-11T10:00:00+00:00",
+          "source": "nasdaq",
+          "tone": 0.05085816630151137,
+          "headline": "Breaking Quantum Computing Stock News That IonQ, Rigetti Computing, and D-Wave Investors Can't Afford to Miss"
+        }
+      ]
+    }
+  ]
+}
