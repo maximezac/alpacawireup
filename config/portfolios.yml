@@ -66,6 +66,49 @@ portfolios:
     ns_weight_boost: 1.2
     tags: [ideas, paper, backtest, variant:aggressive]
 
+  # Additional variants for experiments and sensitivity testing
+  port_backfill_5each_trim_low:
+    title: "Backtest Portfolio - Low Trim (10%)"
+    path: data/portfolios/port_backfill_5each_trim_low
+    positions_csv: positions.csv
+    trade_scope: paper
+    per_line_frac: 0.10
+    max_deploy_frac: 0.30
+    trim_fraction: 0.10
+    tags: [ideas, paper, backtest, variant:trim_low]
+
+  port_backfill_5each_trim_high:
+    title: "Backtest Portfolio - High Trim (50%)"
+    path: data/portfolios/port_backfill_5each_trim_high
+    positions_csv: positions.csv
+    trade_scope: paper
+    per_line_frac: 0.10
+    max_deploy_frac: 0.30
+    trim_fraction: 0.50
+    tags: [ideas, paper, backtest, variant:trim_high]
+
+  port_backfill_5each_no_fractional:
+    title: "Backtest Portfolio - No Fractional Buys"
+    path: data/portfolios/port_backfill_5each_no_fractional
+    positions_csv: positions.csv
+    trade_scope: paper
+    per_line_frac: 0.10
+    fractional_buys: false
+    tags: [ideas, paper, backtest, variant:no_fractional]
+
+  port_backfill_ensemble:
+    title: "Backtest Ensemble (parameter-averaged)"
+    path: data/portfolios/port_backfill_ensemble
+    positions_csv: positions.csv
+    trade_scope: paper
+    per_line_frac: 0.05
+    max_deploy_frac: 0.30
+    ns_weight_boost: 1.0
+    tags: [ideas, paper, backtest, variant:ensemble]
+
+
+    
+
 
 
 
